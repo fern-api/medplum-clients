@@ -12167,8 +12167,8 @@ services:
           parameters:
             resourceType: string
           docs: Create Resource
-          response: ResourceList
           request: ResourceList
+          response: ResourceList
           errors: []
         readResource:
           method: GET
@@ -12186,8 +12186,8 @@ services:
             resourceType: string
             id: string
           docs: Update Resource
-          response: ResourceList
           request: ResourceList
+          response: ResourceList
           errors: []
         deleteResource:
           method: DELETE
