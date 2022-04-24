@@ -1,0 +1,3 @@
+rootProject.name = 'medplum-java'
+
+include 'medplum-java-model'

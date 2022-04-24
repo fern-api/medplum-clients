@@ -1,7 +1,7 @@
 types:
   ResourceList:
+    discriminant: resourceType
     union:
-      discriminant: resourceType
       account: Account
       activityDefinition: ActivityDefinition
       adverseEvent: AdverseEvent
@@ -158,6 +158,7 @@ types:
       bot: Bot
       accessPolicy: AccessPolicy
       userConfiguration: UserConfiguration
+  RefreshToken: string
   base64Binary: string
   canonical: string
   code: string
@@ -174,6 +175,7 @@ types:
   uri: string
   url: string
   uuid: string
+  xhtml: string
   Element:
     fields:
       id: optional<string>
@@ -813,9 +815,10 @@ types:
       highLimit: optional<Quantity>
   ExpressionLanguage:
     enum:
-      - text/cql
-      - text/fhirpath
-      - application/x-fhir-query
+      []
+      # - text/cql
+      # - text/fhirpath
+      # - application/x-fhir-query
   Expression:
     fields:
       id: optional<string>
@@ -1189,9 +1192,9 @@ types:
     enum:
       - active
       - inactive
-      - entered-in-error
-      - on-hold
-      - unknown
+      # - entered-in-error
+      # - on-hold
+      # - unknown
   Account:
     fields:
       resourceType: string
@@ -1234,7 +1237,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ActivityDefinition:
     fields:
       resourceType: string
@@ -1817,7 +1820,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   CapabilitystatementKind:
     enum:
       - instance
@@ -2123,7 +2126,7 @@ types:
       - completed
       - cancelled
       - stopped
-      - unknown
+      # - unknown
       # - entered-in-error
   CarePlan_Detail:
     fields:
@@ -2195,7 +2198,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   CatalogEntry:
     fields:
       resourceType: string
@@ -2239,7 +2242,7 @@ types:
       - aborted
       - billed
       # - entered-in-error
-      - unknown
+      # - unknown
   ChargeItem:
     fields:
       resourceType: string
@@ -2292,7 +2295,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ChargeItemDefinition:
     fields:
       resourceType: string
@@ -2769,7 +2772,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   CodesystemHierarchymeaning:
     enum:
       []
@@ -2969,7 +2972,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   CompartmentdefinitionCode:
     enum:
       - Patient
@@ -3092,7 +3095,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ConceptMap:
     fields:
       resourceType: string
@@ -3819,7 +3822,7 @@ types:
       - active
       - inactive
       # - entered-in-error
-      - unknown
+      # - unknown
   Device:
     fields:
       resourceType: string
@@ -3864,7 +3867,7 @@ types:
       - manual
       - card
       # - self-reported
-      - unknown
+      # - unknown
   Device_UdiCarrier:
     fields:
       id: optional<string>
@@ -4119,7 +4122,7 @@ types:
       # - entered-in-error
       - intended
       - stopped
-      - on-hold
+      # - on-hold
   DeviceUseStatement:
     fields:
       resourceType: string
@@ -4157,7 +4160,7 @@ types:
       - appended
       - cancelled
       # - entered-in-error
-      - unknown
+      # - unknown
   DiagnosticReport:
     fields:
       resourceType: string
@@ -4299,7 +4302,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   EffectEvidenceSynthesis:
     fields:
       resourceType: string
@@ -4411,7 +4414,7 @@ types:
       - finished
       - cancelled
       # - entered-in-error
-      - unknown
+      # - unknown
   Encounter:
     fields:
       resourceType: string
@@ -4456,7 +4459,7 @@ types:
       - finished
       - cancelled
       # - entered-in-error
-      - unknown
+      # - unknown
   Encounter_StatusHistory:
     fields:
       id: optional<string>
@@ -4650,7 +4653,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   EventDefinition:
     fields:
       resourceType: string
@@ -4696,7 +4699,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   Evidence:
     fields:
       resourceType: string
@@ -4741,7 +4744,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   EvidencevariableType:
     enum:
       - dichotomous
@@ -4818,7 +4821,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ExampleScenario:
     fields:
       resourceType: string
@@ -5392,7 +5395,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   GraphDefinition:
     fields:
       resourceType: string
@@ -5619,7 +5622,7 @@ types:
       - available
       - cancelled
       # - entered-in-error
-      - unknown
+      # - unknown
   ImagingStudy:
     fields:
       resourceType: string
@@ -5833,11 +5836,11 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ImplementationguideLicense:
     enum:
       # - not-open-source
-      - 0BSD
+      # - 0BSD
       - AAL
       - Abstyles
       # - Adobe-2006
@@ -6326,15 +6329,15 @@ types:
   Implementationguide_parameterCode:
     enum:
       - apply
-      - path-resource
-      - path-pages
-      - path-tx-cache
-      - expansion-parameter
-      - rule-broken-links
-      - generate-xml
-      - generate-json
-      - generate-turtle
-      - html-template
+      # - path-resource
+      # - path-pages
+      # - path-tx-cache
+      # - expansion-parameter
+      # - rule-broken-links
+      # - generate-xml
+      # - generate-json
+      # - generate-turtle
+      # - html-template
   ImplementationGuide_Parameter:
     fields:
       id: optional<string>
@@ -6382,7 +6385,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   InsurancePlan:
     fields:
       resourceType: string
@@ -6555,7 +6558,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   Library:
     fields:
       resourceType: string
@@ -6629,7 +6632,7 @@ types:
     enum:
       - current
       - retired
-      - entered-in-error
+      # - entered-in-error
   ListMode:
     enum:
       - working
@@ -6727,7 +6730,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   Measure:
     fields:
       resourceType: string
@@ -6834,7 +6837,7 @@ types:
       - individual
       # - subject-list
       - summary
-      - data-collection
+      # - data-collection
   MeasureReport:
     fields:
       resourceType: string
@@ -7731,7 +7734,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   MessagedefinitionCategory:
     enum:
       - consequence
@@ -7919,7 +7922,7 @@ types:
     enum:
       - indel
       - snp
-      - unknown
+      # - unknown
   MolecularSequence_Quality:
     fields:
       id: optional<string>
@@ -7999,7 +8002,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   NamingsystemKind:
     enum:
       - codesystem
@@ -8139,8 +8142,8 @@ types:
       - amended
       - corrected
       - cancelled
-      - entered-in-error
-      - unknown
+      # - entered-in-error
+      # - unknown
   Observation:
     fields:
       resourceType: string
@@ -8276,7 +8279,7 @@ types:
       - male
       - female
       - other
-      - unknown
+      # - unknown
   ObservationDefinition_QualifiedInterval:
     fields:
       id: optional<string>
@@ -8295,7 +8298,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   OperationdefinitionKind:
     enum:
       - operation
@@ -8424,7 +8427,7 @@ types:
       - invariant
       - security
       - login
-      - unknown
+      # - unknown
       - expired
       - forbidden
       - suppressed
@@ -8583,7 +8586,7 @@ types:
       - male
       - female
       - other
-      - unknown
+      # - unknown
   Patient:
     fields:
       resourceType: string
@@ -8618,7 +8621,7 @@ types:
       - male
       - female
       - other
-      - unknown
+      # - unknown
   Patient_Contact:
     fields:
       id: optional<string>
@@ -8738,7 +8741,7 @@ types:
       - male
       - female
       - other
-      - unknown
+      # - unknown
   Person:
     fields:
       resourceType: string
@@ -8778,7 +8781,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   PlanDefinition:
     fields:
       resourceType: string
@@ -8967,7 +8970,7 @@ types:
       - male
       - female
       - other
-      - unknown
+      # - unknown
   Practitioner:
     fields:
       resourceType: string
@@ -9148,7 +9151,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   Questionnaire:
     fields:
       resourceType: string
@@ -9342,7 +9345,7 @@ types:
       - male
       - female
       - other
-      - unknown
+      # - unknown
   RelatedPerson:
     fields:
       resourceType: string
@@ -9452,7 +9455,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ResearchDefinition:
     fields:
       resourceType: string
@@ -9504,7 +9507,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ResearchelementdefinitionType:
     enum:
       - population
@@ -9748,7 +9751,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   RiskEvidenceSynthesis:
     fields:
       resourceType: string
@@ -9860,7 +9863,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   SearchparameterType:
     enum:
       - number
@@ -10161,7 +10164,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   StructuredefinitionFhirversion:
     enum:
       []
@@ -10273,7 +10276,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   StructureMap:
     fields:
       resourceType: string
@@ -11032,7 +11035,7 @@ types:
       - cancelled
       - completed
       # - entered-in-error
-      - unknown
+      # - unknown
   SupplyRequest:
     fields:
       resourceType: string
@@ -11081,14 +11084,14 @@ types:
       - rejected
       - ready
       - cancelled
-      - in-progress
-      - on-hold
+      # - in-progress
+      # - on-hold
       - failed
       - completed
       # - entered-in-error
   TaskIntent:
     enum:
-      - unknown
+      # - unknown
       - proposal
       - plan
       - order
@@ -11264,7 +11267,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   TerminologycapabilitiesCodesearch:
     enum:
       - explicit
@@ -11502,7 +11505,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   TestScript:
     fields:
       resourceType: string
@@ -11749,7 +11752,7 @@ types:
       - draft
       - active
       - retired
-      - unknown
+      # - unknown
   ValueSet:
     fields:
       resourceType: string
@@ -12160,7 +12163,6 @@ services:
             resourceType: string
           docs: Search
           response: Bundle
-          errors: []
         createResource:
           method: POST
           path: /fhir/R4/{resourceType}
@@ -12169,7 +12171,6 @@ services:
           docs: Create Resource
           request: ResourceList
           response: ResourceList
-          errors: []
         readResource:
           method: GET
           path: /fhir/R4/{resourceType}/{id}
@@ -12178,7 +12179,6 @@ services:
             id: string
           docs: Read Resource
           response: ResourceList
-          errors: []
         updateResource:
           method: PUT
           path: /fhir/R4/{resourceType}/{id}
@@ -12188,7 +12188,6 @@ services:
           docs: Update Resource
           request: ResourceList
           response: ResourceList
-          errors: []
         deleteResource:
           method: DELETE
           path: /fhir/R4/{resourceType}/{id}
@@ -12196,7 +12195,6 @@ services:
             resourceType: string
             id: string
           docs: Delete Resource
-          errors: []
         readResourceHistory:
           method: GET
           path: /fhir/R4/{resourceType}/{id}/_history
@@ -12205,7 +12203,6 @@ services:
             id: string
           docs: Read Resource History
           response: Bundle
-          errors: []
         readVersion:
           method: GET
           path: /fhir/R4/{resourceType}/{id}/_history/{versionId}
@@ -12215,4 +12212,3 @@ services:
             versionId: string
           docs: Read Version
           response: ResourceList
-          errors: []
