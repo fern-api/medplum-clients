@@ -1,0 +1,11 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':medplum-model')
+    implementation 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.6'
+    implementation 'com.palantir.conjure.java.runtime:conjure-java-jaxrs-client:7.16.0'
+    implementation 'com.palantir.conjure.java.runtime:conjure-java-jackson-serialization:7.16.0'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.36'
+}

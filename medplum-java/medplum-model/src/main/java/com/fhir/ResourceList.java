@@ -2732,7 +2732,7 @@ public final class ResourceList {
       @JsonSubTypes.Type(value = InternalSupplyRequestValue.class, name = "supplyRequest"),
       @JsonSubTypes.Type(value = InternalTerminologyCapabilitiesValue.class, name = "terminologyCapabilities"),
       @JsonSubTypes.Type(value = InternalTestReportValue.class, name = "testReport"),
-      @JsonSubTypes.Type(value = InternalPractitionerValue.class, name = "practitioner"),
+      @JsonSubTypes.Type(value = InternalPractitionerValue.class, name = "Practitioner"),
       @JsonSubTypes.Type(value = InternalCarePlanValue.class, name = "carePlan"),
       @JsonSubTypes.Type(value = InternalMedicinalProductPharmaceuticalValue.class, name = "medicinalProductPharmaceutical"),
       @JsonSubTypes.Type(value = InternalLinkageValue.class, name = "linkage"),
