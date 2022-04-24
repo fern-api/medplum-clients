@@ -1,0 +1,13 @@
+plugins {
+    id "idea"
+    id "org.inferred.processors" version "3.6.0"
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: "idea"
+    apply plugin: "org.inferred.processors"
+}
