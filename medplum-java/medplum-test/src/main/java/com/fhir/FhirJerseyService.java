@@ -1,6 +1,9 @@
 package com.fhir;
 
-import com.palantir.tokens.auth.AuthHeader;
+import feign.Feign;
+import feign.jackson.JacksonDecoder;
+import feign.jackson.JacksonEncoder;
+import feign.jaxrs.JAXRSContract;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -13,7 +16,16 @@ public interface FhirJerseyService {
     @GET
     @Path("/fhir/R4/{resourceType}/{id}")
     ResourceList readResource(
-            @HeaderParam("Authorization") AuthHeader authHeader,
+            @HeaderParam("Authorization") String authHeader,
             @PathParam("resourceType") String resourceType,
             @PathParam("id") String id);
+
+
+    static FhirJerseyService getClient(String url) {
+        return Feign.builder()
+                .contract(new JAXRSContract())
+                .decoder(new JacksonDecoder(ObjectMappers.CLIENT_OBJECT_MAPPER))
+                .encoder(new JacksonEncoder(ObjectMappers.CLIENT_OBJECT_MAPPER))
+                .target(FhirJerseyService.class, url);
+    }
 }
