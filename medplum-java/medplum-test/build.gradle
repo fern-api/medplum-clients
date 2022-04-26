@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation project(':medplum-model')
+    implementation project(':medplum-java-client')
     implementation 'com.netflix.feign:feign-jackson:8.18.0'
     implementation 'com.netflix.feign:feign-jaxrs:8.18.0'
     implementation 'com.netflix.feign:feign-core:8.18.0'
