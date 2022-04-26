@@ -109,7 +109,7 @@ types:
       paymentReconciliation: PaymentReconciliation
       person: Person
       planDefinition: PlanDefinition
-      practitioner: Practitioner
+      Practitioner: Practitioner
       practitionerRole: PractitionerRole
       procedure: Procedure
       provenance: Provenance
