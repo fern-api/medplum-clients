@@ -158,10 +158,7 @@ types:
       bot: Bot
       accessPolicy: AccessPolicy
       userConfiguration: UserConfiguration
-<<<<<<< HEAD
   RefreshToken: string
-=======
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   base64Binary: string
   canonical: string
   code: string
@@ -178,10 +175,7 @@ types:
   uri: string
   url: string
   uuid: string
-<<<<<<< HEAD
   xhtml: string
-=======
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Element:
     fields:
       id: optional<string>
@@ -821,16 +815,10 @@ types:
       highLimit: optional<Quantity>
   ExpressionLanguage:
     enum:
-<<<<<<< HEAD
       []
       # - text/cql
       # - text/fhirpath
       # - application/x-fhir-query
-=======
-      - text/cql
-      - text/fhirpath
-      - application/x-fhir-query
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Expression:
     fields:
       id: optional<string>
@@ -1204,15 +1192,9 @@ types:
     enum:
       - active
       - inactive
-<<<<<<< HEAD
       # - entered-in-error
       # - on-hold
       # - unknown
-=======
-      - entered-in-error
-      - on-hold
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Account:
     fields:
       resourceType: string
@@ -1255,11 +1237,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ActivityDefinition:
     fields:
       resourceType: string
@@ -1842,11 +1820,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   CapabilitystatementKind:
     enum:
       - instance
@@ -2152,11 +2126,7 @@ types:
       - completed
       - cancelled
       - stopped
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
       # - entered-in-error
   CarePlan_Detail:
     fields:
@@ -2228,11 +2198,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   CatalogEntry:
     fields:
       resourceType: string
@@ -2276,11 +2242,7 @@ types:
       - aborted
       - billed
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ChargeItem:
     fields:
       resourceType: string
@@ -2333,11 +2295,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ChargeItemDefinition:
     fields:
       resourceType: string
@@ -2814,11 +2772,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   CodesystemHierarchymeaning:
     enum:
       []
@@ -3018,11 +2972,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   CompartmentdefinitionCode:
     enum:
       - Patient
@@ -3145,11 +3095,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ConceptMap:
     fields:
       resourceType: string
@@ -3876,11 +3822,7 @@ types:
       - active
       - inactive
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Device:
     fields:
       resourceType: string
@@ -3925,11 +3867,7 @@ types:
       - manual
       - card
       # - self-reported
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Device_UdiCarrier:
     fields:
       id: optional<string>
@@ -4184,11 +4122,7 @@ types:
       # - entered-in-error
       - intended
       - stopped
-<<<<<<< HEAD
       # - on-hold
-=======
-      - on-hold
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   DeviceUseStatement:
     fields:
       resourceType: string
@@ -4226,11 +4160,7 @@ types:
       - appended
       - cancelled
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   DiagnosticReport:
     fields:
       resourceType: string
@@ -4372,11 +4302,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   EffectEvidenceSynthesis:
     fields:
       resourceType: string
@@ -4488,11 +4414,7 @@ types:
       - finished
       - cancelled
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Encounter:
     fields:
       resourceType: string
@@ -4537,11 +4459,7 @@ types:
       - finished
       - cancelled
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Encounter_StatusHistory:
     fields:
       id: optional<string>
@@ -4735,11 +4653,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   EventDefinition:
     fields:
       resourceType: string
@@ -4785,11 +4699,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Evidence:
     fields:
       resourceType: string
@@ -4834,11 +4744,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   EvidencevariableType:
     enum:
       - dichotomous
@@ -4915,11 +4821,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ExampleScenario:
     fields:
       resourceType: string
@@ -5493,11 +5395,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   GraphDefinition:
     fields:
       resourceType: string
@@ -5724,11 +5622,7 @@ types:
       - available
       - cancelled
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ImagingStudy:
     fields:
       resourceType: string
@@ -5942,19 +5836,11 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
   ImplementationguideLicense:
     enum:
       # - not-open-source
       # - 0BSD
-=======
-      - unknown
-  ImplementationguideLicense:
-    enum:
-      # - not-open-source
-      - 0BSD
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
       - AAL
       - Abstyles
       # - Adobe-2006
@@ -6443,7 +6329,6 @@ types:
   Implementationguide_parameterCode:
     enum:
       - apply
-<<<<<<< HEAD
       # - path-resource
       # - path-pages
       # - path-tx-cache
@@ -6453,17 +6338,6 @@ types:
       # - generate-json
       # - generate-turtle
       # - html-template
-=======
-      - path-resource
-      - path-pages
-      - path-tx-cache
-      - expansion-parameter
-      - rule-broken-links
-      - generate-xml
-      - generate-json
-      - generate-turtle
-      - html-template
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ImplementationGuide_Parameter:
     fields:
       id: optional<string>
@@ -6511,11 +6385,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   InsurancePlan:
     fields:
       resourceType: string
@@ -6688,11 +6558,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Library:
     fields:
       resourceType: string
@@ -6766,11 +6632,7 @@ types:
     enum:
       - current
       - retired
-<<<<<<< HEAD
       # - entered-in-error
-=======
-      - entered-in-error
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ListMode:
     enum:
       - working
@@ -6868,11 +6730,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Measure:
     fields:
       resourceType: string
@@ -6979,11 +6837,7 @@ types:
       - individual
       # - subject-list
       - summary
-<<<<<<< HEAD
       # - data-collection
-=======
-      - data-collection
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   MeasureReport:
     fields:
       resourceType: string
@@ -7880,11 +7734,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   MessagedefinitionCategory:
     enum:
       - consequence
@@ -8072,11 +7922,7 @@ types:
     enum:
       - indel
       - snp
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   MolecularSequence_Quality:
     fields:
       id: optional<string>
@@ -8156,11 +8002,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   NamingsystemKind:
     enum:
       - codesystem
@@ -8300,13 +8142,8 @@ types:
       - amended
       - corrected
       - cancelled
-<<<<<<< HEAD
       # - entered-in-error
       # - unknown
-=======
-      - entered-in-error
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Observation:
     fields:
       resourceType: string
@@ -8442,11 +8279,7 @@ types:
       - male
       - female
       - other
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ObservationDefinition_QualifiedInterval:
     fields:
       id: optional<string>
@@ -8465,11 +8298,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   OperationdefinitionKind:
     enum:
       - operation
@@ -8598,11 +8427,7 @@ types:
       - invariant
       - security
       - login
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
       - expired
       - forbidden
       - suppressed
@@ -8761,11 +8586,7 @@ types:
       - male
       - female
       - other
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Patient:
     fields:
       resourceType: string
@@ -8800,11 +8621,7 @@ types:
       - male
       - female
       - other
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Patient_Contact:
     fields:
       id: optional<string>
@@ -8924,11 +8741,7 @@ types:
       - male
       - female
       - other
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Person:
     fields:
       resourceType: string
@@ -8968,11 +8781,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   PlanDefinition:
     fields:
       resourceType: string
@@ -9161,11 +8970,7 @@ types:
       - male
       - female
       - other
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Practitioner:
     fields:
       resourceType: string
@@ -9346,11 +9151,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   Questionnaire:
     fields:
       resourceType: string
@@ -9544,11 +9345,7 @@ types:
       - male
       - female
       - other
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   RelatedPerson:
     fields:
       resourceType: string
@@ -9658,11 +9455,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ResearchDefinition:
     fields:
       resourceType: string
@@ -9714,11 +9507,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ResearchelementdefinitionType:
     enum:
       - population
@@ -9962,11 +9751,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   RiskEvidenceSynthesis:
     fields:
       resourceType: string
@@ -10078,11 +9863,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   SearchparameterType:
     enum:
       - number
@@ -10383,11 +10164,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   StructuredefinitionFhirversion:
     enum:
       []
@@ -10499,11 +10276,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   StructureMap:
     fields:
       resourceType: string
@@ -11262,11 +11035,7 @@ types:
       - cancelled
       - completed
       # - entered-in-error
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   SupplyRequest:
     fields:
       resourceType: string
@@ -11315,23 +11084,14 @@ types:
       - rejected
       - ready
       - cancelled
-<<<<<<< HEAD
       # - in-progress
       # - on-hold
-=======
-      - in-progress
-      - on-hold
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
       - failed
       - completed
       # - entered-in-error
   TaskIntent:
     enum:
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
       - proposal
       - plan
       - order
@@ -11507,11 +11267,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   TerminologycapabilitiesCodesearch:
     enum:
       - explicit
@@ -11749,11 +11505,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   TestScript:
     fields:
       resourceType: string
@@ -12000,11 +11752,7 @@ types:
       - draft
       - active
       - retired
-<<<<<<< HEAD
       # - unknown
-=======
-      - unknown
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
   ValueSet:
     fields:
       resourceType: string
@@ -12415,10 +12163,6 @@ services:
             resourceType: string
           docs: Search
           response: Bundle
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
         createResource:
           method: POST
           path: /fhir/R4/{resourceType}
@@ -12427,10 +12171,6 @@ services:
           docs: Create Resource
           request: ResourceList
           response: ResourceList
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
         readResource:
           method: GET
           path: /fhir/R4/{resourceType}/{id}
@@ -12439,10 +12179,6 @@ services:
             id: string
           docs: Read Resource
           response: ResourceList
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
         updateResource:
           method: PUT
           path: /fhir/R4/{resourceType}/{id}
@@ -12452,10 +12188,6 @@ services:
           docs: Update Resource
           request: ResourceList
           response: ResourceList
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
         deleteResource:
           method: DELETE
           path: /fhir/R4/{resourceType}/{id}
@@ -12463,10 +12195,6 @@ services:
             resourceType: string
             id: string
           docs: Delete Resource
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
         readResourceHistory:
           method: GET
           path: /fhir/R4/{resourceType}/{id}/_history
@@ -12475,10 +12203,6 @@ services:
             id: string
           docs: Read Resource History
           response: Bundle
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
         readVersion:
           method: GET
           path: /fhir/R4/{resourceType}/{id}/_history/{versionId}
@@ -12488,7 +12212,3 @@ services:
             versionId: string
           docs: Read Version
           response: ResourceList
-<<<<<<< HEAD
-=======
-          errors: []
->>>>>>> 0e3c7e89a0df59e30b6628012e704a465d913f09
