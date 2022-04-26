@@ -2,7 +2,7 @@
 api/generated/**
 
 # Java model codegen plugin
-**/fern-model-codegen-**
+**/fern-client-cli-**
 
 # Java
 *.class
