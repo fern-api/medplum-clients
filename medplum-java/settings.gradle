@@ -1,4 +1,4 @@
 rootProject.name = 'medplum-java'
 
 include 'medplum-java-client'
-include 'medplum-test'
+include 'medplum-sample-application'
