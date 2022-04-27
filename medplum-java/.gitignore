@@ -34,4 +34,4 @@ build
 **/yarn.lock
 
 # Java model codegen plugin
-**/fern-model-codegen-**
+**/fern-client-cli-**
