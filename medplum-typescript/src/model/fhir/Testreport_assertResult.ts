@@ -12,33 +12,42 @@ export const Testreport_assertResult = {
     Warning: "warning" as Testreport_assertResult.Warning,
     Error: "error" as Testreport_assertResult.Error,
 
-    _visit: <Result>(value: Testreport_assertResult, visitor: Testreport_assertResult._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Testreport_assertResult,
+        visitor: Testreport_assertResult._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Testreport_assertResult.Pass: return visitor.pass();
-            case Testreport_assertResult.Skip: return visitor.skip();
-            case Testreport_assertResult.Fail: return visitor.fail();
-            case Testreport_assertResult.Warning: return visitor.warning();
-            case Testreport_assertResult.Error: return visitor.error();
-            default: return visitor._unknown();
+            case Testreport_assertResult.Pass:
+                return visitor.pass();
+            case Testreport_assertResult.Skip:
+                return visitor.skip();
+            case Testreport_assertResult.Fail:
+                return visitor.fail();
+            case Testreport_assertResult.Warning:
+                return visitor.warning();
+            case Testreport_assertResult.Error:
+                return visitor.error();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Testreport_assertResult {
     export type Pass = "pass" & {
-        __Pass: void,
+        __Pass: void;
     };
     export type Skip = "skip" & {
-        __Skip: void,
+        __Skip: void;
     };
     export type Fail = "fail" & {
-        __Fail: void,
+        __Fail: void;
     };
     export type Warning = "warning" & {
-        __Warning: void,
+        __Warning: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
 
     export interface _Visitor<Result> {

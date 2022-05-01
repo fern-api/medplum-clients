@@ -8,25 +8,32 @@ export const ResearchelementdefinitionStatus = {
     Active: "active" as ResearchelementdefinitionStatus.Active,
     Retired: "retired" as ResearchelementdefinitionStatus.Retired,
 
-    _visit: <Result>(value: ResearchelementdefinitionStatus, visitor: ResearchelementdefinitionStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ResearchelementdefinitionStatus,
+        visitor: ResearchelementdefinitionStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ResearchelementdefinitionStatus.Draft: return visitor.draft();
-            case ResearchelementdefinitionStatus.Active: return visitor.active();
-            case ResearchelementdefinitionStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case ResearchelementdefinitionStatus.Draft:
+                return visitor.draft();
+            case ResearchelementdefinitionStatus.Active:
+                return visitor.active();
+            case ResearchelementdefinitionStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ResearchelementdefinitionStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

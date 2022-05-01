@@ -14,37 +14,47 @@ export const Encounter_statushistoryStatus = {
     Finished: "finished" as Encounter_statushistoryStatus.Finished,
     Cancelled: "cancelled" as Encounter_statushistoryStatus.Cancelled,
 
-    _visit: <Result>(value: Encounter_statushistoryStatus, visitor: Encounter_statushistoryStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Encounter_statushistoryStatus,
+        visitor: Encounter_statushistoryStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Encounter_statushistoryStatus.Planned: return visitor.planned();
-            case Encounter_statushistoryStatus.Arrived: return visitor.arrived();
-            case Encounter_statushistoryStatus.Triaged: return visitor.triaged();
-            case Encounter_statushistoryStatus.Onleave: return visitor.onleave();
-            case Encounter_statushistoryStatus.Finished: return visitor.finished();
-            case Encounter_statushistoryStatus.Cancelled: return visitor.cancelled();
-            default: return visitor._unknown();
+            case Encounter_statushistoryStatus.Planned:
+                return visitor.planned();
+            case Encounter_statushistoryStatus.Arrived:
+                return visitor.arrived();
+            case Encounter_statushistoryStatus.Triaged:
+                return visitor.triaged();
+            case Encounter_statushistoryStatus.Onleave:
+                return visitor.onleave();
+            case Encounter_statushistoryStatus.Finished:
+                return visitor.finished();
+            case Encounter_statushistoryStatus.Cancelled:
+                return visitor.cancelled();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Encounter_statushistoryStatus {
     export type Planned = "planned" & {
-        __Planned: void,
+        __Planned: void;
     };
     export type Arrived = "arrived" & {
-        __Arrived: void,
+        __Arrived: void;
     };
     export type Triaged = "triaged" & {
-        __Triaged: void,
+        __Triaged: void;
     };
     export type Onleave = "onleave" & {
-        __Onleave: void,
+        __Onleave: void;
     };
     export type Finished = "finished" & {
-        __Finished: void,
+        __Finished: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
 
     export interface _Visitor<Result> {

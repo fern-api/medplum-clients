@@ -25,6 +25,9 @@ export interface MedicinalProductContraindication {
     diseaseStatus: CodeableConcept | null | undefined;
     comorbidity: CodeableConcept[] | null | undefined;
     therapeuticIndication: Reference[] | null | undefined;
-    otherTherapy: MedicinalProductContraindication_OtherTherapy[] | null | undefined;
+    otherTherapy:
+        | MedicinalProductContraindication_OtherTherapy[]
+        | null
+        | undefined;
     population: Population[] | null | undefined;
 }

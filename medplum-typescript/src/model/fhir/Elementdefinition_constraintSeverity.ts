@@ -6,21 +6,27 @@ export const Elementdefinition_constraintSeverity = {
     Error: "error" as Elementdefinition_constraintSeverity.Error,
     Warning: "warning" as Elementdefinition_constraintSeverity.Warning,
 
-    _visit: <Result>(value: Elementdefinition_constraintSeverity, visitor: Elementdefinition_constraintSeverity._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Elementdefinition_constraintSeverity,
+        visitor: Elementdefinition_constraintSeverity._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Elementdefinition_constraintSeverity.Error: return visitor.error();
-            case Elementdefinition_constraintSeverity.Warning: return visitor.warning();
-            default: return visitor._unknown();
+            case Elementdefinition_constraintSeverity.Error:
+                return visitor.error();
+            case Elementdefinition_constraintSeverity.Warning:
+                return visitor.warning();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Elementdefinition_constraintSeverity {
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Warning = "warning" & {
-        __Warning: void,
+        __Warning: void;
     };
 
     export interface _Visitor<Result> {

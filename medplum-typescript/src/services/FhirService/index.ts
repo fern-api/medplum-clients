@@ -1,2 +1,2 @@
-export * as Endpoints from "./endpoints";
+export * as EndpointTypes from "./endpoints";
 export * from "./FhirService";

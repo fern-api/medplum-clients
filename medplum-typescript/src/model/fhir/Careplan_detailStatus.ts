@@ -10,29 +10,37 @@ export const Careplan_detailStatus = {
     Cancelled: "cancelled" as Careplan_detailStatus.Cancelled,
     Stopped: "stopped" as Careplan_detailStatus.Stopped,
 
-    _visit: <Result>(value: Careplan_detailStatus, visitor: Careplan_detailStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Careplan_detailStatus,
+        visitor: Careplan_detailStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Careplan_detailStatus.Scheduled: return visitor.scheduled();
-            case Careplan_detailStatus.Completed: return visitor.completed();
-            case Careplan_detailStatus.Cancelled: return visitor.cancelled();
-            case Careplan_detailStatus.Stopped: return visitor.stopped();
-            default: return visitor._unknown();
+            case Careplan_detailStatus.Scheduled:
+                return visitor.scheduled();
+            case Careplan_detailStatus.Completed:
+                return visitor.completed();
+            case Careplan_detailStatus.Cancelled:
+                return visitor.cancelled();
+            case Careplan_detailStatus.Stopped:
+                return visitor.stopped();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Careplan_detailStatus {
     export type Scheduled = "scheduled" & {
-        __Scheduled: void,
+        __Scheduled: void;
     };
     export type Completed = "completed" & {
-        __Completed: void,
+        __Completed: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
     export type Stopped = "stopped" & {
-        __Stopped: void,
+        __Stopped: void;
     };
 
     export interface _Visitor<Result> {

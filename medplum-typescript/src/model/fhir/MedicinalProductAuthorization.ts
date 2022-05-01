@@ -35,7 +35,10 @@ export interface MedicinalProductAuthorization {
     dateOfFirstAuthorization: dateTime | null | undefined;
     internationalBirthDate: dateTime | null | undefined;
     legalBasis: CodeableConcept | null | undefined;
-    jurisdictionalAuthorization: MedicinalProductAuthorization_JurisdictionalAuthorization[] | null | undefined;
+    jurisdictionalAuthorization:
+        | MedicinalProductAuthorization_JurisdictionalAuthorization[]
+        | null
+        | undefined;
     holder: Reference | null | undefined;
     regulator: Reference | null | undefined;
     procedure: MedicinalProductAuthorization_Procedure | null | undefined;

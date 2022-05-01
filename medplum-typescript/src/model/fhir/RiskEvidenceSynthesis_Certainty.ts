@@ -9,5 +9,8 @@ export interface RiskEvidenceSynthesis_Certainty {
     modifierExtension: Extension[] | null | undefined;
     rating: CodeableConcept[] | null | undefined;
     note: Annotation[] | null | undefined;
-    certaintySubcomponent: RiskEvidenceSynthesis_CertaintySubcomponent[] | null | undefined;
+    certaintySubcomponent:
+        | RiskEvidenceSynthesis_CertaintySubcomponent[]
+        | null
+        | undefined;
 }

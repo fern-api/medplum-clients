@@ -20,49 +20,62 @@ export const SearchparameterType = {
     Uri: "uri" as SearchparameterType.Uri,
     Special: "special" as SearchparameterType.Special,
 
-    _visit: <Result>(value: SearchparameterType, visitor: SearchparameterType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: SearchparameterType,
+        visitor: SearchparameterType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case SearchparameterType.Number: return visitor.number();
-            case SearchparameterType.Date: return visitor.date();
-            case SearchparameterType.String: return visitor.string();
-            case SearchparameterType.Token: return visitor.token();
-            case SearchparameterType.Reference: return visitor.reference();
-            case SearchparameterType.Composite: return visitor.composite();
-            case SearchparameterType.Quantity: return visitor.quantity();
-            case SearchparameterType.Uri: return visitor.uri();
-            case SearchparameterType.Special: return visitor.special();
-            default: return visitor._unknown();
+            case SearchparameterType.Number:
+                return visitor.number();
+            case SearchparameterType.Date:
+                return visitor.date();
+            case SearchparameterType.String:
+                return visitor.string();
+            case SearchparameterType.Token:
+                return visitor.token();
+            case SearchparameterType.Reference:
+                return visitor.reference();
+            case SearchparameterType.Composite:
+                return visitor.composite();
+            case SearchparameterType.Quantity:
+                return visitor.quantity();
+            case SearchparameterType.Uri:
+                return visitor.uri();
+            case SearchparameterType.Special:
+                return visitor.special();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace SearchparameterType {
     export type Number = "number" & {
-        __Number: void,
+        __Number: void;
     };
     export type Date = "date" & {
-        __Date: void,
+        __Date: void;
     };
     export type String = "string" & {
-        __String: void,
+        __String: void;
     };
     export type Token = "token" & {
-        __Token: void,
+        __Token: void;
     };
     export type Reference = "reference" & {
-        __Reference: void,
+        __Reference: void;
     };
     export type Composite = "composite" & {
-        __Composite: void,
+        __Composite: void;
     };
     export type Quantity = "quantity" & {
-        __Quantity: void,
+        __Quantity: void;
     };
     export type Uri = "uri" & {
-        __Uri: void,
+        __Uri: void;
     };
     export type Special = "special" & {
-        __Special: void,
+        __Special: void;
     };
 
     export interface _Visitor<Result> {

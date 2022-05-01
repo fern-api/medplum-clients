@@ -7,5 +7,8 @@ export interface MedicinalProductPharmaceutical_TargetSpecies {
     extension: Extension[] | null | undefined;
     modifierExtension: Extension[] | null | undefined;
     code: CodeableConcept;
-    withdrawalPeriod: MedicinalProductPharmaceutical_WithdrawalPeriod[] | null | undefined;
+    withdrawalPeriod:
+        | MedicinalProductPharmaceutical_WithdrawalPeriod[]
+        | null
+        | undefined;
 }

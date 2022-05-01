@@ -8,25 +8,32 @@ export const QuestionnaireresponseStatus = {
     Amended: "amended" as QuestionnaireresponseStatus.Amended,
     Stopped: "stopped" as QuestionnaireresponseStatus.Stopped,
 
-    _visit: <Result>(value: QuestionnaireresponseStatus, visitor: QuestionnaireresponseStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: QuestionnaireresponseStatus,
+        visitor: QuestionnaireresponseStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case QuestionnaireresponseStatus.Completed: return visitor.completed();
-            case QuestionnaireresponseStatus.Amended: return visitor.amended();
-            case QuestionnaireresponseStatus.Stopped: return visitor.stopped();
-            default: return visitor._unknown();
+            case QuestionnaireresponseStatus.Completed:
+                return visitor.completed();
+            case QuestionnaireresponseStatus.Amended:
+                return visitor.amended();
+            case QuestionnaireresponseStatus.Stopped:
+                return visitor.stopped();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace QuestionnaireresponseStatus {
     export type Completed = "completed" & {
-        __Completed: void,
+        __Completed: void;
     };
     export type Amended = "amended" & {
-        __Amended: void,
+        __Amended: void;
     };
     export type Stopped = "stopped" & {
-        __Stopped: void,
+        __Stopped: void;
     };
 
     export interface _Visitor<Result> {

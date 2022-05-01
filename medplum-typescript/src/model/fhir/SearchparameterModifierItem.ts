@@ -24,57 +24,72 @@ export const SearchparameterModifierItem = {
     Identifier: "identifier" as SearchparameterModifierItem.Identifier,
     OfType: "ofType" as SearchparameterModifierItem.OfType,
 
-    _visit: <Result>(value: SearchparameterModifierItem, visitor: SearchparameterModifierItem._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: SearchparameterModifierItem,
+        visitor: SearchparameterModifierItem._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case SearchparameterModifierItem.Missing: return visitor.missing();
-            case SearchparameterModifierItem.Exact: return visitor.exact();
-            case SearchparameterModifierItem.Contains: return visitor.contains();
-            case SearchparameterModifierItem.Not: return visitor.not();
-            case SearchparameterModifierItem.Text: return visitor.text();
-            case SearchparameterModifierItem.In: return visitor.in();
-            case SearchparameterModifierItem.Below: return visitor.below();
-            case SearchparameterModifierItem.Above: return visitor.above();
-            case SearchparameterModifierItem.Type: return visitor.type();
-            case SearchparameterModifierItem.Identifier: return visitor.identifier();
-            case SearchparameterModifierItem.OfType: return visitor.ofType();
-            default: return visitor._unknown();
+            case SearchparameterModifierItem.Missing:
+                return visitor.missing();
+            case SearchparameterModifierItem.Exact:
+                return visitor.exact();
+            case SearchparameterModifierItem.Contains:
+                return visitor.contains();
+            case SearchparameterModifierItem.Not:
+                return visitor.not();
+            case SearchparameterModifierItem.Text:
+                return visitor.text();
+            case SearchparameterModifierItem.In:
+                return visitor.in();
+            case SearchparameterModifierItem.Below:
+                return visitor.below();
+            case SearchparameterModifierItem.Above:
+                return visitor.above();
+            case SearchparameterModifierItem.Type:
+                return visitor.type();
+            case SearchparameterModifierItem.Identifier:
+                return visitor.identifier();
+            case SearchparameterModifierItem.OfType:
+                return visitor.ofType();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace SearchparameterModifierItem {
     export type Missing = "missing" & {
-        __Missing: void,
+        __Missing: void;
     };
     export type Exact = "exact" & {
-        __Exact: void,
+        __Exact: void;
     };
     export type Contains = "contains" & {
-        __Contains: void,
+        __Contains: void;
     };
     export type Not = "not" & {
-        __Not: void,
+        __Not: void;
     };
     export type Text = "text" & {
-        __Text: void,
+        __Text: void;
     };
     export type In = "in" & {
-        __In: void,
+        __In: void;
     };
     export type Below = "below" & {
-        __Below: void,
+        __Below: void;
     };
     export type Above = "above" & {
-        __Above: void,
+        __Above: void;
     };
     export type Type = "type" & {
-        __Type: void,
+        __Type: void;
     };
     export type Identifier = "identifier" & {
-        __Identifier: void,
+        __Identifier: void;
     };
     export type OfType = "ofType" & {
-        __OfType: void,
+        __OfType: void;
     };
 
     export interface _Visitor<Result> {

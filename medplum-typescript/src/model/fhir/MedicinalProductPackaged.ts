@@ -29,6 +29,9 @@ export interface MedicinalProductPackaged {
     marketingStatus: MarketingStatus[] | null | undefined;
     marketingAuthorization: Reference | null | undefined;
     manufacturer: Reference[] | null | undefined;
-    batchIdentifier: MedicinalProductPackaged_BatchIdentifier[] | null | undefined;
+    batchIdentifier:
+        | MedicinalProductPackaged_BatchIdentifier[]
+        | null
+        | undefined;
     packageItem: MedicinalProductPackaged_PackageItem[];
 }

@@ -1,8 +1,10 @@
 export type CountComparator = never;
 
 export const CountComparator = {
-
-    _visit: <Result>(_value: CountComparator, visitor: CountComparator._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: CountComparator,
+        visitor: CountComparator._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

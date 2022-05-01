@@ -8,7 +8,10 @@ export interface EffectEvidenceSynthesis_ResultsByExposure {
     extension: Extension[] | null | undefined;
     modifierExtension: Extension[] | null | undefined;
     description: string | null | undefined;
-    exposureState: Effectevidencesynthesis_resultsbyexposureExposurestate | null | undefined;
+    exposureState:
+        | Effectevidencesynthesis_resultsbyexposureExposurestate
+        | null
+        | undefined;
     variantState: CodeableConcept | null | undefined;
     riskEvidenceSynthesis: Reference;
 }

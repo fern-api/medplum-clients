@@ -26,12 +26,18 @@ export interface ResearchElementDefinition_Characteristic {
     studyEffectiveDuration: Duration | null | undefined;
     studyEffectiveTiming: Timing | null | undefined;
     studyEffectiveTimeFromStart: Duration | null | undefined;
-    studyEffectiveGroupMeasure: Researchelementdefinition_characteristicStudyeffectivegroupmeasure | null | undefined;
+    studyEffectiveGroupMeasure:
+        | Researchelementdefinition_characteristicStudyeffectivegroupmeasure
+        | null
+        | undefined;
     participantEffectiveDescription: string | null | undefined;
     participantEffectiveDateTime: string | null | undefined;
     participantEffectivePeriod: Period | null | undefined;
     participantEffectiveDuration: Duration | null | undefined;
     participantEffectiveTiming: Timing | null | undefined;
     participantEffectiveTimeFromStart: Duration | null | undefined;
-    participantEffectiveGroupMeasure: Researchelementdefinition_characteristicParticipanteffectivegroupmeasure | null | undefined;
+    participantEffectiveGroupMeasure:
+        | Researchelementdefinition_characteristicParticipanteffectivegroupmeasure
+        | null
+        | undefined;
 }

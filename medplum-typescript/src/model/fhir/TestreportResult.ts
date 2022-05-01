@@ -8,25 +8,32 @@ export const TestreportResult = {
     Fail: "fail" as TestreportResult.Fail,
     Pending: "pending" as TestreportResult.Pending,
 
-    _visit: <Result>(value: TestreportResult, visitor: TestreportResult._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: TestreportResult,
+        visitor: TestreportResult._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case TestreportResult.Pass: return visitor.pass();
-            case TestreportResult.Fail: return visitor.fail();
-            case TestreportResult.Pending: return visitor.pending();
-            default: return visitor._unknown();
+            case TestreportResult.Pass:
+                return visitor.pass();
+            case TestreportResult.Fail:
+                return visitor.fail();
+            case TestreportResult.Pending:
+                return visitor.pending();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace TestreportResult {
     export type Pass = "pass" & {
-        __Pass: void,
+        __Pass: void;
     };
     export type Fail = "fail" & {
-        __Fail: void,
+        __Fail: void;
     };
     export type Pending = "pending" & {
-        __Pending: void,
+        __Pending: void;
     };
 
     export interface _Visitor<Result> {

@@ -10,29 +10,37 @@ export const Documentreference_relatestoCode = {
     Signs: "signs" as Documentreference_relatestoCode.Signs,
     Appends: "appends" as Documentreference_relatestoCode.Appends,
 
-    _visit: <Result>(value: Documentreference_relatestoCode, visitor: Documentreference_relatestoCode._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Documentreference_relatestoCode,
+        visitor: Documentreference_relatestoCode._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Documentreference_relatestoCode.Replaces: return visitor.replaces();
-            case Documentreference_relatestoCode.Transforms: return visitor.transforms();
-            case Documentreference_relatestoCode.Signs: return visitor.signs();
-            case Documentreference_relatestoCode.Appends: return visitor.appends();
-            default: return visitor._unknown();
+            case Documentreference_relatestoCode.Replaces:
+                return visitor.replaces();
+            case Documentreference_relatestoCode.Transforms:
+                return visitor.transforms();
+            case Documentreference_relatestoCode.Signs:
+                return visitor.signs();
+            case Documentreference_relatestoCode.Appends:
+                return visitor.appends();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Documentreference_relatestoCode {
     export type Replaces = "replaces" & {
-        __Replaces: void,
+        __Replaces: void;
     };
     export type Transforms = "transforms" & {
-        __Transforms: void,
+        __Transforms: void;
     };
     export type Signs = "signs" & {
-        __Signs: void,
+        __Signs: void;
     };
     export type Appends = "appends" & {
-        __Appends: void,
+        __Appends: void;
     };
 
     export interface _Visitor<Result> {

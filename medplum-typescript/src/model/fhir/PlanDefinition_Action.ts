@@ -52,10 +52,16 @@ export interface PlanDefinition_Action {
     participant: PlanDefinition_Participant[] | null | undefined;
     type: CodeableConcept | null | undefined;
     groupingBehavior: Plandefinition_actionGroupingbehavior | null | undefined;
-    selectionBehavior: Plandefinition_actionSelectionbehavior | null | undefined;
+    selectionBehavior:
+        | Plandefinition_actionSelectionbehavior
+        | null
+        | undefined;
     requiredBehavior: Plandefinition_actionRequiredbehavior | null | undefined;
     precheckBehavior: Plandefinition_actionPrecheckbehavior | null | undefined;
-    cardinalityBehavior: Plandefinition_actionCardinalitybehavior | null | undefined;
+    cardinalityBehavior:
+        | Plandefinition_actionCardinalitybehavior
+        | null
+        | undefined;
     definitionCanonical: string | null | undefined;
     definitionUri: string | null | undefined;
     transform: canonical | null | undefined;

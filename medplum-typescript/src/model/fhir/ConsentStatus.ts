@@ -12,33 +12,42 @@ export const ConsentStatus = {
     Rejected: "rejected" as ConsentStatus.Rejected,
     Inactive: "inactive" as ConsentStatus.Inactive,
 
-    _visit: <Result>(value: ConsentStatus, visitor: ConsentStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ConsentStatus,
+        visitor: ConsentStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ConsentStatus.Draft: return visitor.draft();
-            case ConsentStatus.Proposed: return visitor.proposed();
-            case ConsentStatus.Active: return visitor.active();
-            case ConsentStatus.Rejected: return visitor.rejected();
-            case ConsentStatus.Inactive: return visitor.inactive();
-            default: return visitor._unknown();
+            case ConsentStatus.Draft:
+                return visitor.draft();
+            case ConsentStatus.Proposed:
+                return visitor.proposed();
+            case ConsentStatus.Active:
+                return visitor.active();
+            case ConsentStatus.Rejected:
+                return visitor.rejected();
+            case ConsentStatus.Inactive:
+                return visitor.inactive();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ConsentStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Proposed = "proposed" & {
-        __Proposed: void,
+        __Proposed: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Rejected = "rejected" & {
-        __Rejected: void,
+        __Rejected: void;
     };
     export type Inactive = "inactive" & {
-        __Inactive: void,
+        __Inactive: void;
     };
 
     export interface _Visitor<Result> {

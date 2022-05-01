@@ -36,81 +36,102 @@ export const Structuremap_targetTransform = {
     Id: "id" as Structuremap_targetTransform.Id,
     Cp: "cp" as Structuremap_targetTransform.Cp,
 
-    _visit: <Result>(value: Structuremap_targetTransform, visitor: Structuremap_targetTransform._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Structuremap_targetTransform,
+        visitor: Structuremap_targetTransform._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Structuremap_targetTransform.Create: return visitor.create();
-            case Structuremap_targetTransform.Copy: return visitor.copy();
-            case Structuremap_targetTransform.Truncate: return visitor.truncate();
-            case Structuremap_targetTransform.Escape: return visitor.escape();
-            case Structuremap_targetTransform.Cast: return visitor.cast();
-            case Structuremap_targetTransform.Append: return visitor.append();
-            case Structuremap_targetTransform.Translate: return visitor.translate();
-            case Structuremap_targetTransform.Reference: return visitor.reference();
-            case Structuremap_targetTransform.DateOp: return visitor.dateOp();
-            case Structuremap_targetTransform.Uuid: return visitor.uuid();
-            case Structuremap_targetTransform.Pointer: return visitor.pointer();
-            case Structuremap_targetTransform.Evaluate: return visitor.evaluate();
-            case Structuremap_targetTransform.Cc: return visitor.cc();
-            case Structuremap_targetTransform.C: return visitor.c();
-            case Structuremap_targetTransform.Qty: return visitor.qty();
-            case Structuremap_targetTransform.Id: return visitor.id();
-            case Structuremap_targetTransform.Cp: return visitor.cp();
-            default: return visitor._unknown();
+            case Structuremap_targetTransform.Create:
+                return visitor.create();
+            case Structuremap_targetTransform.Copy:
+                return visitor.copy();
+            case Structuremap_targetTransform.Truncate:
+                return visitor.truncate();
+            case Structuremap_targetTransform.Escape:
+                return visitor.escape();
+            case Structuremap_targetTransform.Cast:
+                return visitor.cast();
+            case Structuremap_targetTransform.Append:
+                return visitor.append();
+            case Structuremap_targetTransform.Translate:
+                return visitor.translate();
+            case Structuremap_targetTransform.Reference:
+                return visitor.reference();
+            case Structuremap_targetTransform.DateOp:
+                return visitor.dateOp();
+            case Structuremap_targetTransform.Uuid:
+                return visitor.uuid();
+            case Structuremap_targetTransform.Pointer:
+                return visitor.pointer();
+            case Structuremap_targetTransform.Evaluate:
+                return visitor.evaluate();
+            case Structuremap_targetTransform.Cc:
+                return visitor.cc();
+            case Structuremap_targetTransform.C:
+                return visitor.c();
+            case Structuremap_targetTransform.Qty:
+                return visitor.qty();
+            case Structuremap_targetTransform.Id:
+                return visitor.id();
+            case Structuremap_targetTransform.Cp:
+                return visitor.cp();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Structuremap_targetTransform {
     export type Create = "create" & {
-        __Create: void,
+        __Create: void;
     };
     export type Copy = "copy" & {
-        __Copy: void,
+        __Copy: void;
     };
     export type Truncate = "truncate" & {
-        __Truncate: void,
+        __Truncate: void;
     };
     export type Escape = "escape" & {
-        __Escape: void,
+        __Escape: void;
     };
     export type Cast = "cast" & {
-        __Cast: void,
+        __Cast: void;
     };
     export type Append = "append" & {
-        __Append: void,
+        __Append: void;
     };
     export type Translate = "translate" & {
-        __Translate: void,
+        __Translate: void;
     };
     export type Reference = "reference" & {
-        __Reference: void,
+        __Reference: void;
     };
     export type DateOp = "dateOp" & {
-        __DateOp: void,
+        __DateOp: void;
     };
     export type Uuid = "uuid" & {
-        __Uuid: void,
+        __Uuid: void;
     };
     export type Pointer = "pointer" & {
-        __Pointer: void,
+        __Pointer: void;
     };
     export type Evaluate = "evaluate" & {
-        __Evaluate: void,
+        __Evaluate: void;
     };
     export type Cc = "cc" & {
-        __Cc: void,
+        __Cc: void;
     };
     export type C = "c" & {
-        __C: void,
+        __C: void;
     };
     export type Qty = "qty" & {
-        __Qty: void,
+        __Qty: void;
     };
     export type Id = "id" & {
-        __Id: void,
+        __Id: void;
     };
     export type Cp = "cp" & {
-        __Cp: void,
+        __Cp: void;
     };
 
     export interface _Visitor<Result> {

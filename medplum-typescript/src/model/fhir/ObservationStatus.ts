@@ -14,37 +14,47 @@ export const ObservationStatus = {
     Corrected: "corrected" as ObservationStatus.Corrected,
     Cancelled: "cancelled" as ObservationStatus.Cancelled,
 
-    _visit: <Result>(value: ObservationStatus, visitor: ObservationStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ObservationStatus,
+        visitor: ObservationStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ObservationStatus.Registered: return visitor.registered();
-            case ObservationStatus.Preliminary: return visitor.preliminary();
-            case ObservationStatus.Final: return visitor.final();
-            case ObservationStatus.Amended: return visitor.amended();
-            case ObservationStatus.Corrected: return visitor.corrected();
-            case ObservationStatus.Cancelled: return visitor.cancelled();
-            default: return visitor._unknown();
+            case ObservationStatus.Registered:
+                return visitor.registered();
+            case ObservationStatus.Preliminary:
+                return visitor.preliminary();
+            case ObservationStatus.Final:
+                return visitor.final();
+            case ObservationStatus.Amended:
+                return visitor.amended();
+            case ObservationStatus.Corrected:
+                return visitor.corrected();
+            case ObservationStatus.Cancelled:
+                return visitor.cancelled();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ObservationStatus {
     export type Registered = "registered" & {
-        __Registered: void,
+        __Registered: void;
     };
     export type Preliminary = "preliminary" & {
-        __Preliminary: void,
+        __Preliminary: void;
     };
     export type Final = "final" & {
-        __Final: void,
+        __Final: void;
     };
     export type Amended = "amended" & {
-        __Amended: void,
+        __Amended: void;
     };
     export type Corrected = "corrected" & {
-        __Corrected: void,
+        __Corrected: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
 
     export interface _Visitor<Result> {

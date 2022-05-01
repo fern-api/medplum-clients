@@ -12,33 +12,42 @@ export const IdentifierUse = {
     Secondary: "secondary" as IdentifierUse.Secondary,
     Old: "old" as IdentifierUse.Old,
 
-    _visit: <Result>(value: IdentifierUse, visitor: IdentifierUse._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: IdentifierUse,
+        visitor: IdentifierUse._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case IdentifierUse.Usual: return visitor.usual();
-            case IdentifierUse.Official: return visitor.official();
-            case IdentifierUse.Temp: return visitor.temp();
-            case IdentifierUse.Secondary: return visitor.secondary();
-            case IdentifierUse.Old: return visitor.old();
-            default: return visitor._unknown();
+            case IdentifierUse.Usual:
+                return visitor.usual();
+            case IdentifierUse.Official:
+                return visitor.official();
+            case IdentifierUse.Temp:
+                return visitor.temp();
+            case IdentifierUse.Secondary:
+                return visitor.secondary();
+            case IdentifierUse.Old:
+                return visitor.old();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace IdentifierUse {
     export type Usual = "usual" & {
-        __Usual: void,
+        __Usual: void;
     };
     export type Official = "official" & {
-        __Official: void,
+        __Official: void;
     };
     export type Temp = "temp" & {
-        __Temp: void,
+        __Temp: void;
     };
     export type Secondary = "secondary" & {
-        __Secondary: void,
+        __Secondary: void;
     };
     export type Old = "old" & {
-        __Old: void,
+        __Old: void;
     };
 
     export interface _Visitor<Result> {

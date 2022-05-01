@@ -16,41 +16,52 @@ export const Codesystem_propertyType = {
     DateTime: "dateTime" as Codesystem_propertyType.DateTime,
     Decimal: "decimal" as Codesystem_propertyType.Decimal,
 
-    _visit: <Result>(value: Codesystem_propertyType, visitor: Codesystem_propertyType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Codesystem_propertyType,
+        visitor: Codesystem_propertyType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Codesystem_propertyType.Code: return visitor.code();
-            case Codesystem_propertyType.Coding: return visitor.coding();
-            case Codesystem_propertyType.String: return visitor.string();
-            case Codesystem_propertyType.Integer: return visitor.integer();
-            case Codesystem_propertyType.Boolean: return visitor.boolean();
-            case Codesystem_propertyType.DateTime: return visitor.dateTime();
-            case Codesystem_propertyType.Decimal: return visitor.decimal();
-            default: return visitor._unknown();
+            case Codesystem_propertyType.Code:
+                return visitor.code();
+            case Codesystem_propertyType.Coding:
+                return visitor.coding();
+            case Codesystem_propertyType.String:
+                return visitor.string();
+            case Codesystem_propertyType.Integer:
+                return visitor.integer();
+            case Codesystem_propertyType.Boolean:
+                return visitor.boolean();
+            case Codesystem_propertyType.DateTime:
+                return visitor.dateTime();
+            case Codesystem_propertyType.Decimal:
+                return visitor.decimal();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Codesystem_propertyType {
     export type Code = "code" & {
-        __Code: void,
+        __Code: void;
     };
     export type Coding = "Coding" & {
-        __Coding: void,
+        __Coding: void;
     };
     export type String = "string" & {
-        __String: void,
+        __String: void;
     };
     export type Integer = "integer" & {
-        __Integer: void,
+        __Integer: void;
     };
     export type Boolean = "boolean" & {
-        __Boolean: void,
+        __Boolean: void;
     };
     export type DateTime = "dateTime" & {
-        __DateTime: void,
+        __DateTime: void;
     };
     export type Decimal = "decimal" & {
-        __Decimal: void,
+        __Decimal: void;
     };
 
     export interface _Visitor<Result> {

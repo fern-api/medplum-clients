@@ -42,93 +42,117 @@ export const Timing_repeatWhenItem = {
     Pcd: "PCD" as Timing_repeatWhenItem.Pcd,
     Pcv: "PCV" as Timing_repeatWhenItem.Pcv,
 
-    _visit: <Result>(value: Timing_repeatWhenItem, visitor: Timing_repeatWhenItem._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Timing_repeatWhenItem,
+        visitor: Timing_repeatWhenItem._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Timing_repeatWhenItem.Morn: return visitor.morn();
-            case Timing_repeatWhenItem.Noon: return visitor.noon();
-            case Timing_repeatWhenItem.Aft: return visitor.aft();
-            case Timing_repeatWhenItem.Eve: return visitor.eve();
-            case Timing_repeatWhenItem.Night: return visitor.night();
-            case Timing_repeatWhenItem.Phs: return visitor.phs();
-            case Timing_repeatWhenItem.Hs: return visitor.hs();
-            case Timing_repeatWhenItem.Wake: return visitor.wake();
-            case Timing_repeatWhenItem.C: return visitor.c();
-            case Timing_repeatWhenItem.Cm: return visitor.cm();
-            case Timing_repeatWhenItem.Cd: return visitor.cd();
-            case Timing_repeatWhenItem.Cv: return visitor.cv();
-            case Timing_repeatWhenItem.Ac: return visitor.ac();
-            case Timing_repeatWhenItem.Acm: return visitor.acm();
-            case Timing_repeatWhenItem.Acd: return visitor.acd();
-            case Timing_repeatWhenItem.Acv: return visitor.acv();
-            case Timing_repeatWhenItem.Pc: return visitor.pc();
-            case Timing_repeatWhenItem.Pcm: return visitor.pcm();
-            case Timing_repeatWhenItem.Pcd: return visitor.pcd();
-            case Timing_repeatWhenItem.Pcv: return visitor.pcv();
-            default: return visitor._unknown();
+            case Timing_repeatWhenItem.Morn:
+                return visitor.morn();
+            case Timing_repeatWhenItem.Noon:
+                return visitor.noon();
+            case Timing_repeatWhenItem.Aft:
+                return visitor.aft();
+            case Timing_repeatWhenItem.Eve:
+                return visitor.eve();
+            case Timing_repeatWhenItem.Night:
+                return visitor.night();
+            case Timing_repeatWhenItem.Phs:
+                return visitor.phs();
+            case Timing_repeatWhenItem.Hs:
+                return visitor.hs();
+            case Timing_repeatWhenItem.Wake:
+                return visitor.wake();
+            case Timing_repeatWhenItem.C:
+                return visitor.c();
+            case Timing_repeatWhenItem.Cm:
+                return visitor.cm();
+            case Timing_repeatWhenItem.Cd:
+                return visitor.cd();
+            case Timing_repeatWhenItem.Cv:
+                return visitor.cv();
+            case Timing_repeatWhenItem.Ac:
+                return visitor.ac();
+            case Timing_repeatWhenItem.Acm:
+                return visitor.acm();
+            case Timing_repeatWhenItem.Acd:
+                return visitor.acd();
+            case Timing_repeatWhenItem.Acv:
+                return visitor.acv();
+            case Timing_repeatWhenItem.Pc:
+                return visitor.pc();
+            case Timing_repeatWhenItem.Pcm:
+                return visitor.pcm();
+            case Timing_repeatWhenItem.Pcd:
+                return visitor.pcd();
+            case Timing_repeatWhenItem.Pcv:
+                return visitor.pcv();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Timing_repeatWhenItem {
     export type Morn = "MORN" & {
-        __Morn: void,
+        __Morn: void;
     };
     export type Noon = "NOON" & {
-        __Noon: void,
+        __Noon: void;
     };
     export type Aft = "AFT" & {
-        __Aft: void,
+        __Aft: void;
     };
     export type Eve = "EVE" & {
-        __Eve: void,
+        __Eve: void;
     };
     export type Night = "NIGHT" & {
-        __Night: void,
+        __Night: void;
     };
     export type Phs = "PHS" & {
-        __Phs: void,
+        __Phs: void;
     };
     export type Hs = "HS" & {
-        __Hs: void,
+        __Hs: void;
     };
     export type Wake = "WAKE" & {
-        __Wake: void,
+        __Wake: void;
     };
     export type C = "C" & {
-        __C: void,
+        __C: void;
     };
     export type Cm = "CM" & {
-        __Cm: void,
+        __Cm: void;
     };
     export type Cd = "CD" & {
-        __Cd: void,
+        __Cd: void;
     };
     export type Cv = "CV" & {
-        __Cv: void,
+        __Cv: void;
     };
     export type Ac = "AC" & {
-        __Ac: void,
+        __Ac: void;
     };
     export type Acm = "ACM" & {
-        __Acm: void,
+        __Acm: void;
     };
     export type Acd = "ACD" & {
-        __Acd: void,
+        __Acd: void;
     };
     export type Acv = "ACV" & {
-        __Acv: void,
+        __Acv: void;
     };
     export type Pc = "PC" & {
-        __Pc: void,
+        __Pc: void;
     };
     export type Pcm = "PCM" & {
-        __Pcm: void,
+        __Pcm: void;
     };
     export type Pcd = "PCD" & {
-        __Pcd: void,
+        __Pcd: void;
     };
     export type Pcv = "PCV" & {
-        __Pcv: void,
+        __Pcv: void;
     };
 
     export interface _Visitor<Result> {

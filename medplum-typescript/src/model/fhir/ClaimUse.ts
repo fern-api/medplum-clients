@@ -8,25 +8,32 @@ export const ClaimUse = {
     Preauthorization: "preauthorization" as ClaimUse.Preauthorization,
     Predetermination: "predetermination" as ClaimUse.Predetermination,
 
-    _visit: <Result>(value: ClaimUse, visitor: ClaimUse._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ClaimUse,
+        visitor: ClaimUse._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ClaimUse.Claim: return visitor.claim();
-            case ClaimUse.Preauthorization: return visitor.preauthorization();
-            case ClaimUse.Predetermination: return visitor.predetermination();
-            default: return visitor._unknown();
+            case ClaimUse.Claim:
+                return visitor.claim();
+            case ClaimUse.Preauthorization:
+                return visitor.preauthorization();
+            case ClaimUse.Predetermination:
+                return visitor.predetermination();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ClaimUse {
     export type Claim = "claim" & {
-        __Claim: void,
+        __Claim: void;
     };
     export type Preauthorization = "preauthorization" & {
-        __Preauthorization: void,
+        __Preauthorization: void;
     };
     export type Predetermination = "predetermination" & {
-        __Predetermination: void,
+        __Predetermination: void;
     };
 
     export interface _Visitor<Result> {

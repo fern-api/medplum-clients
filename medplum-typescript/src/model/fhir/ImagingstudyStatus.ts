@@ -8,25 +8,32 @@ export const ImagingstudyStatus = {
     Available: "available" as ImagingstudyStatus.Available,
     Cancelled: "cancelled" as ImagingstudyStatus.Cancelled,
 
-    _visit: <Result>(value: ImagingstudyStatus, visitor: ImagingstudyStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ImagingstudyStatus,
+        visitor: ImagingstudyStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ImagingstudyStatus.Registered: return visitor.registered();
-            case ImagingstudyStatus.Available: return visitor.available();
-            case ImagingstudyStatus.Cancelled: return visitor.cancelled();
-            default: return visitor._unknown();
+            case ImagingstudyStatus.Registered:
+                return visitor.registered();
+            case ImagingstudyStatus.Available:
+                return visitor.available();
+            case ImagingstudyStatus.Cancelled:
+                return visitor.cancelled();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ImagingstudyStatus {
     export type Registered = "registered" & {
-        __Registered: void,
+        __Registered: void;
     };
     export type Available = "available" & {
-        __Available: void,
+        __Available: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
 
     export interface _Visitor<Result> {

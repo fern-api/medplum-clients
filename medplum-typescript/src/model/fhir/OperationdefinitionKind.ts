@@ -6,21 +6,27 @@ export const OperationdefinitionKind = {
     Operation: "operation" as OperationdefinitionKind.Operation,
     Query: "query" as OperationdefinitionKind.Query,
 
-    _visit: <Result>(value: OperationdefinitionKind, visitor: OperationdefinitionKind._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: OperationdefinitionKind,
+        visitor: OperationdefinitionKind._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case OperationdefinitionKind.Operation: return visitor.operation();
-            case OperationdefinitionKind.Query: return visitor.query();
-            default: return visitor._unknown();
+            case OperationdefinitionKind.Operation:
+                return visitor.operation();
+            case OperationdefinitionKind.Query:
+                return visitor.query();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace OperationdefinitionKind {
     export type Operation = "operation" & {
-        __Operation: void,
+        __Operation: void;
     };
     export type Query = "query" & {
-        __Query: void,
+        __Query: void;
     };
 
     export interface _Visitor<Result> {

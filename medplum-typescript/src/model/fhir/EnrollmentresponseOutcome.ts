@@ -10,29 +10,37 @@ export const EnrollmentresponseOutcome = {
     Error: "error" as EnrollmentresponseOutcome.Error,
     Partial: "partial" as EnrollmentresponseOutcome.Partial,
 
-    _visit: <Result>(value: EnrollmentresponseOutcome, visitor: EnrollmentresponseOutcome._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: EnrollmentresponseOutcome,
+        visitor: EnrollmentresponseOutcome._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case EnrollmentresponseOutcome.Queued: return visitor.queued();
-            case EnrollmentresponseOutcome.Complete: return visitor.complete();
-            case EnrollmentresponseOutcome.Error: return visitor.error();
-            case EnrollmentresponseOutcome.Partial: return visitor.partial();
-            default: return visitor._unknown();
+            case EnrollmentresponseOutcome.Queued:
+                return visitor.queued();
+            case EnrollmentresponseOutcome.Complete:
+                return visitor.complete();
+            case EnrollmentresponseOutcome.Error:
+                return visitor.error();
+            case EnrollmentresponseOutcome.Partial:
+                return visitor.partial();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace EnrollmentresponseOutcome {
     export type Queued = "queued" & {
-        __Queued: void,
+        __Queued: void;
     };
     export type Complete = "complete" & {
-        __Complete: void,
+        __Complete: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Partial = "partial" & {
-        __Partial: void,
+        __Partial: void;
     };
 
     export interface _Visitor<Result> {

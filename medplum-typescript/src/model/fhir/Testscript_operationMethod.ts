@@ -16,41 +16,52 @@ export const Testscript_operationMethod = {
     Put: "put" as Testscript_operationMethod.Put,
     Head: "head" as Testscript_operationMethod.Head,
 
-    _visit: <Result>(value: Testscript_operationMethod, visitor: Testscript_operationMethod._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Testscript_operationMethod,
+        visitor: Testscript_operationMethod._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Testscript_operationMethod.Delete: return visitor.delete();
-            case Testscript_operationMethod.Get: return visitor.get();
-            case Testscript_operationMethod.Options: return visitor.options();
-            case Testscript_operationMethod.Patch: return visitor.patch();
-            case Testscript_operationMethod.Post: return visitor.post();
-            case Testscript_operationMethod.Put: return visitor.put();
-            case Testscript_operationMethod.Head: return visitor.head();
-            default: return visitor._unknown();
+            case Testscript_operationMethod.Delete:
+                return visitor.delete();
+            case Testscript_operationMethod.Get:
+                return visitor.get();
+            case Testscript_operationMethod.Options:
+                return visitor.options();
+            case Testscript_operationMethod.Patch:
+                return visitor.patch();
+            case Testscript_operationMethod.Post:
+                return visitor.post();
+            case Testscript_operationMethod.Put:
+                return visitor.put();
+            case Testscript_operationMethod.Head:
+                return visitor.head();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Testscript_operationMethod {
     export type Delete = "delete" & {
-        __Delete: void,
+        __Delete: void;
     };
     export type Get = "get" & {
-        __Get: void,
+        __Get: void;
     };
     export type Options = "options" & {
-        __Options: void,
+        __Options: void;
     };
     export type Patch = "patch" & {
-        __Patch: void,
+        __Patch: void;
     };
     export type Post = "post" & {
-        __Post: void,
+        __Post: void;
     };
     export type Put = "put" & {
-        __Put: void,
+        __Put: void;
     };
     export type Head = "head" & {
-        __Head: void,
+        __Head: void;
     };
 
     export interface _Visitor<Result> {

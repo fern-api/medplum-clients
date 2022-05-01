@@ -8,25 +8,32 @@ export const Explanationofbenefit_processnoteType = {
     Print: "print" as Explanationofbenefit_processnoteType.Print,
     Printoper: "printoper" as Explanationofbenefit_processnoteType.Printoper,
 
-    _visit: <Result>(value: Explanationofbenefit_processnoteType, visitor: Explanationofbenefit_processnoteType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Explanationofbenefit_processnoteType,
+        visitor: Explanationofbenefit_processnoteType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Explanationofbenefit_processnoteType.Display: return visitor.display();
-            case Explanationofbenefit_processnoteType.Print: return visitor.print();
-            case Explanationofbenefit_processnoteType.Printoper: return visitor.printoper();
-            default: return visitor._unknown();
+            case Explanationofbenefit_processnoteType.Display:
+                return visitor.display();
+            case Explanationofbenefit_processnoteType.Print:
+                return visitor.print();
+            case Explanationofbenefit_processnoteType.Printoper:
+                return visitor.printoper();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Explanationofbenefit_processnoteType {
     export type Display = "display" & {
-        __Display: void,
+        __Display: void;
     };
     export type Print = "print" & {
-        __Print: void,
+        __Print: void;
     };
     export type Printoper = "printoper" & {
-        __Printoper: void,
+        __Printoper: void;
     };
 
     export interface _Visitor<Result> {

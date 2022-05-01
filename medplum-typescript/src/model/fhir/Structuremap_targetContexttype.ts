@@ -6,21 +6,27 @@ export const Structuremap_targetContexttype = {
     Type: "type" as Structuremap_targetContexttype.Type,
     Variable: "variable" as Structuremap_targetContexttype.Variable,
 
-    _visit: <Result>(value: Structuremap_targetContexttype, visitor: Structuremap_targetContexttype._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Structuremap_targetContexttype,
+        visitor: Structuremap_targetContexttype._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Structuremap_targetContexttype.Type: return visitor.type();
-            case Structuremap_targetContexttype.Variable: return visitor.variable();
-            default: return visitor._unknown();
+            case Structuremap_targetContexttype.Type:
+                return visitor.type();
+            case Structuremap_targetContexttype.Variable:
+                return visitor.variable();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Structuremap_targetContexttype {
     export type Type = "type" & {
-        __Type: void,
+        __Type: void;
     };
     export type Variable = "variable" & {
-        __Variable: void,
+        __Variable: void;
     };
 
     export interface _Visitor<Result> {

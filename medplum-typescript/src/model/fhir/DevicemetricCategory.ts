@@ -10,29 +10,37 @@ export const DevicemetricCategory = {
     Calculation: "calculation" as DevicemetricCategory.Calculation,
     Unspecified: "unspecified" as DevicemetricCategory.Unspecified,
 
-    _visit: <Result>(value: DevicemetricCategory, visitor: DevicemetricCategory._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: DevicemetricCategory,
+        visitor: DevicemetricCategory._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case DevicemetricCategory.Measurement: return visitor.measurement();
-            case DevicemetricCategory.Setting: return visitor.setting();
-            case DevicemetricCategory.Calculation: return visitor.calculation();
-            case DevicemetricCategory.Unspecified: return visitor.unspecified();
-            default: return visitor._unknown();
+            case DevicemetricCategory.Measurement:
+                return visitor.measurement();
+            case DevicemetricCategory.Setting:
+                return visitor.setting();
+            case DevicemetricCategory.Calculation:
+                return visitor.calculation();
+            case DevicemetricCategory.Unspecified:
+                return visitor.unspecified();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace DevicemetricCategory {
     export type Measurement = "measurement" & {
-        __Measurement: void,
+        __Measurement: void;
     };
     export type Setting = "setting" & {
-        __Setting: void,
+        __Setting: void;
     };
     export type Calculation = "calculation" & {
-        __Calculation: void,
+        __Calculation: void;
     };
     export type Unspecified = "unspecified" & {
-        __Unspecified: void,
+        __Unspecified: void;
     };
 
     export interface _Visitor<Result> {

@@ -32,73 +32,92 @@ export const Questionnaire_itemType = {
     Reference: "reference" as Questionnaire_itemType.Reference,
     Quantity: "quantity" as Questionnaire_itemType.Quantity,
 
-    _visit: <Result>(value: Questionnaire_itemType, visitor: Questionnaire_itemType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Questionnaire_itemType,
+        visitor: Questionnaire_itemType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Questionnaire_itemType.Group: return visitor.group();
-            case Questionnaire_itemType.Display: return visitor.display();
-            case Questionnaire_itemType.Boolean: return visitor.boolean();
-            case Questionnaire_itemType.Decimal: return visitor.decimal();
-            case Questionnaire_itemType.Integer: return visitor.integer();
-            case Questionnaire_itemType.Date: return visitor.date();
-            case Questionnaire_itemType.DateTime: return visitor.dateTime();
-            case Questionnaire_itemType.Time: return visitor.time();
-            case Questionnaire_itemType.String: return visitor.string();
-            case Questionnaire_itemType.Text: return visitor.text();
-            case Questionnaire_itemType.Url: return visitor.url();
-            case Questionnaire_itemType.Choice: return visitor.choice();
-            case Questionnaire_itemType.Attachment: return visitor.attachment();
-            case Questionnaire_itemType.Reference: return visitor.reference();
-            case Questionnaire_itemType.Quantity: return visitor.quantity();
-            default: return visitor._unknown();
+            case Questionnaire_itemType.Group:
+                return visitor.group();
+            case Questionnaire_itemType.Display:
+                return visitor.display();
+            case Questionnaire_itemType.Boolean:
+                return visitor.boolean();
+            case Questionnaire_itemType.Decimal:
+                return visitor.decimal();
+            case Questionnaire_itemType.Integer:
+                return visitor.integer();
+            case Questionnaire_itemType.Date:
+                return visitor.date();
+            case Questionnaire_itemType.DateTime:
+                return visitor.dateTime();
+            case Questionnaire_itemType.Time:
+                return visitor.time();
+            case Questionnaire_itemType.String:
+                return visitor.string();
+            case Questionnaire_itemType.Text:
+                return visitor.text();
+            case Questionnaire_itemType.Url:
+                return visitor.url();
+            case Questionnaire_itemType.Choice:
+                return visitor.choice();
+            case Questionnaire_itemType.Attachment:
+                return visitor.attachment();
+            case Questionnaire_itemType.Reference:
+                return visitor.reference();
+            case Questionnaire_itemType.Quantity:
+                return visitor.quantity();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Questionnaire_itemType {
     export type Group = "group" & {
-        __Group: void,
+        __Group: void;
     };
     export type Display = "display" & {
-        __Display: void,
+        __Display: void;
     };
     export type Boolean = "boolean" & {
-        __Boolean: void,
+        __Boolean: void;
     };
     export type Decimal = "decimal" & {
-        __Decimal: void,
+        __Decimal: void;
     };
     export type Integer = "integer" & {
-        __Integer: void,
+        __Integer: void;
     };
     export type Date = "date" & {
-        __Date: void,
+        __Date: void;
     };
     export type DateTime = "dateTime" & {
-        __DateTime: void,
+        __DateTime: void;
     };
     export type Time = "time" & {
-        __Time: void,
+        __Time: void;
     };
     export type String = "string" & {
-        __String: void,
+        __String: void;
     };
     export type Text = "text" & {
-        __Text: void,
+        __Text: void;
     };
     export type Url = "url" & {
-        __Url: void,
+        __Url: void;
     };
     export type Choice = "choice" & {
-        __Choice: void,
+        __Choice: void;
     };
     export type Attachment = "attachment" & {
-        __Attachment: void,
+        __Attachment: void;
     };
     export type Reference = "reference" & {
-        __Reference: void,
+        __Reference: void;
     };
     export type Quantity = "quantity" & {
-        __Quantity: void,
+        __Quantity: void;
     };
 
     export interface _Visitor<Result> {

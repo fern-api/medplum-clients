@@ -14,37 +14,47 @@ export const Invoice_pricecomponentType = {
     Tax: "tax" as Invoice_pricecomponentType.Tax,
     Informational: "informational" as Invoice_pricecomponentType.Informational,
 
-    _visit: <Result>(value: Invoice_pricecomponentType, visitor: Invoice_pricecomponentType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Invoice_pricecomponentType,
+        visitor: Invoice_pricecomponentType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Invoice_pricecomponentType.Base: return visitor.base();
-            case Invoice_pricecomponentType.Surcharge: return visitor.surcharge();
-            case Invoice_pricecomponentType.Deduction: return visitor.deduction();
-            case Invoice_pricecomponentType.Discount: return visitor.discount();
-            case Invoice_pricecomponentType.Tax: return visitor.tax();
-            case Invoice_pricecomponentType.Informational: return visitor.informational();
-            default: return visitor._unknown();
+            case Invoice_pricecomponentType.Base:
+                return visitor.base();
+            case Invoice_pricecomponentType.Surcharge:
+                return visitor.surcharge();
+            case Invoice_pricecomponentType.Deduction:
+                return visitor.deduction();
+            case Invoice_pricecomponentType.Discount:
+                return visitor.discount();
+            case Invoice_pricecomponentType.Tax:
+                return visitor.tax();
+            case Invoice_pricecomponentType.Informational:
+                return visitor.informational();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Invoice_pricecomponentType {
     export type Base = "base" & {
-        __Base: void,
+        __Base: void;
     };
     export type Surcharge = "surcharge" & {
-        __Surcharge: void,
+        __Surcharge: void;
     };
     export type Deduction = "deduction" & {
-        __Deduction: void,
+        __Deduction: void;
     };
     export type Discount = "discount" & {
-        __Discount: void,
+        __Discount: void;
     };
     export type Tax = "tax" & {
-        __Tax: void,
+        __Tax: void;
     };
     export type Informational = "informational" & {
-        __Informational: void,
+        __Informational: void;
     };
 
     export interface _Visitor<Result> {

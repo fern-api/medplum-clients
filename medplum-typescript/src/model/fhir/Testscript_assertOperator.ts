@@ -24,57 +24,72 @@ export const Testscript_assertOperator = {
     NotContains: "notContains" as Testscript_assertOperator.NotContains,
     Eval: "eval" as Testscript_assertOperator.Eval,
 
-    _visit: <Result>(value: Testscript_assertOperator, visitor: Testscript_assertOperator._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Testscript_assertOperator,
+        visitor: Testscript_assertOperator._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Testscript_assertOperator.Equals: return visitor.equals();
-            case Testscript_assertOperator.NotEquals: return visitor.notEquals();
-            case Testscript_assertOperator.In: return visitor.in();
-            case Testscript_assertOperator.NotIn: return visitor.notIn();
-            case Testscript_assertOperator.GreaterThan: return visitor.greaterThan();
-            case Testscript_assertOperator.LessThan: return visitor.lessThan();
-            case Testscript_assertOperator.Empty: return visitor.empty();
-            case Testscript_assertOperator.NotEmpty: return visitor.notEmpty();
-            case Testscript_assertOperator.Contains: return visitor.contains();
-            case Testscript_assertOperator.NotContains: return visitor.notContains();
-            case Testscript_assertOperator.Eval: return visitor.eval();
-            default: return visitor._unknown();
+            case Testscript_assertOperator.Equals:
+                return visitor.equals();
+            case Testscript_assertOperator.NotEquals:
+                return visitor.notEquals();
+            case Testscript_assertOperator.In:
+                return visitor.in();
+            case Testscript_assertOperator.NotIn:
+                return visitor.notIn();
+            case Testscript_assertOperator.GreaterThan:
+                return visitor.greaterThan();
+            case Testscript_assertOperator.LessThan:
+                return visitor.lessThan();
+            case Testscript_assertOperator.Empty:
+                return visitor.empty();
+            case Testscript_assertOperator.NotEmpty:
+                return visitor.notEmpty();
+            case Testscript_assertOperator.Contains:
+                return visitor.contains();
+            case Testscript_assertOperator.NotContains:
+                return visitor.notContains();
+            case Testscript_assertOperator.Eval:
+                return visitor.eval();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Testscript_assertOperator {
     export type Equals = "equals" & {
-        __Equals: void,
+        __Equals: void;
     };
     export type NotEquals = "notEquals" & {
-        __NotEquals: void,
+        __NotEquals: void;
     };
     export type In = "in" & {
-        __In: void,
+        __In: void;
     };
     export type NotIn = "notIn" & {
-        __NotIn: void,
+        __NotIn: void;
     };
     export type GreaterThan = "greaterThan" & {
-        __GreaterThan: void,
+        __GreaterThan: void;
     };
     export type LessThan = "lessThan" & {
-        __LessThan: void,
+        __LessThan: void;
     };
     export type Empty = "empty" & {
-        __Empty: void,
+        __Empty: void;
     };
     export type NotEmpty = "notEmpty" & {
-        __NotEmpty: void,
+        __NotEmpty: void;
     };
     export type Contains = "contains" & {
-        __Contains: void,
+        __Contains: void;
     };
     export type NotContains = "notContains" & {
-        __NotContains: void,
+        __NotContains: void;
     };
     export type Eval = "eval" & {
-        __Eval: void,
+        __Eval: void;
     };
 
     export interface _Visitor<Result> {

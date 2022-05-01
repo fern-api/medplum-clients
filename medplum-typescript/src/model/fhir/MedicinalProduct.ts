@@ -42,6 +42,12 @@ export interface MedicinalProduct {
     clinicalTrial: Reference[] | null | undefined;
     name: MedicinalProduct_Name[];
     crossReference: Identifier[] | null | undefined;
-    manufacturingBusinessOperation: MedicinalProduct_ManufacturingBusinessOperation[] | null | undefined;
-    specialDesignation: MedicinalProduct_SpecialDesignation[] | null | undefined;
+    manufacturingBusinessOperation:
+        | MedicinalProduct_ManufacturingBusinessOperation[]
+        | null
+        | undefined;
+    specialDesignation:
+        | MedicinalProduct_SpecialDesignation[]
+        | null
+        | undefined;
 }

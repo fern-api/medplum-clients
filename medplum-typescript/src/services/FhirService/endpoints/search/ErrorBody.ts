@@ -7,7 +7,10 @@ export declare namespace ErrorBody {
 }
 
 export const ErrorBody = {
-    _visit: <Result>(_value: ErrorBody, visitor: ErrorBody._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: ErrorBody,
+        visitor: ErrorBody._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

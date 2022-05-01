@@ -12,33 +12,42 @@ export const SearchparameterXpathusage = {
     Distance: "distance" as SearchparameterXpathusage.Distance,
     Other: "other" as SearchparameterXpathusage.Other,
 
-    _visit: <Result>(value: SearchparameterXpathusage, visitor: SearchparameterXpathusage._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: SearchparameterXpathusage,
+        visitor: SearchparameterXpathusage._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case SearchparameterXpathusage.Normal: return visitor.normal();
-            case SearchparameterXpathusage.Phonetic: return visitor.phonetic();
-            case SearchparameterXpathusage.Nearby: return visitor.nearby();
-            case SearchparameterXpathusage.Distance: return visitor.distance();
-            case SearchparameterXpathusage.Other: return visitor.other();
-            default: return visitor._unknown();
+            case SearchparameterXpathusage.Normal:
+                return visitor.normal();
+            case SearchparameterXpathusage.Phonetic:
+                return visitor.phonetic();
+            case SearchparameterXpathusage.Nearby:
+                return visitor.nearby();
+            case SearchparameterXpathusage.Distance:
+                return visitor.distance();
+            case SearchparameterXpathusage.Other:
+                return visitor.other();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace SearchparameterXpathusage {
     export type Normal = "normal" & {
-        __Normal: void,
+        __Normal: void;
     };
     export type Phonetic = "phonetic" & {
-        __Phonetic: void,
+        __Phonetic: void;
     };
     export type Nearby = "nearby" & {
-        __Nearby: void,
+        __Nearby: void;
     };
     export type Distance = "distance" & {
-        __Distance: void,
+        __Distance: void;
     };
     export type Other = "other" & {
-        __Other: void,
+        __Other: void;
     };
 
     export interface _Visitor<Result> {

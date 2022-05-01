@@ -6,21 +6,27 @@ export const DocumentmanifestStatus = {
     Current: "current" as DocumentmanifestStatus.Current,
     Superseded: "superseded" as DocumentmanifestStatus.Superseded,
 
-    _visit: <Result>(value: DocumentmanifestStatus, visitor: DocumentmanifestStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: DocumentmanifestStatus,
+        visitor: DocumentmanifestStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case DocumentmanifestStatus.Current: return visitor.current();
-            case DocumentmanifestStatus.Superseded: return visitor.superseded();
-            default: return visitor._unknown();
+            case DocumentmanifestStatus.Current:
+                return visitor.current();
+            case DocumentmanifestStatus.Superseded:
+                return visitor.superseded();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace DocumentmanifestStatus {
     export type Current = "current" & {
-        __Current: void,
+        __Current: void;
     };
     export type Superseded = "superseded" & {
-        __Superseded: void,
+        __Superseded: void;
     };
 
     export interface _Visitor<Result> {

@@ -6,21 +6,27 @@ export const Consent_provisionType = {
     Deny: "deny" as Consent_provisionType.Deny,
     Permit: "permit" as Consent_provisionType.Permit,
 
-    _visit: <Result>(value: Consent_provisionType, visitor: Consent_provisionType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Consent_provisionType,
+        visitor: Consent_provisionType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Consent_provisionType.Deny: return visitor.deny();
-            case Consent_provisionType.Permit: return visitor.permit();
-            default: return visitor._unknown();
+            case Consent_provisionType.Deny:
+                return visitor.deny();
+            case Consent_provisionType.Permit:
+                return visitor.permit();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Consent_provisionType {
     export type Deny = "deny" & {
-        __Deny: void,
+        __Deny: void;
     };
     export type Permit = "permit" & {
-        __Permit: void,
+        __Permit: void;
     };
 
     export interface _Visitor<Result> {

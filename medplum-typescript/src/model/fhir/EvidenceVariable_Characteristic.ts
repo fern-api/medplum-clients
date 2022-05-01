@@ -28,5 +28,8 @@ export interface EvidenceVariable_Characteristic {
     participantEffectiveDuration: Duration | null | undefined;
     participantEffectiveTiming: Timing | null | undefined;
     timeFromStart: Duration | null | undefined;
-    groupMeasure: Evidencevariable_characteristicGroupmeasure | null | undefined;
+    groupMeasure:
+        | Evidencevariable_characteristicGroupmeasure
+        | null
+        | undefined;
 }

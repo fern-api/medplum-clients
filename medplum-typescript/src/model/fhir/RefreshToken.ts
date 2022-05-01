@@ -1,7 +1,7 @@
 export type RefreshToken = string & {
-    __RefreshToken: void,
+    __RefreshToken: void;
 };
 
 export const RefreshToken = {
-    of: (value: string): RefreshToken => value as RefreshToken
+    of: (value: string): RefreshToken => value as RefreshToken,
 };

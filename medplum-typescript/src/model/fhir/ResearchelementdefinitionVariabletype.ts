@@ -4,29 +4,39 @@ export type ResearchelementdefinitionVariabletype =
     | ResearchelementdefinitionVariabletype.Descriptive;
 
 export const ResearchelementdefinitionVariabletype = {
-    Dichotomous: "dichotomous" as ResearchelementdefinitionVariabletype.Dichotomous,
-    Continuous: "continuous" as ResearchelementdefinitionVariabletype.Continuous,
-    Descriptive: "descriptive" as ResearchelementdefinitionVariabletype.Descriptive,
+    Dichotomous:
+        "dichotomous" as ResearchelementdefinitionVariabletype.Dichotomous,
+    Continuous:
+        "continuous" as ResearchelementdefinitionVariabletype.Continuous,
+    Descriptive:
+        "descriptive" as ResearchelementdefinitionVariabletype.Descriptive,
 
-    _visit: <Result>(value: ResearchelementdefinitionVariabletype, visitor: ResearchelementdefinitionVariabletype._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ResearchelementdefinitionVariabletype,
+        visitor: ResearchelementdefinitionVariabletype._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ResearchelementdefinitionVariabletype.Dichotomous: return visitor.dichotomous();
-            case ResearchelementdefinitionVariabletype.Continuous: return visitor.continuous();
-            case ResearchelementdefinitionVariabletype.Descriptive: return visitor.descriptive();
-            default: return visitor._unknown();
+            case ResearchelementdefinitionVariabletype.Dichotomous:
+                return visitor.dichotomous();
+            case ResearchelementdefinitionVariabletype.Continuous:
+                return visitor.continuous();
+            case ResearchelementdefinitionVariabletype.Descriptive:
+                return visitor.descriptive();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ResearchelementdefinitionVariabletype {
     export type Dichotomous = "dichotomous" & {
-        __Dichotomous: void,
+        __Dichotomous: void;
     };
     export type Continuous = "continuous" & {
-        __Continuous: void,
+        __Continuous: void;
     };
     export type Descriptive = "descriptive" & {
-        __Descriptive: void,
+        __Descriptive: void;
     };
 
     export interface _Visitor<Result> {

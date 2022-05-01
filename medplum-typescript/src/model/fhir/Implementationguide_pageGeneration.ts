@@ -10,29 +10,37 @@ export const Implementationguide_pageGeneration = {
     Xml: "xml" as Implementationguide_pageGeneration.Xml,
     Generated: "generated" as Implementationguide_pageGeneration.Generated,
 
-    _visit: <Result>(value: Implementationguide_pageGeneration, visitor: Implementationguide_pageGeneration._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Implementationguide_pageGeneration,
+        visitor: Implementationguide_pageGeneration._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Implementationguide_pageGeneration.Html: return visitor.html();
-            case Implementationguide_pageGeneration.Markdown: return visitor.markdown();
-            case Implementationguide_pageGeneration.Xml: return visitor.xml();
-            case Implementationguide_pageGeneration.Generated: return visitor.generated();
-            default: return visitor._unknown();
+            case Implementationguide_pageGeneration.Html:
+                return visitor.html();
+            case Implementationguide_pageGeneration.Markdown:
+                return visitor.markdown();
+            case Implementationguide_pageGeneration.Xml:
+                return visitor.xml();
+            case Implementationguide_pageGeneration.Generated:
+                return visitor.generated();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Implementationguide_pageGeneration {
     export type Html = "html" & {
-        __Html: void,
+        __Html: void;
     };
     export type Markdown = "markdown" & {
-        __Markdown: void,
+        __Markdown: void;
     };
     export type Xml = "xml" & {
-        __Xml: void,
+        __Xml: void;
     };
     export type Generated = "generated" & {
-        __Generated: void,
+        __Generated: void;
     };
 
     export interface _Visitor<Result> {

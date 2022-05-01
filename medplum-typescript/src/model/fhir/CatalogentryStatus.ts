@@ -8,25 +8,32 @@ export const CatalogentryStatus = {
     Active: "active" as CatalogentryStatus.Active,
     Retired: "retired" as CatalogentryStatus.Retired,
 
-    _visit: <Result>(value: CatalogentryStatus, visitor: CatalogentryStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: CatalogentryStatus,
+        visitor: CatalogentryStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case CatalogentryStatus.Draft: return visitor.draft();
-            case CatalogentryStatus.Active: return visitor.active();
-            case CatalogentryStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case CatalogentryStatus.Draft:
+                return visitor.draft();
+            case CatalogentryStatus.Active:
+                return visitor.active();
+            case CatalogentryStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace CatalogentryStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

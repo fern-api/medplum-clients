@@ -638,11 +638,13 @@ export declare namespace ResourceList {
         resourceType: "MedicinalProduct";
     }
 
-    interface MedicinalProductAuthorization extends MedicinalProductAuthorization {
+    interface MedicinalProductAuthorization
+        extends MedicinalProductAuthorization {
         resourceType: "MedicinalProductAuthorization";
     }
 
-    interface MedicinalProductContraindication extends MedicinalProductContraindication {
+    interface MedicinalProductContraindication
+        extends MedicinalProductContraindication {
         resourceType: "MedicinalProductContraindication";
     }
 
@@ -658,7 +660,8 @@ export declare namespace ResourceList {
         resourceType: "MedicinalProductInteraction";
     }
 
-    interface MedicinalProductManufactured extends MedicinalProductManufactured {
+    interface MedicinalProductManufactured
+        extends MedicinalProductManufactured {
         resourceType: "MedicinalProductManufactured";
     }
 
@@ -666,11 +669,13 @@ export declare namespace ResourceList {
         resourceType: "MedicinalProductPackaged";
     }
 
-    interface MedicinalProductPharmaceutical extends MedicinalProductPharmaceutical {
+    interface MedicinalProductPharmaceutical
+        extends MedicinalProductPharmaceutical {
         resourceType: "MedicinalProductPharmaceutical";
     }
 
-    interface MedicinalProductUndesirableEffect extends MedicinalProductUndesirableEffect {
+    interface MedicinalProductUndesirableEffect
+        extends MedicinalProductUndesirableEffect {
         resourceType: "MedicinalProductUndesirableEffect";
     }
 
@@ -850,7 +855,8 @@ export declare namespace ResourceList {
         resourceType: "SubstanceProtein";
     }
 
-    interface SubstanceReferenceInformation extends SubstanceReferenceInformation {
+    interface SubstanceReferenceInformation
+        extends SubstanceReferenceInformation {
         resourceType: "SubstanceReferenceInformation";
     }
 
@@ -949,7 +955,9 @@ export declare namespace ResourceList {
         AuditEvent: (value: AuditEvent) => Result;
         Basic: (value: Basic) => Result;
         Binary: (value: Binary) => Result;
-        BiologicallyDerivedProduct: (value: BiologicallyDerivedProduct) => Result;
+        BiologicallyDerivedProduct: (
+            value: BiologicallyDerivedProduct
+        ) => Result;
         BodyStructure: (value: BodyStructure) => Result;
         Bundle: (value: Bundle) => Result;
         CapabilityStatement: (value: CapabilityStatement) => Result;
@@ -971,8 +979,12 @@ export declare namespace ResourceList {
         Consent: (value: Consent) => Result;
         Contract: (value: Contract) => Result;
         Coverage: (value: Coverage) => Result;
-        CoverageEligibilityRequest: (value: CoverageEligibilityRequest) => Result;
-        CoverageEligibilityResponse: (value: CoverageEligibilityResponse) => Result;
+        CoverageEligibilityRequest: (
+            value: CoverageEligibilityRequest
+        ) => Result;
+        CoverageEligibilityResponse: (
+            value: CoverageEligibilityResponse
+        ) => Result;
         DetectedIssue: (value: DetectedIssue) => Result;
         Device: (value: Device) => Result;
         DeviceDefinition: (value: DeviceDefinition) => Result;
@@ -1003,7 +1015,9 @@ export declare namespace ResourceList {
         ImagingStudy: (value: ImagingStudy) => Result;
         Immunization: (value: Immunization) => Result;
         ImmunizationEvaluation: (value: ImmunizationEvaluation) => Result;
-        ImmunizationRecommendation: (value: ImmunizationRecommendation) => Result;
+        ImmunizationRecommendation: (
+            value: ImmunizationRecommendation
+        ) => Result;
         ImplementationGuide: (value: ImplementationGuide) => Result;
         InsurancePlan: (value: InsurancePlan) => Result;
         Invoice: (value: Invoice) => Result;
@@ -1021,15 +1035,31 @@ export declare namespace ResourceList {
         MedicationRequest: (value: MedicationRequest) => Result;
         MedicationStatement: (value: MedicationStatement) => Result;
         MedicinalProduct: (value: MedicinalProduct) => Result;
-        MedicinalProductAuthorization: (value: MedicinalProductAuthorization) => Result;
-        MedicinalProductContraindication: (value: MedicinalProductContraindication) => Result;
-        MedicinalProductIndication: (value: MedicinalProductIndication) => Result;
-        MedicinalProductIngredient: (value: MedicinalProductIngredient) => Result;
-        MedicinalProductInteraction: (value: MedicinalProductInteraction) => Result;
-        MedicinalProductManufactured: (value: MedicinalProductManufactured) => Result;
+        MedicinalProductAuthorization: (
+            value: MedicinalProductAuthorization
+        ) => Result;
+        MedicinalProductContraindication: (
+            value: MedicinalProductContraindication
+        ) => Result;
+        MedicinalProductIndication: (
+            value: MedicinalProductIndication
+        ) => Result;
+        MedicinalProductIngredient: (
+            value: MedicinalProductIngredient
+        ) => Result;
+        MedicinalProductInteraction: (
+            value: MedicinalProductInteraction
+        ) => Result;
+        MedicinalProductManufactured: (
+            value: MedicinalProductManufactured
+        ) => Result;
         MedicinalProductPackaged: (value: MedicinalProductPackaged) => Result;
-        MedicinalProductPharmaceutical: (value: MedicinalProductPharmaceutical) => Result;
-        MedicinalProductUndesirableEffect: (value: MedicinalProductUndesirableEffect) => Result;
+        MedicinalProductPharmaceutical: (
+            value: MedicinalProductPharmaceutical
+        ) => Result;
+        MedicinalProductUndesirableEffect: (
+            value: MedicinalProductUndesirableEffect
+        ) => Result;
         MessageDefinition: (value: MessageDefinition) => Result;
         MessageHeader: (value: MessageHeader) => Result;
         MolecularSequence: (value: MolecularSequence) => Result;
@@ -1074,7 +1104,9 @@ export declare namespace ResourceList {
         SubstanceNucleicAcid: (value: SubstanceNucleicAcid) => Result;
         SubstancePolymer: (value: SubstancePolymer) => Result;
         SubstanceProtein: (value: SubstanceProtein) => Result;
-        SubstanceReferenceInformation: (value: SubstanceReferenceInformation) => Result;
+        SubstanceReferenceInformation: (
+            value: SubstanceReferenceInformation
+        ) => Result;
         SubstanceSourceMaterial: (value: SubstanceSourceMaterial) => Result;
         SubstanceSpecification: (value: SubstanceSpecification) => Result;
         SupplyDelivery: (value: SupplyDelivery) => Result;
@@ -1103,943 +1135,1249 @@ export declare namespace ResourceList {
 export const ResourceList = {
     Account: (value: Account): ResourceList.Account => ({
         ...value,
-        resourceType: "Account"
+        resourceType: "Account",
     }),
 
-    ActivityDefinition: (value: ActivityDefinition): ResourceList.ActivityDefinition => ({
+    ActivityDefinition: (
+        value: ActivityDefinition
+    ): ResourceList.ActivityDefinition => ({
         ...value,
-        resourceType: "ActivityDefinition"
+        resourceType: "ActivityDefinition",
     }),
 
     AdverseEvent: (value: AdverseEvent): ResourceList.AdverseEvent => ({
         ...value,
-        resourceType: "AdverseEvent"
+        resourceType: "AdverseEvent",
     }),
 
-    AllergyIntolerance: (value: AllergyIntolerance): ResourceList.AllergyIntolerance => ({
+    AllergyIntolerance: (
+        value: AllergyIntolerance
+    ): ResourceList.AllergyIntolerance => ({
         ...value,
-        resourceType: "AllergyIntolerance"
+        resourceType: "AllergyIntolerance",
     }),
 
     Appointment: (value: Appointment): ResourceList.Appointment => ({
         ...value,
-        resourceType: "Appointment"
+        resourceType: "Appointment",
     }),
 
-    AppointmentResponse: (value: AppointmentResponse): ResourceList.AppointmentResponse => ({
+    AppointmentResponse: (
+        value: AppointmentResponse
+    ): ResourceList.AppointmentResponse => ({
         ...value,
-        resourceType: "AppointmentResponse"
+        resourceType: "AppointmentResponse",
     }),
 
     AuditEvent: (value: AuditEvent): ResourceList.AuditEvent => ({
         ...value,
-        resourceType: "AuditEvent"
+        resourceType: "AuditEvent",
     }),
 
     Basic: (value: Basic): ResourceList.Basic => ({
         ...value,
-        resourceType: "Basic"
+        resourceType: "Basic",
     }),
 
     Binary: (value: Binary): ResourceList.Binary => ({
         ...value,
-        resourceType: "Binary"
+        resourceType: "Binary",
     }),
 
-    BiologicallyDerivedProduct: (value: BiologicallyDerivedProduct): ResourceList.BiologicallyDerivedProduct => ({
+    BiologicallyDerivedProduct: (
+        value: BiologicallyDerivedProduct
+    ): ResourceList.BiologicallyDerivedProduct => ({
         ...value,
-        resourceType: "BiologicallyDerivedProduct"
+        resourceType: "BiologicallyDerivedProduct",
     }),
 
     BodyStructure: (value: BodyStructure): ResourceList.BodyStructure => ({
         ...value,
-        resourceType: "BodyStructure"
+        resourceType: "BodyStructure",
     }),
 
     Bundle: (value: Bundle): ResourceList.Bundle => ({
         ...value,
-        resourceType: "Bundle"
+        resourceType: "Bundle",
     }),
 
-    CapabilityStatement: (value: CapabilityStatement): ResourceList.CapabilityStatement => ({
+    CapabilityStatement: (
+        value: CapabilityStatement
+    ): ResourceList.CapabilityStatement => ({
         ...value,
-        resourceType: "CapabilityStatement"
+        resourceType: "CapabilityStatement",
     }),
 
     CarePlan: (value: CarePlan): ResourceList.CarePlan => ({
         ...value,
-        resourceType: "CarePlan"
+        resourceType: "CarePlan",
     }),
 
     CareTeam: (value: CareTeam): ResourceList.CareTeam => ({
         ...value,
-        resourceType: "CareTeam"
+        resourceType: "CareTeam",
     }),
 
     CatalogEntry: (value: CatalogEntry): ResourceList.CatalogEntry => ({
         ...value,
-        resourceType: "CatalogEntry"
+        resourceType: "CatalogEntry",
     }),
 
     ChargeItem: (value: ChargeItem): ResourceList.ChargeItem => ({
         ...value,
-        resourceType: "ChargeItem"
+        resourceType: "ChargeItem",
     }),
 
-    ChargeItemDefinition: (value: ChargeItemDefinition): ResourceList.ChargeItemDefinition => ({
+    ChargeItemDefinition: (
+        value: ChargeItemDefinition
+    ): ResourceList.ChargeItemDefinition => ({
         ...value,
-        resourceType: "ChargeItemDefinition"
+        resourceType: "ChargeItemDefinition",
     }),
 
     Claim: (value: Claim): ResourceList.Claim => ({
         ...value,
-        resourceType: "Claim"
+        resourceType: "Claim",
     }),
 
     ClaimResponse: (value: ClaimResponse): ResourceList.ClaimResponse => ({
         ...value,
-        resourceType: "ClaimResponse"
+        resourceType: "ClaimResponse",
     }),
 
-    ClinicalImpression: (value: ClinicalImpression): ResourceList.ClinicalImpression => ({
+    ClinicalImpression: (
+        value: ClinicalImpression
+    ): ResourceList.ClinicalImpression => ({
         ...value,
-        resourceType: "ClinicalImpression"
+        resourceType: "ClinicalImpression",
     }),
 
     CodeSystem: (value: CodeSystem): ResourceList.CodeSystem => ({
         ...value,
-        resourceType: "CodeSystem"
+        resourceType: "CodeSystem",
     }),
 
     Communication: (value: Communication): ResourceList.Communication => ({
         ...value,
-        resourceType: "Communication"
+        resourceType: "Communication",
     }),
 
-    CommunicationRequest: (value: CommunicationRequest): ResourceList.CommunicationRequest => ({
+    CommunicationRequest: (
+        value: CommunicationRequest
+    ): ResourceList.CommunicationRequest => ({
         ...value,
-        resourceType: "CommunicationRequest"
+        resourceType: "CommunicationRequest",
     }),
 
-    CompartmentDefinition: (value: CompartmentDefinition): ResourceList.CompartmentDefinition => ({
+    CompartmentDefinition: (
+        value: CompartmentDefinition
+    ): ResourceList.CompartmentDefinition => ({
         ...value,
-        resourceType: "CompartmentDefinition"
+        resourceType: "CompartmentDefinition",
     }),
 
     Composition: (value: Composition): ResourceList.Composition => ({
         ...value,
-        resourceType: "Composition"
+        resourceType: "Composition",
     }),
 
     ConceptMap: (value: ConceptMap): ResourceList.ConceptMap => ({
         ...value,
-        resourceType: "ConceptMap"
+        resourceType: "ConceptMap",
     }),
 
     Condition: (value: Condition): ResourceList.Condition => ({
         ...value,
-        resourceType: "Condition"
+        resourceType: "Condition",
     }),
 
     Consent: (value: Consent): ResourceList.Consent => ({
         ...value,
-        resourceType: "Consent"
+        resourceType: "Consent",
     }),
 
     Contract: (value: Contract): ResourceList.Contract => ({
         ...value,
-        resourceType: "Contract"
+        resourceType: "Contract",
     }),
 
     Coverage: (value: Coverage): ResourceList.Coverage => ({
         ...value,
-        resourceType: "Coverage"
+        resourceType: "Coverage",
     }),
 
-    CoverageEligibilityRequest: (value: CoverageEligibilityRequest): ResourceList.CoverageEligibilityRequest => ({
+    CoverageEligibilityRequest: (
+        value: CoverageEligibilityRequest
+    ): ResourceList.CoverageEligibilityRequest => ({
         ...value,
-        resourceType: "CoverageEligibilityRequest"
+        resourceType: "CoverageEligibilityRequest",
     }),
 
-    CoverageEligibilityResponse: (value: CoverageEligibilityResponse): ResourceList.CoverageEligibilityResponse => ({
+    CoverageEligibilityResponse: (
+        value: CoverageEligibilityResponse
+    ): ResourceList.CoverageEligibilityResponse => ({
         ...value,
-        resourceType: "CoverageEligibilityResponse"
+        resourceType: "CoverageEligibilityResponse",
     }),
 
     DetectedIssue: (value: DetectedIssue): ResourceList.DetectedIssue => ({
         ...value,
-        resourceType: "DetectedIssue"
+        resourceType: "DetectedIssue",
     }),
 
     Device: (value: Device): ResourceList.Device => ({
         ...value,
-        resourceType: "Device"
+        resourceType: "Device",
     }),
 
-    DeviceDefinition: (value: DeviceDefinition): ResourceList.DeviceDefinition => ({
+    DeviceDefinition: (
+        value: DeviceDefinition
+    ): ResourceList.DeviceDefinition => ({
         ...value,
-        resourceType: "DeviceDefinition"
+        resourceType: "DeviceDefinition",
     }),
 
     DeviceMetric: (value: DeviceMetric): ResourceList.DeviceMetric => ({
         ...value,
-        resourceType: "DeviceMetric"
+        resourceType: "DeviceMetric",
     }),
 
     DeviceRequest: (value: DeviceRequest): ResourceList.DeviceRequest => ({
         ...value,
-        resourceType: "DeviceRequest"
+        resourceType: "DeviceRequest",
     }),
 
-    DeviceUseStatement: (value: DeviceUseStatement): ResourceList.DeviceUseStatement => ({
+    DeviceUseStatement: (
+        value: DeviceUseStatement
+    ): ResourceList.DeviceUseStatement => ({
         ...value,
-        resourceType: "DeviceUseStatement"
+        resourceType: "DeviceUseStatement",
     }),
 
-    DiagnosticReport: (value: DiagnosticReport): ResourceList.DiagnosticReport => ({
+    DiagnosticReport: (
+        value: DiagnosticReport
+    ): ResourceList.DiagnosticReport => ({
         ...value,
-        resourceType: "DiagnosticReport"
+        resourceType: "DiagnosticReport",
     }),
 
-    DocumentManifest: (value: DocumentManifest): ResourceList.DocumentManifest => ({
+    DocumentManifest: (
+        value: DocumentManifest
+    ): ResourceList.DocumentManifest => ({
         ...value,
-        resourceType: "DocumentManifest"
+        resourceType: "DocumentManifest",
     }),
 
-    DocumentReference: (value: DocumentReference): ResourceList.DocumentReference => ({
+    DocumentReference: (
+        value: DocumentReference
+    ): ResourceList.DocumentReference => ({
         ...value,
-        resourceType: "DocumentReference"
+        resourceType: "DocumentReference",
     }),
 
-    EffectEvidenceSynthesis: (value: EffectEvidenceSynthesis): ResourceList.EffectEvidenceSynthesis => ({
+    EffectEvidenceSynthesis: (
+        value: EffectEvidenceSynthesis
+    ): ResourceList.EffectEvidenceSynthesis => ({
         ...value,
-        resourceType: "EffectEvidenceSynthesis"
+        resourceType: "EffectEvidenceSynthesis",
     }),
 
     Encounter: (value: Encounter): ResourceList.Encounter => ({
         ...value,
-        resourceType: "Encounter"
+        resourceType: "Encounter",
     }),
 
     Endpoint: (value: Endpoint): ResourceList.Endpoint => ({
         ...value,
-        resourceType: "Endpoint"
+        resourceType: "Endpoint",
     }),
 
-    EnrollmentRequest: (value: EnrollmentRequest): ResourceList.EnrollmentRequest => ({
+    EnrollmentRequest: (
+        value: EnrollmentRequest
+    ): ResourceList.EnrollmentRequest => ({
         ...value,
-        resourceType: "EnrollmentRequest"
+        resourceType: "EnrollmentRequest",
     }),
 
-    EnrollmentResponse: (value: EnrollmentResponse): ResourceList.EnrollmentResponse => ({
+    EnrollmentResponse: (
+        value: EnrollmentResponse
+    ): ResourceList.EnrollmentResponse => ({
         ...value,
-        resourceType: "EnrollmentResponse"
+        resourceType: "EnrollmentResponse",
     }),
 
     EpisodeOfCare: (value: EpisodeOfCare): ResourceList.EpisodeOfCare => ({
         ...value,
-        resourceType: "EpisodeOfCare"
+        resourceType: "EpisodeOfCare",
     }),
 
-    EventDefinition: (value: EventDefinition): ResourceList.EventDefinition => ({
+    EventDefinition: (
+        value: EventDefinition
+    ): ResourceList.EventDefinition => ({
         ...value,
-        resourceType: "EventDefinition"
+        resourceType: "EventDefinition",
     }),
 
     Evidence: (value: Evidence): ResourceList.Evidence => ({
         ...value,
-        resourceType: "Evidence"
+        resourceType: "Evidence",
     }),
 
-    EvidenceVariable: (value: EvidenceVariable): ResourceList.EvidenceVariable => ({
+    EvidenceVariable: (
+        value: EvidenceVariable
+    ): ResourceList.EvidenceVariable => ({
         ...value,
-        resourceType: "EvidenceVariable"
+        resourceType: "EvidenceVariable",
     }),
 
-    ExampleScenario: (value: ExampleScenario): ResourceList.ExampleScenario => ({
+    ExampleScenario: (
+        value: ExampleScenario
+    ): ResourceList.ExampleScenario => ({
         ...value,
-        resourceType: "ExampleScenario"
+        resourceType: "ExampleScenario",
     }),
 
-    ExplanationOfBenefit: (value: ExplanationOfBenefit): ResourceList.ExplanationOfBenefit => ({
+    ExplanationOfBenefit: (
+        value: ExplanationOfBenefit
+    ): ResourceList.ExplanationOfBenefit => ({
         ...value,
-        resourceType: "ExplanationOfBenefit"
+        resourceType: "ExplanationOfBenefit",
     }),
 
-    FamilyMemberHistory: (value: FamilyMemberHistory): ResourceList.FamilyMemberHistory => ({
+    FamilyMemberHistory: (
+        value: FamilyMemberHistory
+    ): ResourceList.FamilyMemberHistory => ({
         ...value,
-        resourceType: "FamilyMemberHistory"
+        resourceType: "FamilyMemberHistory",
     }),
 
     Flag: (value: Flag): ResourceList.Flag => ({
         ...value,
-        resourceType: "Flag"
+        resourceType: "Flag",
     }),
 
     Goal: (value: Goal): ResourceList.Goal => ({
         ...value,
-        resourceType: "Goal"
+        resourceType: "Goal",
     }),
 
-    GraphDefinition: (value: GraphDefinition): ResourceList.GraphDefinition => ({
+    GraphDefinition: (
+        value: GraphDefinition
+    ): ResourceList.GraphDefinition => ({
         ...value,
-        resourceType: "GraphDefinition"
+        resourceType: "GraphDefinition",
     }),
 
     Group: (value: Group): ResourceList.Group => ({
         ...value,
-        resourceType: "Group"
+        resourceType: "Group",
     }),
 
-    GuidanceResponse: (value: GuidanceResponse): ResourceList.GuidanceResponse => ({
+    GuidanceResponse: (
+        value: GuidanceResponse
+    ): ResourceList.GuidanceResponse => ({
         ...value,
-        resourceType: "GuidanceResponse"
+        resourceType: "GuidanceResponse",
     }),
 
-    HealthcareService: (value: HealthcareService): ResourceList.HealthcareService => ({
+    HealthcareService: (
+        value: HealthcareService
+    ): ResourceList.HealthcareService => ({
         ...value,
-        resourceType: "HealthcareService"
+        resourceType: "HealthcareService",
     }),
 
     ImagingStudy: (value: ImagingStudy): ResourceList.ImagingStudy => ({
         ...value,
-        resourceType: "ImagingStudy"
+        resourceType: "ImagingStudy",
     }),
 
     Immunization: (value: Immunization): ResourceList.Immunization => ({
         ...value,
-        resourceType: "Immunization"
+        resourceType: "Immunization",
     }),
 
-    ImmunizationEvaluation: (value: ImmunizationEvaluation): ResourceList.ImmunizationEvaluation => ({
+    ImmunizationEvaluation: (
+        value: ImmunizationEvaluation
+    ): ResourceList.ImmunizationEvaluation => ({
         ...value,
-        resourceType: "ImmunizationEvaluation"
+        resourceType: "ImmunizationEvaluation",
     }),
 
-    ImmunizationRecommendation: (value: ImmunizationRecommendation): ResourceList.ImmunizationRecommendation => ({
+    ImmunizationRecommendation: (
+        value: ImmunizationRecommendation
+    ): ResourceList.ImmunizationRecommendation => ({
         ...value,
-        resourceType: "ImmunizationRecommendation"
+        resourceType: "ImmunizationRecommendation",
     }),
 
-    ImplementationGuide: (value: ImplementationGuide): ResourceList.ImplementationGuide => ({
+    ImplementationGuide: (
+        value: ImplementationGuide
+    ): ResourceList.ImplementationGuide => ({
         ...value,
-        resourceType: "ImplementationGuide"
+        resourceType: "ImplementationGuide",
     }),
 
     InsurancePlan: (value: InsurancePlan): ResourceList.InsurancePlan => ({
         ...value,
-        resourceType: "InsurancePlan"
+        resourceType: "InsurancePlan",
     }),
 
     Invoice: (value: Invoice): ResourceList.Invoice => ({
         ...value,
-        resourceType: "Invoice"
+        resourceType: "Invoice",
     }),
 
     Library: (value: Library): ResourceList.Library => ({
         ...value,
-        resourceType: "Library"
+        resourceType: "Library",
     }),
 
     Linkage: (value: Linkage): ResourceList.Linkage => ({
         ...value,
-        resourceType: "Linkage"
+        resourceType: "Linkage",
     }),
 
     List: (value: List): ResourceList.List => ({
         ...value,
-        resourceType: "List"
+        resourceType: "List",
     }),
 
     Location: (value: Location): ResourceList.Location => ({
         ...value,
-        resourceType: "Location"
+        resourceType: "Location",
     }),
 
     Measure: (value: Measure): ResourceList.Measure => ({
         ...value,
-        resourceType: "Measure"
+        resourceType: "Measure",
     }),
 
     MeasureReport: (value: MeasureReport): ResourceList.MeasureReport => ({
         ...value,
-        resourceType: "MeasureReport"
+        resourceType: "MeasureReport",
     }),
 
     Media: (value: Media): ResourceList.Media => ({
         ...value,
-        resourceType: "Media"
+        resourceType: "Media",
     }),
 
     Medication: (value: Medication): ResourceList.Medication => ({
         ...value,
-        resourceType: "Medication"
+        resourceType: "Medication",
     }),
 
-    MedicationAdministration: (value: MedicationAdministration): ResourceList.MedicationAdministration => ({
+    MedicationAdministration: (
+        value: MedicationAdministration
+    ): ResourceList.MedicationAdministration => ({
         ...value,
-        resourceType: "MedicationAdministration"
+        resourceType: "MedicationAdministration",
     }),
 
-    MedicationDispense: (value: MedicationDispense): ResourceList.MedicationDispense => ({
+    MedicationDispense: (
+        value: MedicationDispense
+    ): ResourceList.MedicationDispense => ({
         ...value,
-        resourceType: "MedicationDispense"
+        resourceType: "MedicationDispense",
     }),
 
-    MedicationKnowledge: (value: MedicationKnowledge): ResourceList.MedicationKnowledge => ({
+    MedicationKnowledge: (
+        value: MedicationKnowledge
+    ): ResourceList.MedicationKnowledge => ({
         ...value,
-        resourceType: "MedicationKnowledge"
+        resourceType: "MedicationKnowledge",
     }),
 
-    MedicationRequest: (value: MedicationRequest): ResourceList.MedicationRequest => ({
+    MedicationRequest: (
+        value: MedicationRequest
+    ): ResourceList.MedicationRequest => ({
         ...value,
-        resourceType: "MedicationRequest"
+        resourceType: "MedicationRequest",
     }),
 
-    MedicationStatement: (value: MedicationStatement): ResourceList.MedicationStatement => ({
+    MedicationStatement: (
+        value: MedicationStatement
+    ): ResourceList.MedicationStatement => ({
         ...value,
-        resourceType: "MedicationStatement"
+        resourceType: "MedicationStatement",
     }),
 
-    MedicinalProduct: (value: MedicinalProduct): ResourceList.MedicinalProduct => ({
+    MedicinalProduct: (
+        value: MedicinalProduct
+    ): ResourceList.MedicinalProduct => ({
         ...value,
-        resourceType: "MedicinalProduct"
+        resourceType: "MedicinalProduct",
     }),
 
-    MedicinalProductAuthorization: (value: MedicinalProductAuthorization): ResourceList.MedicinalProductAuthorization => ({
+    MedicinalProductAuthorization: (
+        value: MedicinalProductAuthorization
+    ): ResourceList.MedicinalProductAuthorization => ({
         ...value,
-        resourceType: "MedicinalProductAuthorization"
+        resourceType: "MedicinalProductAuthorization",
     }),
 
-    MedicinalProductContraindication: (value: MedicinalProductContraindication): ResourceList.MedicinalProductContraindication => ({
+    MedicinalProductContraindication: (
+        value: MedicinalProductContraindication
+    ): ResourceList.MedicinalProductContraindication => ({
         ...value,
-        resourceType: "MedicinalProductContraindication"
+        resourceType: "MedicinalProductContraindication",
     }),
 
-    MedicinalProductIndication: (value: MedicinalProductIndication): ResourceList.MedicinalProductIndication => ({
+    MedicinalProductIndication: (
+        value: MedicinalProductIndication
+    ): ResourceList.MedicinalProductIndication => ({
         ...value,
-        resourceType: "MedicinalProductIndication"
+        resourceType: "MedicinalProductIndication",
     }),
 
-    MedicinalProductIngredient: (value: MedicinalProductIngredient): ResourceList.MedicinalProductIngredient => ({
+    MedicinalProductIngredient: (
+        value: MedicinalProductIngredient
+    ): ResourceList.MedicinalProductIngredient => ({
         ...value,
-        resourceType: "MedicinalProductIngredient"
+        resourceType: "MedicinalProductIngredient",
     }),
 
-    MedicinalProductInteraction: (value: MedicinalProductInteraction): ResourceList.MedicinalProductInteraction => ({
+    MedicinalProductInteraction: (
+        value: MedicinalProductInteraction
+    ): ResourceList.MedicinalProductInteraction => ({
         ...value,
-        resourceType: "MedicinalProductInteraction"
+        resourceType: "MedicinalProductInteraction",
     }),
 
-    MedicinalProductManufactured: (value: MedicinalProductManufactured): ResourceList.MedicinalProductManufactured => ({
+    MedicinalProductManufactured: (
+        value: MedicinalProductManufactured
+    ): ResourceList.MedicinalProductManufactured => ({
         ...value,
-        resourceType: "MedicinalProductManufactured"
+        resourceType: "MedicinalProductManufactured",
     }),
 
-    MedicinalProductPackaged: (value: MedicinalProductPackaged): ResourceList.MedicinalProductPackaged => ({
+    MedicinalProductPackaged: (
+        value: MedicinalProductPackaged
+    ): ResourceList.MedicinalProductPackaged => ({
         ...value,
-        resourceType: "MedicinalProductPackaged"
+        resourceType: "MedicinalProductPackaged",
     }),
 
-    MedicinalProductPharmaceutical: (value: MedicinalProductPharmaceutical): ResourceList.MedicinalProductPharmaceutical => ({
+    MedicinalProductPharmaceutical: (
+        value: MedicinalProductPharmaceutical
+    ): ResourceList.MedicinalProductPharmaceutical => ({
         ...value,
-        resourceType: "MedicinalProductPharmaceutical"
+        resourceType: "MedicinalProductPharmaceutical",
     }),
 
-    MedicinalProductUndesirableEffect: (value: MedicinalProductUndesirableEffect): ResourceList.MedicinalProductUndesirableEffect => ({
+    MedicinalProductUndesirableEffect: (
+        value: MedicinalProductUndesirableEffect
+    ): ResourceList.MedicinalProductUndesirableEffect => ({
         ...value,
-        resourceType: "MedicinalProductUndesirableEffect"
+        resourceType: "MedicinalProductUndesirableEffect",
     }),
 
-    MessageDefinition: (value: MessageDefinition): ResourceList.MessageDefinition => ({
+    MessageDefinition: (
+        value: MessageDefinition
+    ): ResourceList.MessageDefinition => ({
         ...value,
-        resourceType: "MessageDefinition"
+        resourceType: "MessageDefinition",
     }),
 
     MessageHeader: (value: MessageHeader): ResourceList.MessageHeader => ({
         ...value,
-        resourceType: "MessageHeader"
+        resourceType: "MessageHeader",
     }),
 
-    MolecularSequence: (value: MolecularSequence): ResourceList.MolecularSequence => ({
+    MolecularSequence: (
+        value: MolecularSequence
+    ): ResourceList.MolecularSequence => ({
         ...value,
-        resourceType: "MolecularSequence"
+        resourceType: "MolecularSequence",
     }),
 
     NamingSystem: (value: NamingSystem): ResourceList.NamingSystem => ({
         ...value,
-        resourceType: "NamingSystem"
+        resourceType: "NamingSystem",
     }),
 
     NutritionOrder: (value: NutritionOrder): ResourceList.NutritionOrder => ({
         ...value,
-        resourceType: "NutritionOrder"
+        resourceType: "NutritionOrder",
     }),
 
     Observation: (value: Observation): ResourceList.Observation => ({
         ...value,
-        resourceType: "Observation"
+        resourceType: "Observation",
     }),
 
-    ObservationDefinition: (value: ObservationDefinition): ResourceList.ObservationDefinition => ({
+    ObservationDefinition: (
+        value: ObservationDefinition
+    ): ResourceList.ObservationDefinition => ({
         ...value,
-        resourceType: "ObservationDefinition"
+        resourceType: "ObservationDefinition",
     }),
 
-    OperationDefinition: (value: OperationDefinition): ResourceList.OperationDefinition => ({
+    OperationDefinition: (
+        value: OperationDefinition
+    ): ResourceList.OperationDefinition => ({
         ...value,
-        resourceType: "OperationDefinition"
+        resourceType: "OperationDefinition",
     }),
 
-    OperationOutcome: (value: OperationOutcome): ResourceList.OperationOutcome => ({
+    OperationOutcome: (
+        value: OperationOutcome
+    ): ResourceList.OperationOutcome => ({
         ...value,
-        resourceType: "OperationOutcome"
+        resourceType: "OperationOutcome",
     }),
 
     Organization: (value: Organization): ResourceList.Organization => ({
         ...value,
-        resourceType: "Organization"
+        resourceType: "Organization",
     }),
 
-    OrganizationAffiliation: (value: OrganizationAffiliation): ResourceList.OrganizationAffiliation => ({
+    OrganizationAffiliation: (
+        value: OrganizationAffiliation
+    ): ResourceList.OrganizationAffiliation => ({
         ...value,
-        resourceType: "OrganizationAffiliation"
+        resourceType: "OrganizationAffiliation",
     }),
 
     Parameters: (value: Parameters): ResourceList.Parameters => ({
         ...value,
-        resourceType: "Parameters"
+        resourceType: "Parameters",
     }),
 
     Patient: (value: Patient): ResourceList.Patient => ({
         ...value,
-        resourceType: "Patient"
+        resourceType: "Patient",
     }),
 
     PaymentNotice: (value: PaymentNotice): ResourceList.PaymentNotice => ({
         ...value,
-        resourceType: "PaymentNotice"
+        resourceType: "PaymentNotice",
     }),
 
-    PaymentReconciliation: (value: PaymentReconciliation): ResourceList.PaymentReconciliation => ({
+    PaymentReconciliation: (
+        value: PaymentReconciliation
+    ): ResourceList.PaymentReconciliation => ({
         ...value,
-        resourceType: "PaymentReconciliation"
+        resourceType: "PaymentReconciliation",
     }),
 
     Person: (value: Person): ResourceList.Person => ({
         ...value,
-        resourceType: "Person"
+        resourceType: "Person",
     }),
 
     PlanDefinition: (value: PlanDefinition): ResourceList.PlanDefinition => ({
         ...value,
-        resourceType: "PlanDefinition"
+        resourceType: "PlanDefinition",
     }),
 
     Practitioner: (value: Practitioner): ResourceList.Practitioner => ({
         ...value,
-        resourceType: "Practitioner"
+        resourceType: "Practitioner",
     }),
 
-    PractitionerRole: (value: PractitionerRole): ResourceList.PractitionerRole => ({
+    PractitionerRole: (
+        value: PractitionerRole
+    ): ResourceList.PractitionerRole => ({
         ...value,
-        resourceType: "PractitionerRole"
+        resourceType: "PractitionerRole",
     }),
 
     Procedure: (value: Procedure): ResourceList.Procedure => ({
         ...value,
-        resourceType: "Procedure"
+        resourceType: "Procedure",
     }),
 
     Provenance: (value: Provenance): ResourceList.Provenance => ({
         ...value,
-        resourceType: "Provenance"
+        resourceType: "Provenance",
     }),
 
     Questionnaire: (value: Questionnaire): ResourceList.Questionnaire => ({
         ...value,
-        resourceType: "Questionnaire"
+        resourceType: "Questionnaire",
     }),
 
-    QuestionnaireResponse: (value: QuestionnaireResponse): ResourceList.QuestionnaireResponse => ({
+    QuestionnaireResponse: (
+        value: QuestionnaireResponse
+    ): ResourceList.QuestionnaireResponse => ({
         ...value,
-        resourceType: "QuestionnaireResponse"
+        resourceType: "QuestionnaireResponse",
     }),
 
     RelatedPerson: (value: RelatedPerson): ResourceList.RelatedPerson => ({
         ...value,
-        resourceType: "RelatedPerson"
+        resourceType: "RelatedPerson",
     }),
 
     RequestGroup: (value: RequestGroup): ResourceList.RequestGroup => ({
         ...value,
-        resourceType: "RequestGroup"
+        resourceType: "RequestGroup",
     }),
 
-    ResearchDefinition: (value: ResearchDefinition): ResourceList.ResearchDefinition => ({
+    ResearchDefinition: (
+        value: ResearchDefinition
+    ): ResourceList.ResearchDefinition => ({
         ...value,
-        resourceType: "ResearchDefinition"
+        resourceType: "ResearchDefinition",
     }),
 
-    ResearchElementDefinition: (value: ResearchElementDefinition): ResourceList.ResearchElementDefinition => ({
+    ResearchElementDefinition: (
+        value: ResearchElementDefinition
+    ): ResourceList.ResearchElementDefinition => ({
         ...value,
-        resourceType: "ResearchElementDefinition"
+        resourceType: "ResearchElementDefinition",
     }),
 
     ResearchStudy: (value: ResearchStudy): ResourceList.ResearchStudy => ({
         ...value,
-        resourceType: "ResearchStudy"
+        resourceType: "ResearchStudy",
     }),
 
-    ResearchSubject: (value: ResearchSubject): ResourceList.ResearchSubject => ({
+    ResearchSubject: (
+        value: ResearchSubject
+    ): ResourceList.ResearchSubject => ({
         ...value,
-        resourceType: "ResearchSubject"
+        resourceType: "ResearchSubject",
     }),
 
     RiskAssessment: (value: RiskAssessment): ResourceList.RiskAssessment => ({
         ...value,
-        resourceType: "RiskAssessment"
+        resourceType: "RiskAssessment",
     }),
 
-    RiskEvidenceSynthesis: (value: RiskEvidenceSynthesis): ResourceList.RiskEvidenceSynthesis => ({
+    RiskEvidenceSynthesis: (
+        value: RiskEvidenceSynthesis
+    ): ResourceList.RiskEvidenceSynthesis => ({
         ...value,
-        resourceType: "RiskEvidenceSynthesis"
+        resourceType: "RiskEvidenceSynthesis",
     }),
 
     Schedule: (value: Schedule): ResourceList.Schedule => ({
         ...value,
-        resourceType: "Schedule"
+        resourceType: "Schedule",
     }),
 
-    SearchParameter: (value: SearchParameter): ResourceList.SearchParameter => ({
+    SearchParameter: (
+        value: SearchParameter
+    ): ResourceList.SearchParameter => ({
         ...value,
-        resourceType: "SearchParameter"
+        resourceType: "SearchParameter",
     }),
 
     ServiceRequest: (value: ServiceRequest): ResourceList.ServiceRequest => ({
         ...value,
-        resourceType: "ServiceRequest"
+        resourceType: "ServiceRequest",
     }),
 
     Slot: (value: Slot): ResourceList.Slot => ({
         ...value,
-        resourceType: "Slot"
+        resourceType: "Slot",
     }),
 
     Specimen: (value: Specimen): ResourceList.Specimen => ({
         ...value,
-        resourceType: "Specimen"
+        resourceType: "Specimen",
     }),
 
-    SpecimenDefinition: (value: SpecimenDefinition): ResourceList.SpecimenDefinition => ({
+    SpecimenDefinition: (
+        value: SpecimenDefinition
+    ): ResourceList.SpecimenDefinition => ({
         ...value,
-        resourceType: "SpecimenDefinition"
+        resourceType: "SpecimenDefinition",
     }),
 
-    StructureDefinition: (value: StructureDefinition): ResourceList.StructureDefinition => ({
+    StructureDefinition: (
+        value: StructureDefinition
+    ): ResourceList.StructureDefinition => ({
         ...value,
-        resourceType: "StructureDefinition"
+        resourceType: "StructureDefinition",
     }),
 
     StructureMap: (value: StructureMap): ResourceList.StructureMap => ({
         ...value,
-        resourceType: "StructureMap"
+        resourceType: "StructureMap",
     }),
 
     Subscription: (value: Subscription): ResourceList.Subscription => ({
         ...value,
-        resourceType: "Subscription"
+        resourceType: "Subscription",
     }),
 
     Substance: (value: Substance): ResourceList.Substance => ({
         ...value,
-        resourceType: "Substance"
+        resourceType: "Substance",
     }),
 
-    SubstanceNucleicAcid: (value: SubstanceNucleicAcid): ResourceList.SubstanceNucleicAcid => ({
+    SubstanceNucleicAcid: (
+        value: SubstanceNucleicAcid
+    ): ResourceList.SubstanceNucleicAcid => ({
         ...value,
-        resourceType: "SubstanceNucleicAcid"
+        resourceType: "SubstanceNucleicAcid",
     }),
 
-    SubstancePolymer: (value: SubstancePolymer): ResourceList.SubstancePolymer => ({
+    SubstancePolymer: (
+        value: SubstancePolymer
+    ): ResourceList.SubstancePolymer => ({
         ...value,
-        resourceType: "SubstancePolymer"
+        resourceType: "SubstancePolymer",
     }),
 
-    SubstanceProtein: (value: SubstanceProtein): ResourceList.SubstanceProtein => ({
+    SubstanceProtein: (
+        value: SubstanceProtein
+    ): ResourceList.SubstanceProtein => ({
         ...value,
-        resourceType: "SubstanceProtein"
+        resourceType: "SubstanceProtein",
     }),
 
-    SubstanceReferenceInformation: (value: SubstanceReferenceInformation): ResourceList.SubstanceReferenceInformation => ({
+    SubstanceReferenceInformation: (
+        value: SubstanceReferenceInformation
+    ): ResourceList.SubstanceReferenceInformation => ({
         ...value,
-        resourceType: "SubstanceReferenceInformation"
+        resourceType: "SubstanceReferenceInformation",
     }),
 
-    SubstanceSourceMaterial: (value: SubstanceSourceMaterial): ResourceList.SubstanceSourceMaterial => ({
+    SubstanceSourceMaterial: (
+        value: SubstanceSourceMaterial
+    ): ResourceList.SubstanceSourceMaterial => ({
         ...value,
-        resourceType: "SubstanceSourceMaterial"
+        resourceType: "SubstanceSourceMaterial",
     }),
 
-    SubstanceSpecification: (value: SubstanceSpecification): ResourceList.SubstanceSpecification => ({
+    SubstanceSpecification: (
+        value: SubstanceSpecification
+    ): ResourceList.SubstanceSpecification => ({
         ...value,
-        resourceType: "SubstanceSpecification"
+        resourceType: "SubstanceSpecification",
     }),
 
     SupplyDelivery: (value: SupplyDelivery): ResourceList.SupplyDelivery => ({
         ...value,
-        resourceType: "SupplyDelivery"
+        resourceType: "SupplyDelivery",
     }),
 
     SupplyRequest: (value: SupplyRequest): ResourceList.SupplyRequest => ({
         ...value,
-        resourceType: "SupplyRequest"
+        resourceType: "SupplyRequest",
     }),
 
     Task: (value: Task): ResourceList.Task => ({
         ...value,
-        resourceType: "Task"
+        resourceType: "Task",
     }),
 
-    TerminologyCapabilities: (value: TerminologyCapabilities): ResourceList.TerminologyCapabilities => ({
+    TerminologyCapabilities: (
+        value: TerminologyCapabilities
+    ): ResourceList.TerminologyCapabilities => ({
         ...value,
-        resourceType: "TerminologyCapabilities"
+        resourceType: "TerminologyCapabilities",
     }),
 
     TestReport: (value: TestReport): ResourceList.TestReport => ({
         ...value,
-        resourceType: "TestReport"
+        resourceType: "TestReport",
     }),
 
     TestScript: (value: TestScript): ResourceList.TestScript => ({
         ...value,
-        resourceType: "TestScript"
+        resourceType: "TestScript",
     }),
 
     ValueSet: (value: ValueSet): ResourceList.ValueSet => ({
         ...value,
-        resourceType: "ValueSet"
+        resourceType: "ValueSet",
     }),
 
-    VerificationResult: (value: VerificationResult): ResourceList.VerificationResult => ({
+    VerificationResult: (
+        value: VerificationResult
+    ): ResourceList.VerificationResult => ({
         ...value,
-        resourceType: "VerificationResult"
+        resourceType: "VerificationResult",
     }),
 
-    VisionPrescription: (value: VisionPrescription): ResourceList.VisionPrescription => ({
+    VisionPrescription: (
+        value: VisionPrescription
+    ): ResourceList.VisionPrescription => ({
         ...value,
-        resourceType: "VisionPrescription"
+        resourceType: "VisionPrescription",
     }),
 
     Project: (value: Project): ResourceList.Project => ({
         ...value,
-        resourceType: "Project"
+        resourceType: "Project",
     }),
 
-    ClientApplication: (value: ClientApplication): ResourceList.ClientApplication => ({
+    ClientApplication: (
+        value: ClientApplication
+    ): ResourceList.ClientApplication => ({
         ...value,
-        resourceType: "ClientApplication"
+        resourceType: "ClientApplication",
     }),
 
     User: (value: User): ResourceList.User => ({
         ...value,
-        resourceType: "User"
+        resourceType: "User",
     }),
 
     Login: (value: Login): ResourceList.Login => ({
         ...value,
-        resourceType: "Login"
+        resourceType: "Login",
     }),
 
     RefreshToken: (value: RefreshToken): ResourceList.RefreshToken => ({
         RefreshToken: value,
-        resourceType: "RefreshToken"
+        resourceType: "RefreshToken",
     }),
 
-    PasswordChangeRequest: (value: PasswordChangeRequest): ResourceList.PasswordChangeRequest => ({
+    PasswordChangeRequest: (
+        value: PasswordChangeRequest
+    ): ResourceList.PasswordChangeRequest => ({
         ...value,
-        resourceType: "PasswordChangeRequest"
+        resourceType: "PasswordChangeRequest",
     }),
 
     JsonWebKey: (value: JsonWebKey): ResourceList.JsonWebKey => ({
         ...value,
-        resourceType: "JsonWebKey"
+        resourceType: "JsonWebKey",
     }),
 
     Bot: (value: Bot): ResourceList.Bot => ({
         ...value,
-        resourceType: "Bot"
+        resourceType: "Bot",
     }),
 
     AccessPolicy: (value: AccessPolicy): ResourceList.AccessPolicy => ({
         ...value,
-        resourceType: "AccessPolicy"
+        resourceType: "AccessPolicy",
     }),
 
-    UserConfiguration: (value: UserConfiguration): ResourceList.UserConfiguration => ({
+    UserConfiguration: (
+        value: UserConfiguration
+    ): ResourceList.UserConfiguration => ({
         ...value,
-        resourceType: "UserConfiguration"
+        resourceType: "UserConfiguration",
     }),
 
-    _visit: <Result>(value: ResourceList, visitor: ResourceList._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ResourceList,
+        visitor: ResourceList._Visitor<Result>
+    ): Result => {
         switch (value.resourceType) {
-            case "Account": return visitor.Account(value);
-            case "ActivityDefinition": return visitor.ActivityDefinition(value);
-            case "AdverseEvent": return visitor.AdverseEvent(value);
-            case "AllergyIntolerance": return visitor.AllergyIntolerance(value);
-            case "Appointment": return visitor.Appointment(value);
-            case "AppointmentResponse": return visitor.AppointmentResponse(value);
-            case "AuditEvent": return visitor.AuditEvent(value);
-            case "Basic": return visitor.Basic(value);
-            case "Binary": return visitor.Binary(value);
-            case "BiologicallyDerivedProduct": return visitor.BiologicallyDerivedProduct(value);
-            case "BodyStructure": return visitor.BodyStructure(value);
-            case "Bundle": return visitor.Bundle(value);
-            case "CapabilityStatement": return visitor.CapabilityStatement(value);
-            case "CarePlan": return visitor.CarePlan(value);
-            case "CareTeam": return visitor.CareTeam(value);
-            case "CatalogEntry": return visitor.CatalogEntry(value);
-            case "ChargeItem": return visitor.ChargeItem(value);
-            case "ChargeItemDefinition": return visitor.ChargeItemDefinition(value);
-            case "Claim": return visitor.Claim(value);
-            case "ClaimResponse": return visitor.ClaimResponse(value);
-            case "ClinicalImpression": return visitor.ClinicalImpression(value);
-            case "CodeSystem": return visitor.CodeSystem(value);
-            case "Communication": return visitor.Communication(value);
-            case "CommunicationRequest": return visitor.CommunicationRequest(value);
-            case "CompartmentDefinition": return visitor.CompartmentDefinition(value);
-            case "Composition": return visitor.Composition(value);
-            case "ConceptMap": return visitor.ConceptMap(value);
-            case "Condition": return visitor.Condition(value);
-            case "Consent": return visitor.Consent(value);
-            case "Contract": return visitor.Contract(value);
-            case "Coverage": return visitor.Coverage(value);
-            case "CoverageEligibilityRequest": return visitor.CoverageEligibilityRequest(value);
-            case "CoverageEligibilityResponse": return visitor.CoverageEligibilityResponse(value);
-            case "DetectedIssue": return visitor.DetectedIssue(value);
-            case "Device": return visitor.Device(value);
-            case "DeviceDefinition": return visitor.DeviceDefinition(value);
-            case "DeviceMetric": return visitor.DeviceMetric(value);
-            case "DeviceRequest": return visitor.DeviceRequest(value);
-            case "DeviceUseStatement": return visitor.DeviceUseStatement(value);
-            case "DiagnosticReport": return visitor.DiagnosticReport(value);
-            case "DocumentManifest": return visitor.DocumentManifest(value);
-            case "DocumentReference": return visitor.DocumentReference(value);
-            case "EffectEvidenceSynthesis": return visitor.EffectEvidenceSynthesis(value);
-            case "Encounter": return visitor.Encounter(value);
-            case "Endpoint": return visitor.Endpoint(value);
-            case "EnrollmentRequest": return visitor.EnrollmentRequest(value);
-            case "EnrollmentResponse": return visitor.EnrollmentResponse(value);
-            case "EpisodeOfCare": return visitor.EpisodeOfCare(value);
-            case "EventDefinition": return visitor.EventDefinition(value);
-            case "Evidence": return visitor.Evidence(value);
-            case "EvidenceVariable": return visitor.EvidenceVariable(value);
-            case "ExampleScenario": return visitor.ExampleScenario(value);
-            case "ExplanationOfBenefit": return visitor.ExplanationOfBenefit(value);
-            case "FamilyMemberHistory": return visitor.FamilyMemberHistory(value);
-            case "Flag": return visitor.Flag(value);
-            case "Goal": return visitor.Goal(value);
-            case "GraphDefinition": return visitor.GraphDefinition(value);
-            case "Group": return visitor.Group(value);
-            case "GuidanceResponse": return visitor.GuidanceResponse(value);
-            case "HealthcareService": return visitor.HealthcareService(value);
-            case "ImagingStudy": return visitor.ImagingStudy(value);
-            case "Immunization": return visitor.Immunization(value);
-            case "ImmunizationEvaluation": return visitor.ImmunizationEvaluation(value);
-            case "ImmunizationRecommendation": return visitor.ImmunizationRecommendation(value);
-            case "ImplementationGuide": return visitor.ImplementationGuide(value);
-            case "InsurancePlan": return visitor.InsurancePlan(value);
-            case "Invoice": return visitor.Invoice(value);
-            case "Library": return visitor.Library(value);
-            case "Linkage": return visitor.Linkage(value);
-            case "List": return visitor.List(value);
-            case "Location": return visitor.Location(value);
-            case "Measure": return visitor.Measure(value);
-            case "MeasureReport": return visitor.MeasureReport(value);
-            case "Media": return visitor.Media(value);
-            case "Medication": return visitor.Medication(value);
-            case "MedicationAdministration": return visitor.MedicationAdministration(value);
-            case "MedicationDispense": return visitor.MedicationDispense(value);
-            case "MedicationKnowledge": return visitor.MedicationKnowledge(value);
-            case "MedicationRequest": return visitor.MedicationRequest(value);
-            case "MedicationStatement": return visitor.MedicationStatement(value);
-            case "MedicinalProduct": return visitor.MedicinalProduct(value);
-            case "MedicinalProductAuthorization": return visitor.MedicinalProductAuthorization(value);
-            case "MedicinalProductContraindication": return visitor.MedicinalProductContraindication(value);
-            case "MedicinalProductIndication": return visitor.MedicinalProductIndication(value);
-            case "MedicinalProductIngredient": return visitor.MedicinalProductIngredient(value);
-            case "MedicinalProductInteraction": return visitor.MedicinalProductInteraction(value);
-            case "MedicinalProductManufactured": return visitor.MedicinalProductManufactured(value);
-            case "MedicinalProductPackaged": return visitor.MedicinalProductPackaged(value);
-            case "MedicinalProductPharmaceutical": return visitor.MedicinalProductPharmaceutical(value);
-            case "MedicinalProductUndesirableEffect": return visitor.MedicinalProductUndesirableEffect(value);
-            case "MessageDefinition": return visitor.MessageDefinition(value);
-            case "MessageHeader": return visitor.MessageHeader(value);
-            case "MolecularSequence": return visitor.MolecularSequence(value);
-            case "NamingSystem": return visitor.NamingSystem(value);
-            case "NutritionOrder": return visitor.NutritionOrder(value);
-            case "Observation": return visitor.Observation(value);
-            case "ObservationDefinition": return visitor.ObservationDefinition(value);
-            case "OperationDefinition": return visitor.OperationDefinition(value);
-            case "OperationOutcome": return visitor.OperationOutcome(value);
-            case "Organization": return visitor.Organization(value);
-            case "OrganizationAffiliation": return visitor.OrganizationAffiliation(value);
-            case "Parameters": return visitor.Parameters(value);
-            case "Patient": return visitor.Patient(value);
-            case "PaymentNotice": return visitor.PaymentNotice(value);
-            case "PaymentReconciliation": return visitor.PaymentReconciliation(value);
-            case "Person": return visitor.Person(value);
-            case "PlanDefinition": return visitor.PlanDefinition(value);
-            case "Practitioner": return visitor.Practitioner(value);
-            case "PractitionerRole": return visitor.PractitionerRole(value);
-            case "Procedure": return visitor.Procedure(value);
-            case "Provenance": return visitor.Provenance(value);
-            case "Questionnaire": return visitor.Questionnaire(value);
-            case "QuestionnaireResponse": return visitor.QuestionnaireResponse(value);
-            case "RelatedPerson": return visitor.RelatedPerson(value);
-            case "RequestGroup": return visitor.RequestGroup(value);
-            case "ResearchDefinition": return visitor.ResearchDefinition(value);
-            case "ResearchElementDefinition": return visitor.ResearchElementDefinition(value);
-            case "ResearchStudy": return visitor.ResearchStudy(value);
-            case "ResearchSubject": return visitor.ResearchSubject(value);
-            case "RiskAssessment": return visitor.RiskAssessment(value);
-            case "RiskEvidenceSynthesis": return visitor.RiskEvidenceSynthesis(value);
-            case "Schedule": return visitor.Schedule(value);
-            case "SearchParameter": return visitor.SearchParameter(value);
-            case "ServiceRequest": return visitor.ServiceRequest(value);
-            case "Slot": return visitor.Slot(value);
-            case "Specimen": return visitor.Specimen(value);
-            case "SpecimenDefinition": return visitor.SpecimenDefinition(value);
-            case "StructureDefinition": return visitor.StructureDefinition(value);
-            case "StructureMap": return visitor.StructureMap(value);
-            case "Subscription": return visitor.Subscription(value);
-            case "Substance": return visitor.Substance(value);
-            case "SubstanceNucleicAcid": return visitor.SubstanceNucleicAcid(value);
-            case "SubstancePolymer": return visitor.SubstancePolymer(value);
-            case "SubstanceProtein": return visitor.SubstanceProtein(value);
-            case "SubstanceReferenceInformation": return visitor.SubstanceReferenceInformation(value);
-            case "SubstanceSourceMaterial": return visitor.SubstanceSourceMaterial(value);
-            case "SubstanceSpecification": return visitor.SubstanceSpecification(value);
-            case "SupplyDelivery": return visitor.SupplyDelivery(value);
-            case "SupplyRequest": return visitor.SupplyRequest(value);
-            case "Task": return visitor.Task(value);
-            case "TerminologyCapabilities": return visitor.TerminologyCapabilities(value);
-            case "TestReport": return visitor.TestReport(value);
-            case "TestScript": return visitor.TestScript(value);
-            case "ValueSet": return visitor.ValueSet(value);
-            case "VerificationResult": return visitor.VerificationResult(value);
-            case "VisionPrescription": return visitor.VisionPrescription(value);
-            case "Project": return visitor.Project(value);
-            case "ClientApplication": return visitor.ClientApplication(value);
-            case "User": return visitor.User(value);
-            case "Login": return visitor.Login(value);
-            case "RefreshToken": return visitor.RefreshToken(value.RefreshToken);
-            case "PasswordChangeRequest": return visitor.PasswordChangeRequest(value);
-            case "JsonWebKey": return visitor.JsonWebKey(value);
-            case "Bot": return visitor.Bot(value);
-            case "AccessPolicy": return visitor.AccessPolicy(value);
-            case "UserConfiguration": return visitor.UserConfiguration(value);
-            default: return visitor._unknown();
+            case "Account":
+                return visitor.Account(value);
+            case "ActivityDefinition":
+                return visitor.ActivityDefinition(value);
+            case "AdverseEvent":
+                return visitor.AdverseEvent(value);
+            case "AllergyIntolerance":
+                return visitor.AllergyIntolerance(value);
+            case "Appointment":
+                return visitor.Appointment(value);
+            case "AppointmentResponse":
+                return visitor.AppointmentResponse(value);
+            case "AuditEvent":
+                return visitor.AuditEvent(value);
+            case "Basic":
+                return visitor.Basic(value);
+            case "Binary":
+                return visitor.Binary(value);
+            case "BiologicallyDerivedProduct":
+                return visitor.BiologicallyDerivedProduct(value);
+            case "BodyStructure":
+                return visitor.BodyStructure(value);
+            case "Bundle":
+                return visitor.Bundle(value);
+            case "CapabilityStatement":
+                return visitor.CapabilityStatement(value);
+            case "CarePlan":
+                return visitor.CarePlan(value);
+            case "CareTeam":
+                return visitor.CareTeam(value);
+            case "CatalogEntry":
+                return visitor.CatalogEntry(value);
+            case "ChargeItem":
+                return visitor.ChargeItem(value);
+            case "ChargeItemDefinition":
+                return visitor.ChargeItemDefinition(value);
+            case "Claim":
+                return visitor.Claim(value);
+            case "ClaimResponse":
+                return visitor.ClaimResponse(value);
+            case "ClinicalImpression":
+                return visitor.ClinicalImpression(value);
+            case "CodeSystem":
+                return visitor.CodeSystem(value);
+            case "Communication":
+                return visitor.Communication(value);
+            case "CommunicationRequest":
+                return visitor.CommunicationRequest(value);
+            case "CompartmentDefinition":
+                return visitor.CompartmentDefinition(value);
+            case "Composition":
+                return visitor.Composition(value);
+            case "ConceptMap":
+                return visitor.ConceptMap(value);
+            case "Condition":
+                return visitor.Condition(value);
+            case "Consent":
+                return visitor.Consent(value);
+            case "Contract":
+                return visitor.Contract(value);
+            case "Coverage":
+                return visitor.Coverage(value);
+            case "CoverageEligibilityRequest":
+                return visitor.CoverageEligibilityRequest(value);
+            case "CoverageEligibilityResponse":
+                return visitor.CoverageEligibilityResponse(value);
+            case "DetectedIssue":
+                return visitor.DetectedIssue(value);
+            case "Device":
+                return visitor.Device(value);
+            case "DeviceDefinition":
+                return visitor.DeviceDefinition(value);
+            case "DeviceMetric":
+                return visitor.DeviceMetric(value);
+            case "DeviceRequest":
+                return visitor.DeviceRequest(value);
+            case "DeviceUseStatement":
+                return visitor.DeviceUseStatement(value);
+            case "DiagnosticReport":
+                return visitor.DiagnosticReport(value);
+            case "DocumentManifest":
+                return visitor.DocumentManifest(value);
+            case "DocumentReference":
+                return visitor.DocumentReference(value);
+            case "EffectEvidenceSynthesis":
+                return visitor.EffectEvidenceSynthesis(value);
+            case "Encounter":
+                return visitor.Encounter(value);
+            case "Endpoint":
+                return visitor.Endpoint(value);
+            case "EnrollmentRequest":
+                return visitor.EnrollmentRequest(value);
+            case "EnrollmentResponse":
+                return visitor.EnrollmentResponse(value);
+            case "EpisodeOfCare":
+                return visitor.EpisodeOfCare(value);
+            case "EventDefinition":
+                return visitor.EventDefinition(value);
+            case "Evidence":
+                return visitor.Evidence(value);
+            case "EvidenceVariable":
+                return visitor.EvidenceVariable(value);
+            case "ExampleScenario":
+                return visitor.ExampleScenario(value);
+            case "ExplanationOfBenefit":
+                return visitor.ExplanationOfBenefit(value);
+            case "FamilyMemberHistory":
+                return visitor.FamilyMemberHistory(value);
+            case "Flag":
+                return visitor.Flag(value);
+            case "Goal":
+                return visitor.Goal(value);
+            case "GraphDefinition":
+                return visitor.GraphDefinition(value);
+            case "Group":
+                return visitor.Group(value);
+            case "GuidanceResponse":
+                return visitor.GuidanceResponse(value);
+            case "HealthcareService":
+                return visitor.HealthcareService(value);
+            case "ImagingStudy":
+                return visitor.ImagingStudy(value);
+            case "Immunization":
+                return visitor.Immunization(value);
+            case "ImmunizationEvaluation":
+                return visitor.ImmunizationEvaluation(value);
+            case "ImmunizationRecommendation":
+                return visitor.ImmunizationRecommendation(value);
+            case "ImplementationGuide":
+                return visitor.ImplementationGuide(value);
+            case "InsurancePlan":
+                return visitor.InsurancePlan(value);
+            case "Invoice":
+                return visitor.Invoice(value);
+            case "Library":
+                return visitor.Library(value);
+            case "Linkage":
+                return visitor.Linkage(value);
+            case "List":
+                return visitor.List(value);
+            case "Location":
+                return visitor.Location(value);
+            case "Measure":
+                return visitor.Measure(value);
+            case "MeasureReport":
+                return visitor.MeasureReport(value);
+            case "Media":
+                return visitor.Media(value);
+            case "Medication":
+                return visitor.Medication(value);
+            case "MedicationAdministration":
+                return visitor.MedicationAdministration(value);
+            case "MedicationDispense":
+                return visitor.MedicationDispense(value);
+            case "MedicationKnowledge":
+                return visitor.MedicationKnowledge(value);
+            case "MedicationRequest":
+                return visitor.MedicationRequest(value);
+            case "MedicationStatement":
+                return visitor.MedicationStatement(value);
+            case "MedicinalProduct":
+                return visitor.MedicinalProduct(value);
+            case "MedicinalProductAuthorization":
+                return visitor.MedicinalProductAuthorization(value);
+            case "MedicinalProductContraindication":
+                return visitor.MedicinalProductContraindication(value);
+            case "MedicinalProductIndication":
+                return visitor.MedicinalProductIndication(value);
+            case "MedicinalProductIngredient":
+                return visitor.MedicinalProductIngredient(value);
+            case "MedicinalProductInteraction":
+                return visitor.MedicinalProductInteraction(value);
+            case "MedicinalProductManufactured":
+                return visitor.MedicinalProductManufactured(value);
+            case "MedicinalProductPackaged":
+                return visitor.MedicinalProductPackaged(value);
+            case "MedicinalProductPharmaceutical":
+                return visitor.MedicinalProductPharmaceutical(value);
+            case "MedicinalProductUndesirableEffect":
+                return visitor.MedicinalProductUndesirableEffect(value);
+            case "MessageDefinition":
+                return visitor.MessageDefinition(value);
+            case "MessageHeader":
+                return visitor.MessageHeader(value);
+            case "MolecularSequence":
+                return visitor.MolecularSequence(value);
+            case "NamingSystem":
+                return visitor.NamingSystem(value);
+            case "NutritionOrder":
+                return visitor.NutritionOrder(value);
+            case "Observation":
+                return visitor.Observation(value);
+            case "ObservationDefinition":
+                return visitor.ObservationDefinition(value);
+            case "OperationDefinition":
+                return visitor.OperationDefinition(value);
+            case "OperationOutcome":
+                return visitor.OperationOutcome(value);
+            case "Organization":
+                return visitor.Organization(value);
+            case "OrganizationAffiliation":
+                return visitor.OrganizationAffiliation(value);
+            case "Parameters":
+                return visitor.Parameters(value);
+            case "Patient":
+                return visitor.Patient(value);
+            case "PaymentNotice":
+                return visitor.PaymentNotice(value);
+            case "PaymentReconciliation":
+                return visitor.PaymentReconciliation(value);
+            case "Person":
+                return visitor.Person(value);
+            case "PlanDefinition":
+                return visitor.PlanDefinition(value);
+            case "Practitioner":
+                return visitor.Practitioner(value);
+            case "PractitionerRole":
+                return visitor.PractitionerRole(value);
+            case "Procedure":
+                return visitor.Procedure(value);
+            case "Provenance":
+                return visitor.Provenance(value);
+            case "Questionnaire":
+                return visitor.Questionnaire(value);
+            case "QuestionnaireResponse":
+                return visitor.QuestionnaireResponse(value);
+            case "RelatedPerson":
+                return visitor.RelatedPerson(value);
+            case "RequestGroup":
+                return visitor.RequestGroup(value);
+            case "ResearchDefinition":
+                return visitor.ResearchDefinition(value);
+            case "ResearchElementDefinition":
+                return visitor.ResearchElementDefinition(value);
+            case "ResearchStudy":
+                return visitor.ResearchStudy(value);
+            case "ResearchSubject":
+                return visitor.ResearchSubject(value);
+            case "RiskAssessment":
+                return visitor.RiskAssessment(value);
+            case "RiskEvidenceSynthesis":
+                return visitor.RiskEvidenceSynthesis(value);
+            case "Schedule":
+                return visitor.Schedule(value);
+            case "SearchParameter":
+                return visitor.SearchParameter(value);
+            case "ServiceRequest":
+                return visitor.ServiceRequest(value);
+            case "Slot":
+                return visitor.Slot(value);
+            case "Specimen":
+                return visitor.Specimen(value);
+            case "SpecimenDefinition":
+                return visitor.SpecimenDefinition(value);
+            case "StructureDefinition":
+                return visitor.StructureDefinition(value);
+            case "StructureMap":
+                return visitor.StructureMap(value);
+            case "Subscription":
+                return visitor.Subscription(value);
+            case "Substance":
+                return visitor.Substance(value);
+            case "SubstanceNucleicAcid":
+                return visitor.SubstanceNucleicAcid(value);
+            case "SubstancePolymer":
+                return visitor.SubstancePolymer(value);
+            case "SubstanceProtein":
+                return visitor.SubstanceProtein(value);
+            case "SubstanceReferenceInformation":
+                return visitor.SubstanceReferenceInformation(value);
+            case "SubstanceSourceMaterial":
+                return visitor.SubstanceSourceMaterial(value);
+            case "SubstanceSpecification":
+                return visitor.SubstanceSpecification(value);
+            case "SupplyDelivery":
+                return visitor.SupplyDelivery(value);
+            case "SupplyRequest":
+                return visitor.SupplyRequest(value);
+            case "Task":
+                return visitor.Task(value);
+            case "TerminologyCapabilities":
+                return visitor.TerminologyCapabilities(value);
+            case "TestReport":
+                return visitor.TestReport(value);
+            case "TestScript":
+                return visitor.TestScript(value);
+            case "ValueSet":
+                return visitor.ValueSet(value);
+            case "VerificationResult":
+                return visitor.VerificationResult(value);
+            case "VisionPrescription":
+                return visitor.VisionPrescription(value);
+            case "Project":
+                return visitor.Project(value);
+            case "ClientApplication":
+                return visitor.ClientApplication(value);
+            case "User":
+                return visitor.User(value);
+            case "Login":
+                return visitor.Login(value);
+            case "RefreshToken":
+                return visitor.RefreshToken(value.RefreshToken);
+            case "PasswordChangeRequest":
+                return visitor.PasswordChangeRequest(value);
+            case "JsonWebKey":
+                return visitor.JsonWebKey(value);
+            case "Bot":
+                return visitor.Bot(value);
+            case "AccessPolicy":
+                return visitor.AccessPolicy(value);
+            case "UserConfiguration":
+                return visitor.UserConfiguration(value);
+            default:
+                return visitor._unknown();
         }
     },
 };

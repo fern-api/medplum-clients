@@ -8,25 +8,32 @@ export const Patient_linkType = {
     Refer: "refer" as Patient_linkType.Refer,
     Seealso: "seealso" as Patient_linkType.Seealso,
 
-    _visit: <Result>(value: Patient_linkType, visitor: Patient_linkType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Patient_linkType,
+        visitor: Patient_linkType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Patient_linkType.Replaces: return visitor.replaces();
-            case Patient_linkType.Refer: return visitor.refer();
-            case Patient_linkType.Seealso: return visitor.seealso();
-            default: return visitor._unknown();
+            case Patient_linkType.Replaces:
+                return visitor.replaces();
+            case Patient_linkType.Refer:
+                return visitor.refer();
+            case Patient_linkType.Seealso:
+                return visitor.seealso();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Patient_linkType {
     export type Replaces = "replaces" & {
-        __Replaces: void,
+        __Replaces: void;
     };
     export type Refer = "refer" & {
-        __Refer: void,
+        __Refer: void;
     };
     export type Seealso = "seealso" & {
-        __Seealso: void,
+        __Seealso: void;
     };
 
     export interface _Visitor<Result> {

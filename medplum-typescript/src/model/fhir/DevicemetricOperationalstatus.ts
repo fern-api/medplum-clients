@@ -8,25 +8,32 @@ export const DevicemetricOperationalstatus = {
     Off: "off" as DevicemetricOperationalstatus.Off,
     Standby: "standby" as DevicemetricOperationalstatus.Standby,
 
-    _visit: <Result>(value: DevicemetricOperationalstatus, visitor: DevicemetricOperationalstatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: DevicemetricOperationalstatus,
+        visitor: DevicemetricOperationalstatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case DevicemetricOperationalstatus.On: return visitor.on();
-            case DevicemetricOperationalstatus.Off: return visitor.off();
-            case DevicemetricOperationalstatus.Standby: return visitor.standby();
-            default: return visitor._unknown();
+            case DevicemetricOperationalstatus.On:
+                return visitor.on();
+            case DevicemetricOperationalstatus.Off:
+                return visitor.off();
+            case DevicemetricOperationalstatus.Standby:
+                return visitor.standby();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace DevicemetricOperationalstatus {
     export type On = "on" & {
-        __On: void,
+        __On: void;
     };
     export type Off = "off" & {
-        __Off: void,
+        __Off: void;
     };
     export type Standby = "standby" & {
-        __Standby: void,
+        __Standby: void;
     };
 
     export interface _Visitor<Result> {

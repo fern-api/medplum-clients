@@ -12,7 +12,10 @@ export interface ImmunizationRecommendation_Recommendation {
     contraindicatedVaccineCode: CodeableConcept[] | null | undefined;
     forecastStatus: CodeableConcept;
     forecastReason: CodeableConcept[] | null | undefined;
-    dateCriterion: ImmunizationRecommendation_DateCriterion[] | null | undefined;
+    dateCriterion:
+        | ImmunizationRecommendation_DateCriterion[]
+        | null
+        | undefined;
     description: string | null | undefined;
     series: string | null | undefined;
     doseNumberPositiveInt: number | null | undefined;

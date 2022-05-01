@@ -14,37 +14,47 @@ export const ImplementationguideLicense = {
     Aml: "AML" as ImplementationguideLicense.Aml,
     Ampas: "AMPAS" as ImplementationguideLicense.Ampas,
 
-    _visit: <Result>(value: ImplementationguideLicense, visitor: ImplementationguideLicense._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ImplementationguideLicense,
+        visitor: ImplementationguideLicense._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ImplementationguideLicense.Aal: return visitor.aal();
-            case ImplementationguideLicense.Abstyles: return visitor.abstyles();
-            case ImplementationguideLicense.Aladdin: return visitor.aladdin();
-            case ImplementationguideLicense.Amdplpa: return visitor.amdplpa();
-            case ImplementationguideLicense.Aml: return visitor.aml();
-            case ImplementationguideLicense.Ampas: return visitor.ampas();
-            default: return visitor._unknown();
+            case ImplementationguideLicense.Aal:
+                return visitor.aal();
+            case ImplementationguideLicense.Abstyles:
+                return visitor.abstyles();
+            case ImplementationguideLicense.Aladdin:
+                return visitor.aladdin();
+            case ImplementationguideLicense.Amdplpa:
+                return visitor.amdplpa();
+            case ImplementationguideLicense.Aml:
+                return visitor.aml();
+            case ImplementationguideLicense.Ampas:
+                return visitor.ampas();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ImplementationguideLicense {
     export type Aal = "AAL" & {
-        __Aal: void,
+        __Aal: void;
     };
     export type Abstyles = "Abstyles" & {
-        __Abstyles: void,
+        __Abstyles: void;
     };
     export type Aladdin = "Aladdin" & {
-        __Aladdin: void,
+        __Aladdin: void;
     };
     export type Amdplpa = "AMDPLPA" & {
-        __Amdplpa: void,
+        __Amdplpa: void;
     };
     export type Aml = "AML" & {
-        __Aml: void,
+        __Aml: void;
     };
     export type Ampas = "AMPAS" & {
-        __Ampas: void,
+        __Ampas: void;
     };
 
     export interface _Visitor<Result> {

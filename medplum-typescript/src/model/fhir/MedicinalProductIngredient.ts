@@ -25,6 +25,9 @@ export interface MedicinalProductIngredient {
     role: CodeableConcept;
     allergenicIndicator: boolean | null | undefined;
     manufacturer: Reference[] | null | undefined;
-    specifiedSubstance: MedicinalProductIngredient_SpecifiedSubstance[] | null | undefined;
+    specifiedSubstance:
+        | MedicinalProductIngredient_SpecifiedSubstance[]
+        | null
+        | undefined;
     substance: MedicinalProductIngredient_Substance | null | undefined;
 }

@@ -8,25 +8,32 @@ export const NamingsystemKind = {
     Identifier: "identifier" as NamingsystemKind.Identifier,
     Root: "root" as NamingsystemKind.Root,
 
-    _visit: <Result>(value: NamingsystemKind, visitor: NamingsystemKind._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: NamingsystemKind,
+        visitor: NamingsystemKind._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case NamingsystemKind.Codesystem: return visitor.codesystem();
-            case NamingsystemKind.Identifier: return visitor.identifier();
-            case NamingsystemKind.Root: return visitor.root();
-            default: return visitor._unknown();
+            case NamingsystemKind.Codesystem:
+                return visitor.codesystem();
+            case NamingsystemKind.Identifier:
+                return visitor.identifier();
+            case NamingsystemKind.Root:
+                return visitor.root();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace NamingsystemKind {
     export type Codesystem = "codesystem" & {
-        __Codesystem: void,
+        __Codesystem: void;
     };
     export type Identifier = "identifier" & {
-        __Identifier: void,
+        __Identifier: void;
     };
     export type Root = "root" & {
-        __Root: void,
+        __Root: void;
     };
 
     export interface _Visitor<Result> {

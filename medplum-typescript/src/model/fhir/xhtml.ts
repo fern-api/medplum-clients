@@ -1,7 +1,7 @@
 export type xhtml = string & {
-    __xhtml: void,
+    __xhtml: void;
 };
 
 export const xhtml = {
-    of: (value: string): xhtml => value as xhtml
+    of: (value: string): xhtml => value as xhtml,
 };

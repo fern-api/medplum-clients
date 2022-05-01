@@ -8,25 +8,32 @@ export const MessagedefinitionStatus = {
     Active: "active" as MessagedefinitionStatus.Active,
     Retired: "retired" as MessagedefinitionStatus.Retired,
 
-    _visit: <Result>(value: MessagedefinitionStatus, visitor: MessagedefinitionStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: MessagedefinitionStatus,
+        visitor: MessagedefinitionStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case MessagedefinitionStatus.Draft: return visitor.draft();
-            case MessagedefinitionStatus.Active: return visitor.active();
-            case MessagedefinitionStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case MessagedefinitionStatus.Draft:
+                return visitor.draft();
+            case MessagedefinitionStatus.Active:
+                return visitor.active();
+            case MessagedefinitionStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace MessagedefinitionStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

@@ -13,5 +13,8 @@ export interface RiskEvidenceSynthesis_RiskEstimate {
     unitOfMeasure: CodeableConcept | null | undefined;
     denominatorCount: number | null | undefined;
     numeratorCount: number | null | undefined;
-    precisionEstimate: RiskEvidenceSynthesis_PrecisionEstimate[] | null | undefined;
+    precisionEstimate:
+        | RiskEvidenceSynthesis_PrecisionEstimate[]
+        | null
+        | undefined;
 }

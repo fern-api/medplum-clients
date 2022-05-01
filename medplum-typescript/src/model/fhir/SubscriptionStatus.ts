@@ -10,29 +10,37 @@ export const SubscriptionStatus = {
     Error: "error" as SubscriptionStatus.Error,
     Off: "off" as SubscriptionStatus.Off,
 
-    _visit: <Result>(value: SubscriptionStatus, visitor: SubscriptionStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: SubscriptionStatus,
+        visitor: SubscriptionStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case SubscriptionStatus.Requested: return visitor.requested();
-            case SubscriptionStatus.Active: return visitor.active();
-            case SubscriptionStatus.Error: return visitor.error();
-            case SubscriptionStatus.Off: return visitor.off();
-            default: return visitor._unknown();
+            case SubscriptionStatus.Requested:
+                return visitor.requested();
+            case SubscriptionStatus.Active:
+                return visitor.active();
+            case SubscriptionStatus.Error:
+                return visitor.error();
+            case SubscriptionStatus.Off:
+                return visitor.off();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace SubscriptionStatus {
     export type Requested = "requested" & {
-        __Requested: void,
+        __Requested: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Off = "off" & {
-        __Off: void,
+        __Off: void;
     };
 
     export interface _Visitor<Result> {

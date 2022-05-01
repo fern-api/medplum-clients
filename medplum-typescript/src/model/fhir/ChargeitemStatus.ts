@@ -10,29 +10,37 @@ export const ChargeitemStatus = {
     Aborted: "aborted" as ChargeitemStatus.Aborted,
     Billed: "billed" as ChargeitemStatus.Billed,
 
-    _visit: <Result>(value: ChargeitemStatus, visitor: ChargeitemStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ChargeitemStatus,
+        visitor: ChargeitemStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ChargeitemStatus.Planned: return visitor.planned();
-            case ChargeitemStatus.Billable: return visitor.billable();
-            case ChargeitemStatus.Aborted: return visitor.aborted();
-            case ChargeitemStatus.Billed: return visitor.billed();
-            default: return visitor._unknown();
+            case ChargeitemStatus.Planned:
+                return visitor.planned();
+            case ChargeitemStatus.Billable:
+                return visitor.billable();
+            case ChargeitemStatus.Aborted:
+                return visitor.aborted();
+            case ChargeitemStatus.Billed:
+                return visitor.billed();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ChargeitemStatus {
     export type Planned = "planned" & {
-        __Planned: void,
+        __Planned: void;
     };
     export type Billable = "billable" & {
-        __Billable: void,
+        __Billable: void;
     };
     export type Aborted = "aborted" & {
-        __Aborted: void,
+        __Aborted: void;
     };
     export type Billed = "billed" & {
-        __Billed: void,
+        __Billed: void;
     };
 
     export interface _Visitor<Result> {

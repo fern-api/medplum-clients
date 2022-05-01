@@ -37,7 +37,10 @@ export interface CoverageEligibilityRequest {
     provider: Reference | null | undefined;
     insurer: Reference;
     facility: Reference | null | undefined;
-    supportingInfo: CoverageEligibilityRequest_SupportingInfo[] | null | undefined;
+    supportingInfo:
+        | CoverageEligibilityRequest_SupportingInfo[]
+        | null
+        | undefined;
     insurance: CoverageEligibilityRequest_Insurance[] | null | undefined;
     item: CoverageEligibilityRequest_Item[] | null | undefined;
 }

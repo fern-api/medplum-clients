@@ -20,49 +20,62 @@ export const Operationdefinition_parameterSearchtype = {
     Uri: "uri" as Operationdefinition_parameterSearchtype.Uri,
     Special: "special" as Operationdefinition_parameterSearchtype.Special,
 
-    _visit: <Result>(value: Operationdefinition_parameterSearchtype, visitor: Operationdefinition_parameterSearchtype._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Operationdefinition_parameterSearchtype,
+        visitor: Operationdefinition_parameterSearchtype._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Operationdefinition_parameterSearchtype.Number: return visitor.number();
-            case Operationdefinition_parameterSearchtype.Date: return visitor.date();
-            case Operationdefinition_parameterSearchtype.String: return visitor.string();
-            case Operationdefinition_parameterSearchtype.Token: return visitor.token();
-            case Operationdefinition_parameterSearchtype.Reference: return visitor.reference();
-            case Operationdefinition_parameterSearchtype.Composite: return visitor.composite();
-            case Operationdefinition_parameterSearchtype.Quantity: return visitor.quantity();
-            case Operationdefinition_parameterSearchtype.Uri: return visitor.uri();
-            case Operationdefinition_parameterSearchtype.Special: return visitor.special();
-            default: return visitor._unknown();
+            case Operationdefinition_parameterSearchtype.Number:
+                return visitor.number();
+            case Operationdefinition_parameterSearchtype.Date:
+                return visitor.date();
+            case Operationdefinition_parameterSearchtype.String:
+                return visitor.string();
+            case Operationdefinition_parameterSearchtype.Token:
+                return visitor.token();
+            case Operationdefinition_parameterSearchtype.Reference:
+                return visitor.reference();
+            case Operationdefinition_parameterSearchtype.Composite:
+                return visitor.composite();
+            case Operationdefinition_parameterSearchtype.Quantity:
+                return visitor.quantity();
+            case Operationdefinition_parameterSearchtype.Uri:
+                return visitor.uri();
+            case Operationdefinition_parameterSearchtype.Special:
+                return visitor.special();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Operationdefinition_parameterSearchtype {
     export type Number = "number" & {
-        __Number: void,
+        __Number: void;
     };
     export type Date = "date" & {
-        __Date: void,
+        __Date: void;
     };
     export type String = "string" & {
-        __String: void,
+        __String: void;
     };
     export type Token = "token" & {
-        __Token: void,
+        __Token: void;
     };
     export type Reference = "reference" & {
-        __Reference: void,
+        __Reference: void;
     };
     export type Composite = "composite" & {
-        __Composite: void,
+        __Composite: void;
     };
     export type Quantity = "quantity" & {
-        __Quantity: void,
+        __Quantity: void;
     };
     export type Uri = "uri" & {
-        __Uri: void,
+        __Uri: void;
     };
     export type Special = "special" & {
-        __Special: void,
+        __Special: void;
     };
 
     export interface _Visitor<Result> {

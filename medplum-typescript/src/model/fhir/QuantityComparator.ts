@@ -1,8 +1,10 @@
 export type QuantityComparator = never;
 
 export const QuantityComparator = {
-
-    _visit: <Result>(_value: QuantityComparator, visitor: QuantityComparator._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: QuantityComparator,
+        visitor: QuantityComparator._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

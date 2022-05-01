@@ -10,29 +10,37 @@ export const Namingsystem_uniqueidType = {
     Uri: "uri" as Namingsystem_uniqueidType.Uri,
     Other: "other" as Namingsystem_uniqueidType.Other,
 
-    _visit: <Result>(value: Namingsystem_uniqueidType, visitor: Namingsystem_uniqueidType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Namingsystem_uniqueidType,
+        visitor: Namingsystem_uniqueidType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Namingsystem_uniqueidType.Oid: return visitor.oid();
-            case Namingsystem_uniqueidType.Uuid: return visitor.uuid();
-            case Namingsystem_uniqueidType.Uri: return visitor.uri();
-            case Namingsystem_uniqueidType.Other: return visitor.other();
-            default: return visitor._unknown();
+            case Namingsystem_uniqueidType.Oid:
+                return visitor.oid();
+            case Namingsystem_uniqueidType.Uuid:
+                return visitor.uuid();
+            case Namingsystem_uniqueidType.Uri:
+                return visitor.uri();
+            case Namingsystem_uniqueidType.Other:
+                return visitor.other();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Namingsystem_uniqueidType {
     export type Oid = "oid" & {
-        __Oid: void,
+        __Oid: void;
     };
     export type Uuid = "uuid" & {
-        __Uuid: void,
+        __Uuid: void;
     };
     export type Uri = "uri" & {
-        __Uri: void,
+        __Uri: void;
     };
     export type Other = "other" & {
-        __Other: void,
+        __Other: void;
     };
 
     export interface _Visitor<Result> {

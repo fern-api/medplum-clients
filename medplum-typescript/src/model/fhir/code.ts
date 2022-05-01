@@ -1,7 +1,7 @@
 export type code = string & {
-    __code: void,
+    __code: void;
 };
 
 export const code = {
-    of: (value: string): code => value as code
+    of: (value: string): code => value as code,
 };

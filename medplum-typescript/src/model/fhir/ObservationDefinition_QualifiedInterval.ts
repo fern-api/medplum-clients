@@ -8,7 +8,10 @@ export interface ObservationDefinition_QualifiedInterval {
     id: string | null | undefined;
     extension: Extension[] | null | undefined;
     modifierExtension: Extension[] | null | undefined;
-    category: Observationdefinition_qualifiedintervalCategory | null | undefined;
+    category:
+        | Observationdefinition_qualifiedintervalCategory
+        | null
+        | undefined;
     range: Range | null | undefined;
     context: CodeableConcept | null | undefined;
     appliesTo: CodeableConcept[] | null | undefined;

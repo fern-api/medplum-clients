@@ -10,29 +10,37 @@ export const Graphdefinition_compartmentRule = {
     Different: "different" as Graphdefinition_compartmentRule.Different,
     Custom: "custom" as Graphdefinition_compartmentRule.Custom,
 
-    _visit: <Result>(value: Graphdefinition_compartmentRule, visitor: Graphdefinition_compartmentRule._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Graphdefinition_compartmentRule,
+        visitor: Graphdefinition_compartmentRule._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Graphdefinition_compartmentRule.Identical: return visitor.identical();
-            case Graphdefinition_compartmentRule.Matching: return visitor.matching();
-            case Graphdefinition_compartmentRule.Different: return visitor.different();
-            case Graphdefinition_compartmentRule.Custom: return visitor.custom();
-            default: return visitor._unknown();
+            case Graphdefinition_compartmentRule.Identical:
+                return visitor.identical();
+            case Graphdefinition_compartmentRule.Matching:
+                return visitor.matching();
+            case Graphdefinition_compartmentRule.Different:
+                return visitor.different();
+            case Graphdefinition_compartmentRule.Custom:
+                return visitor.custom();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Graphdefinition_compartmentRule {
     export type Identical = "identical" & {
-        __Identical: void,
+        __Identical: void;
     };
     export type Matching = "matching" & {
-        __Matching: void,
+        __Matching: void;
     };
     export type Different = "different" & {
-        __Different: void,
+        __Different: void;
     };
     export type Custom = "custom" & {
-        __Custom: void,
+        __Custom: void;
     };
 
     export interface _Visitor<Result> {

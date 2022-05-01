@@ -10,29 +10,37 @@ export const Device_udicarrierEntrytype = {
     Manual: "manual" as Device_udicarrierEntrytype.Manual,
     Card: "card" as Device_udicarrierEntrytype.Card,
 
-    _visit: <Result>(value: Device_udicarrierEntrytype, visitor: Device_udicarrierEntrytype._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Device_udicarrierEntrytype,
+        visitor: Device_udicarrierEntrytype._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Device_udicarrierEntrytype.Barcode: return visitor.barcode();
-            case Device_udicarrierEntrytype.Rfid: return visitor.rfid();
-            case Device_udicarrierEntrytype.Manual: return visitor.manual();
-            case Device_udicarrierEntrytype.Card: return visitor.card();
-            default: return visitor._unknown();
+            case Device_udicarrierEntrytype.Barcode:
+                return visitor.barcode();
+            case Device_udicarrierEntrytype.Rfid:
+                return visitor.rfid();
+            case Device_udicarrierEntrytype.Manual:
+                return visitor.manual();
+            case Device_udicarrierEntrytype.Card:
+                return visitor.card();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Device_udicarrierEntrytype {
     export type Barcode = "barcode" & {
-        __Barcode: void,
+        __Barcode: void;
     };
     export type Rfid = "rfid" & {
-        __Rfid: void,
+        __Rfid: void;
     };
     export type Manual = "manual" & {
-        __Manual: void,
+        __Manual: void;
     };
     export type Card = "card" & {
-        __Card: void,
+        __Card: void;
     };
 
     export interface _Visitor<Result> {

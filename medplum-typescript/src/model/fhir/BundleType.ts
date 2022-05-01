@@ -16,41 +16,52 @@ export const BundleType = {
     Searchset: "searchset" as BundleType.Searchset,
     Collection: "collection" as BundleType.Collection,
 
-    _visit: <Result>(value: BundleType, visitor: BundleType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: BundleType,
+        visitor: BundleType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case BundleType.Document: return visitor.document();
-            case BundleType.Message: return visitor.message();
-            case BundleType.Transaction: return visitor.transaction();
-            case BundleType.Batch: return visitor.batch();
-            case BundleType.History: return visitor.history();
-            case BundleType.Searchset: return visitor.searchset();
-            case BundleType.Collection: return visitor.collection();
-            default: return visitor._unknown();
+            case BundleType.Document:
+                return visitor.document();
+            case BundleType.Message:
+                return visitor.message();
+            case BundleType.Transaction:
+                return visitor.transaction();
+            case BundleType.Batch:
+                return visitor.batch();
+            case BundleType.History:
+                return visitor.history();
+            case BundleType.Searchset:
+                return visitor.searchset();
+            case BundleType.Collection:
+                return visitor.collection();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace BundleType {
     export type Document = "document" & {
-        __Document: void,
+        __Document: void;
     };
     export type Message = "message" & {
-        __Message: void,
+        __Message: void;
     };
     export type Transaction = "transaction" & {
-        __Transaction: void,
+        __Transaction: void;
     };
     export type Batch = "batch" & {
-        __Batch: void,
+        __Batch: void;
     };
     export type History = "history" & {
-        __History: void,
+        __History: void;
     };
     export type Searchset = "searchset" & {
-        __Searchset: void,
+        __Searchset: void;
     };
     export type Collection = "collection" & {
-        __Collection: void,
+        __Collection: void;
     };
 
     export interface _Visitor<Result> {

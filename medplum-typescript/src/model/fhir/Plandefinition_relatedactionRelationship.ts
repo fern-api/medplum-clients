@@ -5,28 +5,36 @@ export type Plandefinition_relatedactionRelationship =
 
 export const Plandefinition_relatedactionRelationship = {
     Before: "before" as Plandefinition_relatedactionRelationship.Before,
-    Concurrent: "concurrent" as Plandefinition_relatedactionRelationship.Concurrent,
+    Concurrent:
+        "concurrent" as Plandefinition_relatedactionRelationship.Concurrent,
     After: "after" as Plandefinition_relatedactionRelationship.After,
 
-    _visit: <Result>(value: Plandefinition_relatedactionRelationship, visitor: Plandefinition_relatedactionRelationship._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Plandefinition_relatedactionRelationship,
+        visitor: Plandefinition_relatedactionRelationship._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Plandefinition_relatedactionRelationship.Before: return visitor.before();
-            case Plandefinition_relatedactionRelationship.Concurrent: return visitor.concurrent();
-            case Plandefinition_relatedactionRelationship.After: return visitor.after();
-            default: return visitor._unknown();
+            case Plandefinition_relatedactionRelationship.Before:
+                return visitor.before();
+            case Plandefinition_relatedactionRelationship.Concurrent:
+                return visitor.concurrent();
+            case Plandefinition_relatedactionRelationship.After:
+                return visitor.after();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Plandefinition_relatedactionRelationship {
     export type Before = "before" & {
-        __Before: void,
+        __Before: void;
     };
     export type Concurrent = "concurrent" & {
-        __Concurrent: void,
+        __Concurrent: void;
     };
     export type After = "after" & {
-        __After: void,
+        __After: void;
     };
 
     export interface _Visitor<Result> {

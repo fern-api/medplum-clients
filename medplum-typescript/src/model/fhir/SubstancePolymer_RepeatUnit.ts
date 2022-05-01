@@ -11,6 +11,12 @@ export interface SubstancePolymer_RepeatUnit {
     orientationOfPolymerisation: CodeableConcept | null | undefined;
     repeatUnit: string | null | undefined;
     amount: SubstanceAmount | null | undefined;
-    degreeOfPolymerisation: SubstancePolymer_DegreeOfPolymerisation[] | null | undefined;
-    structuralRepresentation: SubstancePolymer_StructuralRepresentation[] | null | undefined;
+    degreeOfPolymerisation:
+        | SubstancePolymer_DegreeOfPolymerisation[]
+        | null
+        | undefined;
+    structuralRepresentation:
+        | SubstancePolymer_StructuralRepresentation[]
+        | null
+        | undefined;
 }

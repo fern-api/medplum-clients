@@ -15,5 +15,8 @@ export interface MedicinalProductPharmaceutical_RouteOfAdministration {
     maxDosePerDay: Quantity | null | undefined;
     maxDosePerTreatmentPeriod: Ratio | null | undefined;
     maxTreatmentPeriod: Duration | null | undefined;
-    targetSpecies: MedicinalProductPharmaceutical_TargetSpecies[] | null | undefined;
+    targetSpecies:
+        | MedicinalProductPharmaceutical_TargetSpecies[]
+        | null
+        | undefined;
 }

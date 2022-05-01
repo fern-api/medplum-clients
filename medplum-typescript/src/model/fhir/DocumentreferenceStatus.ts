@@ -6,21 +6,27 @@ export const DocumentreferenceStatus = {
     Current: "current" as DocumentreferenceStatus.Current,
     Superseded: "superseded" as DocumentreferenceStatus.Superseded,
 
-    _visit: <Result>(value: DocumentreferenceStatus, visitor: DocumentreferenceStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: DocumentreferenceStatus,
+        visitor: DocumentreferenceStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case DocumentreferenceStatus.Current: return visitor.current();
-            case DocumentreferenceStatus.Superseded: return visitor.superseded();
-            default: return visitor._unknown();
+            case DocumentreferenceStatus.Current:
+                return visitor.current();
+            case DocumentreferenceStatus.Superseded:
+                return visitor.superseded();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace DocumentreferenceStatus {
     export type Current = "current" & {
-        __Current: void,
+        __Current: void;
     };
     export type Superseded = "superseded" & {
-        __Superseded: void,
+        __Superseded: void;
     };
 
     export interface _Visitor<Result> {

@@ -26,6 +26,9 @@ export interface MedicinalProductPharmaceutical {
     unitOfPresentation: CodeableConcept | null | undefined;
     ingredient: Reference[] | null | undefined;
     device: Reference[] | null | undefined;
-    characteristics: MedicinalProductPharmaceutical_Characteristics[] | null | undefined;
+    characteristics:
+        | MedicinalProductPharmaceutical_Characteristics[]
+        | null
+        | undefined;
     routeOfAdministration: MedicinalProductPharmaceutical_RouteOfAdministration[];
 }

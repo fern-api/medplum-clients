@@ -8,25 +8,32 @@ export const ValuesetStatus = {
     Active: "active" as ValuesetStatus.Active,
     Retired: "retired" as ValuesetStatus.Retired,
 
-    _visit: <Result>(value: ValuesetStatus, visitor: ValuesetStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ValuesetStatus,
+        visitor: ValuesetStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ValuesetStatus.Draft: return visitor.draft();
-            case ValuesetStatus.Active: return visitor.active();
-            case ValuesetStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case ValuesetStatus.Draft:
+                return visitor.draft();
+            case ValuesetStatus.Active:
+                return visitor.active();
+            case ValuesetStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ValuesetStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

@@ -10,29 +10,37 @@ export const PaymentreconciliationOutcome = {
     Error: "error" as PaymentreconciliationOutcome.Error,
     Partial: "partial" as PaymentreconciliationOutcome.Partial,
 
-    _visit: <Result>(value: PaymentreconciliationOutcome, visitor: PaymentreconciliationOutcome._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: PaymentreconciliationOutcome,
+        visitor: PaymentreconciliationOutcome._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case PaymentreconciliationOutcome.Queued: return visitor.queued();
-            case PaymentreconciliationOutcome.Complete: return visitor.complete();
-            case PaymentreconciliationOutcome.Error: return visitor.error();
-            case PaymentreconciliationOutcome.Partial: return visitor.partial();
-            default: return visitor._unknown();
+            case PaymentreconciliationOutcome.Queued:
+                return visitor.queued();
+            case PaymentreconciliationOutcome.Complete:
+                return visitor.complete();
+            case PaymentreconciliationOutcome.Error:
+                return visitor.error();
+            case PaymentreconciliationOutcome.Partial:
+                return visitor.partial();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace PaymentreconciliationOutcome {
     export type Queued = "queued" & {
-        __Queued: void,
+        __Queued: void;
     };
     export type Complete = "complete" & {
-        __Complete: void,
+        __Complete: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Partial = "partial" & {
-        __Partial: void,
+        __Partial: void;
     };
 
     export interface _Visitor<Result> {

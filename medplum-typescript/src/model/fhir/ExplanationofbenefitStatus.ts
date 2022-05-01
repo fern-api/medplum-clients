@@ -8,25 +8,32 @@ export const ExplanationofbenefitStatus = {
     Cancelled: "cancelled" as ExplanationofbenefitStatus.Cancelled,
     Draft: "draft" as ExplanationofbenefitStatus.Draft,
 
-    _visit: <Result>(value: ExplanationofbenefitStatus, visitor: ExplanationofbenefitStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ExplanationofbenefitStatus,
+        visitor: ExplanationofbenefitStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ExplanationofbenefitStatus.Active: return visitor.active();
-            case ExplanationofbenefitStatus.Cancelled: return visitor.cancelled();
-            case ExplanationofbenefitStatus.Draft: return visitor.draft();
-            default: return visitor._unknown();
+            case ExplanationofbenefitStatus.Active:
+                return visitor.active();
+            case ExplanationofbenefitStatus.Cancelled:
+                return visitor.cancelled();
+            case ExplanationofbenefitStatus.Draft:
+                return visitor.draft();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ExplanationofbenefitStatus {
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
 
     export interface _Visitor<Result> {

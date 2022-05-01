@@ -8,25 +8,32 @@ export const GraphdefinitionStatus = {
     Active: "active" as GraphdefinitionStatus.Active,
     Retired: "retired" as GraphdefinitionStatus.Retired,
 
-    _visit: <Result>(value: GraphdefinitionStatus, visitor: GraphdefinitionStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: GraphdefinitionStatus,
+        visitor: GraphdefinitionStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case GraphdefinitionStatus.Draft: return visitor.draft();
-            case GraphdefinitionStatus.Active: return visitor.active();
-            case GraphdefinitionStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case GraphdefinitionStatus.Draft:
+                return visitor.draft();
+            case GraphdefinitionStatus.Active:
+                return visitor.active();
+            case GraphdefinitionStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace GraphdefinitionStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

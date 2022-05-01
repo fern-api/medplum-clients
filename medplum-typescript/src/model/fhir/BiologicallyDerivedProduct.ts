@@ -26,7 +26,10 @@ export interface BiologicallyDerivedProduct {
     extension: Extension[] | null | undefined;
     modifierExtension: Extension[] | null | undefined;
     identifier: Identifier[] | null | undefined;
-    productCategory: BiologicallyderivedproductProductcategory | null | undefined;
+    productCategory:
+        | BiologicallyderivedproductProductcategory
+        | null
+        | undefined;
     productCode: CodeableConcept | null | undefined;
     status: BiologicallyderivedproductStatus | null | undefined;
     request: Reference[] | null | undefined;

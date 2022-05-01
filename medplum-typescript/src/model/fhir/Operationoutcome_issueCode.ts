@@ -44,97 +44,122 @@ export const Operationoutcome_issueCode = {
     Throttled: "throttled" as Operationoutcome_issueCode.Throttled,
     Informational: "informational" as Operationoutcome_issueCode.Informational,
 
-    _visit: <Result>(value: Operationoutcome_issueCode, visitor: Operationoutcome_issueCode._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Operationoutcome_issueCode,
+        visitor: Operationoutcome_issueCode._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Operationoutcome_issueCode.Invalid: return visitor.invalid();
-            case Operationoutcome_issueCode.Structure: return visitor.structure();
-            case Operationoutcome_issueCode.Required: return visitor.required();
-            case Operationoutcome_issueCode.Value: return visitor.value();
-            case Operationoutcome_issueCode.Invariant: return visitor.invariant();
-            case Operationoutcome_issueCode.Security: return visitor.security();
-            case Operationoutcome_issueCode.Login: return visitor.login();
-            case Operationoutcome_issueCode.Expired: return visitor.expired();
-            case Operationoutcome_issueCode.Forbidden: return visitor.forbidden();
-            case Operationoutcome_issueCode.Suppressed: return visitor.suppressed();
-            case Operationoutcome_issueCode.Processing: return visitor.processing();
-            case Operationoutcome_issueCode.Duplicate: return visitor.duplicate();
-            case Operationoutcome_issueCode.Deleted: return visitor.deleted();
-            case Operationoutcome_issueCode.Extension: return visitor.extension();
-            case Operationoutcome_issueCode.Conflict: return visitor.conflict();
-            case Operationoutcome_issueCode.Transient: return visitor.transient();
-            case Operationoutcome_issueCode.Exception: return visitor.exception();
-            case Operationoutcome_issueCode.Timeout: return visitor.timeout();
-            case Operationoutcome_issueCode.Incomplete: return visitor.incomplete();
-            case Operationoutcome_issueCode.Throttled: return visitor.throttled();
-            case Operationoutcome_issueCode.Informational: return visitor.informational();
-            default: return visitor._unknown();
+            case Operationoutcome_issueCode.Invalid:
+                return visitor.invalid();
+            case Operationoutcome_issueCode.Structure:
+                return visitor.structure();
+            case Operationoutcome_issueCode.Required:
+                return visitor.required();
+            case Operationoutcome_issueCode.Value:
+                return visitor.value();
+            case Operationoutcome_issueCode.Invariant:
+                return visitor.invariant();
+            case Operationoutcome_issueCode.Security:
+                return visitor.security();
+            case Operationoutcome_issueCode.Login:
+                return visitor.login();
+            case Operationoutcome_issueCode.Expired:
+                return visitor.expired();
+            case Operationoutcome_issueCode.Forbidden:
+                return visitor.forbidden();
+            case Operationoutcome_issueCode.Suppressed:
+                return visitor.suppressed();
+            case Operationoutcome_issueCode.Processing:
+                return visitor.processing();
+            case Operationoutcome_issueCode.Duplicate:
+                return visitor.duplicate();
+            case Operationoutcome_issueCode.Deleted:
+                return visitor.deleted();
+            case Operationoutcome_issueCode.Extension:
+                return visitor.extension();
+            case Operationoutcome_issueCode.Conflict:
+                return visitor.conflict();
+            case Operationoutcome_issueCode.Transient:
+                return visitor.transient();
+            case Operationoutcome_issueCode.Exception:
+                return visitor.exception();
+            case Operationoutcome_issueCode.Timeout:
+                return visitor.timeout();
+            case Operationoutcome_issueCode.Incomplete:
+                return visitor.incomplete();
+            case Operationoutcome_issueCode.Throttled:
+                return visitor.throttled();
+            case Operationoutcome_issueCode.Informational:
+                return visitor.informational();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Operationoutcome_issueCode {
     export type Invalid = "invalid" & {
-        __Invalid: void,
+        __Invalid: void;
     };
     export type Structure = "structure" & {
-        __Structure: void,
+        __Structure: void;
     };
     export type Required = "required" & {
-        __Required: void,
+        __Required: void;
     };
     export type Value = "value" & {
-        __Value: void,
+        __Value: void;
     };
     export type Invariant = "invariant" & {
-        __Invariant: void,
+        __Invariant: void;
     };
     export type Security = "security" & {
-        __Security: void,
+        __Security: void;
     };
     export type Login = "login" & {
-        __Login: void,
+        __Login: void;
     };
     export type Expired = "expired" & {
-        __Expired: void,
+        __Expired: void;
     };
     export type Forbidden = "forbidden" & {
-        __Forbidden: void,
+        __Forbidden: void;
     };
     export type Suppressed = "suppressed" & {
-        __Suppressed: void,
+        __Suppressed: void;
     };
     export type Processing = "processing" & {
-        __Processing: void,
+        __Processing: void;
     };
     export type Duplicate = "duplicate" & {
-        __Duplicate: void,
+        __Duplicate: void;
     };
     export type Deleted = "deleted" & {
-        __Deleted: void,
+        __Deleted: void;
     };
     export type Extension = "extension" & {
-        __Extension: void,
+        __Extension: void;
     };
     export type Conflict = "conflict" & {
-        __Conflict: void,
+        __Conflict: void;
     };
     export type Transient = "transient" & {
-        __Transient: void,
+        __Transient: void;
     };
     export type Exception = "exception" & {
-        __Exception: void,
+        __Exception: void;
     };
     export type Timeout = "timeout" & {
-        __Timeout: void,
+        __Timeout: void;
     };
     export type Incomplete = "incomplete" & {
-        __Incomplete: void,
+        __Incomplete: void;
     };
     export type Throttled = "throttled" & {
-        __Throttled: void,
+        __Throttled: void;
     };
     export type Informational = "informational" & {
-        __Informational: void,
+        __Informational: void;
     };
 
     export interface _Visitor<Result> {

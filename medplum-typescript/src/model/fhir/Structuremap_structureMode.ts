@@ -10,29 +10,37 @@ export const Structuremap_structureMode = {
     Target: "target" as Structuremap_structureMode.Target,
     Produced: "produced" as Structuremap_structureMode.Produced,
 
-    _visit: <Result>(value: Structuremap_structureMode, visitor: Structuremap_structureMode._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Structuremap_structureMode,
+        visitor: Structuremap_structureMode._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Structuremap_structureMode.Source: return visitor.source();
-            case Structuremap_structureMode.Queried: return visitor.queried();
-            case Structuremap_structureMode.Target: return visitor.target();
-            case Structuremap_structureMode.Produced: return visitor.produced();
-            default: return visitor._unknown();
+            case Structuremap_structureMode.Source:
+                return visitor.source();
+            case Structuremap_structureMode.Queried:
+                return visitor.queried();
+            case Structuremap_structureMode.Target:
+                return visitor.target();
+            case Structuremap_structureMode.Produced:
+                return visitor.produced();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Structuremap_structureMode {
     export type Source = "source" & {
-        __Source: void,
+        __Source: void;
     };
     export type Queried = "queried" & {
-        __Queried: void,
+        __Queried: void;
     };
     export type Target = "target" & {
-        __Target: void,
+        __Target: void;
     };
     export type Produced = "produced" & {
-        __Produced: void,
+        __Produced: void;
     };
 
     export interface _Visitor<Result> {

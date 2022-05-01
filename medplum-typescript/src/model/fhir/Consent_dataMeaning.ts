@@ -10,29 +10,37 @@ export const Consent_dataMeaning = {
     Dependents: "dependents" as Consent_dataMeaning.Dependents,
     Authoredby: "authoredby" as Consent_dataMeaning.Authoredby,
 
-    _visit: <Result>(value: Consent_dataMeaning, visitor: Consent_dataMeaning._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Consent_dataMeaning,
+        visitor: Consent_dataMeaning._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Consent_dataMeaning.Instance: return visitor.instance();
-            case Consent_dataMeaning.Related: return visitor.related();
-            case Consent_dataMeaning.Dependents: return visitor.dependents();
-            case Consent_dataMeaning.Authoredby: return visitor.authoredby();
-            default: return visitor._unknown();
+            case Consent_dataMeaning.Instance:
+                return visitor.instance();
+            case Consent_dataMeaning.Related:
+                return visitor.related();
+            case Consent_dataMeaning.Dependents:
+                return visitor.dependents();
+            case Consent_dataMeaning.Authoredby:
+                return visitor.authoredby();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Consent_dataMeaning {
     export type Instance = "instance" & {
-        __Instance: void,
+        __Instance: void;
     };
     export type Related = "related" & {
-        __Related: void,
+        __Related: void;
     };
     export type Dependents = "dependents" & {
-        __Dependents: void,
+        __Dependents: void;
     };
     export type Authoredby = "authoredby" & {
-        __Authoredby: void,
+        __Authoredby: void;
     };
 
     export interface _Visitor<Result> {

@@ -13,5 +13,8 @@ export interface MedicinalProductIngredient_Strength {
     concentrationLowLimit: Ratio | null | undefined;
     measurementPoint: string | null | undefined;
     country: CodeableConcept[] | null | undefined;
-    referenceStrength: MedicinalProductIngredient_ReferenceStrength[] | null | undefined;
+    referenceStrength:
+        | MedicinalProductIngredient_ReferenceStrength[]
+        | null
+        | undefined;
 }

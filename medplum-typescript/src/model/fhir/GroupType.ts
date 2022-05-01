@@ -14,37 +14,47 @@ export const GroupType = {
     Medication: "medication" as GroupType.Medication,
     Substance: "substance" as GroupType.Substance,
 
-    _visit: <Result>(value: GroupType, visitor: GroupType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: GroupType,
+        visitor: GroupType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case GroupType.Person: return visitor.person();
-            case GroupType.Animal: return visitor.animal();
-            case GroupType.Practitioner: return visitor.practitioner();
-            case GroupType.Device: return visitor.device();
-            case GroupType.Medication: return visitor.medication();
-            case GroupType.Substance: return visitor.substance();
-            default: return visitor._unknown();
+            case GroupType.Person:
+                return visitor.person();
+            case GroupType.Animal:
+                return visitor.animal();
+            case GroupType.Practitioner:
+                return visitor.practitioner();
+            case GroupType.Device:
+                return visitor.device();
+            case GroupType.Medication:
+                return visitor.medication();
+            case GroupType.Substance:
+                return visitor.substance();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace GroupType {
     export type Person = "person" & {
-        __Person: void,
+        __Person: void;
     };
     export type Animal = "animal" & {
-        __Animal: void,
+        __Animal: void;
     };
     export type Practitioner = "practitioner" & {
-        __Practitioner: void,
+        __Practitioner: void;
     };
     export type Device = "device" & {
-        __Device: void,
+        __Device: void;
     };
     export type Medication = "medication" & {
-        __Medication: void,
+        __Medication: void;
     };
     export type Substance = "substance" & {
-        __Substance: void,
+        __Substance: void;
     };
 
     export interface _Visitor<Result> {

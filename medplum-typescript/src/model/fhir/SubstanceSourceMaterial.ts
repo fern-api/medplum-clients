@@ -31,7 +31,13 @@ export interface SubstanceSourceMaterial {
     countryOfOrigin: CodeableConcept[] | null | undefined;
     geographicalLocation: string[] | null | undefined;
     developmentStage: CodeableConcept | null | undefined;
-    fractionDescription: SubstanceSourceMaterial_FractionDescription[] | null | undefined;
+    fractionDescription:
+        | SubstanceSourceMaterial_FractionDescription[]
+        | null
+        | undefined;
     organism: SubstanceSourceMaterial_Organism | null | undefined;
-    partDescription: SubstanceSourceMaterial_PartDescription[] | null | undefined;
+    partDescription:
+        | SubstanceSourceMaterial_PartDescription[]
+        | null
+        | undefined;
 }

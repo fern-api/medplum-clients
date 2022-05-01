@@ -31,7 +31,10 @@ export interface DeviceDefinition {
     extension: Extension[] | null | undefined;
     modifierExtension: Extension[] | null | undefined;
     identifier: Identifier[] | null | undefined;
-    udiDeviceIdentifier: DeviceDefinition_UdiDeviceIdentifier[] | null | undefined;
+    udiDeviceIdentifier:
+        | DeviceDefinition_UdiDeviceIdentifier[]
+        | null
+        | undefined;
     manufacturerString: string | null | undefined;
     manufacturerReference: Reference | null | undefined;
     deviceName: DeviceDefinition_DeviceName[] | null | undefined;

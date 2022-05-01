@@ -9,5 +9,8 @@ export interface EffectEvidenceSynthesis_Certainty {
     modifierExtension: Extension[] | null | undefined;
     rating: CodeableConcept[] | null | undefined;
     note: Annotation[] | null | undefined;
-    certaintySubcomponent: EffectEvidenceSynthesis_CertaintySubcomponent[] | null | undefined;
+    certaintySubcomponent:
+        | EffectEvidenceSynthesis_CertaintySubcomponent[]
+        | null
+        | undefined;
 }

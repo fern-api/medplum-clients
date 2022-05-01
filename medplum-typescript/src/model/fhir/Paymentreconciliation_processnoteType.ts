@@ -8,25 +8,32 @@ export const Paymentreconciliation_processnoteType = {
     Print: "print" as Paymentreconciliation_processnoteType.Print,
     Printoper: "printoper" as Paymentreconciliation_processnoteType.Printoper,
 
-    _visit: <Result>(value: Paymentreconciliation_processnoteType, visitor: Paymentreconciliation_processnoteType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Paymentreconciliation_processnoteType,
+        visitor: Paymentreconciliation_processnoteType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Paymentreconciliation_processnoteType.Display: return visitor.display();
-            case Paymentreconciliation_processnoteType.Print: return visitor.print();
-            case Paymentreconciliation_processnoteType.Printoper: return visitor.printoper();
-            default: return visitor._unknown();
+            case Paymentreconciliation_processnoteType.Display:
+                return visitor.display();
+            case Paymentreconciliation_processnoteType.Print:
+                return visitor.print();
+            case Paymentreconciliation_processnoteType.Printoper:
+                return visitor.printoper();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Paymentreconciliation_processnoteType {
     export type Display = "display" & {
-        __Display: void,
+        __Display: void;
     };
     export type Print = "print" & {
-        __Print: void,
+        __Print: void;
     };
     export type Printoper = "printoper" & {
-        __Printoper: void,
+        __Printoper: void;
     };
 
     export interface _Visitor<Result> {

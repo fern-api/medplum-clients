@@ -6,21 +6,27 @@ export const Appointment_participantRequired = {
     Required: "required" as Appointment_participantRequired.Required,
     Optional: "optional" as Appointment_participantRequired.Optional,
 
-    _visit: <Result>(value: Appointment_participantRequired, visitor: Appointment_participantRequired._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Appointment_participantRequired,
+        visitor: Appointment_participantRequired._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Appointment_participantRequired.Required: return visitor.required();
-            case Appointment_participantRequired.Optional: return visitor.optional();
-            default: return visitor._unknown();
+            case Appointment_participantRequired.Required:
+                return visitor.required();
+            case Appointment_participantRequired.Optional:
+                return visitor.optional();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Appointment_participantRequired {
     export type Required = "required" & {
-        __Required: void,
+        __Required: void;
     };
     export type Optional = "optional" & {
-        __Optional: void,
+        __Optional: void;
     };
 
     export interface _Visitor<Result> {

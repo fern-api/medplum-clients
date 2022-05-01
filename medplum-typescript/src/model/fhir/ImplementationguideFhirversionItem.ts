@@ -1,8 +1,10 @@
 export type ImplementationguideFhirversionItem = never;
 
 export const ImplementationguideFhirversionItem = {
-
-    _visit: <Result>(_value: ImplementationguideFhirversionItem, visitor: ImplementationguideFhirversionItem._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: ImplementationguideFhirversionItem,
+        visitor: ImplementationguideFhirversionItem._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

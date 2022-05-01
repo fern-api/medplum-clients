@@ -16,41 +16,52 @@ export const HumannameUse = {
     Old: "old" as HumannameUse.Old,
     Maiden: "maiden" as HumannameUse.Maiden,
 
-    _visit: <Result>(value: HumannameUse, visitor: HumannameUse._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: HumannameUse,
+        visitor: HumannameUse._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case HumannameUse.Usual: return visitor.usual();
-            case HumannameUse.Official: return visitor.official();
-            case HumannameUse.Temp: return visitor.temp();
-            case HumannameUse.Nickname: return visitor.nickname();
-            case HumannameUse.Anonymous: return visitor.anonymous();
-            case HumannameUse.Old: return visitor.old();
-            case HumannameUse.Maiden: return visitor.maiden();
-            default: return visitor._unknown();
+            case HumannameUse.Usual:
+                return visitor.usual();
+            case HumannameUse.Official:
+                return visitor.official();
+            case HumannameUse.Temp:
+                return visitor.temp();
+            case HumannameUse.Nickname:
+                return visitor.nickname();
+            case HumannameUse.Anonymous:
+                return visitor.anonymous();
+            case HumannameUse.Old:
+                return visitor.old();
+            case HumannameUse.Maiden:
+                return visitor.maiden();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace HumannameUse {
     export type Usual = "usual" & {
-        __Usual: void,
+        __Usual: void;
     };
     export type Official = "official" & {
-        __Official: void,
+        __Official: void;
     };
     export type Temp = "temp" & {
-        __Temp: void,
+        __Temp: void;
     };
     export type Nickname = "nickname" & {
-        __Nickname: void,
+        __Nickname: void;
     };
     export type Anonymous = "anonymous" & {
-        __Anonymous: void,
+        __Anonymous: void;
     };
     export type Old = "old" & {
-        __Old: void,
+        __Old: void;
     };
     export type Maiden = "maiden" & {
-        __Maiden: void,
+        __Maiden: void;
     };
 
     export interface _Visitor<Result> {

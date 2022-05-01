@@ -8,25 +8,32 @@ export const Bundle_searchMode = {
     Include: "include" as Bundle_searchMode.Include,
     Outcome: "outcome" as Bundle_searchMode.Outcome,
 
-    _visit: <Result>(value: Bundle_searchMode, visitor: Bundle_searchMode._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Bundle_searchMode,
+        visitor: Bundle_searchMode._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Bundle_searchMode.Match: return visitor.match();
-            case Bundle_searchMode.Include: return visitor.include();
-            case Bundle_searchMode.Outcome: return visitor.outcome();
-            default: return visitor._unknown();
+            case Bundle_searchMode.Match:
+                return visitor.match();
+            case Bundle_searchMode.Include:
+                return visitor.include();
+            case Bundle_searchMode.Outcome:
+                return visitor.outcome();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Bundle_searchMode {
     export type Match = "match" & {
-        __Match: void,
+        __Match: void;
     };
     export type Include = "include" & {
-        __Include: void,
+        __Include: void;
     };
     export type Outcome = "outcome" & {
-        __Outcome: void,
+        __Outcome: void;
     };
 
     export interface _Visitor<Result> {

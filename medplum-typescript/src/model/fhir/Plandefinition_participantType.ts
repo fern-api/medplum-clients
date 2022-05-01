@@ -8,25 +8,32 @@ export const Plandefinition_participantType = {
     Practitioner: "practitioner" as Plandefinition_participantType.Practitioner,
     Device: "device" as Plandefinition_participantType.Device,
 
-    _visit: <Result>(value: Plandefinition_participantType, visitor: Plandefinition_participantType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Plandefinition_participantType,
+        visitor: Plandefinition_participantType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Plandefinition_participantType.Patient: return visitor.patient();
-            case Plandefinition_participantType.Practitioner: return visitor.practitioner();
-            case Plandefinition_participantType.Device: return visitor.device();
-            default: return visitor._unknown();
+            case Plandefinition_participantType.Patient:
+                return visitor.patient();
+            case Plandefinition_participantType.Practitioner:
+                return visitor.practitioner();
+            case Plandefinition_participantType.Device:
+                return visitor.device();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Plandefinition_participantType {
     export type Patient = "patient" & {
-        __Patient: void,
+        __Patient: void;
     };
     export type Practitioner = "practitioner" & {
-        __Practitioner: void,
+        __Practitioner: void;
     };
     export type Device = "device" & {
-        __Device: void,
+        __Device: void;
     };
 
     export interface _Visitor<Result> {

@@ -8,25 +8,32 @@ export const CompositionStatus = {
     Final: "final" as CompositionStatus.Final,
     Amended: "amended" as CompositionStatus.Amended,
 
-    _visit: <Result>(value: CompositionStatus, visitor: CompositionStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: CompositionStatus,
+        visitor: CompositionStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case CompositionStatus.Preliminary: return visitor.preliminary();
-            case CompositionStatus.Final: return visitor.final();
-            case CompositionStatus.Amended: return visitor.amended();
-            default: return visitor._unknown();
+            case CompositionStatus.Preliminary:
+                return visitor.preliminary();
+            case CompositionStatus.Final:
+                return visitor.final();
+            case CompositionStatus.Amended:
+                return visitor.amended();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace CompositionStatus {
     export type Preliminary = "preliminary" & {
-        __Preliminary: void,
+        __Preliminary: void;
     };
     export type Final = "final" & {
-        __Final: void,
+        __Final: void;
     };
     export type Amended = "amended" & {
-        __Amended: void,
+        __Amended: void;
     };
 
     export interface _Visitor<Result> {

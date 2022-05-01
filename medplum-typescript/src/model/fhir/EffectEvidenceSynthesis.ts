@@ -62,7 +62,10 @@ export interface EffectEvidenceSynthesis {
     exposureAlternative: Reference;
     outcome: Reference;
     sampleSize: EffectEvidenceSynthesis_SampleSize | null | undefined;
-    resultsByExposure: EffectEvidenceSynthesis_ResultsByExposure[] | null | undefined;
+    resultsByExposure:
+        | EffectEvidenceSynthesis_ResultsByExposure[]
+        | null
+        | undefined;
     effectEstimate: EffectEvidenceSynthesis_EffectEstimate[] | null | undefined;
     certainty: EffectEvidenceSynthesis_Certainty[] | null | undefined;
 }

@@ -10,29 +10,37 @@ export const CodesystemContent = {
     Complete: "complete" as CodesystemContent.Complete,
     Supplement: "supplement" as CodesystemContent.Supplement,
 
-    _visit: <Result>(value: CodesystemContent, visitor: CodesystemContent._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: CodesystemContent,
+        visitor: CodesystemContent._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case CodesystemContent.Example: return visitor.example();
-            case CodesystemContent.Fragment: return visitor.fragment();
-            case CodesystemContent.Complete: return visitor.complete();
-            case CodesystemContent.Supplement: return visitor.supplement();
-            default: return visitor._unknown();
+            case CodesystemContent.Example:
+                return visitor.example();
+            case CodesystemContent.Fragment:
+                return visitor.fragment();
+            case CodesystemContent.Complete:
+                return visitor.complete();
+            case CodesystemContent.Supplement:
+                return visitor.supplement();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace CodesystemContent {
     export type Example = "example" & {
-        __Example: void,
+        __Example: void;
     };
     export type Fragment = "fragment" & {
-        __Fragment: void,
+        __Fragment: void;
     };
     export type Complete = "complete" & {
-        __Complete: void,
+        __Complete: void;
     };
     export type Supplement = "supplement" & {
-        __Supplement: void,
+        __Supplement: void;
     };
 
     export interface _Visitor<Result> {

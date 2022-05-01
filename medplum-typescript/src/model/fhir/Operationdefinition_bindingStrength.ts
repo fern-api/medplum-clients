@@ -10,29 +10,37 @@ export const Operationdefinition_bindingStrength = {
     Preferred: "preferred" as Operationdefinition_bindingStrength.Preferred,
     Example: "example" as Operationdefinition_bindingStrength.Example,
 
-    _visit: <Result>(value: Operationdefinition_bindingStrength, visitor: Operationdefinition_bindingStrength._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Operationdefinition_bindingStrength,
+        visitor: Operationdefinition_bindingStrength._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Operationdefinition_bindingStrength.Required: return visitor.required();
-            case Operationdefinition_bindingStrength.Extensible: return visitor.extensible();
-            case Operationdefinition_bindingStrength.Preferred: return visitor.preferred();
-            case Operationdefinition_bindingStrength.Example: return visitor.example();
-            default: return visitor._unknown();
+            case Operationdefinition_bindingStrength.Required:
+                return visitor.required();
+            case Operationdefinition_bindingStrength.Extensible:
+                return visitor.extensible();
+            case Operationdefinition_bindingStrength.Preferred:
+                return visitor.preferred();
+            case Operationdefinition_bindingStrength.Example:
+                return visitor.example();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Operationdefinition_bindingStrength {
     export type Required = "required" & {
-        __Required: void,
+        __Required: void;
     };
     export type Extensible = "extensible" & {
-        __Extensible: void,
+        __Extensible: void;
     };
     export type Preferred = "preferred" & {
-        __Preferred: void,
+        __Preferred: void;
     };
     export type Example = "example" & {
-        __Example: void,
+        __Example: void;
     };
 
     export interface _Visitor<Result> {

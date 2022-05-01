@@ -8,25 +8,32 @@ export const EvidencevariableStatus = {
     Active: "active" as EvidencevariableStatus.Active,
     Retired: "retired" as EvidencevariableStatus.Retired,
 
-    _visit: <Result>(value: EvidencevariableStatus, visitor: EvidencevariableStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: EvidencevariableStatus,
+        visitor: EvidencevariableStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case EvidencevariableStatus.Draft: return visitor.draft();
-            case EvidencevariableStatus.Active: return visitor.active();
-            case EvidencevariableStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case EvidencevariableStatus.Draft:
+                return visitor.draft();
+            case EvidencevariableStatus.Active:
+                return visitor.active();
+            case EvidencevariableStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace EvidencevariableStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

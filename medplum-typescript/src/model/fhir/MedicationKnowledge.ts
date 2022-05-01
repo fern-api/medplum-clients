@@ -37,7 +37,10 @@ export interface MedicationKnowledge {
     doseForm: CodeableConcept | null | undefined;
     amount: Quantity | null | undefined;
     synonym: string[] | null | undefined;
-    relatedMedicationKnowledge: MedicationKnowledge_RelatedMedicationKnowledge[] | null | undefined;
+    relatedMedicationKnowledge:
+        | MedicationKnowledge_RelatedMedicationKnowledge[]
+        | null
+        | undefined;
     associatedMedication: Reference[] | null | undefined;
     productType: CodeableConcept[] | null | undefined;
     monograph: MedicationKnowledge_Monograph[] | null | undefined;
@@ -45,11 +48,23 @@ export interface MedicationKnowledge {
     preparationInstruction: markdown | null | undefined;
     intendedRoute: CodeableConcept[] | null | undefined;
     cost: MedicationKnowledge_Cost[] | null | undefined;
-    monitoringProgram: MedicationKnowledge_MonitoringProgram[] | null | undefined;
-    administrationGuidelines: MedicationKnowledge_AdministrationGuidelines[] | null | undefined;
-    medicineClassification: MedicationKnowledge_MedicineClassification[] | null | undefined;
+    monitoringProgram:
+        | MedicationKnowledge_MonitoringProgram[]
+        | null
+        | undefined;
+    administrationGuidelines:
+        | MedicationKnowledge_AdministrationGuidelines[]
+        | null
+        | undefined;
+    medicineClassification:
+        | MedicationKnowledge_MedicineClassification[]
+        | null
+        | undefined;
     packaging: MedicationKnowledge_Packaging | null | undefined;
-    drugCharacteristic: MedicationKnowledge_DrugCharacteristic[] | null | undefined;
+    drugCharacteristic:
+        | MedicationKnowledge_DrugCharacteristic[]
+        | null
+        | undefined;
     contraindication: Reference[] | null | undefined;
     regulatory: MedicationKnowledge_Regulatory[] | null | undefined;
     kinetics: MedicationKnowledge_Kinetics[] | null | undefined;

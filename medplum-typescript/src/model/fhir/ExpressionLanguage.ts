@@ -1,8 +1,10 @@
 export type ExpressionLanguage = never;
 
 export const ExpressionLanguage = {
-
-    _visit: <Result>(_value: ExpressionLanguage, visitor: ExpressionLanguage._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: ExpressionLanguage,
+        visitor: ExpressionLanguage._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

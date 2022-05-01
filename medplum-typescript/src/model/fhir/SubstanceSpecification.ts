@@ -39,7 +39,10 @@ export interface SubstanceSpecification {
     structure: SubstanceSpecification_Structure | null | undefined;
     code: SubstanceSpecification_Code[] | null | undefined;
     name: SubstanceSpecification_Name[] | null | undefined;
-    molecularWeight: SubstanceSpecification_MolecularWeight[] | null | undefined;
+    molecularWeight:
+        | SubstanceSpecification_MolecularWeight[]
+        | null
+        | undefined;
     relationship: SubstanceSpecification_Relationship[] | null | undefined;
     nucleicAcid: Reference | null | undefined;
     polymer: Reference | null | undefined;

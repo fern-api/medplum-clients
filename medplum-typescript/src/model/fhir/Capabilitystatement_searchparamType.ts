@@ -20,49 +20,62 @@ export const Capabilitystatement_searchparamType = {
     Uri: "uri" as Capabilitystatement_searchparamType.Uri,
     Special: "special" as Capabilitystatement_searchparamType.Special,
 
-    _visit: <Result>(value: Capabilitystatement_searchparamType, visitor: Capabilitystatement_searchparamType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Capabilitystatement_searchparamType,
+        visitor: Capabilitystatement_searchparamType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Capabilitystatement_searchparamType.Number: return visitor.number();
-            case Capabilitystatement_searchparamType.Date: return visitor.date();
-            case Capabilitystatement_searchparamType.String: return visitor.string();
-            case Capabilitystatement_searchparamType.Token: return visitor.token();
-            case Capabilitystatement_searchparamType.Reference: return visitor.reference();
-            case Capabilitystatement_searchparamType.Composite: return visitor.composite();
-            case Capabilitystatement_searchparamType.Quantity: return visitor.quantity();
-            case Capabilitystatement_searchparamType.Uri: return visitor.uri();
-            case Capabilitystatement_searchparamType.Special: return visitor.special();
-            default: return visitor._unknown();
+            case Capabilitystatement_searchparamType.Number:
+                return visitor.number();
+            case Capabilitystatement_searchparamType.Date:
+                return visitor.date();
+            case Capabilitystatement_searchparamType.String:
+                return visitor.string();
+            case Capabilitystatement_searchparamType.Token:
+                return visitor.token();
+            case Capabilitystatement_searchparamType.Reference:
+                return visitor.reference();
+            case Capabilitystatement_searchparamType.Composite:
+                return visitor.composite();
+            case Capabilitystatement_searchparamType.Quantity:
+                return visitor.quantity();
+            case Capabilitystatement_searchparamType.Uri:
+                return visitor.uri();
+            case Capabilitystatement_searchparamType.Special:
+                return visitor.special();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Capabilitystatement_searchparamType {
     export type Number = "number" & {
-        __Number: void,
+        __Number: void;
     };
     export type Date = "date" & {
-        __Date: void,
+        __Date: void;
     };
     export type String = "string" & {
-        __String: void,
+        __String: void;
     };
     export type Token = "token" & {
-        __Token: void,
+        __Token: void;
     };
     export type Reference = "reference" & {
-        __Reference: void,
+        __Reference: void;
     };
     export type Composite = "composite" & {
-        __Composite: void,
+        __Composite: void;
     };
     export type Quantity = "quantity" & {
-        __Quantity: void,
+        __Quantity: void;
     };
     export type Uri = "uri" & {
-        __Uri: void,
+        __Uri: void;
     };
     export type Special = "special" & {
-        __Special: void,
+        __Special: void;
     };
 
     export interface _Visitor<Result> {

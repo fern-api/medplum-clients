@@ -8,25 +8,32 @@ export const EvidencevariableType = {
     Continuous: "continuous" as EvidencevariableType.Continuous,
     Descriptive: "descriptive" as EvidencevariableType.Descriptive,
 
-    _visit: <Result>(value: EvidencevariableType, visitor: EvidencevariableType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: EvidencevariableType,
+        visitor: EvidencevariableType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case EvidencevariableType.Dichotomous: return visitor.dichotomous();
-            case EvidencevariableType.Continuous: return visitor.continuous();
-            case EvidencevariableType.Descriptive: return visitor.descriptive();
-            default: return visitor._unknown();
+            case EvidencevariableType.Dichotomous:
+                return visitor.dichotomous();
+            case EvidencevariableType.Continuous:
+                return visitor.continuous();
+            case EvidencevariableType.Descriptive:
+                return visitor.descriptive();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace EvidencevariableType {
     export type Dichotomous = "dichotomous" & {
-        __Dichotomous: void,
+        __Dichotomous: void;
     };
     export type Continuous = "continuous" & {
-        __Continuous: void,
+        __Continuous: void;
     };
     export type Descriptive = "descriptive" & {
-        __Descriptive: void,
+        __Descriptive: void;
     };
 
     export interface _Visitor<Result> {

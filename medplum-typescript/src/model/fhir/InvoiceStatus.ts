@@ -10,29 +10,37 @@ export const InvoiceStatus = {
     Balanced: "balanced" as InvoiceStatus.Balanced,
     Cancelled: "cancelled" as InvoiceStatus.Cancelled,
 
-    _visit: <Result>(value: InvoiceStatus, visitor: InvoiceStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: InvoiceStatus,
+        visitor: InvoiceStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case InvoiceStatus.Draft: return visitor.draft();
-            case InvoiceStatus.Issued: return visitor.issued();
-            case InvoiceStatus.Balanced: return visitor.balanced();
-            case InvoiceStatus.Cancelled: return visitor.cancelled();
-            default: return visitor._unknown();
+            case InvoiceStatus.Draft:
+                return visitor.draft();
+            case InvoiceStatus.Issued:
+                return visitor.issued();
+            case InvoiceStatus.Balanced:
+                return visitor.balanced();
+            case InvoiceStatus.Cancelled:
+                return visitor.cancelled();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace InvoiceStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Issued = "issued" & {
-        __Issued: void,
+        __Issued: void;
     };
     export type Balanced = "balanced" & {
-        __Balanced: void,
+        __Balanced: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
 
     export interface _Visitor<Result> {

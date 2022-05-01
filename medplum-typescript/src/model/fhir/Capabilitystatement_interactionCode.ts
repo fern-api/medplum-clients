@@ -14,37 +14,47 @@ export const Capabilitystatement_interactionCode = {
     Delete: "delete" as Capabilitystatement_interactionCode.Delete,
     Create: "create" as Capabilitystatement_interactionCode.Create,
 
-    _visit: <Result>(value: Capabilitystatement_interactionCode, visitor: Capabilitystatement_interactionCode._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Capabilitystatement_interactionCode,
+        visitor: Capabilitystatement_interactionCode._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Capabilitystatement_interactionCode.Read: return visitor.read();
-            case Capabilitystatement_interactionCode.Vread: return visitor.vread();
-            case Capabilitystatement_interactionCode.Update: return visitor.update();
-            case Capabilitystatement_interactionCode.Patch: return visitor.patch();
-            case Capabilitystatement_interactionCode.Delete: return visitor.delete();
-            case Capabilitystatement_interactionCode.Create: return visitor.create();
-            default: return visitor._unknown();
+            case Capabilitystatement_interactionCode.Read:
+                return visitor.read();
+            case Capabilitystatement_interactionCode.Vread:
+                return visitor.vread();
+            case Capabilitystatement_interactionCode.Update:
+                return visitor.update();
+            case Capabilitystatement_interactionCode.Patch:
+                return visitor.patch();
+            case Capabilitystatement_interactionCode.Delete:
+                return visitor.delete();
+            case Capabilitystatement_interactionCode.Create:
+                return visitor.create();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Capabilitystatement_interactionCode {
     export type Read = "read" & {
-        __Read: void,
+        __Read: void;
     };
     export type Vread = "vread" & {
-        __Vread: void,
+        __Vread: void;
     };
     export type Update = "update" & {
-        __Update: void,
+        __Update: void;
     };
     export type Patch = "patch" & {
-        __Patch: void,
+        __Patch: void;
     };
     export type Delete = "delete" & {
-        __Delete: void,
+        __Delete: void;
     };
     export type Create = "create" & {
-        __Create: void,
+        __Create: void;
     };
 
     export interface _Visitor<Result> {

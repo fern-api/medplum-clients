@@ -1,8 +1,10 @@
 export type Capabilitystatement_resourceConditionalread = never;
 
 export const Capabilitystatement_resourceConditionalread = {
-
-    _visit: <Result>(_value: Capabilitystatement_resourceConditionalread, visitor: Capabilitystatement_resourceConditionalread._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: Capabilitystatement_resourceConditionalread,
+        visitor: Capabilitystatement_resourceConditionalread._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

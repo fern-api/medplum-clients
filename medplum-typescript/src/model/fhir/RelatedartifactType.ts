@@ -12,33 +12,42 @@ export const RelatedartifactType = {
     Predecessor: "predecessor" as RelatedartifactType.Predecessor,
     Successor: "successor" as RelatedartifactType.Successor,
 
-    _visit: <Result>(value: RelatedartifactType, visitor: RelatedartifactType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: RelatedartifactType,
+        visitor: RelatedartifactType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case RelatedartifactType.Documentation: return visitor.documentation();
-            case RelatedartifactType.Justification: return visitor.justification();
-            case RelatedartifactType.Citation: return visitor.citation();
-            case RelatedartifactType.Predecessor: return visitor.predecessor();
-            case RelatedartifactType.Successor: return visitor.successor();
-            default: return visitor._unknown();
+            case RelatedartifactType.Documentation:
+                return visitor.documentation();
+            case RelatedartifactType.Justification:
+                return visitor.justification();
+            case RelatedartifactType.Citation:
+                return visitor.citation();
+            case RelatedartifactType.Predecessor:
+                return visitor.predecessor();
+            case RelatedartifactType.Successor:
+                return visitor.successor();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace RelatedartifactType {
     export type Documentation = "documentation" & {
-        __Documentation: void,
+        __Documentation: void;
     };
     export type Justification = "justification" & {
-        __Justification: void,
+        __Justification: void;
     };
     export type Citation = "citation" & {
-        __Citation: void,
+        __Citation: void;
     };
     export type Predecessor = "predecessor" & {
-        __Predecessor: void,
+        __Predecessor: void;
     };
     export type Successor = "successor" & {
-        __Successor: void,
+        __Successor: void;
     };
 
     export interface _Visitor<Result> {

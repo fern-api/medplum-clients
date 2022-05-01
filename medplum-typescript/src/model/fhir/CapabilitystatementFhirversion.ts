@@ -1,8 +1,10 @@
 export type CapabilitystatementFhirversion = never;
 
 export const CapabilitystatementFhirversion = {
-
-    _visit: <Result>(_value: CapabilitystatementFhirversion, visitor: CapabilitystatementFhirversion._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: CapabilitystatementFhirversion,
+        visitor: CapabilitystatementFhirversion._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

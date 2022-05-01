@@ -12,5 +12,8 @@ export interface EffectEvidenceSynthesis_EffectEstimate {
     variantState: CodeableConcept | null | undefined;
     value: decimal | null | undefined;
     unitOfMeasure: CodeableConcept | null | undefined;
-    precisionEstimate: EffectEvidenceSynthesis_PrecisionEstimate[] | null | undefined;
+    precisionEstimate:
+        | EffectEvidenceSynthesis_PrecisionEstimate[]
+        | null
+        | undefined;
 }

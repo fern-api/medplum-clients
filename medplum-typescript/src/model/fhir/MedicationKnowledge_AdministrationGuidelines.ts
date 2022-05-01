@@ -11,5 +11,8 @@ export interface MedicationKnowledge_AdministrationGuidelines {
     dosage: MedicationKnowledge_Dosage[] | null | undefined;
     indicationCodeableConcept: CodeableConcept | null | undefined;
     indicationReference: Reference | null | undefined;
-    patientCharacteristics: MedicationKnowledge_PatientCharacteristics[] | null | undefined;
+    patientCharacteristics:
+        | MedicationKnowledge_PatientCharacteristics[]
+        | null
+        | undefined;
 }

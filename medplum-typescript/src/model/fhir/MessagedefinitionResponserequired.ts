@@ -6,21 +6,27 @@ export const MessagedefinitionResponserequired = {
     Always: "always" as MessagedefinitionResponserequired.Always,
     Never: "never" as MessagedefinitionResponserequired.Never,
 
-    _visit: <Result>(value: MessagedefinitionResponserequired, visitor: MessagedefinitionResponserequired._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: MessagedefinitionResponserequired,
+        visitor: MessagedefinitionResponserequired._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case MessagedefinitionResponserequired.Always: return visitor.always();
-            case MessagedefinitionResponserequired.Never: return visitor.never();
-            default: return visitor._unknown();
+            case MessagedefinitionResponserequired.Always:
+                return visitor.always();
+            case MessagedefinitionResponserequired.Never:
+                return visitor.never();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace MessagedefinitionResponserequired {
     export type Always = "always" & {
-        __Always: void,
+        __Always: void;
     };
     export type Never = "never" & {
-        __Never: void,
+        __Never: void;
     };
 
     export interface _Visitor<Result> {

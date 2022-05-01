@@ -8,25 +8,32 @@ export const Observationdefinition_qualifiedintervalGender = {
     Female: "female" as Observationdefinition_qualifiedintervalGender.Female,
     Other: "other" as Observationdefinition_qualifiedintervalGender.Other,
 
-    _visit: <Result>(value: Observationdefinition_qualifiedintervalGender, visitor: Observationdefinition_qualifiedintervalGender._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Observationdefinition_qualifiedintervalGender,
+        visitor: Observationdefinition_qualifiedintervalGender._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Observationdefinition_qualifiedintervalGender.Male: return visitor.male();
-            case Observationdefinition_qualifiedintervalGender.Female: return visitor.female();
-            case Observationdefinition_qualifiedintervalGender.Other: return visitor.other();
-            default: return visitor._unknown();
+            case Observationdefinition_qualifiedintervalGender.Male:
+                return visitor.male();
+            case Observationdefinition_qualifiedintervalGender.Female:
+                return visitor.female();
+            case Observationdefinition_qualifiedintervalGender.Other:
+                return visitor.other();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Observationdefinition_qualifiedintervalGender {
     export type Male = "male" & {
-        __Male: void,
+        __Male: void;
     };
     export type Female = "female" & {
-        __Female: void,
+        __Female: void;
     };
     export type Other = "other" & {
-        __Other: void,
+        __Other: void;
     };
 
     export interface _Visitor<Result> {

@@ -12,33 +12,42 @@ export const AuditeventAction = {
     D: "D" as AuditeventAction.D,
     E: "E" as AuditeventAction.E,
 
-    _visit: <Result>(value: AuditeventAction, visitor: AuditeventAction._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: AuditeventAction,
+        visitor: AuditeventAction._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case AuditeventAction.C: return visitor.c();
-            case AuditeventAction.R: return visitor.r();
-            case AuditeventAction.U: return visitor.u();
-            case AuditeventAction.D: return visitor.d();
-            case AuditeventAction.E: return visitor.e();
-            default: return visitor._unknown();
+            case AuditeventAction.C:
+                return visitor.c();
+            case AuditeventAction.R:
+                return visitor.r();
+            case AuditeventAction.U:
+                return visitor.u();
+            case AuditeventAction.D:
+                return visitor.d();
+            case AuditeventAction.E:
+                return visitor.e();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace AuditeventAction {
     export type C = "C" & {
-        __C: void,
+        __C: void;
     };
     export type R = "R" & {
-        __R: void,
+        __R: void;
     };
     export type U = "U" & {
-        __U: void,
+        __U: void;
     };
     export type D = "D" & {
-        __D: void,
+        __D: void;
     };
     export type E = "E" & {
-        __E: void,
+        __E: void;
     };
 
     export interface _Visitor<Result> {

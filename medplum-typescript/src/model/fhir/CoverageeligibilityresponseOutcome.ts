@@ -10,29 +10,37 @@ export const CoverageeligibilityresponseOutcome = {
     Error: "error" as CoverageeligibilityresponseOutcome.Error,
     Partial: "partial" as CoverageeligibilityresponseOutcome.Partial,
 
-    _visit: <Result>(value: CoverageeligibilityresponseOutcome, visitor: CoverageeligibilityresponseOutcome._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: CoverageeligibilityresponseOutcome,
+        visitor: CoverageeligibilityresponseOutcome._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case CoverageeligibilityresponseOutcome.Queued: return visitor.queued();
-            case CoverageeligibilityresponseOutcome.Complete: return visitor.complete();
-            case CoverageeligibilityresponseOutcome.Error: return visitor.error();
-            case CoverageeligibilityresponseOutcome.Partial: return visitor.partial();
-            default: return visitor._unknown();
+            case CoverageeligibilityresponseOutcome.Queued:
+                return visitor.queued();
+            case CoverageeligibilityresponseOutcome.Complete:
+                return visitor.complete();
+            case CoverageeligibilityresponseOutcome.Error:
+                return visitor.error();
+            case CoverageeligibilityresponseOutcome.Partial:
+                return visitor.partial();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace CoverageeligibilityresponseOutcome {
     export type Queued = "queued" & {
-        __Queued: void,
+        __Queued: void;
     };
     export type Complete = "complete" & {
-        __Complete: void,
+        __Complete: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Partial = "partial" & {
-        __Partial: void,
+        __Partial: void;
     };
 
     export interface _Visitor<Result> {

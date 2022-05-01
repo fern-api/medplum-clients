@@ -8,25 +8,32 @@ export const ResearchelementdefinitionType = {
     Exposure: "exposure" as ResearchelementdefinitionType.Exposure,
     Outcome: "outcome" as ResearchelementdefinitionType.Outcome,
 
-    _visit: <Result>(value: ResearchelementdefinitionType, visitor: ResearchelementdefinitionType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ResearchelementdefinitionType,
+        visitor: ResearchelementdefinitionType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ResearchelementdefinitionType.Population: return visitor.population();
-            case ResearchelementdefinitionType.Exposure: return visitor.exposure();
-            case ResearchelementdefinitionType.Outcome: return visitor.outcome();
-            default: return visitor._unknown();
+            case ResearchelementdefinitionType.Population:
+                return visitor.population();
+            case ResearchelementdefinitionType.Exposure:
+                return visitor.exposure();
+            case ResearchelementdefinitionType.Outcome:
+                return visitor.outcome();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ResearchelementdefinitionType {
     export type Population = "population" & {
-        __Population: void,
+        __Population: void;
     };
     export type Exposure = "exposure" & {
-        __Exposure: void,
+        __Exposure: void;
     };
     export type Outcome = "outcome" & {
-        __Outcome: void,
+        __Outcome: void;
     };
 
     export interface _Visitor<Result> {

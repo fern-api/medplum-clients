@@ -1,8 +1,10 @@
 export type Plandefinition_actionGroupingbehavior = never;
 
 export const Plandefinition_actionGroupingbehavior = {
-
-    _visit: <Result>(_value: Plandefinition_actionGroupingbehavior, visitor: Plandefinition_actionGroupingbehavior._Visitor<Result>): Result => {
+    _visit: <Result>(
+        _value: Plandefinition_actionGroupingbehavior,
+        visitor: Plandefinition_actionGroupingbehavior._Visitor<Result>
+    ): Result => {
         return visitor._unknown();
     },
 };

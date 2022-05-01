@@ -8,7 +8,10 @@ export interface ImplementationGuide_Resource {
     extension: Extension[] | null | undefined;
     modifierExtension: Extension[] | null | undefined;
     reference: Reference;
-    fhirVersion: Implementationguide_resourceFhirversionItem[] | null | undefined;
+    fhirVersion:
+        | Implementationguide_resourceFhirversionItem[]
+        | null
+        | undefined;
     name: string | null | undefined;
     description: string | null | undefined;
     exampleBoolean: boolean | null | undefined;

@@ -8,25 +8,32 @@ export const OperationdefinitionStatus = {
     Active: "active" as OperationdefinitionStatus.Active,
     Retired: "retired" as OperationdefinitionStatus.Retired,
 
-    _visit: <Result>(value: OperationdefinitionStatus, visitor: OperationdefinitionStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: OperationdefinitionStatus,
+        visitor: OperationdefinitionStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case OperationdefinitionStatus.Draft: return visitor.draft();
-            case OperationdefinitionStatus.Active: return visitor.active();
-            case OperationdefinitionStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case OperationdefinitionStatus.Draft:
+                return visitor.draft();
+            case OperationdefinitionStatus.Active:
+                return visitor.active();
+            case OperationdefinitionStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace OperationdefinitionStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

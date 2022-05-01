@@ -8,25 +8,32 @@ export const LocationStatus = {
     Suspended: "suspended" as LocationStatus.Suspended,
     Inactive: "inactive" as LocationStatus.Inactive,
 
-    _visit: <Result>(value: LocationStatus, visitor: LocationStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: LocationStatus,
+        visitor: LocationStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case LocationStatus.Active: return visitor.active();
-            case LocationStatus.Suspended: return visitor.suspended();
-            case LocationStatus.Inactive: return visitor.inactive();
-            default: return visitor._unknown();
+            case LocationStatus.Active:
+                return visitor.active();
+            case LocationStatus.Suspended:
+                return visitor.suspended();
+            case LocationStatus.Inactive:
+                return visitor.inactive();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace LocationStatus {
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Suspended = "suspended" & {
-        __Suspended: void,
+        __Suspended: void;
     };
     export type Inactive = "inactive" & {
-        __Inactive: void,
+        __Inactive: void;
     };
 
     export interface _Visitor<Result> {

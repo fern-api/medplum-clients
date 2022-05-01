@@ -1,7 +1,7 @@
 export type dateTime = string & {
-    __dateTime: void,
+    __dateTime: void;
 };
 
 export const dateTime = {
-    of: (value: string): dateTime => value as dateTime
+    of: (value: string): dateTime => value as dateTime,
 };

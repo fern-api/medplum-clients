@@ -16,41 +16,52 @@ export const Healthcareservice_availabletimeDaysofweekItem = {
     Sat: "sat" as Healthcareservice_availabletimeDaysofweekItem.Sat,
     Sun: "sun" as Healthcareservice_availabletimeDaysofweekItem.Sun,
 
-    _visit: <Result>(value: Healthcareservice_availabletimeDaysofweekItem, visitor: Healthcareservice_availabletimeDaysofweekItem._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Healthcareservice_availabletimeDaysofweekItem,
+        visitor: Healthcareservice_availabletimeDaysofweekItem._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Healthcareservice_availabletimeDaysofweekItem.Mon: return visitor.mon();
-            case Healthcareservice_availabletimeDaysofweekItem.Tue: return visitor.tue();
-            case Healthcareservice_availabletimeDaysofweekItem.Wed: return visitor.wed();
-            case Healthcareservice_availabletimeDaysofweekItem.Thu: return visitor.thu();
-            case Healthcareservice_availabletimeDaysofweekItem.Fri: return visitor.fri();
-            case Healthcareservice_availabletimeDaysofweekItem.Sat: return visitor.sat();
-            case Healthcareservice_availabletimeDaysofweekItem.Sun: return visitor.sun();
-            default: return visitor._unknown();
+            case Healthcareservice_availabletimeDaysofweekItem.Mon:
+                return visitor.mon();
+            case Healthcareservice_availabletimeDaysofweekItem.Tue:
+                return visitor.tue();
+            case Healthcareservice_availabletimeDaysofweekItem.Wed:
+                return visitor.wed();
+            case Healthcareservice_availabletimeDaysofweekItem.Thu:
+                return visitor.thu();
+            case Healthcareservice_availabletimeDaysofweekItem.Fri:
+                return visitor.fri();
+            case Healthcareservice_availabletimeDaysofweekItem.Sat:
+                return visitor.sat();
+            case Healthcareservice_availabletimeDaysofweekItem.Sun:
+                return visitor.sun();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Healthcareservice_availabletimeDaysofweekItem {
     export type Mon = "mon" & {
-        __Mon: void,
+        __Mon: void;
     };
     export type Tue = "tue" & {
-        __Tue: void,
+        __Tue: void;
     };
     export type Wed = "wed" & {
-        __Wed: void,
+        __Wed: void;
     };
     export type Thu = "thu" & {
-        __Thu: void,
+        __Thu: void;
     };
     export type Fri = "fri" & {
-        __Fri: void,
+        __Fri: void;
     };
     export type Sat = "sat" & {
-        __Sat: void,
+        __Sat: void;
     };
     export type Sun = "sun" & {
-        __Sun: void,
+        __Sun: void;
     };
 
     export interface _Visitor<Result> {

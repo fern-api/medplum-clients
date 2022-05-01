@@ -8,25 +8,32 @@ export const Elementdefinition_slicingRules = {
     Open: "open" as Elementdefinition_slicingRules.Open,
     OpenAtEnd: "openAtEnd" as Elementdefinition_slicingRules.OpenAtEnd,
 
-    _visit: <Result>(value: Elementdefinition_slicingRules, visitor: Elementdefinition_slicingRules._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Elementdefinition_slicingRules,
+        visitor: Elementdefinition_slicingRules._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Elementdefinition_slicingRules.Closed: return visitor.closed();
-            case Elementdefinition_slicingRules.Open: return visitor.open();
-            case Elementdefinition_slicingRules.OpenAtEnd: return visitor.openAtEnd();
-            default: return visitor._unknown();
+            case Elementdefinition_slicingRules.Closed:
+                return visitor.closed();
+            case Elementdefinition_slicingRules.Open:
+                return visitor.open();
+            case Elementdefinition_slicingRules.OpenAtEnd:
+                return visitor.openAtEnd();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Elementdefinition_slicingRules {
     export type Closed = "closed" & {
-        __Closed: void,
+        __Closed: void;
     };
     export type Open = "open" & {
-        __Open: void,
+        __Open: void;
     };
     export type OpenAtEnd = "openAtEnd" & {
-        __OpenAtEnd: void,
+        __OpenAtEnd: void;
     };
 
     export interface _Visitor<Result> {

@@ -8,25 +8,32 @@ export const PersonGender = {
     Female: "female" as PersonGender.Female,
     Other: "other" as PersonGender.Other,
 
-    _visit: <Result>(value: PersonGender, visitor: PersonGender._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: PersonGender,
+        visitor: PersonGender._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case PersonGender.Male: return visitor.male();
-            case PersonGender.Female: return visitor.female();
-            case PersonGender.Other: return visitor.other();
-            default: return visitor._unknown();
+            case PersonGender.Male:
+                return visitor.male();
+            case PersonGender.Female:
+                return visitor.female();
+            case PersonGender.Other:
+                return visitor.other();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace PersonGender {
     export type Male = "male" & {
-        __Male: void,
+        __Male: void;
     };
     export type Female = "female" & {
-        __Female: void,
+        __Female: void;
     };
     export type Other = "other" & {
-        __Other: void,
+        __Other: void;
     };
 
     export interface _Visitor<Result> {

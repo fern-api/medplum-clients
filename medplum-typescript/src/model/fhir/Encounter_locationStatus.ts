@@ -10,29 +10,37 @@ export const Encounter_locationStatus = {
     Reserved: "reserved" as Encounter_locationStatus.Reserved,
     Completed: "completed" as Encounter_locationStatus.Completed,
 
-    _visit: <Result>(value: Encounter_locationStatus, visitor: Encounter_locationStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Encounter_locationStatus,
+        visitor: Encounter_locationStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Encounter_locationStatus.Planned: return visitor.planned();
-            case Encounter_locationStatus.Active: return visitor.active();
-            case Encounter_locationStatus.Reserved: return visitor.reserved();
-            case Encounter_locationStatus.Completed: return visitor.completed();
-            default: return visitor._unknown();
+            case Encounter_locationStatus.Planned:
+                return visitor.planned();
+            case Encounter_locationStatus.Active:
+                return visitor.active();
+            case Encounter_locationStatus.Reserved:
+                return visitor.reserved();
+            case Encounter_locationStatus.Completed:
+                return visitor.completed();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Encounter_locationStatus {
     export type Planned = "planned" & {
-        __Planned: void,
+        __Planned: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Reserved = "reserved" & {
-        __Reserved: void,
+        __Reserved: void;
     };
     export type Completed = "completed" & {
-        __Completed: void,
+        __Completed: void;
     };
 
     export interface _Visitor<Result> {

@@ -23,10 +23,19 @@ export interface CapabilityStatement_Resource {
     readHistory: boolean | null | undefined;
     updateCreate: boolean | null | undefined;
     conditionalCreate: boolean | null | undefined;
-    conditionalRead: Capabilitystatement_resourceConditionalread | null | undefined;
+    conditionalRead:
+        | Capabilitystatement_resourceConditionalread
+        | null
+        | undefined;
     conditionalUpdate: boolean | null | undefined;
-    conditionalDelete: Capabilitystatement_resourceConditionaldelete | null | undefined;
-    referencePolicy: Capabilitystatement_resourceReferencepolicyItem[] | null | undefined;
+    conditionalDelete:
+        | Capabilitystatement_resourceConditionaldelete
+        | null
+        | undefined;
+    referencePolicy:
+        | Capabilitystatement_resourceReferencepolicyItem[]
+        | null
+        | undefined;
     searchInclude: string[] | null | undefined;
     searchRevInclude: string[] | null | undefined;
     searchParam: CapabilityStatement_SearchParam[] | null | undefined;

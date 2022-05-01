@@ -12,33 +12,42 @@ export const ResearchsubjectStatus = {
     Screening: "screening" as ResearchsubjectStatus.Screening,
     Withdrawn: "withdrawn" as ResearchsubjectStatus.Withdrawn,
 
-    _visit: <Result>(value: ResearchsubjectStatus, visitor: ResearchsubjectStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: ResearchsubjectStatus,
+        visitor: ResearchsubjectStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case ResearchsubjectStatus.Candidate: return visitor.candidate();
-            case ResearchsubjectStatus.Eligible: return visitor.eligible();
-            case ResearchsubjectStatus.Ineligible: return visitor.ineligible();
-            case ResearchsubjectStatus.Screening: return visitor.screening();
-            case ResearchsubjectStatus.Withdrawn: return visitor.withdrawn();
-            default: return visitor._unknown();
+            case ResearchsubjectStatus.Candidate:
+                return visitor.candidate();
+            case ResearchsubjectStatus.Eligible:
+                return visitor.eligible();
+            case ResearchsubjectStatus.Ineligible:
+                return visitor.ineligible();
+            case ResearchsubjectStatus.Screening:
+                return visitor.screening();
+            case ResearchsubjectStatus.Withdrawn:
+                return visitor.withdrawn();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace ResearchsubjectStatus {
     export type Candidate = "candidate" & {
-        __Candidate: void,
+        __Candidate: void;
     };
     export type Eligible = "eligible" & {
-        __Eligible: void,
+        __Eligible: void;
     };
     export type Ineligible = "ineligible" & {
-        __Ineligible: void,
+        __Ineligible: void;
     };
     export type Screening = "screening" & {
-        __Screening: void,
+        __Screening: void;
     };
     export type Withdrawn = "withdrawn" & {
-        __Withdrawn: void,
+        __Withdrawn: void;
     };
 
     export interface _Visitor<Result> {

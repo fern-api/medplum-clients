@@ -23,6 +23,9 @@ export interface SubstanceReferenceInformation {
     comment: string | null | undefined;
     gene: SubstanceReferenceInformation_Gene[] | null | undefined;
     geneElement: SubstanceReferenceInformation_GeneElement[] | null | undefined;
-    classification: SubstanceReferenceInformation_Classification[] | null | undefined;
+    classification:
+        | SubstanceReferenceInformation_Classification[]
+        | null
+        | undefined;
     target: SubstanceReferenceInformation_Target[] | null | undefined;
 }

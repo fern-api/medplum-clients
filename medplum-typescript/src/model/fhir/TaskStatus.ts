@@ -20,49 +20,62 @@ export const TaskStatus = {
     Failed: "failed" as TaskStatus.Failed,
     Completed: "completed" as TaskStatus.Completed,
 
-    _visit: <Result>(value: TaskStatus, visitor: TaskStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: TaskStatus,
+        visitor: TaskStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case TaskStatus.Draft: return visitor.draft();
-            case TaskStatus.Requested: return visitor.requested();
-            case TaskStatus.Received: return visitor.received();
-            case TaskStatus.Accepted: return visitor.accepted();
-            case TaskStatus.Rejected: return visitor.rejected();
-            case TaskStatus.Ready: return visitor.ready();
-            case TaskStatus.Cancelled: return visitor.cancelled();
-            case TaskStatus.Failed: return visitor.failed();
-            case TaskStatus.Completed: return visitor.completed();
-            default: return visitor._unknown();
+            case TaskStatus.Draft:
+                return visitor.draft();
+            case TaskStatus.Requested:
+                return visitor.requested();
+            case TaskStatus.Received:
+                return visitor.received();
+            case TaskStatus.Accepted:
+                return visitor.accepted();
+            case TaskStatus.Rejected:
+                return visitor.rejected();
+            case TaskStatus.Ready:
+                return visitor.ready();
+            case TaskStatus.Cancelled:
+                return visitor.cancelled();
+            case TaskStatus.Failed:
+                return visitor.failed();
+            case TaskStatus.Completed:
+                return visitor.completed();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace TaskStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Requested = "requested" & {
-        __Requested: void,
+        __Requested: void;
     };
     export type Received = "received" & {
-        __Received: void,
+        __Received: void;
     };
     export type Accepted = "accepted" & {
-        __Accepted: void,
+        __Accepted: void;
     };
     export type Rejected = "rejected" & {
-        __Rejected: void,
+        __Rejected: void;
     };
     export type Ready = "ready" & {
-        __Ready: void,
+        __Ready: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
     export type Failed = "failed" & {
-        __Failed: void,
+        __Failed: void;
     };
     export type Completed = "completed" & {
-        __Completed: void,
+        __Completed: void;
     };
 
     export interface _Visitor<Result> {

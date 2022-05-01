@@ -8,25 +8,32 @@ export const TestscriptStatus = {
     Active: "active" as TestscriptStatus.Active,
     Retired: "retired" as TestscriptStatus.Retired,
 
-    _visit: <Result>(value: TestscriptStatus, visitor: TestscriptStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: TestscriptStatus,
+        visitor: TestscriptStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case TestscriptStatus.Draft: return visitor.draft();
-            case TestscriptStatus.Active: return visitor.active();
-            case TestscriptStatus.Retired: return visitor.retired();
-            default: return visitor._unknown();
+            case TestscriptStatus.Draft:
+                return visitor.draft();
+            case TestscriptStatus.Active:
+                return visitor.active();
+            case TestscriptStatus.Retired:
+                return visitor.retired();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace TestscriptStatus {
     export type Draft = "draft" & {
-        __Draft: void,
+        __Draft: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Retired = "retired" & {
-        __Retired: void,
+        __Retired: void;
     };
 
     export interface _Visitor<Result> {

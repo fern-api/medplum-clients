@@ -16,41 +16,52 @@ export const Timing_repeatDurationunit = {
     Mo: "mo" as Timing_repeatDurationunit.Mo,
     A: "a" as Timing_repeatDurationunit.A,
 
-    _visit: <Result>(value: Timing_repeatDurationunit, visitor: Timing_repeatDurationunit._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Timing_repeatDurationunit,
+        visitor: Timing_repeatDurationunit._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Timing_repeatDurationunit.S: return visitor.s();
-            case Timing_repeatDurationunit.Min: return visitor.min();
-            case Timing_repeatDurationunit.H: return visitor.h();
-            case Timing_repeatDurationunit.D: return visitor.d();
-            case Timing_repeatDurationunit.Wk: return visitor.wk();
-            case Timing_repeatDurationunit.Mo: return visitor.mo();
-            case Timing_repeatDurationunit.A: return visitor.a();
-            default: return visitor._unknown();
+            case Timing_repeatDurationunit.S:
+                return visitor.s();
+            case Timing_repeatDurationunit.Min:
+                return visitor.min();
+            case Timing_repeatDurationunit.H:
+                return visitor.h();
+            case Timing_repeatDurationunit.D:
+                return visitor.d();
+            case Timing_repeatDurationunit.Wk:
+                return visitor.wk();
+            case Timing_repeatDurationunit.Mo:
+                return visitor.mo();
+            case Timing_repeatDurationunit.A:
+                return visitor.a();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Timing_repeatDurationunit {
     export type S = "s" & {
-        __S: void,
+        __S: void;
     };
     export type Min = "min" & {
-        __Min: void,
+        __Min: void;
     };
     export type H = "h" & {
-        __H: void,
+        __H: void;
     };
     export type D = "d" & {
-        __D: void,
+        __D: void;
     };
     export type Wk = "wk" & {
-        __Wk: void,
+        __Wk: void;
     };
     export type Mo = "mo" & {
-        __Mo: void,
+        __Mo: void;
     };
     export type A = "a" & {
-        __A: void,
+        __A: void;
     };
 
     export interface _Visitor<Result> {

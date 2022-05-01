@@ -10,29 +10,37 @@ export const Subscription_channelType = {
     Sms: "sms" as Subscription_channelType.Sms,
     Message: "message" as Subscription_channelType.Message,
 
-    _visit: <Result>(value: Subscription_channelType, visitor: Subscription_channelType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Subscription_channelType,
+        visitor: Subscription_channelType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Subscription_channelType.Websocket: return visitor.websocket();
-            case Subscription_channelType.Email: return visitor.email();
-            case Subscription_channelType.Sms: return visitor.sms();
-            case Subscription_channelType.Message: return visitor.message();
-            default: return visitor._unknown();
+            case Subscription_channelType.Websocket:
+                return visitor.websocket();
+            case Subscription_channelType.Email:
+                return visitor.email();
+            case Subscription_channelType.Sms:
+                return visitor.sms();
+            case Subscription_channelType.Message:
+                return visitor.message();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Subscription_channelType {
     export type Websocket = "websocket" & {
-        __Websocket: void,
+        __Websocket: void;
     };
     export type Email = "email" & {
-        __Email: void,
+        __Email: void;
     };
     export type Sms = "sms" & {
-        __Sms: void,
+        __Sms: void;
     };
     export type Message = "message" & {
-        __Message: void,
+        __Message: void;
     };
 
     export interface _Visitor<Result> {

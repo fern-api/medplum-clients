@@ -12,33 +12,42 @@ export const EndpointStatus = {
     Off: "off" as EndpointStatus.Off,
     Test: "test" as EndpointStatus.Test,
 
-    _visit: <Result>(value: EndpointStatus, visitor: EndpointStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: EndpointStatus,
+        visitor: EndpointStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case EndpointStatus.Active: return visitor.active();
-            case EndpointStatus.Suspended: return visitor.suspended();
-            case EndpointStatus.Error: return visitor.error();
-            case EndpointStatus.Off: return visitor.off();
-            case EndpointStatus.Test: return visitor.test();
-            default: return visitor._unknown();
+            case EndpointStatus.Active:
+                return visitor.active();
+            case EndpointStatus.Suspended:
+                return visitor.suspended();
+            case EndpointStatus.Error:
+                return visitor.error();
+            case EndpointStatus.Off:
+                return visitor.off();
+            case EndpointStatus.Test:
+                return visitor.test();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace EndpointStatus {
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Suspended = "suspended" & {
-        __Suspended: void,
+        __Suspended: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Off = "off" & {
-        __Off: void,
+        __Off: void;
     };
     export type Test = "test" & {
-        __Test: void,
+        __Test: void;
     };
 
     export interface _Visitor<Result> {

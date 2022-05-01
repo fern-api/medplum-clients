@@ -10,29 +10,37 @@ export const Operationoutcome_issueSeverity = {
     Warning: "warning" as Operationoutcome_issueSeverity.Warning,
     Information: "information" as Operationoutcome_issueSeverity.Information,
 
-    _visit: <Result>(value: Operationoutcome_issueSeverity, visitor: Operationoutcome_issueSeverity._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: Operationoutcome_issueSeverity,
+        visitor: Operationoutcome_issueSeverity._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case Operationoutcome_issueSeverity.Fatal: return visitor.fatal();
-            case Operationoutcome_issueSeverity.Error: return visitor.error();
-            case Operationoutcome_issueSeverity.Warning: return visitor.warning();
-            case Operationoutcome_issueSeverity.Information: return visitor.information();
-            default: return visitor._unknown();
+            case Operationoutcome_issueSeverity.Fatal:
+                return visitor.fatal();
+            case Operationoutcome_issueSeverity.Error:
+                return visitor.error();
+            case Operationoutcome_issueSeverity.Warning:
+                return visitor.warning();
+            case Operationoutcome_issueSeverity.Information:
+                return visitor.information();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace Operationoutcome_issueSeverity {
     export type Fatal = "fatal" & {
-        __Fatal: void,
+        __Fatal: void;
     };
     export type Error = "error" & {
-        __Error: void,
+        __Error: void;
     };
     export type Warning = "warning" & {
-        __Warning: void,
+        __Warning: void;
     };
     export type Information = "information" & {
-        __Information: void,
+        __Information: void;
     };
 
     export interface _Visitor<Result> {

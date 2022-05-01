@@ -8,25 +8,32 @@ export const AddressType = {
     Physical: "physical" as AddressType.Physical,
     Both: "both" as AddressType.Both,
 
-    _visit: <Result>(value: AddressType, visitor: AddressType._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: AddressType,
+        visitor: AddressType._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case AddressType.Postal: return visitor.postal();
-            case AddressType.Physical: return visitor.physical();
-            case AddressType.Both: return visitor.both();
-            default: return visitor._unknown();
+            case AddressType.Postal:
+                return visitor.postal();
+            case AddressType.Physical:
+                return visitor.physical();
+            case AddressType.Both:
+                return visitor.both();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace AddressType {
     export type Postal = "postal" & {
-        __Postal: void,
+        __Postal: void;
     };
     export type Physical = "physical" & {
-        __Physical: void,
+        __Physical: void;
     };
     export type Both = "both" & {
-        __Both: void,
+        __Both: void;
     };
 
     export interface _Visitor<Result> {

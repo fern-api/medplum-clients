@@ -25,12 +25,21 @@ export interface ObservationDefinition {
     category: CodeableConcept[] | null | undefined;
     code: CodeableConcept;
     identifier: Identifier[] | null | undefined;
-    permittedDataType: ObservationdefinitionPermitteddatatypeItem[] | null | undefined;
+    permittedDataType:
+        | ObservationdefinitionPermitteddatatypeItem[]
+        | null
+        | undefined;
     multipleResultsAllowed: boolean | null | undefined;
     method: CodeableConcept | null | undefined;
     preferredReportName: string | null | undefined;
-    quantitativeDetails: ObservationDefinition_QuantitativeDetails | null | undefined;
-    qualifiedInterval: ObservationDefinition_QualifiedInterval[] | null | undefined;
+    quantitativeDetails:
+        | ObservationDefinition_QuantitativeDetails
+        | null
+        | undefined;
+    qualifiedInterval:
+        | ObservationDefinition_QualifiedInterval[]
+        | null
+        | undefined;
     validCodedValueSet: Reference | null | undefined;
     normalCodedValueSet: Reference | null | undefined;
     abnormalCodedValueSet: Reference | null | undefined;

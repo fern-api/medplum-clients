@@ -14,37 +14,47 @@ export const EpisodeofcareStatus = {
     Finished: "finished" as EpisodeofcareStatus.Finished,
     Cancelled: "cancelled" as EpisodeofcareStatus.Cancelled,
 
-    _visit: <Result>(value: EpisodeofcareStatus, visitor: EpisodeofcareStatus._Visitor<Result>): Result => {
+    _visit: <Result>(
+        value: EpisodeofcareStatus,
+        visitor: EpisodeofcareStatus._Visitor<Result>
+    ): Result => {
         switch (value) {
-            case EpisodeofcareStatus.Planned: return visitor.planned();
-            case EpisodeofcareStatus.Waitlist: return visitor.waitlist();
-            case EpisodeofcareStatus.Active: return visitor.active();
-            case EpisodeofcareStatus.Onhold: return visitor.onhold();
-            case EpisodeofcareStatus.Finished: return visitor.finished();
-            case EpisodeofcareStatus.Cancelled: return visitor.cancelled();
-            default: return visitor._unknown();
+            case EpisodeofcareStatus.Planned:
+                return visitor.planned();
+            case EpisodeofcareStatus.Waitlist:
+                return visitor.waitlist();
+            case EpisodeofcareStatus.Active:
+                return visitor.active();
+            case EpisodeofcareStatus.Onhold:
+                return visitor.onhold();
+            case EpisodeofcareStatus.Finished:
+                return visitor.finished();
+            case EpisodeofcareStatus.Cancelled:
+                return visitor.cancelled();
+            default:
+                return visitor._unknown();
         }
     },
 };
 
 export declare namespace EpisodeofcareStatus {
     export type Planned = "planned" & {
-        __Planned: void,
+        __Planned: void;
     };
     export type Waitlist = "waitlist" & {
-        __Waitlist: void,
+        __Waitlist: void;
     };
     export type Active = "active" & {
-        __Active: void,
+        __Active: void;
     };
     export type Onhold = "onhold" & {
-        __Onhold: void,
+        __Onhold: void;
     };
     export type Finished = "finished" & {
-        __Finished: void,
+        __Finished: void;
     };
     export type Cancelled = "cancelled" & {
-        __Cancelled: void,
+        __Cancelled: void;
     };
 
     export interface _Visitor<Result> {
