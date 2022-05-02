@@ -1,0 +1,46 @@
+import { Attachment } from "./Attachment";
+import { code } from "./code";
+import { CodeableConcept } from "./CodeableConcept";
+import { DiagnosticreportStatus } from "./DiagnosticreportStatus";
+import { DiagnosticReport_Media } from "./DiagnosticReport_Media";
+import { Extension } from "./Extension";
+import { id } from "./id";
+import { Identifier } from "./Identifier";
+import { instant } from "./instant";
+import { Meta } from "./Meta";
+import { Narrative } from "./Narrative";
+import { Period } from "./Period";
+import { Reference } from "./Reference";
+import { ResourceList } from "./ResourceList";
+import { uri } from "./uri";
+
+export interface DiagnosticReport {
+    resourceType: string;
+    id: id | null | undefined;
+    meta: Meta | null | undefined;
+    implicitRules: uri | null | undefined;
+    language: code | null | undefined;
+    text: Narrative | null | undefined;
+    contained: ResourceList[] | null | undefined;
+    extension: Extension[] | null | undefined;
+    modifierExtension: Extension[] | null | undefined;
+    identifier: Identifier[] | null | undefined;
+    basedOn: Reference[] | null | undefined;
+    status: DiagnosticreportStatus | null | undefined;
+    category: CodeableConcept[] | null | undefined;
+    code: CodeableConcept;
+    subject: Reference | null | undefined;
+    encounter: Reference | null | undefined;
+    effectiveDateTime: string | null | undefined;
+    effectivePeriod: Period | null | undefined;
+    issued: instant | null | undefined;
+    performer: Reference[] | null | undefined;
+    resultsInterpreter: Reference[] | null | undefined;
+    specimen: Reference[] | null | undefined;
+    result: Reference[] | null | undefined;
+    imagingStudy: Reference[] | null | undefined;
+    media: DiagnosticReport_Media[] | null | undefined;
+    conclusion: string | null | undefined;
+    conclusionCode: CodeableConcept[] | null | undefined;
+    presentedForm: Attachment[] | null | undefined;
+}

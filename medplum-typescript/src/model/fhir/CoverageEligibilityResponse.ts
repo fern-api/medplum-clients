@@ -1,0 +1,44 @@
+import { code } from "./code";
+import { CodeableConcept } from "./CodeableConcept";
+import { CoverageeligibilityresponseOutcome } from "./CoverageeligibilityresponseOutcome";
+import { CoverageeligibilityresponsePurposeItem } from "./CoverageeligibilityresponsePurposeItem";
+import { CoverageEligibilityResponse_Error } from "./CoverageEligibilityResponse_Error";
+import { CoverageEligibilityResponse_Insurance } from "./CoverageEligibilityResponse_Insurance";
+import { dateTime } from "./dateTime";
+import { Extension } from "./Extension";
+import { id } from "./id";
+import { Identifier } from "./Identifier";
+import { Meta } from "./Meta";
+import { Narrative } from "./Narrative";
+import { Period } from "./Period";
+import { Reference } from "./Reference";
+import { ResourceList } from "./ResourceList";
+import { uri } from "./uri";
+
+export interface CoverageEligibilityResponse {
+    resourceType: string;
+    id: id | null | undefined;
+    meta: Meta | null | undefined;
+    implicitRules: uri | null | undefined;
+    language: code | null | undefined;
+    text: Narrative | null | undefined;
+    contained: ResourceList[] | null | undefined;
+    extension: Extension[] | null | undefined;
+    modifierExtension: Extension[] | null | undefined;
+    identifier: Identifier[] | null | undefined;
+    status: code | null | undefined;
+    purpose: CoverageeligibilityresponsePurposeItem[] | null | undefined;
+    patient: Reference;
+    servicedDate: string | null | undefined;
+    servicedPeriod: Period | null | undefined;
+    created: dateTime | null | undefined;
+    requestor: Reference | null | undefined;
+    request: Reference;
+    outcome: CoverageeligibilityresponseOutcome | null | undefined;
+    disposition: string | null | undefined;
+    insurer: Reference;
+    insurance: CoverageEligibilityResponse_Insurance[] | null | undefined;
+    preAuthRef: string | null | undefined;
+    form: CodeableConcept | null | undefined;
+    error: CoverageEligibilityResponse_Error[] | null | undefined;
+}

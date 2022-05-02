@@ -1,0 +1,46 @@
+import { Address } from "./Address";
+import { code } from "./code";
+import { CodeableConcept } from "./CodeableConcept";
+import { Coding } from "./Coding";
+import { ContactPoint } from "./ContactPoint";
+import { Extension } from "./Extension";
+import { id } from "./id";
+import { Identifier } from "./Identifier";
+import { LocationMode } from "./LocationMode";
+import { LocationStatus } from "./LocationStatus";
+import { Location_HoursOfOperation } from "./Location_HoursOfOperation";
+import { Location_Position } from "./Location_Position";
+import { Meta } from "./Meta";
+import { Narrative } from "./Narrative";
+import { Reference } from "./Reference";
+import { ResourceList } from "./ResourceList";
+import { uri } from "./uri";
+
+export interface Location {
+    resourceType: string;
+    id: id | null | undefined;
+    meta: Meta | null | undefined;
+    implicitRules: uri | null | undefined;
+    language: code | null | undefined;
+    text: Narrative | null | undefined;
+    contained: ResourceList[] | null | undefined;
+    extension: Extension[] | null | undefined;
+    modifierExtension: Extension[] | null | undefined;
+    identifier: Identifier[] | null | undefined;
+    status: LocationStatus | null | undefined;
+    operationalStatus: Coding | null | undefined;
+    name: string | null | undefined;
+    alias: string[] | null | undefined;
+    description: string | null | undefined;
+    mode: LocationMode | null | undefined;
+    type: CodeableConcept[] | null | undefined;
+    telecom: ContactPoint[] | null | undefined;
+    address: Address | null | undefined;
+    physicalType: CodeableConcept | null | undefined;
+    position: Location_Position | null | undefined;
+    managingOrganization: Reference | null | undefined;
+    partOf: Reference | null | undefined;
+    hoursOfOperation: Location_HoursOfOperation[] | null | undefined;
+    availabilityExceptions: string | null | undefined;
+    endpoint: Reference[] | null | undefined;
+}
