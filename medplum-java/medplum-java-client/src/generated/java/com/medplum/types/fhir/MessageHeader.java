@@ -1,0 +1,65 @@
+package com.medplum.types.fhir;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.medplum.StagedBuilderStyle;
+import java.lang.String;
+import java.util.List;
+import java.util.Optional;
+import org.immutables.value.Value;
+
+@Value.Immutable
+@StagedBuilderStyle
+@JsonDeserialize(
+    as = ImmutableMessageHeader.class
+)
+@JsonIgnoreProperties(
+    ignoreUnknown = true
+)
+public interface MessageHeader {
+  Optional<MessageHeader_Response> response();
+
+  Optional<Meta> meta();
+
+  Optional<Canonical> definition();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  String resourceType();
+
+  Optional<Narrative> text();
+
+  Optional<Coding> eventCoding();
+
+  Optional<List<MessageHeader_Destination>> destination();
+
+  Optional<Code> language();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> eventUri();
+
+  Optional<Reference> enterer();
+
+  Optional<Reference> author();
+
+  Optional<List<Reference>> focus();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> reason();
+
+  Optional<Reference> responsible();
+
+  Optional<Reference> sender();
+
+  MessageHeader_Source source();
+
+  Optional<Id> id();
+
+  static ImmutableMessageHeader.ResourceTypeBuildStage builder() {
+    return ImmutableMessageHeader.builder();
+  }
+}
