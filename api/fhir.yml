@@ -177,11 +177,11 @@ types:
   uuid: string
   xhtml: string
   Element:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
   Extension:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       url: optional<uri>
@@ -242,13 +242,13 @@ types:
       - additional
       - empty
   Narrative:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       status: optional<NarrativeStatus>
       div: xhtml
   Annotation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       authorReference: optional<Reference>
@@ -256,7 +256,7 @@ types:
       time: optional<dateTime>
       text: optional<markdown>
   Attachment:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       contentType: optional<code>
@@ -275,7 +275,7 @@ types:
       - secondary
       - old
   Identifier:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       use: optional<IdentifierUse>
@@ -285,13 +285,13 @@ types:
       period: optional<Period>
       assigner: optional<Reference>
   CodeableConcept:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       coding: optional<list<Coding>>
       text: optional<string>
   Coding:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       system: optional<uri>
@@ -308,7 +308,7 @@ types:
       # - '>='
       # - '>'
   Quantity:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       value: optional<decimal>
@@ -325,7 +325,7 @@ types:
       # - '>='
       # - '>'
   Duration:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       value: optional<decimal>
@@ -341,7 +341,7 @@ types:
       # - ">="
       # - ">"
   Distance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       value: optional<decimal>
@@ -357,7 +357,7 @@ types:
       # - ">="
       # - ">"
   Count:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       value: optional<decimal>
@@ -366,7 +366,7 @@ types:
       system: optional<uri>
       code: optional<code>
   Money:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       value: optional<decimal>
@@ -379,7 +379,7 @@ types:
       # - ">="
       # - ">"
   Age:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       value: optional<decimal>
@@ -388,25 +388,25 @@ types:
       system: optional<uri>
       code: optional<code>
   Range:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       low: optional<Quantity>
       high: optional<Quantity>
   Period:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       start: optional<dateTime>
       end: optional<dateTime>
   Ratio:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       numerator: optional<Quantity>
       denominator: optional<Quantity>
   Reference:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       reference: optional<string>
@@ -415,7 +415,7 @@ types:
       display: optional<string>
       resource: optional<ResourceList>
   SampledData:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       origin: Quantity
@@ -426,7 +426,7 @@ types:
       dimensions: optional<positiveInt>
       data: optional<string>
   Signature:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       type: list<Coding>
@@ -446,7 +446,7 @@ types:
       - old
       - maiden
   HumanName:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       use: optional<HumannameUse>
@@ -469,7 +469,7 @@ types:
       - physical
       - both
   Address:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       use: optional<AddressUse>
@@ -499,7 +499,7 @@ types:
       - old
       - mobile
   ContactPoint:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       system: optional<ContactpointSystem>
@@ -508,7 +508,7 @@ types:
       rank: optional<positiveInt>
       period: optional<Period>
   Timing:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -562,7 +562,7 @@ types:
       - PCD
       - PCV
   Timing_Repeat:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -584,7 +584,7 @@ types:
       when: optional<list<Timing_repeatWhenItem>>
       offset: optional<unsignedInt>
   Meta:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       versionId: optional<id>
@@ -596,7 +596,7 @@ types:
       project: optional<uri>
       author: optional<Reference>
   ContactDetail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       name: optional<string>
@@ -608,14 +608,14 @@ types:
       - reviewer
       - endorser
   Contributor:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       type: optional<ContributorType>
       name: optional<string>
       contact: optional<list<ContactDetail>>
   DataRequirement:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       type: optional<code>
@@ -628,7 +628,7 @@ types:
       limit: optional<positiveInt>
       sort: optional<list<DataRequirement_Sort>>
   DataRequirement_CodeFilter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -637,7 +637,7 @@ types:
       valueSet: optional<canonical>
       code: optional<list<Coding>>
   DataRequirement_DateFilter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -651,14 +651,14 @@ types:
       - ascending
       - descending
   DataRequirement_Sort:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       path: optional<string>
       direction: optional<Datarequirement_sortDirection>
   ParameterDefinition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       name: optional<code>
@@ -679,7 +679,7 @@ types:
       # - depends-on
       # - composed-of
   RelatedArtifact:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       type: optional<RelatedartifactType>
@@ -700,7 +700,7 @@ types:
       # - data-accessed
       # - data-access-ended
   TriggerDefinition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       type: optional<TriggerdefinitionType>
@@ -712,7 +712,7 @@ types:
       data: optional<list<DataRequirement>>
       condition: optional<Expression>
   UsageContext:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       code: Coding
@@ -721,7 +721,7 @@ types:
       valueRange: optional<Range>
       valueReference: optional<Reference>
   Dosage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -740,7 +740,7 @@ types:
       maxDosePerAdministration: optional<Quantity>
       maxDosePerLifetime: optional<Quantity>
   Dosage_DoseAndRate:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -751,7 +751,7 @@ types:
       rateRange: optional<Range>
       rateQuantity: optional<Quantity>
   Population:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -761,7 +761,7 @@ types:
       race: optional<CodeableConcept>
       physiologicalCondition: optional<CodeableConcept>
   ProductShelfLife:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -770,7 +770,7 @@ types:
       period: Quantity
       specialPrecautionsForStorage: optional<list<CodeableConcept>>
   ProdCharacteristic:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -786,7 +786,7 @@ types:
       image: optional<list<Attachment>>
       scoring: optional<CodeableConcept>
   MarketingStatus:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -796,7 +796,7 @@ types:
       dateRange: Period
       restoreDate: optional<dateTime>
   SubstanceAmount:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -807,7 +807,7 @@ types:
       amountText: optional<string>
       referenceRange: optional<SubstanceAmount_ReferenceRange>
   SubstanceAmount_ReferenceRange:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -820,7 +820,7 @@ types:
       # - text/fhirpath
       # - application/x-fhir-query
   Expression:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       description: optional<string>
@@ -836,7 +836,7 @@ types:
       - cdaText
       - xhtml
   ElementDefinition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1043,7 +1043,7 @@ types:
       - open
       - openAtEnd
   ElementDefinition_Slicing:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1059,14 +1059,14 @@ types:
       - type
       - profile
   ElementDefinition_Discriminator:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<Elementdefinition_discriminatorType>
       path: optional<string>
   ElementDefinition_Base:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1084,7 +1084,7 @@ types:
       - independent
       - specific
   ElementDefinition_Type:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1094,7 +1094,7 @@ types:
       aggregation: optional<list<Elementdefinition_typeAggregationItem>>
       versioning: optional<Elementdefinition_typeVersioning>
   ElementDefinition_Example:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1154,7 +1154,7 @@ types:
       - error
       - warning
   ElementDefinition_Constraint:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1172,7 +1172,7 @@ types:
       - preferred
       - example
   ElementDefinition_Binding:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1180,7 +1180,7 @@ types:
       description: optional<string>
       valueSet: optional<canonical>
   ElementDefinition_Mapping:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1196,7 +1196,7 @@ types:
       # - on-hold
       # - unknown
   Account:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1218,14 +1218,14 @@ types:
       guarantor: optional<list<Account_Guarantor>>
       partOf: optional<Reference>
   Account_Coverage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       coverage: Reference
       priority: optional<positiveInt>
   Account_Guarantor:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1239,7 +1239,7 @@ types:
       - retired
       # - unknown
   ActivityDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1303,14 +1303,14 @@ types:
       transform: optional<canonical>
       dynamicValue: optional<list<ActivityDefinition_DynamicValue>>
   ActivityDefinition_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<code>
       role: optional<CodeableConcept>
   ActivityDefinition_DynamicValue:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1321,7 +1321,7 @@ types:
       - actual
       - potential
   AdverseEvent:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1352,14 +1352,14 @@ types:
       referenceDocument: optional<list<Reference>>
       study: optional<list<Reference>>
   AdverseEvent_SuspectEntity:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       instance: Reference
       causality: optional<list<AdverseEvent_Causality>>
   AdverseEvent_Causality:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1383,7 +1383,7 @@ types:
       - high
       # - unable-to-assess
   AllergyIntolerance:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1419,7 +1419,7 @@ types:
       - moderate
       - severe
   AllergyIntolerance_Reaction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1443,7 +1443,7 @@ types:
       # - checked-in
       - waitlist
   Appointment:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1487,7 +1487,7 @@ types:
       - tentative
       # - needs-action
   Appointment_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1497,7 +1497,7 @@ types:
       status: optional<Appointment_participantStatus>
       period: optional<Period>
   AppointmentResponse:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1530,7 +1530,7 @@ types:
       # - "8"
       # - "12"
   AuditEvent:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1552,7 +1552,7 @@ types:
       source: AuditEvent_Source
       entity: optional<list<AuditEvent_Entity>>
   AuditEvent_Agent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1576,14 +1576,14 @@ types:
       # - "4"
       # - "5"
   AuditEvent_Network:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       address: optional<string>
       type: optional<Auditevent_networkType>
   AuditEvent_Source:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1591,7 +1591,7 @@ types:
       observer: Reference
       type: optional<list<Coding>>
   AuditEvent_Entity:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1605,7 +1605,7 @@ types:
       query: optional<base64Binary>
       detail: optional<list<AuditEvent_Detail>>
   AuditEvent_Detail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1613,7 +1613,7 @@ types:
       valueString: optional<string>
       valueBase64Binary: optional<string>
   Basic:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1629,7 +1629,7 @@ types:
       created: optional<date>
       author: optional<Reference>
   Binary:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1650,7 +1650,7 @@ types:
       - available
       - unavailable
   BiologicallyDerivedProduct:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1672,7 +1672,7 @@ types:
       manipulation: optional<BiologicallyDerivedProduct_Manipulation>
       storage: optional<list<BiologicallyDerivedProduct_Storage>>
   BiologicallyDerivedProduct_Collection:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1681,7 +1681,7 @@ types:
       collectedDateTime: optional<string>
       collectedPeriod: optional<Period>
   BiologicallyDerivedProduct_Processing:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1691,7 +1691,7 @@ types:
       timeDateTime: optional<string>
       timePeriod: optional<Period>
   BiologicallyDerivedProduct_Manipulation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1704,7 +1704,7 @@ types:
       - celsius
       - kelvin
   BiologicallyDerivedProduct_Storage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1713,7 +1713,7 @@ types:
       scale: optional<Biologicallyderivedproduct_storageScale>
       duration: optional<Period>
   BodyStructure:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1743,7 +1743,7 @@ types:
       - searchset
       - collection
   Bundle:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1757,14 +1757,14 @@ types:
       entry: optional<list<Bundle_Entry>>
       signature: optional<Signature>
   Bundle_Link:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       relation: optional<string>
       url: optional<uri>
   Bundle_Entry:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1780,7 +1780,7 @@ types:
       - include
       - outcome
   Bundle_Search:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1795,7 +1795,7 @@ types:
       - DELETE
       - PATCH
   Bundle_Request:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1806,7 +1806,7 @@ types:
       ifMatch: optional<string>
       ifNoneExist: optional<string>
   Bundle_Response:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1852,7 +1852,7 @@ types:
       # - 4.0.0
       # - 4.0.1
   CapabilityStatement:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -1889,7 +1889,7 @@ types:
       messaging: optional<list<CapabilityStatement_Messaging>>
       document: optional<list<CapabilityStatement_Document>>
   CapabilityStatement_Software:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1897,7 +1897,7 @@ types:
       version: optional<string>
       releaseDate: optional<dateTime>
   CapabilityStatement_Implementation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1909,7 +1909,7 @@ types:
       - client
       - server
   CapabilityStatement_Rest:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1922,7 +1922,7 @@ types:
       operation: optional<list<CapabilityStatement_Operation>>
       compartment: optional<list<canonical>>
   CapabilityStatement_Security:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1954,7 +1954,7 @@ types:
       - enforced
       - local
   CapabilityStatement_Resource:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -1987,7 +1987,7 @@ types:
       - create
       # - search-type
   CapabilityStatement_Interaction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2005,7 +2005,7 @@ types:
       - uri
       - special
   CapabilityStatement_SearchParam:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2014,7 +2014,7 @@ types:
       type: optional<Capabilitystatement_searchparamType>
       documentation: optional<markdown>
   CapabilityStatement_Operation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2028,14 +2028,14 @@ types:
       # - search-system
       # - history-system
   CapabilityStatement_Interaction1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: optional<Capabilitystatement_interaction1Code>
       documentation: optional<markdown>
   CapabilityStatement_Messaging:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2044,7 +2044,7 @@ types:
       documentation: optional<markdown>
       supportedMessage: optional<list<CapabilityStatement_SupportedMessage>>
   CapabilityStatement_Endpoint:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2055,7 +2055,7 @@ types:
       - sender
       - receiver
   CapabilityStatement_SupportedMessage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2066,7 +2066,7 @@ types:
       - producer
       - consumer
   CapabilityStatement_Document:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2074,7 +2074,7 @@ types:
       documentation: optional<markdown>
       profile: canonical
   CarePlan:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2108,7 +2108,7 @@ types:
       activity: optional<list<CarePlan_Activity>>
       note: optional<list<Annotation>>
   CarePlan_Activity:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2129,7 +2129,7 @@ types:
       # - unknown
       # - entered-in-error
   CarePlan_Detail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2161,7 +2161,7 @@ types:
       - inactive
       # - entered-in-error
   CareTeam:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2185,7 +2185,7 @@ types:
       telecom: optional<list<ContactPoint>>
       note: optional<list<Annotation>>
   CareTeam_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2200,7 +2200,7 @@ types:
       - retired
       # - unknown
   CatalogEntry:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2228,7 +2228,7 @@ types:
       - triggers
       # - is-replaced-by
   CatalogEntry_RelatedEntry:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2244,7 +2244,7 @@ types:
       # - entered-in-error
       # - unknown
   ChargeItem:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2284,7 +2284,7 @@ types:
       note: optional<list<Annotation>>
       supportingInformation: optional<list<Reference>>
   ChargeItem_Performer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2297,7 +2297,7 @@ types:
       - retired
       # - unknown
   ChargeItemDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2331,7 +2331,7 @@ types:
       applicability: optional<list<ChargeItemDefinition_Applicability>>
       propertyGroup: optional<list<ChargeItemDefinition_PropertyGroup>>
   ChargeItemDefinition_Applicability:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2339,14 +2339,14 @@ types:
       language: optional<string>
       expression: optional<string>
   ChargeItemDefinition_PropertyGroup:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       applicability: optional<list<ChargeItemDefinition_Applicability>>
       priceComponent: optional<list<ChargeItemDefinition_PriceComponent>>
   ChargeItemDefinition_PriceComponent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2360,7 +2360,7 @@ types:
       - preauthorization
       - predetermination
   Claim:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2398,7 +2398,7 @@ types:
       item: optional<list<Claim_Item>>
       total: optional<Money>
   Claim_Related:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2406,14 +2406,14 @@ types:
       relationship: optional<CodeableConcept>
       reference: optional<Identifier>
   Claim_Payee:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       party: optional<Reference>
   Claim_CareTeam:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2423,7 +2423,7 @@ types:
       role: optional<CodeableConcept>
       qualification: optional<CodeableConcept>
   Claim_SupportingInfo:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2439,7 +2439,7 @@ types:
       valueReference: optional<Reference>
       reason: optional<CodeableConcept>
   Claim_Diagnosis:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2450,7 +2450,7 @@ types:
       onAdmission: optional<CodeableConcept>
       packageCode: optional<CodeableConcept>
   Claim_Procedure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2461,7 +2461,7 @@ types:
       procedureReference: optional<Reference>
       udi: optional<list<Reference>>
   Claim_Insurance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2473,7 +2473,7 @@ types:
       preAuthRef: optional<list<string>>
       claimResponse: optional<Reference>
   Claim_Accident:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2482,7 +2482,7 @@ types:
       locationAddress: optional<Address>
       locationReference: optional<Reference>
   Claim_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2511,7 +2511,7 @@ types:
       encounter: optional<list<Reference>>
       detail: optional<list<Claim_Detail>>
   Claim_Detail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2528,7 +2528,7 @@ types:
       udi: optional<list<Reference>>
       subDetail: optional<list<Claim_SubDetail>>
   Claim_SubDetail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2544,7 +2544,7 @@ types:
       net: optional<Money>
       udi: optional<list<Reference>>
   ClaimResponse:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2582,7 +2582,7 @@ types:
       insurance: optional<list<ClaimResponse_Insurance>>
       error: optional<list<ClaimResponse_Error>>
   ClaimResponse_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2591,7 +2591,7 @@ types:
       adjudication: list<ClaimResponse_Adjudication>
       detail: optional<list<ClaimResponse_Detail>>
   ClaimResponse_Adjudication:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2600,7 +2600,7 @@ types:
       amount: optional<Money>
       value: optional<decimal>
   ClaimResponse_Detail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2609,7 +2609,7 @@ types:
       adjudication: list<ClaimResponse_Adjudication>
       subDetail: optional<list<ClaimResponse_SubDetail>>
   ClaimResponse_SubDetail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2617,7 +2617,7 @@ types:
       noteNumber: optional<list<positiveInt>>
       adjudication: optional<list<ClaimResponse_Adjudication>>
   ClaimResponse_AddItem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2643,7 +2643,7 @@ types:
       adjudication: list<ClaimResponse_Adjudication>
       detail: optional<list<ClaimResponse_Detail1>>
   ClaimResponse_Detail1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2657,7 +2657,7 @@ types:
       adjudication: list<ClaimResponse_Adjudication>
       subDetail: optional<list<ClaimResponse_SubDetail1>>
   ClaimResponse_SubDetail1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2670,14 +2670,14 @@ types:
       noteNumber: optional<list<positiveInt>>
       adjudication: list<ClaimResponse_Adjudication>
   ClaimResponse_Total:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       category: CodeableConcept
       amount: Money
   ClaimResponse_Payment:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2693,7 +2693,7 @@ types:
       - print
       - printoper
   ClaimResponse_ProcessNote:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2702,7 +2702,7 @@ types:
       text: optional<string>
       language: optional<CodeableConcept>
   ClaimResponse_Insurance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2712,7 +2712,7 @@ types:
       businessArrangement: optional<string>
       claimResponse: optional<Reference>
   ClaimResponse_Error:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2721,7 +2721,7 @@ types:
       subDetailSequence: optional<positiveInt>
       code: CodeableConcept
   ClinicalImpression:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2753,14 +2753,14 @@ types:
       supportingInfo: optional<list<Reference>>
       note: optional<list<Annotation>>
   ClinicalImpression_Investigation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: CodeableConcept
       item: optional<list<Reference>>
   ClinicalImpression_Finding:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2788,7 +2788,7 @@ types:
       - complete
       - supplement
   CodeSystem:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2825,7 +2825,7 @@ types:
       property: optional<list<CodeSystem_Property>>
       concept: optional<list<CodeSystem_Concept>>
   CodeSystem_Filter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2843,7 +2843,7 @@ types:
       - dateTime
       - decimal
   CodeSystem_Property:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2852,7 +2852,7 @@ types:
       description: optional<string>
       type: optional<Codesystem_propertyType>
   CodeSystem_Concept:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2863,7 +2863,7 @@ types:
       property: optional<list<CodeSystem_Property1>>
       concept: optional<list<CodeSystem_Concept>>
   CodeSystem_Designation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2871,7 +2871,7 @@ types:
       use: optional<Coding>
       value: optional<string>
   CodeSystem_Property1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2884,7 +2884,7 @@ types:
       valueDateTime: optional<string>
       valueDecimal: optional<double>
   Communication:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2918,7 +2918,7 @@ types:
       payload: optional<list<Communication_Payload>>
       note: optional<list<Annotation>>
   Communication_Payload:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2926,7 +2926,7 @@ types:
       contentAttachment: optional<Attachment>
       contentReference: optional<Reference>
   CommunicationRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -2960,7 +2960,7 @@ types:
       reasonReference: optional<list<Reference>>
       note: optional<list<Annotation>>
   CommunicationRequest_Payload:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -2981,7 +2981,7 @@ types:
       - Practitioner
       - Device
   CompartmentDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3006,7 +3006,7 @@ types:
       search: optional<boolean>
       resource: optional<list<CompartmentDefinition_Resource>>
   CompartmentDefinition_Resource:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3020,7 +3020,7 @@ types:
       - amended
       # - entered-in-error
   Composition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3052,7 +3052,7 @@ types:
       - legal
       - official
   Composition_Attester:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3060,7 +3060,7 @@ types:
       time: optional<dateTime>
       party: optional<Reference>
   Composition_RelatesTo:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3068,7 +3068,7 @@ types:
       targetIdentifier: optional<Identifier>
       targetReference: optional<Reference>
   Composition_Event:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3076,7 +3076,7 @@ types:
       period: optional<Period>
       detail: optional<list<Reference>>
   Composition_Section:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3097,7 +3097,7 @@ types:
       - retired
       # - unknown
   ConceptMap:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3128,7 +3128,7 @@ types:
       targetCanonical: optional<string>
       group: optional<list<ConceptMap_Group>>
   ConceptMap_Group:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3139,7 +3139,7 @@ types:
       element: list<ConceptMap_Element>
       unmapped: optional<ConceptMap_Unmapped>
   ConceptMap_Element:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3159,7 +3159,7 @@ types:
       - unmatched
       - disjoint
   ConceptMap_Target:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3170,7 +3170,7 @@ types:
       dependsOn: optional<list<ConceptMap_DependsOn>>
       product: optional<list<ConceptMap_DependsOn>>
   ConceptMap_DependsOn:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3184,7 +3184,7 @@ types:
       - fixed
       # - other-map
   ConceptMap_Unmapped:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3193,7 +3193,7 @@ types:
       display: optional<string>
       url: optional<canonical>
   Condition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3229,7 +3229,7 @@ types:
       evidence: optional<list<Condition_Evidence>>
       note: optional<list<Annotation>>
   Condition_Stage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3237,7 +3237,7 @@ types:
       assessment: optional<list<Reference>>
       type: optional<CodeableConcept>
   Condition_Evidence:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3252,7 +3252,7 @@ types:
       - inactive
       # - entered-in-error
   Consent:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3277,14 +3277,14 @@ types:
       verification: optional<list<Consent_Verification>>
       provision: optional<Consent_Provision>
   Consent_Policy:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       authority: optional<uri>
       uri: optional<uri>
   Consent_Verification:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3296,7 +3296,7 @@ types:
       - deny
       - permit
   Consent_Provision:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3312,7 +3312,7 @@ types:
       data: optional<list<Consent_Data>>
       provision: optional<list<Consent_Provision>>
   Consent_Actor:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3325,14 +3325,14 @@ types:
       - dependents
       - authoredby
   Consent_Data:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       meaning: optional<Consent_dataMeaning>
       reference: Reference
   Contract:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3378,7 +3378,7 @@ types:
       legallyBindingAttachment: optional<Attachment>
       legallyBindingReference: optional<Reference>
   Contract_ContentDefinition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3389,7 +3389,7 @@ types:
       publicationStatus: optional<code>
       copyright: optional<markdown>
   Contract_Term:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3407,7 +3407,7 @@ types:
       action: optional<list<Contract_Action>>
       group: optional<list<Contract_Term>>
   Contract_SecurityLabel:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3416,7 +3416,7 @@ types:
       category: optional<list<Coding>>
       control: optional<list<Coding>>
   Contract_Offer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3431,14 +3431,14 @@ types:
       linkId: optional<list<string>>
       securityLabelNumber: optional<list<unsignedInt>>
   Contract_Party:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       reference: list<Reference>
       role: CodeableConcept
   Contract_Answer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3455,7 +3455,7 @@ types:
       valueQuantity: optional<Quantity>
       valueReference: optional<Reference>
   Contract_Asset:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3475,7 +3475,7 @@ types:
       securityLabelNumber: optional<list<unsignedInt>>
       valuedItem: optional<list<Contract_ValuedItem>>
   Contract_Context:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3483,7 +3483,7 @@ types:
       code: optional<list<CodeableConcept>>
       text: optional<string>
   Contract_ValuedItem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3503,7 +3503,7 @@ types:
       linkId: optional<list<string>>
       securityLabelNumber: optional<list<unsignedInt>>
   Contract_Action:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3531,14 +3531,14 @@ types:
       note: optional<list<Annotation>>
       securityLabelNumber: optional<list<unsignedInt>>
   Contract_Subject:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       reference: list<Reference>
       role: optional<CodeableConcept>
   Contract_Signer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3546,28 +3546,28 @@ types:
       party: Reference
       signature: list<Signature>
   Contract_Friendly:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       contentAttachment: optional<Attachment>
       contentReference: optional<Reference>
   Contract_Legal:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       contentAttachment: optional<Attachment>
       contentReference: optional<Reference>
   Contract_Rule:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       contentAttachment: optional<Attachment>
       contentReference: optional<Reference>
   Coverage:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3595,7 +3595,7 @@ types:
       subrogation: optional<boolean>
       contract: optional<list<Reference>>
   Coverage_Class:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3603,7 +3603,7 @@ types:
       value: optional<string>
       name: optional<string>
   Coverage_CostToBeneficiary:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3612,7 +3612,7 @@ types:
       valueMoney: optional<Money>
       exception: optional<list<Coverage_Exception>>
   Coverage_Exception:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3625,7 +3625,7 @@ types:
       - discovery
       - validation
   CoverageEligibilityRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3651,7 +3651,7 @@ types:
       insurance: optional<list<CoverageEligibilityRequest_Insurance>>
       item: optional<list<CoverageEligibilityRequest_Item>>
   CoverageEligibilityRequest_SupportingInfo:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3659,7 +3659,7 @@ types:
       information: Reference
       appliesToAll: optional<boolean>
   CoverageEligibilityRequest_Insurance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3667,7 +3667,7 @@ types:
       coverage: Reference
       businessArrangement: optional<string>
   CoverageEligibilityRequest_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3682,7 +3682,7 @@ types:
       diagnosis: optional<list<CoverageEligibilityRequest_Diagnosis>>
       detail: optional<list<Reference>>
   CoverageEligibilityRequest_Diagnosis:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3701,7 +3701,7 @@ types:
       - error
       - partial
   CoverageEligibilityResponse:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3728,7 +3728,7 @@ types:
       form: optional<CodeableConcept>
       error: optional<list<CoverageEligibilityResponse_Error>>
   CoverageEligibilityResponse_Insurance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3737,7 +3737,7 @@ types:
       benefitPeriod: optional<Period>
       item: optional<list<CoverageEligibilityResponse_Item>>
   CoverageEligibilityResponse_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3756,7 +3756,7 @@ types:
       authorizationSupporting: optional<list<CodeableConcept>>
       authorizationUrl: optional<uri>
   CoverageEligibilityResponse_Benefit:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3768,7 +3768,7 @@ types:
       usedString: optional<string>
       usedMoney: optional<Money>
   CoverageEligibilityResponse_Error:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3779,7 +3779,7 @@ types:
       - moderate
       - low
   DetectedIssue:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3803,14 +3803,14 @@ types:
       reference: optional<uri>
       mitigation: optional<list<DetectedIssue_Mitigation>>
   DetectedIssue_Evidence:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: optional<list<CodeableConcept>>
       detail: optional<list<Reference>>
   DetectedIssue_Mitigation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3824,7 +3824,7 @@ types:
       # - entered-in-error
       # - unknown
   Device:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3869,7 +3869,7 @@ types:
       # - self-reported
       # - unknown
   Device_UdiCarrier:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3888,21 +3888,21 @@ types:
       # - model-name
       - other
   Device_DeviceName:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       name: optional<string>
       type: optional<Device_devicenameType>
   Device_Specialization:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       systemType: CodeableConcept
       version: optional<string>
   Device_Version:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3910,7 +3910,7 @@ types:
       component: optional<Identifier>
       value: optional<string>
   Device_Property:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3918,7 +3918,7 @@ types:
       valueQuantity: optional<list<Quantity>>
       valueCode: optional<list<CodeableConcept>>
   DeviceDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -3952,7 +3952,7 @@ types:
       parentDevice: optional<Reference>
       material: optional<list<DeviceDefinition_Material>>
   DeviceDefinition_UdiDeviceIdentifier:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3968,28 +3968,28 @@ types:
       # - model-name
       - other
   DeviceDefinition_DeviceName:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       name: optional<string>
       type: optional<Devicedefinition_devicenameType>
   DeviceDefinition_Specialization:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       systemType: optional<string>
       version: optional<string>
   DeviceDefinition_Capability:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       description: optional<list<CodeableConcept>>
   DeviceDefinition_Property:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -3997,7 +3997,7 @@ types:
       valueQuantity: optional<list<Quantity>>
       valueCode: optional<list<CodeableConcept>>
   DeviceDefinition_Material:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4027,7 +4027,7 @@ types:
       - calculation
       - unspecified
   DeviceMetric:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4060,7 +4060,7 @@ types:
       - calibrated
       - unspecified
   DeviceMetric_Calibration:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4068,7 +4068,7 @@ types:
       state: optional<Devicemetric_calibrationState>
       time: optional<instant>
   DeviceRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4106,7 +4106,7 @@ types:
       note: optional<list<Annotation>>
       relevantHistory: optional<list<Reference>>
   DeviceRequest_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4124,7 +4124,7 @@ types:
       - stopped
       # - on-hold
   DeviceUseStatement:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4162,7 +4162,7 @@ types:
       # - entered-in-error
       # - unknown
   DiagnosticReport:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4192,7 +4192,7 @@ types:
       conclusionCode: optional<list<CodeableConcept>>
       presentedForm: optional<list<Attachment>>
   DiagnosticReport_Media:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4204,7 +4204,7 @@ types:
       - superseded
       # - entered-in-error
   DocumentManifest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4227,7 +4227,7 @@ types:
       content: list<Reference>
       related: optional<list<DocumentManifest_Related>>
   DocumentManifest_Related:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4239,7 +4239,7 @@ types:
       - superseded
       # - entered-in-error
   DocumentReference:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4272,21 +4272,21 @@ types:
       - signs
       - appends
   DocumentReference_RelatesTo:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: optional<Documentreference_relatestoCode>
       target: Reference
   DocumentReference_Content:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       attachment: Attachment
       format: optional<Coding>
   DocumentReference_Context:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4304,7 +4304,7 @@ types:
       - retired
       # - unknown
   EffectEvidenceSynthesis:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4348,7 +4348,7 @@ types:
       effectEstimate: optional<list<EffectEvidenceSynthesis_EffectEstimate>>
       certainty: optional<list<EffectEvidenceSynthesis_Certainty>>
   EffectEvidenceSynthesis_SampleSize:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4360,7 +4360,7 @@ types:
       - exposure
       # - exposure-alternative
   EffectEvidenceSynthesis_ResultsByExposure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4369,7 +4369,7 @@ types:
       variantState: optional<CodeableConcept>
       riskEvidenceSynthesis: Reference
   EffectEvidenceSynthesis_EffectEstimate:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4380,7 +4380,7 @@ types:
       unitOfMeasure: optional<CodeableConcept>
       precisionEstimate: optional<list<EffectEvidenceSynthesis_PrecisionEstimate>>
   EffectEvidenceSynthesis_PrecisionEstimate:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4389,7 +4389,7 @@ types:
       from: optional<decimal>
       to: optional<decimal>
   EffectEvidenceSynthesis_Certainty:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4397,7 +4397,7 @@ types:
       note: optional<list<Annotation>>
       certaintySubcomponent: optional<list<EffectEvidenceSynthesis_CertaintySubcomponent>>
   EffectEvidenceSynthesis_CertaintySubcomponent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4416,7 +4416,7 @@ types:
       # - entered-in-error
       # - unknown
   Encounter:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4461,21 +4461,21 @@ types:
       # - entered-in-error
       # - unknown
   Encounter_StatusHistory:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       status: optional<Encounter_statushistoryStatus>
       period: Period
   Encounter_ClassHistory:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       class: Coding
       period: Period
   Encounter_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4483,7 +4483,7 @@ types:
       period: optional<Period>
       individual: optional<Reference>
   Encounter_Diagnosis:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4491,7 +4491,7 @@ types:
       use: optional<CodeableConcept>
       rank: optional<positiveInt>
   Encounter_Hospitalization:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4511,7 +4511,7 @@ types:
       - reserved
       - completed
   Encounter_Location:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4528,7 +4528,7 @@ types:
       # - entered-in-error
       - test
   Endpoint:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4550,7 +4550,7 @@ types:
       address: optional<url>
       header: optional<list<string>>
   EnrollmentRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4574,7 +4574,7 @@ types:
       - error
       - partial
   EnrollmentResponse:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4602,7 +4602,7 @@ types:
       - cancelled
       # - entered-in-error
   EpisodeOfCare:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4634,14 +4634,14 @@ types:
       - cancelled
       # - entered-in-error
   EpisodeOfCare_StatusHistory:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       status: optional<Episodeofcare_statushistoryStatus>
       period: Period
   EpisodeOfCare_Diagnosis:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4655,7 +4655,7 @@ types:
       - retired
       # - unknown
   EventDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4701,7 +4701,7 @@ types:
       - retired
       # - unknown
   Evidence:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4751,7 +4751,7 @@ types:
       - continuous
       - descriptive
   EvidenceVariable:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4797,7 +4797,7 @@ types:
       # - median-of-mean
       # - median-of-median
   EvidenceVariable_Characteristic:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4823,7 +4823,7 @@ types:
       - retired
       # - unknown
   ExampleScenario:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4855,7 +4855,7 @@ types:
       - person
       - entity
   ExampleScenario_Actor:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4864,7 +4864,7 @@ types:
       name: optional<string>
       description: optional<markdown>
   ExampleScenario_Instance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4875,21 +4875,21 @@ types:
       version: optional<list<ExampleScenario_Version>>
       containedInstance: optional<list<ExampleScenario_ContainedInstance>>
   ExampleScenario_Version:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       versionId: optional<string>
       description: optional<markdown>
   ExampleScenario_ContainedInstance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       resourceId: optional<string>
       versionId: optional<string>
   ExampleScenario_Process:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4899,7 +4899,7 @@ types:
       postConditions: optional<markdown>
       step: optional<list<ExampleScenario_Step>>
   ExampleScenario_Step:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4908,7 +4908,7 @@ types:
       operation: optional<ExampleScenario_Operation>
       alternative: optional<list<ExampleScenario_Alternative>>
   ExampleScenario_Operation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4923,7 +4923,7 @@ types:
       request: optional<ExampleScenario_ContainedInstance>
       response: optional<ExampleScenario_ContainedInstance>
   ExampleScenario_Alternative:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4937,7 +4937,7 @@ types:
       - draft
       # - entered-in-error
   ExplanationOfBenefit:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -4991,7 +4991,7 @@ types:
       benefitPeriod: optional<Period>
       benefitBalance: optional<list<ExplanationOfBenefit_BenefitBalance>>
   ExplanationOfBenefit_Related:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -4999,14 +4999,14 @@ types:
       relationship: optional<CodeableConcept>
       reference: optional<Identifier>
   ExplanationOfBenefit_Payee:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<CodeableConcept>
       party: optional<Reference>
   ExplanationOfBenefit_CareTeam:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5016,7 +5016,7 @@ types:
       role: optional<CodeableConcept>
       qualification: optional<CodeableConcept>
   ExplanationOfBenefit_SupportingInfo:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5032,7 +5032,7 @@ types:
       valueReference: optional<Reference>
       reason: optional<Coding>
   ExplanationOfBenefit_Diagnosis:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5043,7 +5043,7 @@ types:
       onAdmission: optional<CodeableConcept>
       packageCode: optional<CodeableConcept>
   ExplanationOfBenefit_Procedure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5054,7 +5054,7 @@ types:
       procedureReference: optional<Reference>
       udi: optional<list<Reference>>
   ExplanationOfBenefit_Insurance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5062,7 +5062,7 @@ types:
       coverage: Reference
       preAuthRef: optional<list<string>>
   ExplanationOfBenefit_Accident:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5071,7 +5071,7 @@ types:
       locationAddress: optional<Address>
       locationReference: optional<Reference>
   ExplanationOfBenefit_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5102,7 +5102,7 @@ types:
       adjudication: optional<list<ExplanationOfBenefit_Adjudication>>
       detail: optional<list<ExplanationOfBenefit_Detail>>
   ExplanationOfBenefit_Adjudication:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5111,7 +5111,7 @@ types:
       amount: optional<Money>
       value: optional<decimal>
   ExplanationOfBenefit_Detail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5130,7 +5130,7 @@ types:
       adjudication: optional<list<ExplanationOfBenefit_Adjudication>>
       subDetail: optional<list<ExplanationOfBenefit_SubDetail>>
   ExplanationOfBenefit_SubDetail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5148,7 +5148,7 @@ types:
       noteNumber: optional<list<positiveInt>>
       adjudication: optional<list<ExplanationOfBenefit_Adjudication>>
   ExplanationOfBenefit_AddItem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5174,7 +5174,7 @@ types:
       adjudication: optional<list<ExplanationOfBenefit_Adjudication>>
       detail: optional<list<ExplanationOfBenefit_Detail1>>
   ExplanationOfBenefit_Detail1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5188,7 +5188,7 @@ types:
       adjudication: optional<list<ExplanationOfBenefit_Adjudication>>
       subDetail: optional<list<ExplanationOfBenefit_SubDetail1>>
   ExplanationOfBenefit_SubDetail1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5201,14 +5201,14 @@ types:
       noteNumber: optional<list<positiveInt>>
       adjudication: optional<list<ExplanationOfBenefit_Adjudication>>
   ExplanationOfBenefit_Total:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       category: CodeableConcept
       amount: Money
   ExplanationOfBenefit_Payment:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5224,7 +5224,7 @@ types:
       - print
       - printoper
   ExplanationOfBenefit_ProcessNote:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5233,7 +5233,7 @@ types:
       text: optional<string>
       language: optional<CodeableConcept>
   ExplanationOfBenefit_BenefitBalance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5246,7 +5246,7 @@ types:
       term: optional<CodeableConcept>
       financial: optional<list<ExplanationOfBenefit_Financial>>
   ExplanationOfBenefit_Financial:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5263,7 +5263,7 @@ types:
       # - entered-in-error
       # - health-unknown
   FamilyMemberHistory:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5300,7 +5300,7 @@ types:
       note: optional<list<Annotation>>
       condition: optional<list<FamilyMemberHistory_Condition>>
   FamilyMemberHistory_Condition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5318,7 +5318,7 @@ types:
       - inactive
       # - entered-in-error
   Flag:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5348,7 +5348,7 @@ types:
       # - entered-in-error
       - rejected
   Goal:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5376,7 +5376,7 @@ types:
       outcomeCode: optional<list<CodeableConcept>>
       outcomeReference: optional<list<Reference>>
   Goal_Target:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5397,7 +5397,7 @@ types:
       - retired
       # - unknown
   GraphDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5423,7 +5423,7 @@ types:
       profile: optional<canonical>
       link: optional<list<GraphDefinition_Link>>
   GraphDefinition_Link:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5434,7 +5434,7 @@ types:
       description: optional<string>
       target: optional<list<GraphDefinition_Target>>
   GraphDefinition_Target:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5454,7 +5454,7 @@ types:
       - different
       - custom
   GraphDefinition_Compartment:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5472,7 +5472,7 @@ types:
       - medication
       - substance
   Group:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5493,7 +5493,7 @@ types:
       characteristic: optional<list<Group_Characteristic>>
       member: optional<list<Group_Member>>
   Group_Characteristic:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5506,7 +5506,7 @@ types:
       exclude: optional<boolean>
       period: optional<Period>
   Group_Member:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5522,7 +5522,7 @@ types:
       - failure
       # - entered-in-error
   GuidanceResponse:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5550,7 +5550,7 @@ types:
       result: optional<Reference>
       dataRequirement: optional<list<DataRequirement>>
   HealthcareService:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5585,7 +5585,7 @@ types:
       availabilityExceptions: optional<string>
       endpoint: optional<list<Reference>>
   HealthcareService_Eligibility:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5601,7 +5601,7 @@ types:
       - sat
       - sun
   HealthcareService_AvailableTime:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5610,7 +5610,7 @@ types:
       availableStartTime: optional<time>
       availableEndTime: optional<time>
   HealthcareService_NotAvailable:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5624,7 +5624,7 @@ types:
       # - entered-in-error
       # - unknown
   ImagingStudy:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5655,7 +5655,7 @@ types:
       description: optional<string>
       series: optional<list<ImagingStudy_Series>>
   ImagingStudy_Series:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5672,14 +5672,14 @@ types:
       performer: optional<list<ImagingStudy_Performer>>
       instance: optional<list<ImagingStudy_Instance>>
   ImagingStudy_Performer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       function: optional<CodeableConcept>
       actor: Reference
   ImagingStudy_Instance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5688,7 +5688,7 @@ types:
       number: optional<unsignedInt>
       title: optional<string>
   Immunization:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5728,14 +5728,14 @@ types:
       reaction: optional<list<Immunization_Reaction>>
       protocolApplied: optional<list<Immunization_ProtocolApplied>>
   Immunization_Performer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       function: optional<CodeableConcept>
       actor: Reference
   Immunization_Education:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5744,7 +5744,7 @@ types:
       publicationDate: optional<dateTime>
       presentationDate: optional<dateTime>
   Immunization_Reaction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5752,7 +5752,7 @@ types:
       detail: optional<Reference>
       reported: optional<boolean>
   Immunization_ProtocolApplied:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5764,7 +5764,7 @@ types:
       seriesDosesPositiveInt: optional<double>
       seriesDosesString: optional<string>
   ImmunizationEvaluation:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5790,7 +5790,7 @@ types:
       seriesDosesPositiveInt: optional<double>
       seriesDosesString: optional<string>
   ImmunizationRecommendation:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -5806,7 +5806,7 @@ types:
       authority: optional<Reference>
       recommendation: list<ImmunizationRecommendation_Recommendation>
   ImmunizationRecommendation_Recommendation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -5825,7 +5825,7 @@ types:
       supportingImmunization: optional<list<Reference>>
       supportingPatientInformation: optional<list<Reference>>
   ImmunizationRecommendation_DateCriterion:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6211,7 +6211,7 @@ types:
       # - 4.0.0
       # - 4.0.1
   ImplementationGuide:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6242,7 +6242,7 @@ types:
       definition: optional<ImplementationGuide_Definition>
       manifest: optional<ImplementationGuide_Manifest>
   ImplementationGuide_DependsOn:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6250,14 +6250,14 @@ types:
       packageId: optional<id>
       version: optional<string>
   ImplementationGuide_Global:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<code>
       profile: canonical
   ImplementationGuide_Definition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6267,7 +6267,7 @@ types:
       parameter: optional<list<ImplementationGuide_Parameter>>
       template: optional<list<ImplementationGuide_Template>>
   ImplementationGuide_Grouping:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6299,7 +6299,7 @@ types:
       # - 4.0.0
       # - 4.0.1
   ImplementationGuide_Resource:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6317,7 +6317,7 @@ types:
       - xml
       - generated
   ImplementationGuide_Page:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6339,14 +6339,14 @@ types:
       # - generate-turtle
       # - html-template
   ImplementationGuide_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: optional<Implementationguide_parameterCode>
       value: optional<string>
   ImplementationGuide_Template:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6354,7 +6354,7 @@ types:
       source: optional<string>
       scope: optional<string>
   ImplementationGuide_Manifest:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6364,7 +6364,7 @@ types:
       image: optional<list<string>>
       other: optional<list<string>>
   ImplementationGuide_Resource1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6373,7 +6373,7 @@ types:
       exampleCanonical: optional<string>
       relativePath: optional<url>
   ImplementationGuide_Page1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6387,7 +6387,7 @@ types:
       - retired
       # - unknown
   InsurancePlan:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6412,7 +6412,7 @@ types:
       coverage: optional<list<InsurancePlan_Coverage>>
       plan: optional<list<InsurancePlan_Plan>>
   InsurancePlan_Contact:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6421,7 +6421,7 @@ types:
       telecom: optional<list<ContactPoint>>
       address: optional<Address>
   InsurancePlan_Coverage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6429,7 +6429,7 @@ types:
       network: optional<list<Reference>>
       benefit: list<InsurancePlan_Benefit>
   InsurancePlan_Benefit:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6437,14 +6437,14 @@ types:
       requirement: optional<string>
       limit: optional<list<InsurancePlan_Limit>>
   InsurancePlan_Limit:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       value: optional<Quantity>
       code: optional<CodeableConcept>
   InsurancePlan_Plan:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6455,7 +6455,7 @@ types:
       generalCost: optional<list<InsurancePlan_GeneralCost>>
       specificCost: optional<list<InsurancePlan_SpecificCost>>
   InsurancePlan_GeneralCost:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6464,21 +6464,21 @@ types:
       cost: optional<Money>
       comment: optional<string>
   InsurancePlan_SpecificCost:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       category: CodeableConcept
       benefit: optional<list<InsurancePlan_Benefit1>>
   InsurancePlan_Benefit1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       cost: optional<list<InsurancePlan_Cost>>
   InsurancePlan_Cost:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6494,7 +6494,7 @@ types:
       - cancelled
       # - entered-in-error
   Invoice:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6521,14 +6521,14 @@ types:
       paymentTerms: optional<markdown>
       note: optional<list<Annotation>>
   Invoice_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       role: optional<CodeableConcept>
       actor: Reference
   Invoice_LineItem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6545,7 +6545,7 @@ types:
       - tax
       - informational
   Invoice_PriceComponent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6560,7 +6560,7 @@ types:
       - retired
       # - unknown
   Library:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6603,7 +6603,7 @@ types:
       dataRequirement: optional<list<DataRequirement>>
       content: optional<list<Attachment>>
   Linkage:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6622,7 +6622,7 @@ types:
       - alternate
       - historical
   Linkage_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6639,7 +6639,7 @@ types:
       - snapshot
       - changes
   List:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6663,7 +6663,7 @@ types:
       entry: optional<list<List_Entry>>
       emptyReason: optional<CodeableConcept>
   List_Entry:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6681,7 +6681,7 @@ types:
       - instance
       - kind
   Location:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6709,7 +6709,7 @@ types:
       availabilityExceptions: optional<string>
       endpoint: optional<list<Reference>>
   Location_Position:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6717,7 +6717,7 @@ types:
       latitude: optional<decimal>
       altitude: optional<decimal>
   Location_HoursOfOperation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6732,7 +6732,7 @@ types:
       - retired
       # - unknown
   Measure:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6785,7 +6785,7 @@ types:
       group: optional<list<Measure_Group>>
       supplementalData: optional<list<Measure_SupplementalData>>
   Measure_Group:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6794,7 +6794,7 @@ types:
       population: optional<list<Measure_Population>>
       stratifier: optional<list<Measure_Stratifier>>
   Measure_Population:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6802,7 +6802,7 @@ types:
       description: optional<string>
       criteria: Expression
   Measure_Stratifier:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6811,7 +6811,7 @@ types:
       criteria: optional<Expression>
       component: optional<list<Measure_Component>>
   Measure_Component:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6819,7 +6819,7 @@ types:
       description: optional<string>
       criteria: Expression
   Measure_SupplementalData:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6839,7 +6839,7 @@ types:
       - summary
       # - data-collection
   MeasureReport:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6861,7 +6861,7 @@ types:
       group: optional<list<MeasureReport_Group>>
       evaluatedResource: optional<list<Reference>>
   MeasureReport_Group:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6870,7 +6870,7 @@ types:
       measureScore: optional<Quantity>
       stratifier: optional<list<MeasureReport_Stratifier>>
   MeasureReport_Population:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6878,14 +6878,14 @@ types:
       count: optional<integer>
       subjectResults: optional<Reference>
   MeasureReport_Stratifier:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: optional<list<CodeableConcept>>
       stratum: optional<list<MeasureReport_Stratum>>
   MeasureReport_Stratum:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6894,14 +6894,14 @@ types:
       population: optional<list<MeasureReport_Population1>>
       measureScore: optional<Quantity>
   MeasureReport_Component:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: CodeableConcept
       value: CodeableConcept
   MeasureReport_Population1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6909,7 +6909,7 @@ types:
       count: optional<integer>
       subjectResults: optional<Reference>
   Media:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6943,7 +6943,7 @@ types:
       content: Attachment
       note: optional<list<Annotation>>
   Medication:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -6962,7 +6962,7 @@ types:
       ingredient: optional<list<Medication_Ingredient>>
       batch: optional<Medication_Batch>
   Medication_Ingredient:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -6971,14 +6971,14 @@ types:
       isActive: optional<boolean>
       strength: optional<Ratio>
   Medication_Batch:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       lotNumber: optional<string>
       expirationDate: optional<dateTime>
   MedicationAdministration:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7010,14 +7010,14 @@ types:
       dosage: optional<MedicationAdministration_Dosage>
       eventHistory: optional<list<Reference>>
   MedicationAdministration_Performer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       function: optional<CodeableConcept>
       actor: Reference
   MedicationAdministration_Dosage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7029,7 +7029,7 @@ types:
       rateRatio: optional<Ratio>
       rateQuantity: optional<Quantity>
   MedicationDispense:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7066,14 +7066,14 @@ types:
       detectedIssue: optional<list<Reference>>
       eventHistory: optional<list<Reference>>
   MedicationDispense_Performer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       function: optional<CodeableConcept>
       actor: Reference
   MedicationDispense_Substitution:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7082,7 +7082,7 @@ types:
       reason: optional<list<CodeableConcept>>
       responsibleParty: optional<list<Reference>>
   MedicationKnowledge:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7115,21 +7115,21 @@ types:
       regulatory: optional<list<MedicationKnowledge_Regulatory>>
       kinetics: optional<list<MedicationKnowledge_Kinetics>>
   MedicationKnowledge_RelatedMedicationKnowledge:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       reference: list<Reference>
   MedicationKnowledge_Monograph:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<CodeableConcept>
       source: optional<Reference>
   MedicationKnowledge_Ingredient:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7138,7 +7138,7 @@ types:
       isActive: optional<boolean>
       strength: optional<Ratio>
   MedicationKnowledge_Cost:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7146,14 +7146,14 @@ types:
       source: optional<string>
       cost: Money
   MedicationKnowledge_MonitoringProgram:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<CodeableConcept>
       name: optional<string>
   MedicationKnowledge_AdministrationGuidelines:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7162,14 +7162,14 @@ types:
       indicationReference: optional<Reference>
       patientCharacteristics: optional<list<MedicationKnowledge_PatientCharacteristics>>
   MedicationKnowledge_Dosage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       dosage: list<Dosage>
   MedicationKnowledge_PatientCharacteristics:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7177,21 +7177,21 @@ types:
       characteristicQuantity: optional<Quantity>
       value: optional<list<string>>
   MedicationKnowledge_MedicineClassification:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       classification: optional<list<CodeableConcept>>
   MedicationKnowledge_Packaging:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<CodeableConcept>
       quantity: optional<Quantity>
   MedicationKnowledge_DrugCharacteristic:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7201,7 +7201,7 @@ types:
       valueQuantity: optional<Quantity>
       valueBase64Binary: optional<string>
   MedicationKnowledge_Regulatory:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7210,27 +7210,27 @@ types:
       schedule: optional<list<MedicationKnowledge_Schedule>>
       maxDispense: optional<MedicationKnowledge_MaxDispense>
   MedicationKnowledge_Substitution:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: CodeableConcept
       allowed: optional<boolean>
   MedicationKnowledge_Schedule:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       schedule: CodeableConcept
   MedicationKnowledge_MaxDispense:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       quantity: Quantity
       period: optional<Duration>
   MedicationKnowledge_Kinetics:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7238,7 +7238,7 @@ types:
       lethalDose50: optional<list<Quantity>>
       halfLifePeriod: optional<Duration>
   MedicationRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7283,7 +7283,7 @@ types:
       detectedIssue: optional<list<Reference>>
       eventHistory: optional<list<Reference>>
   MedicationRequest_DispenseRequest:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7295,14 +7295,14 @@ types:
       expectedSupplyDuration: optional<Duration>
       performer: optional<Reference>
   MedicationRequest_InitialFill:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       quantity: optional<Quantity>
       duration: optional<Duration>
   MedicationRequest_Substitution:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7310,7 +7310,7 @@ types:
       allowedCodeableConcept: optional<CodeableConcept>
       reason: optional<CodeableConcept>
   MedicationStatement:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7340,7 +7340,7 @@ types:
       note: optional<list<Annotation>>
       dosage: optional<list<Dosage>>
   MedicinalProduct:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7371,7 +7371,7 @@ types:
       manufacturingBusinessOperation: optional<list<MedicinalProduct_ManufacturingBusinessOperation>>
       specialDesignation: optional<list<MedicinalProduct_SpecialDesignation>>
   MedicinalProduct_Name:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7379,14 +7379,14 @@ types:
       namePart: optional<list<MedicinalProduct_NamePart>>
       countryLanguage: optional<list<MedicinalProduct_CountryLanguage>>
   MedicinalProduct_NamePart:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       part: optional<string>
       type: Coding
   MedicinalProduct_CountryLanguage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7394,7 +7394,7 @@ types:
       jurisdiction: optional<CodeableConcept>
       language: CodeableConcept
   MedicinalProduct_ManufacturingBusinessOperation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7405,7 +7405,7 @@ types:
       manufacturer: optional<list<Reference>>
       regulator: optional<Reference>
   MedicinalProduct_SpecialDesignation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7418,7 +7418,7 @@ types:
       date: optional<dateTime>
       species: optional<CodeableConcept>
   MedicinalProductAuthorization:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7446,7 +7446,7 @@ types:
       regulator: optional<Reference>
       procedure: optional<MedicinalProductAuthorization_Procedure>
   MedicinalProductAuthorization_JurisdictionalAuthorization:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7456,7 +7456,7 @@ types:
       legalStatusOfSupply: optional<CodeableConcept>
       validityPeriod: optional<Period>
   MedicinalProductAuthorization_Procedure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7466,7 +7466,7 @@ types:
       dateDateTime: optional<string>
       application: optional<list<MedicinalProductAuthorization_Procedure>>
   MedicinalProductContraindication:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7484,7 +7484,7 @@ types:
       otherTherapy: optional<list<MedicinalProductContraindication_OtherTherapy>>
       population: optional<list<Population>>
   MedicinalProductContraindication_OtherTherapy:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7492,7 +7492,7 @@ types:
       medicationCodeableConcept: optional<CodeableConcept>
       medicationReference: optional<Reference>
   MedicinalProductIndication:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7512,7 +7512,7 @@ types:
       undesirableEffect: optional<list<Reference>>
       population: optional<list<Population>>
   MedicinalProductIndication_OtherTherapy:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7520,7 +7520,7 @@ types:
       medicationCodeableConcept: optional<CodeableConcept>
       medicationReference: optional<Reference>
   MedicinalProductIngredient:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7537,7 +7537,7 @@ types:
       specifiedSubstance: optional<list<MedicinalProductIngredient_SpecifiedSubstance>>
       substance: optional<MedicinalProductIngredient_Substance>
   MedicinalProductIngredient_SpecifiedSubstance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7546,7 +7546,7 @@ types:
       confidentiality: optional<CodeableConcept>
       strength: optional<list<MedicinalProductIngredient_Strength>>
   MedicinalProductIngredient_Strength:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7558,7 +7558,7 @@ types:
       country: optional<list<CodeableConcept>>
       referenceStrength: optional<list<MedicinalProductIngredient_ReferenceStrength>>
   MedicinalProductIngredient_ReferenceStrength:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7568,14 +7568,14 @@ types:
       measurementPoint: optional<string>
       country: optional<list<CodeableConcept>>
   MedicinalProductIngredient_Substance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: CodeableConcept
       strength: optional<list<MedicinalProductIngredient_Strength>>
   MedicinalProductInteraction:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7593,14 +7593,14 @@ types:
       incidence: optional<CodeableConcept>
       management: optional<CodeableConcept>
   MedicinalProductInteraction_Interactant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       itemReference: optional<Reference>
       itemCodeableConcept: optional<CodeableConcept>
   MedicinalProductManufactured:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7618,7 +7618,7 @@ types:
       physicalCharacteristics: optional<ProdCharacteristic>
       otherCharacteristics: optional<list<CodeableConcept>>
   MedicinalProductPackaged:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7638,14 +7638,14 @@ types:
       batchIdentifier: optional<list<MedicinalProductPackaged_BatchIdentifier>>
       packageItem: list<MedicinalProductPackaged_PackageItem>
   MedicinalProductPackaged_BatchIdentifier:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       outerPackaging: Identifier
       immediatePackaging: optional<Identifier>
   MedicinalProductPackaged_PackageItem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7662,7 +7662,7 @@ types:
       shelfLifeStorage: optional<list<ProductShelfLife>>
       manufacturer: optional<list<Reference>>
   MedicinalProductPharmaceutical:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7680,14 +7680,14 @@ types:
       characteristics: optional<list<MedicinalProductPharmaceutical_Characteristics>>
       routeOfAdministration: list<MedicinalProductPharmaceutical_RouteOfAdministration>
   MedicinalProductPharmaceutical_Characteristics:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: CodeableConcept
       status: optional<CodeableConcept>
   MedicinalProductPharmaceutical_RouteOfAdministration:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7699,14 +7699,14 @@ types:
       maxTreatmentPeriod: optional<Duration>
       targetSpecies: optional<list<MedicinalProductPharmaceutical_TargetSpecies>>
   MedicinalProductPharmaceutical_TargetSpecies:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: CodeableConcept
       withdrawalPeriod: optional<list<MedicinalProductPharmaceutical_WithdrawalPeriod>>
   MedicinalProductPharmaceutical_WithdrawalPeriod:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7714,7 +7714,7 @@ types:
       value: Quantity
       supportingInformation: optional<string>
   MedicinalProductUndesirableEffect:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7747,7 +7747,7 @@ types:
       - never
       # - on-success
   MessageDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7783,7 +7783,7 @@ types:
       allowedResponse: optional<list<MessageDefinition_AllowedResponse>>
       graph: optional<list<canonical>>
   MessageDefinition_Focus:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7792,14 +7792,14 @@ types:
       min: optional<unsignedInt>
       max: optional<string>
   MessageDefinition_AllowedResponse:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       message: canonical
       situation: optional<markdown>
   MessageHeader:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7822,7 +7822,7 @@ types:
       focus: optional<list<Reference>>
       definition: optional<canonical>
   MessageHeader_Destination:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7831,7 +7831,7 @@ types:
       endpoint: optional<url>
       receiver: optional<Reference>
   MessageHeader_Source:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7846,7 +7846,7 @@ types:
       # - transient-error
       # - fatal-error
   MessageHeader_Response:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7859,7 +7859,7 @@ types:
       - dna
       - rna
   MolecularSequence:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -7894,7 +7894,7 @@ types:
       - watson
       - crick
   MolecularSequence_ReferenceSeq:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7908,7 +7908,7 @@ types:
       windowStart: optional<integer>
       windowEnd: optional<integer>
   MolecularSequence_Variant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7924,7 +7924,7 @@ types:
       - snp
       # - unknown
   MolecularSequence_Quality:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7944,7 +7944,7 @@ types:
       fScore: optional<decimal>
       roc: optional<MolecularSequence_Roc>
   MolecularSequence_Roc:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7963,7 +7963,7 @@ types:
       - oauth
       - other
   MolecularSequence_Repository:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7974,7 +7974,7 @@ types:
       variantsetId: optional<string>
       readsetId: optional<string>
   MolecularSequence_StructureVariant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -7984,14 +7984,14 @@ types:
       outer: optional<MolecularSequence_Outer>
       inner: optional<MolecularSequence_Inner>
   MolecularSequence_Outer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       start: optional<integer>
       end: optional<integer>
   MolecularSequence_Inner:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8009,7 +8009,7 @@ types:
       - identifier
       - root
   NamingSystem:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8039,7 +8039,7 @@ types:
       - uri
       - other
   NamingSystem_UniqueId:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8049,7 +8049,7 @@ types:
       comment: optional<string>
       period: optional<Period>
   NutritionOrder:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8077,7 +8077,7 @@ types:
       enteralFormula: optional<NutritionOrder_EnteralFormula>
       note: optional<list<Annotation>>
   NutritionOrder_OralDiet:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8088,21 +8088,21 @@ types:
       fluidConsistencyType: optional<list<CodeableConcept>>
       instruction: optional<string>
   NutritionOrder_Nutrient:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       modifier: optional<CodeableConcept>
       amount: optional<Quantity>
   NutritionOrder_Texture:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       modifier: optional<CodeableConcept>
       foodType: optional<CodeableConcept>
   NutritionOrder_Supplement:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8112,7 +8112,7 @@ types:
       quantity: optional<Quantity>
       instruction: optional<string>
   NutritionOrder_EnteralFormula:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8126,7 +8126,7 @@ types:
       maxVolumeToDeliver: optional<Quantity>
       administrationInstruction: optional<string>
   NutritionOrder_Administration:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8145,7 +8145,7 @@ types:
       # - entered-in-error
       # - unknown
   Observation:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8193,7 +8193,7 @@ types:
       derivedFrom: optional<list<Reference>>
       component: optional<list<Observation_Component>>
   Observation_ReferenceRange:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8204,7 +8204,7 @@ types:
       age: optional<Range>
       text: optional<string>
   Observation_Component:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8237,7 +8237,7 @@ types:
       - dateTime
       - Period
   ObservationDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8261,7 +8261,7 @@ types:
       abnormalCodedValueSet: optional<Reference>
       criticalCodedValueSet: optional<Reference>
   ObservationDefinition_QuantitativeDetails:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8281,7 +8281,7 @@ types:
       - other
       # - unknown
   ObservationDefinition_QualifiedInterval:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8304,7 +8304,7 @@ types:
       - operation
       - query
   OperationDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8356,7 +8356,7 @@ types:
       - uri
       - special
   OperationDefinition_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8378,28 +8378,28 @@ types:
       - preferred
       - example
   OperationDefinition_Binding:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       strength: optional<Operationdefinition_bindingStrength>
       valueSet: canonical
   OperationDefinition_ReferencedFrom:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       source: optional<string>
       sourceId: optional<string>
   OperationDefinition_Overload:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       parameterName: optional<list<string>>
       comment: optional<string>
   OperationOutcome:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8452,7 +8452,7 @@ types:
       - throttled
       - informational
   OperationOutcome_Issue:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8463,7 +8463,7 @@ types:
       location: optional<list<string>>
       expression: optional<list<string>>
   Organization:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8484,7 +8484,7 @@ types:
       contact: optional<list<Organization_Contact>>
       endpoint: optional<list<Reference>>
   Organization_Contact:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8493,7 +8493,7 @@ types:
       telecom: optional<list<ContactPoint>>
       address: optional<Address>
   OrganizationAffiliation:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8516,7 +8516,7 @@ types:
       telecom: optional<list<ContactPoint>>
       endpoint: optional<list<Reference>>
   Parameters:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8524,7 +8524,7 @@ types:
       language: optional<code>
       parameter: optional<list<Parameters_Parameter>>
   Parameters_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8588,7 +8588,7 @@ types:
       - other
       # - unknown
   Patient:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8623,7 +8623,7 @@ types:
       - other
       # - unknown
   Patient_Contact:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8635,7 +8635,7 @@ types:
       organization: optional<Reference>
       period: optional<Period>
   Patient_Communication:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8648,14 +8648,14 @@ types:
       - refer
       - seealso
   Patient_Link:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       other: Reference
       type: optional<Patient_linkType>
   PaymentNotice:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8684,7 +8684,7 @@ types:
       - error
       - partial
   PaymentReconciliation:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8710,7 +8710,7 @@ types:
       formCode: optional<CodeableConcept>
       processNote: optional<list<PaymentReconciliation_ProcessNote>>
   PaymentReconciliation_Detail:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8730,7 +8730,7 @@ types:
       - print
       - printoper
   PaymentReconciliation_ProcessNote:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8743,7 +8743,7 @@ types:
       - other
       # - unknown
   Person:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8770,7 +8770,7 @@ types:
       - level3
       - level4
   Person_Link:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8783,7 +8783,7 @@ types:
       - retired
       # - unknown
   PlanDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8826,7 +8826,7 @@ types:
       goal: optional<list<PlanDefinition_Goal>>
       action: optional<list<PlanDefinition_Action>>
   PlanDefinition_Goal:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8838,7 +8838,7 @@ types:
       documentation: optional<list<RelatedArtifact>>
       target: optional<list<PlanDefinition_Target>>
   PlanDefinition_Target:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8875,7 +8875,7 @@ types:
       - single
       - multiple
   PlanDefinition_Action:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8919,7 +8919,7 @@ types:
       - start
       - stop
   PlanDefinition_Condition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8937,7 +8937,7 @@ types:
       - after
       # - after-end
   PlanDefinition_RelatedAction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8952,14 +8952,14 @@ types:
       # - related-person
       - device
   PlanDefinition_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<Plandefinition_participantType>
       role: optional<CodeableConcept>
   PlanDefinition_DynamicValue:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -8972,7 +8972,7 @@ types:
       - other
       # - unknown
   Practitioner:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -8993,7 +8993,7 @@ types:
       qualification: optional<list<Practitioner_Qualification>>
       communication: optional<list<CodeableConcept>>
   Practitioner_Qualification:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9002,7 +9002,7 @@ types:
       period: optional<Period>
       issuer: optional<Reference>
   PractitionerRole:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9027,7 +9027,7 @@ types:
       availabilityExceptions: optional<string>
       endpoint: optional<list<Reference>>
   PractitionerRole_AvailableTime:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9036,14 +9036,14 @@ types:
       availableStartTime: optional<time>
       availableEndTime: optional<time>
   PractitionerRole_NotAvailable:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       description: optional<string>
       during: optional<Period>
   Procedure:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9086,7 +9086,7 @@ types:
       usedReference: optional<list<Reference>>
       usedCode: optional<list<CodeableConcept>>
   Procedure_Performer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9094,14 +9094,14 @@ types:
       actor: Reference
       onBehalfOf: optional<Reference>
   Procedure_FocalDevice:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       action: optional<CodeableConcept>
       manipulated: Reference
   Provenance:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9123,7 +9123,7 @@ types:
       entity: optional<list<Provenance_Entity>>
       signature: optional<list<Signature>>
   Provenance_Agent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9139,7 +9139,7 @@ types:
       - source
       - removal
   Provenance_Entity:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9153,7 +9153,7 @@ types:
       - retired
       # - unknown
   Questionnaire:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9208,7 +9208,7 @@ types:
       - all
       - any
   Questionnaire_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9238,7 +9238,7 @@ types:
       # - ">="
       # - <=
   Questionnaire_EnableWhen:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9255,7 +9255,7 @@ types:
       answerQuantity: optional<Quantity>
       answerReference: optional<Reference>
   Questionnaire_AnswerOption:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9267,7 +9267,7 @@ types:
       valueReference: optional<Reference>
       initialSelected: optional<boolean>
   Questionnaire_Initial:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9291,7 +9291,7 @@ types:
       # - entered-in-error
       - stopped
   QuestionnaireResponse:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9313,7 +9313,7 @@ types:
       source: optional<Reference>
       item: optional<list<QuestionnaireResponse_Item>>
   QuestionnaireResponse_Item:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9323,7 +9323,7 @@ types:
       answer: optional<list<QuestionnaireResponse_Answer>>
       item: optional<list<QuestionnaireResponse_Item>>
   QuestionnaireResponse_Answer:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9347,7 +9347,7 @@ types:
       - other
       # - unknown
   RelatedPerson:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9370,14 +9370,14 @@ types:
       period: optional<Period>
       communication: optional<list<RelatedPerson_Communication>>
   RelatedPerson_Communication:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       language: CodeableConcept
       preferred: optional<boolean>
   RequestGroup:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9406,7 +9406,7 @@ types:
       note: optional<list<Annotation>>
       action: optional<list<RequestGroup_Action>>
   RequestGroup_Action:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9435,14 +9435,14 @@ types:
       resource: optional<Reference>
       action: optional<list<RequestGroup_Action>>
   RequestGroup_Condition:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       kind: optional<code>
       expression: optional<Expression>
   RequestGroup_RelatedAction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9457,7 +9457,7 @@ types:
       - retired
       # - unknown
   ResearchDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9519,7 +9519,7 @@ types:
       - continuous
       - descriptive
   ResearchElementDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9580,7 +9580,7 @@ types:
       # - median-of-mean
       # - median-of-median
   ResearchElementDefinition_Characteristic:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9621,7 +9621,7 @@ types:
       # - temporarily-closed-to-accrual-and-intervention
       - withdrawn
   ResearchStudy:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9656,7 +9656,7 @@ types:
       arm: optional<list<ResearchStudy_Arm>>
       objective: optional<list<ResearchStudy_Objective>>
   ResearchStudy_Arm:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9664,7 +9664,7 @@ types:
       type: optional<CodeableConcept>
       description: optional<string>
   ResearchStudy_Objective:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9686,7 +9686,7 @@ types:
       - screening
       - withdrawn
   ResearchSubject:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9705,7 +9705,7 @@ types:
       actualArm: optional<string>
       consent: optional<Reference>
   RiskAssessment:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9734,7 +9734,7 @@ types:
       mitigation: optional<string>
       note: optional<list<Annotation>>
   RiskAssessment_Prediction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9753,7 +9753,7 @@ types:
       - retired
       # - unknown
   RiskEvidenceSynthesis:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9795,7 +9795,7 @@ types:
       riskEstimate: optional<RiskEvidenceSynthesis_RiskEstimate>
       certainty: optional<list<RiskEvidenceSynthesis_Certainty>>
   RiskEvidenceSynthesis_SampleSize:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9803,7 +9803,7 @@ types:
       numberOfStudies: optional<integer>
       numberOfParticipants: optional<integer>
   RiskEvidenceSynthesis_RiskEstimate:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9815,7 +9815,7 @@ types:
       numeratorCount: optional<integer>
       precisionEstimate: optional<list<RiskEvidenceSynthesis_PrecisionEstimate>>
   RiskEvidenceSynthesis_PrecisionEstimate:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9824,7 +9824,7 @@ types:
       from: optional<decimal>
       to: optional<decimal>
   RiskEvidenceSynthesis_Certainty:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9832,7 +9832,7 @@ types:
       note: optional<list<Annotation>>
       certaintySubcomponent: optional<list<RiskEvidenceSynthesis_CertaintySubcomponent>>
   RiskEvidenceSynthesis_CertaintySubcomponent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -9840,7 +9840,7 @@ types:
       rating: optional<list<CodeableConcept>>
       note: optional<list<Annotation>>
   Schedule:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9908,7 +9908,7 @@ types:
       - identifier
       - ofType
   SearchParameter:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -9945,14 +9945,14 @@ types:
       chain: optional<list<string>>
       component: optional<list<SearchParameter_Component>>
   SearchParameter_Component:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       definition: canonical
       expression: optional<string>
   ServiceRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10008,7 +10008,7 @@ types:
       # - busy-tentative
       # - entered-in-error
   Slot:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10036,7 +10036,7 @@ types:
       - unsatisfactory
       # - entered-in-error
   Specimen:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10060,7 +10060,7 @@ types:
       condition: optional<list<CodeableConcept>>
       note: optional<list<Annotation>>
   Specimen_Collection:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10074,7 +10074,7 @@ types:
       fastingStatusCodeableConcept: optional<CodeableConcept>
       fastingStatusDuration: optional<Duration>
   Specimen_Processing:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10084,7 +10084,7 @@ types:
       timeDateTime: optional<string>
       timePeriod: optional<Period>
   Specimen_Container:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10096,7 +10096,7 @@ types:
       additiveCodeableConcept: optional<CodeableConcept>
       additiveReference: optional<Reference>
   SpecimenDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10117,7 +10117,7 @@ types:
       - preferred
       - alternate
   SpecimenDefinition_TypeTested:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10130,7 +10130,7 @@ types:
       rejectionCriterion: optional<list<CodeableConcept>>
       handling: optional<list<SpecimenDefinition_Handling>>
   SpecimenDefinition_Container:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10144,14 +10144,14 @@ types:
       additive: optional<list<SpecimenDefinition_Additive>>
       preparation: optional<string>
   SpecimenDefinition_Additive:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       additiveCodeableConcept: optional<CodeableConcept>
       additiveReference: optional<Reference>
   SpecimenDefinition_Handling:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10201,7 +10201,7 @@ types:
       - specialization
       - constraint
   StructureDefinition:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10239,7 +10239,7 @@ types:
       snapshot: optional<StructureDefinition_Snapshot>
       differential: optional<StructureDefinition_Differential>
   StructureDefinition_Mapping:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10253,20 +10253,20 @@ types:
       - element
       - extension
   StructureDefinition_Context:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       type: optional<Structuredefinition_contextType>
       expression: optional<string>
   StructureDefinition_Snapshot:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       element: list<ElementDefinition>
   StructureDefinition_Differential:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10278,7 +10278,7 @@ types:
       - retired
       # - unknown
   StructureMap:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10313,7 +10313,7 @@ types:
       - target
       - produced
   StructureMap_Structure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10327,7 +10327,7 @@ types:
       - types
       # - type-and-types
   StructureMap_Group:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10342,7 +10342,7 @@ types:
       - source
       - target
   StructureMap_Input:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10351,7 +10351,7 @@ types:
       mode: optional<Structuremap_inputMode>
       documentation: optional<string>
   StructureMap_Rule:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10369,7 +10369,7 @@ types:
       # - not_last
       # - only_one
   StructureMap_Source:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10463,7 +10463,7 @@ types:
       - id
       - cp
   StructureMap_Target:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10476,7 +10476,7 @@ types:
       transform: optional<Structuremap_targetTransform>
       parameter: optional<list<StructureMap_Parameter>>
   StructureMap_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10486,7 +10486,7 @@ types:
       valueInteger: optional<double>
       valueDecimal: optional<double>
   StructureMap_Dependent:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10499,7 +10499,7 @@ types:
       - error
       - "off"
   Subscription:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10524,7 +10524,7 @@ types:
       - sms
       - message
   Subscription_Channel:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10538,7 +10538,7 @@ types:
       - inactive
       # - entered-in-error
   Substance:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10556,7 +10556,7 @@ types:
       instance: optional<list<Substance_Instance>>
       ingredient: optional<list<Substance_Ingredient>>
   Substance_Instance:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10564,7 +10564,7 @@ types:
       expiry: optional<dateTime>
       quantity: optional<Quantity>
   Substance_Ingredient:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10572,7 +10572,7 @@ types:
       substanceCodeableConcept: optional<CodeableConcept>
       substanceReference: optional<Reference>
   SubstanceNucleicAcid:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10588,7 +10588,7 @@ types:
       oligoNucleotideType: optional<CodeableConcept>
       subunit: optional<list<SubstanceNucleicAcid_Subunit>>
   SubstanceNucleicAcid_Subunit:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10601,7 +10601,7 @@ types:
       linkage: optional<list<SubstanceNucleicAcid_Linkage>>
       sugar: optional<list<SubstanceNucleicAcid_Sugar>>
   SubstanceNucleicAcid_Linkage:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10610,7 +10610,7 @@ types:
       name: optional<string>
       residueSite: optional<string>
   SubstanceNucleicAcid_Sugar:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10618,7 +10618,7 @@ types:
       name: optional<string>
       residueSite: optional<string>
   SubstancePolymer:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10635,14 +10635,14 @@ types:
       monomerSet: optional<list<SubstancePolymer_MonomerSet>>
       repeat: optional<list<SubstancePolymer_Repeat>>
   SubstancePolymer_MonomerSet:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       ratioType: optional<CodeableConcept>
       startingMaterial: optional<list<SubstancePolymer_StartingMaterial>>
   SubstancePolymer_StartingMaterial:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10651,7 +10651,7 @@ types:
       isDefining: optional<boolean>
       amount: optional<SubstanceAmount>
   SubstancePolymer_Repeat:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10660,7 +10660,7 @@ types:
       repeatUnitAmountType: optional<CodeableConcept>
       repeatUnit: optional<list<SubstancePolymer_RepeatUnit>>
   SubstancePolymer_RepeatUnit:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10670,14 +10670,14 @@ types:
       degreeOfPolymerisation: optional<list<SubstancePolymer_DegreeOfPolymerisation>>
       structuralRepresentation: optional<list<SubstancePolymer_StructuralRepresentation>>
   SubstancePolymer_DegreeOfPolymerisation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       degree: optional<CodeableConcept>
       amount: optional<SubstanceAmount>
   SubstancePolymer_StructuralRepresentation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10685,7 +10685,7 @@ types:
       representation: optional<string>
       attachment: optional<Attachment>
   SubstanceProtein:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10700,7 +10700,7 @@ types:
       disulfideLinkage: optional<list<string>>
       subunit: optional<list<SubstanceProtein_Subunit>>
   SubstanceProtein_Subunit:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10713,7 +10713,7 @@ types:
       cTerminalModificationId: optional<Identifier>
       cTerminalModification: optional<string>
   SubstanceReferenceInformation:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10729,7 +10729,7 @@ types:
       classification: optional<list<SubstanceReferenceInformation_Classification>>
       target: optional<list<SubstanceReferenceInformation_Target>>
   SubstanceReferenceInformation_Gene:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10737,7 +10737,7 @@ types:
       gene: optional<CodeableConcept>
       source: optional<list<Reference>>
   SubstanceReferenceInformation_GeneElement:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10745,7 +10745,7 @@ types:
       element: optional<Identifier>
       source: optional<list<Reference>>
   SubstanceReferenceInformation_Classification:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10754,7 +10754,7 @@ types:
       subtype: optional<list<CodeableConcept>>
       source: optional<list<Reference>>
   SubstanceReferenceInformation_Target:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10769,7 +10769,7 @@ types:
       amountType: optional<CodeableConcept>
       source: optional<list<Reference>>
   SubstanceSourceMaterial:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10793,14 +10793,14 @@ types:
       organism: optional<SubstanceSourceMaterial_Organism>
       partDescription: optional<list<SubstanceSourceMaterial_PartDescription>>
   SubstanceSourceMaterial_FractionDescription:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       fraction: optional<string>
       materialType: optional<CodeableConcept>
   SubstanceSourceMaterial_Organism:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10813,14 +10813,14 @@ types:
       hybrid: optional<SubstanceSourceMaterial_Hybrid>
       organismGeneral: optional<SubstanceSourceMaterial_OrganismGeneral>
   SubstanceSourceMaterial_Author:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       authorType: optional<CodeableConcept>
       authorDescription: optional<string>
   SubstanceSourceMaterial_Hybrid:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10830,7 +10830,7 @@ types:
       paternalOrganismName: optional<string>
       hybridType: optional<CodeableConcept>
   SubstanceSourceMaterial_OrganismGeneral:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10839,14 +10839,14 @@ types:
       class: optional<CodeableConcept>
       order: optional<CodeableConcept>
   SubstanceSourceMaterial_PartDescription:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       part: optional<CodeableConcept>
       partLocation: optional<CodeableConcept>
   SubstanceSpecification:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -10876,7 +10876,7 @@ types:
       protein: optional<Reference>
       sourceMaterial: optional<Reference>
   SubstanceSpecification_Moiety:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10889,7 +10889,7 @@ types:
       amountQuantity: optional<Quantity>
       amountString: optional<string>
   SubstanceSpecification_Property:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10901,7 +10901,7 @@ types:
       amountQuantity: optional<Quantity>
       amountString: optional<string>
   SubstanceSpecification_Structure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10914,7 +10914,7 @@ types:
       source: optional<list<Reference>>
       representation: optional<list<SubstanceSpecification_Representation>>
   SubstanceSpecification_Isotope:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10924,7 +10924,7 @@ types:
       halfLife: optional<Quantity>
       molecularWeight: optional<SubstanceSpecification_MolecularWeight>
   SubstanceSpecification_MolecularWeight:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10932,7 +10932,7 @@ types:
       type: optional<CodeableConcept>
       amount: optional<Quantity>
   SubstanceSpecification_Representation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10940,7 +10940,7 @@ types:
       representation: optional<string>
       attachment: optional<Attachment>
   SubstanceSpecification_Code:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10950,7 +10950,7 @@ types:
       comment: optional<string>
       source: optional<list<Reference>>
   SubstanceSpecification_Name:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10966,7 +10966,7 @@ types:
       official: optional<list<SubstanceSpecification_Official>>
       source: optional<list<Reference>>
   SubstanceSpecification_Official:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10974,7 +10974,7 @@ types:
       status: optional<CodeableConcept>
       date: optional<dateTime>
   SubstanceSpecification_Relationship:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -10996,7 +10996,7 @@ types:
       - abandoned
       # - entered-in-error
   SupplyDelivery:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11020,7 +11020,7 @@ types:
       destination: optional<Reference>
       receiver: optional<list<Reference>>
   SupplyDelivery_SuppliedItem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11037,7 +11037,7 @@ types:
       # - entered-in-error
       # - unknown
   SupplyRequest:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11066,7 +11066,7 @@ types:
       deliverFrom: optional<Reference>
       deliverTo: optional<Reference>
   SupplyRequest_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11101,7 +11101,7 @@ types:
       # - instance-order
       - option
   Task:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11143,7 +11143,7 @@ types:
       input: optional<list<Task_Input>>
       output: optional<list<Task_Output>>
   Task_Restriction:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11151,7 +11151,7 @@ types:
       period: optional<Period>
       recipient: optional<list<Reference>>
   Task_Input:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11207,7 +11207,7 @@ types:
       valueDosage: optional<Dosage>
       valueMeta: optional<Meta>
   Task_Output:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11273,7 +11273,7 @@ types:
       - explicit
       - all
   TerminologyCapabilities:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11308,21 +11308,21 @@ types:
       translation: optional<TerminologyCapabilities_Translation>
       closure: optional<TerminologyCapabilities_Closure>
   TerminologyCapabilities_Software:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       name: optional<string>
       version: optional<string>
   TerminologyCapabilities_Implementation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       description: optional<string>
       url: optional<url>
   TerminologyCapabilities_CodeSystem:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11330,7 +11330,7 @@ types:
       version: optional<list<TerminologyCapabilities_Version>>
       subsumption: optional<boolean>
   TerminologyCapabilities_Version:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11341,14 +11341,14 @@ types:
       filter: optional<list<TerminologyCapabilities_Filter>>
       property: optional<list<code>>
   TerminologyCapabilities_Filter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       code: optional<code>
       op: optional<list<code>>
   TerminologyCapabilities_Expansion:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11358,26 +11358,26 @@ types:
       parameter: optional<list<TerminologyCapabilities_Parameter>>
       textFilter: optional<markdown>
   TerminologyCapabilities_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       name: optional<code>
       documentation: optional<string>
   TerminologyCapabilities_ValidateCode:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       translations: optional<boolean>
   TerminologyCapabilities_Translation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       needsMap: optional<boolean>
   TerminologyCapabilities_Closure:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11395,7 +11395,7 @@ types:
       - fail
       - pending
   TestReport:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11423,7 +11423,7 @@ types:
       - client
       - server
   TestReport_Participant:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11431,13 +11431,13 @@ types:
       uri: optional<uri>
       display: optional<string>
   TestReport_Setup:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       action: list<TestReport_Action>
   TestReport_Action:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11451,7 +11451,7 @@ types:
       - warning
       - error
   TestReport_Operation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11466,7 +11466,7 @@ types:
       - warning
       - error
   TestReport_Assert:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11474,7 +11474,7 @@ types:
       message: optional<markdown>
       detail: optional<string>
   TestReport_Test:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11482,20 +11482,20 @@ types:
       description: optional<string>
       action: list<TestReport_Action1>
   TestReport_Action1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       operation: optional<TestReport_Operation>
       assert: optional<TestReport_Assert>
   TestReport_Teardown:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       action: list<TestReport_Action2>
   TestReport_Action2:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11507,7 +11507,7 @@ types:
       - retired
       # - unknown
   TestScript:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11542,35 +11542,35 @@ types:
       test: optional<list<TestScript_Test>>
       teardown: optional<TestScript_Teardown>
   TestScript_Origin:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       index: optional<integer>
       profile: Coding
   TestScript_Destination:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       index: optional<integer>
       profile: Coding
   TestScript_Metadata:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       link: optional<list<TestScript_Link>>
       capability: list<TestScript_Capability>
   TestScript_Link:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       url: optional<uri>
       description: optional<string>
   TestScript_Capability:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11582,7 +11582,7 @@ types:
       link: optional<list<uri>>
       capabilities: canonical
   TestScript_Fixture:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11590,7 +11590,7 @@ types:
       autodelete: optional<boolean>
       resource: optional<Reference>
   TestScript_Variable:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11603,13 +11603,13 @@ types:
       path: optional<string>
       sourceId: optional<id>
   TestScript_Setup:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       action: list<TestScript_Action>
   TestScript_Action:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11625,7 +11625,7 @@ types:
       - put
       - head
   TestScript_Operation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11647,7 +11647,7 @@ types:
       targetId: optional<id>
       url: optional<string>
   TestScript_RequestHeader:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11694,7 +11694,7 @@ types:
       - preconditionFailed
       - unprocessable
   TestScript_Assert:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11721,7 +11721,7 @@ types:
       value: optional<string>
       warningOnly: optional<boolean>
   TestScript_Test:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11729,20 +11729,20 @@ types:
       description: optional<string>
       action: list<TestScript_Action1>
   TestScript_Action1:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       operation: optional<TestScript_Operation>
       assert: optional<TestScript_Assert>
   TestScript_Teardown:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       action: list<TestScript_Action2>
   TestScript_Action2:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11754,7 +11754,7 @@ types:
       - retired
       # - unknown
   ValueSet:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11783,7 +11783,7 @@ types:
       compose: optional<ValueSet_Compose>
       expansion: optional<ValueSet_Expansion>
   ValueSet_Compose:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11792,7 +11792,7 @@ types:
       include: list<ValueSet_Include>
       exclude: optional<list<ValueSet_Include>>
   ValueSet_Include:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11802,7 +11802,7 @@ types:
       filter: optional<list<ValueSet_Filter>>
       valueSet: optional<list<canonical>>
   ValueSet_Concept:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11810,7 +11810,7 @@ types:
       display: optional<string>
       designation: optional<list<ValueSet_Designation>>
   ValueSet_Designation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11829,7 +11829,7 @@ types:
       - generalizes
       - exists
   ValueSet_Filter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11837,7 +11837,7 @@ types:
       op: optional<Valueset_filterOp>
       value: optional<string>
   ValueSet_Expansion:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11848,7 +11848,7 @@ types:
       parameter: optional<list<ValueSet_Parameter>>
       contains: optional<list<ValueSet_Contains>>
   ValueSet_Parameter:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11861,7 +11861,7 @@ types:
       valueCode: optional<string>
       valueDateTime: optional<string>
   ValueSet_Contains:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11874,7 +11874,7 @@ types:
       designation: optional<list<ValueSet_Designation>>
       contains: optional<list<ValueSet_Contains>>
   VerificationResult:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11899,7 +11899,7 @@ types:
       attestation: optional<VerificationResult_Attestation>
       validator: optional<list<VerificationResult_Validator>>
   VerificationResult_PrimarySource:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11911,7 +11911,7 @@ types:
       canPushUpdates: optional<CodeableConcept>
       pushTypeAvailable: optional<list<CodeableConcept>>
   VerificationResult_Attestation:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11924,7 +11924,7 @@ types:
       proxySignature: optional<Signature>
       sourceSignature: optional<Signature>
   VerificationResult_Validator:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11932,7 +11932,7 @@ types:
       identityCertificate: optional<string>
       attestationSignature: optional<Signature>
   VisionPrescription:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -11955,7 +11955,7 @@ types:
       - right
       - left
   VisionPrescription_LensSpecification:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
@@ -11980,14 +11980,14 @@ types:
       - in
       - out
   VisionPrescription_Prism:
-    fields:
+    properties:
       id: optional<string>
       extension: optional<list<Extension>>
       modifierExtension: optional<list<Extension>>
       amount: optional<decimal>
       base: optional<Visionprescription_prismBase>
   Project:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -11999,7 +11999,7 @@ types:
       features: optional<list<code>>
       defaultPatientAccessPolicy: optional<Reference>
   ProjectMembership:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12012,7 +12012,7 @@ types:
       userConfiguration: optional<Reference>
       admin: optional<boolean>
   ClientApplication:
-    fields:
+    properties:
       resourceType: string
       id: optional<id>
       meta: optional<Meta>
@@ -12023,7 +12023,7 @@ types:
       secret: string
       redirectUri: optional<string>
   User:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12033,7 +12033,7 @@ types:
       passwordHash: string
       admin: optional<boolean>
   Login:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12058,7 +12058,7 @@ types:
       remoteAddress: optional<string>
       userAgent: optional<string>
   PasswordChangeRequest:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12069,7 +12069,7 @@ types:
       used: optional<boolean>
       redirectUri: optional<string>
   JsonWebKey:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12092,7 +12092,7 @@ types:
       dq: optional<string>
       qi: optional<string>
   Bot:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12105,7 +12105,7 @@ types:
       code: optional<string>
       runAsUser: optional<boolean>
   AccessPolicy:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12115,14 +12115,14 @@ types:
       compartment: optional<Reference>
       resource: optional<list<AccessPolicy_Resource>>
   AccessPolicy_Resource:
-    fields:
+    properties:
       resourceType: optional<string>
       compartment: optional<Reference>
       readonly: optional<boolean>
-      hiddenFields: optional<list<string>>
-      readonlyFields: optional<list<string>>
+      hiddenproperties: optional<list<string>>
+      readonlyproperties: optional<list<string>>
   UserConfiguration:
-    fields:
+    properties:
       resourceType: optional<string>
       id: optional<id>
       meta: optional<Meta>
@@ -12133,19 +12133,19 @@ types:
       search: optional<list<UserConfiguration_Search>>
       option: optional<list<UserConfiguration_Option>>
   UserConfiguration_Menu:
-    fields:
+    properties:
       title: optional<string>
       link: optional<list<UserConfiguration_Menu_Link>>
   UserConfiguration_Menu_Link:
-    fields:
+    properties:
       name: optional<string>
       target: optional<string>
   UserConfiguration_Search:
-    fields:
+    properties:
       name: optional<string>
       criteria: optional<string>
   UserConfiguration_Option:
-    fields:
+    properties:
       id: optional<id>
       valueBoolean: optional<boolean>
       valueCode: optional<string>

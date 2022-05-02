@@ -1,0 +1,41 @@
+import { code } from "./code";
+import { dateTime } from "./dateTime";
+import { decimal } from "./decimal";
+import { Extension } from "./Extension";
+import { id } from "./id";
+import { Identifier } from "./Identifier";
+import { Meta } from "./Meta";
+import { Narrative } from "./Narrative";
+import { Reference } from "./Reference";
+import { ResourceList } from "./ResourceList";
+import { TestreportResult } from "./TestreportResult";
+import { TestreportStatus } from "./TestreportStatus";
+import { TestReport_Participant } from "./TestReport_Participant";
+import { TestReport_Setup } from "./TestReport_Setup";
+import { TestReport_Teardown } from "./TestReport_Teardown";
+import { TestReport_Test } from "./TestReport_Test";
+import { uri } from "./uri";
+
+export interface TestReport {
+    resourceType: string;
+    id: id | null | undefined;
+    meta: Meta | null | undefined;
+    implicitRules: uri | null | undefined;
+    language: code | null | undefined;
+    text: Narrative | null | undefined;
+    contained: ResourceList[] | null | undefined;
+    extension: Extension[] | null | undefined;
+    modifierExtension: Extension[] | null | undefined;
+    identifier: Identifier | null | undefined;
+    name: string | null | undefined;
+    status: TestreportStatus | null | undefined;
+    testScript: Reference;
+    result: TestreportResult | null | undefined;
+    score: decimal | null | undefined;
+    tester: string | null | undefined;
+    issued: dateTime | null | undefined;
+    participant: TestReport_Participant[] | null | undefined;
+    setup: TestReport_Setup | null | undefined;
+    test: TestReport_Test[] | null | undefined;
+    teardown: TestReport_Teardown | null | undefined;
+}

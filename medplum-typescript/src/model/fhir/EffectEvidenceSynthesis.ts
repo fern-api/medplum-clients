@@ -1,0 +1,71 @@
+import { Annotation } from "./Annotation";
+import { code } from "./code";
+import { CodeableConcept } from "./CodeableConcept";
+import { ContactDetail } from "./ContactDetail";
+import { date } from "./date";
+import { dateTime } from "./dateTime";
+import { EffectevidencesynthesisStatus } from "./EffectevidencesynthesisStatus";
+import { EffectEvidenceSynthesis_Certainty } from "./EffectEvidenceSynthesis_Certainty";
+import { EffectEvidenceSynthesis_EffectEstimate } from "./EffectEvidenceSynthesis_EffectEstimate";
+import { EffectEvidenceSynthesis_ResultsByExposure } from "./EffectEvidenceSynthesis_ResultsByExposure";
+import { EffectEvidenceSynthesis_SampleSize } from "./EffectEvidenceSynthesis_SampleSize";
+import { Extension } from "./Extension";
+import { id } from "./id";
+import { Identifier } from "./Identifier";
+import { markdown } from "./markdown";
+import { Meta } from "./Meta";
+import { Narrative } from "./Narrative";
+import { Period } from "./Period";
+import { Reference } from "./Reference";
+import { RelatedArtifact } from "./RelatedArtifact";
+import { ResourceList } from "./ResourceList";
+import { uri } from "./uri";
+import { UsageContext } from "./UsageContext";
+
+export interface EffectEvidenceSynthesis {
+    resourceType: string;
+    id: id | null | undefined;
+    meta: Meta | null | undefined;
+    implicitRules: uri | null | undefined;
+    language: code | null | undefined;
+    text: Narrative | null | undefined;
+    contained: ResourceList[] | null | undefined;
+    extension: Extension[] | null | undefined;
+    modifierExtension: Extension[] | null | undefined;
+    url: uri | null | undefined;
+    identifier: Identifier[] | null | undefined;
+    version: string | null | undefined;
+    name: string | null | undefined;
+    title: string | null | undefined;
+    status: EffectevidencesynthesisStatus | null | undefined;
+    date: dateTime | null | undefined;
+    publisher: string | null | undefined;
+    contact: ContactDetail[] | null | undefined;
+    description: markdown | null | undefined;
+    note: Annotation[] | null | undefined;
+    useContext: UsageContext[] | null | undefined;
+    jurisdiction: CodeableConcept[] | null | undefined;
+    copyright: markdown | null | undefined;
+    approvalDate: date | null | undefined;
+    lastReviewDate: date | null | undefined;
+    effectivePeriod: Period | null | undefined;
+    topic: CodeableConcept[] | null | undefined;
+    author: ContactDetail[] | null | undefined;
+    editor: ContactDetail[] | null | undefined;
+    reviewer: ContactDetail[] | null | undefined;
+    endorser: ContactDetail[] | null | undefined;
+    relatedArtifact: RelatedArtifact[] | null | undefined;
+    synthesisType: CodeableConcept | null | undefined;
+    studyType: CodeableConcept | null | undefined;
+    population: Reference;
+    exposure: Reference;
+    exposureAlternative: Reference;
+    outcome: Reference;
+    sampleSize: EffectEvidenceSynthesis_SampleSize | null | undefined;
+    resultsByExposure:
+        | EffectEvidenceSynthesis_ResultsByExposure[]
+        | null
+        | undefined;
+    effectEstimate: EffectEvidenceSynthesis_EffectEstimate[] | null | undefined;
+    certainty: EffectEvidenceSynthesis_Certainty[] | null | undefined;
+}

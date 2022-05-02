@@ -1,0 +1,42 @@
+import { Annotation } from "./Annotation";
+import { code } from "./code";
+import { CodeableConcept } from "./CodeableConcept";
+import { dateTime } from "./dateTime";
+import { DeviceusestatementStatus } from "./DeviceusestatementStatus";
+import { Extension } from "./Extension";
+import { id } from "./id";
+import { Identifier } from "./Identifier";
+import { Meta } from "./Meta";
+import { Narrative } from "./Narrative";
+import { Period } from "./Period";
+import { Reference } from "./Reference";
+import { ResourceList } from "./ResourceList";
+import { Timing } from "./Timing";
+import { uri } from "./uri";
+
+export interface DeviceUseStatement {
+    resourceType: string;
+    id: id | null | undefined;
+    meta: Meta | null | undefined;
+    implicitRules: uri | null | undefined;
+    language: code | null | undefined;
+    text: Narrative | null | undefined;
+    contained: ResourceList[] | null | undefined;
+    extension: Extension[] | null | undefined;
+    modifierExtension: Extension[] | null | undefined;
+    identifier: Identifier[] | null | undefined;
+    basedOn: Reference[] | null | undefined;
+    status: DeviceusestatementStatus | null | undefined;
+    subject: Reference;
+    derivedFrom: Reference[] | null | undefined;
+    timingTiming: Timing | null | undefined;
+    timingPeriod: Period | null | undefined;
+    timingDateTime: string | null | undefined;
+    recordedOn: dateTime | null | undefined;
+    source: Reference | null | undefined;
+    device: Reference;
+    reasonCode: CodeableConcept[] | null | undefined;
+    reasonReference: Reference[] | null | undefined;
+    bodySite: CodeableConcept | null | undefined;
+    note: Annotation[] | null | undefined;
+}

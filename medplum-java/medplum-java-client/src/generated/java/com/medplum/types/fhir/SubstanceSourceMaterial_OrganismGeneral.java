@@ -1,0 +1,39 @@
+package com.medplum.types.fhir;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.medplum.StagedBuilderStyle;
+import java.lang.String;
+import java.util.List;
+import java.util.Optional;
+import org.immutables.value.Value;
+
+@Value.Immutable
+@StagedBuilderStyle
+@JsonDeserialize(
+    as = ImmutableSubstanceSourceMaterial_OrganismGeneral.class
+)
+@JsonIgnoreProperties(
+    ignoreUnknown = true
+)
+public interface SubstanceSourceMaterial_OrganismGeneral {
+  Optional<String> id();
+
+  Optional<CodeableConcept> phylum();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> kingdom();
+
+  Optional<CodeableConcept> order();
+
+  @JsonProperty("class")
+  Optional<CodeableConcept> _class();
+
+  static ImmutableSubstanceSourceMaterial_OrganismGeneral.Builder builder() {
+    return ImmutableSubstanceSourceMaterial_OrganismGeneral.builder();
+  }
+}
