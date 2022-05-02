@@ -17,56 +17,56 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductAuthorization {
-  Optional<List<CodeableConcept>> country();
-
-  Optional<Narrative> text();
-
   Optional<CodeableConcept> legalBasis();
 
-  Optional<List<Identifier>> identifier();
+  Optional<DateTime> statusDate();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<CodeableConcept> status();
 
-  Optional<DateTime> dateOfFirstAuthorization();
-
-  Optional<DateTime> restoreDate();
-
-  Optional<List<MedicinalProductAuthorization_JurisdictionalAuthorization>> jurisdictionalAuthorization(
-      );
-
-  Optional<Reference> holder();
-
-  Optional<Id> id();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> dataExclusivityPeriod();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Extension>> extension();
 
-  Optional<DateTime> internationalBirthDate();
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Period> validityPeriod();
 
   Optional<MedicinalProductAuthorization_Procedure> procedure();
+
+  String resourceType();
+
+  Optional<List<CodeableConcept>> country();
+
+  Optional<Id> id();
+
+  Optional<DateTime> restoreDate();
+
+  Optional<DateTime> dateOfFirstAuthorization();
+
+  Optional<DateTime> internationalBirthDate();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> holder();
 
   Optional<Reference> subject();
 
   Optional<Reference> regulator();
 
-  Optional<Uri> implicitRules();
+  Optional<Period> dataExclusivityPeriod();
 
   Optional<Code> language();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<MedicinalProductAuthorization_JurisdictionalAuthorization>> jurisdictionalAuthorization(
+      );
+
+  Optional<Narrative> text();
 
   Optional<Meta> meta();
-
-  Optional<CodeableConcept> status();
-
-  Optional<Period> validityPeriod();
-
-  Optional<DateTime> statusDate();
 
   static ImmutableMedicinalProductAuthorization.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductAuthorization.builder();

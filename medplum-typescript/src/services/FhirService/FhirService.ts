@@ -4,6 +4,7 @@ import {
     joinPaths,
     Service,
 } from "@fern-typescript/service-utils";
+import * as model from "../../model";
 import * as endpoints from "./endpoints";
 
 export interface Client {
@@ -52,6 +53,7 @@ export class Client implements Client {
             return {
                 ok: true,
                 statusCode: response.statusCode,
+                body: response.body as model.Bundle,
             };
         } else {
             return {
@@ -76,7 +78,7 @@ export class Client implements Client {
             return {
                 ok: true,
                 statusCode: response.statusCode,
-                body: response.body as endpoints.createResource.ResponseBody,
+                body: response.body as model.ResourceList,
             };
         } else {
             return {
@@ -103,6 +105,7 @@ export class Client implements Client {
             return {
                 ok: true,
                 statusCode: response.statusCode,
+                body: response.body as model.ResourceList,
             };
         } else {
             return {
@@ -130,7 +133,7 @@ export class Client implements Client {
             return {
                 ok: true,
                 statusCode: response.statusCode,
-                body: response.body as endpoints.updateResource.ResponseBody,
+                body: response.body as model.ResourceList,
             };
         } else {
             return {
@@ -183,6 +186,7 @@ export class Client implements Client {
             return {
                 ok: true,
                 statusCode: response.statusCode,
+                body: response.body as model.Bundle,
             };
         } else {
             return {
@@ -209,6 +213,7 @@ export class Client implements Client {
             return {
                 ok: true,
                 statusCode: response.statusCode,
+                body: response.body as model.ResourceList,
             };
         } else {
             return {

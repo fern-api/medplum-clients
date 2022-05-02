@@ -21,9 +21,9 @@ public interface ChargeItemDefinition_PropertyGroup {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
-
   Optional<List<ChargeItemDefinition_Applicability>> applicability();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 

@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan_Activity {
-  Optional<Reference> reference();
-
-  Optional<List<Annotation>> progress();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> outcomeCodeableConcept();
 
   Optional<List<Reference>> outcomeReference();
 
   Optional<CarePlan_Detail> detail();
+
+  Optional<List<Annotation>> progress();
+
+  Optional<List<CodeableConcept>> outcomeCodeableConcept();
+
+  Optional<Reference> reference();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableCarePlan_Activity.Builder builder() {
     return ImmutableCarePlan_Activity.builder();

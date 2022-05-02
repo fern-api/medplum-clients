@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProduct_CountryLanguage {
-  Optional<List<Extension>> extension();
-
-  CodeableConcept country();
-
-  CodeableConcept language();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
 
   Optional<CodeableConcept> jurisdiction();
 
-  static ImmutableMedicinalProduct_CountryLanguage.CountryBuildStage builder() {
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  CodeableConcept language();
+
+  CodeableConcept country();
+
+  static ImmutableMedicinalProduct_CountryLanguage.LanguageBuildStage builder() {
     return ImmutableMedicinalProduct_CountryLanguage.builder();
   }
 }

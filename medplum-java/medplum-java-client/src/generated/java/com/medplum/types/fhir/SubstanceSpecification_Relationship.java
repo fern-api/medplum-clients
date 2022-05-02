@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Relationship {
-  Optional<CodeableConcept> relationship();
+  Optional<CodeableConcept> amountType();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> substanceCodeableConcept();
+
+  Optional<Reference> substanceReference();
 
   Optional<Boolean> isDefining();
 
+  Optional<List<Extension>> extension();
+
+  Optional<Ratio> amountRatioLowLimit();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> amountString();
+
   Optional<Quantity> amountQuantity();
+
+  Optional<CodeableConcept> relationship();
+
+  Optional<Ratio> amountRatio();
 
   Optional<Range> amountRange();
 
   Optional<List<Reference>> source();
 
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> substanceReference();
-
-  Optional<Ratio> amountRatioLowLimit();
-
-  Optional<CodeableConcept> substanceCodeableConcept();
-
-  Optional<CodeableConcept> amountType();
-
-  Optional<String> amountString();
-
-  Optional<Ratio> amountRatio();
 
   static ImmutableSubstanceSpecification_Relationship.Builder builder() {
     return ImmutableSubstanceSpecification_Relationship.builder();

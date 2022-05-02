@@ -18,57 +18,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Action {
+  Optional<Reference> context();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<String>> requesterLinkId();
+  Optional<List<CodeableConcept>> performerType();
 
-  Optional<CodeableConcept> performerRole();
+  Optional<List<Annotation>> note();
 
-  Optional<List<CodeableConcept>> reasonCode();
+  Optional<List<Contract_Subject>> subject();
 
-  Optional<Period> occurrencePeriod();
+  Optional<String> id();
 
-  Optional<List<String>> contextLinkId();
+  Optional<Boolean> doNotPerform();
 
   CodeableConcept status();
 
-  Optional<List<String>> reason();
+  Optional<CodeableConcept> performerRole();
 
-  Optional<List<String>> performerLinkId();
+  Optional<List<String>> linkId();
 
-  Optional<Reference> context();
+  Optional<List<Reference>> requester();
 
-  Optional<List<Reference>> reasonReference();
+  CodeableConcept intent();
 
   Optional<String> occurrenceDateTime();
 
   Optional<List<Extension>> extension();
 
-  Optional<Timing> occurrenceTiming();
+  Optional<List<String>> reason();
 
-  Optional<List<Reference>> requester();
+  Optional<List<String>> requesterLinkId();
 
-  Optional<List<CodeableConcept>> performerType();
+  Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<Boolean> doNotPerform();
-
-  Optional<List<UnsignedInt>> securityLabelNumber();
-
-  CodeableConcept intent();
-
-  Optional<String> id();
-
-  CodeableConcept type();
-
-  Optional<Reference> performer();
-
-  Optional<List<Annotation>> note();
+  Optional<List<Reference>> reasonReference();
 
   Optional<List<String>> reasonLinkId();
 
-  Optional<List<String>> linkId();
+  Optional<List<String>> contextLinkId();
 
-  Optional<List<Contract_Subject>> subject();
+  Optional<List<UnsignedInt>> securityLabelNumber();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<List<String>> performerLinkId();
+
+  CodeableConcept type();
+
+  Optional<Timing> occurrenceTiming();
+
+  Optional<Reference> performer();
 
   static ImmutableContract_Action.StatusBuildStage builder() {
     return ImmutableContract_Action.builder();

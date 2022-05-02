@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskEvidenceSynthesis_CertaintySubcomponent {
-  Optional<String> id();
+  Optional<List<CodeableConcept>> rating();
 
   Optional<List<Annotation>> note();
 
-  Optional<CodeableConcept> type();
+  Optional<String> id();
 
-  Optional<List<CodeableConcept>> rating();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> type();
 
   static ImmutableRiskEvidenceSynthesis_CertaintySubcomponent.Builder builder() {
     return ImmutableRiskEvidenceSynthesis_CertaintySubcomponent.builder();

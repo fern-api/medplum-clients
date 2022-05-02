@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_DrugCharacteristic {
-  Optional<String> id();
-
-  Optional<String> valueString();
-
-  Optional<String> valueBase64Binary();
-
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> valueCodeableConcept();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> type();
 
+  Optional<String> valueBase64Binary();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<CodeableConcept> valueCodeableConcept();
+
   Optional<Quantity> valueQuantity();
+
+  Optional<String> valueString();
 
   static ImmutableMedicationKnowledge_DrugCharacteristic.Builder builder() {
     return ImmutableMedicationKnowledge_DrugCharacteristic.builder();

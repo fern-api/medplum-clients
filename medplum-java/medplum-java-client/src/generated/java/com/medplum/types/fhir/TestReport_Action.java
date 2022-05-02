@@ -21,13 +21,13 @@ public interface TestReport_Action {
   @JsonProperty("assert")
   Optional<TestReport_Assert> _assert();
 
-  Optional<TestReport_Operation> operation();
-
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<TestReport_Operation> operation();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableTestReport_Action.Builder builder() {
     return ImmutableTestReport_Action.builder();

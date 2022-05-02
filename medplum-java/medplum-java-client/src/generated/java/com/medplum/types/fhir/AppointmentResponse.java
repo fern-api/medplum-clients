@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AppointmentResponse {
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> participantStatus();
-
-  Optional<Narrative> text();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
-
   Optional<Instant> end();
-
-  Optional<Instant> start();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Meta> meta();
-
-  Reference appointment();
 
   Optional<List<CodeableConcept>> participantType();
 
-  Optional<String> comment();
-
   Optional<Code> language();
 
+  Optional<Id> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Narrative> text();
+
+  Optional<Uri> implicitRules();
+
   Optional<Reference> actor();
+
+  String resourceType();
+
+  Optional<Instant> start();
+
+  Optional<String> comment();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> participantStatus();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Reference appointment();
+
+  Optional<Meta> meta();
 
   static ImmutableAppointmentResponse.ResourceTypeBuildStage builder() {
     return ImmutableAppointmentResponse.builder();

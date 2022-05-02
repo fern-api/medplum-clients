@@ -21,11 +21,11 @@ public interface MedicationKnowledge_MonitoringProgram {
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<List<Extension>> extension();
+
   Optional<String> name();
 
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableMedicationKnowledge_MonitoringProgram.Builder builder() {
     return ImmutableMedicationKnowledge_MonitoringProgram.builder();

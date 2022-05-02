@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Provenance_Entity {
-  Optional<List<Provenance_Agent>> agent();
+  Optional<Provenance_entityRole> role();
 
   Optional<List<Extension>> modifierExtension();
 
-  Reference what();
-
-  Optional<Provenance_entityRole> role();
-
   Optional<String> id();
 
+  Reference what();
+
   Optional<List<Extension>> extension();
+
+  Optional<List<Provenance_Agent>> agent();
 
   static ImmutableProvenance_Entity.WhatBuildStage builder() {
     return ImmutableProvenance_Entity.builder();

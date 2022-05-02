@@ -19,23 +19,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Questionnaire_AnswerOption {
-  Optional<String> valueString();
-
-  Optional<Coding> valueCoding();
-
   Optional<Double> valueInteger();
 
   Optional<String> valueDate();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<Coding> valueCoding();
 
   Optional<String> valueTime();
 
+  Optional<Reference> valueReference();
+
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> valueReference();
+  Optional<String> valueString();
 
   Optional<Boolean> initialSelected();
 

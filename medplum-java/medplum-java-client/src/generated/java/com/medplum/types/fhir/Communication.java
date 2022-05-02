@@ -17,69 +17,69 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Communication {
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Narrative> text();
-
-  Optional<List<Reference>> inResponseTo();
-
-  Optional<Code> language();
+  Optional<DateTime> received();
 
   String resourceType();
 
-  Optional<CodeableConcept> statusReason();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<DateTime> received();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> medium();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<Reference>> about();
-
-  Optional<List<Communication_Payload>> payload();
-
-  Optional<Code> priority();
-
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<Reference> encounter();
-
-  Optional<Meta> meta();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<DateTime> sent();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> sender();
+  Optional<List<CodeableConcept>> category();
 
   Optional<List<Reference>> basedOn();
 
-  Optional<List<CodeableConcept>> reasonCode();
+  Optional<List<Reference>> inResponseTo();
 
-  Optional<List<Reference>> recipient();
+  Optional<Id> id();
 
-  Optional<CodeableConcept> topic();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<CodeableConcept>> medium();
 
   Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<Code> status();
+  Optional<Narrative> text();
+
+  Optional<Code> priority();
+
+  Optional<Reference> encounter();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> statusReason();
+
+  Optional<List<Reference>> about();
+
+  Optional<Meta> meta();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> subject();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Reference>> recipient();
+
+  Optional<Reference> sender();
+
+  Optional<CodeableConcept> topic();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<Code> language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DateTime> sent();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<Code> status();
+
+  Optional<List<Communication_Payload>> payload();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableCommunication.ResourceTypeBuildStage builder() {
     return ImmutableCommunication.builder();

@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MarketingStatus {
+  CodeableConcept country();
+
   Optional<DateTime> restoreDate();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> jurisdiction();
-
-  Period dateRange();
-
-  CodeableConcept status();
-
-  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  CodeableConcept country();
+  CodeableConcept status();
 
-  static ImmutableMarketingStatus.DateRangeBuildStage builder() {
+  Optional<CodeableConcept> jurisdiction();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Period dateRange();
+
+  static ImmutableMarketingStatus.CountryBuildStage builder() {
     return ImmutableMarketingStatus.builder();
   }
 }

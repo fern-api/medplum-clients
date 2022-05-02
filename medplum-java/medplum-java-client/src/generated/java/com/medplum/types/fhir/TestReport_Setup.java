@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestReport_Setup {
-  List<TestReport_Action> action();
-
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  List<TestReport_Action> action();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableTestReport_Setup.Builder builder() {
     return ImmutableTestReport_Setup.builder();

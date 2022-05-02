@@ -17,69 +17,69 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Media {
-  Optional<List<Reference>> partOf();
-
-  Optional<CodeableConcept> bodySite();
-
-  Optional<PositiveInt> width();
+  Optional<String> deviceName();
 
   Optional<Code> language();
 
-  Optional<String> deviceName();
-
-  Optional<Uri> implicitRules();
-
-  String resourceType();
-
-  Optional<Reference> subject();
-
-  Optional<PositiveInt> frames();
+  Optional<Reference> operator();
 
   Optional<List<ResourceList>> contained();
 
   Optional<Period> createdPeriod();
 
-  Optional<Decimal> duration();
-
-  Optional<Id> id();
-
-  Optional<CodeableConcept> type();
-
-  Optional<CodeableConcept> view();
-
-  Optional<Reference> device();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Code> status();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> basedOn();
+  Optional<CodeableConcept> bodySite();
 
   Optional<CodeableConcept> modality();
 
-  Optional<List<CodeableConcept>> reasonCode();
+  String resourceType();
 
-  Optional<List<Annotation>> note();
+  Optional<Reference> subject();
+
+  Optional<Reference> device();
+
+  Optional<Code> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Id> id();
 
   Optional<Instant> issued();
 
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> createdDateTime();
-
-  Optional<Reference> operator();
+  Optional<CodeableConcept> view();
 
   Optional<Meta> meta();
 
+  Optional<String> createdDateTime();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Annotation>> note();
+
+  Optional<PositiveInt> width();
+
+  Optional<Decimal> duration();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<PositiveInt> height();
+
+  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<Reference> encounter();
 
   Attachment content();
+
+  Optional<PositiveInt> frames();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
 
   static ImmutableMedia.ResourceTypeBuildStage builder() {
     return ImmutableMedia.builder();

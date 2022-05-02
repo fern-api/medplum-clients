@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_Plan {
-  Optional<List<Reference>> coverageArea();
+  Optional<List<Reference>> network();
 
-  Optional<List<InsurancePlan_GeneralCost>> generalCost();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Reference>> network();
+  Optional<List<Reference>> coverageArea();
 
-  Optional<String> id();
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<InsurancePlan_GeneralCost>> generalCost();
 
   Optional<CodeableConcept> type();
 
   Optional<List<InsurancePlan_SpecificCost>> specificCost();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
+  Optional<String> id();
 
   static ImmutableInsurancePlan_Plan.Builder builder() {
     return ImmutableInsurancePlan_Plan.builder();

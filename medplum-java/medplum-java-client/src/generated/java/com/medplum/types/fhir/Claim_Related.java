@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Related {
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> claim();
+
   Optional<Identifier> reference();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> relationship();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> claim();
+  Optional<CodeableConcept> relationship();
 
   static ImmutableClaim_Related.Builder builder() {
     return ImmutableClaim_Related.builder();

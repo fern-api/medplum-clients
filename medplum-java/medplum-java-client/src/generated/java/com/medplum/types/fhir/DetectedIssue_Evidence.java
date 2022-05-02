@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface DetectedIssue_Evidence {
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<CodeableConcept>> code();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<List<Reference>> detail();
 

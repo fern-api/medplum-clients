@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ObservationDefinition_QualifiedInterval {
-  Optional<CodeableConcept> context();
-
-  Optional<Range> range();
-
-  Optional<Range> gestationalAge();
+  Optional<List<CodeableConcept>> appliesTo();
 
   Optional<List<Extension>> extension();
 
-  Optional<Observationdefinition_qualifiedintervalCategory> category();
+  Optional<CodeableConcept> context();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> appliesTo();
-
-  Optional<Observationdefinition_qualifiedintervalGender> gender();
-
-  Optional<String> condition();
+  Optional<Range> age();
 
   Optional<String> id();
 
-  Optional<Range> age();
+  Optional<Observationdefinition_qualifiedintervalCategory> category();
+
+  Optional<Range> range();
+
+  Optional<Observationdefinition_qualifiedintervalGender> gender();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Range> gestationalAge();
+
+  Optional<String> condition();
 
   static ImmutableObservationDefinition_QualifiedInterval.Builder builder() {
     return ImmutableObservationDefinition_QualifiedInterval.builder();

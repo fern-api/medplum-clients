@@ -18,45 +18,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BiologicallyDerivedProduct {
-  Optional<BiologicallyderivedproductProductcategory> productCategory();
-
-  Optional<BiologicallyderivedproductStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<CodeableConcept> productCode();
-
-  Optional<List<BiologicallyDerivedProduct_Processing>> processing();
-
-  Optional<Id> id();
-
-  Optional<BiologicallyDerivedProduct_Manipulation> manipulation();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
+  Optional<List<Identifier>> identifier();
 
   Optional<List<Extension>> extension();
 
-  Optional<BiologicallyDerivedProduct_Collection> collection();
-
-  Optional<Narrative> text();
-
-  Optional<List<Reference>> parent();
-
-  Optional<List<BiologicallyDerivedProduct_Storage>> storage();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Reference>> request();
-
-  Optional<Integer> quantity();
+  Optional<CodeableConcept> productCode();
 
   String resourceType();
 
+  Optional<BiologicallyDerivedProduct_Manipulation> manipulation();
+
+  Optional<List<BiologicallyDerivedProduct_Storage>> storage();
+
+  Optional<BiologicallyderivedproductProductcategory> productCategory();
+
+  Optional<List<BiologicallyDerivedProduct_Processing>> processing();
+
   Optional<Meta> meta();
+
+  Optional<BiologicallyDerivedProduct_Collection> collection();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Integer> quantity();
+
+  Optional<Code> language();
+
+  Optional<List<Reference>> parent();
+
+  Optional<List<Reference>> request();
+
+  Optional<Narrative> text();
+
+  Optional<BiologicallyderivedproductStatus> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableBiologicallyDerivedProduct.ResourceTypeBuildStage builder() {
     return ImmutableBiologicallyDerivedProduct.builder();

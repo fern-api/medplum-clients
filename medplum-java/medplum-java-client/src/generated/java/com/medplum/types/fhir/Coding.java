@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Coding {
-  Optional<String> id();
-
-  Optional<Boolean> userSelected();
+  Optional<String> version();
 
   Optional<String> display();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> version();
+  Optional<Code> code();
 
   Optional<Uri> system();
 
-  Optional<Code> code();
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> userSelected();
+
+  Optional<String> id();
 
   static ImmutableCoding.Builder builder() {
     return ImmutableCoding.builder();

@@ -17,8 +17,6 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Page1 {
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
   Optional<List<String>> anchor();
@@ -28,6 +26,8 @@ public interface ImplementationGuide_Page1 {
   Optional<String> name();
 
   Optional<String> title();
+
+  Optional<String> id();
 
   static ImmutableImplementationGuide_Page1.Builder builder() {
     return ImmutableImplementationGuide_Page1.builder();

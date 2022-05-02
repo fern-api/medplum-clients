@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Bundle {
-  Optional<Meta> meta();
-
-  Optional<Id> id();
-
-  Optional<List<Bundle_Entry>> entry();
-
-  String resourceType();
-
   Optional<Instant> timestamp();
 
-  Optional<UnsignedInt> total();
-
-  Optional<Code> language();
-
-  Optional<Uri> implicitRules();
+  Optional<Identifier> identifier();
 
   Optional<List<Bundle_Link>> link();
 
+  Optional<List<Bundle_Entry>> entry();
+
+  Optional<Code> language();
+
+  Optional<UnsignedInt> total();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
+
+  String resourceType();
+
   Optional<BundleType> type();
 
-  Optional<Identifier> identifier();
+  Optional<Id> id();
 
   Optional<Signature> signature();
 

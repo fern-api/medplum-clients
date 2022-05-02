@@ -17,9 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Accident {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> locationReference();
+  Optional<String> id();
 
   Optional<CodeableConcept> type();
 
@@ -27,7 +25,9 @@ public interface Claim_Accident {
 
   Optional<Address> locationAddress();
 
-  Optional<String> id();
+  Optional<Reference> locationReference();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Date> date();
 

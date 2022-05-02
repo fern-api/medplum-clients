@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_SubDetail {
-  Optional<String> id();
+  Optional<PositiveInt> subDetailSequence();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<PositiveInt>> noteNumber();
+  Optional<String> id();
 
   Optional<List<ClaimResponse_Adjudication>> adjudication();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<PositiveInt> subDetailSequence();
+  Optional<List<PositiveInt>> noteNumber();
 
   static ImmutableClaimResponse_SubDetail.Builder builder() {
     return ImmutableClaimResponse_SubDetail.builder();

@@ -18,25 +18,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Insurance {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
-  Optional<Identifier> identifier();
-
   Optional<Boolean> focal();
 
-  Reference coverage();
-
-  Optional<PositiveInt> sequence();
-
-  Optional<List<String>> preAuthRef();
-
-  Optional<Reference> claimResponse();
+  Optional<String> businessArrangement();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> businessArrangement();
+  Optional<PositiveInt> sequence();
+
+  Optional<Identifier> identifier();
+
+  Optional<List<String>> preAuthRef();
+
+  Reference coverage();
+
+  Optional<Reference> claimResponse();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableClaim_Insurance.CoverageBuildStage builder() {
     return ImmutableClaim_Insurance.builder();

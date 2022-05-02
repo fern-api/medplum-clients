@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImmunizationRecommendation_Recommendation {
-  Optional<List<CodeableConcept>> contraindicatedVaccineCode();
-
-  Optional<List<CodeableConcept>> vaccineCode();
-
-  Optional<String> series();
-
-  Optional<List<Reference>> supportingPatientInformation();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> forecastReason();
+  Optional<Double> doseNumberPositiveInt();
 
   Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> supportingImmunization();
+
+  Optional<String> seriesDosesString();
+
+  Optional<Double> seriesDosesPositiveInt();
+
+  CodeableConcept forecastStatus();
+
+  Optional<List<ImmunizationRecommendation_DateCriterion>> dateCriterion();
 
   Optional<String> description();
 
@@ -38,17 +38,17 @@ public interface ImmunizationRecommendation_Recommendation {
 
   Optional<CodeableConcept> targetDisease();
 
-  Optional<List<ImmunizationRecommendation_DateCriterion>> dateCriterion();
+  Optional<String> series();
 
-  CodeableConcept forecastStatus();
+  Optional<List<Reference>> supportingPatientInformation();
 
-  Optional<Double> doseNumberPositiveInt();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Double> seriesDosesPositiveInt();
+  Optional<List<CodeableConcept>> contraindicatedVaccineCode();
 
-  Optional<List<Reference>> supportingImmunization();
+  Optional<List<CodeableConcept>> vaccineCode();
 
-  Optional<String> seriesDosesString();
+  Optional<List<CodeableConcept>> forecastReason();
 
   Optional<String> id();
 

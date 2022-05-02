@@ -19,95 +19,95 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Observation {
-  Optional<SampledData> valueSampledData();
+  Optional<ObservationStatus> status();
 
   Optional<Reference> subject();
 
+  Optional<Period> effectivePeriod();
+
+  Optional<List<CodeableConcept>> interpretation();
+
+  Optional<Id> id();
+
+  Optional<List<Observation_Component>> component();
+
+  Optional<SampledData> valueSampledData();
+
   Optional<Boolean> valueBoolean();
 
-  Optional<Double> valueInteger();
+  Optional<List<Reference>> partOf();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<Ratio> valueRatio();
+  Optional<Range> valueRange();
 
   Optional<Reference> encounter();
 
-  Optional<List<Reference>> performer();
+  Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<List<Reference>> hasMember();
+
+  Optional<String> valueDateTime();
+
+  Optional<CodeableConcept> dataAbsentReason();
 
   Optional<Reference> specimen();
 
-  Optional<Period> valuePeriod();
+  Optional<List<Reference>> focus();
+
+  Optional<Meta> meta();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<List<Observation_ReferenceRange>> referenceRange();
+
+  Optional<String> valueString();
+
+  Optional<Instant> issued();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Reference>> derivedFrom();
 
   Optional<Timing> effectiveTiming();
 
   String resourceType();
 
-  Optional<Meta> meta();
+  Optional<Narrative> text();
 
-  Optional<String> effectiveInstant();
+  Optional<List<CodeableConcept>> category();
 
-  Optional<String> valueTime();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<CodeableConcept> dataAbsentReason();
-
-  Optional<Instant> issued();
-
-  Optional<ObservationStatus> status();
+  Optional<Uri> implicitRules();
 
   CodeableConcept code();
 
-  Optional<CodeableConcept> valueCodeableConcept();
-
   Optional<String> effectiveDateTime();
 
-  Optional<List<Observation_ReferenceRange>> referenceRange();
+  Optional<List<Identifier>> identifier();
 
   Optional<CodeableConcept> method();
 
-  Optional<List<Reference>> hasMember();
+  Optional<List<Reference>> performer();
 
-  Optional<Quantity> valueQuantity();
+  Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> interpretation();
+  Optional<String> valueTime();
 
-  Optional<String> valueDateTime();
+  Optional<Period> valuePeriod();
 
-  Optional<String> valueString();
+  Optional<Reference> device();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> effectiveInstant();
+
+  Optional<Double> valueInteger();
 
   Optional<CodeableConcept> bodySite();
 
   Optional<Code> language();
-
-  Optional<List<Observation_Component>> component();
-
-  Optional<Range> valueRange();
-
-  Optional<List<Reference>> focus();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<List<Reference>> derivedFrom();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Reference> device();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<Annotation>> note();
 
   Optional<List<Extension>> modifierExtension();
 

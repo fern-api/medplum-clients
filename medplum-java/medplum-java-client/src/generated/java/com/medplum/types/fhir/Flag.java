@@ -17,41 +17,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Flag {
-  Optional<Code> language();
-
-  CodeableConcept code();
-
-  Reference subject();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Meta> meta();
+  Optional<Period> period();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> author();
-
-  Optional<Narrative> text();
-
-  Optional<Period> period();
-
   Optional<Id> id();
 
-  String resourceType();
+  Optional<Meta> meta();
 
-  Optional<List<Extension>> extension();
+  Optional<Code> language();
+
+  Optional<Reference> encounter();
+
+  Optional<Reference> author();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Reference> encounter();
+  Reference subject();
+
+  Optional<List<Extension>> extension();
+
+  CodeableConcept code();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Narrative> text();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<FlagStatus> status();
 
   Optional<List<CodeableConcept>> category();
 
-  static ImmutableFlag.CodeBuildStage builder() {
+  static ImmutableFlag.SubjectBuildStage builder() {
     return ImmutableFlag.builder();
   }
 }

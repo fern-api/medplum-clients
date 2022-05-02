@@ -16,9 +16,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface UserConfiguration_Search {
-  Optional<String> name();
-
   Optional<String> criteria();
+
+  Optional<String> name();
 
   static ImmutableUserConfiguration_Search.Builder builder() {
     return ImmutableUserConfiguration_Search.builder();

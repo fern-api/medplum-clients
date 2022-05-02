@@ -18,11 +18,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Destination {
-  Optional<List<Extension>> extension();
-
   Coding profile();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   Optional<Integer> index();
 

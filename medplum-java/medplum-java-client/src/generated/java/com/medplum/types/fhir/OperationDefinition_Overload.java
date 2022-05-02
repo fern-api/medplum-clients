@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition_Overload {
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
 
   Optional<List<String>> parameterName();
 
   Optional<String> comment();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 

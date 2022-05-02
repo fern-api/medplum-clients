@@ -18,67 +18,67 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Questionnaire {
-  Optional<Markdown> copyright();
-
-  Optional<Boolean> experimental();
-
-  Optional<String> version();
+  Optional<Period> effectivePeriod();
 
   Optional<Id> id();
 
-  Optional<String> name();
-
-  Optional<Date> lastReviewDate();
+  Optional<List<Coding>> code();
 
   Optional<Meta> meta();
 
-  Optional<Uri> implicitRules();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Questionnaire_Item>> item();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> url();
-
-  Optional<DateTime> date();
-
   Optional<List<ContactDetail>> contact();
 
-  Optional<List<UsageContext>> useContext();
+  Optional<String> name();
 
-  Optional<String> title();
+  Optional<Markdown> copyright();
 
-  Optional<Date> approvalDate();
-
-  Optional<List<Coding>> code();
-
-  String resourceType();
-
-  Optional<List<Canonical>> derivedFrom();
+  Optional<Uri> implicitRules();
 
   Optional<Narrative> text();
 
-  Optional<Code> language();
-
-  Optional<QuestionnaireStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<DateTime> date();
 
   Optional<List<Code>> subjectType();
 
+  Optional<String> version();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<List<Questionnaire_Item>> item();
+
+  Optional<Date> approvalDate();
+
+  Optional<Uri> url();
+
+  Optional<QuestionnaireStatus> status();
+
   Optional<Markdown> description();
 
-  Optional<Period> effectivePeriod();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Canonical>> derivedFrom();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<UsageContext>> useContext();
+
+  String resourceType();
 
   Optional<String> publisher();
 
-  Optional<Markdown> purpose();
+  Optional<Code> language();
 
   Optional<List<ResourceList>> contained();
 
   Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> title();
+
+  Optional<Markdown> purpose();
 
   static ImmutableQuestionnaire.ResourceTypeBuildStage builder() {
     return ImmutableQuestionnaire.builder();

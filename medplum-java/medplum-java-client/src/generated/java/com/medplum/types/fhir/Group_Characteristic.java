@@ -18,27 +18,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Group_Characteristic {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Quantity> valueQuantity();
+  Optional<String> id();
 
   Optional<Boolean> valueBoolean();
 
-  Optional<Reference> valueReference();
-
-  Optional<String> id();
+  Optional<Boolean> exclude();
 
   Optional<Range> valueRange();
 
-  CodeableConcept code();
+  Optional<List<Extension>> extension();
 
-  Optional<Boolean> exclude();
+  Optional<Reference> valueReference();
+
+  Optional<List<Extension>> modifierExtension();
+
+  CodeableConcept code();
 
   Optional<Period> period();
 
-  Optional<List<Extension>> extension();
-
   Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<Quantity> valueQuantity();
 
   static ImmutableGroup_Characteristic.CodeBuildStage builder() {
     return ImmutableGroup_Characteristic.builder();

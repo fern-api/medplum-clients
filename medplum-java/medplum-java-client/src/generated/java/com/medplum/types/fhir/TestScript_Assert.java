@@ -18,53 +18,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Assert {
-  Optional<List<Extension>> extension();
-
-  Optional<String> description();
-
   Optional<Code> resource();
-
-  Optional<String> responseCode();
-
-  Optional<String> id();
-
-  Optional<String> path();
-
-  Optional<String> compareToSourceExpression();
-
-  Optional<String> compareToSourcePath();
-
-  Optional<Testscript_assertRequestmethod> requestMethod();
 
   Optional<String> requestURL();
 
-  Optional<Boolean> navigationLinks();
+  Optional<String> responseCode();
 
-  Optional<Boolean> warningOnly();
-
-  Optional<Code> contentType();
-
-  Optional<Testscript_assertDirection> direction();
-
-  Optional<Testscript_assertOperator> operator();
-
-  Optional<Id> sourceId();
-
-  Optional<Testscript_assertResponse> response();
-
-  Optional<String> label();
-
-  Optional<String> expression();
+  Optional<Id> validateProfileId();
 
   Optional<String> value();
 
+  Optional<Boolean> navigationLinks();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> path();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> compareToSourceId();
+  Optional<Testscript_assertOperator> operator();
+
+  Optional<Code> contentType();
+
+  Optional<String> label();
+
+  Optional<Boolean> warningOnly();
+
+  Optional<String> id();
+
+  Optional<String> compareToSourceExpression();
 
   Optional<String> headerField();
 
-  Optional<Id> validateProfileId();
+  Optional<Id> sourceId();
+
+  Optional<Testscript_assertRequestmethod> requestMethod();
+
+  Optional<Testscript_assertResponse> response();
+
+  Optional<String> expression();
+
+  Optional<String> compareToSourcePath();
+
+  Optional<String> compareToSourceId();
+
+  Optional<String> description();
+
+  Optional<Testscript_assertDirection> direction();
 
   Optional<String> minimumId();
 

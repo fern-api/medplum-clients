@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_Capability {
-  Optional<String> id();
-
-  CodeableConcept type();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<List<CodeableConcept>> description();
 
   Optional<List<Extension>> extension();
+
+  CodeableConcept type();
 
   static ImmutableDeviceDefinition_Capability.TypeBuildStage builder() {
     return ImmutableDeviceDefinition_Capability.builder();

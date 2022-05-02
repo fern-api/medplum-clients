@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Stratum {
-  Optional<String> id();
-
   Optional<CodeableConcept> value();
 
-  Optional<List<MeasureReport_Component>> component();
+  Optional<String> id();
+
+  Optional<Quantity> measureScore();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<MeasureReport_Component>> component();
 
   Optional<List<MeasureReport_Population1>> population();
 
-  Optional<Quantity> measureScore();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMeasureReport_Stratum.Builder builder() {
     return ImmutableMeasureReport_Stratum.builder();

@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition {
+  Optional<Canonical> base();
+
+  Optional<Canonical> outputProfile();
+
   Optional<List<UsageContext>> useContext();
 
-  Optional<DateTime> date();
+  Optional<String> title();
+
+  Optional<List<Extension>> extension();
+
+  Optional<OperationdefinitionStatus> status();
+
+  Optional<Markdown> description();
+
+  Optional<Markdown> comment();
+
+  Optional<List<Code>> resource();
+
+  Optional<String> name();
+
+  Optional<Boolean> system();
+
+  Optional<List<ContactDetail>> contact();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> language();
+  Optional<Boolean> type();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<String> name();
+  Optional<Canonical> inputProfile();
 
   Optional<Boolean> experimental();
 
   Optional<List<OperationDefinition_Overload>> overload();
 
-  Optional<List<Code>> resource();
-
-  Optional<Code> code();
-
-  Optional<Boolean> type();
-
-  Optional<List<OperationDefinition_Parameter>> parameter();
-
-  Optional<String> title();
-
-  Optional<Canonical> base();
-
-  Optional<Boolean> system();
-
-  Optional<OperationdefinitionKind> kind();
-
-  Optional<Id> id();
-
-  Optional<Meta> meta();
-
-  Optional<Boolean> instance();
-
-  Optional<Markdown> description();
-
-  Optional<Markdown> purpose();
-
   Optional<String> publisher();
-
-  Optional<Narrative> text();
-
-  Optional<Markdown> comment();
-
-  Optional<OperationdefinitionStatus> status();
-
-  Optional<Boolean> affectsState();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ContactDetail>> contact();
 
   Optional<String> version();
 
   Optional<List<CodeableConcept>> jurisdiction();
 
-  String resourceType();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Canonical> inputProfile();
+  Optional<Code> code();
 
-  Optional<Canonical> outputProfile();
+  Optional<Boolean> affectsState();
 
   Optional<Uri> url();
+
+  Optional<DateTime> date();
+
+  Optional<List<OperationDefinition_Parameter>> parameter();
+
+  Optional<Code> language();
+
+  Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<OperationdefinitionKind> kind();
+
+  Optional<Markdown> purpose();
+
+  String resourceType();
+
+  Optional<Meta> meta();
+
+  Optional<Boolean> instance();
 
   static ImmutableOperationDefinition.ResourceTypeBuildStage builder() {
     return ImmutableOperationDefinition.builder();

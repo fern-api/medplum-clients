@@ -18,21 +18,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyRequest_Parameter {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Boolean> valueBoolean();
-
   Optional<String> id();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Range> valueRange();
 
   Optional<List<Extension>> extension();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Boolean> valueBoolean();
+
   Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<Range> valueRange();
+
+  Optional<Quantity> valueQuantity();
 
   static ImmutableSupplyRequest_Parameter.Builder builder() {
     return ImmutableSupplyRequest_Parameter.builder();

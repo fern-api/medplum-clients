@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Item {
-  Optional<Period> servicedPeriod();
-
-  Optional<List<PositiveInt>> careTeamSequence();
+  Optional<CodeableConcept> bodySite();
 
   Optional<List<PositiveInt>> procedureSequence();
 
-  Optional<CodeableConcept> locationCodeableConcept();
+  Optional<Period> servicedPeriod();
 
-  Optional<Quantity> quantity();
+  Optional<List<PositiveInt>> diagnosisSequence();
 
-  Optional<Money> unitPrice();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> revenue();
+  Optional<List<CodeableConcept>> modifier();
 
-  Optional<List<Reference>> encounter();
-
-  Optional<List<CodeableConcept>> programCode();
-
-  Optional<String> servicedDate();
-
-  Optional<Address> locationAddress();
-
-  Optional<Money> net();
-
-  Optional<CodeableConcept> bodySite();
+  Optional<Reference> locationReference();
 
   Optional<CodeableConcept> category();
 
+  Optional<List<CodeableConcept>> programCode();
+
+  Optional<Quantity> quantity();
+
+  Optional<CodeableConcept> revenue();
+
+  Optional<Money> net();
+
+  Optional<Money> unitPrice();
+
+  Optional<List<PositiveInt>> careTeamSequence();
+
+  Optional<List<Reference>> udi();
+
   Optional<List<Extension>> extension();
 
-  Optional<List<PositiveInt>> diagnosisSequence();
+  CodeableConcept productOrService();
 
   Optional<String> id();
 
   Optional<List<PositiveInt>> informationSequence();
 
-  Optional<List<CodeableConcept>> modifier();
+  Optional<List<Reference>> encounter();
+
+  Optional<String> servicedDate();
+
+  Optional<CodeableConcept> locationCodeableConcept();
 
   Optional<List<Claim_Detail>> detail();
 
-  Optional<List<Reference>> udi();
-
-  Optional<Decimal> factor();
-
-  Optional<List<CodeableConcept>> subSite();
-
-  CodeableConcept productOrService();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Address> locationAddress();
 
   Optional<PositiveInt> sequence();
 
-  Optional<Reference> locationReference();
+  Optional<List<CodeableConcept>> subSite();
+
+  Optional<Decimal> factor();
 
   static ImmutableClaim_Item.ProductOrServiceBuildStage builder() {
     return ImmutableClaim_Item.builder();

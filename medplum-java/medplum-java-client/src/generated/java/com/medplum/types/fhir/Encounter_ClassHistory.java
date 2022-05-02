@@ -18,18 +18,18 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_ClassHistory {
-  Optional<List<Extension>> modifierExtension();
+  @JsonProperty("class")
+  Coding _class();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
   Period period();
 
-  @JsonProperty("class")
-  Coding _class();
+  Optional<String> id();
 
-  static ImmutableEncounter_ClassHistory.PeriodBuildStage builder() {
+  static ImmutableEncounter_ClassHistory._classBuildStage builder() {
     return ImmutableEncounter_ClassHistory.builder();
   }
 }

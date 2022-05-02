@@ -18,27 +18,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskAssessment_Prediction {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> whenPeriod();
-
-  Optional<CodeableConcept> qualitativeRisk();
-
   Optional<String> id();
-
-  Optional<String> rationale();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> outcome();
 
   Optional<Double> probabilityDecimal();
 
-  Optional<Range> whenRange();
-
   Optional<Range> probabilityRange();
 
+  Optional<Period> whenPeriod();
+
+  Optional<Range> whenRange();
+
   Optional<Decimal> relativeRisk();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> rationale();
+
+  Optional<CodeableConcept> outcome();
+
+  Optional<CodeableConcept> qualitativeRisk();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableRiskAssessment_Prediction.Builder builder() {
     return ImmutableRiskAssessment_Prediction.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_MaxDispense {
-  Quantity quantity();
-
-  Optional<Duration> period();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
+
+  Quantity quantity();
+
+  Optional<Duration> period();
 
   static ImmutableMedicationKnowledge_MaxDispense.QuantityBuildStage builder() {
     return ImmutableMedicationKnowledge_MaxDispense.builder();

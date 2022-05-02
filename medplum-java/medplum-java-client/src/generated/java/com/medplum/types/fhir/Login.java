@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Login {
-  Optional<Instant> authTime();
-
-  Optional<Code> language();
-
-  Optional<String> codeChallengeMethod();
-
-  Optional<String> code();
-
-  Optional<Boolean> revoked();
-
-  Optional<String> cookie();
-
-  Optional<Reference> client();
-
-  Optional<Meta> meta();
-
-  Optional<String> scope();
-
-  Optional<Reference> user();
-
-  Optional<String> codeChallenge();
-
   Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Optional<Reference> membership();
-
-  Optional<String> refreshSecret();
-
-  Optional<Boolean> granted();
-
-  Optional<String> nonce();
-
-  Optional<String> remoteAddress();
-
-  Optional<String> resourceType();
-
-  Optional<List<Reference>> compartments();
 
   Optional<String> authMethod();
 
+  Optional<Instant> authTime();
+
+  Optional<Reference> client();
+
+  Optional<String> refreshSecret();
+
+  Optional<Reference> membership();
+
+  Optional<Boolean> revoked();
+
+  Optional<String> resourceType();
+
+  Optional<String> nonce();
+
+  Optional<Boolean> granted();
+
   Optional<Boolean> admin();
 
+  Optional<Id> id();
+
+  Optional<Code> language();
+
+  Optional<Meta> meta();
+
+  Optional<Reference> user();
+
+  Optional<String> scope();
+
+  Optional<String> codeChallenge();
+
   Optional<String> userAgent();
+
+  Optional<String> code();
+
+  Optional<List<Reference>> compartments();
+
+  Optional<String> cookie();
+
+  Optional<String> codeChallengeMethod();
+
+  Optional<String> remoteAddress();
 
   static ImmutableLogin.Builder builder() {
     return ImmutableLogin.builder();

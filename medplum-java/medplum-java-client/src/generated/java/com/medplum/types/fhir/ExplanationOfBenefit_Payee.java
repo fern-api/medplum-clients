@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Payee {
+  Optional<CodeableConcept> type();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> type();
 
   Optional<List<Extension>> modifierExtension();
 

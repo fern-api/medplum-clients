@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap_Target {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> comment();
 
   Optional<String> id();
 
-  Optional<List<ConceptMap_DependsOn>> dependsOn();
-
   Optional<List<Extension>> extension();
-
-  Optional<Code> code();
-
-  Optional<String> display();
 
   Optional<Conceptmap_targetEquivalence> equivalence();
 
-  Optional<String> comment();
+  Optional<Code> code();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> display();
 
   Optional<List<ConceptMap_DependsOn>> product();
+
+  Optional<List<ConceptMap_DependsOn>> dependsOn();
 
   static ImmutableConceptMap_Target.Builder builder() {
     return ImmutableConceptMap_Target.builder();

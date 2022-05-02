@@ -19,15 +19,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Capability {
-  Optional<String> id();
+  Optional<List<Extension>> extension();
+
+  Optional<Integer> destination();
 
   Optional<List<Uri>> link();
 
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
   Canonical capabilities();
-
-  Optional<List<Integer>> origin();
-
-  Optional<Integer> destination();
 
   Optional<Boolean> validated();
 
@@ -35,9 +37,7 @@ public interface TestScript_Capability {
 
   Optional<String> description();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Integer>> origin();
 
   static ImmutableTestScript_Capability.CapabilitiesBuildStage builder() {
     return ImmutableTestScript_Capability.builder();

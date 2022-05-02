@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Location {
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<List<Reference>> endpoint();
-
-  Optional<String> availabilityExceptions();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Id> id();
-
-  Optional<List<CodeableConcept>> type();
-
-  Optional<Meta> meta();
-
-  Optional<Address> address();
-
-  Optional<Coding> operationalStatus();
-
-  Optional<CodeableConcept> physicalType();
-
-  Optional<Location_Position> position();
-
-  Optional<List<Location_HoursOfOperation>> hoursOfOperation();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> name();
-
-  String resourceType();
-
-  Optional<String> description();
-
-  Optional<List<Extension>> extension();
-
-  Optional<LocationStatus> status();
+  Optional<Narrative> text();
 
   Optional<List<Identifier>> identifier();
 
   Optional<Reference> managingOrganization();
 
-  Optional<Narrative> text();
+  Optional<List<Extension>> extension();
 
-  Optional<Reference> partOf();
+  Optional<LocationStatus> status();
+
+  Optional<Location_Position> position();
+
+  Optional<List<Reference>> endpoint();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Id> id();
+
+  Optional<LocationMode> mode();
+
+  Optional<List<CodeableConcept>> type();
+
+  Optional<Address> address();
+
+  Optional<List<Location_HoursOfOperation>> hoursOfOperation();
 
   Optional<Code> language();
 
+  Optional<CodeableConcept> physicalType();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<String>> alias();
 
-  Optional<LocationMode> mode();
+  Optional<String> availabilityExceptions();
+
+  String resourceType();
+
+  Optional<Reference> partOf();
+
+  Optional<Meta> meta();
+
+  Optional<String> description();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> name();
+
+  Optional<Coding> operationalStatus();
 
   static ImmutableLocation.ResourceTypeBuildStage builder() {
     return ImmutableLocation.builder();

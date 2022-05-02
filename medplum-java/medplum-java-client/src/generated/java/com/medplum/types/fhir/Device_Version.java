@@ -21,11 +21,11 @@ public interface Device_Version {
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> value();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
-
-  Optional<String> value();
 
   Optional<CodeableConcept> type();
 

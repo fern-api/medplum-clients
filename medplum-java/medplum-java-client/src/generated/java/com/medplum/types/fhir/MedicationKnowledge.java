@@ -17,67 +17,67 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge {
-  Optional<List<ResourceList>> contained();
-
   Optional<List<String>> synonym();
-
-  Optional<List<CodeableConcept>> intendedRoute();
-
-  Optional<List<CodeableConcept>> productType();
-
-  String resourceType();
-
-  Optional<CodeableConcept> doseForm();
-
-  Optional<List<MedicationKnowledge_Cost>> cost();
-
-  Optional<List<MedicationKnowledge_DrugCharacteristic>> drugCharacteristic();
-
-  Optional<List<MedicationKnowledge_Ingredient>> ingredient();
-
-  Optional<Code> language();
-
-  Optional<List<Reference>> contraindication();
-
-  Optional<Uri> implicitRules();
-
-  Optional<MedicationKnowledge_Packaging> packaging();
-
-  Optional<List<MedicationKnowledge_AdministrationGuidelines>> administrationGuidelines();
-
-  Optional<List<Reference>> associatedMedication();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<MedicationKnowledge_Monograph>> monograph();
-
-  Optional<Markdown> preparationInstruction();
-
-  Optional<List<MedicationKnowledge_RelatedMedicationKnowledge>> relatedMedicationKnowledge();
 
   Optional<Meta> meta();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<MedicationKnowledge_DrugCharacteristic>> drugCharacteristic();
 
-  Optional<CodeableConcept> code();
+  Optional<Code> language();
 
-  Optional<List<MedicationKnowledge_MonitoringProgram>> monitoringProgram();
-
-  Optional<Id> id();
-
-  Optional<Reference> manufacturer();
-
-  Optional<List<MedicationKnowledge_MedicineClassification>> medicineClassification();
-
-  Optional<List<MedicationKnowledge_Kinetics>> kinetics();
-
-  Optional<Narrative> text();
+  String resourceType();
 
   Optional<List<MedicationKnowledge_Regulatory>> regulatory();
 
+  Optional<Markdown> preparationInstruction();
+
+  Optional<List<CodeableConcept>> intendedRoute();
+
   Optional<Code> status();
 
+  Optional<List<MedicationKnowledge_Monograph>> monograph();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Narrative> text();
+
   Optional<Quantity> amount();
+
+  Optional<Id> id();
+
+  Optional<List<MedicationKnowledge_RelatedMedicationKnowledge>> relatedMedicationKnowledge();
+
+  Optional<List<MedicationKnowledge_AdministrationGuidelines>> administrationGuidelines();
+
+  Optional<List<Reference>> contraindication();
+
+  Optional<List<CodeableConcept>> productType();
+
+  Optional<List<MedicationKnowledge_Ingredient>> ingredient();
+
+  Optional<List<MedicationKnowledge_Kinetics>> kinetics();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> associatedMedication();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> doseForm();
+
+  Optional<List<MedicationKnowledge_MedicineClassification>> medicineClassification();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<MedicationKnowledge_MonitoringProgram>> monitoringProgram();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Reference> manufacturer();
+
+  Optional<MedicationKnowledge_Packaging> packaging();
+
+  Optional<List<MedicationKnowledge_Cost>> cost();
 
   static ImmutableMedicationKnowledge.ResourceTypeBuildStage builder() {
     return ImmutableMedicationKnowledge.builder();

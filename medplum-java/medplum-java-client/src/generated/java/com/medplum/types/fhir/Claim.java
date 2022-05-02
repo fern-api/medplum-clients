@@ -17,77 +17,77 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim {
-  Optional<Code> language();
+  Optional<List<Claim_Diagnosis>> diagnosis();
 
-  Optional<Reference> insurer();
+  Optional<List<Claim_SupportingInfo>> supportingInfo();
+
+  Optional<Money> total();
 
   String resourceType();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Claim_Accident> accident();
 
   Optional<List<Claim_Item>> item();
 
-  Reference patient();
-
-  Optional<Reference> enterer();
-
-  Optional<CodeableConcept> subType();
-
-  Optional<Code> status();
-
-  Optional<Reference> facility();
-
-  Optional<Meta> meta();
-
-  Optional<List<Claim_Related>> related();
+  Optional<Period> billablePeriod();
 
   Optional<Claim_Payee> payee();
 
-  Optional<Period> billablePeriod();
-
-  Optional<List<ResourceList>> contained();
-
   Optional<Reference> prescription();
-
-  Optional<Reference> referral();
-
-  Reference provider();
-
-  Optional<List<Extension>> extension();
-
-  CodeableConcept type();
-
-  Optional<Reference> originalPrescription();
-
-  Optional<List<Claim_SupportingInfo>> supportingInfo();
-
-  Optional<Id> id();
-
-  Optional<List<Identifier>> identifier();
-
-  CodeableConcept priority();
-
-  Optional<DateTime> created();
-
-  Optional<CodeableConcept> fundsReserve();
-
-  Optional<List<Claim_Procedure>> procedure();
-
-  Optional<List<Claim_CareTeam>> careTeam();
 
   List<Claim_Insurance> insurance();
 
+  Reference provider();
+
+  CodeableConcept priority();
+
+  Optional<List<Claim_CareTeam>> careTeam();
+
+  Optional<List<Identifier>> identifier();
+
+  CodeableConcept type();
+
   Optional<ClaimUse> use();
 
-  Optional<Money> total();
+  Optional<Meta> meta();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<Claim_Diagnosis>> diagnosis();
+  Optional<Reference> originalPrescription();
+
+  Reference patient();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> facility();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> referral();
+
+  Optional<List<Claim_Procedure>> procedure();
+
+  Optional<Code> language();
 
   Optional<Narrative> text();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> insurer();
+
+  Optional<Code> status();
+
+  Optional<Id> id();
+
+  Optional<DateTime> created();
+
+  Optional<List<Claim_Related>> related();
+
+  Optional<Reference> enterer();
+
+  Optional<CodeableConcept> fundsReserve();
+
+  Optional<CodeableConcept> subType();
 
   static ImmutableClaim.ResourceTypeBuildStage builder() {
     return ImmutableClaim.builder();

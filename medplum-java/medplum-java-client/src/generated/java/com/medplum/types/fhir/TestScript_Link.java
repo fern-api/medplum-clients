@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Link {
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<String> description();
+
+  Optional<String> id();
 
   Optional<Uri> url();
 

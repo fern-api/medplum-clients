@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AdverseEvent_Causality {
-  Optional<String> id();
+  Optional<Reference> author();
 
-  Optional<String> productRelatedness();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<CodeableConcept> assessment();
 
+  Optional<String> productRelatedness();
+
   Optional<CodeableConcept> method();
 
-  Optional<Reference> author();
-
   Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableAdverseEvent_Causality.Builder builder() {
     return ImmutableAdverseEvent_Causality.builder();

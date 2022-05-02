@@ -18,47 +18,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RelatedPerson {
-  Optional<Code> language();
-
-  Optional<Date> birthDate();
-
-  Reference patient();
-
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<Narrative> text();
-
-  Optional<List<Attachment>> photo();
-
-  Optional<List<Identifier>> identifier();
+  Optional<Id> id();
 
   Optional<RelatedpersonGender> gender();
 
-  Optional<List<CodeableConcept>> relationship();
-
-  Optional<Boolean> active();
-
-  Optional<List<RelatedPerson_Communication>> communication();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Address>> address();
-
-  Optional<Uri> implicitRules();
-
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
+  Reference patient();
 
   Optional<List<HumanName>> name();
 
+  String resourceType();
+
   Optional<Meta> meta();
 
-  Optional<Period> period();
+  Optional<Boolean> active();
 
-  Optional<Id> id();
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> relationship();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<Date> birthDate();
+
+  Optional<List<Address>> address();
+
+  Optional<List<Attachment>> photo();
+
+  Optional<Narrative> text();
+
+  Optional<List<RelatedPerson_Communication>> communication();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Optional<Period> period();
 
   static ImmutableRelatedPerson.PatientBuildStage builder() {
     return ImmutableRelatedPerson.builder();

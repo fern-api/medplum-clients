@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Parameter {
-  Optional<Implementationguide_parameterCode> code();
-
   Optional<List<Extension>> extension();
 
-  Optional<String> value();
-
   Optional<String> id();
+
+  Optional<Implementationguide_parameterCode> code();
+
+  Optional<String> value();
 
   Optional<List<Extension>> modifierExtension();
 

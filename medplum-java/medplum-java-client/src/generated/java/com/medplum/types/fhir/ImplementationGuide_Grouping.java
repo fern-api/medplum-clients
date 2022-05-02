@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Grouping {
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> name();
 
   Optional<String> id();
 
-  Optional<String> description();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> description();
 
   static ImmutableImplementationGuide_Grouping.Builder builder() {
     return ImmutableImplementationGuide_Grouping.builder();

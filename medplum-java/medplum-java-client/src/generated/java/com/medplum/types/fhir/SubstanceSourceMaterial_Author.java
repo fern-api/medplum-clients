@@ -21,11 +21,11 @@ public interface SubstanceSourceMaterial_Author {
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<CodeableConcept> authorType();
+
   Optional<String> authorDescription();
 
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> authorType();
 
   static ImmutableSubstanceSourceMaterial_Author.Builder builder() {
     return ImmutableSubstanceSourceMaterial_Author.builder();

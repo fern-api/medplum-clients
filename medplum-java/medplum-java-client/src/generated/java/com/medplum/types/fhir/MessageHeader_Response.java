@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageHeader_Response {
-  Optional<Reference> details();
+  Optional<Id> identifier();
 
   Optional<Messageheader_responseCode> code();
 
-  Optional<Id> identifier();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> details();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMessageHeader_Response.Builder builder() {
     return ImmutableMessageHeader_Response.builder();

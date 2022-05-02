@@ -18,13 +18,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_Roc {
-  Optional<List<Integer>> score();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Integer>> numFN();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Integer>> numFP();
+
+  Optional<String> id();
 
   Optional<List<Decimal>> precision();
 
@@ -34,9 +34,9 @@ public interface MolecularSequence_Roc {
 
   Optional<List<Decimal>> sensitivity();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Integer>> score();
 
   static ImmutableMolecularSequence_Roc.Builder builder() {
     return ImmutableMolecularSequence_Roc.builder();

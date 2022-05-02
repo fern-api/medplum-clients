@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup_RelatedAction {
+  Optional<Range> offsetRange();
+
+  Optional<Id> actionId();
+
+  Optional<Duration> offsetDuration();
+
+  Optional<List<Extension>> extension();
+
   Optional<Code> relationship();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Duration> offsetDuration();
-
-  Optional<Id> actionId();
-
   Optional<String> id();
-
-  Optional<Range> offsetRange();
 
   static ImmutableRequestGroup_RelatedAction.Builder builder() {
     return ImmutableRequestGroup_RelatedAction.builder();

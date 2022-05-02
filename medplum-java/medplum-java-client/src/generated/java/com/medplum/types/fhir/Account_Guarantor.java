@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Account_Guarantor {
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> period();
+  Optional<String> id();
 
   Reference party();
 
   Optional<Boolean> onHold();
+
+  Optional<Period> period();
 
   static ImmutableAccount_Guarantor.PartyBuildStage builder() {
     return ImmutableAccount_Guarantor.builder();

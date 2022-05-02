@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Payee {
-  Optional<List<Extension>> extension();
-
   Optional<Reference> party();
+
+  Optional<String> id();
 
   CodeableConcept type();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableClaim_Payee.TypeBuildStage builder() {
     return ImmutableClaim_Payee.builder();

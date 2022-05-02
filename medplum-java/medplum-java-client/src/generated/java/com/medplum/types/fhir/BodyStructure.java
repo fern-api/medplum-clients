@@ -20,37 +20,37 @@ import org.immutables.value.Value;
 public interface BodyStructure {
   Optional<CodeableConcept> location();
 
-  Optional<String> description();
-
-  Optional<List<Attachment>> image();
-
-  String resourceType();
-
-  Optional<CodeableConcept> morphology();
-
-  Reference patient();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> active();
-
-  Optional<List<CodeableConcept>> locationQualifier();
+  Optional<Code> language();
 
   Optional<Narrative> text();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<Code> language();
+  String resourceType();
+
+  Optional<List<CodeableConcept>> locationQualifier();
+
+  Optional<CodeableConcept> morphology();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Boolean> active();
+
+  Optional<String> description();
+
+  Reference patient();
+
+  Optional<List<Attachment>> image();
+
+  Optional<Meta> meta();
 
   static ImmutableBodyStructure.ResourceTypeBuildStage builder() {
     return ImmutableBodyStructure.builder();

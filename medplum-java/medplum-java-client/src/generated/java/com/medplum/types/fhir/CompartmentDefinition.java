@@ -18,49 +18,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CompartmentDefinition {
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CompartmentdefinitionStatus> status();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<DateTime> date();
-
-  Optional<String> name();
-
-  Optional<String> publisher();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Uri> implicitRules();
 
   String resourceType();
 
-  Optional<List<UsageContext>> useContext();
+  Optional<Id> id();
 
-  Optional<List<CompartmentDefinition_Resource>> resource();
+  Optional<Boolean> experimental();
+
+  Optional<Boolean> search();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> publisher();
 
   Optional<Uri> url();
 
-  Optional<CompartmentdefinitionCode> code();
-
-  Optional<Uri> implicitRules();
-
   Optional<Markdown> purpose();
 
-  Optional<Boolean> experimental();
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<CompartmentdefinitionStatus> status();
+
+  Optional<DateTime> date();
 
   Optional<Markdown> description();
 
   Optional<Code> language();
 
-  Optional<Id> id();
+  Optional<String> name();
 
-  Optional<List<ResourceList>> contained();
+  Optional<CompartmentdefinitionCode> code();
 
-  Optional<Boolean> search();
+  Optional<List<CompartmentDefinition_Resource>> resource();
 
   Optional<String> version();
 

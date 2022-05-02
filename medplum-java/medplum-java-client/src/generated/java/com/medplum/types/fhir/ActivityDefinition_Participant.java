@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface ActivityDefinition_Participant {
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
   Optional<Code> type();
 
   Optional<CodeableConcept> role();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableActivityDefinition_Participant.Builder builder() {
     return ImmutableActivityDefinition_Participant.builder();

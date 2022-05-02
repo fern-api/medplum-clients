@@ -21,11 +21,11 @@ public interface DeviceDefinition_DeviceName {
 
   Optional<String> id();
 
-  Optional<Devicedefinition_devicenameType> type();
-
   Optional<String> name();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Devicedefinition_devicenameType> type();
 
   static ImmutableDeviceDefinition_DeviceName.Builder builder() {
     return ImmutableDeviceDefinition_DeviceName.builder();

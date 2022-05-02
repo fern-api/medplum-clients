@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface UserConfiguration_Menu {
-  Optional<List<UserConfiguration_Menu_Link>> link();
-
   Optional<String> title();
+
+  Optional<List<UserConfiguration_Menu_Link>> link();
 
   static ImmutableUserConfiguration_Menu.Builder builder() {
     return ImmutableUserConfiguration_Menu.builder();

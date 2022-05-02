@@ -18,11 +18,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_Closure {
-  Optional<String> id();
-
   Optional<Boolean> translation();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 

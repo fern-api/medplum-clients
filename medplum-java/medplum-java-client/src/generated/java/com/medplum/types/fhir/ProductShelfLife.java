@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ProductShelfLife {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
-  Quantity period();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Identifier> identifier();
 
   CodeableConcept type();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> id();
 
   Optional<List<CodeableConcept>> specialPrecautionsForStorage();
 
-  static ImmutableProductShelfLife.PeriodBuildStage builder() {
+  Quantity period();
+
+  static ImmutableProductShelfLife.TypeBuildStage builder() {
     return ImmutableProductShelfLife.builder();
   }
 }

@@ -17,47 +17,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentManifest {
-  Optional<Code> language();
+  Optional<List<DocumentManifest_Related>> related();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> recipient();
+
+  Optional<List<Reference>> author();
+
+  Optional<CodeableConcept> type();
+
+  Optional<Id> id();
+
+  Optional<Identifier> masterIdentifier();
+
+  Optional<DocumentmanifestStatus> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> subject();
+
+  List<Reference> content();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> created();
 
-  Optional<Identifier> masterIdentifier();
-
-  Optional<Uri> source();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<CodeableConcept> type();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> description();
-
-  Optional<List<Reference>> author();
-
-  Optional<Reference> subject();
-
   Optional<List<Extension>> extension();
 
-  Optional<DocumentmanifestStatus> status();
+  Optional<Code> language();
 
   String resourceType();
 
-  Optional<List<Reference>> recipient();
-
-  Optional<Id> id();
-
-  List<Reference> content();
-
-  Optional<Meta> meta();
+  Optional<Uri> source();
 
   Optional<Narrative> text();
 
-  Optional<List<DocumentManifest_Related>> related();
-
-  Optional<List<Identifier>> identifier();
+  Optional<String> description();
 
   static ImmutableDocumentManifest.ResourceTypeBuildStage builder() {
     return ImmutableDocumentManifest.builder();

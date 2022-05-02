@@ -18,87 +18,87 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition {
-  Optional<Id> id();
-
-  Optional<Reference> subjectReference();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<ContactDetail>> author();
-
-  Optional<List<PlanDefinition_Goal>> goal();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<List<Canonical>> library();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Markdown> copyright();
-
-  Optional<Date> approvalDate();
-
-  Optional<List<PlanDefinition_Action>> action();
-
-  Optional<Boolean> experimental();
-
-  Optional<String> title();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<Narrative> text();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Markdown> description();
-
-  Optional<String> usage();
-
-  Optional<List<ContactDetail>> editor();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> publisher();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<Period> effectivePeriod();
+  Optional<Uri> url();
 
   Optional<String> subtitle();
 
-  Optional<Uri> implicitRules();
+  Optional<String> publisher();
 
-  Optional<List<ContactDetail>> reviewer();
+  Optional<Period> effectivePeriod();
 
-  Optional<List<UsageContext>> useContext();
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ContactDetail>> editor();
 
   Optional<List<RelatedArtifact>> relatedArtifact();
 
-  Optional<PlandefinitionStatus> status();
+  Optional<Date> lastReviewDate();
 
-  Optional<CodeableConcept> type();
+  Optional<String> name();
+
+  Optional<Date> approvalDate();
 
   String resourceType();
 
-  Optional<List<CodeableConcept>> topic();
+  Optional<List<Identifier>> identifier();
 
-  Optional<Meta> meta();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<Uri> url();
-
-  Optional<Markdown> purpose();
-
-  Optional<Code> language();
+  Optional<List<PlanDefinition_Goal>> goal();
 
   Optional<String> version();
 
+  Optional<CodeableConcept> type();
+
+  Optional<PlandefinitionStatus> status();
+
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> purpose();
+
+  Optional<Markdown> copyright();
+
+  Optional<String> usage();
+
+  Optional<Boolean> experimental();
+
+  Optional<Reference> subjectReference();
+
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Id> id();
+
+  Optional<Code> language();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<Markdown> description();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<List<Canonical>> library();
+
+  Optional<List<PlanDefinition_Action>> action();
+
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
+
+  Optional<Uri> implicitRules();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
 
   Optional<DateTime> date();
 
-  Optional<String> name();
+  Optional<List<CodeableConcept>> topic();
 
   static ImmutablePlanDefinition.ResourceTypeBuildStage builder() {
     return ImmutablePlanDefinition.builder();

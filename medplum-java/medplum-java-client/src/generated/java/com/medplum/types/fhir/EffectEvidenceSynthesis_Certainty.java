@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface EffectEvidenceSynthesis_Certainty {
   Optional<List<EffectEvidenceSynthesis_CertaintySubcomponent>> certaintySubcomponent();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
 
   Optional<List<CodeableConcept>> rating();
 
+  Optional<List<Extension>> extension();
+
   Optional<List<Annotation>> note();
+
+  Optional<String> id();
 
   static ImmutableEffectEvidenceSynthesis_Certainty.Builder builder() {
     return ImmutableEffectEvidenceSynthesis_Certainty.builder();

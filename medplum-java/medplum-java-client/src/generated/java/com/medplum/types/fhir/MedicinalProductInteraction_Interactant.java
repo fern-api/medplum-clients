@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductInteraction_Interactant {
+  Optional<String> id();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> itemCodeableConcept();
+  Optional<List<Extension>> extension();
 
   Optional<Reference> itemReference();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> itemCodeableConcept();
 
   static ImmutableMedicinalProductInteraction_Interactant.Builder builder() {
     return ImmutableMedicinalProductInteraction_Interactant.builder();

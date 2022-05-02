@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_PatientCharacteristics {
-  Optional<CodeableConcept> characteristicCodeableConcept();
-
   Optional<String> id();
+
+  Optional<CodeableConcept> characteristicCodeableConcept();
 
   Optional<Quantity> characteristicQuantity();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<String>> value();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 

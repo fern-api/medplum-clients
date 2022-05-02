@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Diagnosis {
-  Optional<CodeableConcept> onAdmission();
-
   Optional<CodeableConcept> diagnosisCodeableConcept();
+
+  Optional<String> id();
 
   Optional<List<CodeableConcept>> type();
 
-  Optional<PositiveInt> sequence();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> onAdmission();
 
   Optional<CodeableConcept> packageCode();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<PositiveInt> sequence();
 
   Optional<Reference> diagnosisReference();
 

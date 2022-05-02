@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_AddItem {
-  Optional<CodeableConcept> locationCodeableConcept();
+  List<ClaimResponse_Adjudication> adjudication();
 
-  Optional<List<PositiveInt>> itemSequence();
-
-  Optional<List<PositiveInt>> noteNumber();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Money> unitPrice();
 
   Optional<Period> servicedPeriod();
 
+  Optional<String> id();
+
+  Optional<List<CodeableConcept>> subSite();
+
+  Optional<List<PositiveInt>> itemSequence();
+
+  Optional<List<PositiveInt>> subdetailSequence();
+
+  Optional<CodeableConcept> locationCodeableConcept();
+
+  Optional<List<PositiveInt>> noteNumber();
+
+  CodeableConcept productOrService();
+
   Optional<List<Reference>> provider();
-
-  Optional<List<ClaimResponse_Detail1>> detail();
-
-  Optional<Reference> locationReference();
-
-  List<ClaimResponse_Adjudication> adjudication();
-
-  Optional<List<CodeableConcept>> modifier();
 
   Optional<String> servicedDate();
 
-  Optional<Address> locationAddress();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> modifier();
 
   Optional<Decimal> factor();
 
   Optional<List<PositiveInt>> detailSequence();
 
-  Optional<String> id();
-
-  Optional<Money> unitPrice();
-
-  Optional<List<PositiveInt>> subdetailSequence();
-
-  Optional<Money> net();
-
-  Optional<Quantity> quantity();
-
-  CodeableConcept productOrService();
+  Optional<List<Extension>> extension();
 
   Optional<List<CodeableConcept>> programCode();
 
-  Optional<List<CodeableConcept>> subSite();
+  Optional<List<ClaimResponse_Detail1>> detail();
 
   Optional<CodeableConcept> bodySite();
 
-  Optional<List<Extension>> extension();
+  Optional<Quantity> quantity();
+
+  Optional<Reference> locationReference();
+
+  Optional<Money> net();
+
+  Optional<Address> locationAddress();
 
   static ImmutableClaimResponse_AddItem.ProductOrServiceBuildStage builder() {
     return ImmutableClaimResponse_AddItem.builder();

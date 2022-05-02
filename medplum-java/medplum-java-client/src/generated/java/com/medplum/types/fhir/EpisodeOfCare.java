@@ -17,47 +17,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EpisodeOfCare {
-  Optional<Reference> managingOrganization();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Reference patient();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Meta> meta();
-
-  Optional<List<Reference>> account();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> type();
-
-  Optional<List<EpisodeOfCare_Diagnosis>> diagnosis();
-
-  Optional<Period> period();
 
   Optional<List<Reference>> team();
 
   Optional<Code> language();
 
+  Optional<Narrative> text();
+
+  Optional<Reference> managingOrganization();
+
   Optional<List<Reference>> referralRequest();
-
-  Optional<Reference> careManager();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<List<Identifier>> identifier();
 
   Optional<List<EpisodeOfCare_StatusHistory>> statusHistory();
 
-  Optional<Narrative> text();
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> careManager();
+
+  Optional<Period> period();
+
+  Reference patient();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
 
   Optional<EpisodeofcareStatus> status();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Reference>> account();
+
+  String resourceType();
+
+  Optional<Id> id();
+
+  Optional<List<EpisodeOfCare_Diagnosis>> diagnosis();
+
+  Optional<List<CodeableConcept>> type();
 
   static ImmutableEpisodeOfCare.PatientBuildStage builder() {
     return ImmutableEpisodeOfCare.builder();

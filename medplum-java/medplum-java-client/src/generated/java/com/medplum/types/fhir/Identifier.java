@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface Identifier {
   Optional<Period> period();
 
+  Optional<CodeableConcept> type();
+
+  Optional<IdentifierUse> use();
+
+  Optional<Uri> system();
+
   Optional<Reference> assigner();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> type();
-
-  Optional<Uri> system();
-
-  Optional<String> value();
-
   Optional<List<Extension>> extension();
 
-  Optional<IdentifierUse> use();
+  Optional<String> value();
 
   static ImmutableIdentifier.Builder builder() {
     return ImmutableIdentifier.builder();

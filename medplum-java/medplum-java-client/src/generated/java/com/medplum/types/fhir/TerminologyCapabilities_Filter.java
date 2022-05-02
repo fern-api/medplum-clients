@@ -19,9 +19,9 @@ import org.immutables.value.Value;
 public interface TerminologyCapabilities_Filter {
   Optional<List<Extension>> extension();
 
-  Optional<List<Code>> op();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Code>> op();
 
   Optional<String> id();
 

@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface EffectEvidenceSynthesis_EffectEstimate {
   Optional<CodeableConcept> type();
 
-  Optional<Decimal> value();
-
-  Optional<String> description();
-
   Optional<CodeableConcept> unitOfMeasure();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<EffectEvidenceSynthesis_PrecisionEstimate>> precisionEstimate();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> variantState();
+
+  Optional<List<EffectEvidenceSynthesis_PrecisionEstimate>> precisionEstimate();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> description();
+
+  Optional<Decimal> value();
 
   static ImmutableEffectEvidenceSynthesis_EffectEstimate.Builder builder() {
     return ImmutableEffectEvidenceSynthesis_EffectEstimate.builder();

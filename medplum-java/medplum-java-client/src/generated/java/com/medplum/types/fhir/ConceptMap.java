@@ -18,63 +18,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap {
-  Optional<Markdown> description();
-
-  Optional<Markdown> copyright();
-
-  Optional<Code> language();
-
-  Optional<Markdown> purpose();
-
-  Optional<String> sourceCanonical();
-
   Optional<Narrative> text();
 
   Optional<ConceptmapStatus> status();
 
-  Optional<Id> id();
-
-  Optional<String> name();
-
-  Optional<DateTime> date();
-
-  Optional<String> title();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> version();
-
-  Optional<String> sourceUri();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> targetUri();
+  Optional<String> sourceCanonical();
 
   String resourceType();
 
-  Optional<Uri> url();
+  Optional<DateTime> date();
 
-  Optional<Boolean> experimental();
+  Optional<Id> id();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> description();
 
   Optional<List<UsageContext>> useContext();
 
-  Optional<String> publisher();
+  Optional<Identifier> identifier();
+
+  Optional<String> sourceUri();
+
+  Optional<String> version();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Markdown> copyright();
+
+  Optional<String> targetUri();
+
+  Optional<String> name();
+
+  Optional<Code> language();
 
   Optional<String> targetCanonical();
+
+  Optional<Meta> meta();
 
   Optional<List<ConceptMap_Group>> group();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Uri> implicitRules();
 
-  Optional<Identifier> identifier();
+  Optional<Boolean> experimental();
 
-  Optional<Meta> meta();
+  Optional<String> publisher();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<Uri> url();
 
   static ImmutableConceptMap.ResourceTypeBuildStage builder() {
     return ImmutableConceptMap.builder();

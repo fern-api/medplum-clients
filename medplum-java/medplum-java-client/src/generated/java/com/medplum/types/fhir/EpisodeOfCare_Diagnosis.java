@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EpisodeOfCare_Diagnosis {
-  Optional<CodeableConcept> role();
-
   Optional<PositiveInt> rank();
-
-  Reference condition();
 
   Optional<String> id();
 
+  Optional<CodeableConcept> role();
+
   Optional<List<Extension>> extension();
+
+  Reference condition();
 
   Optional<List<Extension>> modifierExtension();
 

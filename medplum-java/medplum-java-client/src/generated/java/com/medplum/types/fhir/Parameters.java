@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Parameters {
-  Optional<Id> id();
-
-  Optional<Meta> meta();
-
   Optional<List<Parameters_Parameter>> parameter();
 
   String resourceType();
+
+  Optional<Id> id();
+
+  Optional<Meta> meta();
 
   Optional<Code> language();
 

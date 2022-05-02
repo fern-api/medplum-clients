@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface ClinicalImpression_Finding {
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> itemCodeableConcept();
+  Optional<Reference> itemReference();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<Reference> itemReference();
+  Optional<CodeableConcept> itemCodeableConcept();
 
   Optional<String> basis();
 

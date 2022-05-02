@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Total {
+  Optional<List<Extension>> extension();
+
   Money amount();
 
   CodeableConcept category();
 
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 

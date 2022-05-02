@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceReferenceInformation_Gene {
+  Optional<CodeableConcept> gene();
+
+  Optional<CodeableConcept> geneSequenceOrigin();
+
+  Optional<List<Reference>> source();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> gene();
-
-  Optional<List<Reference>> source();
-
-  Optional<CodeableConcept> geneSequenceOrigin();
 
   static ImmutableSubstanceReferenceInformation_Gene.Builder builder() {
     return ImmutableSubstanceReferenceInformation_Gene.builder();

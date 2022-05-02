@@ -17,15 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface User {
-  String passwordHash();
-
   Optional<String> resourceType();
-
-  Optional<Meta> meta();
-
-  String email();
-
-  Optional<Code> language();
 
   Optional<Boolean> admin();
 
@@ -33,7 +25,15 @@ public interface User {
 
   Optional<Uri> implicitRules();
 
-  static ImmutableUser.PasswordHashBuildStage builder() {
+  Optional<Meta> meta();
+
+  String email();
+
+  String passwordHash();
+
+  Optional<Code> language();
+
+  static ImmutableUser.EmailBuildStage builder() {
     return ImmutableUser.builder();
   }
 }

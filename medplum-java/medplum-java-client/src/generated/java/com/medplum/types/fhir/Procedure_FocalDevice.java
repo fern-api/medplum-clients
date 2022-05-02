@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Procedure_FocalDevice {
-  Optional<List<Extension>> extension();
+  Reference manipulated();
 
-  Optional<CodeableConcept> action();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Reference manipulated();
+  Optional<CodeableConcept> action();
 
   Optional<List<Extension>> modifierExtension();
 

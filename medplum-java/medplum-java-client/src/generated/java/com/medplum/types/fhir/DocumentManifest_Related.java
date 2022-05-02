@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface DocumentManifest_Related {
   Optional<Reference> ref();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<Identifier> identifier();
 

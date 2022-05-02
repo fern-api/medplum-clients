@@ -17,6 +17,12 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GraphDefinition_Compartment {
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Graphdefinition_compartmentUse> use();
+
+  Optional<String> id();
+
   Optional<String> description();
 
   Optional<List<Extension>> extension();
@@ -25,13 +31,7 @@ public interface GraphDefinition_Compartment {
 
   Optional<String> expression();
 
-  Optional<String> id();
-
   Optional<Code> code();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Graphdefinition_compartmentUse> use();
 
   static ImmutableGraphDefinition_Compartment.Builder builder() {
     return ImmutableGraphDefinition_Compartment.builder();

@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface SpecimenDefinition_Additive {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> additiveCodeableConcept();
+  Optional<String> id();
 
   Optional<Reference> additiveReference();
 
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> additiveCodeableConcept();
 
   static ImmutableSpecimenDefinition_Additive.Builder builder() {
     return ImmutableSpecimenDefinition_Additive.builder();

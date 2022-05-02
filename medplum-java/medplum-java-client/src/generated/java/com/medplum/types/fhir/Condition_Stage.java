@@ -21,11 +21,11 @@ public interface Condition_Stage {
 
   Optional<CodeableConcept> summary();
 
+  Optional<CodeableConcept> type();
+
   Optional<List<Reference>> assessment();
 
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> type();
 
   Optional<List<Extension>> modifierExtension();
 

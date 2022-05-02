@@ -17,71 +17,71 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan {
-  Optional<List<Reference>> replaces();
-
-  Optional<List<Annotation>> note();
+  String resourceType();
 
   Optional<Reference> encounter();
 
-  Optional<Code> language();
-
-  Optional<Reference> author();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<CarePlan_Activity>> activity();
-
-  Optional<List<Reference>> basedOn();
+  Reference subject();
 
   Optional<String> title();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<Code> status();
-
-  Optional<Period> period();
-
-  Optional<List<Reference>> careTeam();
-
-  Optional<String> description();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Meta> meta();
-
-  Optional<Id> id();
-
-  Optional<DateTime> created();
-
-  Optional<List<Reference>> contributor();
-
-  Optional<List<Reference>> goal();
-
-  Optional<Narrative> text();
-
-  Optional<List<Reference>> addresses();
-
-  Reference subject();
+  Optional<Code> intent();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<Reference>> supportingInfo();
-
-  String resourceType();
-
-  Optional<Code> intent();
+  Optional<List<Annotation>> note();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Uri> implicitRules();
 
-  static ImmutableCarePlan.SubjectBuildStage builder() {
+  Optional<DateTime> created();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Code> language();
+
+  Optional<Meta> meta();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<List<Reference>> contributor();
+
+  Optional<Id> id();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> description();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Reference>> replaces();
+
+  Optional<List<Reference>> goal();
+
+  Optional<List<Reference>> addresses();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<Period> period();
+
+  Optional<List<Reference>> careTeam();
+
+  Optional<List<Reference>> supportingInfo();
+
+  Optional<List<CarePlan_Activity>> activity();
+
+  Optional<Reference> author();
+
+  Optional<Code> status();
+
+  static ImmutableCarePlan.ResourceTypeBuildStage builder() {
     return ImmutableCarePlan.builder();
   }
 }

@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification {
-  Optional<Code> language();
-
-  Optional<Reference> referenceInformation();
-
-  Optional<Meta> meta();
-
-  Optional<List<SubstanceSpecification_Name>> name();
-
-  Optional<SubstanceSpecification_Structure> structure();
-
-  Optional<Id> id();
-
-  Optional<String> description();
-
-  Optional<Reference> sourceMaterial();
-
-  Optional<List<SubstanceSpecification_Relationship>> relationship();
-
-  Optional<CodeableConcept> status();
-
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> type();
 
   Optional<List<SubstanceSpecification_MolecularWeight>> molecularWeight();
 
+  Optional<Reference> sourceMaterial();
+
   Optional<Reference> polymer();
 
-  Optional<Narrative> text();
+  Optional<Id> id();
 
-  Optional<Identifier> identifier();
-
-  Optional<String> comment();
-
-  Optional<Reference> protein();
-
-  Optional<CodeableConcept> domain();
-
-  Optional<List<SubstanceSpecification_Code>> code();
-
-  Optional<List<ResourceList>> contained();
+  Optional<SubstanceSpecification_Structure> structure();
 
   Optional<Uri> implicitRules();
 
-  Optional<Reference> nucleicAcid();
+  Optional<List<SubstanceSpecification_Relationship>> relationship();
 
-  Optional<List<Reference>> source();
+  Optional<Narrative> text();
 
-  Optional<CodeableConcept> type();
+  Optional<Meta> meta();
+
+  Optional<String> comment();
+
+  Optional<CodeableConcept> domain();
+
+  Optional<Reference> referenceInformation();
+
+  Optional<List<ResourceList>> contained();
 
   String resourceType();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
 
   Optional<List<SubstanceSpecification_Property>> property();
 
+  Optional<Reference> protein();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> source();
+
+  Optional<List<SubstanceSpecification_Code>> code();
+
+  Optional<Reference> nucleicAcid();
+
+  Optional<Code> language();
+
   Optional<List<SubstanceSpecification_Moiety>> moiety();
+
+  Optional<CodeableConcept> status();
+
+  Optional<List<SubstanceSpecification_Name>> name();
+
+  Optional<Identifier> identifier();
 
   static ImmutableSubstanceSpecification.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceSpecification.builder();

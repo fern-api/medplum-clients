@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface ImplementationGuide_Definition {
   Optional<List<ImplementationGuide_Template>> template();
 
-  Optional<ImplementationGuide_Page> page();
-
-  Optional<List<ImplementationGuide_Grouping>> grouping();
-
-  Optional<List<ImplementationGuide_Parameter>> parameter();
-
   Optional<List<Extension>> extension();
-
-  List<ImplementationGuide_Resource> resource();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
+
+  Optional<ImplementationGuide_Page> page();
+
+  Optional<List<ImplementationGuide_Parameter>> parameter();
+
+  Optional<List<ImplementationGuide_Grouping>> grouping();
+
+  List<ImplementationGuide_Resource> resource();
 
   static ImmutableImplementationGuide_Definition.Builder builder() {
     return ImmutableImplementationGuide_Definition.builder();

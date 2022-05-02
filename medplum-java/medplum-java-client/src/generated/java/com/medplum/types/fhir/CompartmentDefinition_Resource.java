@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface CompartmentDefinition_Resource {
   Optional<String> documentation();
 
-  Optional<Code> code();
-
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<String>> param();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Code> code();
 
   static ImmutableCompartmentDefinition_Resource.Builder builder() {
     return ImmutableCompartmentDefinition_Resource.builder();

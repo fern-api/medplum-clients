@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Linkage_Item {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<Linkage_itemType> type();
 
-  Optional<String> id();
-
-  Reference resource();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
+
+  Reference resource();
 
   static ImmutableLinkage_Item.ResourceBuildStage builder() {
     return ImmutableLinkage_Item.builder();

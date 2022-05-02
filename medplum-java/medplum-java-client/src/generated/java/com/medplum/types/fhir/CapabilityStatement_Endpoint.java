@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Endpoint {
-  Coding protocol();
-
-  Optional<Url> address();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
+
+  Coding protocol();
+
+  Optional<Url> address();
 
   static ImmutableCapabilityStatement_Endpoint.ProtocolBuildStage builder() {
     return ImmutableCapabilityStatement_Endpoint.builder();

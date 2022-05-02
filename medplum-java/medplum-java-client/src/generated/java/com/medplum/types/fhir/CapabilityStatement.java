@@ -18,73 +18,73 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement {
-  Optional<Uri> url();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CapabilitystatementFhirversion> fhirVersion();
-
-  Optional<Id> id();
-
-  Optional<Boolean> experimental();
-
-  Optional<CapabilityStatement_Software> software();
-
-  Optional<List<Code>> format();
-
-  Optional<CapabilitystatementKind> kind();
+  Optional<List<CapabilityStatement_Messaging>> messaging();
 
   Optional<CapabilityStatement_Implementation> implementation();
 
+  Optional<List<UsageContext>> useContext();
+
   Optional<List<CapabilityStatement_Rest>> rest();
 
-  Optional<String> publisher();
-
-  Optional<List<CapabilityStatement_Document>> document();
-
-  Optional<Markdown> description();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<Code>> patchFormat();
-
-  Optional<List<Canonical>> implementationGuide();
-
-  Optional<CapabilitystatementStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Meta> meta();
 
   Optional<Code> language();
 
+  Optional<CapabilitystatementKind> kind();
+
+  Optional<List<CapabilityStatement_Document>> document();
+
+  Optional<CapabilitystatementStatus> status();
+
+  Optional<Id> id();
+
   Optional<Narrative> text();
-
-  Optional<String> version();
-
-  Optional<List<CapabilityStatement_Messaging>> messaging();
-
-  Optional<Uri> implicitRules();
-
-  Optional<DateTime> date();
-
-  Optional<List<Canonical>> instantiates();
-
-  Optional<String> name();
-
-  Optional<List<UsageContext>> useContext();
 
   Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<Markdown> purpose();
+  Optional<List<Canonical>> implementationGuide();
+
+  Optional<CapabilityStatement_Software> software();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> date();
+
+  Optional<List<Code>> patchFormat();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<CapabilitystatementFhirversion> fhirVersion();
 
   Optional<String> title();
+
+  Optional<Markdown> copyright();
+
+  Optional<List<Canonical>> instantiates();
+
+  Optional<Markdown> description();
+
+  Optional<String> publisher();
+
+  Optional<List<Code>> format();
+
+  String resourceType();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> name();
+
+  Optional<Uri> url();
+
+  Optional<Markdown> purpose();
+
+  Optional<String> version();
 
   Optional<List<Canonical>> imports();
 

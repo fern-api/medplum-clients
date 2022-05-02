@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface ImplementationGuide_Manifest {
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<ImplementationGuide_Page1>> page();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Url> rendering();
-
-  Optional<List<String>> image();
-
-  List<ImplementationGuide_Resource1> resource();
 
   Optional<List<String>> other();
 
   Optional<String> id();
+
+  List<ImplementationGuide_Resource1> resource();
+
+  Optional<List<String>> image();
 
   static ImmutableImplementationGuide_Manifest.Builder builder() {
     return ImmutableImplementationGuide_Manifest.builder();

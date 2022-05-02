@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface PlanDefinition_DynamicValue {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Expression> expression();
-
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<String> path();
+
+  Optional<Expression> expression();
 
   static ImmutablePlanDefinition_DynamicValue.Builder builder() {
     return ImmutablePlanDefinition_DynamicValue.builder();

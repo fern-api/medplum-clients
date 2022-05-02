@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HealthcareService_NotAvailable {
-  Optional<String> description();
-
-  Optional<Period> during();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
+  Optional<Period> during();
+
+  Optional<String> description();
 
   Optional<String> id();
 

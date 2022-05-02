@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PasswordChangeRequest {
-  Optional<Boolean> used();
-
-  Optional<String> redirectUri();
-
-  Optional<Id> id();
-
   Optional<Uri> implicitRules();
-
-  Optional<String> resourceType();
 
   Optional<Code> language();
 
-  Optional<Meta> meta();
+  Optional<String> secret();
 
   Optional<Reference> user();
 
-  Optional<String> secret();
+  Optional<String> resourceType();
+
+  Optional<Meta> meta();
+
+  Optional<Boolean> used();
+
+  Optional<Id> id();
+
+  Optional<String> redirectUri();
 
   static ImmutablePasswordChangeRequest.Builder builder() {
     return ImmutablePasswordChangeRequest.builder();

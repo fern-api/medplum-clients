@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Process {
-  Optional<String> title();
-
-  Optional<String> id();
+  Optional<Markdown> postConditions();
 
   Optional<List<Extension>> extension();
 
-  Optional<Markdown> postConditions();
+  Optional<String> title();
 
-  Optional<List<ExampleScenario_Step>> step();
+  Optional<Markdown> description();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Markdown> preConditions();
 
-  Optional<Markdown> description();
+  Optional<List<ExampleScenario_Step>> step();
+
+  Optional<String> id();
 
   static ImmutableExampleScenario_Process.Builder builder() {
     return ImmutableExampleScenario_Process.builder();

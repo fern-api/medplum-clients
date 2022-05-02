@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface ContactPoint {
   Optional<ContactpointSystem> system();
 
-  Optional<String> value();
-
-  Optional<PositiveInt> rank();
-
-  Optional<List<Extension>> extension();
-
   Optional<ContactpointUse> use();
 
   Optional<String> id();
 
   Optional<Period> period();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> value();
+
+  Optional<PositiveInt> rank();
 
   static ImmutableContactPoint.Builder builder() {
     return ImmutableContactPoint.builder();

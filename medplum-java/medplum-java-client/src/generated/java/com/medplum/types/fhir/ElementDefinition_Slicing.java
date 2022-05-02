@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Slicing {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ElementDefinition_Discriminator>> discriminator();
-
-  Optional<String> id();
-
   Optional<String> description();
+
+  Optional<Boolean> ordered();
 
   Optional<List<Extension>> extension();
 
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Elementdefinition_slicingRules> rules();
 
-  Optional<Boolean> ordered();
+  Optional<List<ElementDefinition_Discriminator>> discriminator();
 
   static ImmutableElementDefinition_Slicing.Builder builder() {
     return ImmutableElementDefinition_Slicing.builder();

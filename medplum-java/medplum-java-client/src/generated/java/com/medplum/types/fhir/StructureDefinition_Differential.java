@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureDefinition_Differential {
-  Optional<List<Extension>> extension();
-
   List<ElementDefinition> element();
 
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableStructureDefinition_Differential.Builder builder() {
     return ImmutableStructureDefinition_Differential.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImagingStudy_Instance {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> title();
 
   Optional<List<Extension>> extension();
 
-  Optional<UnsignedInt> number();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Id> uid();
 
   Optional<String> id();
+
+  Optional<UnsignedInt> number();
 
   Coding sopClass();
 

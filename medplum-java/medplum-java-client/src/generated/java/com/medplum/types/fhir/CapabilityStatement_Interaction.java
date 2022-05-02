@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Interaction {
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<Markdown> documentation();
 

@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SearchParameter {
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<SearchparameterStatus> status();
-
-  Optional<Boolean> experimental();
-
-  Optional<String> expression();
-
-  Optional<Markdown> description();
-
-  Optional<String> name();
-
-  Optional<List<Code>> base();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<DateTime> date();
-
-  Optional<List<SearchparameterModifierItem>> modifier();
-
   Optional<List<Code>> target();
-
-  Optional<Code> code();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Canonical> derivedFrom();
-
-  Optional<String> xpath();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<List<SearchparameterComparatorItem>> comparator();
 
-  Optional<Boolean> multipleAnd();
-
-  Optional<Uri> url();
-
   Optional<Boolean> multipleOr();
 
-  Optional<Narrative> text();
-
-  Optional<SearchparameterXpathusage> xpathUsage();
-
-  Optional<String> publisher();
-
-  Optional<List<SearchParameter_Component>> component();
-
-  Optional<List<ContactDetail>> contact();
+  Optional<Id> id();
 
   Optional<String> version();
 
-  Optional<SearchparameterType> type();
+  Optional<List<Extension>> extension();
+
+  Optional<List<UsageContext>> useContext();
 
   Optional<Markdown> purpose();
 
   Optional<Code> language();
 
+  Optional<Uri> url();
+
+  Optional<DateTime> date();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<SearchparameterModifierItem>> modifier();
+
+  Optional<Boolean> multipleAnd();
+
+  Optional<Markdown> description();
+
+  Optional<List<String>> chain();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Narrative> text();
+
+  Optional<SearchparameterStatus> status();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Canonical> derivedFrom();
+
+  Optional<String> xpath();
+
+  String resourceType();
+
+  Optional<List<SearchParameter_Component>> component();
+
+  Optional<String> name();
+
+  Optional<SearchparameterType> type();
+
+  Optional<String> expression();
+
+  Optional<Code> code();
+
+  Optional<SearchparameterXpathusage> xpathUsage();
+
+  Optional<List<Code>> base();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
   Optional<Meta> meta();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<String>> chain();
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> contact();
 
   static ImmutableSearchParameter.ResourceTypeBuildStage builder() {
     return ImmutableSearchParameter.builder();

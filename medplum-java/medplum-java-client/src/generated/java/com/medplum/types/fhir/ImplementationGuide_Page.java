@@ -17,7 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Page {
-  Optional<Implementationguide_pageGeneration> generation();
+  Optional<String> nameUrl();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> nameReference();
 
   Optional<String> id();
 
@@ -25,13 +29,9 @@ public interface ImplementationGuide_Page {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> nameUrl();
-
-  Optional<Reference> nameReference();
-
   Optional<String> title();
 
-  Optional<List<Extension>> extension();
+  Optional<Implementationguide_pageGeneration> generation();
 
   static ImmutableImplementationGuide_Page.Builder builder() {
     return ImmutableImplementationGuide_Page.builder();

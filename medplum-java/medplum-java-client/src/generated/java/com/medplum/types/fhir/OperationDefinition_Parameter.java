@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition_Parameter {
-  Optional<List<Canonical>> targetProfile();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Operationdefinition_parameterSearchtype> searchType();
-
-  Optional<List<OperationDefinition_ReferencedFrom>> referencedFrom();
-
-  Optional<Operationdefinition_parameterUse> use();
-
-  Optional<Code> type();
-
-  Optional<OperationDefinition_Binding> binding();
-
-  Optional<Code> name();
-
-  Optional<Integer> min();
-
-  Optional<String> max();
-
-  Optional<String> documentation();
+  Optional<List<Extension>> extension();
 
   Optional<List<OperationDefinition_Parameter>> part();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Canonical>> targetProfile();
+
+  Optional<OperationDefinition_Binding> binding();
+
+  Optional<String> max();
+
+  Optional<Code> name();
+
+  Optional<Operationdefinition_parameterUse> use();
+
+  Optional<Operationdefinition_parameterSearchtype> searchType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<Code> type();
+
+  Optional<List<OperationDefinition_ReferencedFrom>> referencedFrom();
+
+  Optional<Integer> min();
+
+  Optional<String> documentation();
 
   static ImmutableOperationDefinition_Parameter.Builder builder() {
     return ImmutableOperationDefinition_Parameter.builder();

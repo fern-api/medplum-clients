@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface MedicationKnowledge_MedicineClassification {
   CodeableConcept type();
 
-  Optional<String> id();
-
   Optional<List<CodeableConcept>> classification();
 
   Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

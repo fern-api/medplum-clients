@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_ContentDefinition {
-  Optional<String> id();
-
-  Optional<Reference> publisher();
+  Optional<Code> publicationStatus();
 
   Optional<Markdown> copyright();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
+
+  Optional<CodeableConcept> subType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> publisher();
 
   Optional<DateTime> publicationDate();
 
   CodeableConcept type();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> publicationStatus();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> subType();
 
   static ImmutableContract_ContentDefinition.TypeBuildStage builder() {
     return ImmutableContract_ContentDefinition.builder();

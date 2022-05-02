@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan_Detail {
-  Optional<List<Extension>> extension();
+  Optional<Careplan_detailStatus> status();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Quantity> quantity();
+
+  Optional<Reference> location();
 
   Optional<List<Uri>> instantiatesUri();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Quantity> dailyAmount();
-
-  Optional<Careplan_detailStatus> status();
-
-  Optional<String> scheduledString();
-
-  Optional<Quantity> quantity();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> statusReason();
 
   Optional<List<Reference>> goal();
 
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<String> id();
-
-  Optional<Reference> productReference();
-
-  Optional<Reference> location();
-
-  Optional<CodeableConcept> productCodeableConcept();
+  Optional<Quantity> dailyAmount();
 
   Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<String> scheduledString();
 
   Optional<List<Reference>> performer();
 
   Optional<Timing> scheduledTiming();
 
-  Optional<String> description();
-
   Optional<Code> kind();
 
-  Optional<Boolean> doNotPerform();
+  Optional<List<Reference>> reasonReference();
+
+  Optional<String> description();
 
   Optional<Period> scheduledPeriod();
 
-  Optional<CodeableConcept> code();
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> productReference();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<CodeableConcept> productCodeableConcept();
 
   static ImmutableCarePlan_Detail.Builder builder() {
     return ImmutableCarePlan_Detail.builder();

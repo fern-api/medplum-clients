@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProduct {
-  Optional<CodeableConcept> additionalMonitoringIndicator();
+  Optional<Uri> implicitRules();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Meta> meta();
 
-  Optional<List<MedicinalProduct_SpecialDesignation>> specialDesignation();
+  Optional<CodeableConcept> paediatricUseIndicator();
+
+  Optional<Coding> domain();
+
+  Optional<CodeableConcept> legalStatusOfSupply();
+
+  Optional<CodeableConcept> type();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<MarketingStatus>> marketingStatus();
 
   Optional<List<String>> specialMeasures();
-
-  Optional<List<Reference>> attachedDocument();
 
   Optional<List<MedicinalProduct_ManufacturingBusinessOperation>> manufacturingBusinessOperation();
 
   String resourceType();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> combinedPharmaceuticalDoseForm();
-
-  Optional<List<Reference>> clinicalTrial();
-
-  Optional<CodeableConcept> type();
-
-  List<MedicinalProduct_Name> name();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> masterFile();
-
-  Optional<CodeableConcept> legalStatusOfSupply();
-
-  Optional<List<CodeableConcept>> productClassification();
-
-  Optional<Code> language();
+  Optional<List<Reference>> pharmaceuticalProduct();
 
   Optional<Narrative> text();
 
-  Optional<CodeableConcept> paediatricUseIndicator();
+  Optional<List<CodeableConcept>> productClassification();
 
-  Optional<Id> id();
+  Optional<List<Extension>> extension();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Reference>> clinicalTrial();
 
-  Optional<List<MarketingStatus>> marketingStatus();
-
-  Optional<Coding> domain();
-
-  Optional<List<Reference>> contact();
-
-  Optional<List<Identifier>> identifier();
+  List<MedicinalProduct_Name> name();
 
   Optional<List<Identifier>> crossReference();
 
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> pharmaceuticalProduct();
-
   Optional<List<Reference>> packagedMedicinalProduct();
+
+  Optional<CodeableConcept> combinedPharmaceuticalDoseForm();
+
+  Optional<CodeableConcept> additionalMonitoringIndicator();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Reference>> attachedDocument();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  Optional<List<MedicinalProduct_SpecialDesignation>> specialDesignation();
+
+  Optional<List<Reference>> masterFile();
+
+  Optional<List<Reference>> contact();
+
+  Optional<Id> id();
 
   static ImmutableMedicinalProduct.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProduct.builder();

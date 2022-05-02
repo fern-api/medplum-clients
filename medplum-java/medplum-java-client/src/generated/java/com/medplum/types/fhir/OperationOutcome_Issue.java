@@ -23,17 +23,17 @@ public interface OperationOutcome_Issue {
 
   Optional<Operationoutcome_issueCode> code();
 
-  Optional<List<String>> location();
-
-  Optional<List<String>> expression();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> diagnostics();
+  Optional<CodeableConcept> details();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> details();
+  Optional<String> diagnostics();
+
+  Optional<List<String>> expression();
+
+  Optional<List<String>> location();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableOperationOutcome_Issue.Builder builder() {
     return ImmutableOperationOutcome_Issue.builder();

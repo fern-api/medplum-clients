@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition_Event {
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> detail();
-
-  Optional<String> id();
 
   Optional<List<CodeableConcept>> code();
 
   Optional<Period> period();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> detail();
 
   static ImmutableComposition_Event.Builder builder() {
     return ImmutableComposition_Event.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Provenance_Agent {
-  Optional<CodeableConcept> type();
-
-  Reference who();
+  Optional<Reference> onBehalfOf();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<Reference> onBehalfOf();
-
   Optional<List<CodeableConcept>> role();
 
   Optional<String> id();
+
+  Reference who();
+
+  Optional<CodeableConcept> type();
 
   static ImmutableProvenance_Agent.WhoBuildStage builder() {
     return ImmutableProvenance_Agent.builder();

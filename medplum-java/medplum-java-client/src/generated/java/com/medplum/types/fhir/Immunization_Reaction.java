@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface Immunization_Reaction {
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Boolean> reported();
+  Optional<DateTime> date();
 
   Optional<List<Extension>> extension();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Reference> detail();
 
-  Optional<DateTime> date();
+  Optional<Boolean> reported();
 
   static ImmutableImmunization_Reaction.Builder builder() {
     return ImmutableImmunization_Reaction.builder();

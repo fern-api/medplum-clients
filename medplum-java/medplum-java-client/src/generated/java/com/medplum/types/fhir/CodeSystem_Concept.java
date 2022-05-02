@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeSystem_Concept {
-  Optional<List<Extension>> extension();
+  Optional<Code> code();
+
+  Optional<String> definition();
+
+  Optional<List<CodeSystem_Designation>> designation();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> display();
+
+  Optional<List<CodeSystem_Concept>> concept();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
   Optional<List<CodeSystem_Property1>> property();
-
-  Optional<String> definition();
-
-  Optional<List<CodeSystem_Concept>> concept();
-
-  Optional<Code> code();
-
-  Optional<String> display();
-
-  Optional<List<CodeSystem_Designation>> designation();
 
   static ImmutableCodeSystem_Concept.Builder builder() {
     return ImmutableCodeSystem_Concept.builder();

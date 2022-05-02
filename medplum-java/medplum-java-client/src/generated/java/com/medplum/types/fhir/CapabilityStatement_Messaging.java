@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Messaging {
-  Optional<List<CapabilityStatement_SupportedMessage>> supportedMessage();
-
-  Optional<String> id();
-
-  Optional<List<CapabilityStatement_Endpoint>> endpoint();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<UnsignedInt> reliableCache();
+  Optional<List<Extension>> extension();
 
   Optional<Markdown> documentation();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
+
+  Optional<UnsignedInt> reliableCache();
+
+  Optional<List<CapabilityStatement_SupportedMessage>> supportedMessage();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CapabilityStatement_Endpoint>> endpoint();
 
   static ImmutableCapabilityStatement_Messaging.Builder builder() {
     return ImmutableCapabilityStatement_Messaging.builder();

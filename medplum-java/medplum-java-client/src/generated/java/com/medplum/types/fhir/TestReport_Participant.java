@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestReport_Participant {
-  Optional<String> id();
-
-  Optional<Testreport_participantType> type();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<Uri> uri();
+
+  Optional<Testreport_participantType> type();
+
+  Optional<String> id();
 
   Optional<String> display();
 

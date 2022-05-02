@@ -16,49 +16,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface List {
+  Optional<Meta> meta();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> title();
+
+  Optional<java.util.List<ResourceList>> contained();
+
+  Optional<ListMode> mode();
+
+  Optional<Reference> encounter();
+
+  Optional<ListStatus> status();
+
+  String resourceType();
+
   Optional<java.util.List<Extension>> extension();
 
   Optional<java.util.List<Extension>> modifierExtension();
 
-  Optional<DateTime> date();
-
-  Optional<java.util.List<List_Entry>> entry();
-
-  Optional<Meta> meta();
-
-  Optional<java.util.List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<Narrative> text();
-
-  Optional<CodeableConcept> code();
-
-  Optional<java.util.List<Annotation>> note();
+  Optional<java.util.List<Identifier>> identifier();
 
   Optional<Reference> subject();
 
-  Optional<String> title();
-
-  Optional<java.util.List<Identifier>> identifier();
-
-  Optional<Reference> encounter();
+  Optional<CodeableConcept> orderedBy();
 
   Optional<Id> id();
 
-  Optional<CodeableConcept> orderedBy();
+  Optional<Narrative> text();
 
-  Optional<Reference> source();
-
-  Optional<Uri> implicitRules();
+  Optional<DateTime> date();
 
   Optional<CodeableConcept> emptyReason();
 
-  Optional<ListStatus> status();
-
-  Optional<ListMode> mode();
+  Optional<Reference> source();
 
   Optional<Code> language();
+
+  Optional<java.util.List<Annotation>> note();
+
+  Optional<java.util.List<List_Entry>> entry();
+
+  Optional<CodeableConcept> code();
 
   static ImmutableList.ResourceTypeBuildStage builder() {
     return ImmutableList.builder();

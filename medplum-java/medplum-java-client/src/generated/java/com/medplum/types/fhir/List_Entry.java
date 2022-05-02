@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface List_Entry {
-  Optional<String> id();
+  Optional<CodeableConcept> flag();
 
-  Optional<DateTime> date();
+  Optional<String> id();
 
   Reference item();
 
   Optional<Boolean> deleted();
 
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> flag();
+  Optional<DateTime> date();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableList_Entry.ItemBuildStage builder() {
     return ImmutableList_Entry.builder();

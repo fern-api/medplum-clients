@@ -17,47 +17,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport {
-  Optional<MeasurereportType> type();
-
-  Optional<Reference> reporter();
-
-  Optional<List<ResourceList>> contained();
+  Optional<List<MeasureReport_Group>> group();
 
   Optional<MeasurereportStatus> status();
 
-  String resourceType();
+  Optional<Uri> implicitRules();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> date();
 
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> evaluatedResource();
-
-  Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> improvementNotation();
-
-  Optional<Code> language();
-
-  Canonical measure();
-
-  Optional<List<MeasureReport_Group>> group();
-
-  Optional<Reference> subject();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Identifier>> identifier();
 
-  Period period();
-
   Optional<Id> id();
 
-  Optional<List<Extension>> extension();
+  Optional<Reference> reporter();
+
+  Optional<List<Reference>> evaluatedResource();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> improvementNotation();
 
   Optional<Narrative> text();
 
-  static ImmutableMeasureReport.ResourceTypeBuildStage builder() {
+  Optional<MeasurereportType> type();
+
+  Canonical measure();
+
+  String resourceType();
+
+  Optional<Code> language();
+
+  Period period();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> subject();
+
+  static ImmutableMeasureReport.MeasureBuildStage builder() {
     return ImmutableMeasureReport.builder();
   }
 }

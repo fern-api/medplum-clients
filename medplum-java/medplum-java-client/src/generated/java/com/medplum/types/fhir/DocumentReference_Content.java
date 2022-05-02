@@ -17,6 +17,8 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference_Content {
+  Optional<List<Extension>> modifierExtension();
+
   Attachment attachment();
 
   Optional<String> id();
@@ -24,8 +26,6 @@ public interface DocumentReference_Content {
   Optional<List<Extension>> extension();
 
   Optional<Coding> format();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableDocumentReference_Content.AttachmentBuildStage builder() {
     return ImmutableDocumentReference_Content.builder();

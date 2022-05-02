@@ -18,73 +18,73 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageDefinition {
-  Optional<Markdown> copyright();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<Canonical>> parent();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> url();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Meta> meta();
-
-  Optional<String> version();
-
   Optional<Boolean> experimental();
-
-  Optional<String> name();
-
-  Optional<String> title();
 
   Optional<MessagedefinitionResponserequired> responseRequired();
 
-  Optional<Markdown> purpose();
-
-  Optional<List<Extension>> modifierExtension();
-
-  String resourceType();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<MessageDefinition_AllowedResponse>> allowedResponse();
-
-  Optional<MessagedefinitionStatus> status();
-
   Optional<Uri> implicitRules();
-
-  Optional<DateTime> date();
-
-  Optional<Markdown> description();
-
-  Optional<List<UsageContext>> useContext();
 
   Optional<Coding> eventCoding();
 
-  Optional<Id> id();
-
-  Optional<List<Canonical>> replaces();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> publisher();
-
-  Optional<Narrative> text();
-
-  Optional<Canonical> base();
-
-  Optional<MessagedefinitionCategory> category();
-
   Optional<List<MessageDefinition_Focus>> focus();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<Code> language();
 
+  Optional<Markdown> description();
+
+  Optional<String> title();
+
+  Optional<Markdown> purpose();
+
+  Optional<String> version();
+
+  Optional<MessagedefinitionCategory> category();
+
+  Optional<DateTime> date();
+
   Optional<String> eventUri();
 
+  Optional<List<Canonical>> replaces();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> name();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<MessagedefinitionStatus> status();
+
+  Optional<Uri> url();
+
+  Optional<Markdown> copyright();
+
+  Optional<Id> id();
+
+  String resourceType();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
   Optional<List<Canonical>> graph();
+
+  Optional<Canonical> base();
+
+  Optional<List<MessageDefinition_AllowedResponse>> allowedResponse();
+
+  Optional<Meta> meta();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Canonical>> parent();
+
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<UsageContext>> useContext();
 
   static ImmutableMessageDefinition.ResourceTypeBuildStage builder() {
     return ImmutableMessageDefinition.builder();

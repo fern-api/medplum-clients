@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface UserConfiguration {
-  Optional<String> resourceType();
-
-  Optional<List<UserConfiguration_Menu>> menu();
-
-  Optional<Meta> meta();
-
-  Optional<Code> language();
-
   Optional<Id> id();
 
-  Optional<List<UserConfiguration_Search>> search();
+  Optional<String> resourceType();
 
   Optional<Uri> implicitRules();
 
   Optional<String> name();
 
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
+  Optional<List<UserConfiguration_Menu>> menu();
+
   Optional<List<UserConfiguration_Option>> option();
+
+  Optional<List<UserConfiguration_Search>> search();
 
   static ImmutableUserConfiguration.Builder builder() {
     return ImmutableUserConfiguration.builder();

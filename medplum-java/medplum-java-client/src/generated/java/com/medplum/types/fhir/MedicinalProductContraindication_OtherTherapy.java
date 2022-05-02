@@ -21,13 +21,13 @@ public interface MedicinalProductContraindication_OtherTherapy {
 
   CodeableConcept therapyRelationshipType();
 
-  Optional<CodeableConcept> medicationCodeableConcept();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<Reference> medicationReference();
 
-  Optional<String> id();
+  Optional<CodeableConcept> medicationCodeableConcept();
 
   static ImmutableMedicinalProductContraindication_OtherTherapy.TherapyRelationshipTypeBuildStage builder(
       ) {

@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface TestScript_Action2 {
   TestScript_Operation operation();
 
+  Optional<String> id();
+
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
 
   static ImmutableTestScript_Action2.OperationBuildStage builder() {
     return ImmutableTestScript_Action2.builder();

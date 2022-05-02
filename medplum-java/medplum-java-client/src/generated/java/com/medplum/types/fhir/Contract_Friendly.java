@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Friendly {
-  Optional<Reference> contentReference();
+  Optional<List<Extension>> extension();
+
+  Optional<Attachment> contentAttachment();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Attachment> contentAttachment();
+  Optional<Reference> contentReference();
 
   static ImmutableContract_Friendly.Builder builder() {
     return ImmutableContract_Friendly.builder();
