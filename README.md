@@ -5,9 +5,9 @@ Checkout the generated FHIR Java client by running the following commands.
 
 ## Java Client
 
-The Java client lives inside of the folder [medplum-java](./api/med).
+The Java client lives inside of the folder [medplum-java](./medplum-java).
 
-Run `./gradlew idea && open *.ipr` to open in Intellij.
+Run `./gradlew idea && open *.ipr` inside of [medplum-java](./medplum-java) to open in Intellij.
 
 Build the project to generate [Immutables](https://immutables.github.io/) classes.
 
