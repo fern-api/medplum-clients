@@ -17,35 +17,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Term {
-  Optional<String> id();
-
-  Optional<DateTime> issued();
-
-  Optional<CodeableConcept> topicCodeableConcept();
-
-  Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> text();
-
-  Optional<List<Contract_Asset>> asset();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Contract_Action>> action();
-
-  Optional<List<Contract_SecurityLabel>> securityLabel();
-
-  Optional<Identifier> identifier();
-
-  Contract_Offer offer();
 
   Optional<CodeableConcept> subType();
 
   Optional<Reference> topicReference();
 
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
+
+  Contract_Offer offer();
+
+  Optional<String> id();
+
   Optional<Period> applies();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> topicCodeableConcept();
+
+  Optional<List<Contract_SecurityLabel>> securityLabel();
+
+  Optional<String> text();
+
+  Optional<DateTime> issued();
+
+  Optional<List<Contract_Asset>> asset();
+
+  Optional<Identifier> identifier();
 
   Optional<List<Contract_Term>> group();
 

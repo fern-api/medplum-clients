@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Template {
-  Optional<String> source();
-
-  Optional<Code> code();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> scope();
+  Optional<String> source();
 
   Optional<String> id();
 
+  Optional<Code> code();
+
   Optional<List<Extension>> extension();
+
+  Optional<String> scope();
 
   static ImmutableImplementationGuide_Template.Builder builder() {
     return ImmutableImplementationGuide_Template.builder();

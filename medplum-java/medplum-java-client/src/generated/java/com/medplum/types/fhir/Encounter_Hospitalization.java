@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_Hospitalization {
-  Optional<Reference> origin();
+  Optional<List<CodeableConcept>> dietPreference();
 
-  Optional<CodeableConcept> admitSource();
+  Optional<Reference> destination();
+
+  Optional<CodeableConcept> dischargeDisposition();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> specialCourtesy();
-
-  Optional<Reference> destination();
+  Optional<Identifier> preAdmissionIdentifier();
 
   Optional<List<CodeableConcept>> specialArrangement();
 
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> admitSource();
+
   Optional<CodeableConcept> reAdmission();
 
-  Optional<List<CodeableConcept>> dietPreference();
+  Optional<List<CodeableConcept>> specialCourtesy();
 
-  Optional<Identifier> preAdmissionIdentifier();
+  Optional<Reference> origin();
 
-  Optional<CodeableConcept> dischargeDisposition();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableEncounter_Hospitalization.Builder builder() {
     return ImmutableEncounter_Hospitalization.builder();

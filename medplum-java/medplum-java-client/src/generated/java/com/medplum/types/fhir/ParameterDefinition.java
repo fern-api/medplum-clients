@@ -18,23 +18,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ParameterDefinition {
-  Optional<String> max();
-
-  Optional<String> documentation();
-
   Optional<Code> name();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Canonical> profile();
 
   Optional<Integer> min();
 
+  Optional<String> documentation();
+
+  Optional<String> max();
+
   Optional<String> id();
+
+  Optional<Code> type();
+
+  Optional<Canonical> profile();
 
   Optional<Code> use();
 
-  Optional<Code> type();
+  Optional<List<Extension>> extension();
 
   static ImmutableParameterDefinition.Builder builder() {
     return ImmutableParameterDefinition.builder();

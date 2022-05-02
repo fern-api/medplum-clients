@@ -18,25 +18,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_BenefitBalance {
-  Optional<String> name();
+  Optional<CodeableConcept> network();
 
-  Optional<CodeableConcept> unit();
+  Optional<List<Extension>> extension();
 
   Optional<Boolean> excluded();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> description();
+
+  Optional<CodeableConcept> unit();
 
   Optional<CodeableConcept> term();
 
-  Optional<String> description();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> network();
-
-  CodeableConcept category();
+  Optional<String> name();
 
   Optional<List<ExplanationOfBenefit_Financial>> financial();
 
-  Optional<List<Extension>> extension();
+  CodeableConcept category();
 
   Optional<String> id();
 

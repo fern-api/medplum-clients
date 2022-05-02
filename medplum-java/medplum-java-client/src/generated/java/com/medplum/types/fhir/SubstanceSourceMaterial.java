@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial {
-  Optional<Code> language();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Identifier> organismId();
-
-  Optional<List<Identifier>> parentSubstanceId();
-
-  Optional<CodeableConcept> sourceMaterialType();
-
-  Optional<CodeableConcept> developmentStage();
-
-  Optional<Id> id();
-
-  Optional<List<SubstanceSourceMaterial_FractionDescription>> fractionDescription();
-
-  Optional<String> organismName();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Narrative> text();
-
   Optional<Meta> meta();
-
-  Optional<List<CodeableConcept>> countryOfOrigin();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> sourceMaterialState();
 
   Optional<List<String>> parentSubstanceName();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> sourceMaterialClass();
+  Optional<List<Identifier>> parentSubstanceId();
 
   Optional<List<SubstanceSourceMaterial_PartDescription>> partDescription();
 
+  Optional<Narrative> text();
+
+  Optional<List<SubstanceSourceMaterial_FractionDescription>> fractionDescription();
+
+  Optional<CodeableConcept> sourceMaterialType();
+
+  Optional<List<CodeableConcept>> countryOfOrigin();
+
   Optional<List<String>> geographicalLocation();
 
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> developmentStage();
+
+  Optional<List<ResourceList>> contained();
+
   Optional<SubstanceSourceMaterial_Organism> organism();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> sourceMaterialClass();
+
+  Optional<Identifier> organismId();
+
+  Optional<String> organismName();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<CodeableConcept> sourceMaterialState();
+
+  Optional<Id> id();
 
   static ImmutableSubstanceSourceMaterial.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceSourceMaterial.builder();

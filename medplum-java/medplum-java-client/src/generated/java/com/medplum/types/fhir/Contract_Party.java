@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Contract_Party {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
-  CodeableConcept role();
+  List<Reference> reference();
 
   Optional<String> id();
 
-  List<Reference> reference();
+  Optional<List<Extension>> extension();
+
+  CodeableConcept role();
 
   static ImmutableContract_Party.RoleBuildStage builder() {
     return ImmutableContract_Party.builder();

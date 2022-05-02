@@ -18,31 +18,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Operation {
-  Optional<ExampleScenario_ContainedInstance> request();
+  Optional<String> receiver();
 
-  Optional<ExampleScenario_ContainedInstance> response();
+  Optional<String> name();
 
   Optional<String> initiator();
 
-  Optional<String> receiver();
-
-  Optional<Markdown> description();
-
-  Optional<List<Extension>> extension();
-
   Optional<Boolean> initiatorActive();
-
-  Optional<String> type();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> number();
 
   Optional<Boolean> receiverActive();
 
+  Optional<ExampleScenario_ContainedInstance> response();
+
+  Optional<String> number();
+
+  Optional<ExampleScenario_ContainedInstance> request();
+
+  Optional<Markdown> description();
+
+  Optional<String> type();
+
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
 
-  Optional<String> name();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableExampleScenario_Operation.Builder builder() {
     return ImmutableExampleScenario_Operation.builder();

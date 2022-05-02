@@ -17,79 +17,79 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse {
-  Optional<Reference> requestor();
-
   Optional<Meta> meta();
 
-  Optional<Attachment> form();
+  Optional<List<ClaimResponse_Total>> total();
 
-  Optional<Code> outcome();
+  Optional<Code> use();
+
+  Optional<Reference> requestor();
 
   Optional<String> preAuthRef();
 
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  CodeableConcept type();
-
-  Reference insurer();
-
-  Optional<Code> status();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> subType();
-
-  Optional<CodeableConcept> formCode();
-
-  Reference patient();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<CodeableConcept> payeeType();
-
-  Optional<List<ClaimResponse_ProcessNote>> processNote();
+  Optional<Id> id();
 
   Optional<ClaimResponse_Payment> payment();
 
-  Optional<List<Reference>> communicationRequest();
+  Optional<CodeableConcept> fundsReserve();
 
-  Optional<List<ClaimResponse_Insurance>> insurance();
+  Reference insurer();
+
+  Optional<Attachment> form();
+
+  CodeableConcept type();
 
   Optional<Period> preAuthPeriod();
 
-  String resourceType();
+  Optional<CodeableConcept> subType();
 
   Optional<Code> language();
+
+  Optional<List<ClaimResponse_Item>> item();
+
+  Optional<String> disposition();
+
+  Reference patient();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> formCode();
+
+  Optional<Code> outcome();
 
   Optional<List<ClaimResponse_Adjudication>> adjudication();
 
   Optional<Reference> request();
 
-  Optional<DateTime> created();
-
-  Optional<List<ClaimResponse_Error>> error();
-
-  Optional<Id> id();
-
-  Optional<List<ClaimResponse_AddItem>> addItem();
-
-  Optional<Code> use();
-
-  Optional<List<ClaimResponse_Total>> total();
-
-  Optional<String> disposition();
-
-  Optional<CodeableConcept> fundsReserve();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ClaimResponse_Item>> item();
+  String resourceType();
 
   Optional<List<Extension>> extension();
 
-  static ImmutableClaimResponse.TypeBuildStage builder() {
+  Optional<List<Identifier>> identifier();
+
+  Optional<Code> status();
+
+  Optional<List<Reference>> communicationRequest();
+
+  Optional<List<ClaimResponse_ProcessNote>> processNote();
+
+  Optional<DateTime> created();
+
+  Optional<CodeableConcept> payeeType();
+
+  Optional<List<ClaimResponse_AddItem>> addItem();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ClaimResponse_Insurance>> insurance();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<ClaimResponse_Error>> error();
+
+  static ImmutableClaimResponse.InsurerBuildStage builder() {
     return ImmutableClaimResponse.builder();
   }
 }

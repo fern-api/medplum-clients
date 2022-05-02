@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Goal {
-  CodeableConcept description();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<ResourceList>> contained();
+  Optional<Id> id();
 
   Optional<CodeableConcept> startCodeableConcept();
 
+  Optional<Narrative> text();
+
   Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> startDate();
-
-  Reference subject();
-
-  Optional<CodeableConcept> priority();
-
-  Optional<String> statusReason();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Goal_Target>> target();
-
-  Optional<Date> statusDate();
-
-  Optional<Reference> expressedBy();
-
-  Optional<List<Reference>> outcomeReference();
 
   Optional<Meta> meta();
 
-  Optional<List<Reference>> addresses();
-
-  Optional<CodeableConcept> achievementStatus();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
   Optional<List<CodeableConcept>> outcomeCode();
 
-  String resourceType();
+  Optional<List<Annotation>> note();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<CodeableConcept> priority();
 
   Optional<GoalLifecyclestatus> lifecycleStatus();
 
-  static ImmutableGoal.DescriptionBuildStage builder() {
+  Reference subject();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Date> statusDate();
+
+  Optional<Code> language();
+
+  Optional<String> startDate();
+
+  Optional<CodeableConcept> achievementStatus();
+
+  String resourceType();
+
+  Optional<Reference> expressedBy();
+
+  Optional<List<Goal_Target>> target();
+
+  Optional<String> statusReason();
+
+  Optional<List<Reference>> outcomeReference();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> addresses();
+
+  CodeableConcept description();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Identifier>> identifier();
+
+  static ImmutableGoal.SubjectBuildStage builder() {
     return ImmutableGoal.builder();
   }
 }

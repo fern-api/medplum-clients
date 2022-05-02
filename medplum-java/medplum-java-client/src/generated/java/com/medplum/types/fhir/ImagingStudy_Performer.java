@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface ImagingStudy_Performer {
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> function();
 
   Optional<List<Extension>> extension();
 
   Reference actor();
 
-  Optional<CodeableConcept> function();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImagingStudy_Performer.ActorBuildStage builder() {
     return ImmutableImagingStudy_Performer.builder();

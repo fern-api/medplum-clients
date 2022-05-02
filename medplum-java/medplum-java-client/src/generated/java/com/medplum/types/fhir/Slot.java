@@ -18,45 +18,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Slot {
-  Optional<List<CodeableConcept>> specialty();
-
-  Optional<Code> language();
+  Optional<Id> id();
 
   Optional<Meta> meta();
 
-  String resourceType();
+  Optional<Code> language();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> serviceCategory();
+  Optional<List<ResourceList>> contained();
+
+  String resourceType();
 
   Optional<SlotStatus> status();
 
   Optional<String> comment();
 
-  Optional<List<ResourceList>> contained();
-
   Optional<Instant> end();
-
-  Optional<Id> id();
-
-  Optional<CodeableConcept> appointmentType();
 
   Optional<List<CodeableConcept>> serviceType();
 
-  Optional<Boolean> overbooked();
+  Optional<List<Extension>> modifierExtension();
 
-  Reference schedule();
-
-  Optional<Narrative> text();
+  Optional<Instant> start();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Instant> start();
+  Reference schedule();
+
+  Optional<List<CodeableConcept>> specialty();
+
+  Optional<List<CodeableConcept>> serviceCategory();
+
+  Optional<Narrative> text();
+
+  Optional<CodeableConcept> appointmentType();
+
+  Optional<Boolean> overbooked();
 
   static ImmutableSlot.ResourceTypeBuildStage builder() {
     return ImmutableSlot.builder();

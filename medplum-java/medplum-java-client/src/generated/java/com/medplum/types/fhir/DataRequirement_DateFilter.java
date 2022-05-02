@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DataRequirement_DateFilter {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<String> searchParam();
 
   Optional<String> valueDateTime();
 
-  Optional<String> path();
-
   Optional<Duration> valueDuration();
 
-  Optional<Period> valuePeriod();
+  Optional<String> path();
 
-  Optional<String> searchParam();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Period> valuePeriod();
 
   static ImmutableDataRequirement_DateFilter.Builder builder() {
     return ImmutableDataRequirement_DateFilter.builder();

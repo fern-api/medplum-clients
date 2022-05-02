@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PractitionerRole {
-  Optional<List<ContactPoint>> telecom();
+  Optional<List<Reference>> endpoint();
 
   Optional<List<PractitionerRole_AvailableTime>> availableTime();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> location();
-
-  Optional<List<Reference>> endpoint();
-
-  Optional<List<CodeableConcept>> specialty();
-
-  Optional<String> availabilityExceptions();
+  Optional<List<PractitionerRole_NotAvailable>> notAvailable();
 
   Optional<List<Identifier>> identifier();
 
-  String resourceType();
-
-  Optional<Reference> organization();
-
-  Optional<Period> period();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
+  Optional<List<CodeableConcept>> specialty();
 
   Optional<List<Reference>> healthcareService();
 
-  Optional<List<PractitionerRole_NotAvailable>> notAvailable();
-
-  Optional<List<CodeableConcept>> code();
-
-  Optional<Meta> meta();
-
-  Optional<Reference> practitioner();
-
-  Optional<Uri> implicitRules();
-
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
 
   Optional<Boolean> active();
 
+  Optional<Period> period();
+
+  Optional<Reference> practitioner();
+
+  Optional<Meta> meta();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> organization();
+
+  Optional<Code> language();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<List<CodeableConcept>> code();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> location();
+
   Optional<Id> id();
+
+  Optional<String> availabilityExceptions();
 
   static ImmutablePractitionerRole.ResourceTypeBuildStage builder() {
     return ImmutablePractitionerRole.builder();

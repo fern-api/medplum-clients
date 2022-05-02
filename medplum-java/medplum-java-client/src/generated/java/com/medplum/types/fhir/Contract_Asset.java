@@ -17,41 +17,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Asset {
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
-  Optional<Coding> relationship();
-
-  Optional<List<String>> linkId();
-
-  Optional<List<Contract_Answer>> answer();
-
-  Optional<List<Period>> usePeriod();
-
-  Optional<List<Period>> period();
-
-  Optional<List<Contract_Context>> context();
-
-  Optional<String> condition();
-
-  Optional<List<CodeableConcept>> subtype();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<UnsignedInt>> securityLabelNumber();
+  Optional<List<CodeableConcept>> type();
 
   Optional<String> text();
 
-  Optional<List<CodeableConcept>> periodType();
+  Optional<List<UnsignedInt>> securityLabelNumber();
+
+  Optional<List<Contract_Context>> context();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> subtype();
+
+  Optional<List<Period>> usePeriod();
 
   Optional<CodeableConcept> scope();
 
   Optional<List<Reference>> typeReference();
 
-  Optional<List<CodeableConcept>> type();
+  Optional<List<Contract_Answer>> answer();
 
   Optional<List<Contract_ValuedItem>> valuedItem();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Period>> period();
+
+  Optional<List<CodeableConcept>> periodType();
+
+  Optional<String> condition();
+
+  Optional<String> id();
+
+  Optional<Coding> relationship();
+
+  Optional<List<String>> linkId();
 
   static ImmutableContract_Asset.Builder builder() {
     return ImmutableContract_Asset.builder();

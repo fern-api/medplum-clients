@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Specimen {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<DateTime> receivedTime();
-
-  Optional<Meta> meta();
-
-  Optional<List<Annotation>> note();
-
   Optional<Identifier> accessionIdentifier();
 
-  Optional<SpecimenStatus> status();
+  Optional<List<Specimen_Processing>> processing();
 
-  Optional<List<Reference>> request();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Code> language();
 
   Optional<List<Reference>> parent();
-
-  Optional<List<Specimen_Container>> container();
 
   String resourceType();
 
   Optional<Id> id();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Annotation>> note();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<CodeableConcept> type();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Code> language();
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<List<CodeableConcept>> condition();
 
-  Optional<List<Specimen_Processing>> processing();
-
-  Optional<Reference> subject();
+  Optional<List<Specimen_Container>> container();
 
   Optional<Specimen_Collection> collection();
+
+  Optional<Uri> implicitRules();
+
+  Optional<DateTime> receivedTime();
+
+  Optional<SpecimenStatus> status();
+
+  Optional<CodeableConcept> type();
+
+  Optional<List<Reference>> request();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> subject();
 
   static ImmutableSpecimen.ResourceTypeBuildStage builder() {
     return ImmutableSpecimen.builder();

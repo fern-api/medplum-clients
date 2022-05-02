@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_Participant {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> period();
+  Optional<String> id();
 
   Optional<Reference> individual();
 
-  Optional<String> id();
+  Optional<Period> period();
+
+  Optional<List<CodeableConcept>> type();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> type();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableEncounter_Participant.Builder builder() {
     return ImmutableEncounter_Participant.builder();

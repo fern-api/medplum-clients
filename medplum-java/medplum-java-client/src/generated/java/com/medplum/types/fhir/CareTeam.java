@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CareTeam {
-  Optional<Reference> subject();
-
-  Optional<List<CareTeam_Participant>> participant();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Narrative> text();
-
-  Optional<String> name();
-
   Optional<Id> id();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Reference> encounter();
-
-  Optional<List<Reference>> managingOrganization();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Code> language();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CareteamStatus> status();
 
   Optional<Period> period();
 
   String resourceType();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<CareteamStatus> status();
+
+  Optional<Reference> encounter();
+
+  Optional<List<CareTeam_Participant>> participant();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<List<CodeableConcept>> reasonCode();
 
   Optional<List<ContactPoint>> telecom();
 
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> subject();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<String> name();
+
   Optional<Meta> meta();
 
-  Optional<List<Identifier>> identifier();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> managingOrganization();
+
+  Optional<List<Reference>> reasonReference();
 
   static ImmutableCareTeam.ResourceTypeBuildStage builder() {
     return ImmutableCareTeam.builder();

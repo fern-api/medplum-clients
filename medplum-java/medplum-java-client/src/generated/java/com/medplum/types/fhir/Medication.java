@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Medication {
+  Optional<Narrative> text();
+
+  Optional<Medication_Batch> batch();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> code();
+
   Optional<Uri> implicitRules();
+
+  String resourceType();
+
+  Optional<Ratio> amount();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<ResourceList>> contained();
 
   Optional<Reference> manufacturer();
 
-  Optional<CodeableConcept> form();
-
-  Optional<Medication_Batch> batch();
-
-  Optional<Code> status();
-
-  Optional<Ratio> amount();
-
-  String resourceType();
-
-  Optional<List<Extension>> extension();
-
   Optional<Meta> meta();
 
   Optional<List<Medication_Ingredient>> ingredient();
 
-  Optional<Id> id();
+  Optional<Code> language();
+
+  Optional<Code> status();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<CodeableConcept> code();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> language();
+  Optional<CodeableConcept> form();
 
   static ImmutableMedication.ResourceTypeBuildStage builder() {
     return ImmutableMedication.builder();

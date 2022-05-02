@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_Repository {
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Molecularsequence_repositoryType> type();
 
   Optional<String> readsetId();
 
-  Optional<Uri> url();
-
   Optional<String> variantsetId();
 
-  Optional<String> name();
+  Optional<Uri> url();
 
   Optional<String> datasetId();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<String> name();
 
   static ImmutableMolecularSequence_Repository.Builder builder() {
     return ImmutableMolecularSequence_Repository.builder();

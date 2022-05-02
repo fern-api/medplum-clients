@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Related {
-  Optional<Identifier> reference();
-
-  Optional<List<Extension>> extension();
-
   Optional<String> id();
 
   Optional<Reference> claim();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Identifier> reference();
 
   Optional<List<Extension>> modifierExtension();
 

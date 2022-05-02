@@ -17,31 +17,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceReferenceInformation_Target {
-  Optional<String> id();
-
-  Optional<CodeableConcept> organismType();
-
   Optional<List<Extension>> extension();
 
-  Optional<List<Reference>> source();
+  Optional<CodeableConcept> amountType();
+
+  Optional<Identifier> target();
+
+  Optional<String> id();
 
   Optional<Range> amountRange();
 
   Optional<CodeableConcept> type();
 
-  Optional<String> amountString();
-
   Optional<CodeableConcept> interaction();
 
-  Optional<Identifier> target();
+  Optional<Quantity> amountQuantity();
+
+  Optional<String> amountString();
 
   Optional<CodeableConcept> organism();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Quantity> amountQuantity();
+  Optional<List<Reference>> source();
 
-  Optional<CodeableConcept> amountType();
+  Optional<CodeableConcept> organismType();
 
   static ImmutableSubstanceReferenceInformation_Target.Builder builder() {
     return ImmutableSubstanceReferenceInformation_Target.builder();

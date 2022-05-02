@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface EffectEvidenceSynthesis_ResultsByExposure {
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Effectevidencesynthesis_resultsbyexposureExposurestate> exposureState();
-
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> variantState();
 
   Optional<String> description();
+
+  Optional<Effectevidencesynthesis_resultsbyexposureExposurestate> exposureState();
 
   Reference riskEvidenceSynthesis();
 

@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_Payment {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Identifier> identifier();
-
-  Optional<CodeableConcept> adjustmentReason();
-
-  Money amount();
+  Optional<String> id();
 
   CodeableConcept type();
 
-  Optional<Date> date();
-
   Optional<Money> adjustment();
 
-  Optional<String> id();
+  Optional<Identifier> identifier();
 
-  static ImmutableClaimResponse_Payment.AmountBuildStage builder() {
+  Money amount();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Date> date();
+
+  Optional<CodeableConcept> adjustmentReason();
+
+  Optional<List<Extension>> modifierExtension();
+
+  static ImmutableClaimResponse_Payment.TypeBuildStage builder() {
     return ImmutableClaimResponse_Payment.builder();
   }
 }

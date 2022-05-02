@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GuidanceResponse {
-  Optional<Identifier> requestIdentifier();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> moduleUri();
-
-  Optional<Reference> outputParameters();
-
-  Optional<Narrative> text();
-
   Optional<List<Reference>> reasonReference();
-
-  String resourceType();
-
-  Optional<DateTime> occurrenceDateTime();
-
-  Optional<Meta> meta();
-
-  Optional<Code> language();
-
-  Optional<GuidanceresponseStatus> status();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<CodeableConcept> moduleCodeableConcept();
 
+  Optional<Reference> outputParameters();
+
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Extension>> extension();
+  Optional<DateTime> occurrenceDateTime();
 
-  Optional<Reference> encounter();
+  Optional<List<Identifier>> identifier();
+
+  Optional<Narrative> text();
 
   Optional<Id> id();
 
-  Optional<List<DataRequirement>> dataRequirement();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> evaluationMessage();
-
-  Optional<List<Annotation>> note();
-
-  Optional<String> moduleCanonical();
-
   Optional<Reference> result();
+
+  Optional<Meta> meta();
 
   Optional<Reference> subject();
 
+  Optional<List<Extension>> extension();
+
+  Optional<String> moduleCanonical();
+
+  String resourceType();
+
+  Optional<String> moduleUri();
+
+  Optional<GuidanceresponseStatus> status();
+
+  Optional<Identifier> requestIdentifier();
+
   Optional<Reference> performer();
+
+  Optional<Reference> encounter();
+
+  Optional<Code> language();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Reference>> evaluationMessage();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<DataRequirement>> dataRequirement();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableGuidanceResponse.ResourceTypeBuildStage builder() {
     return ImmutableGuidanceResponse.builder();

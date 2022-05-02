@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest_Item {
-  Optional<Reference> facility();
-
-  Optional<String> id();
-
-  Optional<Reference> provider();
+  Optional<Quantity> quantity();
 
   Optional<Money> unitPrice();
 
-  Optional<List<CodeableConcept>> modifier();
-
   Optional<List<PositiveInt>> supportingInfoSequence();
 
-  Optional<Quantity> quantity();
-
-  Optional<List<Reference>> detail();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> category();
 
-  Optional<CodeableConcept> productOrService();
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<Reference> facility();
+
+  Optional<List<Reference>> detail();
 
   Optional<List<CoverageEligibilityRequest_Diagnosis>> diagnosis();
+
+  Optional<CodeableConcept> productOrService();
+
+  Optional<Reference> provider();
 
   Optional<List<Extension>> modifierExtension();
 

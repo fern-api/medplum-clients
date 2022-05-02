@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Coverage_Exception {
-  CodeableConcept type();
-
-  Optional<Period> period();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
+  CodeableConcept type();
+
+  Optional<Period> period();
 
   Optional<String> id();
 

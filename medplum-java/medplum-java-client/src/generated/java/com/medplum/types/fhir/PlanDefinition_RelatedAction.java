@@ -21,15 +21,15 @@ public interface PlanDefinition_RelatedAction {
 
   Optional<List<Extension>> extension();
 
-  Optional<Plandefinition_relatedactionRelationship> relationship();
-
-  Optional<Duration> offsetDuration();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Plandefinition_relatedactionRelationship> relationship();
 
   Optional<Id> actionId();
+
+  Optional<Duration> offsetDuration();
 
   static ImmutablePlanDefinition_RelatedAction.Builder builder() {
     return ImmutablePlanDefinition_RelatedAction.builder();

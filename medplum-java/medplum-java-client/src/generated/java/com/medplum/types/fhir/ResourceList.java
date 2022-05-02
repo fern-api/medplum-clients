@@ -656,68 +656,436 @@ public final class ResourceList {
     return new ResourceList(InternalUserConfigurationValue.of(value));
   }
 
-  public boolean isImmunizationRecommendation() {
-    return value instanceof InternalImmunizationRecommendationValue;
+  public boolean isCatalogEntry() {
+    return value instanceof InternalCatalogEntryValue;
   }
 
-  public boolean isChargeItemDefinition() {
-    return value instanceof InternalChargeItemDefinitionValue;
+  public boolean isNutritionOrder() {
+    return value instanceof InternalNutritionOrderValue;
   }
 
-  public boolean isPerson() {
-    return value instanceof InternalPersonValue;
+  public boolean isBot() {
+    return value instanceof InternalBotValue;
   }
 
-  public boolean isCapabilityStatement() {
-    return value instanceof InternalCapabilityStatementValue;
+  public boolean isProvenance() {
+    return value instanceof InternalProvenanceValue;
   }
 
-  public boolean isMessageHeader() {
-    return value instanceof InternalMessageHeaderValue;
+  public boolean isExampleScenario() {
+    return value instanceof InternalExampleScenarioValue;
+  }
+
+  public boolean isSubstanceProtein() {
+    return value instanceof InternalSubstanceProteinValue;
+  }
+
+  public boolean isSlot() {
+    return value instanceof InternalSlotValue;
+  }
+
+  public boolean isPasswordChangeRequest() {
+    return value instanceof InternalPasswordChangeRequestValue;
+  }
+
+  public boolean isAuditEvent() {
+    return value instanceof InternalAuditEventValue;
+  }
+
+  public boolean isQuestionnaire() {
+    return value instanceof InternalQuestionnaireValue;
+  }
+
+  public boolean isMedicinalProductAuthorization() {
+    return value instanceof InternalMedicinalProductAuthorizationValue;
+  }
+
+  public boolean isPatient() {
+    return value instanceof InternalPatientValue;
+  }
+
+  public boolean isMedicinalProductIngredient() {
+    return value instanceof InternalMedicinalProductIngredientValue;
+  }
+
+  public boolean isProcedure() {
+    return value instanceof InternalProcedureValue;
+  }
+
+  public boolean isTask() {
+    return value instanceof InternalTaskValue;
+  }
+
+  public boolean isMedicinalProductPharmaceutical() {
+    return value instanceof InternalMedicinalProductPharmaceuticalValue;
+  }
+
+  public boolean isList() {
+    return value instanceof InternalListValue;
+  }
+
+  public boolean isEvidenceVariable() {
+    return value instanceof InternalEvidenceVariableValue;
+  }
+
+  public boolean isPaymentReconciliation() {
+    return value instanceof InternalPaymentReconciliationValue;
+  }
+
+  public boolean isSubstanceNucleicAcid() {
+    return value instanceof InternalSubstanceNucleicAcidValue;
+  }
+
+  public boolean isMedicinalProduct() {
+    return value instanceof InternalMedicinalProductValue;
+  }
+
+  public boolean isGraphDefinition() {
+    return value instanceof InternalGraphDefinitionValue;
+  }
+
+  public boolean isCarePlan() {
+    return value instanceof InternalCarePlanValue;
+  }
+
+  public boolean isMedicinalProductContraindication() {
+    return value instanceof InternalMedicinalProductContraindicationValue;
+  }
+
+  public boolean isMedicinalProductPackaged() {
+    return value instanceof InternalMedicinalProductPackagedValue;
+  }
+
+  public boolean isMedicationRequest() {
+    return value instanceof InternalMedicationRequestValue;
+  }
+
+  public boolean isPractitionerRole() {
+    return value instanceof InternalPractitionerRoleValue;
   }
 
   public boolean isClaimResponse() {
     return value instanceof InternalClaimResponseValue;
   }
 
-  public boolean isTerminologyCapabilities() {
-    return value instanceof InternalTerminologyCapabilitiesValue;
+  public boolean isMedicinalProductUndesirableEffect() {
+    return value instanceof InternalMedicinalProductUndesirableEffectValue;
   }
 
-  public boolean isMedication() {
-    return value instanceof InternalMedicationValue;
-  }
-
-  public boolean isVisionPrescription() {
-    return value instanceof InternalVisionPrescriptionValue;
-  }
-
-  public boolean isQuestionnaireResponse() {
-    return value instanceof InternalQuestionnaireResponseValue;
-  }
-
-  public boolean isConceptMap() {
-    return value instanceof InternalConceptMapValue;
-  }
-
-  public boolean isCoverageEligibilityRequest() {
-    return value instanceof InternalCoverageEligibilityRequestValue;
+  public boolean isDevice() {
+    return value instanceof InternalDeviceValue;
   }
 
   public boolean isFlag() {
     return value instanceof InternalFlagValue;
   }
 
-  public boolean isSearchParameter() {
-    return value instanceof InternalSearchParameterValue;
+  public boolean isComposition() {
+    return value instanceof InternalCompositionValue;
+  }
+
+  public boolean isEnrollmentRequest() {
+    return value instanceof InternalEnrollmentRequestValue;
+  }
+
+  public boolean isBundle() {
+    return value instanceof InternalBundleValue;
+  }
+
+  public boolean isCoverage() {
+    return value instanceof InternalCoverageValue;
+  }
+
+  public boolean isImmunizationRecommendation() {
+    return value instanceof InternalImmunizationRecommendationValue;
+  }
+
+  public boolean isUserConfiguration() {
+    return value instanceof InternalUserConfigurationValue;
+  }
+
+  public boolean isConsent() {
+    return value instanceof InternalConsentValue;
+  }
+
+  public boolean isDeviceDefinition() {
+    return value instanceof InternalDeviceDefinitionValue;
+  }
+
+  public boolean isPaymentNotice() {
+    return value instanceof InternalPaymentNoticeValue;
+  }
+
+  public boolean isCommunicationRequest() {
+    return value instanceof InternalCommunicationRequestValue;
+  }
+
+  public boolean isRiskEvidenceSynthesis() {
+    return value instanceof InternalRiskEvidenceSynthesisValue;
+  }
+
+  public boolean isBinary() {
+    return value instanceof InternalBinaryValue;
+  }
+
+  public boolean isInvoice() {
+    return value instanceof InternalInvoiceValue;
+  }
+
+  public boolean isDetectedIssue() {
+    return value instanceof InternalDetectedIssueValue;
+  }
+
+  public boolean isImagingStudy() {
+    return value instanceof InternalImagingStudyValue;
+  }
+
+  public boolean isExplanationOfBenefit() {
+    return value instanceof InternalExplanationOfBenefitValue;
+  }
+
+  public boolean isEncounter() {
+    return value instanceof InternalEncounterValue;
+  }
+
+  public boolean isMedicationDispense() {
+    return value instanceof InternalMedicationDispenseValue;
+  }
+
+  public boolean isTestScript() {
+    return value instanceof InternalTestScriptValue;
+  }
+
+  public boolean isResearchStudy() {
+    return value instanceof InternalResearchStudyValue;
+  }
+
+  public boolean isSubstanceReferenceInformation() {
+    return value instanceof InternalSubstanceReferenceInformationValue;
+  }
+
+  public boolean isProject() {
+    return value instanceof InternalProjectValue;
+  }
+
+  public boolean isMolecularSequence() {
+    return value instanceof InternalMolecularSequenceValue;
+  }
+
+  public boolean isUser() {
+    return value instanceof InternalUserValue;
+  }
+
+  public boolean isFamilyMemberHistory() {
+    return value instanceof InternalFamilyMemberHistoryValue;
+  }
+
+  public boolean isAdverseEvent() {
+    return value instanceof InternalAdverseEventValue;
+  }
+
+  public boolean isDeviceUseStatement() {
+    return value instanceof InternalDeviceUseStatementValue;
+  }
+
+  public boolean isRiskAssessment() {
+    return value instanceof InternalRiskAssessmentValue;
+  }
+
+  public boolean isRefreshToken() {
+    return value instanceof InternalRefreshTokenValue;
+  }
+
+  public boolean isCapabilityStatement() {
+    return value instanceof InternalCapabilityStatementValue;
+  }
+
+  public boolean isSpecimenDefinition() {
+    return value instanceof InternalSpecimenDefinitionValue;
+  }
+
+  public boolean isCommunication() {
+    return value instanceof InternalCommunicationValue;
+  }
+
+  public boolean isImplementationGuide() {
+    return value instanceof InternalImplementationGuideValue;
+  }
+
+  public boolean isTerminologyCapabilities() {
+    return value instanceof InternalTerminologyCapabilitiesValue;
+  }
+
+  public boolean isPlanDefinition() {
+    return value instanceof InternalPlanDefinitionValue;
+  }
+
+  public boolean isResearchDefinition() {
+    return value instanceof InternalResearchDefinitionValue;
+  }
+
+  public boolean isSubscription() {
+    return value instanceof InternalSubscriptionValue;
+  }
+
+  public boolean isMedicinalProductManufactured() {
+    return value instanceof InternalMedicinalProductManufacturedValue;
+  }
+
+  public boolean isResearchSubject() {
+    return value instanceof InternalResearchSubjectValue;
+  }
+
+  public boolean isServiceRequest() {
+    return value instanceof InternalServiceRequestValue;
+  }
+
+  public boolean isBasic() {
+    return value instanceof InternalBasicValue;
+  }
+
+  public boolean isDocumentReference() {
+    return value instanceof InternalDocumentReferenceValue;
+  }
+
+  public boolean isMedication() {
+    return value instanceof InternalMedicationValue;
+  }
+
+  public boolean isGoal() {
+    return value instanceof InternalGoalValue;
+  }
+
+  public boolean isImmunizationEvaluation() {
+    return value instanceof InternalImmunizationEvaluationValue;
+  }
+
+  public boolean isOperationOutcome() {
+    return value instanceof InternalOperationOutcomeValue;
+  }
+
+  public boolean isSubstance() {
+    return value instanceof InternalSubstanceValue;
+  }
+
+  public boolean isMessageHeader() {
+    return value instanceof InternalMessageHeaderValue;
+  }
+
+  public boolean isDiagnosticReport() {
+    return value instanceof InternalDiagnosticReportValue;
+  }
+
+  public boolean isAllergyIntolerance() {
+    return value instanceof InternalAllergyIntoleranceValue;
+  }
+
+  public boolean isObservationDefinition() {
+    return value instanceof InternalObservationDefinitionValue;
+  }
+
+  public boolean isEpisodeOfCare() {
+    return value instanceof InternalEpisodeOfCareValue;
   }
 
   public boolean isSubstanceSpecification() {
     return value instanceof InternalSubstanceSpecificationValue;
   }
 
-  public boolean isRelatedPerson() {
-    return value instanceof InternalRelatedPersonValue;
+  public boolean isClinicalImpression() {
+    return value instanceof InternalClinicalImpressionValue;
+  }
+
+  public boolean isDeviceRequest() {
+    return value instanceof InternalDeviceRequestValue;
+  }
+
+  public boolean isLinkage() {
+    return value instanceof InternalLinkageValue;
+  }
+
+  public boolean isParameters() {
+    return value instanceof InternalParametersValue;
+  }
+
+  public boolean isCodeSystem() {
+    return value instanceof InternalCodeSystemValue;
+  }
+
+  public boolean isMedicationStatement() {
+    return value instanceof InternalMedicationStatementValue;
+  }
+
+  public boolean isDocumentManifest() {
+    return value instanceof InternalDocumentManifestValue;
+  }
+
+  public boolean isQuestionnaireResponse() {
+    return value instanceof InternalQuestionnaireResponseValue;
+  }
+
+  public boolean isSpecimen() {
+    return value instanceof InternalSpecimenValue;
+  }
+
+  public boolean isPerson() {
+    return value instanceof InternalPersonValue;
+  }
+
+  public boolean isEventDefinition() {
+    return value instanceof InternalEventDefinitionValue;
+  }
+
+  public boolean isActivityDefinition() {
+    return value instanceof InternalActivityDefinitionValue;
+  }
+
+  public boolean isMedicinalProductInteraction() {
+    return value instanceof InternalMedicinalProductInteractionValue;
+  }
+
+  public boolean isTestReport() {
+    return value instanceof InternalTestReportValue;
+  }
+
+  public boolean isCompartmentDefinition() {
+    return value instanceof InternalCompartmentDefinitionValue;
+  }
+
+  public boolean isDeviceMetric() {
+    return value instanceof InternalDeviceMetricValue;
+  }
+
+  public boolean isOrganizationAffiliation() {
+    return value instanceof InternalOrganizationAffiliationValue;
+  }
+
+  public boolean isAccessPolicy() {
+    return value instanceof InternalAccessPolicyValue;
+  }
+
+  public boolean isNamingSystem() {
+    return value instanceof InternalNamingSystemValue;
+  }
+
+  public boolean isLogin() {
+    return value instanceof InternalLoginValue;
+  }
+
+  public boolean isSearchParameter() {
+    return value instanceof InternalSearchParameterValue;
+  }
+
+  public boolean isEffectEvidenceSynthesis() {
+    return value instanceof InternalEffectEvidenceSynthesisValue;
+  }
+
+  public boolean isMedia() {
+    return value instanceof InternalMediaValue;
+  }
+
+  public boolean isGuidanceResponse() {
+    return value instanceof InternalGuidanceResponseValue;
   }
 
   public boolean isMeasureReport() {
@@ -728,556 +1096,188 @@ public final class ResourceList {
     return value instanceof InternalResearchElementDefinitionValue;
   }
 
-  public boolean isPaymentReconciliation() {
-    return value instanceof InternalPaymentReconciliationValue;
-  }
-
-  public boolean isCompartmentDefinition() {
-    return value instanceof InternalCompartmentDefinitionValue;
-  }
-
-  public boolean isResearchStudy() {
-    return value instanceof InternalResearchStudyValue;
-  }
-
-  public boolean isCareTeam() {
-    return value instanceof InternalCareTeamValue;
-  }
-
-  public boolean isNamingSystem() {
-    return value instanceof InternalNamingSystemValue;
-  }
-
-  public boolean isDocumentManifest() {
-    return value instanceof InternalDocumentManifestValue;
-  }
-
-  public boolean isFamilyMemberHistory() {
-    return value instanceof InternalFamilyMemberHistoryValue;
-  }
-
-  public boolean isSpecimen() {
-    return value instanceof InternalSpecimenValue;
-  }
-
-  public boolean isSupplyDelivery() {
-    return value instanceof InternalSupplyDeliveryValue;
-  }
-
-  public boolean isAppointment() {
-    return value instanceof InternalAppointmentValue;
-  }
-
   public boolean isJsonWebKey() {
     return value instanceof InternalJsonWebKeyValue;
-  }
-
-  public boolean isObservation() {
-    return value instanceof InternalObservationValue;
-  }
-
-  public boolean isClinicalImpression() {
-    return value instanceof InternalClinicalImpressionValue;
-  }
-
-  public boolean isComposition() {
-    return value instanceof InternalCompositionValue;
-  }
-
-  public boolean isCarePlan() {
-    return value instanceof InternalCarePlanValue;
-  }
-
-  public boolean isBasic() {
-    return value instanceof InternalBasicValue;
-  }
-
-  public boolean isEvidenceVariable() {
-    return value instanceof InternalEvidenceVariableValue;
-  }
-
-  public boolean isSchedule() {
-    return value instanceof InternalScheduleValue;
-  }
-
-  public boolean isClaim() {
-    return value instanceof InternalClaimValue;
-  }
-
-  public boolean isObservationDefinition() {
-    return value instanceof InternalObservationDefinitionValue;
-  }
-
-  public boolean isSubstanceNucleicAcid() {
-    return value instanceof InternalSubstanceNucleicAcidValue;
-  }
-
-  public boolean isDocumentReference() {
-    return value instanceof InternalDocumentReferenceValue;
-  }
-
-  public boolean isTestScript() {
-    return value instanceof InternalTestScriptValue;
-  }
-
-  public boolean isRefreshToken() {
-    return value instanceof InternalRefreshTokenValue;
-  }
-
-  public boolean isAuditEvent() {
-    return value instanceof InternalAuditEventValue;
-  }
-
-  public boolean isPaymentNotice() {
-    return value instanceof InternalPaymentNoticeValue;
-  }
-
-  public boolean isAppointmentResponse() {
-    return value instanceof InternalAppointmentResponseValue;
-  }
-
-  public boolean isResearchDefinition() {
-    return value instanceof InternalResearchDefinitionValue;
-  }
-
-  public boolean isPasswordChangeRequest() {
-    return value instanceof InternalPasswordChangeRequestValue;
-  }
-
-  public boolean isMedicinalProductContraindication() {
-    return value instanceof InternalMedicinalProductContraindicationValue;
-  }
-
-  public boolean isMeasure() {
-    return value instanceof InternalMeasureValue;
-  }
-
-  public boolean isPatient() {
-    return value instanceof InternalPatientValue;
-  }
-
-  public boolean isPlanDefinition() {
-    return value instanceof InternalPlanDefinitionValue;
-  }
-
-  public boolean isHealthcareService() {
-    return value instanceof InternalHealthcareServiceValue;
-  }
-
-  public boolean isSubstanceReferenceInformation() {
-    return value instanceof InternalSubstanceReferenceInformationValue;
-  }
-
-  public boolean isMedicationRequest() {
-    return value instanceof InternalMedicationRequestValue;
-  }
-
-  public boolean isDiagnosticReport() {
-    return value instanceof InternalDiagnosticReportValue;
-  }
-
-  public boolean isMessageDefinition() {
-    return value instanceof InternalMessageDefinitionValue;
-  }
-
-  public boolean isDevice() {
-    return value instanceof InternalDeviceValue;
-  }
-
-  public boolean isEpisodeOfCare() {
-    return value instanceof InternalEpisodeOfCareValue;
-  }
-
-  public boolean isImmunization() {
-    return value instanceof InternalImmunizationValue;
-  }
-
-  public boolean isEnrollmentRequest() {
-    return value instanceof InternalEnrollmentRequestValue;
-  }
-
-  public boolean isDeviceDefinition() {
-    return value instanceof InternalDeviceDefinitionValue;
-  }
-
-  public boolean isMedicinalProduct() {
-    return value instanceof InternalMedicinalProductValue;
-  }
-
-  public boolean isMedicationKnowledge() {
-    return value instanceof InternalMedicationKnowledgeValue;
-  }
-
-  public boolean isEndpoint() {
-    return value instanceof InternalEndpointValue;
-  }
-
-  public boolean isEncounter() {
-    return value instanceof InternalEncounterValue;
-  }
-
-  public boolean isMedicinalProductPackaged() {
-    return value instanceof InternalMedicinalProductPackagedValue;
-  }
-
-  public boolean isProcedure() {
-    return value instanceof InternalProcedureValue;
-  }
-
-  public boolean isEventDefinition() {
-    return value instanceof InternalEventDefinitionValue;
-  }
-
-  public boolean isMedia() {
-    return value instanceof InternalMediaValue;
-  }
-
-  public boolean isInvoice() {
-    return value instanceof InternalInvoiceValue;
-  }
-
-  public boolean isMedicinalProductInteraction() {
-    return value instanceof InternalMedicinalProductInteractionValue;
-  }
-
-  public boolean isMedicinalProductPharmaceutical() {
-    return value instanceof InternalMedicinalProductPharmaceuticalValue;
-  }
-
-  public boolean isContract() {
-    return value instanceof InternalContractValue;
-  }
-
-  public boolean isAccount() {
-    return value instanceof InternalAccountValue;
-  }
-
-  public boolean isGroup() {
-    return value instanceof InternalGroupValue;
-  }
-
-  public boolean isPractitionerRole() {
-    return value instanceof InternalPractitionerRoleValue;
-  }
-
-  public boolean isDeviceUseStatement() {
-    return value instanceof InternalDeviceUseStatementValue;
-  }
-
-  public boolean isSlot() {
-    return value instanceof InternalSlotValue;
-  }
-
-  public boolean isDeviceRequest() {
-    return value instanceof InternalDeviceRequestValue;
-  }
-
-  public boolean isBodyStructure() {
-    return value instanceof InternalBodyStructureValue;
-  }
-
-  public boolean isGoal() {
-    return value instanceof InternalGoalValue;
-  }
-
-  public boolean isCommunicationRequest() {
-    return value instanceof InternalCommunicationRequestValue;
-  }
-
-  public boolean isStructureMap() {
-    return value instanceof InternalStructureMapValue;
-  }
-
-  public boolean isImagingStudy() {
-    return value instanceof InternalImagingStudyValue;
-  }
-
-  public boolean isAdverseEvent() {
-    return value instanceof InternalAdverseEventValue;
-  }
-
-  public boolean isSubstance() {
-    return value instanceof InternalSubstanceValue;
-  }
-
-  public boolean isSubscription() {
-    return value instanceof InternalSubscriptionValue;
-  }
-
-  public boolean isTask() {
-    return value instanceof InternalTaskValue;
-  }
-
-  public boolean isMedicinalProductIndication() {
-    return value instanceof InternalMedicinalProductIndicationValue;
-  }
-
-  public boolean isMedicinalProductManufactured() {
-    return value instanceof InternalMedicinalProductManufacturedValue;
-  }
-
-  public boolean isEvidence() {
-    return value instanceof InternalEvidenceValue;
-  }
-
-  public boolean isCodeSystem() {
-    return value instanceof InternalCodeSystemValue;
-  }
-
-  public boolean isMedicationDispense() {
-    return value instanceof InternalMedicationDispenseValue;
-  }
-
-  public boolean isSubstancePolymer() {
-    return value instanceof InternalSubstancePolymerValue;
-  }
-
-  public boolean isDetectedIssue() {
-    return value instanceof InternalDetectedIssueValue;
-  }
-
-  public boolean isInsurancePlan() {
-    return value instanceof InternalInsurancePlanValue;
-  }
-
-  public boolean isImmunizationEvaluation() {
-    return value instanceof InternalImmunizationEvaluationValue;
-  }
-
-  public boolean isMedicinalProductIngredient() {
-    return value instanceof InternalMedicinalProductIngredientValue;
-  }
-
-  public boolean isCommunication() {
-    return value instanceof InternalCommunicationValue;
-  }
-
-  public boolean isGuidanceResponse() {
-    return value instanceof InternalGuidanceResponseValue;
-  }
-
-  public boolean isBundle() {
-    return value instanceof InternalBundleValue;
-  }
-
-  public boolean isAccessPolicy() {
-    return value instanceof InternalAccessPolicyValue;
-  }
-
-  public boolean isEffectEvidenceSynthesis() {
-    return value instanceof InternalEffectEvidenceSynthesisValue;
-  }
-
-  public boolean isMolecularSequence() {
-    return value instanceof InternalMolecularSequenceValue;
-  }
-
-  public boolean isRequestGroup() {
-    return value instanceof InternalRequestGroupValue;
-  }
-
-  public boolean isCondition() {
-    return value instanceof InternalConditionValue;
-  }
-
-  public boolean isMedicationStatement() {
-    return value instanceof InternalMedicationStatementValue;
-  }
-
-  public boolean isOperationDefinition() {
-    return value instanceof InternalOperationDefinitionValue;
-  }
-
-  public boolean isOrganization() {
-    return value instanceof InternalOrganizationValue;
-  }
-
-  public boolean isOrganizationAffiliation() {
-    return value instanceof InternalOrganizationAffiliationValue;
-  }
-
-  public boolean isResearchSubject() {
-    return value instanceof InternalResearchSubjectValue;
-  }
-
-  public boolean isExampleScenario() {
-    return value instanceof InternalExampleScenarioValue;
-  }
-
-  public boolean isLinkage() {
-    return value instanceof InternalLinkageValue;
-  }
-
-  public boolean isRiskEvidenceSynthesis() {
-    return value instanceof InternalRiskEvidenceSynthesisValue;
-  }
-
-  public boolean isMedicationAdministration() {
-    return value instanceof InternalMedicationAdministrationValue;
-  }
-
-  public boolean isProject() {
-    return value instanceof InternalProjectValue;
-  }
-
-  public boolean isSupplyRequest() {
-    return value instanceof InternalSupplyRequestValue;
-  }
-
-  public boolean isCatalogEntry() {
-    return value instanceof InternalCatalogEntryValue;
-  }
-
-  public boolean isSubstanceSourceMaterial() {
-    return value instanceof InternalSubstanceSourceMaterialValue;
-  }
-
-  public boolean isOperationOutcome() {
-    return value instanceof InternalOperationOutcomeValue;
-  }
-
-  public boolean isPractitioner() {
-    return value instanceof InternalPractitionerValue;
-  }
-
-  public boolean isBiologicallyDerivedProduct() {
-    return value instanceof InternalBiologicallyDerivedProductValue;
-  }
-
-  public boolean isImplementationGuide() {
-    return value instanceof InternalImplementationGuideValue;
-  }
-
-  public boolean isTestReport() {
-    return value instanceof InternalTestReportValue;
-  }
-
-  public boolean isQuestionnaire() {
-    return value instanceof InternalQuestionnaireValue;
-  }
-
-  public boolean isBot() {
-    return value instanceof InternalBotValue;
-  }
-
-  public boolean isMedicinalProductUndesirableEffect() {
-    return value instanceof InternalMedicinalProductUndesirableEffectValue;
-  }
-
-  public boolean isVerificationResult() {
-    return value instanceof InternalVerificationResultValue;
-  }
-
-  public boolean isUser() {
-    return value instanceof InternalUserValue;
-  }
-
-  public boolean isConsent() {
-    return value instanceof InternalConsentValue;
-  }
-
-  public boolean isChargeItem() {
-    return value instanceof InternalChargeItemValue;
-  }
-
-  public boolean isList() {
-    return value instanceof InternalListValue;
   }
 
   public boolean isClientApplication() {
     return value instanceof InternalClientApplicationValue;
   }
 
-  public boolean isLocation() {
-    return value instanceof InternalLocationValue;
+  public boolean isClaim() {
+    return value instanceof InternalClaimValue;
+  }
+
+  public boolean isSchedule() {
+    return value instanceof InternalScheduleValue;
+  }
+
+  public boolean isGroup() {
+    return value instanceof InternalGroupValue;
+  }
+
+  public boolean isRelatedPerson() {
+    return value instanceof InternalRelatedPersonValue;
+  }
+
+  public boolean isSupplyRequest() {
+    return value instanceof InternalSupplyRequestValue;
+  }
+
+  public boolean isCareTeam() {
+    return value instanceof InternalCareTeamValue;
+  }
+
+  public boolean isHealthcareService() {
+    return value instanceof InternalHealthcareServiceValue;
+  }
+
+  public boolean isObservation() {
+    return value instanceof InternalObservationValue;
+  }
+
+  public boolean isPractitioner() {
+    return value instanceof InternalPractitionerValue;
+  }
+
+  public boolean isStructureDefinition() {
+    return value instanceof InternalStructureDefinitionValue;
+  }
+
+  public boolean isAccount() {
+    return value instanceof InternalAccountValue;
+  }
+
+  public boolean isMedicationAdministration() {
+    return value instanceof InternalMedicationAdministrationValue;
+  }
+
+  public boolean isAppointmentResponse() {
+    return value instanceof InternalAppointmentResponseValue;
   }
 
   public boolean isEnrollmentResponse() {
     return value instanceof InternalEnrollmentResponseValue;
   }
 
-  public boolean isRiskAssessment() {
-    return value instanceof InternalRiskAssessmentValue;
+  public boolean isInsurancePlan() {
+    return value instanceof InternalInsurancePlanValue;
   }
 
-  public boolean isGraphDefinition() {
-    return value instanceof InternalGraphDefinitionValue;
-  }
-
-  public boolean isProvenance() {
-    return value instanceof InternalProvenanceValue;
-  }
-
-  public boolean isSubstanceProtein() {
-    return value instanceof InternalSubstanceProteinValue;
-  }
-
-  public boolean isSpecimenDefinition() {
-    return value instanceof InternalSpecimenDefinitionValue;
-  }
-
-  public boolean isCoverage() {
-    return value instanceof InternalCoverageValue;
-  }
-
-  public boolean isValueSet() {
-    return value instanceof InternalValueSetValue;
-  }
-
-  public boolean isAllergyIntolerance() {
-    return value instanceof InternalAllergyIntoleranceValue;
-  }
-
-  public boolean isBinary() {
-    return value instanceof InternalBinaryValue;
-  }
-
-  public boolean isParameters() {
-    return value instanceof InternalParametersValue;
-  }
-
-  public boolean isActivityDefinition() {
-    return value instanceof InternalActivityDefinitionValue;
-  }
-
-  public boolean isMedicinalProductAuthorization() {
-    return value instanceof InternalMedicinalProductAuthorizationValue;
+  public boolean isStructureMap() {
+    return value instanceof InternalStructureMapValue;
   }
 
   public boolean isLibrary() {
     return value instanceof InternalLibraryValue;
   }
 
-  public boolean isNutritionOrder() {
-    return value instanceof InternalNutritionOrderValue;
-  }
-
   public boolean isCoverageEligibilityResponse() {
     return value instanceof InternalCoverageEligibilityResponseValue;
   }
 
-  public boolean isExplanationOfBenefit() {
-    return value instanceof InternalExplanationOfBenefitValue;
+  public boolean isAppointment() {
+    return value instanceof InternalAppointmentValue;
   }
 
-  public boolean isLogin() {
-    return value instanceof InternalLoginValue;
+  public boolean isValueSet() {
+    return value instanceof InternalValueSetValue;
   }
 
-  public boolean isUserConfiguration() {
-    return value instanceof InternalUserConfigurationValue;
+  public boolean isBodyStructure() {
+    return value instanceof InternalBodyStructureValue;
   }
 
-  public boolean isServiceRequest() {
-    return value instanceof InternalServiceRequestValue;
+  public boolean isEvidence() {
+    return value instanceof InternalEvidenceValue;
   }
 
-  public boolean isDeviceMetric() {
-    return value instanceof InternalDeviceMetricValue;
+  public boolean isChargeItemDefinition() {
+    return value instanceof InternalChargeItemDefinitionValue;
   }
 
-  public boolean isStructureDefinition() {
-    return value instanceof InternalStructureDefinitionValue;
+  public boolean isImmunization() {
+    return value instanceof InternalImmunizationValue;
+  }
+
+  public boolean isMedicationKnowledge() {
+    return value instanceof InternalMedicationKnowledgeValue;
+  }
+
+  public boolean isVisionPrescription() {
+    return value instanceof InternalVisionPrescriptionValue;
+  }
+
+  public boolean isChargeItem() {
+    return value instanceof InternalChargeItemValue;
+  }
+
+  public boolean isCondition() {
+    return value instanceof InternalConditionValue;
+  }
+
+  public boolean isRequestGroup() {
+    return value instanceof InternalRequestGroupValue;
+  }
+
+  public boolean isSubstancePolymer() {
+    return value instanceof InternalSubstancePolymerValue;
+  }
+
+  public boolean isSubstanceSourceMaterial() {
+    return value instanceof InternalSubstanceSourceMaterialValue;
+  }
+
+  public boolean isVerificationResult() {
+    return value instanceof InternalVerificationResultValue;
+  }
+
+  public boolean isContract() {
+    return value instanceof InternalContractValue;
+  }
+
+  public boolean isConceptMap() {
+    return value instanceof InternalConceptMapValue;
+  }
+
+  public boolean isCoverageEligibilityRequest() {
+    return value instanceof InternalCoverageEligibilityRequestValue;
+  }
+
+  public boolean isOrganization() {
+    return value instanceof InternalOrganizationValue;
+  }
+
+  public boolean isBiologicallyDerivedProduct() {
+    return value instanceof InternalBiologicallyDerivedProductValue;
+  }
+
+  public boolean isLocation() {
+    return value instanceof InternalLocationValue;
+  }
+
+  public boolean isMedicinalProductIndication() {
+    return value instanceof InternalMedicinalProductIndicationValue;
+  }
+
+  public boolean isMeasure() {
+    return value instanceof InternalMeasureValue;
+  }
+
+  public boolean isSupplyDelivery() {
+    return value instanceof InternalSupplyDeliveryValue;
+  }
+
+  public boolean isEndpoint() {
+    return value instanceof InternalEndpointValue;
+  }
+
+  public boolean isOperationDefinition() {
+    return value instanceof InternalOperationDefinitionValue;
+  }
+
+  public boolean isMessageDefinition() {
+    return value instanceof InternalMessageDefinitionValue;
   }
 
   public Optional<Account> getAccount() {
@@ -2700,162 +2700,162 @@ public final class ResourceList {
       defaultImpl = Unknown.class
   )
   @JsonSubTypes({
-      @JsonSubTypes.Type(value = InternalImmunizationRecommendationValue.class, name = "ImmunizationRecommendation"),
-      @JsonSubTypes.Type(value = InternalChargeItemDefinitionValue.class, name = "ChargeItemDefinition"),
-      @JsonSubTypes.Type(value = InternalPersonValue.class, name = "Person"),
-      @JsonSubTypes.Type(value = InternalCapabilityStatementValue.class, name = "CapabilityStatement"),
-      @JsonSubTypes.Type(value = InternalMessageHeaderValue.class, name = "MessageHeader"),
+      @JsonSubTypes.Type(value = InternalCatalogEntryValue.class, name = "CatalogEntry"),
+      @JsonSubTypes.Type(value = InternalNutritionOrderValue.class, name = "NutritionOrder"),
+      @JsonSubTypes.Type(value = InternalBotValue.class, name = "Bot"),
+      @JsonSubTypes.Type(value = InternalProvenanceValue.class, name = "Provenance"),
+      @JsonSubTypes.Type(value = InternalExampleScenarioValue.class, name = "ExampleScenario"),
+      @JsonSubTypes.Type(value = InternalSubstanceProteinValue.class, name = "SubstanceProtein"),
+      @JsonSubTypes.Type(value = InternalSlotValue.class, name = "Slot"),
+      @JsonSubTypes.Type(value = InternalPasswordChangeRequestValue.class, name = "PasswordChangeRequest"),
+      @JsonSubTypes.Type(value = InternalAuditEventValue.class, name = "AuditEvent"),
+      @JsonSubTypes.Type(value = InternalQuestionnaireValue.class, name = "Questionnaire"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductAuthorizationValue.class, name = "MedicinalProductAuthorization"),
+      @JsonSubTypes.Type(value = InternalPatientValue.class, name = "Patient"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductIngredientValue.class, name = "MedicinalProductIngredient"),
+      @JsonSubTypes.Type(value = InternalProcedureValue.class, name = "Procedure"),
+      @JsonSubTypes.Type(value = InternalTaskValue.class, name = "Task"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductPharmaceuticalValue.class, name = "MedicinalProductPharmaceutical"),
+      @JsonSubTypes.Type(value = InternalListValue.class, name = "List"),
+      @JsonSubTypes.Type(value = InternalEvidenceVariableValue.class, name = "EvidenceVariable"),
+      @JsonSubTypes.Type(value = InternalPaymentReconciliationValue.class, name = "PaymentReconciliation"),
+      @JsonSubTypes.Type(value = InternalSubstanceNucleicAcidValue.class, name = "SubstanceNucleicAcid"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductValue.class, name = "MedicinalProduct"),
+      @JsonSubTypes.Type(value = InternalGraphDefinitionValue.class, name = "GraphDefinition"),
+      @JsonSubTypes.Type(value = InternalCarePlanValue.class, name = "CarePlan"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductContraindicationValue.class, name = "MedicinalProductContraindication"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductPackagedValue.class, name = "MedicinalProductPackaged"),
+      @JsonSubTypes.Type(value = InternalMedicationRequestValue.class, name = "MedicationRequest"),
+      @JsonSubTypes.Type(value = InternalPractitionerRoleValue.class, name = "PractitionerRole"),
       @JsonSubTypes.Type(value = InternalClaimResponseValue.class, name = "ClaimResponse"),
-      @JsonSubTypes.Type(value = InternalTerminologyCapabilitiesValue.class, name = "TerminologyCapabilities"),
-      @JsonSubTypes.Type(value = InternalMedicationValue.class, name = "Medication"),
-      @JsonSubTypes.Type(value = InternalVisionPrescriptionValue.class, name = "VisionPrescription"),
-      @JsonSubTypes.Type(value = InternalQuestionnaireResponseValue.class, name = "QuestionnaireResponse"),
-      @JsonSubTypes.Type(value = InternalConceptMapValue.class, name = "ConceptMap"),
-      @JsonSubTypes.Type(value = InternalCoverageEligibilityRequestValue.class, name = "CoverageEligibilityRequest"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductUndesirableEffectValue.class, name = "MedicinalProductUndesirableEffect"),
+      @JsonSubTypes.Type(value = InternalDeviceValue.class, name = "Device"),
       @JsonSubTypes.Type(value = InternalFlagValue.class, name = "Flag"),
-      @JsonSubTypes.Type(value = InternalSearchParameterValue.class, name = "SearchParameter"),
+      @JsonSubTypes.Type(value = InternalCompositionValue.class, name = "Composition"),
+      @JsonSubTypes.Type(value = InternalEnrollmentRequestValue.class, name = "EnrollmentRequest"),
+      @JsonSubTypes.Type(value = InternalBundleValue.class, name = "Bundle"),
+      @JsonSubTypes.Type(value = InternalCoverageValue.class, name = "Coverage"),
+      @JsonSubTypes.Type(value = InternalImmunizationRecommendationValue.class, name = "ImmunizationRecommendation"),
+      @JsonSubTypes.Type(value = InternalUserConfigurationValue.class, name = "UserConfiguration"),
+      @JsonSubTypes.Type(value = InternalConsentValue.class, name = "Consent"),
+      @JsonSubTypes.Type(value = InternalDeviceDefinitionValue.class, name = "DeviceDefinition"),
+      @JsonSubTypes.Type(value = InternalPaymentNoticeValue.class, name = "PaymentNotice"),
+      @JsonSubTypes.Type(value = InternalCommunicationRequestValue.class, name = "CommunicationRequest"),
+      @JsonSubTypes.Type(value = InternalRiskEvidenceSynthesisValue.class, name = "RiskEvidenceSynthesis"),
+      @JsonSubTypes.Type(value = InternalBinaryValue.class, name = "Binary"),
+      @JsonSubTypes.Type(value = InternalInvoiceValue.class, name = "Invoice"),
+      @JsonSubTypes.Type(value = InternalDetectedIssueValue.class, name = "DetectedIssue"),
+      @JsonSubTypes.Type(value = InternalImagingStudyValue.class, name = "ImagingStudy"),
+      @JsonSubTypes.Type(value = InternalExplanationOfBenefitValue.class, name = "ExplanationOfBenefit"),
+      @JsonSubTypes.Type(value = InternalEncounterValue.class, name = "Encounter"),
+      @JsonSubTypes.Type(value = InternalMedicationDispenseValue.class, name = "MedicationDispense"),
+      @JsonSubTypes.Type(value = InternalTestScriptValue.class, name = "TestScript"),
+      @JsonSubTypes.Type(value = InternalResearchStudyValue.class, name = "ResearchStudy"),
+      @JsonSubTypes.Type(value = InternalSubstanceReferenceInformationValue.class, name = "SubstanceReferenceInformation"),
+      @JsonSubTypes.Type(value = InternalProjectValue.class, name = "Project"),
+      @JsonSubTypes.Type(value = InternalMolecularSequenceValue.class, name = "MolecularSequence"),
+      @JsonSubTypes.Type(value = InternalUserValue.class, name = "User"),
+      @JsonSubTypes.Type(value = InternalFamilyMemberHistoryValue.class, name = "FamilyMemberHistory"),
+      @JsonSubTypes.Type(value = InternalAdverseEventValue.class, name = "AdverseEvent"),
+      @JsonSubTypes.Type(value = InternalDeviceUseStatementValue.class, name = "DeviceUseStatement"),
+      @JsonSubTypes.Type(value = InternalRiskAssessmentValue.class, name = "RiskAssessment"),
+      @JsonSubTypes.Type(value = InternalRefreshTokenValue.class, name = "RefreshToken"),
+      @JsonSubTypes.Type(value = InternalCapabilityStatementValue.class, name = "CapabilityStatement"),
+      @JsonSubTypes.Type(value = InternalSpecimenDefinitionValue.class, name = "SpecimenDefinition"),
+      @JsonSubTypes.Type(value = InternalCommunicationValue.class, name = "Communication"),
+      @JsonSubTypes.Type(value = InternalImplementationGuideValue.class, name = "ImplementationGuide"),
+      @JsonSubTypes.Type(value = InternalTerminologyCapabilitiesValue.class, name = "TerminologyCapabilities"),
+      @JsonSubTypes.Type(value = InternalPlanDefinitionValue.class, name = "PlanDefinition"),
+      @JsonSubTypes.Type(value = InternalResearchDefinitionValue.class, name = "ResearchDefinition"),
+      @JsonSubTypes.Type(value = InternalSubscriptionValue.class, name = "Subscription"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductManufacturedValue.class, name = "MedicinalProductManufactured"),
+      @JsonSubTypes.Type(value = InternalResearchSubjectValue.class, name = "ResearchSubject"),
+      @JsonSubTypes.Type(value = InternalServiceRequestValue.class, name = "ServiceRequest"),
+      @JsonSubTypes.Type(value = InternalBasicValue.class, name = "Basic"),
+      @JsonSubTypes.Type(value = InternalDocumentReferenceValue.class, name = "DocumentReference"),
+      @JsonSubTypes.Type(value = InternalMedicationValue.class, name = "Medication"),
+      @JsonSubTypes.Type(value = InternalGoalValue.class, name = "Goal"),
+      @JsonSubTypes.Type(value = InternalImmunizationEvaluationValue.class, name = "ImmunizationEvaluation"),
+      @JsonSubTypes.Type(value = InternalOperationOutcomeValue.class, name = "OperationOutcome"),
+      @JsonSubTypes.Type(value = InternalSubstanceValue.class, name = "Substance"),
+      @JsonSubTypes.Type(value = InternalMessageHeaderValue.class, name = "MessageHeader"),
+      @JsonSubTypes.Type(value = InternalDiagnosticReportValue.class, name = "DiagnosticReport"),
+      @JsonSubTypes.Type(value = InternalAllergyIntoleranceValue.class, name = "AllergyIntolerance"),
+      @JsonSubTypes.Type(value = InternalObservationDefinitionValue.class, name = "ObservationDefinition"),
+      @JsonSubTypes.Type(value = InternalEpisodeOfCareValue.class, name = "EpisodeOfCare"),
       @JsonSubTypes.Type(value = InternalSubstanceSpecificationValue.class, name = "SubstanceSpecification"),
-      @JsonSubTypes.Type(value = InternalRelatedPersonValue.class, name = "RelatedPerson"),
+      @JsonSubTypes.Type(value = InternalClinicalImpressionValue.class, name = "ClinicalImpression"),
+      @JsonSubTypes.Type(value = InternalDeviceRequestValue.class, name = "DeviceRequest"),
+      @JsonSubTypes.Type(value = InternalLinkageValue.class, name = "Linkage"),
+      @JsonSubTypes.Type(value = InternalParametersValue.class, name = "Parameters"),
+      @JsonSubTypes.Type(value = InternalCodeSystemValue.class, name = "CodeSystem"),
+      @JsonSubTypes.Type(value = InternalMedicationStatementValue.class, name = "MedicationStatement"),
+      @JsonSubTypes.Type(value = InternalDocumentManifestValue.class, name = "DocumentManifest"),
+      @JsonSubTypes.Type(value = InternalQuestionnaireResponseValue.class, name = "QuestionnaireResponse"),
+      @JsonSubTypes.Type(value = InternalSpecimenValue.class, name = "Specimen"),
+      @JsonSubTypes.Type(value = InternalPersonValue.class, name = "Person"),
+      @JsonSubTypes.Type(value = InternalEventDefinitionValue.class, name = "EventDefinition"),
+      @JsonSubTypes.Type(value = InternalActivityDefinitionValue.class, name = "ActivityDefinition"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductInteractionValue.class, name = "MedicinalProductInteraction"),
+      @JsonSubTypes.Type(value = InternalTestReportValue.class, name = "TestReport"),
+      @JsonSubTypes.Type(value = InternalCompartmentDefinitionValue.class, name = "CompartmentDefinition"),
+      @JsonSubTypes.Type(value = InternalDeviceMetricValue.class, name = "DeviceMetric"),
+      @JsonSubTypes.Type(value = InternalOrganizationAffiliationValue.class, name = "OrganizationAffiliation"),
+      @JsonSubTypes.Type(value = InternalAccessPolicyValue.class, name = "AccessPolicy"),
+      @JsonSubTypes.Type(value = InternalNamingSystemValue.class, name = "NamingSystem"),
+      @JsonSubTypes.Type(value = InternalLoginValue.class, name = "Login"),
+      @JsonSubTypes.Type(value = InternalSearchParameterValue.class, name = "SearchParameter"),
+      @JsonSubTypes.Type(value = InternalEffectEvidenceSynthesisValue.class, name = "EffectEvidenceSynthesis"),
+      @JsonSubTypes.Type(value = InternalMediaValue.class, name = "Media"),
+      @JsonSubTypes.Type(value = InternalGuidanceResponseValue.class, name = "GuidanceResponse"),
       @JsonSubTypes.Type(value = InternalMeasureReportValue.class, name = "MeasureReport"),
       @JsonSubTypes.Type(value = InternalResearchElementDefinitionValue.class, name = "ResearchElementDefinition"),
-      @JsonSubTypes.Type(value = InternalPaymentReconciliationValue.class, name = "PaymentReconciliation"),
-      @JsonSubTypes.Type(value = InternalCompartmentDefinitionValue.class, name = "CompartmentDefinition"),
-      @JsonSubTypes.Type(value = InternalResearchStudyValue.class, name = "ResearchStudy"),
-      @JsonSubTypes.Type(value = InternalCareTeamValue.class, name = "CareTeam"),
-      @JsonSubTypes.Type(value = InternalNamingSystemValue.class, name = "NamingSystem"),
-      @JsonSubTypes.Type(value = InternalDocumentManifestValue.class, name = "DocumentManifest"),
-      @JsonSubTypes.Type(value = InternalFamilyMemberHistoryValue.class, name = "FamilyMemberHistory"),
-      @JsonSubTypes.Type(value = InternalSpecimenValue.class, name = "Specimen"),
-      @JsonSubTypes.Type(value = InternalSupplyDeliveryValue.class, name = "SupplyDelivery"),
-      @JsonSubTypes.Type(value = InternalAppointmentValue.class, name = "Appointment"),
       @JsonSubTypes.Type(value = InternalJsonWebKeyValue.class, name = "JsonWebKey"),
-      @JsonSubTypes.Type(value = InternalObservationValue.class, name = "Observation"),
-      @JsonSubTypes.Type(value = InternalClinicalImpressionValue.class, name = "ClinicalImpression"),
-      @JsonSubTypes.Type(value = InternalCompositionValue.class, name = "Composition"),
-      @JsonSubTypes.Type(value = InternalCarePlanValue.class, name = "CarePlan"),
-      @JsonSubTypes.Type(value = InternalBasicValue.class, name = "Basic"),
-      @JsonSubTypes.Type(value = InternalEvidenceVariableValue.class, name = "EvidenceVariable"),
-      @JsonSubTypes.Type(value = InternalScheduleValue.class, name = "Schedule"),
-      @JsonSubTypes.Type(value = InternalClaimValue.class, name = "Claim"),
-      @JsonSubTypes.Type(value = InternalObservationDefinitionValue.class, name = "ObservationDefinition"),
-      @JsonSubTypes.Type(value = InternalSubstanceNucleicAcidValue.class, name = "SubstanceNucleicAcid"),
-      @JsonSubTypes.Type(value = InternalDocumentReferenceValue.class, name = "DocumentReference"),
-      @JsonSubTypes.Type(value = InternalTestScriptValue.class, name = "TestScript"),
-      @JsonSubTypes.Type(value = InternalRefreshTokenValue.class, name = "RefreshToken"),
-      @JsonSubTypes.Type(value = InternalAuditEventValue.class, name = "AuditEvent"),
-      @JsonSubTypes.Type(value = InternalPaymentNoticeValue.class, name = "PaymentNotice"),
-      @JsonSubTypes.Type(value = InternalAppointmentResponseValue.class, name = "AppointmentResponse"),
-      @JsonSubTypes.Type(value = InternalResearchDefinitionValue.class, name = "ResearchDefinition"),
-      @JsonSubTypes.Type(value = InternalPasswordChangeRequestValue.class, name = "PasswordChangeRequest"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductContraindicationValue.class, name = "MedicinalProductContraindication"),
-      @JsonSubTypes.Type(value = InternalMeasureValue.class, name = "Measure"),
-      @JsonSubTypes.Type(value = InternalPatientValue.class, name = "Patient"),
-      @JsonSubTypes.Type(value = InternalPlanDefinitionValue.class, name = "PlanDefinition"),
-      @JsonSubTypes.Type(value = InternalHealthcareServiceValue.class, name = "HealthcareService"),
-      @JsonSubTypes.Type(value = InternalSubstanceReferenceInformationValue.class, name = "SubstanceReferenceInformation"),
-      @JsonSubTypes.Type(value = InternalMedicationRequestValue.class, name = "MedicationRequest"),
-      @JsonSubTypes.Type(value = InternalDiagnosticReportValue.class, name = "DiagnosticReport"),
-      @JsonSubTypes.Type(value = InternalMessageDefinitionValue.class, name = "MessageDefinition"),
-      @JsonSubTypes.Type(value = InternalDeviceValue.class, name = "Device"),
-      @JsonSubTypes.Type(value = InternalEpisodeOfCareValue.class, name = "EpisodeOfCare"),
-      @JsonSubTypes.Type(value = InternalImmunizationValue.class, name = "Immunization"),
-      @JsonSubTypes.Type(value = InternalEnrollmentRequestValue.class, name = "EnrollmentRequest"),
-      @JsonSubTypes.Type(value = InternalDeviceDefinitionValue.class, name = "DeviceDefinition"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductValue.class, name = "MedicinalProduct"),
-      @JsonSubTypes.Type(value = InternalMedicationKnowledgeValue.class, name = "MedicationKnowledge"),
-      @JsonSubTypes.Type(value = InternalEndpointValue.class, name = "Endpoint"),
-      @JsonSubTypes.Type(value = InternalEncounterValue.class, name = "Encounter"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductPackagedValue.class, name = "MedicinalProductPackaged"),
-      @JsonSubTypes.Type(value = InternalProcedureValue.class, name = "Procedure"),
-      @JsonSubTypes.Type(value = InternalEventDefinitionValue.class, name = "EventDefinition"),
-      @JsonSubTypes.Type(value = InternalMediaValue.class, name = "Media"),
-      @JsonSubTypes.Type(value = InternalInvoiceValue.class, name = "Invoice"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductInteractionValue.class, name = "MedicinalProductInteraction"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductPharmaceuticalValue.class, name = "MedicinalProductPharmaceutical"),
-      @JsonSubTypes.Type(value = InternalContractValue.class, name = "Contract"),
-      @JsonSubTypes.Type(value = InternalAccountValue.class, name = "Account"),
-      @JsonSubTypes.Type(value = InternalGroupValue.class, name = "Group"),
-      @JsonSubTypes.Type(value = InternalPractitionerRoleValue.class, name = "PractitionerRole"),
-      @JsonSubTypes.Type(value = InternalDeviceUseStatementValue.class, name = "DeviceUseStatement"),
-      @JsonSubTypes.Type(value = InternalSlotValue.class, name = "Slot"),
-      @JsonSubTypes.Type(value = InternalDeviceRequestValue.class, name = "DeviceRequest"),
-      @JsonSubTypes.Type(value = InternalBodyStructureValue.class, name = "BodyStructure"),
-      @JsonSubTypes.Type(value = InternalGoalValue.class, name = "Goal"),
-      @JsonSubTypes.Type(value = InternalCommunicationRequestValue.class, name = "CommunicationRequest"),
-      @JsonSubTypes.Type(value = InternalStructureMapValue.class, name = "StructureMap"),
-      @JsonSubTypes.Type(value = InternalImagingStudyValue.class, name = "ImagingStudy"),
-      @JsonSubTypes.Type(value = InternalAdverseEventValue.class, name = "AdverseEvent"),
-      @JsonSubTypes.Type(value = InternalSubstanceValue.class, name = "Substance"),
-      @JsonSubTypes.Type(value = InternalSubscriptionValue.class, name = "Subscription"),
-      @JsonSubTypes.Type(value = InternalTaskValue.class, name = "Task"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductIndicationValue.class, name = "MedicinalProductIndication"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductManufacturedValue.class, name = "MedicinalProductManufactured"),
-      @JsonSubTypes.Type(value = InternalEvidenceValue.class, name = "Evidence"),
-      @JsonSubTypes.Type(value = InternalCodeSystemValue.class, name = "CodeSystem"),
-      @JsonSubTypes.Type(value = InternalMedicationDispenseValue.class, name = "MedicationDispense"),
-      @JsonSubTypes.Type(value = InternalSubstancePolymerValue.class, name = "SubstancePolymer"),
-      @JsonSubTypes.Type(value = InternalDetectedIssueValue.class, name = "DetectedIssue"),
-      @JsonSubTypes.Type(value = InternalInsurancePlanValue.class, name = "InsurancePlan"),
-      @JsonSubTypes.Type(value = InternalImmunizationEvaluationValue.class, name = "ImmunizationEvaluation"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductIngredientValue.class, name = "MedicinalProductIngredient"),
-      @JsonSubTypes.Type(value = InternalCommunicationValue.class, name = "Communication"),
-      @JsonSubTypes.Type(value = InternalGuidanceResponseValue.class, name = "GuidanceResponse"),
-      @JsonSubTypes.Type(value = InternalBundleValue.class, name = "Bundle"),
-      @JsonSubTypes.Type(value = InternalAccessPolicyValue.class, name = "AccessPolicy"),
-      @JsonSubTypes.Type(value = InternalEffectEvidenceSynthesisValue.class, name = "EffectEvidenceSynthesis"),
-      @JsonSubTypes.Type(value = InternalMolecularSequenceValue.class, name = "MolecularSequence"),
-      @JsonSubTypes.Type(value = InternalRequestGroupValue.class, name = "RequestGroup"),
-      @JsonSubTypes.Type(value = InternalConditionValue.class, name = "Condition"),
-      @JsonSubTypes.Type(value = InternalMedicationStatementValue.class, name = "MedicationStatement"),
-      @JsonSubTypes.Type(value = InternalOperationDefinitionValue.class, name = "OperationDefinition"),
-      @JsonSubTypes.Type(value = InternalOrganizationValue.class, name = "Organization"),
-      @JsonSubTypes.Type(value = InternalOrganizationAffiliationValue.class, name = "OrganizationAffiliation"),
-      @JsonSubTypes.Type(value = InternalResearchSubjectValue.class, name = "ResearchSubject"),
-      @JsonSubTypes.Type(value = InternalExampleScenarioValue.class, name = "ExampleScenario"),
-      @JsonSubTypes.Type(value = InternalLinkageValue.class, name = "Linkage"),
-      @JsonSubTypes.Type(value = InternalRiskEvidenceSynthesisValue.class, name = "RiskEvidenceSynthesis"),
-      @JsonSubTypes.Type(value = InternalMedicationAdministrationValue.class, name = "MedicationAdministration"),
-      @JsonSubTypes.Type(value = InternalProjectValue.class, name = "Project"),
-      @JsonSubTypes.Type(value = InternalSupplyRequestValue.class, name = "SupplyRequest"),
-      @JsonSubTypes.Type(value = InternalCatalogEntryValue.class, name = "CatalogEntry"),
-      @JsonSubTypes.Type(value = InternalSubstanceSourceMaterialValue.class, name = "SubstanceSourceMaterial"),
-      @JsonSubTypes.Type(value = InternalOperationOutcomeValue.class, name = "OperationOutcome"),
-      @JsonSubTypes.Type(value = InternalPractitionerValue.class, name = "Practitioner"),
-      @JsonSubTypes.Type(value = InternalBiologicallyDerivedProductValue.class, name = "BiologicallyDerivedProduct"),
-      @JsonSubTypes.Type(value = InternalImplementationGuideValue.class, name = "ImplementationGuide"),
-      @JsonSubTypes.Type(value = InternalTestReportValue.class, name = "TestReport"),
-      @JsonSubTypes.Type(value = InternalQuestionnaireValue.class, name = "Questionnaire"),
-      @JsonSubTypes.Type(value = InternalBotValue.class, name = "Bot"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductUndesirableEffectValue.class, name = "MedicinalProductUndesirableEffect"),
-      @JsonSubTypes.Type(value = InternalVerificationResultValue.class, name = "VerificationResult"),
-      @JsonSubTypes.Type(value = InternalUserValue.class, name = "User"),
-      @JsonSubTypes.Type(value = InternalConsentValue.class, name = "Consent"),
-      @JsonSubTypes.Type(value = InternalChargeItemValue.class, name = "ChargeItem"),
-      @JsonSubTypes.Type(value = InternalListValue.class, name = "List"),
       @JsonSubTypes.Type(value = InternalClientApplicationValue.class, name = "ClientApplication"),
-      @JsonSubTypes.Type(value = InternalLocationValue.class, name = "Location"),
+      @JsonSubTypes.Type(value = InternalClaimValue.class, name = "Claim"),
+      @JsonSubTypes.Type(value = InternalScheduleValue.class, name = "Schedule"),
+      @JsonSubTypes.Type(value = InternalGroupValue.class, name = "Group"),
+      @JsonSubTypes.Type(value = InternalRelatedPersonValue.class, name = "RelatedPerson"),
+      @JsonSubTypes.Type(value = InternalSupplyRequestValue.class, name = "SupplyRequest"),
+      @JsonSubTypes.Type(value = InternalCareTeamValue.class, name = "CareTeam"),
+      @JsonSubTypes.Type(value = InternalHealthcareServiceValue.class, name = "HealthcareService"),
+      @JsonSubTypes.Type(value = InternalObservationValue.class, name = "Observation"),
+      @JsonSubTypes.Type(value = InternalPractitionerValue.class, name = "Practitioner"),
+      @JsonSubTypes.Type(value = InternalStructureDefinitionValue.class, name = "StructureDefinition"),
+      @JsonSubTypes.Type(value = InternalAccountValue.class, name = "Account"),
+      @JsonSubTypes.Type(value = InternalMedicationAdministrationValue.class, name = "MedicationAdministration"),
+      @JsonSubTypes.Type(value = InternalAppointmentResponseValue.class, name = "AppointmentResponse"),
       @JsonSubTypes.Type(value = InternalEnrollmentResponseValue.class, name = "EnrollmentResponse"),
-      @JsonSubTypes.Type(value = InternalRiskAssessmentValue.class, name = "RiskAssessment"),
-      @JsonSubTypes.Type(value = InternalGraphDefinitionValue.class, name = "GraphDefinition"),
-      @JsonSubTypes.Type(value = InternalProvenanceValue.class, name = "Provenance"),
-      @JsonSubTypes.Type(value = InternalSubstanceProteinValue.class, name = "SubstanceProtein"),
-      @JsonSubTypes.Type(value = InternalSpecimenDefinitionValue.class, name = "SpecimenDefinition"),
-      @JsonSubTypes.Type(value = InternalCoverageValue.class, name = "Coverage"),
-      @JsonSubTypes.Type(value = InternalValueSetValue.class, name = "ValueSet"),
-      @JsonSubTypes.Type(value = InternalAllergyIntoleranceValue.class, name = "AllergyIntolerance"),
-      @JsonSubTypes.Type(value = InternalBinaryValue.class, name = "Binary"),
-      @JsonSubTypes.Type(value = InternalParametersValue.class, name = "Parameters"),
-      @JsonSubTypes.Type(value = InternalActivityDefinitionValue.class, name = "ActivityDefinition"),
-      @JsonSubTypes.Type(value = InternalMedicinalProductAuthorizationValue.class, name = "MedicinalProductAuthorization"),
+      @JsonSubTypes.Type(value = InternalInsurancePlanValue.class, name = "InsurancePlan"),
+      @JsonSubTypes.Type(value = InternalStructureMapValue.class, name = "StructureMap"),
       @JsonSubTypes.Type(value = InternalLibraryValue.class, name = "Library"),
-      @JsonSubTypes.Type(value = InternalNutritionOrderValue.class, name = "NutritionOrder"),
       @JsonSubTypes.Type(value = InternalCoverageEligibilityResponseValue.class, name = "CoverageEligibilityResponse"),
-      @JsonSubTypes.Type(value = InternalExplanationOfBenefitValue.class, name = "ExplanationOfBenefit"),
-      @JsonSubTypes.Type(value = InternalLoginValue.class, name = "Login"),
-      @JsonSubTypes.Type(value = InternalUserConfigurationValue.class, name = "UserConfiguration"),
-      @JsonSubTypes.Type(value = InternalServiceRequestValue.class, name = "ServiceRequest"),
-      @JsonSubTypes.Type(value = InternalDeviceMetricValue.class, name = "DeviceMetric"),
-      @JsonSubTypes.Type(value = InternalStructureDefinitionValue.class, name = "StructureDefinition")
+      @JsonSubTypes.Type(value = InternalAppointmentValue.class, name = "Appointment"),
+      @JsonSubTypes.Type(value = InternalValueSetValue.class, name = "ValueSet"),
+      @JsonSubTypes.Type(value = InternalBodyStructureValue.class, name = "BodyStructure"),
+      @JsonSubTypes.Type(value = InternalEvidenceValue.class, name = "Evidence"),
+      @JsonSubTypes.Type(value = InternalChargeItemDefinitionValue.class, name = "ChargeItemDefinition"),
+      @JsonSubTypes.Type(value = InternalImmunizationValue.class, name = "Immunization"),
+      @JsonSubTypes.Type(value = InternalMedicationKnowledgeValue.class, name = "MedicationKnowledge"),
+      @JsonSubTypes.Type(value = InternalVisionPrescriptionValue.class, name = "VisionPrescription"),
+      @JsonSubTypes.Type(value = InternalChargeItemValue.class, name = "ChargeItem"),
+      @JsonSubTypes.Type(value = InternalConditionValue.class, name = "Condition"),
+      @JsonSubTypes.Type(value = InternalRequestGroupValue.class, name = "RequestGroup"),
+      @JsonSubTypes.Type(value = InternalSubstancePolymerValue.class, name = "SubstancePolymer"),
+      @JsonSubTypes.Type(value = InternalSubstanceSourceMaterialValue.class, name = "SubstanceSourceMaterial"),
+      @JsonSubTypes.Type(value = InternalVerificationResultValue.class, name = "VerificationResult"),
+      @JsonSubTypes.Type(value = InternalContractValue.class, name = "Contract"),
+      @JsonSubTypes.Type(value = InternalConceptMapValue.class, name = "ConceptMap"),
+      @JsonSubTypes.Type(value = InternalCoverageEligibilityRequestValue.class, name = "CoverageEligibilityRequest"),
+      @JsonSubTypes.Type(value = InternalOrganizationValue.class, name = "Organization"),
+      @JsonSubTypes.Type(value = InternalBiologicallyDerivedProductValue.class, name = "BiologicallyDerivedProduct"),
+      @JsonSubTypes.Type(value = InternalLocationValue.class, name = "Location"),
+      @JsonSubTypes.Type(value = InternalMedicinalProductIndicationValue.class, name = "MedicinalProductIndication"),
+      @JsonSubTypes.Type(value = InternalMeasureValue.class, name = "Measure"),
+      @JsonSubTypes.Type(value = InternalSupplyDeliveryValue.class, name = "SupplyDelivery"),
+      @JsonSubTypes.Type(value = InternalEndpointValue.class, name = "Endpoint"),
+      @JsonSubTypes.Type(value = InternalOperationDefinitionValue.class, name = "OperationDefinition"),
+      @JsonSubTypes.Type(value = InternalMessageDefinitionValue.class, name = "MessageDefinition")
   })
   @JsonIgnoreProperties(
       ignoreUnknown = true
@@ -2865,97 +2865,516 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("ImmunizationRecommendation")
+  @JsonTypeName("CatalogEntry")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalImmunizationRecommendationValue.class
+      as = ImmutableResourceList.InternalCatalogEntryValue.class
   )
-  interface InternalImmunizationRecommendationValue extends InternalValue {
+  interface InternalCatalogEntryValue extends InternalValue {
     @JsonValue
-    ImmunizationRecommendation ImmunizationRecommendation();
+    CatalogEntry CatalogEntry();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitImmunizationRecommendation(ImmunizationRecommendation());
+      return visitor.visitCatalogEntry(CatalogEntry());
     }
 
-    static InternalImmunizationRecommendationValue of(ImmunizationRecommendation value) {
-      return ImmutableResourceList.InternalImmunizationRecommendationValue.builder().ImmunizationRecommendation(value).build();
+    static InternalCatalogEntryValue of(CatalogEntry value) {
+      return ImmutableResourceList.InternalCatalogEntryValue.builder().CatalogEntry(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("ChargeItemDefinition")
+  @JsonTypeName("NutritionOrder")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalChargeItemDefinitionValue.class
+      as = ImmutableResourceList.InternalNutritionOrderValue.class
   )
-  interface InternalChargeItemDefinitionValue extends InternalValue {
+  interface InternalNutritionOrderValue extends InternalValue {
     @JsonValue
-    ChargeItemDefinition ChargeItemDefinition();
+    NutritionOrder NutritionOrder();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitChargeItemDefinition(ChargeItemDefinition());
+      return visitor.visitNutritionOrder(NutritionOrder());
     }
 
-    static InternalChargeItemDefinitionValue of(ChargeItemDefinition value) {
-      return ImmutableResourceList.InternalChargeItemDefinitionValue.builder().ChargeItemDefinition(value).build();
+    static InternalNutritionOrderValue of(NutritionOrder value) {
+      return ImmutableResourceList.InternalNutritionOrderValue.builder().NutritionOrder(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("Person")
+  @JsonTypeName("Bot")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalPersonValue.class
+      as = ImmutableResourceList.InternalBotValue.class
   )
-  interface InternalPersonValue extends InternalValue {
+  interface InternalBotValue extends InternalValue {
     @JsonValue
-    Person Person();
+    Bot Bot();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPerson(Person());
+      return visitor.visitBot(Bot());
     }
 
-    static InternalPersonValue of(Person value) {
-      return ImmutableResourceList.InternalPersonValue.builder().Person(value).build();
+    static InternalBotValue of(Bot value) {
+      return ImmutableResourceList.InternalBotValue.builder().Bot(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("CapabilityStatement")
+  @JsonTypeName("Provenance")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalCapabilityStatementValue.class
+      as = ImmutableResourceList.InternalProvenanceValue.class
   )
-  interface InternalCapabilityStatementValue extends InternalValue {
+  interface InternalProvenanceValue extends InternalValue {
     @JsonValue
-    CapabilityStatement CapabilityStatement();
+    Provenance Provenance();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCapabilityStatement(CapabilityStatement());
+      return visitor.visitProvenance(Provenance());
     }
 
-    static InternalCapabilityStatementValue of(CapabilityStatement value) {
-      return ImmutableResourceList.InternalCapabilityStatementValue.builder().CapabilityStatement(value).build();
+    static InternalProvenanceValue of(Provenance value) {
+      return ImmutableResourceList.InternalProvenanceValue.builder().Provenance(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("MessageHeader")
+  @JsonTypeName("ExampleScenario")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalMessageHeaderValue.class
+      as = ImmutableResourceList.InternalExampleScenarioValue.class
   )
-  interface InternalMessageHeaderValue extends InternalValue {
+  interface InternalExampleScenarioValue extends InternalValue {
     @JsonValue
-    MessageHeader MessageHeader();
+    ExampleScenario ExampleScenario();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMessageHeader(MessageHeader());
+      return visitor.visitExampleScenario(ExampleScenario());
     }
 
-    static InternalMessageHeaderValue of(MessageHeader value) {
-      return ImmutableResourceList.InternalMessageHeaderValue.builder().MessageHeader(value).build();
+    static InternalExampleScenarioValue of(ExampleScenario value) {
+      return ImmutableResourceList.InternalExampleScenarioValue.builder().ExampleScenario(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SubstanceProtein")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubstanceProteinValue.class
+  )
+  interface InternalSubstanceProteinValue extends InternalValue {
+    @JsonValue
+    SubstanceProtein SubstanceProtein();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubstanceProtein(SubstanceProtein());
+    }
+
+    static InternalSubstanceProteinValue of(SubstanceProtein value) {
+      return ImmutableResourceList.InternalSubstanceProteinValue.builder().SubstanceProtein(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Slot")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSlotValue.class
+  )
+  interface InternalSlotValue extends InternalValue {
+    @JsonValue
+    Slot Slot();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSlot(Slot());
+    }
+
+    static InternalSlotValue of(Slot value) {
+      return ImmutableResourceList.InternalSlotValue.builder().Slot(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("PasswordChangeRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPasswordChangeRequestValue.class
+  )
+  interface InternalPasswordChangeRequestValue extends InternalValue {
+    @JsonValue
+    PasswordChangeRequest PasswordChangeRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPasswordChangeRequest(PasswordChangeRequest());
+    }
+
+    static InternalPasswordChangeRequestValue of(PasswordChangeRequest value) {
+      return ImmutableResourceList.InternalPasswordChangeRequestValue.builder().PasswordChangeRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("AuditEvent")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalAuditEventValue.class
+  )
+  interface InternalAuditEventValue extends InternalValue {
+    @JsonValue
+    AuditEvent AuditEvent();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitAuditEvent(AuditEvent());
+    }
+
+    static InternalAuditEventValue of(AuditEvent value) {
+      return ImmutableResourceList.InternalAuditEventValue.builder().AuditEvent(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Questionnaire")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalQuestionnaireValue.class
+  )
+  interface InternalQuestionnaireValue extends InternalValue {
+    @JsonValue
+    Questionnaire Questionnaire();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitQuestionnaire(Questionnaire());
+    }
+
+    static InternalQuestionnaireValue of(Questionnaire value) {
+      return ImmutableResourceList.InternalQuestionnaireValue.builder().Questionnaire(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductAuthorization")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductAuthorizationValue.class
+  )
+  interface InternalMedicinalProductAuthorizationValue extends InternalValue {
+    @JsonValue
+    MedicinalProductAuthorization MedicinalProductAuthorization();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductAuthorization(MedicinalProductAuthorization());
+    }
+
+    static InternalMedicinalProductAuthorizationValue of(MedicinalProductAuthorization value) {
+      return ImmutableResourceList.InternalMedicinalProductAuthorizationValue.builder().MedicinalProductAuthorization(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Patient")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPatientValue.class
+  )
+  interface InternalPatientValue extends InternalValue {
+    @JsonValue
+    Patient Patient();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPatient(Patient());
+    }
+
+    static InternalPatientValue of(Patient value) {
+      return ImmutableResourceList.InternalPatientValue.builder().Patient(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductIngredient")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductIngredientValue.class
+  )
+  interface InternalMedicinalProductIngredientValue extends InternalValue {
+    @JsonValue
+    MedicinalProductIngredient MedicinalProductIngredient();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductIngredient(MedicinalProductIngredient());
+    }
+
+    static InternalMedicinalProductIngredientValue of(MedicinalProductIngredient value) {
+      return ImmutableResourceList.InternalMedicinalProductIngredientValue.builder().MedicinalProductIngredient(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Procedure")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalProcedureValue.class
+  )
+  interface InternalProcedureValue extends InternalValue {
+    @JsonValue
+    Procedure Procedure();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitProcedure(Procedure());
+    }
+
+    static InternalProcedureValue of(Procedure value) {
+      return ImmutableResourceList.InternalProcedureValue.builder().Procedure(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Task")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalTaskValue.class
+  )
+  interface InternalTaskValue extends InternalValue {
+    @JsonValue
+    Task Task();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitTask(Task());
+    }
+
+    static InternalTaskValue of(Task value) {
+      return ImmutableResourceList.InternalTaskValue.builder().Task(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductPharmaceutical")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductPharmaceuticalValue.class
+  )
+  interface InternalMedicinalProductPharmaceuticalValue extends InternalValue {
+    @JsonValue
+    MedicinalProductPharmaceutical MedicinalProductPharmaceutical();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductPharmaceutical(MedicinalProductPharmaceutical());
+    }
+
+    static InternalMedicinalProductPharmaceuticalValue of(MedicinalProductPharmaceutical value) {
+      return ImmutableResourceList.InternalMedicinalProductPharmaceuticalValue.builder().MedicinalProductPharmaceutical(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("List")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalListValue.class
+  )
+  interface InternalListValue extends InternalValue {
+    @JsonValue
+    List List();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitList(List());
+    }
+
+    static InternalListValue of(List value) {
+      return ImmutableResourceList.InternalListValue.builder().List(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("EvidenceVariable")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEvidenceVariableValue.class
+  )
+  interface InternalEvidenceVariableValue extends InternalValue {
+    @JsonValue
+    EvidenceVariable EvidenceVariable();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEvidenceVariable(EvidenceVariable());
+    }
+
+    static InternalEvidenceVariableValue of(EvidenceVariable value) {
+      return ImmutableResourceList.InternalEvidenceVariableValue.builder().EvidenceVariable(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("PaymentReconciliation")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPaymentReconciliationValue.class
+  )
+  interface InternalPaymentReconciliationValue extends InternalValue {
+    @JsonValue
+    PaymentReconciliation PaymentReconciliation();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPaymentReconciliation(PaymentReconciliation());
+    }
+
+    static InternalPaymentReconciliationValue of(PaymentReconciliation value) {
+      return ImmutableResourceList.InternalPaymentReconciliationValue.builder().PaymentReconciliation(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SubstanceNucleicAcid")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubstanceNucleicAcidValue.class
+  )
+  interface InternalSubstanceNucleicAcidValue extends InternalValue {
+    @JsonValue
+    SubstanceNucleicAcid SubstanceNucleicAcid();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubstanceNucleicAcid(SubstanceNucleicAcid());
+    }
+
+    static InternalSubstanceNucleicAcidValue of(SubstanceNucleicAcid value) {
+      return ImmutableResourceList.InternalSubstanceNucleicAcidValue.builder().SubstanceNucleicAcid(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProduct")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductValue.class
+  )
+  interface InternalMedicinalProductValue extends InternalValue {
+    @JsonValue
+    MedicinalProduct MedicinalProduct();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProduct(MedicinalProduct());
+    }
+
+    static InternalMedicinalProductValue of(MedicinalProduct value) {
+      return ImmutableResourceList.InternalMedicinalProductValue.builder().MedicinalProduct(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("GraphDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalGraphDefinitionValue.class
+  )
+  interface InternalGraphDefinitionValue extends InternalValue {
+    @JsonValue
+    GraphDefinition GraphDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitGraphDefinition(GraphDefinition());
+    }
+
+    static InternalGraphDefinitionValue of(GraphDefinition value) {
+      return ImmutableResourceList.InternalGraphDefinitionValue.builder().GraphDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CarePlan")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCarePlanValue.class
+  )
+  interface InternalCarePlanValue extends InternalValue {
+    @JsonValue
+    CarePlan CarePlan();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCarePlan(CarePlan());
+    }
+
+    static InternalCarePlanValue of(CarePlan value) {
+      return ImmutableResourceList.InternalCarePlanValue.builder().CarePlan(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductContraindication")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductContraindicationValue.class
+  )
+  interface InternalMedicinalProductContraindicationValue extends InternalValue {
+    @JsonValue
+    MedicinalProductContraindication MedicinalProductContraindication();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductContraindication(MedicinalProductContraindication());
+    }
+
+    static InternalMedicinalProductContraindicationValue of(
+        MedicinalProductContraindication value) {
+      return ImmutableResourceList.InternalMedicinalProductContraindicationValue.builder().MedicinalProductContraindication(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductPackaged")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductPackagedValue.class
+  )
+  interface InternalMedicinalProductPackagedValue extends InternalValue {
+    @JsonValue
+    MedicinalProductPackaged MedicinalProductPackaged();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductPackaged(MedicinalProductPackaged());
+    }
+
+    static InternalMedicinalProductPackagedValue of(MedicinalProductPackaged value) {
+      return ImmutableResourceList.InternalMedicinalProductPackagedValue.builder().MedicinalProductPackaged(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicationRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicationRequestValue.class
+  )
+  interface InternalMedicationRequestValue extends InternalValue {
+    @JsonValue
+    MedicationRequest MedicationRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicationRequest(MedicationRequest());
+    }
+
+    static InternalMedicationRequestValue of(MedicationRequest value) {
+      return ImmutableResourceList.InternalMedicationRequestValue.builder().MedicationRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("PractitionerRole")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPractitionerRoleValue.class
+  )
+  interface InternalPractitionerRoleValue extends InternalValue {
+    @JsonValue
+    PractitionerRole PractitionerRole();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPractitionerRole(PractitionerRole());
+    }
+
+    static InternalPractitionerRoleValue of(PractitionerRole value) {
+      return ImmutableResourceList.InternalPractitionerRoleValue.builder().PractitionerRole(value).build();
     }
   }
 
@@ -2979,116 +3398,41 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("TerminologyCapabilities")
+  @JsonTypeName("MedicinalProductUndesirableEffect")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalTerminologyCapabilitiesValue.class
+      as = ImmutableResourceList.InternalMedicinalProductUndesirableEffectValue.class
   )
-  interface InternalTerminologyCapabilitiesValue extends InternalValue {
+  interface InternalMedicinalProductUndesirableEffectValue extends InternalValue {
     @JsonValue
-    TerminologyCapabilities TerminologyCapabilities();
+    MedicinalProductUndesirableEffect MedicinalProductUndesirableEffect();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitTerminologyCapabilities(TerminologyCapabilities());
+      return visitor.visitMedicinalProductUndesirableEffect(MedicinalProductUndesirableEffect());
     }
 
-    static InternalTerminologyCapabilitiesValue of(TerminologyCapabilities value) {
-      return ImmutableResourceList.InternalTerminologyCapabilitiesValue.builder().TerminologyCapabilities(value).build();
+    static InternalMedicinalProductUndesirableEffectValue of(
+        MedicinalProductUndesirableEffect value) {
+      return ImmutableResourceList.InternalMedicinalProductUndesirableEffectValue.builder().MedicinalProductUndesirableEffect(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("Medication")
+  @JsonTypeName("Device")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicationValue.class
+      as = ImmutableResourceList.InternalDeviceValue.class
   )
-  interface InternalMedicationValue extends InternalValue {
+  interface InternalDeviceValue extends InternalValue {
     @JsonValue
-    Medication Medication();
+    Device Device();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedication(Medication());
+      return visitor.visitDevice(Device());
     }
 
-    static InternalMedicationValue of(Medication value) {
-      return ImmutableResourceList.InternalMedicationValue.builder().Medication(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("VisionPrescription")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalVisionPrescriptionValue.class
-  )
-  interface InternalVisionPrescriptionValue extends InternalValue {
-    @JsonValue
-    VisionPrescription VisionPrescription();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitVisionPrescription(VisionPrescription());
-    }
-
-    static InternalVisionPrescriptionValue of(VisionPrescription value) {
-      return ImmutableResourceList.InternalVisionPrescriptionValue.builder().VisionPrescription(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("QuestionnaireResponse")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalQuestionnaireResponseValue.class
-  )
-  interface InternalQuestionnaireResponseValue extends InternalValue {
-    @JsonValue
-    QuestionnaireResponse QuestionnaireResponse();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitQuestionnaireResponse(QuestionnaireResponse());
-    }
-
-    static InternalQuestionnaireResponseValue of(QuestionnaireResponse value) {
-      return ImmutableResourceList.InternalQuestionnaireResponseValue.builder().QuestionnaireResponse(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ConceptMap")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalConceptMapValue.class
-  )
-  interface InternalConceptMapValue extends InternalValue {
-    @JsonValue
-    ConceptMap ConceptMap();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitConceptMap(ConceptMap());
-    }
-
-    static InternalConceptMapValue of(ConceptMap value) {
-      return ImmutableResourceList.InternalConceptMapValue.builder().ConceptMap(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CoverageEligibilityRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCoverageEligibilityRequestValue.class
-  )
-  interface InternalCoverageEligibilityRequestValue extends InternalValue {
-    @JsonValue
-    CoverageEligibilityRequest CoverageEligibilityRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCoverageEligibilityRequest(CoverageEligibilityRequest());
-    }
-
-    static InternalCoverageEligibilityRequestValue of(CoverageEligibilityRequest value) {
-      return ImmutableResourceList.InternalCoverageEligibilityRequestValue.builder().CoverageEligibilityRequest(value).build();
+    static InternalDeviceValue of(Device value) {
+      return ImmutableResourceList.InternalDeviceValue.builder().Device(value).build();
     }
   }
 
@@ -3112,21 +3456,989 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("SearchParameter")
+  @JsonTypeName("Composition")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalSearchParameterValue.class
+      as = ImmutableResourceList.InternalCompositionValue.class
   )
-  interface InternalSearchParameterValue extends InternalValue {
+  interface InternalCompositionValue extends InternalValue {
     @JsonValue
-    SearchParameter SearchParameter();
+    Composition Composition();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSearchParameter(SearchParameter());
+      return visitor.visitComposition(Composition());
     }
 
-    static InternalSearchParameterValue of(SearchParameter value) {
-      return ImmutableResourceList.InternalSearchParameterValue.builder().SearchParameter(value).build();
+    static InternalCompositionValue of(Composition value) {
+      return ImmutableResourceList.InternalCompositionValue.builder().Composition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("EnrollmentRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEnrollmentRequestValue.class
+  )
+  interface InternalEnrollmentRequestValue extends InternalValue {
+    @JsonValue
+    EnrollmentRequest EnrollmentRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEnrollmentRequest(EnrollmentRequest());
+    }
+
+    static InternalEnrollmentRequestValue of(EnrollmentRequest value) {
+      return ImmutableResourceList.InternalEnrollmentRequestValue.builder().EnrollmentRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Bundle")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalBundleValue.class
+  )
+  interface InternalBundleValue extends InternalValue {
+    @JsonValue
+    Bundle Bundle();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitBundle(Bundle());
+    }
+
+    static InternalBundleValue of(Bundle value) {
+      return ImmutableResourceList.InternalBundleValue.builder().Bundle(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Coverage")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCoverageValue.class
+  )
+  interface InternalCoverageValue extends InternalValue {
+    @JsonValue
+    Coverage Coverage();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCoverage(Coverage());
+    }
+
+    static InternalCoverageValue of(Coverage value) {
+      return ImmutableResourceList.InternalCoverageValue.builder().Coverage(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ImmunizationRecommendation")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalImmunizationRecommendationValue.class
+  )
+  interface InternalImmunizationRecommendationValue extends InternalValue {
+    @JsonValue
+    ImmunizationRecommendation ImmunizationRecommendation();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitImmunizationRecommendation(ImmunizationRecommendation());
+    }
+
+    static InternalImmunizationRecommendationValue of(ImmunizationRecommendation value) {
+      return ImmutableResourceList.InternalImmunizationRecommendationValue.builder().ImmunizationRecommendation(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("UserConfiguration")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalUserConfigurationValue.class
+  )
+  interface InternalUserConfigurationValue extends InternalValue {
+    @JsonValue
+    UserConfiguration UserConfiguration();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitUserConfiguration(UserConfiguration());
+    }
+
+    static InternalUserConfigurationValue of(UserConfiguration value) {
+      return ImmutableResourceList.InternalUserConfigurationValue.builder().UserConfiguration(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Consent")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalConsentValue.class
+  )
+  interface InternalConsentValue extends InternalValue {
+    @JsonValue
+    Consent Consent();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitConsent(Consent());
+    }
+
+    static InternalConsentValue of(Consent value) {
+      return ImmutableResourceList.InternalConsentValue.builder().Consent(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DeviceDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDeviceDefinitionValue.class
+  )
+  interface InternalDeviceDefinitionValue extends InternalValue {
+    @JsonValue
+    DeviceDefinition DeviceDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDeviceDefinition(DeviceDefinition());
+    }
+
+    static InternalDeviceDefinitionValue of(DeviceDefinition value) {
+      return ImmutableResourceList.InternalDeviceDefinitionValue.builder().DeviceDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("PaymentNotice")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPaymentNoticeValue.class
+  )
+  interface InternalPaymentNoticeValue extends InternalValue {
+    @JsonValue
+    PaymentNotice PaymentNotice();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPaymentNotice(PaymentNotice());
+    }
+
+    static InternalPaymentNoticeValue of(PaymentNotice value) {
+      return ImmutableResourceList.InternalPaymentNoticeValue.builder().PaymentNotice(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CommunicationRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCommunicationRequestValue.class
+  )
+  interface InternalCommunicationRequestValue extends InternalValue {
+    @JsonValue
+    CommunicationRequest CommunicationRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCommunicationRequest(CommunicationRequest());
+    }
+
+    static InternalCommunicationRequestValue of(CommunicationRequest value) {
+      return ImmutableResourceList.InternalCommunicationRequestValue.builder().CommunicationRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("RiskEvidenceSynthesis")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalRiskEvidenceSynthesisValue.class
+  )
+  interface InternalRiskEvidenceSynthesisValue extends InternalValue {
+    @JsonValue
+    RiskEvidenceSynthesis RiskEvidenceSynthesis();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitRiskEvidenceSynthesis(RiskEvidenceSynthesis());
+    }
+
+    static InternalRiskEvidenceSynthesisValue of(RiskEvidenceSynthesis value) {
+      return ImmutableResourceList.InternalRiskEvidenceSynthesisValue.builder().RiskEvidenceSynthesis(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Binary")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalBinaryValue.class
+  )
+  interface InternalBinaryValue extends InternalValue {
+    @JsonValue
+    Binary Binary();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitBinary(Binary());
+    }
+
+    static InternalBinaryValue of(Binary value) {
+      return ImmutableResourceList.InternalBinaryValue.builder().Binary(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Invoice")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalInvoiceValue.class
+  )
+  interface InternalInvoiceValue extends InternalValue {
+    @JsonValue
+    Invoice Invoice();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitInvoice(Invoice());
+    }
+
+    static InternalInvoiceValue of(Invoice value) {
+      return ImmutableResourceList.InternalInvoiceValue.builder().Invoice(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DetectedIssue")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDetectedIssueValue.class
+  )
+  interface InternalDetectedIssueValue extends InternalValue {
+    @JsonValue
+    DetectedIssue DetectedIssue();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDetectedIssue(DetectedIssue());
+    }
+
+    static InternalDetectedIssueValue of(DetectedIssue value) {
+      return ImmutableResourceList.InternalDetectedIssueValue.builder().DetectedIssue(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ImagingStudy")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalImagingStudyValue.class
+  )
+  interface InternalImagingStudyValue extends InternalValue {
+    @JsonValue
+    ImagingStudy ImagingStudy();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitImagingStudy(ImagingStudy());
+    }
+
+    static InternalImagingStudyValue of(ImagingStudy value) {
+      return ImmutableResourceList.InternalImagingStudyValue.builder().ImagingStudy(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ExplanationOfBenefit")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalExplanationOfBenefitValue.class
+  )
+  interface InternalExplanationOfBenefitValue extends InternalValue {
+    @JsonValue
+    ExplanationOfBenefit ExplanationOfBenefit();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitExplanationOfBenefit(ExplanationOfBenefit());
+    }
+
+    static InternalExplanationOfBenefitValue of(ExplanationOfBenefit value) {
+      return ImmutableResourceList.InternalExplanationOfBenefitValue.builder().ExplanationOfBenefit(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Encounter")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEncounterValue.class
+  )
+  interface InternalEncounterValue extends InternalValue {
+    @JsonValue
+    Encounter Encounter();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEncounter(Encounter());
+    }
+
+    static InternalEncounterValue of(Encounter value) {
+      return ImmutableResourceList.InternalEncounterValue.builder().Encounter(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicationDispense")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicationDispenseValue.class
+  )
+  interface InternalMedicationDispenseValue extends InternalValue {
+    @JsonValue
+    MedicationDispense MedicationDispense();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicationDispense(MedicationDispense());
+    }
+
+    static InternalMedicationDispenseValue of(MedicationDispense value) {
+      return ImmutableResourceList.InternalMedicationDispenseValue.builder().MedicationDispense(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("TestScript")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalTestScriptValue.class
+  )
+  interface InternalTestScriptValue extends InternalValue {
+    @JsonValue
+    TestScript TestScript();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitTestScript(TestScript());
+    }
+
+    static InternalTestScriptValue of(TestScript value) {
+      return ImmutableResourceList.InternalTestScriptValue.builder().TestScript(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ResearchStudy")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalResearchStudyValue.class
+  )
+  interface InternalResearchStudyValue extends InternalValue {
+    @JsonValue
+    ResearchStudy ResearchStudy();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitResearchStudy(ResearchStudy());
+    }
+
+    static InternalResearchStudyValue of(ResearchStudy value) {
+      return ImmutableResourceList.InternalResearchStudyValue.builder().ResearchStudy(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SubstanceReferenceInformation")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubstanceReferenceInformationValue.class
+  )
+  interface InternalSubstanceReferenceInformationValue extends InternalValue {
+    @JsonValue
+    SubstanceReferenceInformation SubstanceReferenceInformation();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubstanceReferenceInformation(SubstanceReferenceInformation());
+    }
+
+    static InternalSubstanceReferenceInformationValue of(SubstanceReferenceInformation value) {
+      return ImmutableResourceList.InternalSubstanceReferenceInformationValue.builder().SubstanceReferenceInformation(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Project")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalProjectValue.class
+  )
+  interface InternalProjectValue extends InternalValue {
+    @JsonValue
+    Project Project();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitProject(Project());
+    }
+
+    static InternalProjectValue of(Project value) {
+      return ImmutableResourceList.InternalProjectValue.builder().Project(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MolecularSequence")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMolecularSequenceValue.class
+  )
+  interface InternalMolecularSequenceValue extends InternalValue {
+    @JsonValue
+    MolecularSequence MolecularSequence();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMolecularSequence(MolecularSequence());
+    }
+
+    static InternalMolecularSequenceValue of(MolecularSequence value) {
+      return ImmutableResourceList.InternalMolecularSequenceValue.builder().MolecularSequence(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("User")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalUserValue.class
+  )
+  interface InternalUserValue extends InternalValue {
+    @JsonValue
+    User User();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitUser(User());
+    }
+
+    static InternalUserValue of(User value) {
+      return ImmutableResourceList.InternalUserValue.builder().User(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("FamilyMemberHistory")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalFamilyMemberHistoryValue.class
+  )
+  interface InternalFamilyMemberHistoryValue extends InternalValue {
+    @JsonValue
+    FamilyMemberHistory FamilyMemberHistory();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitFamilyMemberHistory(FamilyMemberHistory());
+    }
+
+    static InternalFamilyMemberHistoryValue of(FamilyMemberHistory value) {
+      return ImmutableResourceList.InternalFamilyMemberHistoryValue.builder().FamilyMemberHistory(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("AdverseEvent")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalAdverseEventValue.class
+  )
+  interface InternalAdverseEventValue extends InternalValue {
+    @JsonValue
+    AdverseEvent AdverseEvent();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitAdverseEvent(AdverseEvent());
+    }
+
+    static InternalAdverseEventValue of(AdverseEvent value) {
+      return ImmutableResourceList.InternalAdverseEventValue.builder().AdverseEvent(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DeviceUseStatement")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDeviceUseStatementValue.class
+  )
+  interface InternalDeviceUseStatementValue extends InternalValue {
+    @JsonValue
+    DeviceUseStatement DeviceUseStatement();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDeviceUseStatement(DeviceUseStatement());
+    }
+
+    static InternalDeviceUseStatementValue of(DeviceUseStatement value) {
+      return ImmutableResourceList.InternalDeviceUseStatementValue.builder().DeviceUseStatement(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("RiskAssessment")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalRiskAssessmentValue.class
+  )
+  interface InternalRiskAssessmentValue extends InternalValue {
+    @JsonValue
+    RiskAssessment RiskAssessment();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitRiskAssessment(RiskAssessment());
+    }
+
+    static InternalRiskAssessmentValue of(RiskAssessment value) {
+      return ImmutableResourceList.InternalRiskAssessmentValue.builder().RiskAssessment(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("RefreshToken")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalRefreshTokenValue.class
+  )
+  interface InternalRefreshTokenValue extends InternalValue {
+    RefreshToken RefreshToken();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitRefreshToken(RefreshToken());
+    }
+
+    static InternalRefreshTokenValue of(RefreshToken value) {
+      return ImmutableResourceList.InternalRefreshTokenValue.builder().RefreshToken(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CapabilityStatement")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCapabilityStatementValue.class
+  )
+  interface InternalCapabilityStatementValue extends InternalValue {
+    @JsonValue
+    CapabilityStatement CapabilityStatement();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCapabilityStatement(CapabilityStatement());
+    }
+
+    static InternalCapabilityStatementValue of(CapabilityStatement value) {
+      return ImmutableResourceList.InternalCapabilityStatementValue.builder().CapabilityStatement(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SpecimenDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSpecimenDefinitionValue.class
+  )
+  interface InternalSpecimenDefinitionValue extends InternalValue {
+    @JsonValue
+    SpecimenDefinition SpecimenDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSpecimenDefinition(SpecimenDefinition());
+    }
+
+    static InternalSpecimenDefinitionValue of(SpecimenDefinition value) {
+      return ImmutableResourceList.InternalSpecimenDefinitionValue.builder().SpecimenDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Communication")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCommunicationValue.class
+  )
+  interface InternalCommunicationValue extends InternalValue {
+    @JsonValue
+    Communication Communication();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCommunication(Communication());
+    }
+
+    static InternalCommunicationValue of(Communication value) {
+      return ImmutableResourceList.InternalCommunicationValue.builder().Communication(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ImplementationGuide")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalImplementationGuideValue.class
+  )
+  interface InternalImplementationGuideValue extends InternalValue {
+    @JsonValue
+    ImplementationGuide ImplementationGuide();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitImplementationGuide(ImplementationGuide());
+    }
+
+    static InternalImplementationGuideValue of(ImplementationGuide value) {
+      return ImmutableResourceList.InternalImplementationGuideValue.builder().ImplementationGuide(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("TerminologyCapabilities")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalTerminologyCapabilitiesValue.class
+  )
+  interface InternalTerminologyCapabilitiesValue extends InternalValue {
+    @JsonValue
+    TerminologyCapabilities TerminologyCapabilities();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitTerminologyCapabilities(TerminologyCapabilities());
+    }
+
+    static InternalTerminologyCapabilitiesValue of(TerminologyCapabilities value) {
+      return ImmutableResourceList.InternalTerminologyCapabilitiesValue.builder().TerminologyCapabilities(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("PlanDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPlanDefinitionValue.class
+  )
+  interface InternalPlanDefinitionValue extends InternalValue {
+    @JsonValue
+    PlanDefinition PlanDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPlanDefinition(PlanDefinition());
+    }
+
+    static InternalPlanDefinitionValue of(PlanDefinition value) {
+      return ImmutableResourceList.InternalPlanDefinitionValue.builder().PlanDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ResearchDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalResearchDefinitionValue.class
+  )
+  interface InternalResearchDefinitionValue extends InternalValue {
+    @JsonValue
+    ResearchDefinition ResearchDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitResearchDefinition(ResearchDefinition());
+    }
+
+    static InternalResearchDefinitionValue of(ResearchDefinition value) {
+      return ImmutableResourceList.InternalResearchDefinitionValue.builder().ResearchDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Subscription")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubscriptionValue.class
+  )
+  interface InternalSubscriptionValue extends InternalValue {
+    @JsonValue
+    Subscription Subscription();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubscription(Subscription());
+    }
+
+    static InternalSubscriptionValue of(Subscription value) {
+      return ImmutableResourceList.InternalSubscriptionValue.builder().Subscription(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductManufactured")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductManufacturedValue.class
+  )
+  interface InternalMedicinalProductManufacturedValue extends InternalValue {
+    @JsonValue
+    MedicinalProductManufactured MedicinalProductManufactured();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductManufactured(MedicinalProductManufactured());
+    }
+
+    static InternalMedicinalProductManufacturedValue of(MedicinalProductManufactured value) {
+      return ImmutableResourceList.InternalMedicinalProductManufacturedValue.builder().MedicinalProductManufactured(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ResearchSubject")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalResearchSubjectValue.class
+  )
+  interface InternalResearchSubjectValue extends InternalValue {
+    @JsonValue
+    ResearchSubject ResearchSubject();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitResearchSubject(ResearchSubject());
+    }
+
+    static InternalResearchSubjectValue of(ResearchSubject value) {
+      return ImmutableResourceList.InternalResearchSubjectValue.builder().ResearchSubject(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ServiceRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalServiceRequestValue.class
+  )
+  interface InternalServiceRequestValue extends InternalValue {
+    @JsonValue
+    ServiceRequest ServiceRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitServiceRequest(ServiceRequest());
+    }
+
+    static InternalServiceRequestValue of(ServiceRequest value) {
+      return ImmutableResourceList.InternalServiceRequestValue.builder().ServiceRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Basic")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalBasicValue.class
+  )
+  interface InternalBasicValue extends InternalValue {
+    @JsonValue
+    Basic Basic();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitBasic(Basic());
+    }
+
+    static InternalBasicValue of(Basic value) {
+      return ImmutableResourceList.InternalBasicValue.builder().Basic(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DocumentReference")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDocumentReferenceValue.class
+  )
+  interface InternalDocumentReferenceValue extends InternalValue {
+    @JsonValue
+    DocumentReference DocumentReference();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDocumentReference(DocumentReference());
+    }
+
+    static InternalDocumentReferenceValue of(DocumentReference value) {
+      return ImmutableResourceList.InternalDocumentReferenceValue.builder().DocumentReference(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Medication")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicationValue.class
+  )
+  interface InternalMedicationValue extends InternalValue {
+    @JsonValue
+    Medication Medication();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedication(Medication());
+    }
+
+    static InternalMedicationValue of(Medication value) {
+      return ImmutableResourceList.InternalMedicationValue.builder().Medication(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Goal")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalGoalValue.class
+  )
+  interface InternalGoalValue extends InternalValue {
+    @JsonValue
+    Goal Goal();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitGoal(Goal());
+    }
+
+    static InternalGoalValue of(Goal value) {
+      return ImmutableResourceList.InternalGoalValue.builder().Goal(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ImmunizationEvaluation")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalImmunizationEvaluationValue.class
+  )
+  interface InternalImmunizationEvaluationValue extends InternalValue {
+    @JsonValue
+    ImmunizationEvaluation ImmunizationEvaluation();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitImmunizationEvaluation(ImmunizationEvaluation());
+    }
+
+    static InternalImmunizationEvaluationValue of(ImmunizationEvaluation value) {
+      return ImmutableResourceList.InternalImmunizationEvaluationValue.builder().ImmunizationEvaluation(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("OperationOutcome")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalOperationOutcomeValue.class
+  )
+  interface InternalOperationOutcomeValue extends InternalValue {
+    @JsonValue
+    OperationOutcome OperationOutcome();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitOperationOutcome(OperationOutcome());
+    }
+
+    static InternalOperationOutcomeValue of(OperationOutcome value) {
+      return ImmutableResourceList.InternalOperationOutcomeValue.builder().OperationOutcome(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Substance")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubstanceValue.class
+  )
+  interface InternalSubstanceValue extends InternalValue {
+    @JsonValue
+    Substance Substance();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubstance(Substance());
+    }
+
+    static InternalSubstanceValue of(Substance value) {
+      return ImmutableResourceList.InternalSubstanceValue.builder().Substance(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MessageHeader")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMessageHeaderValue.class
+  )
+  interface InternalMessageHeaderValue extends InternalValue {
+    @JsonValue
+    MessageHeader MessageHeader();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMessageHeader(MessageHeader());
+    }
+
+    static InternalMessageHeaderValue of(MessageHeader value) {
+      return ImmutableResourceList.InternalMessageHeaderValue.builder().MessageHeader(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DiagnosticReport")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDiagnosticReportValue.class
+  )
+  interface InternalDiagnosticReportValue extends InternalValue {
+    @JsonValue
+    DiagnosticReport DiagnosticReport();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDiagnosticReport(DiagnosticReport());
+    }
+
+    static InternalDiagnosticReportValue of(DiagnosticReport value) {
+      return ImmutableResourceList.InternalDiagnosticReportValue.builder().DiagnosticReport(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("AllergyIntolerance")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalAllergyIntoleranceValue.class
+  )
+  interface InternalAllergyIntoleranceValue extends InternalValue {
+    @JsonValue
+    AllergyIntolerance AllergyIntolerance();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitAllergyIntolerance(AllergyIntolerance());
+    }
+
+    static InternalAllergyIntoleranceValue of(AllergyIntolerance value) {
+      return ImmutableResourceList.InternalAllergyIntoleranceValue.builder().AllergyIntolerance(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ObservationDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalObservationDefinitionValue.class
+  )
+  interface InternalObservationDefinitionValue extends InternalValue {
+    @JsonValue
+    ObservationDefinition ObservationDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitObservationDefinition(ObservationDefinition());
+    }
+
+    static InternalObservationDefinitionValue of(ObservationDefinition value) {
+      return ImmutableResourceList.InternalObservationDefinitionValue.builder().ObservationDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("EpisodeOfCare")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEpisodeOfCareValue.class
+  )
+  interface InternalEpisodeOfCareValue extends InternalValue {
+    @JsonValue
+    EpisodeOfCare EpisodeOfCare();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEpisodeOfCare(EpisodeOfCare());
+    }
+
+    static InternalEpisodeOfCareValue of(EpisodeOfCare value) {
+      return ImmutableResourceList.InternalEpisodeOfCareValue.builder().EpisodeOfCare(value).build();
     }
   }
 
@@ -3150,21 +4462,458 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("RelatedPerson")
+  @JsonTypeName("ClinicalImpression")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalRelatedPersonValue.class
+      as = ImmutableResourceList.InternalClinicalImpressionValue.class
   )
-  interface InternalRelatedPersonValue extends InternalValue {
+  interface InternalClinicalImpressionValue extends InternalValue {
     @JsonValue
-    RelatedPerson RelatedPerson();
+    ClinicalImpression ClinicalImpression();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitRelatedPerson(RelatedPerson());
+      return visitor.visitClinicalImpression(ClinicalImpression());
     }
 
-    static InternalRelatedPersonValue of(RelatedPerson value) {
-      return ImmutableResourceList.InternalRelatedPersonValue.builder().RelatedPerson(value).build();
+    static InternalClinicalImpressionValue of(ClinicalImpression value) {
+      return ImmutableResourceList.InternalClinicalImpressionValue.builder().ClinicalImpression(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DeviceRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDeviceRequestValue.class
+  )
+  interface InternalDeviceRequestValue extends InternalValue {
+    @JsonValue
+    DeviceRequest DeviceRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDeviceRequest(DeviceRequest());
+    }
+
+    static InternalDeviceRequestValue of(DeviceRequest value) {
+      return ImmutableResourceList.InternalDeviceRequestValue.builder().DeviceRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Linkage")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalLinkageValue.class
+  )
+  interface InternalLinkageValue extends InternalValue {
+    @JsonValue
+    Linkage Linkage();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitLinkage(Linkage());
+    }
+
+    static InternalLinkageValue of(Linkage value) {
+      return ImmutableResourceList.InternalLinkageValue.builder().Linkage(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Parameters")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalParametersValue.class
+  )
+  interface InternalParametersValue extends InternalValue {
+    @JsonValue
+    Parameters Parameters();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitParameters(Parameters());
+    }
+
+    static InternalParametersValue of(Parameters value) {
+      return ImmutableResourceList.InternalParametersValue.builder().Parameters(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CodeSystem")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCodeSystemValue.class
+  )
+  interface InternalCodeSystemValue extends InternalValue {
+    @JsonValue
+    CodeSystem CodeSystem();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCodeSystem(CodeSystem());
+    }
+
+    static InternalCodeSystemValue of(CodeSystem value) {
+      return ImmutableResourceList.InternalCodeSystemValue.builder().CodeSystem(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicationStatement")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicationStatementValue.class
+  )
+  interface InternalMedicationStatementValue extends InternalValue {
+    @JsonValue
+    MedicationStatement MedicationStatement();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicationStatement(MedicationStatement());
+    }
+
+    static InternalMedicationStatementValue of(MedicationStatement value) {
+      return ImmutableResourceList.InternalMedicationStatementValue.builder().MedicationStatement(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DocumentManifest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDocumentManifestValue.class
+  )
+  interface InternalDocumentManifestValue extends InternalValue {
+    @JsonValue
+    DocumentManifest DocumentManifest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDocumentManifest(DocumentManifest());
+    }
+
+    static InternalDocumentManifestValue of(DocumentManifest value) {
+      return ImmutableResourceList.InternalDocumentManifestValue.builder().DocumentManifest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("QuestionnaireResponse")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalQuestionnaireResponseValue.class
+  )
+  interface InternalQuestionnaireResponseValue extends InternalValue {
+    @JsonValue
+    QuestionnaireResponse QuestionnaireResponse();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitQuestionnaireResponse(QuestionnaireResponse());
+    }
+
+    static InternalQuestionnaireResponseValue of(QuestionnaireResponse value) {
+      return ImmutableResourceList.InternalQuestionnaireResponseValue.builder().QuestionnaireResponse(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Specimen")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSpecimenValue.class
+  )
+  interface InternalSpecimenValue extends InternalValue {
+    @JsonValue
+    Specimen Specimen();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSpecimen(Specimen());
+    }
+
+    static InternalSpecimenValue of(Specimen value) {
+      return ImmutableResourceList.InternalSpecimenValue.builder().Specimen(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Person")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPersonValue.class
+  )
+  interface InternalPersonValue extends InternalValue {
+    @JsonValue
+    Person Person();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPerson(Person());
+    }
+
+    static InternalPersonValue of(Person value) {
+      return ImmutableResourceList.InternalPersonValue.builder().Person(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("EventDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEventDefinitionValue.class
+  )
+  interface InternalEventDefinitionValue extends InternalValue {
+    @JsonValue
+    EventDefinition EventDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEventDefinition(EventDefinition());
+    }
+
+    static InternalEventDefinitionValue of(EventDefinition value) {
+      return ImmutableResourceList.InternalEventDefinitionValue.builder().EventDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ActivityDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalActivityDefinitionValue.class
+  )
+  interface InternalActivityDefinitionValue extends InternalValue {
+    @JsonValue
+    ActivityDefinition ActivityDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitActivityDefinition(ActivityDefinition());
+    }
+
+    static InternalActivityDefinitionValue of(ActivityDefinition value) {
+      return ImmutableResourceList.InternalActivityDefinitionValue.builder().ActivityDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductInteraction")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductInteractionValue.class
+  )
+  interface InternalMedicinalProductInteractionValue extends InternalValue {
+    @JsonValue
+    MedicinalProductInteraction MedicinalProductInteraction();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductInteraction(MedicinalProductInteraction());
+    }
+
+    static InternalMedicinalProductInteractionValue of(MedicinalProductInteraction value) {
+      return ImmutableResourceList.InternalMedicinalProductInteractionValue.builder().MedicinalProductInteraction(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("TestReport")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalTestReportValue.class
+  )
+  interface InternalTestReportValue extends InternalValue {
+    @JsonValue
+    TestReport TestReport();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitTestReport(TestReport());
+    }
+
+    static InternalTestReportValue of(TestReport value) {
+      return ImmutableResourceList.InternalTestReportValue.builder().TestReport(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CompartmentDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCompartmentDefinitionValue.class
+  )
+  interface InternalCompartmentDefinitionValue extends InternalValue {
+    @JsonValue
+    CompartmentDefinition CompartmentDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCompartmentDefinition(CompartmentDefinition());
+    }
+
+    static InternalCompartmentDefinitionValue of(CompartmentDefinition value) {
+      return ImmutableResourceList.InternalCompartmentDefinitionValue.builder().CompartmentDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("DeviceMetric")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalDeviceMetricValue.class
+  )
+  interface InternalDeviceMetricValue extends InternalValue {
+    @JsonValue
+    DeviceMetric DeviceMetric();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitDeviceMetric(DeviceMetric());
+    }
+
+    static InternalDeviceMetricValue of(DeviceMetric value) {
+      return ImmutableResourceList.InternalDeviceMetricValue.builder().DeviceMetric(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("OrganizationAffiliation")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalOrganizationAffiliationValue.class
+  )
+  interface InternalOrganizationAffiliationValue extends InternalValue {
+    @JsonValue
+    OrganizationAffiliation OrganizationAffiliation();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitOrganizationAffiliation(OrganizationAffiliation());
+    }
+
+    static InternalOrganizationAffiliationValue of(OrganizationAffiliation value) {
+      return ImmutableResourceList.InternalOrganizationAffiliationValue.builder().OrganizationAffiliation(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("AccessPolicy")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalAccessPolicyValue.class
+  )
+  interface InternalAccessPolicyValue extends InternalValue {
+    @JsonValue
+    AccessPolicy AccessPolicy();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitAccessPolicy(AccessPolicy());
+    }
+
+    static InternalAccessPolicyValue of(AccessPolicy value) {
+      return ImmutableResourceList.InternalAccessPolicyValue.builder().AccessPolicy(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("NamingSystem")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalNamingSystemValue.class
+  )
+  interface InternalNamingSystemValue extends InternalValue {
+    @JsonValue
+    NamingSystem NamingSystem();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitNamingSystem(NamingSystem());
+    }
+
+    static InternalNamingSystemValue of(NamingSystem value) {
+      return ImmutableResourceList.InternalNamingSystemValue.builder().NamingSystem(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Login")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalLoginValue.class
+  )
+  interface InternalLoginValue extends InternalValue {
+    @JsonValue
+    Login Login();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitLogin(Login());
+    }
+
+    static InternalLoginValue of(Login value) {
+      return ImmutableResourceList.InternalLoginValue.builder().Login(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SearchParameter")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSearchParameterValue.class
+  )
+  interface InternalSearchParameterValue extends InternalValue {
+    @JsonValue
+    SearchParameter SearchParameter();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSearchParameter(SearchParameter());
+    }
+
+    static InternalSearchParameterValue of(SearchParameter value) {
+      return ImmutableResourceList.InternalSearchParameterValue.builder().SearchParameter(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("EffectEvidenceSynthesis")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEffectEvidenceSynthesisValue.class
+  )
+  interface InternalEffectEvidenceSynthesisValue extends InternalValue {
+    @JsonValue
+    EffectEvidenceSynthesis EffectEvidenceSynthesis();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEffectEvidenceSynthesis(EffectEvidenceSynthesis());
+    }
+
+    static InternalEffectEvidenceSynthesisValue of(EffectEvidenceSynthesis value) {
+      return ImmutableResourceList.InternalEffectEvidenceSynthesisValue.builder().EffectEvidenceSynthesis(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Media")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMediaValue.class
+  )
+  interface InternalMediaValue extends InternalValue {
+    @JsonValue
+    Media Media();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedia(Media());
+    }
+
+    static InternalMediaValue of(Media value) {
+      return ImmutableResourceList.InternalMediaValue.builder().Media(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("GuidanceResponse")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalGuidanceResponseValue.class
+  )
+  interface InternalGuidanceResponseValue extends InternalValue {
+    @JsonValue
+    GuidanceResponse GuidanceResponse();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitGuidanceResponse(GuidanceResponse());
+    }
+
+    static InternalGuidanceResponseValue of(GuidanceResponse value) {
+      return ImmutableResourceList.InternalGuidanceResponseValue.builder().GuidanceResponse(value).build();
     }
   }
 
@@ -3207,196 +4956,6 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("PaymentReconciliation")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPaymentReconciliationValue.class
-  )
-  interface InternalPaymentReconciliationValue extends InternalValue {
-    @JsonValue
-    PaymentReconciliation PaymentReconciliation();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPaymentReconciliation(PaymentReconciliation());
-    }
-
-    static InternalPaymentReconciliationValue of(PaymentReconciliation value) {
-      return ImmutableResourceList.InternalPaymentReconciliationValue.builder().PaymentReconciliation(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CompartmentDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCompartmentDefinitionValue.class
-  )
-  interface InternalCompartmentDefinitionValue extends InternalValue {
-    @JsonValue
-    CompartmentDefinition CompartmentDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCompartmentDefinition(CompartmentDefinition());
-    }
-
-    static InternalCompartmentDefinitionValue of(CompartmentDefinition value) {
-      return ImmutableResourceList.InternalCompartmentDefinitionValue.builder().CompartmentDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ResearchStudy")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalResearchStudyValue.class
-  )
-  interface InternalResearchStudyValue extends InternalValue {
-    @JsonValue
-    ResearchStudy ResearchStudy();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitResearchStudy(ResearchStudy());
-    }
-
-    static InternalResearchStudyValue of(ResearchStudy value) {
-      return ImmutableResourceList.InternalResearchStudyValue.builder().ResearchStudy(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CareTeam")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCareTeamValue.class
-  )
-  interface InternalCareTeamValue extends InternalValue {
-    @JsonValue
-    CareTeam CareTeam();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCareTeam(CareTeam());
-    }
-
-    static InternalCareTeamValue of(CareTeam value) {
-      return ImmutableResourceList.InternalCareTeamValue.builder().CareTeam(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("NamingSystem")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalNamingSystemValue.class
-  )
-  interface InternalNamingSystemValue extends InternalValue {
-    @JsonValue
-    NamingSystem NamingSystem();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitNamingSystem(NamingSystem());
-    }
-
-    static InternalNamingSystemValue of(NamingSystem value) {
-      return ImmutableResourceList.InternalNamingSystemValue.builder().NamingSystem(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DocumentManifest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDocumentManifestValue.class
-  )
-  interface InternalDocumentManifestValue extends InternalValue {
-    @JsonValue
-    DocumentManifest DocumentManifest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDocumentManifest(DocumentManifest());
-    }
-
-    static InternalDocumentManifestValue of(DocumentManifest value) {
-      return ImmutableResourceList.InternalDocumentManifestValue.builder().DocumentManifest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("FamilyMemberHistory")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalFamilyMemberHistoryValue.class
-  )
-  interface InternalFamilyMemberHistoryValue extends InternalValue {
-    @JsonValue
-    FamilyMemberHistory FamilyMemberHistory();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitFamilyMemberHistory(FamilyMemberHistory());
-    }
-
-    static InternalFamilyMemberHistoryValue of(FamilyMemberHistory value) {
-      return ImmutableResourceList.InternalFamilyMemberHistoryValue.builder().FamilyMemberHistory(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Specimen")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSpecimenValue.class
-  )
-  interface InternalSpecimenValue extends InternalValue {
-    @JsonValue
-    Specimen Specimen();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSpecimen(Specimen());
-    }
-
-    static InternalSpecimenValue of(Specimen value) {
-      return ImmutableResourceList.InternalSpecimenValue.builder().Specimen(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SupplyDelivery")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSupplyDeliveryValue.class
-  )
-  interface InternalSupplyDeliveryValue extends InternalValue {
-    @JsonValue
-    SupplyDelivery SupplyDelivery();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSupplyDelivery(SupplyDelivery());
-    }
-
-    static InternalSupplyDeliveryValue of(SupplyDelivery value) {
-      return ImmutableResourceList.InternalSupplyDeliveryValue.builder().SupplyDelivery(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Appointment")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAppointmentValue.class
-  )
-  interface InternalAppointmentValue extends InternalValue {
-    @JsonValue
-    Appointment Appointment();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAppointment(Appointment());
-    }
-
-    static InternalAppointmentValue of(Appointment value) {
-      return ImmutableResourceList.InternalAppointmentValue.builder().Appointment(value).build();
-    }
-  }
-
-  @Value.Immutable
   @JsonTypeName("JsonWebKey")
   @JsonDeserialize(
       as = ImmutableResourceList.InternalJsonWebKeyValue.class
@@ -3412,1964 +4971,6 @@ public final class ResourceList {
 
     static InternalJsonWebKeyValue of(JsonWebKey value) {
       return ImmutableResourceList.InternalJsonWebKeyValue.builder().JsonWebKey(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Observation")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalObservationValue.class
-  )
-  interface InternalObservationValue extends InternalValue {
-    @JsonValue
-    Observation Observation();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitObservation(Observation());
-    }
-
-    static InternalObservationValue of(Observation value) {
-      return ImmutableResourceList.InternalObservationValue.builder().Observation(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ClinicalImpression")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalClinicalImpressionValue.class
-  )
-  interface InternalClinicalImpressionValue extends InternalValue {
-    @JsonValue
-    ClinicalImpression ClinicalImpression();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitClinicalImpression(ClinicalImpression());
-    }
-
-    static InternalClinicalImpressionValue of(ClinicalImpression value) {
-      return ImmutableResourceList.InternalClinicalImpressionValue.builder().ClinicalImpression(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Composition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCompositionValue.class
-  )
-  interface InternalCompositionValue extends InternalValue {
-    @JsonValue
-    Composition Composition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitComposition(Composition());
-    }
-
-    static InternalCompositionValue of(Composition value) {
-      return ImmutableResourceList.InternalCompositionValue.builder().Composition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CarePlan")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCarePlanValue.class
-  )
-  interface InternalCarePlanValue extends InternalValue {
-    @JsonValue
-    CarePlan CarePlan();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCarePlan(CarePlan());
-    }
-
-    static InternalCarePlanValue of(CarePlan value) {
-      return ImmutableResourceList.InternalCarePlanValue.builder().CarePlan(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Basic")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalBasicValue.class
-  )
-  interface InternalBasicValue extends InternalValue {
-    @JsonValue
-    Basic Basic();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitBasic(Basic());
-    }
-
-    static InternalBasicValue of(Basic value) {
-      return ImmutableResourceList.InternalBasicValue.builder().Basic(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("EvidenceVariable")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEvidenceVariableValue.class
-  )
-  interface InternalEvidenceVariableValue extends InternalValue {
-    @JsonValue
-    EvidenceVariable EvidenceVariable();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEvidenceVariable(EvidenceVariable());
-    }
-
-    static InternalEvidenceVariableValue of(EvidenceVariable value) {
-      return ImmutableResourceList.InternalEvidenceVariableValue.builder().EvidenceVariable(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Schedule")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalScheduleValue.class
-  )
-  interface InternalScheduleValue extends InternalValue {
-    @JsonValue
-    Schedule Schedule();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSchedule(Schedule());
-    }
-
-    static InternalScheduleValue of(Schedule value) {
-      return ImmutableResourceList.InternalScheduleValue.builder().Schedule(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Claim")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalClaimValue.class
-  )
-  interface InternalClaimValue extends InternalValue {
-    @JsonValue
-    Claim Claim();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitClaim(Claim());
-    }
-
-    static InternalClaimValue of(Claim value) {
-      return ImmutableResourceList.InternalClaimValue.builder().Claim(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ObservationDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalObservationDefinitionValue.class
-  )
-  interface InternalObservationDefinitionValue extends InternalValue {
-    @JsonValue
-    ObservationDefinition ObservationDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitObservationDefinition(ObservationDefinition());
-    }
-
-    static InternalObservationDefinitionValue of(ObservationDefinition value) {
-      return ImmutableResourceList.InternalObservationDefinitionValue.builder().ObservationDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SubstanceNucleicAcid")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubstanceNucleicAcidValue.class
-  )
-  interface InternalSubstanceNucleicAcidValue extends InternalValue {
-    @JsonValue
-    SubstanceNucleicAcid SubstanceNucleicAcid();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubstanceNucleicAcid(SubstanceNucleicAcid());
-    }
-
-    static InternalSubstanceNucleicAcidValue of(SubstanceNucleicAcid value) {
-      return ImmutableResourceList.InternalSubstanceNucleicAcidValue.builder().SubstanceNucleicAcid(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DocumentReference")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDocumentReferenceValue.class
-  )
-  interface InternalDocumentReferenceValue extends InternalValue {
-    @JsonValue
-    DocumentReference DocumentReference();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDocumentReference(DocumentReference());
-    }
-
-    static InternalDocumentReferenceValue of(DocumentReference value) {
-      return ImmutableResourceList.InternalDocumentReferenceValue.builder().DocumentReference(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("TestScript")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalTestScriptValue.class
-  )
-  interface InternalTestScriptValue extends InternalValue {
-    @JsonValue
-    TestScript TestScript();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitTestScript(TestScript());
-    }
-
-    static InternalTestScriptValue of(TestScript value) {
-      return ImmutableResourceList.InternalTestScriptValue.builder().TestScript(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("RefreshToken")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalRefreshTokenValue.class
-  )
-  interface InternalRefreshTokenValue extends InternalValue {
-    RefreshToken RefreshToken();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitRefreshToken(RefreshToken());
-    }
-
-    static InternalRefreshTokenValue of(RefreshToken value) {
-      return ImmutableResourceList.InternalRefreshTokenValue.builder().RefreshToken(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("AuditEvent")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAuditEventValue.class
-  )
-  interface InternalAuditEventValue extends InternalValue {
-    @JsonValue
-    AuditEvent AuditEvent();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAuditEvent(AuditEvent());
-    }
-
-    static InternalAuditEventValue of(AuditEvent value) {
-      return ImmutableResourceList.InternalAuditEventValue.builder().AuditEvent(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("PaymentNotice")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPaymentNoticeValue.class
-  )
-  interface InternalPaymentNoticeValue extends InternalValue {
-    @JsonValue
-    PaymentNotice PaymentNotice();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPaymentNotice(PaymentNotice());
-    }
-
-    static InternalPaymentNoticeValue of(PaymentNotice value) {
-      return ImmutableResourceList.InternalPaymentNoticeValue.builder().PaymentNotice(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("AppointmentResponse")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAppointmentResponseValue.class
-  )
-  interface InternalAppointmentResponseValue extends InternalValue {
-    @JsonValue
-    AppointmentResponse AppointmentResponse();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAppointmentResponse(AppointmentResponse());
-    }
-
-    static InternalAppointmentResponseValue of(AppointmentResponse value) {
-      return ImmutableResourceList.InternalAppointmentResponseValue.builder().AppointmentResponse(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ResearchDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalResearchDefinitionValue.class
-  )
-  interface InternalResearchDefinitionValue extends InternalValue {
-    @JsonValue
-    ResearchDefinition ResearchDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitResearchDefinition(ResearchDefinition());
-    }
-
-    static InternalResearchDefinitionValue of(ResearchDefinition value) {
-      return ImmutableResourceList.InternalResearchDefinitionValue.builder().ResearchDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("PasswordChangeRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPasswordChangeRequestValue.class
-  )
-  interface InternalPasswordChangeRequestValue extends InternalValue {
-    @JsonValue
-    PasswordChangeRequest PasswordChangeRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPasswordChangeRequest(PasswordChangeRequest());
-    }
-
-    static InternalPasswordChangeRequestValue of(PasswordChangeRequest value) {
-      return ImmutableResourceList.InternalPasswordChangeRequestValue.builder().PasswordChangeRequest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductContraindication")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductContraindicationValue.class
-  )
-  interface InternalMedicinalProductContraindicationValue extends InternalValue {
-    @JsonValue
-    MedicinalProductContraindication MedicinalProductContraindication();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductContraindication(MedicinalProductContraindication());
-    }
-
-    static InternalMedicinalProductContraindicationValue of(
-        MedicinalProductContraindication value) {
-      return ImmutableResourceList.InternalMedicinalProductContraindicationValue.builder().MedicinalProductContraindication(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Measure")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMeasureValue.class
-  )
-  interface InternalMeasureValue extends InternalValue {
-    @JsonValue
-    Measure Measure();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMeasure(Measure());
-    }
-
-    static InternalMeasureValue of(Measure value) {
-      return ImmutableResourceList.InternalMeasureValue.builder().Measure(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Patient")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPatientValue.class
-  )
-  interface InternalPatientValue extends InternalValue {
-    @JsonValue
-    Patient Patient();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPatient(Patient());
-    }
-
-    static InternalPatientValue of(Patient value) {
-      return ImmutableResourceList.InternalPatientValue.builder().Patient(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("PlanDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPlanDefinitionValue.class
-  )
-  interface InternalPlanDefinitionValue extends InternalValue {
-    @JsonValue
-    PlanDefinition PlanDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPlanDefinition(PlanDefinition());
-    }
-
-    static InternalPlanDefinitionValue of(PlanDefinition value) {
-      return ImmutableResourceList.InternalPlanDefinitionValue.builder().PlanDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("HealthcareService")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalHealthcareServiceValue.class
-  )
-  interface InternalHealthcareServiceValue extends InternalValue {
-    @JsonValue
-    HealthcareService HealthcareService();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitHealthcareService(HealthcareService());
-    }
-
-    static InternalHealthcareServiceValue of(HealthcareService value) {
-      return ImmutableResourceList.InternalHealthcareServiceValue.builder().HealthcareService(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SubstanceReferenceInformation")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubstanceReferenceInformationValue.class
-  )
-  interface InternalSubstanceReferenceInformationValue extends InternalValue {
-    @JsonValue
-    SubstanceReferenceInformation SubstanceReferenceInformation();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubstanceReferenceInformation(SubstanceReferenceInformation());
-    }
-
-    static InternalSubstanceReferenceInformationValue of(SubstanceReferenceInformation value) {
-      return ImmutableResourceList.InternalSubstanceReferenceInformationValue.builder().SubstanceReferenceInformation(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicationRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicationRequestValue.class
-  )
-  interface InternalMedicationRequestValue extends InternalValue {
-    @JsonValue
-    MedicationRequest MedicationRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicationRequest(MedicationRequest());
-    }
-
-    static InternalMedicationRequestValue of(MedicationRequest value) {
-      return ImmutableResourceList.InternalMedicationRequestValue.builder().MedicationRequest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DiagnosticReport")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDiagnosticReportValue.class
-  )
-  interface InternalDiagnosticReportValue extends InternalValue {
-    @JsonValue
-    DiagnosticReport DiagnosticReport();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDiagnosticReport(DiagnosticReport());
-    }
-
-    static InternalDiagnosticReportValue of(DiagnosticReport value) {
-      return ImmutableResourceList.InternalDiagnosticReportValue.builder().DiagnosticReport(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MessageDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMessageDefinitionValue.class
-  )
-  interface InternalMessageDefinitionValue extends InternalValue {
-    @JsonValue
-    MessageDefinition MessageDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMessageDefinition(MessageDefinition());
-    }
-
-    static InternalMessageDefinitionValue of(MessageDefinition value) {
-      return ImmutableResourceList.InternalMessageDefinitionValue.builder().MessageDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Device")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDeviceValue.class
-  )
-  interface InternalDeviceValue extends InternalValue {
-    @JsonValue
-    Device Device();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDevice(Device());
-    }
-
-    static InternalDeviceValue of(Device value) {
-      return ImmutableResourceList.InternalDeviceValue.builder().Device(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("EpisodeOfCare")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEpisodeOfCareValue.class
-  )
-  interface InternalEpisodeOfCareValue extends InternalValue {
-    @JsonValue
-    EpisodeOfCare EpisodeOfCare();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEpisodeOfCare(EpisodeOfCare());
-    }
-
-    static InternalEpisodeOfCareValue of(EpisodeOfCare value) {
-      return ImmutableResourceList.InternalEpisodeOfCareValue.builder().EpisodeOfCare(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Immunization")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalImmunizationValue.class
-  )
-  interface InternalImmunizationValue extends InternalValue {
-    @JsonValue
-    Immunization Immunization();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitImmunization(Immunization());
-    }
-
-    static InternalImmunizationValue of(Immunization value) {
-      return ImmutableResourceList.InternalImmunizationValue.builder().Immunization(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("EnrollmentRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEnrollmentRequestValue.class
-  )
-  interface InternalEnrollmentRequestValue extends InternalValue {
-    @JsonValue
-    EnrollmentRequest EnrollmentRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEnrollmentRequest(EnrollmentRequest());
-    }
-
-    static InternalEnrollmentRequestValue of(EnrollmentRequest value) {
-      return ImmutableResourceList.InternalEnrollmentRequestValue.builder().EnrollmentRequest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DeviceDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDeviceDefinitionValue.class
-  )
-  interface InternalDeviceDefinitionValue extends InternalValue {
-    @JsonValue
-    DeviceDefinition DeviceDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDeviceDefinition(DeviceDefinition());
-    }
-
-    static InternalDeviceDefinitionValue of(DeviceDefinition value) {
-      return ImmutableResourceList.InternalDeviceDefinitionValue.builder().DeviceDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProduct")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductValue.class
-  )
-  interface InternalMedicinalProductValue extends InternalValue {
-    @JsonValue
-    MedicinalProduct MedicinalProduct();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProduct(MedicinalProduct());
-    }
-
-    static InternalMedicinalProductValue of(MedicinalProduct value) {
-      return ImmutableResourceList.InternalMedicinalProductValue.builder().MedicinalProduct(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicationKnowledge")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicationKnowledgeValue.class
-  )
-  interface InternalMedicationKnowledgeValue extends InternalValue {
-    @JsonValue
-    MedicationKnowledge MedicationKnowledge();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicationKnowledge(MedicationKnowledge());
-    }
-
-    static InternalMedicationKnowledgeValue of(MedicationKnowledge value) {
-      return ImmutableResourceList.InternalMedicationKnowledgeValue.builder().MedicationKnowledge(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Endpoint")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEndpointValue.class
-  )
-  interface InternalEndpointValue extends InternalValue {
-    @JsonValue
-    Endpoint Endpoint();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEndpoint(Endpoint());
-    }
-
-    static InternalEndpointValue of(Endpoint value) {
-      return ImmutableResourceList.InternalEndpointValue.builder().Endpoint(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Encounter")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEncounterValue.class
-  )
-  interface InternalEncounterValue extends InternalValue {
-    @JsonValue
-    Encounter Encounter();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEncounter(Encounter());
-    }
-
-    static InternalEncounterValue of(Encounter value) {
-      return ImmutableResourceList.InternalEncounterValue.builder().Encounter(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductPackaged")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductPackagedValue.class
-  )
-  interface InternalMedicinalProductPackagedValue extends InternalValue {
-    @JsonValue
-    MedicinalProductPackaged MedicinalProductPackaged();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductPackaged(MedicinalProductPackaged());
-    }
-
-    static InternalMedicinalProductPackagedValue of(MedicinalProductPackaged value) {
-      return ImmutableResourceList.InternalMedicinalProductPackagedValue.builder().MedicinalProductPackaged(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Procedure")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalProcedureValue.class
-  )
-  interface InternalProcedureValue extends InternalValue {
-    @JsonValue
-    Procedure Procedure();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitProcedure(Procedure());
-    }
-
-    static InternalProcedureValue of(Procedure value) {
-      return ImmutableResourceList.InternalProcedureValue.builder().Procedure(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("EventDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEventDefinitionValue.class
-  )
-  interface InternalEventDefinitionValue extends InternalValue {
-    @JsonValue
-    EventDefinition EventDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEventDefinition(EventDefinition());
-    }
-
-    static InternalEventDefinitionValue of(EventDefinition value) {
-      return ImmutableResourceList.InternalEventDefinitionValue.builder().EventDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Media")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMediaValue.class
-  )
-  interface InternalMediaValue extends InternalValue {
-    @JsonValue
-    Media Media();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedia(Media());
-    }
-
-    static InternalMediaValue of(Media value) {
-      return ImmutableResourceList.InternalMediaValue.builder().Media(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Invoice")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalInvoiceValue.class
-  )
-  interface InternalInvoiceValue extends InternalValue {
-    @JsonValue
-    Invoice Invoice();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitInvoice(Invoice());
-    }
-
-    static InternalInvoiceValue of(Invoice value) {
-      return ImmutableResourceList.InternalInvoiceValue.builder().Invoice(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductInteraction")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductInteractionValue.class
-  )
-  interface InternalMedicinalProductInteractionValue extends InternalValue {
-    @JsonValue
-    MedicinalProductInteraction MedicinalProductInteraction();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductInteraction(MedicinalProductInteraction());
-    }
-
-    static InternalMedicinalProductInteractionValue of(MedicinalProductInteraction value) {
-      return ImmutableResourceList.InternalMedicinalProductInteractionValue.builder().MedicinalProductInteraction(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductPharmaceutical")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductPharmaceuticalValue.class
-  )
-  interface InternalMedicinalProductPharmaceuticalValue extends InternalValue {
-    @JsonValue
-    MedicinalProductPharmaceutical MedicinalProductPharmaceutical();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductPharmaceutical(MedicinalProductPharmaceutical());
-    }
-
-    static InternalMedicinalProductPharmaceuticalValue of(MedicinalProductPharmaceutical value) {
-      return ImmutableResourceList.InternalMedicinalProductPharmaceuticalValue.builder().MedicinalProductPharmaceutical(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Contract")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalContractValue.class
-  )
-  interface InternalContractValue extends InternalValue {
-    @JsonValue
-    Contract Contract();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitContract(Contract());
-    }
-
-    static InternalContractValue of(Contract value) {
-      return ImmutableResourceList.InternalContractValue.builder().Contract(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Account")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAccountValue.class
-  )
-  interface InternalAccountValue extends InternalValue {
-    @JsonValue
-    Account Account();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAccount(Account());
-    }
-
-    static InternalAccountValue of(Account value) {
-      return ImmutableResourceList.InternalAccountValue.builder().Account(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Group")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalGroupValue.class
-  )
-  interface InternalGroupValue extends InternalValue {
-    @JsonValue
-    Group Group();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitGroup(Group());
-    }
-
-    static InternalGroupValue of(Group value) {
-      return ImmutableResourceList.InternalGroupValue.builder().Group(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("PractitionerRole")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPractitionerRoleValue.class
-  )
-  interface InternalPractitionerRoleValue extends InternalValue {
-    @JsonValue
-    PractitionerRole PractitionerRole();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPractitionerRole(PractitionerRole());
-    }
-
-    static InternalPractitionerRoleValue of(PractitionerRole value) {
-      return ImmutableResourceList.InternalPractitionerRoleValue.builder().PractitionerRole(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DeviceUseStatement")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDeviceUseStatementValue.class
-  )
-  interface InternalDeviceUseStatementValue extends InternalValue {
-    @JsonValue
-    DeviceUseStatement DeviceUseStatement();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDeviceUseStatement(DeviceUseStatement());
-    }
-
-    static InternalDeviceUseStatementValue of(DeviceUseStatement value) {
-      return ImmutableResourceList.InternalDeviceUseStatementValue.builder().DeviceUseStatement(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Slot")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSlotValue.class
-  )
-  interface InternalSlotValue extends InternalValue {
-    @JsonValue
-    Slot Slot();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSlot(Slot());
-    }
-
-    static InternalSlotValue of(Slot value) {
-      return ImmutableResourceList.InternalSlotValue.builder().Slot(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DeviceRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDeviceRequestValue.class
-  )
-  interface InternalDeviceRequestValue extends InternalValue {
-    @JsonValue
-    DeviceRequest DeviceRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDeviceRequest(DeviceRequest());
-    }
-
-    static InternalDeviceRequestValue of(DeviceRequest value) {
-      return ImmutableResourceList.InternalDeviceRequestValue.builder().DeviceRequest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("BodyStructure")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalBodyStructureValue.class
-  )
-  interface InternalBodyStructureValue extends InternalValue {
-    @JsonValue
-    BodyStructure BodyStructure();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitBodyStructure(BodyStructure());
-    }
-
-    static InternalBodyStructureValue of(BodyStructure value) {
-      return ImmutableResourceList.InternalBodyStructureValue.builder().BodyStructure(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Goal")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalGoalValue.class
-  )
-  interface InternalGoalValue extends InternalValue {
-    @JsonValue
-    Goal Goal();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitGoal(Goal());
-    }
-
-    static InternalGoalValue of(Goal value) {
-      return ImmutableResourceList.InternalGoalValue.builder().Goal(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CommunicationRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCommunicationRequestValue.class
-  )
-  interface InternalCommunicationRequestValue extends InternalValue {
-    @JsonValue
-    CommunicationRequest CommunicationRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCommunicationRequest(CommunicationRequest());
-    }
-
-    static InternalCommunicationRequestValue of(CommunicationRequest value) {
-      return ImmutableResourceList.InternalCommunicationRequestValue.builder().CommunicationRequest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("StructureMap")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalStructureMapValue.class
-  )
-  interface InternalStructureMapValue extends InternalValue {
-    @JsonValue
-    StructureMap StructureMap();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitStructureMap(StructureMap());
-    }
-
-    static InternalStructureMapValue of(StructureMap value) {
-      return ImmutableResourceList.InternalStructureMapValue.builder().StructureMap(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ImagingStudy")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalImagingStudyValue.class
-  )
-  interface InternalImagingStudyValue extends InternalValue {
-    @JsonValue
-    ImagingStudy ImagingStudy();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitImagingStudy(ImagingStudy());
-    }
-
-    static InternalImagingStudyValue of(ImagingStudy value) {
-      return ImmutableResourceList.InternalImagingStudyValue.builder().ImagingStudy(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("AdverseEvent")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAdverseEventValue.class
-  )
-  interface InternalAdverseEventValue extends InternalValue {
-    @JsonValue
-    AdverseEvent AdverseEvent();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAdverseEvent(AdverseEvent());
-    }
-
-    static InternalAdverseEventValue of(AdverseEvent value) {
-      return ImmutableResourceList.InternalAdverseEventValue.builder().AdverseEvent(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Substance")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubstanceValue.class
-  )
-  interface InternalSubstanceValue extends InternalValue {
-    @JsonValue
-    Substance Substance();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubstance(Substance());
-    }
-
-    static InternalSubstanceValue of(Substance value) {
-      return ImmutableResourceList.InternalSubstanceValue.builder().Substance(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Subscription")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubscriptionValue.class
-  )
-  interface InternalSubscriptionValue extends InternalValue {
-    @JsonValue
-    Subscription Subscription();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubscription(Subscription());
-    }
-
-    static InternalSubscriptionValue of(Subscription value) {
-      return ImmutableResourceList.InternalSubscriptionValue.builder().Subscription(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Task")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalTaskValue.class
-  )
-  interface InternalTaskValue extends InternalValue {
-    @JsonValue
-    Task Task();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitTask(Task());
-    }
-
-    static InternalTaskValue of(Task value) {
-      return ImmutableResourceList.InternalTaskValue.builder().Task(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductIndication")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductIndicationValue.class
-  )
-  interface InternalMedicinalProductIndicationValue extends InternalValue {
-    @JsonValue
-    MedicinalProductIndication MedicinalProductIndication();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductIndication(MedicinalProductIndication());
-    }
-
-    static InternalMedicinalProductIndicationValue of(MedicinalProductIndication value) {
-      return ImmutableResourceList.InternalMedicinalProductIndicationValue.builder().MedicinalProductIndication(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductManufactured")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductManufacturedValue.class
-  )
-  interface InternalMedicinalProductManufacturedValue extends InternalValue {
-    @JsonValue
-    MedicinalProductManufactured MedicinalProductManufactured();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductManufactured(MedicinalProductManufactured());
-    }
-
-    static InternalMedicinalProductManufacturedValue of(MedicinalProductManufactured value) {
-      return ImmutableResourceList.InternalMedicinalProductManufacturedValue.builder().MedicinalProductManufactured(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Evidence")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEvidenceValue.class
-  )
-  interface InternalEvidenceValue extends InternalValue {
-    @JsonValue
-    Evidence Evidence();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEvidence(Evidence());
-    }
-
-    static InternalEvidenceValue of(Evidence value) {
-      return ImmutableResourceList.InternalEvidenceValue.builder().Evidence(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CodeSystem")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCodeSystemValue.class
-  )
-  interface InternalCodeSystemValue extends InternalValue {
-    @JsonValue
-    CodeSystem CodeSystem();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCodeSystem(CodeSystem());
-    }
-
-    static InternalCodeSystemValue of(CodeSystem value) {
-      return ImmutableResourceList.InternalCodeSystemValue.builder().CodeSystem(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicationDispense")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicationDispenseValue.class
-  )
-  interface InternalMedicationDispenseValue extends InternalValue {
-    @JsonValue
-    MedicationDispense MedicationDispense();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicationDispense(MedicationDispense());
-    }
-
-    static InternalMedicationDispenseValue of(MedicationDispense value) {
-      return ImmutableResourceList.InternalMedicationDispenseValue.builder().MedicationDispense(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SubstancePolymer")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubstancePolymerValue.class
-  )
-  interface InternalSubstancePolymerValue extends InternalValue {
-    @JsonValue
-    SubstancePolymer SubstancePolymer();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubstancePolymer(SubstancePolymer());
-    }
-
-    static InternalSubstancePolymerValue of(SubstancePolymer value) {
-      return ImmutableResourceList.InternalSubstancePolymerValue.builder().SubstancePolymer(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("DetectedIssue")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalDetectedIssueValue.class
-  )
-  interface InternalDetectedIssueValue extends InternalValue {
-    @JsonValue
-    DetectedIssue DetectedIssue();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDetectedIssue(DetectedIssue());
-    }
-
-    static InternalDetectedIssueValue of(DetectedIssue value) {
-      return ImmutableResourceList.InternalDetectedIssueValue.builder().DetectedIssue(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("InsurancePlan")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalInsurancePlanValue.class
-  )
-  interface InternalInsurancePlanValue extends InternalValue {
-    @JsonValue
-    InsurancePlan InsurancePlan();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitInsurancePlan(InsurancePlan());
-    }
-
-    static InternalInsurancePlanValue of(InsurancePlan value) {
-      return ImmutableResourceList.InternalInsurancePlanValue.builder().InsurancePlan(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ImmunizationEvaluation")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalImmunizationEvaluationValue.class
-  )
-  interface InternalImmunizationEvaluationValue extends InternalValue {
-    @JsonValue
-    ImmunizationEvaluation ImmunizationEvaluation();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitImmunizationEvaluation(ImmunizationEvaluation());
-    }
-
-    static InternalImmunizationEvaluationValue of(ImmunizationEvaluation value) {
-      return ImmutableResourceList.InternalImmunizationEvaluationValue.builder().ImmunizationEvaluation(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductIngredient")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductIngredientValue.class
-  )
-  interface InternalMedicinalProductIngredientValue extends InternalValue {
-    @JsonValue
-    MedicinalProductIngredient MedicinalProductIngredient();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductIngredient(MedicinalProductIngredient());
-    }
-
-    static InternalMedicinalProductIngredientValue of(MedicinalProductIngredient value) {
-      return ImmutableResourceList.InternalMedicinalProductIngredientValue.builder().MedicinalProductIngredient(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Communication")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCommunicationValue.class
-  )
-  interface InternalCommunicationValue extends InternalValue {
-    @JsonValue
-    Communication Communication();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCommunication(Communication());
-    }
-
-    static InternalCommunicationValue of(Communication value) {
-      return ImmutableResourceList.InternalCommunicationValue.builder().Communication(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("GuidanceResponse")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalGuidanceResponseValue.class
-  )
-  interface InternalGuidanceResponseValue extends InternalValue {
-    @JsonValue
-    GuidanceResponse GuidanceResponse();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitGuidanceResponse(GuidanceResponse());
-    }
-
-    static InternalGuidanceResponseValue of(GuidanceResponse value) {
-      return ImmutableResourceList.InternalGuidanceResponseValue.builder().GuidanceResponse(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Bundle")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalBundleValue.class
-  )
-  interface InternalBundleValue extends InternalValue {
-    @JsonValue
-    Bundle Bundle();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitBundle(Bundle());
-    }
-
-    static InternalBundleValue of(Bundle value) {
-      return ImmutableResourceList.InternalBundleValue.builder().Bundle(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("AccessPolicy")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAccessPolicyValue.class
-  )
-  interface InternalAccessPolicyValue extends InternalValue {
-    @JsonValue
-    AccessPolicy AccessPolicy();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAccessPolicy(AccessPolicy());
-    }
-
-    static InternalAccessPolicyValue of(AccessPolicy value) {
-      return ImmutableResourceList.InternalAccessPolicyValue.builder().AccessPolicy(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("EffectEvidenceSynthesis")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalEffectEvidenceSynthesisValue.class
-  )
-  interface InternalEffectEvidenceSynthesisValue extends InternalValue {
-    @JsonValue
-    EffectEvidenceSynthesis EffectEvidenceSynthesis();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitEffectEvidenceSynthesis(EffectEvidenceSynthesis());
-    }
-
-    static InternalEffectEvidenceSynthesisValue of(EffectEvidenceSynthesis value) {
-      return ImmutableResourceList.InternalEffectEvidenceSynthesisValue.builder().EffectEvidenceSynthesis(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MolecularSequence")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMolecularSequenceValue.class
-  )
-  interface InternalMolecularSequenceValue extends InternalValue {
-    @JsonValue
-    MolecularSequence MolecularSequence();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMolecularSequence(MolecularSequence());
-    }
-
-    static InternalMolecularSequenceValue of(MolecularSequence value) {
-      return ImmutableResourceList.InternalMolecularSequenceValue.builder().MolecularSequence(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("RequestGroup")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalRequestGroupValue.class
-  )
-  interface InternalRequestGroupValue extends InternalValue {
-    @JsonValue
-    RequestGroup RequestGroup();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitRequestGroup(RequestGroup());
-    }
-
-    static InternalRequestGroupValue of(RequestGroup value) {
-      return ImmutableResourceList.InternalRequestGroupValue.builder().RequestGroup(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Condition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalConditionValue.class
-  )
-  interface InternalConditionValue extends InternalValue {
-    @JsonValue
-    Condition Condition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCondition(Condition());
-    }
-
-    static InternalConditionValue of(Condition value) {
-      return ImmutableResourceList.InternalConditionValue.builder().Condition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicationStatement")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicationStatementValue.class
-  )
-  interface InternalMedicationStatementValue extends InternalValue {
-    @JsonValue
-    MedicationStatement MedicationStatement();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicationStatement(MedicationStatement());
-    }
-
-    static InternalMedicationStatementValue of(MedicationStatement value) {
-      return ImmutableResourceList.InternalMedicationStatementValue.builder().MedicationStatement(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("OperationDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalOperationDefinitionValue.class
-  )
-  interface InternalOperationDefinitionValue extends InternalValue {
-    @JsonValue
-    OperationDefinition OperationDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitOperationDefinition(OperationDefinition());
-    }
-
-    static InternalOperationDefinitionValue of(OperationDefinition value) {
-      return ImmutableResourceList.InternalOperationDefinitionValue.builder().OperationDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Organization")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalOrganizationValue.class
-  )
-  interface InternalOrganizationValue extends InternalValue {
-    @JsonValue
-    Organization Organization();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitOrganization(Organization());
-    }
-
-    static InternalOrganizationValue of(Organization value) {
-      return ImmutableResourceList.InternalOrganizationValue.builder().Organization(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("OrganizationAffiliation")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalOrganizationAffiliationValue.class
-  )
-  interface InternalOrganizationAffiliationValue extends InternalValue {
-    @JsonValue
-    OrganizationAffiliation OrganizationAffiliation();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitOrganizationAffiliation(OrganizationAffiliation());
-    }
-
-    static InternalOrganizationAffiliationValue of(OrganizationAffiliation value) {
-      return ImmutableResourceList.InternalOrganizationAffiliationValue.builder().OrganizationAffiliation(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ResearchSubject")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalResearchSubjectValue.class
-  )
-  interface InternalResearchSubjectValue extends InternalValue {
-    @JsonValue
-    ResearchSubject ResearchSubject();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitResearchSubject(ResearchSubject());
-    }
-
-    static InternalResearchSubjectValue of(ResearchSubject value) {
-      return ImmutableResourceList.InternalResearchSubjectValue.builder().ResearchSubject(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ExampleScenario")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalExampleScenarioValue.class
-  )
-  interface InternalExampleScenarioValue extends InternalValue {
-    @JsonValue
-    ExampleScenario ExampleScenario();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitExampleScenario(ExampleScenario());
-    }
-
-    static InternalExampleScenarioValue of(ExampleScenario value) {
-      return ImmutableResourceList.InternalExampleScenarioValue.builder().ExampleScenario(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Linkage")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalLinkageValue.class
-  )
-  interface InternalLinkageValue extends InternalValue {
-    @JsonValue
-    Linkage Linkage();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitLinkage(Linkage());
-    }
-
-    static InternalLinkageValue of(Linkage value) {
-      return ImmutableResourceList.InternalLinkageValue.builder().Linkage(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("RiskEvidenceSynthesis")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalRiskEvidenceSynthesisValue.class
-  )
-  interface InternalRiskEvidenceSynthesisValue extends InternalValue {
-    @JsonValue
-    RiskEvidenceSynthesis RiskEvidenceSynthesis();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitRiskEvidenceSynthesis(RiskEvidenceSynthesis());
-    }
-
-    static InternalRiskEvidenceSynthesisValue of(RiskEvidenceSynthesis value) {
-      return ImmutableResourceList.InternalRiskEvidenceSynthesisValue.builder().RiskEvidenceSynthesis(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicationAdministration")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicationAdministrationValue.class
-  )
-  interface InternalMedicationAdministrationValue extends InternalValue {
-    @JsonValue
-    MedicationAdministration MedicationAdministration();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicationAdministration(MedicationAdministration());
-    }
-
-    static InternalMedicationAdministrationValue of(MedicationAdministration value) {
-      return ImmutableResourceList.InternalMedicationAdministrationValue.builder().MedicationAdministration(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Project")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalProjectValue.class
-  )
-  interface InternalProjectValue extends InternalValue {
-    @JsonValue
-    Project Project();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitProject(Project());
-    }
-
-    static InternalProjectValue of(Project value) {
-      return ImmutableResourceList.InternalProjectValue.builder().Project(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SupplyRequest")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSupplyRequestValue.class
-  )
-  interface InternalSupplyRequestValue extends InternalValue {
-    @JsonValue
-    SupplyRequest SupplyRequest();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSupplyRequest(SupplyRequest());
-    }
-
-    static InternalSupplyRequestValue of(SupplyRequest value) {
-      return ImmutableResourceList.InternalSupplyRequestValue.builder().SupplyRequest(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("CatalogEntry")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCatalogEntryValue.class
-  )
-  interface InternalCatalogEntryValue extends InternalValue {
-    @JsonValue
-    CatalogEntry CatalogEntry();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCatalogEntry(CatalogEntry());
-    }
-
-    static InternalCatalogEntryValue of(CatalogEntry value) {
-      return ImmutableResourceList.InternalCatalogEntryValue.builder().CatalogEntry(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SubstanceSourceMaterial")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubstanceSourceMaterialValue.class
-  )
-  interface InternalSubstanceSourceMaterialValue extends InternalValue {
-    @JsonValue
-    SubstanceSourceMaterial SubstanceSourceMaterial();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubstanceSourceMaterial(SubstanceSourceMaterial());
-    }
-
-    static InternalSubstanceSourceMaterialValue of(SubstanceSourceMaterial value) {
-      return ImmutableResourceList.InternalSubstanceSourceMaterialValue.builder().SubstanceSourceMaterial(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("OperationOutcome")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalOperationOutcomeValue.class
-  )
-  interface InternalOperationOutcomeValue extends InternalValue {
-    @JsonValue
-    OperationOutcome OperationOutcome();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitOperationOutcome(OperationOutcome());
-    }
-
-    static InternalOperationOutcomeValue of(OperationOutcome value) {
-      return ImmutableResourceList.InternalOperationOutcomeValue.builder().OperationOutcome(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Practitioner")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalPractitionerValue.class
-  )
-  interface InternalPractitionerValue extends InternalValue {
-    @JsonValue
-    Practitioner Practitioner();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitPractitioner(Practitioner());
-    }
-
-    static InternalPractitionerValue of(Practitioner value) {
-      return ImmutableResourceList.InternalPractitionerValue.builder().Practitioner(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("BiologicallyDerivedProduct")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalBiologicallyDerivedProductValue.class
-  )
-  interface InternalBiologicallyDerivedProductValue extends InternalValue {
-    @JsonValue
-    BiologicallyDerivedProduct BiologicallyDerivedProduct();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitBiologicallyDerivedProduct(BiologicallyDerivedProduct());
-    }
-
-    static InternalBiologicallyDerivedProductValue of(BiologicallyDerivedProduct value) {
-      return ImmutableResourceList.InternalBiologicallyDerivedProductValue.builder().BiologicallyDerivedProduct(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ImplementationGuide")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalImplementationGuideValue.class
-  )
-  interface InternalImplementationGuideValue extends InternalValue {
-    @JsonValue
-    ImplementationGuide ImplementationGuide();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitImplementationGuide(ImplementationGuide());
-    }
-
-    static InternalImplementationGuideValue of(ImplementationGuide value) {
-      return ImmutableResourceList.InternalImplementationGuideValue.builder().ImplementationGuide(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("TestReport")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalTestReportValue.class
-  )
-  interface InternalTestReportValue extends InternalValue {
-    @JsonValue
-    TestReport TestReport();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitTestReport(TestReport());
-    }
-
-    static InternalTestReportValue of(TestReport value) {
-      return ImmutableResourceList.InternalTestReportValue.builder().TestReport(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Questionnaire")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalQuestionnaireValue.class
-  )
-  interface InternalQuestionnaireValue extends InternalValue {
-    @JsonValue
-    Questionnaire Questionnaire();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitQuestionnaire(Questionnaire());
-    }
-
-    static InternalQuestionnaireValue of(Questionnaire value) {
-      return ImmutableResourceList.InternalQuestionnaireValue.builder().Questionnaire(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Bot")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalBotValue.class
-  )
-  interface InternalBotValue extends InternalValue {
-    @JsonValue
-    Bot Bot();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitBot(Bot());
-    }
-
-    static InternalBotValue of(Bot value) {
-      return ImmutableResourceList.InternalBotValue.builder().Bot(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductUndesirableEffect")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductUndesirableEffectValue.class
-  )
-  interface InternalMedicinalProductUndesirableEffectValue extends InternalValue {
-    @JsonValue
-    MedicinalProductUndesirableEffect MedicinalProductUndesirableEffect();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductUndesirableEffect(MedicinalProductUndesirableEffect());
-    }
-
-    static InternalMedicinalProductUndesirableEffectValue of(
-        MedicinalProductUndesirableEffect value) {
-      return ImmutableResourceList.InternalMedicinalProductUndesirableEffectValue.builder().MedicinalProductUndesirableEffect(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("VerificationResult")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalVerificationResultValue.class
-  )
-  interface InternalVerificationResultValue extends InternalValue {
-    @JsonValue
-    VerificationResult VerificationResult();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitVerificationResult(VerificationResult());
-    }
-
-    static InternalVerificationResultValue of(VerificationResult value) {
-      return ImmutableResourceList.InternalVerificationResultValue.builder().VerificationResult(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("User")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalUserValue.class
-  )
-  interface InternalUserValue extends InternalValue {
-    @JsonValue
-    User User();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitUser(User());
-    }
-
-    static InternalUserValue of(User value) {
-      return ImmutableResourceList.InternalUserValue.builder().User(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Consent")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalConsentValue.class
-  )
-  interface InternalConsentValue extends InternalValue {
-    @JsonValue
-    Consent Consent();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitConsent(Consent());
-    }
-
-    static InternalConsentValue of(Consent value) {
-      return ImmutableResourceList.InternalConsentValue.builder().Consent(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ChargeItem")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalChargeItemValue.class
-  )
-  interface InternalChargeItemValue extends InternalValue {
-    @JsonValue
-    ChargeItem ChargeItem();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitChargeItem(ChargeItem());
-    }
-
-    static InternalChargeItemValue of(ChargeItem value) {
-      return ImmutableResourceList.InternalChargeItemValue.builder().ChargeItem(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("List")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalListValue.class
-  )
-  interface InternalListValue extends InternalValue {
-    @JsonValue
-    List List();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitList(List());
-    }
-
-    static InternalListValue of(List value) {
-      return ImmutableResourceList.InternalListValue.builder().List(value).build();
     }
   }
 
@@ -5393,21 +4994,249 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("Location")
+  @JsonTypeName("Claim")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalLocationValue.class
+      as = ImmutableResourceList.InternalClaimValue.class
   )
-  interface InternalLocationValue extends InternalValue {
+  interface InternalClaimValue extends InternalValue {
     @JsonValue
-    Location Location();
+    Claim Claim();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitLocation(Location());
+      return visitor.visitClaim(Claim());
     }
 
-    static InternalLocationValue of(Location value) {
-      return ImmutableResourceList.InternalLocationValue.builder().Location(value).build();
+    static InternalClaimValue of(Claim value) {
+      return ImmutableResourceList.InternalClaimValue.builder().Claim(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Schedule")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalScheduleValue.class
+  )
+  interface InternalScheduleValue extends InternalValue {
+    @JsonValue
+    Schedule Schedule();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSchedule(Schedule());
+    }
+
+    static InternalScheduleValue of(Schedule value) {
+      return ImmutableResourceList.InternalScheduleValue.builder().Schedule(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Group")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalGroupValue.class
+  )
+  interface InternalGroupValue extends InternalValue {
+    @JsonValue
+    Group Group();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitGroup(Group());
+    }
+
+    static InternalGroupValue of(Group value) {
+      return ImmutableResourceList.InternalGroupValue.builder().Group(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("RelatedPerson")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalRelatedPersonValue.class
+  )
+  interface InternalRelatedPersonValue extends InternalValue {
+    @JsonValue
+    RelatedPerson RelatedPerson();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitRelatedPerson(RelatedPerson());
+    }
+
+    static InternalRelatedPersonValue of(RelatedPerson value) {
+      return ImmutableResourceList.InternalRelatedPersonValue.builder().RelatedPerson(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SupplyRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSupplyRequestValue.class
+  )
+  interface InternalSupplyRequestValue extends InternalValue {
+    @JsonValue
+    SupplyRequest SupplyRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSupplyRequest(SupplyRequest());
+    }
+
+    static InternalSupplyRequestValue of(SupplyRequest value) {
+      return ImmutableResourceList.InternalSupplyRequestValue.builder().SupplyRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CareTeam")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCareTeamValue.class
+  )
+  interface InternalCareTeamValue extends InternalValue {
+    @JsonValue
+    CareTeam CareTeam();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCareTeam(CareTeam());
+    }
+
+    static InternalCareTeamValue of(CareTeam value) {
+      return ImmutableResourceList.InternalCareTeamValue.builder().CareTeam(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("HealthcareService")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalHealthcareServiceValue.class
+  )
+  interface InternalHealthcareServiceValue extends InternalValue {
+    @JsonValue
+    HealthcareService HealthcareService();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitHealthcareService(HealthcareService());
+    }
+
+    static InternalHealthcareServiceValue of(HealthcareService value) {
+      return ImmutableResourceList.InternalHealthcareServiceValue.builder().HealthcareService(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Observation")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalObservationValue.class
+  )
+  interface InternalObservationValue extends InternalValue {
+    @JsonValue
+    Observation Observation();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitObservation(Observation());
+    }
+
+    static InternalObservationValue of(Observation value) {
+      return ImmutableResourceList.InternalObservationValue.builder().Observation(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Practitioner")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalPractitionerValue.class
+  )
+  interface InternalPractitionerValue extends InternalValue {
+    @JsonValue
+    Practitioner Practitioner();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitPractitioner(Practitioner());
+    }
+
+    static InternalPractitionerValue of(Practitioner value) {
+      return ImmutableResourceList.InternalPractitionerValue.builder().Practitioner(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("StructureDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalStructureDefinitionValue.class
+  )
+  interface InternalStructureDefinitionValue extends InternalValue {
+    @JsonValue
+    StructureDefinition StructureDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitStructureDefinition(StructureDefinition());
+    }
+
+    static InternalStructureDefinitionValue of(StructureDefinition value) {
+      return ImmutableResourceList.InternalStructureDefinitionValue.builder().StructureDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Account")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalAccountValue.class
+  )
+  interface InternalAccountValue extends InternalValue {
+    @JsonValue
+    Account Account();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitAccount(Account());
+    }
+
+    static InternalAccountValue of(Account value) {
+      return ImmutableResourceList.InternalAccountValue.builder().Account(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicationAdministration")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicationAdministrationValue.class
+  )
+  interface InternalMedicationAdministrationValue extends InternalValue {
+    @JsonValue
+    MedicationAdministration MedicationAdministration();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicationAdministration(MedicationAdministration());
+    }
+
+    static InternalMedicationAdministrationValue of(MedicationAdministration value) {
+      return ImmutableResourceList.InternalMedicationAdministrationValue.builder().MedicationAdministration(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("AppointmentResponse")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalAppointmentResponseValue.class
+  )
+  interface InternalAppointmentResponseValue extends InternalValue {
+    @JsonValue
+    AppointmentResponse AppointmentResponse();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitAppointmentResponse(AppointmentResponse());
+    }
+
+    static InternalAppointmentResponseValue of(AppointmentResponse value) {
+      return ImmutableResourceList.InternalAppointmentResponseValue.builder().AppointmentResponse(value).build();
     }
   }
 
@@ -5431,230 +5260,40 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("RiskAssessment")
+  @JsonTypeName("InsurancePlan")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalRiskAssessmentValue.class
+      as = ImmutableResourceList.InternalInsurancePlanValue.class
   )
-  interface InternalRiskAssessmentValue extends InternalValue {
+  interface InternalInsurancePlanValue extends InternalValue {
     @JsonValue
-    RiskAssessment RiskAssessment();
+    InsurancePlan InsurancePlan();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitRiskAssessment(RiskAssessment());
+      return visitor.visitInsurancePlan(InsurancePlan());
     }
 
-    static InternalRiskAssessmentValue of(RiskAssessment value) {
-      return ImmutableResourceList.InternalRiskAssessmentValue.builder().RiskAssessment(value).build();
+    static InternalInsurancePlanValue of(InsurancePlan value) {
+      return ImmutableResourceList.InternalInsurancePlanValue.builder().InsurancePlan(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("GraphDefinition")
+  @JsonTypeName("StructureMap")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalGraphDefinitionValue.class
+      as = ImmutableResourceList.InternalStructureMapValue.class
   )
-  interface InternalGraphDefinitionValue extends InternalValue {
+  interface InternalStructureMapValue extends InternalValue {
     @JsonValue
-    GraphDefinition GraphDefinition();
+    StructureMap StructureMap();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitGraphDefinition(GraphDefinition());
+      return visitor.visitStructureMap(StructureMap());
     }
 
-    static InternalGraphDefinitionValue of(GraphDefinition value) {
-      return ImmutableResourceList.InternalGraphDefinitionValue.builder().GraphDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Provenance")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalProvenanceValue.class
-  )
-  interface InternalProvenanceValue extends InternalValue {
-    @JsonValue
-    Provenance Provenance();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitProvenance(Provenance());
-    }
-
-    static InternalProvenanceValue of(Provenance value) {
-      return ImmutableResourceList.InternalProvenanceValue.builder().Provenance(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SubstanceProtein")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSubstanceProteinValue.class
-  )
-  interface InternalSubstanceProteinValue extends InternalValue {
-    @JsonValue
-    SubstanceProtein SubstanceProtein();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSubstanceProtein(SubstanceProtein());
-    }
-
-    static InternalSubstanceProteinValue of(SubstanceProtein value) {
-      return ImmutableResourceList.InternalSubstanceProteinValue.builder().SubstanceProtein(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("SpecimenDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalSpecimenDefinitionValue.class
-  )
-  interface InternalSpecimenDefinitionValue extends InternalValue {
-    @JsonValue
-    SpecimenDefinition SpecimenDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitSpecimenDefinition(SpecimenDefinition());
-    }
-
-    static InternalSpecimenDefinitionValue of(SpecimenDefinition value) {
-      return ImmutableResourceList.InternalSpecimenDefinitionValue.builder().SpecimenDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Coverage")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalCoverageValue.class
-  )
-  interface InternalCoverageValue extends InternalValue {
-    @JsonValue
-    Coverage Coverage();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitCoverage(Coverage());
-    }
-
-    static InternalCoverageValue of(Coverage value) {
-      return ImmutableResourceList.InternalCoverageValue.builder().Coverage(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ValueSet")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalValueSetValue.class
-  )
-  interface InternalValueSetValue extends InternalValue {
-    @JsonValue
-    ValueSet ValueSet();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitValueSet(ValueSet());
-    }
-
-    static InternalValueSetValue of(ValueSet value) {
-      return ImmutableResourceList.InternalValueSetValue.builder().ValueSet(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("AllergyIntolerance")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalAllergyIntoleranceValue.class
-  )
-  interface InternalAllergyIntoleranceValue extends InternalValue {
-    @JsonValue
-    AllergyIntolerance AllergyIntolerance();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitAllergyIntolerance(AllergyIntolerance());
-    }
-
-    static InternalAllergyIntoleranceValue of(AllergyIntolerance value) {
-      return ImmutableResourceList.InternalAllergyIntoleranceValue.builder().AllergyIntolerance(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Binary")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalBinaryValue.class
-  )
-  interface InternalBinaryValue extends InternalValue {
-    @JsonValue
-    Binary Binary();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitBinary(Binary());
-    }
-
-    static InternalBinaryValue of(Binary value) {
-      return ImmutableResourceList.InternalBinaryValue.builder().Binary(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("Parameters")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalParametersValue.class
-  )
-  interface InternalParametersValue extends InternalValue {
-    @JsonValue
-    Parameters Parameters();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitParameters(Parameters());
-    }
-
-    static InternalParametersValue of(Parameters value) {
-      return ImmutableResourceList.InternalParametersValue.builder().Parameters(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("ActivityDefinition")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalActivityDefinitionValue.class
-  )
-  interface InternalActivityDefinitionValue extends InternalValue {
-    @JsonValue
-    ActivityDefinition ActivityDefinition();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitActivityDefinition(ActivityDefinition());
-    }
-
-    static InternalActivityDefinitionValue of(ActivityDefinition value) {
-      return ImmutableResourceList.InternalActivityDefinitionValue.builder().ActivityDefinition(value).build();
-    }
-  }
-
-  @Value.Immutable
-  @JsonTypeName("MedicinalProductAuthorization")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalMedicinalProductAuthorizationValue.class
-  )
-  interface InternalMedicinalProductAuthorizationValue extends InternalValue {
-    @JsonValue
-    MedicinalProductAuthorization MedicinalProductAuthorization();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitMedicinalProductAuthorization(MedicinalProductAuthorization());
-    }
-
-    static InternalMedicinalProductAuthorizationValue of(MedicinalProductAuthorization value) {
-      return ImmutableResourceList.InternalMedicinalProductAuthorizationValue.builder().MedicinalProductAuthorization(value).build();
+    static InternalStructureMapValue of(StructureMap value) {
+      return ImmutableResourceList.InternalStructureMapValue.builder().StructureMap(value).build();
     }
   }
 
@@ -5678,25 +5317,6 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("NutritionOrder")
-  @JsonDeserialize(
-      as = ImmutableResourceList.InternalNutritionOrderValue.class
-  )
-  interface InternalNutritionOrderValue extends InternalValue {
-    @JsonValue
-    NutritionOrder NutritionOrder();
-
-    @Override
-    default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitNutritionOrder(NutritionOrder());
-    }
-
-    static InternalNutritionOrderValue of(NutritionOrder value) {
-      return ImmutableResourceList.InternalNutritionOrderValue.builder().NutritionOrder(value).build();
-    }
-  }
-
-  @Value.Immutable
   @JsonTypeName("CoverageEligibilityResponse")
   @JsonDeserialize(
       as = ImmutableResourceList.InternalCoverageEligibilityResponseValue.class
@@ -5716,116 +5336,496 @@ public final class ResourceList {
   }
 
   @Value.Immutable
-  @JsonTypeName("ExplanationOfBenefit")
+  @JsonTypeName("Appointment")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalExplanationOfBenefitValue.class
+      as = ImmutableResourceList.InternalAppointmentValue.class
   )
-  interface InternalExplanationOfBenefitValue extends InternalValue {
+  interface InternalAppointmentValue extends InternalValue {
     @JsonValue
-    ExplanationOfBenefit ExplanationOfBenefit();
+    Appointment Appointment();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitExplanationOfBenefit(ExplanationOfBenefit());
+      return visitor.visitAppointment(Appointment());
     }
 
-    static InternalExplanationOfBenefitValue of(ExplanationOfBenefit value) {
-      return ImmutableResourceList.InternalExplanationOfBenefitValue.builder().ExplanationOfBenefit(value).build();
+    static InternalAppointmentValue of(Appointment value) {
+      return ImmutableResourceList.InternalAppointmentValue.builder().Appointment(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("Login")
+  @JsonTypeName("ValueSet")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalLoginValue.class
+      as = ImmutableResourceList.InternalValueSetValue.class
   )
-  interface InternalLoginValue extends InternalValue {
+  interface InternalValueSetValue extends InternalValue {
     @JsonValue
-    Login Login();
+    ValueSet ValueSet();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitLogin(Login());
+      return visitor.visitValueSet(ValueSet());
     }
 
-    static InternalLoginValue of(Login value) {
-      return ImmutableResourceList.InternalLoginValue.builder().Login(value).build();
+    static InternalValueSetValue of(ValueSet value) {
+      return ImmutableResourceList.InternalValueSetValue.builder().ValueSet(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("UserConfiguration")
+  @JsonTypeName("BodyStructure")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalUserConfigurationValue.class
+      as = ImmutableResourceList.InternalBodyStructureValue.class
   )
-  interface InternalUserConfigurationValue extends InternalValue {
+  interface InternalBodyStructureValue extends InternalValue {
     @JsonValue
-    UserConfiguration UserConfiguration();
+    BodyStructure BodyStructure();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitUserConfiguration(UserConfiguration());
+      return visitor.visitBodyStructure(BodyStructure());
     }
 
-    static InternalUserConfigurationValue of(UserConfiguration value) {
-      return ImmutableResourceList.InternalUserConfigurationValue.builder().UserConfiguration(value).build();
+    static InternalBodyStructureValue of(BodyStructure value) {
+      return ImmutableResourceList.InternalBodyStructureValue.builder().BodyStructure(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("ServiceRequest")
+  @JsonTypeName("Evidence")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalServiceRequestValue.class
+      as = ImmutableResourceList.InternalEvidenceValue.class
   )
-  interface InternalServiceRequestValue extends InternalValue {
+  interface InternalEvidenceValue extends InternalValue {
     @JsonValue
-    ServiceRequest ServiceRequest();
+    Evidence Evidence();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitServiceRequest(ServiceRequest());
+      return visitor.visitEvidence(Evidence());
     }
 
-    static InternalServiceRequestValue of(ServiceRequest value) {
-      return ImmutableResourceList.InternalServiceRequestValue.builder().ServiceRequest(value).build();
+    static InternalEvidenceValue of(Evidence value) {
+      return ImmutableResourceList.InternalEvidenceValue.builder().Evidence(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("DeviceMetric")
+  @JsonTypeName("ChargeItemDefinition")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalDeviceMetricValue.class
+      as = ImmutableResourceList.InternalChargeItemDefinitionValue.class
   )
-  interface InternalDeviceMetricValue extends InternalValue {
+  interface InternalChargeItemDefinitionValue extends InternalValue {
     @JsonValue
-    DeviceMetric DeviceMetric();
+    ChargeItemDefinition ChargeItemDefinition();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitDeviceMetric(DeviceMetric());
+      return visitor.visitChargeItemDefinition(ChargeItemDefinition());
     }
 
-    static InternalDeviceMetricValue of(DeviceMetric value) {
-      return ImmutableResourceList.InternalDeviceMetricValue.builder().DeviceMetric(value).build();
+    static InternalChargeItemDefinitionValue of(ChargeItemDefinition value) {
+      return ImmutableResourceList.InternalChargeItemDefinitionValue.builder().ChargeItemDefinition(value).build();
     }
   }
 
   @Value.Immutable
-  @JsonTypeName("StructureDefinition")
+  @JsonTypeName("Immunization")
   @JsonDeserialize(
-      as = ImmutableResourceList.InternalStructureDefinitionValue.class
+      as = ImmutableResourceList.InternalImmunizationValue.class
   )
-  interface InternalStructureDefinitionValue extends InternalValue {
+  interface InternalImmunizationValue extends InternalValue {
     @JsonValue
-    StructureDefinition StructureDefinition();
+    Immunization Immunization();
 
     @Override
     default <T> T accept(Visitor<T> visitor) {
-      return visitor.visitStructureDefinition(StructureDefinition());
+      return visitor.visitImmunization(Immunization());
     }
 
-    static InternalStructureDefinitionValue of(StructureDefinition value) {
-      return ImmutableResourceList.InternalStructureDefinitionValue.builder().StructureDefinition(value).build();
+    static InternalImmunizationValue of(Immunization value) {
+      return ImmutableResourceList.InternalImmunizationValue.builder().Immunization(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicationKnowledge")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicationKnowledgeValue.class
+  )
+  interface InternalMedicationKnowledgeValue extends InternalValue {
+    @JsonValue
+    MedicationKnowledge MedicationKnowledge();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicationKnowledge(MedicationKnowledge());
+    }
+
+    static InternalMedicationKnowledgeValue of(MedicationKnowledge value) {
+      return ImmutableResourceList.InternalMedicationKnowledgeValue.builder().MedicationKnowledge(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("VisionPrescription")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalVisionPrescriptionValue.class
+  )
+  interface InternalVisionPrescriptionValue extends InternalValue {
+    @JsonValue
+    VisionPrescription VisionPrescription();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitVisionPrescription(VisionPrescription());
+    }
+
+    static InternalVisionPrescriptionValue of(VisionPrescription value) {
+      return ImmutableResourceList.InternalVisionPrescriptionValue.builder().VisionPrescription(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ChargeItem")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalChargeItemValue.class
+  )
+  interface InternalChargeItemValue extends InternalValue {
+    @JsonValue
+    ChargeItem ChargeItem();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitChargeItem(ChargeItem());
+    }
+
+    static InternalChargeItemValue of(ChargeItem value) {
+      return ImmutableResourceList.InternalChargeItemValue.builder().ChargeItem(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Condition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalConditionValue.class
+  )
+  interface InternalConditionValue extends InternalValue {
+    @JsonValue
+    Condition Condition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCondition(Condition());
+    }
+
+    static InternalConditionValue of(Condition value) {
+      return ImmutableResourceList.InternalConditionValue.builder().Condition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("RequestGroup")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalRequestGroupValue.class
+  )
+  interface InternalRequestGroupValue extends InternalValue {
+    @JsonValue
+    RequestGroup RequestGroup();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitRequestGroup(RequestGroup());
+    }
+
+    static InternalRequestGroupValue of(RequestGroup value) {
+      return ImmutableResourceList.InternalRequestGroupValue.builder().RequestGroup(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SubstancePolymer")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubstancePolymerValue.class
+  )
+  interface InternalSubstancePolymerValue extends InternalValue {
+    @JsonValue
+    SubstancePolymer SubstancePolymer();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubstancePolymer(SubstancePolymer());
+    }
+
+    static InternalSubstancePolymerValue of(SubstancePolymer value) {
+      return ImmutableResourceList.InternalSubstancePolymerValue.builder().SubstancePolymer(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SubstanceSourceMaterial")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSubstanceSourceMaterialValue.class
+  )
+  interface InternalSubstanceSourceMaterialValue extends InternalValue {
+    @JsonValue
+    SubstanceSourceMaterial SubstanceSourceMaterial();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSubstanceSourceMaterial(SubstanceSourceMaterial());
+    }
+
+    static InternalSubstanceSourceMaterialValue of(SubstanceSourceMaterial value) {
+      return ImmutableResourceList.InternalSubstanceSourceMaterialValue.builder().SubstanceSourceMaterial(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("VerificationResult")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalVerificationResultValue.class
+  )
+  interface InternalVerificationResultValue extends InternalValue {
+    @JsonValue
+    VerificationResult VerificationResult();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitVerificationResult(VerificationResult());
+    }
+
+    static InternalVerificationResultValue of(VerificationResult value) {
+      return ImmutableResourceList.InternalVerificationResultValue.builder().VerificationResult(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Contract")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalContractValue.class
+  )
+  interface InternalContractValue extends InternalValue {
+    @JsonValue
+    Contract Contract();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitContract(Contract());
+    }
+
+    static InternalContractValue of(Contract value) {
+      return ImmutableResourceList.InternalContractValue.builder().Contract(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("ConceptMap")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalConceptMapValue.class
+  )
+  interface InternalConceptMapValue extends InternalValue {
+    @JsonValue
+    ConceptMap ConceptMap();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitConceptMap(ConceptMap());
+    }
+
+    static InternalConceptMapValue of(ConceptMap value) {
+      return ImmutableResourceList.InternalConceptMapValue.builder().ConceptMap(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("CoverageEligibilityRequest")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalCoverageEligibilityRequestValue.class
+  )
+  interface InternalCoverageEligibilityRequestValue extends InternalValue {
+    @JsonValue
+    CoverageEligibilityRequest CoverageEligibilityRequest();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitCoverageEligibilityRequest(CoverageEligibilityRequest());
+    }
+
+    static InternalCoverageEligibilityRequestValue of(CoverageEligibilityRequest value) {
+      return ImmutableResourceList.InternalCoverageEligibilityRequestValue.builder().CoverageEligibilityRequest(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Organization")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalOrganizationValue.class
+  )
+  interface InternalOrganizationValue extends InternalValue {
+    @JsonValue
+    Organization Organization();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitOrganization(Organization());
+    }
+
+    static InternalOrganizationValue of(Organization value) {
+      return ImmutableResourceList.InternalOrganizationValue.builder().Organization(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("BiologicallyDerivedProduct")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalBiologicallyDerivedProductValue.class
+  )
+  interface InternalBiologicallyDerivedProductValue extends InternalValue {
+    @JsonValue
+    BiologicallyDerivedProduct BiologicallyDerivedProduct();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitBiologicallyDerivedProduct(BiologicallyDerivedProduct());
+    }
+
+    static InternalBiologicallyDerivedProductValue of(BiologicallyDerivedProduct value) {
+      return ImmutableResourceList.InternalBiologicallyDerivedProductValue.builder().BiologicallyDerivedProduct(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Location")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalLocationValue.class
+  )
+  interface InternalLocationValue extends InternalValue {
+    @JsonValue
+    Location Location();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitLocation(Location());
+    }
+
+    static InternalLocationValue of(Location value) {
+      return ImmutableResourceList.InternalLocationValue.builder().Location(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MedicinalProductIndication")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMedicinalProductIndicationValue.class
+  )
+  interface InternalMedicinalProductIndicationValue extends InternalValue {
+    @JsonValue
+    MedicinalProductIndication MedicinalProductIndication();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMedicinalProductIndication(MedicinalProductIndication());
+    }
+
+    static InternalMedicinalProductIndicationValue of(MedicinalProductIndication value) {
+      return ImmutableResourceList.InternalMedicinalProductIndicationValue.builder().MedicinalProductIndication(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Measure")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMeasureValue.class
+  )
+  interface InternalMeasureValue extends InternalValue {
+    @JsonValue
+    Measure Measure();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMeasure(Measure());
+    }
+
+    static InternalMeasureValue of(Measure value) {
+      return ImmutableResourceList.InternalMeasureValue.builder().Measure(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("SupplyDelivery")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalSupplyDeliveryValue.class
+  )
+  interface InternalSupplyDeliveryValue extends InternalValue {
+    @JsonValue
+    SupplyDelivery SupplyDelivery();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitSupplyDelivery(SupplyDelivery());
+    }
+
+    static InternalSupplyDeliveryValue of(SupplyDelivery value) {
+      return ImmutableResourceList.InternalSupplyDeliveryValue.builder().SupplyDelivery(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("Endpoint")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalEndpointValue.class
+  )
+  interface InternalEndpointValue extends InternalValue {
+    @JsonValue
+    Endpoint Endpoint();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitEndpoint(Endpoint());
+    }
+
+    static InternalEndpointValue of(Endpoint value) {
+      return ImmutableResourceList.InternalEndpointValue.builder().Endpoint(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("OperationDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalOperationDefinitionValue.class
+  )
+  interface InternalOperationDefinitionValue extends InternalValue {
+    @JsonValue
+    OperationDefinition OperationDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitOperationDefinition(OperationDefinition());
+    }
+
+    static InternalOperationDefinitionValue of(OperationDefinition value) {
+      return ImmutableResourceList.InternalOperationDefinitionValue.builder().OperationDefinition(value).build();
+    }
+  }
+
+  @Value.Immutable
+  @JsonTypeName("MessageDefinition")
+  @JsonDeserialize(
+      as = ImmutableResourceList.InternalMessageDefinitionValue.class
+  )
+  interface InternalMessageDefinitionValue extends InternalValue {
+    @JsonValue
+    MessageDefinition MessageDefinition();
+
+    @Override
+    default <T> T accept(Visitor<T> visitor) {
+      return visitor.visitMessageDefinition(MessageDefinition());
+    }
+
+    static InternalMessageDefinitionValue of(MessageDefinition value) {
+      return ImmutableResourceList.InternalMessageDefinitionValue.builder().MessageDefinition(value).build();
     }
   }
 

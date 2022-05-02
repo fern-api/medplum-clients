@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial_Organism {
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> species();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> intraspecificDescription();
+
+  Optional<String> id();
 
   Optional<CodeableConcept> intraspecificType();
 
   Optional<CodeableConcept> family();
 
-  Optional<SubstanceSourceMaterial_OrganismGeneral> organismGeneral();
-
-  Optional<String> id();
-
-  Optional<String> intraspecificDescription();
+  Optional<SubstanceSourceMaterial_Hybrid> hybrid();
 
   Optional<CodeableConcept> genus();
 
-  Optional<SubstanceSourceMaterial_Hybrid> hybrid();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> species();
+  Optional<SubstanceSourceMaterial_OrganismGeneral> organismGeneral();
 
   Optional<List<SubstanceSourceMaterial_Author>> author();
 

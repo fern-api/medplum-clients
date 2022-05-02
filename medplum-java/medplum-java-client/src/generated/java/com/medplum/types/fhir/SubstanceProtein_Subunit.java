@@ -18,27 +18,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceProtein_Subunit {
-  Optional<String> nTerminalModification();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Attachment> sequenceAttachment();
 
-  Optional<Identifier> nTerminalModificationId();
+  Optional<String> nTerminalModification();
+
+  Optional<Identifier> cTerminalModificationId();
 
   Optional<Integer> subunit();
 
-  Optional<Identifier> cTerminalModificationId();
+  Optional<String> sequence();
+
+  Optional<Identifier> nTerminalModificationId();
+
+  Optional<List<Extension>> extension();
 
   Optional<Integer> length();
 
   Optional<String> cTerminalModification();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Attachment> sequenceAttachment();
-
-  Optional<String> sequence();
 
   static ImmutableSubstanceProtein_Subunit.Builder builder() {
     return ImmutableSubstanceProtein_Subunit.builder();

@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface HealthcareService_Eligibility {
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Markdown> comment();
 
+  Optional<String> id();
+
   Optional<CodeableConcept> code();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableHealthcareService_Eligibility.Builder builder() {
     return ImmutableHealthcareService_Eligibility.builder();

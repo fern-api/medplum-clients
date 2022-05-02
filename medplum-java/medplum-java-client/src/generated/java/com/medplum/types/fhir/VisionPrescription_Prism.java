@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface VisionPrescription_Prism {
   Optional<Decimal> amount();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<Visionprescription_prismBase> base();
 

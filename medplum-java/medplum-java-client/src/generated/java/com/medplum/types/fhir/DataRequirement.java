@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DataRequirement {
-  Optional<PositiveInt> limit();
+  Optional<List<DataRequirement_Sort>> sort();
 
   Optional<List<Canonical>> profile();
-
-  Optional<List<String>> mustSupport();
-
-  Optional<String> id();
-
-  Optional<Reference> subjectReference();
-
-  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> subjectCodeableConcept();
 
   Optional<List<DataRequirement_CodeFilter>> codeFilter();
 
+  Optional<String> id();
+
+  Optional<Reference> subjectReference();
+
+  Optional<List<String>> mustSupport();
+
   Optional<Code> type();
 
   Optional<List<DataRequirement_DateFilter>> dateFilter();
 
-  Optional<List<DataRequirement_Sort>> sort();
+  Optional<PositiveInt> limit();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableDataRequirement.Builder builder() {
     return ImmutableDataRequirement.builder();

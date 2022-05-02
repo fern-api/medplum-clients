@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BiologicallyDerivedProduct_Processing {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> timeDateTime();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> procedure();
+
   Optional<Reference> additive();
 
-  Optional<String> id();
+  Optional<String> timeDateTime();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> description();
 
   Optional<Period> timePeriod();
-
-  Optional<CodeableConcept> procedure();
 
   static ImmutableBiologicallyDerivedProduct_Processing.Builder builder() {
     return ImmutableBiologicallyDerivedProduct_Processing.builder();

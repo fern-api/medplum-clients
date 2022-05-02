@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Item {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<Decimal> factor();
 
   Optional<CodeableConcept> locationCodeableConcept();
 
+  Optional<List<Reference>> udi();
+
   Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
-
-  Optional<String> servicedDate();
-
-  Optional<List<ExplanationOfBenefit_Detail>> detail();
-
-  Optional<List<PositiveInt>> informationSequence();
-
-  Optional<List<PositiveInt>> diagnosisSequence();
-
-  Optional<List<PositiveInt>> noteNumber();
-
-  Optional<Money> net();
 
   Optional<CodeableConcept> bodySite();
 
-  Optional<List<Reference>> encounter();
+  Optional<List<PositiveInt>> noteNumber();
 
-  Optional<List<CodeableConcept>> subSite();
+  Optional<String> id();
 
-  Optional<List<CodeableConcept>> programCode();
+  Optional<List<Extension>> extension();
+
+  Optional<List<PositiveInt>> diagnosisSequence();
+
+  Optional<Money> net();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<CodeableConcept>> modifier();
-
-  Optional<Period> servicedPeriod();
-
   Optional<CodeableConcept> revenue();
 
-  Optional<List<Reference>> udi();
+  Optional<Money> unitPrice();
 
-  Optional<PositiveInt> sequence();
+  Optional<List<PositiveInt>> procedureSequence();
 
-  Optional<List<PositiveInt>> careTeamSequence();
-
-  CodeableConcept productOrService();
+  Optional<List<CodeableConcept>> programCode();
 
   Optional<Reference> locationReference();
+
+  Optional<List<PositiveInt>> informationSequence();
 
   Optional<Quantity> quantity();
 
   Optional<CodeableConcept> category();
 
-  Optional<Money> unitPrice();
+  Optional<List<Reference>> encounter();
 
-  Optional<List<PositiveInt>> procedureSequence();
+  Optional<PositiveInt> sequence();
+
+  Optional<List<CodeableConcept>> subSite();
+
+  CodeableConcept productOrService();
+
+  Optional<List<PositiveInt>> careTeamSequence();
+
+  Optional<String> servicedDate();
+
+  Optional<List<ExplanationOfBenefit_Detail>> detail();
+
+  Optional<Period> servicedPeriod();
+
+  Optional<List<CodeableConcept>> modifier();
 
   Optional<Address> locationAddress();
 

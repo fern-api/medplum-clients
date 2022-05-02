@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Rule {
-  Optional<List<StructureMap_Dependent>> dependent();
-
   Optional<Id> name();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> documentation();
-
-  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<List<StructureMap_Rule>> rule();
+
   Optional<List<StructureMap_Target>> target();
 
-  List<StructureMap_Source> source();
+  Optional<String> documentation();
 
-  Optional<List<StructureMap_Rule>> rule();
+  Optional<List<Extension>> extension();
+
+  Optional<List<StructureMap_Dependent>> dependent();
+
+  Optional<String> id();
+
+  List<StructureMap_Source> source();
 
   static ImmutableStructureMap_Rule.Builder builder() {
     return ImmutableStructureMap_Rule.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Person_Link {
-  Optional<List<Extension>> modifierExtension();
-
-  Reference target();
-
   Optional<String> id();
 
   Optional<Person_linkAssurance> assurance();
 
+  Reference target();
+
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutablePerson_Link.TargetBuildStage builder() {
     return ImmutablePerson_Link.builder();

@@ -19,23 +19,23 @@ import org.immutables.value.Value;
 public interface MedicinalProductPharmaceutical_RouteOfAdministration {
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Quantity> maxSingleDose();
-
-  CodeableConcept code();
-
-  Optional<Quantity> maxDosePerDay();
-
-  Optional<Duration> maxTreatmentPeriod();
 
   Optional<List<MedicinalProductPharmaceutical_TargetSpecies>> targetSpecies();
 
-  Optional<Quantity> firstDose();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Quantity> maxDosePerDay();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Duration> maxTreatmentPeriod();
+
+  CodeableConcept code();
 
   Optional<Ratio> maxDosePerTreatmentPeriod();
+
+  Optional<Quantity> firstDose();
 
   static ImmutableMedicinalProductPharmaceutical_RouteOfAdministration.CodeBuildStage builder() {
     return ImmutableMedicinalProductPharmaceutical_RouteOfAdministration.builder();

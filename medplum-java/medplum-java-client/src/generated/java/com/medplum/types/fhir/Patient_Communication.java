@@ -20,13 +20,13 @@ import org.immutables.value.Value;
 public interface Patient_Communication {
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Boolean> preferred();
-
   CodeableConcept language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> preferred();
 
   static ImmutablePatient_Communication.LanguageBuildStage builder() {
     return ImmutablePatient_Communication.builder();

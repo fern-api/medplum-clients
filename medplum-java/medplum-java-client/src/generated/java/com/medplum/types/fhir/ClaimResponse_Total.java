@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_Total {
-  CodeableConcept category();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  CodeableConcept category();
 
   Money amount();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   static ImmutableClaimResponse_Total.CategoryBuildStage builder() {
     return ImmutableClaimResponse_Total.builder();

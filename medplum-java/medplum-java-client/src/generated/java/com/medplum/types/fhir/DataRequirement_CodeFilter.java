@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DataRequirement_CodeFilter {
-  Optional<String> searchParam();
-
-  Optional<Canonical> valueSet();
-
-  Optional<List<Coding>> code();
+  Optional<List<Extension>> extension();
 
   Optional<String> path();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Coding>> code();
 
-  Optional<List<Extension>> extension();
+  Optional<String> searchParam();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Canonical> valueSet();
 
   static ImmutableDataRequirement_CodeFilter.Builder builder() {
     return ImmutableDataRequirement_CodeFilter.builder();

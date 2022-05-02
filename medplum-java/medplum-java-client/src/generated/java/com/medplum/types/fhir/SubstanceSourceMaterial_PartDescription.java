@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial_PartDescription {
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> partLocation();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> part();
+
+  Optional<String> id();
 
   static ImmutableSubstanceSourceMaterial_PartDescription.Builder builder() {
     return ImmutableSubstanceSourceMaterial_PartDescription.builder();

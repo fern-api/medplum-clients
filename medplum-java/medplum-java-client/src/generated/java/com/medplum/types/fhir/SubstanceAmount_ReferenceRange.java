@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface SubstanceAmount_ReferenceRange {
   Optional<String> id();
 
-  Optional<Quantity> lowLimit();
+  Optional<List<Extension>> extension();
 
   Optional<Quantity> highLimit();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Quantity> lowLimit();
 
   static ImmutableSubstanceAmount_ReferenceRange.Builder builder() {
     return ImmutableSubstanceAmount_ReferenceRange.builder();

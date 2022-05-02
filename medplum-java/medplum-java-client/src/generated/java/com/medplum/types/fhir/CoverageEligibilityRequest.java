@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> status();
-
-  Optional<Reference> facility();
-
-  Reference patient();
+  Optional<List<CoverageEligibilityRequest_Insurance>> insurance();
 
   Optional<Period> servicedPeriod();
 
-  Optional<Reference> enterer();
-
   Optional<CodeableConcept> priority();
-
-  Optional<Code> language();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<CoverageeligibilityrequestPurposeItem>> purpose();
-
-  Optional<String> servicedDate();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> provider();
 
   String resourceType();
 
-  Optional<Id> id();
+  Optional<String> servicedDate();
 
-  Optional<DateTime> created();
+  Optional<Code> status();
 
-  Reference insurer();
+  Optional<Narrative> text();
+
+  Optional<Reference> facility();
+
+  Optional<List<CoverageeligibilityrequestPurposeItem>> purpose();
+
+  Reference patient();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<CoverageEligibilityRequest_SupportingInfo>> supportingInfo();
-
-  Optional<List<CoverageEligibilityRequest_Item>> item();
-
-  Optional<List<CoverageEligibilityRequest_Insurance>> insurance();
+  Optional<Id> id();
 
   Optional<Meta> meta();
 
-  static ImmutableCoverageEligibilityRequest.PatientBuildStage builder() {
+  Optional<List<Identifier>> identifier();
+
+  Optional<DateTime> created();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CoverageEligibilityRequest_Item>> item();
+
+  Optional<List<CoverageEligibilityRequest_SupportingInfo>> supportingInfo();
+
+  Optional<Reference> provider();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Reference insurer();
+
+  Optional<Reference> enterer();
+
+  static ImmutableCoverageEligibilityRequest.ResourceTypeBuildStage builder() {
     return ImmutableCoverageEligibilityRequest.builder();
   }
 }

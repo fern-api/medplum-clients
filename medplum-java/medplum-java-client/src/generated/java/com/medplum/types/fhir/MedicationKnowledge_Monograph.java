@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Monograph {
+  Optional<String> id();
+
   Optional<Reference> source();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
 
   Optional<List<Extension>> extension();
 

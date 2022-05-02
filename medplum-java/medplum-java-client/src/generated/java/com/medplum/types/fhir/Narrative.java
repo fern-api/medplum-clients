@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Narrative {
-  Optional<List<Extension>> extension();
-
   Optional<NarrativeStatus> status();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Xhtml div();
 

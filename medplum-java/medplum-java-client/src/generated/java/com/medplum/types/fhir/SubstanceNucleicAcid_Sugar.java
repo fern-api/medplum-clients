@@ -17,9 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceNucleicAcid_Sugar {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
+  Optional<String> residueSite();
 
   Optional<Identifier> identifier();
 
@@ -27,7 +25,9 @@ public interface SubstanceNucleicAcid_Sugar {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> residueSite();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableSubstanceNucleicAcid_Sugar.Builder builder() {
     return ImmutableSubstanceNucleicAcid_Sugar.builder();

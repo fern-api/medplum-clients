@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface ExplanationOfBenefit_Insurance {
   Optional<List<Extension>> extension();
 
-  Reference coverage();
-
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Boolean> focal();
+  Reference coverage();
 
   Optional<List<String>> preAuthRef();
+
+  Optional<Boolean> focal();
 
   static ImmutableExplanationOfBenefit_Insurance.CoverageBuildStage builder() {
     return ImmutableExplanationOfBenefit_Insurance.builder();

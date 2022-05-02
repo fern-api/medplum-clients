@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_Condition {
-  Optional<Expression> expression();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Plandefinition_conditionKind> kind();
+  Optional<Expression> expression();
 
-  Optional<List<Extension>> extension();
+  Optional<Plandefinition_conditionKind> kind();
 
   Optional<String> id();
 

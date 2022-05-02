@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface QuestionnaireResponse_Item {
   Optional<List<QuestionnaireResponse_Answer>> answer();
 
-  Optional<Uri> definition();
+  Optional<String> linkId();
+
+  Optional<String> text();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> text();
-
-  Optional<String> linkId();
-
-  Optional<String> id();
+  Optional<Uri> definition();
 
   Optional<List<QuestionnaireResponse_Item>> item();
 

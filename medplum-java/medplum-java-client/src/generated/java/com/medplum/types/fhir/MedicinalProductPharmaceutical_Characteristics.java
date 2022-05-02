@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPharmaceutical_Characteristics {
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   CodeableConcept code();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> status();
 

@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_Nutrient {
+  Optional<List<Extension>> extension();
+
   Optional<CodeableConcept> modifier();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
 
   Optional<String> id();
 

@@ -19,7 +19,7 @@ import org.immutables.value.Value;
 public interface DetectedIssue_Mitigation {
   Optional<List<Extension>> extension();
 
-  Optional<Reference> author();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> date();
 
@@ -27,7 +27,7 @@ public interface DetectedIssue_Mitigation {
 
   CodeableConcept action();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> author();
 
   static ImmutableDetectedIssue_Mitigation.ActionBuildStage builder() {
     return ImmutableDetectedIssue_Mitigation.builder();

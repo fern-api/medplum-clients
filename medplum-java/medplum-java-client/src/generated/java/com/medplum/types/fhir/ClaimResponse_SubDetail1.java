@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_SubDetail1 {
-  Optional<Decimal> factor();
+  Optional<Money> unitPrice();
 
-  Optional<String> id();
+  CodeableConcept productOrService();
 
   Optional<List<Extension>> extension();
 
-  Optional<Money> unitPrice();
-
   Optional<Money> net();
+
+  Optional<Decimal> factor();
+
+  Optional<String> id();
 
   Optional<List<CodeableConcept>> modifier();
 
   Optional<List<Extension>> modifierExtension();
 
-  List<ClaimResponse_Adjudication> adjudication();
-
-  CodeableConcept productOrService();
+  Optional<Quantity> quantity();
 
   Optional<List<PositiveInt>> noteNumber();
 
-  Optional<Quantity> quantity();
+  List<ClaimResponse_Adjudication> adjudication();
 
   static ImmutableClaimResponse_SubDetail1.ProductOrServiceBuildStage builder() {
     return ImmutableClaimResponse_SubDetail1.builder();

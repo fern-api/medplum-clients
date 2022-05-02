@@ -19,59 +19,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Patient {
-  Optional<Id> id();
+  Optional<CodeableConcept> maritalStatus();
 
   Optional<Date> birthDate();
 
-  Optional<List<Attachment>> photo();
-
   Optional<Code> language();
-
-  Optional<List<Address>> address();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> deceasedDateTime();
-
-  Optional<Boolean> multipleBirthBoolean();
-
-  Optional<List<Patient_Contact>> contact();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<List<Patient_Communication>> communication();
-
-  Optional<List<HumanName>> name();
-
-  Optional<List<Patient_Link>> link();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Boolean> active();
 
   Optional<List<Reference>> generalPractitioner();
 
-  Optional<Reference> managingOrganization();
+  Optional<List<HumanName>> name();
 
-  String resourceType();
+  Optional<String> deceasedDateTime();
 
-  Optional<CodeableConcept> maritalStatus();
+  Optional<Uri> implicitRules();
 
-  Optional<Narrative> text();
+  Optional<List<Attachment>> photo();
 
   Optional<List<ResourceList>> contained();
+
+  Optional<PatientGender> gender();
 
   Optional<Boolean> deceasedBoolean();
 
   Optional<Double> multipleBirthInteger();
 
+  String resourceType();
+
+  Optional<Id> id();
+
+  Optional<Boolean> active();
+
   Optional<Meta> meta();
 
-  Optional<PatientGender> gender();
+  Optional<Narrative> text();
+
+  Optional<Reference> managingOrganization();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<List<Address>> address();
+
+  Optional<Boolean> multipleBirthBoolean();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Patient_Contact>> contact();
+
+  Optional<List<Patient_Communication>> communication();
+
+  Optional<List<Patient_Link>> link();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutablePatient.ResourceTypeBuildStage builder() {
     return ImmutablePatient.builder();

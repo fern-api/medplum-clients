@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_Contact {
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> purpose();
+
   Optional<List<Extension>> extension();
 
   Optional<HumanName> name();
 
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<CodeableConcept> purpose();
+  Optional<String> id();
 
   Optional<Address> address();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ContactPoint>> telecom();
 
   static ImmutableInsurancePlan_Contact.Builder builder() {
     return ImmutableInsurancePlan_Contact.builder();

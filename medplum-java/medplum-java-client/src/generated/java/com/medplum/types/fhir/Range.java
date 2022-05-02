@@ -19,9 +19,9 @@ import org.immutables.value.Value;
 public interface Range {
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
   Optional<Quantity> low();
+
+  Optional<String> id();
 
   Optional<Quantity> high();
 

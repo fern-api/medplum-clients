@@ -17,51 +17,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VerificationResult {
-  Optional<List<VerificationResult_Validator>> validator();
+  String resourceType();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> need();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Meta> meta();
-
-  Optional<Id> id();
-
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> validationProcess();
-
-  Optional<Narrative> text();
-
-  Optional<Code> status();
-
-  Optional<DateTime> lastPerformed();
-
-  Optional<List<Reference>> target();
-
-  Optional<Timing> frequency();
-
-  String resourceType();
-
-  Optional<CodeableConcept> validationType();
-
-  Optional<VerificationResult_Attestation> attestation();
-
-  Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> failureAction();
+  Optional<List<String>> targetLocation();
 
   Optional<List<VerificationResult_PrimarySource>> primarySource();
 
+  Optional<Timing> frequency();
+
   Optional<DateTime> statusDate();
+
+  Optional<Id> id();
+
+  Optional<DateTime> lastPerformed();
+
+  Optional<List<VerificationResult_Validator>> validator();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<CodeableConcept>> validationProcess();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> failureAction();
+
+  Optional<Narrative> text();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> target();
 
   Optional<Date> nextScheduled();
 
-  Optional<List<String>> targetLocation();
+  Optional<CodeableConcept> validationType();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Code> status();
+
+  Optional<CodeableConcept> need();
+
+  Optional<VerificationResult_Attestation> attestation();
 
   static ImmutableVerificationResult.ResourceTypeBuildStage builder() {
     return ImmutableVerificationResult.builder();

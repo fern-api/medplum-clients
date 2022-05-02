@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface InsurancePlan_SpecificCost {
   Optional<List<InsurancePlan_Benefit1>> benefit();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
-
   CodeableConcept category();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableInsurancePlan_SpecificCost.CategoryBuildStage builder() {
     return ImmutableInsurancePlan_SpecificCost.builder();

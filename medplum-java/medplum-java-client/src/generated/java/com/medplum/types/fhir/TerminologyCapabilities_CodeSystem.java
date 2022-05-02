@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_CodeSystem {
-  Optional<String> id();
-
   Optional<Canonical> uri();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
-  Optional<Boolean> subsumption();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
   Optional<List<TerminologyCapabilities_Version>> version();
+
+  Optional<Boolean> subsumption();
 
   static ImmutableTerminologyCapabilities_CodeSystem.Builder builder() {
     return ImmutableTerminologyCapabilities_CodeSystem.builder();

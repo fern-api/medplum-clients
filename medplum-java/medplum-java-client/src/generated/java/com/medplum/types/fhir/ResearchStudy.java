@@ -17,71 +17,71 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ResearchStudy {
+  Optional<Meta> meta();
+
   Optional<List<ResearchStudy_Objective>> objective();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<Annotation>> note();
 
-  Optional<Markdown> description();
-
-  Optional<Reference> sponsor();
-
-  Optional<CodeableConcept> phase();
-
-  Optional<List<Reference>> enrollment();
-
-  Optional<ResearchstudyStatus> status();
+  Optional<List<CodeableConcept>> condition();
 
   Optional<List<RelatedArtifact>> relatedArtifact();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ResearchStudy_Arm>> arm();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Code> language();
-
-  Optional<Period> period();
-
-  String resourceType();
-
-  Optional<CodeableConcept> primaryPurposeType();
+  Optional<ResearchstudyStatus> status();
 
   Optional<String> title();
 
   Optional<Reference> principalInvestigator();
 
-  Optional<List<Reference>> protocol();
-
-  Optional<List<CodeableConcept>> condition();
-
-  Optional<List<CodeableConcept>> keyword();
-
-  Optional<List<CodeableConcept>> focus();
+  Optional<Uri> implicitRules();
 
   Optional<List<CodeableConcept>> location();
 
-  Optional<CodeableConcept> reasonStopped();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Id> id();
-
-  Optional<List<ContactDetail>> contact();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Reference>> partOf();
 
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> reasonStopped();
+
+  Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<CodeableConcept>> keyword();
+
   Optional<Narrative> text();
 
-  Optional<List<Annotation>> note();
+  Optional<Markdown> description();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Reference>> enrollment();
+
+  Optional<Period> period();
+
+  Optional<CodeableConcept> primaryPurposeType();
+
+  Optional<List<CodeableConcept>> focus();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<ResearchStudy_Arm>> arm();
+
+  Optional<Code> language();
+
+  String resourceType();
+
+  Optional<List<Reference>> protocol();
 
   Optional<List<Reference>> site();
+
+  Optional<Reference> sponsor();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> phase();
 
   static ImmutableResearchStudy.ResourceTypeBuildStage builder() {
     return ImmutableResearchStudy.builder();

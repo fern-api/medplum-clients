@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Account_Coverage {
-  Optional<PositiveInt> priority();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
   Reference coverage();
 
-  Optional<List<Extension>> extension();
+  Optional<PositiveInt> priority();
 
   static ImmutableAccount_Coverage.CoverageBuildStage builder() {
     return ImmutableAccount_Coverage.builder();

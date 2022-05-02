@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProduct_ManufacturingBusinessOperation {
-  Optional<CodeableConcept> confidentialityIndicator();
-
   Optional<Reference> regulator();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> confidentialityIndicator();
 
   Optional<List<Reference>> manufacturer();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> operationType();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Identifier> authorisationReferenceNumber();
+  Optional<CodeableConcept> operationType();
 
   Optional<DateTime> effectiveDate();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<Identifier> authorisationReferenceNumber();
 
   static ImmutableMedicinalProduct_ManufacturingBusinessOperation.Builder builder() {
     return ImmutableMedicinalProduct_ManufacturingBusinessOperation.builder();

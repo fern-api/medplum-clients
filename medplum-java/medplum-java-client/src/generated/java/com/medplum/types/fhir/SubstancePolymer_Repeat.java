@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer_Repeat {
-  Optional<List<Extension>> modifierExtension();
+  Optional<Integer> numberOfUnits();
 
   Optional<CodeableConcept> repeatUnitAmountType();
 
-  Optional<List<SubstancePolymer_RepeatUnit>> repeatUnit();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> averageMolecularFormula();
 
   Optional<String> id();
 
+  Optional<List<SubstancePolymer_RepeatUnit>> repeatUnit();
+
   Optional<List<Extension>> extension();
-
-  Optional<Integer> numberOfUnits();
-
-  Optional<String> averageMolecularFormula();
 
   static ImmutableSubstancePolymer_Repeat.Builder builder() {
     return ImmutableSubstancePolymer_Repeat.builder();

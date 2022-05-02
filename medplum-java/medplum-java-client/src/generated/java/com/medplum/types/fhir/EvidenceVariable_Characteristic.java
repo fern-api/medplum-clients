@@ -18,41 +18,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EvidenceVariable_Characteristic {
-  Optional<Timing> participantEffectiveTiming();
-
-  Optional<String> id();
-
-  Optional<String> description();
-
-  Optional<Evidencevariable_characteristicGroupmeasure> groupMeasure();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> exclude();
+  Optional<TriggerDefinition> definitionTriggerDefinition();
 
   Optional<Duration> timeFromStart();
 
-  Optional<Expression> definitionExpression();
-
-  Optional<DataRequirement> definitionDataRequirement();
-
-  Optional<Reference> definitionReference();
-
-  Optional<TriggerDefinition> definitionTriggerDefinition();
-
-  Optional<String> participantEffectiveDateTime();
-
-  Optional<Period> participantEffectivePeriod();
+  Optional<List<Extension>> extension();
 
   Optional<String> definitionCanonical();
 
-  Optional<CodeableConcept> definitionCodeableConcept();
+  Optional<String> participantEffectiveDateTime();
+
+  Optional<String> id();
+
+  Optional<Evidencevariable_characteristicGroupmeasure> groupMeasure();
+
+  Optional<DataRequirement> definitionDataRequirement();
 
   Optional<Duration> participantEffectiveDuration();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> definitionReference();
+
+  Optional<Expression> definitionExpression();
+
+  Optional<String> description();
+
+  Optional<Boolean> exclude();
+
+  Optional<Timing> participantEffectiveTiming();
+
   Optional<List<UsageContext>> usageContext();
+
+  Optional<Period> participantEffectivePeriod();
+
+  Optional<CodeableConcept> definitionCodeableConcept();
 
   static ImmutableEvidenceVariable_Characteristic.Builder builder() {
     return ImmutableEvidenceVariable_Characteristic.builder();

@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProduct_Name {
-  Optional<List<Extension>> extension();
+  Optional<String> productName();
 
-  Optional<List<MedicinalProduct_NamePart>> namePart();
+  Optional<List<Extension>> extension();
 
   Optional<List<MedicinalProduct_CountryLanguage>> countryLanguage();
 
@@ -27,7 +27,7 @@ public interface MedicinalProduct_Name {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> productName();
+  Optional<List<MedicinalProduct_NamePart>> namePart();
 
   static ImmutableMedicinalProduct_Name.Builder builder() {
     return ImmutableMedicinalProduct_Name.builder();

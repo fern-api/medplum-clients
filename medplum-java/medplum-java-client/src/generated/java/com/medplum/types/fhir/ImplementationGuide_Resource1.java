@@ -20,17 +20,17 @@ import org.immutables.value.Value;
 public interface ImplementationGuide_Resource1 {
   Reference reference();
 
-  Optional<Url> relativePath();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> exampleCanonical();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Boolean> exampleBoolean();
 
-  Optional<String> id();
+  Optional<Url> relativePath();
 
-  Optional<String> exampleCanonical();
+  Optional<String> id();
 
   static ImmutableImplementationGuide_Resource1.ReferenceBuildStage builder() {
     return ImmutableImplementationGuide_Resource1.builder();

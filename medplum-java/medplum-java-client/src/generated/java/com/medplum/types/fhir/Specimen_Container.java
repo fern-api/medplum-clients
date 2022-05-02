@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Specimen_Container {
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> description();
-
   Optional<Quantity> capacity();
 
-  Optional<Quantity> specimenQuantity();
-
-  Optional<CodeableConcept> type();
+  Optional<String> id();
 
   Optional<List<Identifier>> identifier();
 
   Optional<Reference> additiveReference();
 
-  Optional<CodeableConcept> additiveCodeableConcept();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> description();
+
+  Optional<Quantity> specimenQuantity();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
+
+  Optional<CodeableConcept> additiveCodeableConcept();
 
   static ImmutableSpecimen_Container.Builder builder() {
     return ImmutableSpecimen_Container.builder();

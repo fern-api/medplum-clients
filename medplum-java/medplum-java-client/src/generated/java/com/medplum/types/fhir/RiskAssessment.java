@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskAssessment {
-  Optional<Narrative> text();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Reference> basedOn();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<Reference>> basis();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> occurrenceDateTime();
-
-  Reference subject();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<String> mitigation();
-
-  Optional<Id> id();
-
-  Optional<Code> language();
-
-  Optional<Reference> parent();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> method();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<Reference> performer();
+  Optional<CodeableConcept> code();
 
   Optional<Reference> encounter();
 
-  Optional<List<Extension>> modifierExtension();
-
-  String resourceType();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Meta> meta();
-
-  Optional<Reference> condition();
-
-  Optional<Code> status();
-
-  Optional<Uri> implicitRules();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<RiskAssessment_Prediction>> prediction();
 
-  static ImmutableRiskAssessment.SubjectBuildStage builder() {
+  Optional<Period> occurrencePeriod();
+
+  Optional<String> mitigation();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Code> status();
+
+  Optional<Reference> performer();
+
+  Optional<Reference> condition();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> basis();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Narrative> text();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Code> language();
+
+  String resourceType();
+
+  Reference subject();
+
+  Optional<Id> id();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<CodeableConcept> method();
+
+  Optional<Reference> parent();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> basedOn();
+
+  static ImmutableRiskAssessment.ResourceTypeBuildStage builder() {
     return ImmutableRiskAssessment.builder();
   }
 }

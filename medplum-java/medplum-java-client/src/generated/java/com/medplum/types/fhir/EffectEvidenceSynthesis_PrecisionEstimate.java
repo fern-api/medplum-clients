@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EffectEvidenceSynthesis_PrecisionEstimate {
-  Optional<String> id();
+  Optional<List<Extension>> extension();
+
+  Optional<Decimal> level();
 
   Optional<Decimal> from();
-
-  Optional<List<Extension>> extension();
 
   Optional<Decimal> to();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> type();
+  Optional<String> id();
 
-  Optional<Decimal> level();
+  Optional<CodeableConcept> type();
 
   static ImmutableEffectEvidenceSynthesis_PrecisionEstimate.Builder builder() {
     return ImmutableEffectEvidenceSynthesis_PrecisionEstimate.builder();

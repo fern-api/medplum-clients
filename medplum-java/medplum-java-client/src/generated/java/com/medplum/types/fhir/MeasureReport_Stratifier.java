@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Stratifier {
-  Optional<String> id();
+  Optional<List<CodeableConcept>> code();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> code();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<MeasureReport_Stratum>> stratum();
 

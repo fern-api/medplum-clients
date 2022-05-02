@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImmunizationRecommendation_DateCriterion {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<DateTime> value();
+  Optional<List<Extension>> modifierExtension();
 
   CodeableConcept code();
 
-  Optional<String> id();
+  Optional<DateTime> value();
 
   static ImmutableImmunizationRecommendation_DateCriterion.CodeBuildStage builder() {
     return ImmutableImmunizationRecommendation_DateCriterion.builder();

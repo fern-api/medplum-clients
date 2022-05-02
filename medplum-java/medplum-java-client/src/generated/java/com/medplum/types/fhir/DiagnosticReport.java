@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DiagnosticReport {
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<Instant> issued();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> category();
+  Optional<String> effectiveDateTime();
 
   Optional<List<Reference>> basedOn();
 
-  Optional<List<Reference>> specimen();
+  Optional<Instant> issued();
 
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> imagingStudy();
-
-  Optional<String> conclusion();
-
-  Optional<List<Identifier>> identifier();
+  String resourceType();
 
   Optional<DiagnosticreportStatus> status();
-
-  Optional<List<Attachment>> presentedForm();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Meta> meta();
-
-  Optional<List<DiagnosticReport_Media>> media();
-
-  CodeableConcept code();
-
-  Optional<Reference> subject();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<List<CodeableConcept>> conclusionCode();
-
-  Optional<Reference> encounter();
-
-  Optional<List<Reference>> resultsInterpreter();
 
   Optional<List<Reference>> result();
 
   Optional<List<Reference>> performer();
 
+  Optional<Code> language();
+
+  Optional<Meta> meta();
+
+  Optional<List<Attachment>> presentedForm();
+
+  CodeableConcept code();
+
   Optional<Id> id();
 
-  Optional<String> effectiveDateTime();
+  Optional<List<Reference>> specimen();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> conclusion();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> subject();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> encounter();
+
+  Optional<List<DiagnosticReport_Media>> media();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> resultsInterpreter();
+
+  Optional<List<Reference>> imagingStudy();
+
+  Optional<List<CodeableConcept>> conclusionCode();
 
   static ImmutableDiagnosticReport.ResourceTypeBuildStage builder() {
     return ImmutableDiagnosticReport.builder();

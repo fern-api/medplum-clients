@@ -18,24 +18,24 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Group {
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> documentation();
-
-  List<StructureMap_Rule> rule();
-
-  Optional<Structuremap_groupTypemode> typeMode();
+  Optional<List<Extension>> extension();
 
   List<StructureMap_Input> input();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Structuremap_groupTypemode> typeMode();
 
   Optional<Id> name();
 
+  Optional<String> documentation();
+
   @JsonProperty("extends")
   Optional<Id> _extends();
+
+  Optional<String> id();
+
+  List<StructureMap_Rule> rule();
 
   static ImmutableStructureMap_Group.Builder builder() {
     return ImmutableStructureMap_Group.builder();

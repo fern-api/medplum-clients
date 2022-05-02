@@ -17,67 +17,67 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Appointment {
-  Optional<List<CodeableConcept>> serviceType();
+  Optional<List<Identifier>> identifier();
 
   Optional<List<Reference>> supportingInformation();
 
-  Optional<List<Reference>> basedOn();
+  Optional<List<CodeableConcept>> specialty();
 
-  Optional<Id> id();
+  Optional<Instant> end();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> reasonReference();
 
   Optional<List<Reference>> slot();
 
   Optional<Narrative> text();
 
-  Optional<Instant> end();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<PositiveInt> minutesDuration();
 
   Optional<String> description();
 
+  List<Appointment_Participant> participant();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
   Optional<List<Period>> requestedPeriod();
 
-  Optional<String> comment();
+  Optional<List<CodeableConcept>> serviceType();
 
-  Optional<PositiveInt> minutesDuration();
+  Optional<Code> language();
 
   Optional<List<Extension>> extension();
 
-  String resourceType();
+  Optional<Uri> implicitRules();
+
+  Optional<UnsignedInt> priority();
 
   Optional<CodeableConcept> appointmentType();
 
   Optional<String> patientInstruction();
 
-  Optional<Meta> meta();
-
-  Optional<AppointmentStatus> status();
-
   Optional<List<ResourceList>> contained();
-
-  List<Appointment_Participant> participant();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<DateTime> created();
 
   Optional<CodeableConcept> cancelationReason();
 
-  Optional<List<CodeableConcept>> serviceCategory();
-
   Optional<Instant> start();
 
-  Optional<List<CodeableConcept>> specialty();
+  String resourceType();
 
-  Optional<UnsignedInt> priority();
+  Optional<List<Reference>> basedOn();
+
+  Optional<Id> id();
+
+  Optional<AppointmentStatus> status();
+
+  Optional<DateTime> created();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> serviceCategory();
+
+  Optional<String> comment();
 
   static ImmutableAppointment.ResourceTypeBuildStage builder() {
     return ImmutableAppointment.builder();

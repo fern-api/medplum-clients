@@ -23,15 +23,15 @@ public interface MedicinalProductAuthorization_Procedure {
 
   Optional<String> id();
 
-  CodeableConcept type();
+  Optional<Identifier> identifier();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Period> datePeriod();
-
-  Optional<Identifier> identifier();
+  CodeableConcept type();
 
   Optional<String> dateDateTime();
+
+  Optional<Period> datePeriod();
 
   static ImmutableMedicinalProductAuthorization_Procedure.TypeBuildStage builder() {
     return ImmutableMedicinalProductAuthorization_Procedure.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Procedure_Performer {
-  Optional<List<Extension>> extension();
+  Optional<Reference> onBehalfOf();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<CodeableConcept> function();
 
   Reference actor();
 
-  Optional<Reference> onBehalfOf();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   static ImmutableProcedure_Performer.ActorBuildStage builder() {
     return ImmutableProcedure_Performer.builder();

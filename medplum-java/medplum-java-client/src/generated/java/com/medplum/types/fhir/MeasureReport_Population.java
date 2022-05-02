@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Population {
-  Optional<CodeableConcept> code();
+  Optional<Integer> count();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> code();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<Reference> subjectResults();
-
-  Optional<Integer> count();
 
   static ImmutableMeasureReport_Population.Builder builder() {
     return ImmutableMeasureReport_Population.builder();

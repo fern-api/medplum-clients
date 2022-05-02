@@ -17,69 +17,69 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition {
-  Optional<String> modelNumber();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Reference> manufacturerReference();
-
-  Optional<List<DeviceDefinition_Capability>> capability();
-
-  Optional<Uri> url();
-
-  Optional<Reference> owner();
-
-  Optional<Id> id();
-
-  Optional<List<CodeableConcept>> safety();
-
-  Optional<List<DeviceDefinition_UdiDeviceIdentifier>> udiDeviceIdentifier();
-
-  Optional<List<Annotation>> note();
+  Optional<List<CodeableConcept>> languageCode();
 
   Optional<Reference> parentDevice();
 
-  Optional<Uri> onlineInformation();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<DeviceDefinition_DeviceName>> deviceName();
-
-  Optional<Quantity> quantity();
-
-  Optional<List<ContactPoint>> contact();
-
-  Optional<String> manufacturerString();
-
-  Optional<List<DeviceDefinition_Specialization>> specialization();
-
-  Optional<List<DeviceDefinition_Material>> material();
-
-  Optional<List<CodeableConcept>> languageCode();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<ProductShelfLife>> shelfLifeStorage();
-
-  Optional<List<DeviceDefinition_Property>> property();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
 
-  Optional<ProdCharacteristic> physicalCharacteristics();
-
-  String resourceType();
-
-  Optional<CodeableConcept> type();
-
-  Optional<Narrative> text();
+  Optional<List<CodeableConcept>> safety();
 
   Optional<Meta> meta();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<Narrative> text();
+
+  Optional<Uri> url();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<DeviceDefinition_Specialization>> specialization();
+
+  Optional<List<DeviceDefinition_Capability>> capability();
+
+  Optional<Id> id();
+
+  Optional<List<DeviceDefinition_DeviceName>> deviceName();
+
   Optional<Code> language();
 
+  String resourceType();
+
+  Optional<List<DeviceDefinition_Property>> property();
+
+  Optional<List<ContactPoint>> contact();
+
+  Optional<List<Annotation>> note();
+
+  Optional<String> manufacturerString();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> type();
+
+  Optional<Reference> manufacturerReference();
+
   Optional<List<String>> version();
+
+  Optional<ProdCharacteristic> physicalCharacteristics();
+
+  Optional<String> modelNumber();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<DeviceDefinition_UdiDeviceIdentifier>> udiDeviceIdentifier();
+
+  Optional<Quantity> quantity();
+
+  Optional<List<DeviceDefinition_Material>> material();
+
+  Optional<List<ProductShelfLife>> shelfLifeStorage();
+
+  Optional<Reference> owner();
+
+  Optional<Uri> onlineInformation();
 
   static ImmutableDeviceDefinition.ResourceTypeBuildStage builder() {
     return ImmutableDeviceDefinition.builder();

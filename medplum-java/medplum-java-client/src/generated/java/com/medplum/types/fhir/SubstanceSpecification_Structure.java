@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Structure {
-  Optional<List<Extension>> extension();
-
   Optional<List<Reference>> source();
 
+  Optional<List<Extension>> extension();
+
   Optional<CodeableConcept> opticalActivity();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<SubstanceSpecification_Representation>> representation();
 
   Optional<String> molecularFormulaByMoiety();
 
   Optional<List<SubstanceSpecification_Isotope>> isotope();
 
-  Optional<String> id();
+  Optional<String> molecularFormula();
+
+  Optional<List<SubstanceSpecification_Representation>> representation();
 
   Optional<SubstanceSpecification_MolecularWeight> molecularWeight();
 
-  Optional<String> molecularFormula();
-
   Optional<CodeableConcept> stereochemistry();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableSubstanceSpecification_Structure.Builder builder() {
     return ImmutableSubstanceSpecification_Structure.builder();

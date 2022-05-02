@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_Texture {
-  Optional<CodeableConcept> modifier();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
   Optional<CodeableConcept> foodType();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
+  Optional<CodeableConcept> modifier();
 
   static ImmutableNutritionOrder_Texture.Builder builder() {
     return ImmutableNutritionOrder_Texture.builder();

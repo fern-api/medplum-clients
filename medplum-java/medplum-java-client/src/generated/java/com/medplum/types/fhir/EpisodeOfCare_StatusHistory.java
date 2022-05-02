@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EpisodeOfCare_StatusHistory {
-  Optional<Episodeofcare_statushistoryStatus> status();
-
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Period period();
+
+  Optional<Episodeofcare_statushistoryStatus> status();
 
   Optional<List<Extension>> modifierExtension();
 

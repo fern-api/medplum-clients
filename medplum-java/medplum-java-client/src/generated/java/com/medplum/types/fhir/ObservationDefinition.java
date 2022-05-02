@@ -18,49 +18,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ObservationDefinition {
-  Optional<Uri> implicitRules();
+  Optional<Narrative> text();
 
-  Optional<Code> language();
+  Optional<CodeableConcept> method();
 
   Optional<List<Extension>> modifierExtension();
 
-  CodeableConcept code();
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Code> language();
 
   Optional<Boolean> multipleResultsAllowed();
 
   Optional<Id> id();
 
-  Optional<Meta> meta();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Narrative> text();
-
-  Optional<String> preferredReportName();
-
-  Optional<Reference> abnormalCodedValueSet();
-
-  Optional<List<ObservationdefinitionPermitteddatatypeItem>> permittedDataType();
-
-  Optional<Reference> criticalCodedValueSet();
-
-  String resourceType();
-
-  Optional<List<Extension>> extension();
-
-  Optional<ObservationDefinition_QuantitativeDetails> quantitativeDetails();
+  CodeableConcept code();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Identifier>> identifier();
+  Optional<String> preferredReportName();
 
-  Optional<List<ObservationDefinition_QualifiedInterval>> qualifiedInterval();
+  Optional<Reference> criticalCodedValueSet();
 
   Optional<Reference> validCodedValueSet();
 
+  Optional<Reference> abnormalCodedValueSet();
+
+  Optional<List<CodeableConcept>> category();
+
   Optional<Reference> normalCodedValueSet();
 
-  Optional<CodeableConcept> method();
+  Optional<List<ObservationdefinitionPermitteddatatypeItem>> permittedDataType();
+
+  Optional<List<ObservationDefinition_QualifiedInterval>> qualifiedInterval();
+
+  Optional<ObservationDefinition_QuantitativeDetails> quantitativeDetails();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableObservationDefinition.CodeBuildStage builder() {
     return ImmutableObservationDefinition.builder();

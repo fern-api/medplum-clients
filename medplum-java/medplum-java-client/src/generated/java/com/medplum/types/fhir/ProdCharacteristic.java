@@ -17,33 +17,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ProdCharacteristic {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
-
-  Optional<Quantity> height();
-
-  Optional<Quantity> width();
-
-  Optional<Quantity> externalDiameter();
-
-  Optional<String> shape();
-
-  Optional<Quantity> depth();
-
-  Optional<CodeableConcept> scoring();
 
   Optional<List<String>> imprint();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<Quantity> depth();
+
+  Optional<Quantity> height();
 
   Optional<List<String>> color();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> scoring();
+
+  Optional<Quantity> width();
+
+  Optional<String> shape();
+
+  Optional<Quantity> externalDiameter();
 
   Optional<Quantity> weight();
 
-  Optional<List<Attachment>> image();
-
   Optional<Quantity> nominalVolume();
+
+  Optional<List<Attachment>> image();
 
   static ImmutableProdCharacteristic.Builder builder() {
     return ImmutableProdCharacteristic.builder();

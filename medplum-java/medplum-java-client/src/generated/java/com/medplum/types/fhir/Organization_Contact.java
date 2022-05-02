@@ -17,7 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Organization_Contact {
+  Optional<List<ContactPoint>> telecom();
+
   Optional<List<Extension>> extension();
+
+  Optional<HumanName> name();
 
   Optional<CodeableConcept> purpose();
 
@@ -25,11 +29,7 @@ public interface Organization_Contact {
 
   Optional<Address> address();
 
-  Optional<List<ContactPoint>> telecom();
-
   Optional<String> id();
-
-  Optional<HumanName> name();
 
   static ImmutableOrganization_Contact.Builder builder() {
     return ImmutableOrganization_Contact.builder();

@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationRequest_InitialFill {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Duration> duration();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Duration> duration();
 
   Optional<Quantity> quantity();
 

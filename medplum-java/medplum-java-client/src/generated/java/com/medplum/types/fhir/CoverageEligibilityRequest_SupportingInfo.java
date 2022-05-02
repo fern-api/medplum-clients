@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface CoverageEligibilityRequest_SupportingInfo {
   Optional<String> id();
 
-  Reference information();
-
   Optional<Boolean> appliesToAll();
 
-  Optional<PositiveInt> sequence();
+  Reference information();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<PositiveInt> sequence();
 
   static ImmutableCoverageEligibilityRequest_SupportingInfo.InformationBuildStage builder() {
     return ImmutableCoverageEligibilityRequest_SupportingInfo.builder();

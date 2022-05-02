@@ -18,39 +18,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Schedule {
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<CodeableConcept>> specialty();
-
-  Optional<Meta> meta();
-
-  Optional<Code> language();
+  Optional<Narrative> text();
 
   Optional<List<CodeableConcept>> serviceCategory();
 
-  Optional<Period> planningHorizon();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> comment();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Boolean> active();
+  Optional<Meta> meta();
 
   Optional<List<CodeableConcept>> serviceType();
 
+  Optional<String> comment();
+
+  Optional<Code> language();
+
+  Optional<Id> id();
+
+  Optional<List<CodeableConcept>> specialty();
+
   List<Reference> actor();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Period> planningHorizon();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Boolean> active();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Narrative> text();
+  Optional<List<Extension>> modifierExtension();
+
+  String resourceType();
 
   static ImmutableSchedule.ResourceTypeBuildStage builder() {
     return ImmutableSchedule.builder();

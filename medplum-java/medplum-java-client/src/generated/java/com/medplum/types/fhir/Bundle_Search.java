@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Bundle_Search {
-  Optional<List<Extension>> extension();
+  Optional<Bundle_searchMode> mode();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Bundle_searchMode> mode();
-
   Optional<Decimal> score();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 

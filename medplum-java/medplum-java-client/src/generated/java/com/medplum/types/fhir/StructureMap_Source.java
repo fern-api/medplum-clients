@@ -20,131 +20,131 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Source {
-  Optional<Reference> defaultValueReference();
-
-  Optional<Duration> defaultValueDuration();
-
-  Optional<String> defaultValueString();
-
-  Optional<String> check();
+  Optional<Annotation> defaultValueAnnotation();
 
   Optional<String> logMessage();
 
-  Optional<String> defaultValueCanonical();
+  Optional<String> defaultValueUri();
 
-  Optional<String> defaultValueUrl();
+  Optional<Reference> defaultValueReference();
+
+  Optional<String> condition();
 
   Optional<Range> defaultValueRange();
 
-  Optional<Structuremap_sourceListmode> listMode();
+  Optional<Age> defaultValueAge();
 
-  Optional<ContactPoint> defaultValueContactPoint();
+  Optional<String> defaultValueUrl();
 
-  Optional<String> id();
+  Optional<Double> defaultValuePositiveInt();
+
+  Optional<Coding> defaultValueCoding();
+
+  Optional<String> defaultValueOid();
+
+  Optional<Double> defaultValueUnsignedInt();
+
+  Optional<String> type();
+
+  Optional<String> defaultValueString();
+
+  Optional<Signature> defaultValueSignature();
+
+  Optional<String> defaultValueUuid();
+
+  Optional<TriggerDefinition> defaultValueTriggerDefinition();
+
+  Optional<Timing> defaultValueTiming();
 
   Optional<DataRequirement> defaultValueDataRequirement();
 
-  Optional<Ratio> defaultValueRatio();
+  Optional<Quantity> defaultValueQuantity();
 
-  Optional<String> element();
+  Optional<String> defaultValueInstant();
 
-  Optional<Money> defaultValueMoney();
+  Optional<ParameterDefinition> defaultValueParameterDefinition();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> defaultValueMarkdown();
 
   Optional<List<Extension>> extension();
 
   Optional<Distance> defaultValueDistance();
 
-  Optional<Identifier> defaultValueIdentifier();
-
-  Optional<ParameterDefinition> defaultValueParameterDefinition();
-
-  Optional<String> defaultValueBase64Binary();
-
-  Optional<SampledData> defaultValueSampledData();
-
-  Optional<Annotation> defaultValueAnnotation();
-
-  Optional<Signature> defaultValueSignature();
-
-  Optional<Integer> min();
-
-  Optional<Quantity> defaultValueQuantity();
-
-  Optional<String> defaultValueDateTime();
-
-  Optional<ContactDetail> defaultValueContactDetail();
-
-  Optional<Double> defaultValueDecimal();
-
-  Optional<HumanName> defaultValueHumanName();
-
-  Optional<Age> defaultValueAge();
-
-  Optional<String> max();
-
-  Optional<String> defaultValueTime();
-
-  Optional<RelatedArtifact> defaultValueRelatedArtifact();
-
-  Optional<String> defaultValueCode();
-
-  Optional<Double> defaultValueUnsignedInt();
-
-  Optional<Expression> defaultValueExpression();
-
-  Optional<Coding> defaultValueCoding();
-
-  Optional<Timing> defaultValueTiming();
-
-  Optional<String> defaultValueDate();
-
-  Optional<Period> defaultValuePeriod();
-
-  Optional<String> defaultValueId();
-
-  Optional<String> defaultValueUri();
-
-  Optional<Meta> defaultValueMeta();
-
-  Optional<String> defaultValueMarkdown();
-
-  Optional<String> defaultValueOid();
-
-  Optional<String> defaultValueUuid();
-
-  Optional<String> condition();
-
-  Optional<Address> defaultValueAddress();
-
-  Optional<Attachment> defaultValueAttachment();
-
-  Optional<Double> defaultValuePositiveInt();
-
   Optional<Id> context();
-
-  Optional<Dosage> defaultValueDosage();
-
-  Optional<Contributor> defaultValueContributor();
 
   Optional<Double> defaultValueInteger();
 
+  Optional<String> max();
+
+  Optional<Attachment> defaultValueAttachment();
+
+  Optional<Integer> min();
+
+  Optional<String> defaultValueTime();
+
+  Optional<Duration> defaultValueDuration();
+
+  Optional<String> check();
+
+  Optional<String> defaultValueBase64Binary();
+
+  Optional<Contributor> defaultValueContributor();
+
+  Optional<Double> defaultValueDecimal();
+
+  Optional<RelatedArtifact> defaultValueRelatedArtifact();
+
   Optional<UsageContext> defaultValueUsageContext();
 
-  Optional<Count> defaultValueCount();
+  Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Money> defaultValueMoney();
 
-  Optional<String> defaultValueInstant();
+  Optional<Identifier> defaultValueIdentifier();
 
-  Optional<String> type();
+  Optional<String> element();
+
+  Optional<String> defaultValueCode();
+
+  Optional<ContactDetail> defaultValueContactDetail();
+
+  Optional<Dosage> defaultValueDosage();
+
+  Optional<Meta> defaultValueMeta();
+
+  Optional<Period> defaultValuePeriod();
+
+  Optional<String> defaultValueCanonical();
+
+  Optional<String> defaultValueId();
+
+  Optional<HumanName> defaultValueHumanName();
+
+  Optional<Ratio> defaultValueRatio();
 
   Optional<CodeableConcept> defaultValueCodeableConcept();
 
-  Optional<TriggerDefinition> defaultValueTriggerDefinition();
+  Optional<Expression> defaultValueExpression();
+
+  Optional<SampledData> defaultValueSampledData();
+
+  Optional<String> defaultValueDateTime();
+
+  Optional<Address> defaultValueAddress();
+
+  Optional<ContactPoint> defaultValueContactPoint();
 
   Optional<Id> variable();
 
   Optional<Boolean> defaultValueBoolean();
+
+  Optional<String> defaultValueDate();
+
+  Optional<Count> defaultValueCount();
+
+  Optional<Structuremap_sourceListmode> listMode();
 
   static ImmutableStructureMap_Source.Builder builder() {
     return ImmutableStructureMap_Source.builder();

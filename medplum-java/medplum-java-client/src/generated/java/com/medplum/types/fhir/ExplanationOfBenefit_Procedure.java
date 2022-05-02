@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface ExplanationOfBenefit_Procedure {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> procedureReference();
+  Optional<String> id();
+
+  Optional<PositiveInt> sequence();
 
   Optional<List<Extension>> extension();
-
-  Optional<DateTime> date();
 
   Optional<CodeableConcept> procedureCodeableConcept();
 
   Optional<List<Reference>> udi();
 
-  Optional<String> id();
-
-  Optional<PositiveInt> sequence();
-
   Optional<List<CodeableConcept>> type();
+
+  Optional<DateTime> date();
+
+  Optional<Reference> procedureReference();
 
   static ImmutableExplanationOfBenefit_Procedure.Builder builder() {
     return ImmutableExplanationOfBenefit_Procedure.builder();

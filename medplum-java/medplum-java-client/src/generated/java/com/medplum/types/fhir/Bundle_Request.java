@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Bundle_Request {
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> ifNoneMatch();
-
-  Optional<String> ifMatch();
+  Optional<Bundle_requestMethod> method();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> ifNoneExist();
-
-  Optional<Bundle_requestMethod> method();
+  Optional<String> id();
 
   Optional<Uri> url();
 
+  Optional<List<Extension>> extension();
+
+  Optional<String> ifNoneExist();
+
   Optional<Instant> ifModifiedSince();
+
+  Optional<String> ifMatch();
+
+  Optional<String> ifNoneMatch();
 
   static ImmutableBundle_Request.Builder builder() {
     return ImmutableBundle_Request.builder();

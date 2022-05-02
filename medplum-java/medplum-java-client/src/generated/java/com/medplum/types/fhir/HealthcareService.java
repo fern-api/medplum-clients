@@ -18,71 +18,71 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HealthcareService {
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Boolean> active();
-
-  Optional<List<CodeableConcept>> program();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Reference>> location();
-
-  Optional<Attachment> photo();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> availabilityExceptions();
-
-  Optional<Meta> meta();
+  Optional<Uri> implicitRules();
 
   Optional<List<CodeableConcept>> referralMethod();
 
-  Optional<Markdown> extraDetails();
+  Optional<List<CodeableConcept>> communication();
 
-  Optional<Id> id();
+  Optional<List<CodeableConcept>> serviceProvisionCode();
 
-  Optional<String> comment();
+  Optional<List<HealthcareService_AvailableTime>> availableTime();
 
   Optional<Reference> providedBy();
 
-  Optional<Narrative> text();
+  Optional<List<CodeableConcept>> specialty();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<CodeableConcept>> category();
 
-  Optional<List<HealthcareService_NotAvailable>> notAvailable();
+  Optional<Boolean> appointmentRequired();
 
-  Optional<List<CodeableConcept>> type();
-
-  Optional<List<Reference>> endpoint();
-
-  Optional<Uri> implicitRules();
+  Optional<List<Reference>> location();
 
   Optional<String> name();
 
   Optional<List<HealthcareService_Eligibility>> eligibility();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<HealthcareService_AvailableTime>> availableTime();
-
-  Optional<Boolean> appointmentRequired();
-
-  Optional<List<Reference>> coverageArea();
-
-  Optional<List<CodeableConcept>> specialty();
+  Optional<List<Extension>> modifierExtension();
 
   String resourceType();
 
+  Optional<List<Identifier>> identifier();
+
+  Optional<Markdown> extraDetails();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Attachment> photo();
+
+  Optional<List<Reference>> coverageArea();
+
   Optional<List<CodeableConcept>> characteristic();
 
-  Optional<List<CodeableConcept>> communication();
+  Optional<List<HealthcareService_NotAvailable>> notAvailable();
+
+  Optional<String> availabilityExceptions();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<CodeableConcept>> type();
+
+  Optional<Id> id();
 
   Optional<Code> language();
 
-  Optional<List<CodeableConcept>> serviceProvisionCode();
+  Optional<List<CodeableConcept>> program();
+
+  Optional<String> comment();
+
+  Optional<List<Reference>> endpoint();
+
+  Optional<Meta> meta();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<Narrative> text();
+
+  Optional<Boolean> active();
 
   static ImmutableHealthcareService.ResourceTypeBuildStage builder() {
     return ImmutableHealthcareService.builder();

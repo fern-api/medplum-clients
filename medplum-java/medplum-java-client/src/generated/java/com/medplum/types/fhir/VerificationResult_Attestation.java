@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VerificationResult_Attestation {
-  Optional<Reference> who();
-
   Optional<Date> date();
+
+  Optional<Reference> onBehalfOf();
+
+  Optional<CodeableConcept> communicationMethod();
 
   Optional<List<Extension>> extension();
 
   Optional<Signature> proxySignature();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> communicationMethod();
-
-  Optional<Signature> sourceSignature();
-
-  Optional<Reference> onBehalfOf();
+  Optional<Reference> who();
 
   Optional<String> sourceIdentityCertificate();
 
+  Optional<String> id();
+
   Optional<String> proxyIdentityCertificate();
+
+  Optional<Signature> sourceSignature();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableVerificationResult_Attestation.Builder builder() {
     return ImmutableVerificationResult_Attestation.builder();

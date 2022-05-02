@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface TestReport_Assert {
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> detail();
-
-  Optional<List<Extension>> extension();
 
   Optional<Testreport_assertResult> result();
 
   Optional<Markdown> message();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableTestReport_Assert.Builder builder() {
     return ImmutableTestReport_Assert.builder();

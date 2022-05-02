@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference_Context {
+  Optional<List<Reference>> encounter();
+
   Optional<List<Extension>> extension();
 
   Optional<List<CodeableConcept>> event();
-
-  Optional<String> id();
 
   Optional<CodeableConcept> facilityType();
 
   Optional<List<Reference>> related();
 
+  Optional<String> id();
+
   Optional<Period> period();
 
   Optional<CodeableConcept> practiceSetting();
-
-  Optional<List<Reference>> encounter();
 
   Optional<Reference> sourcePatientInfo();
 

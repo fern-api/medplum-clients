@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence {
+  Optional<List<MolecularSequence_StructureVariant>> structureVariant();
+
   Optional<Narrative> text();
+
+  Optional<MolecularSequence_ReferenceSeq> referenceSeq();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Quantity> quantity();
+
+  Optional<Reference> performer();
+
+  String resourceType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> device();
+
+  Optional<MolecularsequenceType> type();
 
   Optional<List<MolecularSequence_Variant>> variant();
 
   Optional<Integer> readCoverage();
 
-  Optional<List<MolecularSequence_StructureVariant>> structureVariant();
+  Optional<List<Identifier>> identifier();
 
-  Optional<MolecularsequenceType> type();
-
-  Optional<Reference> performer();
-
-  Optional<Reference> specimen();
-
-  Optional<Quantity> quantity();
-
-  String resourceType();
+  Optional<Reference> patient();
 
   Optional<Integer> coordinateSystem();
 
-  Optional<List<MolecularSequence_Repository>> repository();
+  Optional<String> observedSeq();
 
-  Optional<Uri> implicitRules();
+  Optional<Meta> meta();
 
   Optional<List<Reference>> pointer();
 
-  Optional<Reference> device();
-
-  Optional<String> observedSeq();
-
-  Optional<Id> id();
-
-  Optional<MolecularSequence_ReferenceSeq> referenceSeq();
-
   Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> patient();
 
   Optional<Code> language();
 
   Optional<List<MolecularSequence_Quality>> quality();
 
-  Optional<Meta> meta();
+  Optional<List<MolecularSequence_Repository>> repository();
+
+  Optional<Id> id();
+
+  Optional<Reference> specimen();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableMolecularSequence.ResourceTypeBuildStage builder() {
     return ImmutableMolecularSequence.builder();

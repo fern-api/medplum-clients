@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface FamilyMemberHistory {
-  Optional<List<Annotation>> note();
-
-  Optional<Range> deceasedRange();
-
-  Optional<String> bornString();
-
-  Optional<DateTime> date();
-
-  Optional<Age> ageAge();
-
-  Optional<Period> bornPeriod();
-
-  Optional<Uri> implicitRules();
-
   Optional<Boolean> deceasedBoolean();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> name();
-
-  Optional<String> ageString();
 
   Optional<List<Uri>> instantiatesUri();
 
+  Optional<String> bornString();
+
   String resourceType();
 
-  Reference patient();
+  Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<Code> language();
+  Optional<CodeableConcept> sex();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<String> deceasedString();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Age> deceasedAge();
-
-  Optional<Meta> meta();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  CodeableConcept relationship();
+  Optional<Age> ageAge();
 
   Optional<String> deceasedDate();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<FamilyMemberHistory_Condition>> condition();
+  Optional<Meta> meta();
 
-  Optional<CodeableConcept> dataAbsentReason();
+  Optional<String> name();
+
+  Optional<Age> deceasedAge();
+
+  Optional<Narrative> text();
 
   Optional<Range> ageRange();
 
-  Optional<CodeableConcept> sex();
-
-  Optional<Boolean> estimatedAge();
-
-  Optional<FamilymemberhistoryStatus> status();
-
-  Optional<String> deceasedString();
-
-  Optional<List<CodeableConcept>> reasonCode();
+  Optional<List<Extension>> extension();
 
   Optional<String> bornDate();
+
+  Optional<List<Canonical>> instantiatesCanonical();
 
   Optional<Id> id();
 
   Optional<List<ResourceList>> contained();
+
+  Optional<Period> bornPeriod();
+
+  Optional<String> ageString();
+
+  Optional<Boolean> estimatedAge();
+
+  Optional<CodeableConcept> dataAbsentReason();
+
+  Optional<Range> deceasedRange();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<Annotation>> note();
+
+  Optional<DateTime> date();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Reference patient();
+
+  Optional<FamilymemberhistoryStatus> status();
+
+  Optional<List<FamilyMemberHistory_Condition>> condition();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  CodeableConcept relationship();
 
   static ImmutableFamilyMemberHistory.ResourceTypeBuildStage builder() {
     return ImmutableFamilyMemberHistory.builder();

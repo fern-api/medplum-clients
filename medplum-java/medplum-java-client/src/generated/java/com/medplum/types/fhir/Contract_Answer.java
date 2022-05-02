@@ -21,33 +21,33 @@ import org.immutables.value.Value;
 public interface Contract_Answer {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> valueDateTime();
 
-  Optional<Coding> valueCoding();
+  Optional<Boolean> valueBoolean();
+
+  Optional<String> valueDate();
+
+  Optional<Double> valueInteger();
 
   Optional<Quantity> valueQuantity();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> valueReference();
 
   Optional<String> id();
 
   Optional<String> valueTime();
 
-  Optional<Attachment> valueAttachment();
+  Optional<String> valueString();
 
   Optional<String> valueUri();
 
-  Optional<String> valueString();
-
-  Optional<Double> valueInteger();
-
-  Optional<Reference> valueReference();
+  Optional<Attachment> valueAttachment();
 
   Optional<Double> valueDecimal();
 
-  Optional<String> valueDate();
-
-  Optional<Boolean> valueBoolean();
+  Optional<Coding> valueCoding();
 
   static ImmutableContract_Answer.Builder builder() {
     return ImmutableContract_Answer.builder();

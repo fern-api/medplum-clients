@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceMetric_Calibration {
-  Optional<Devicemetric_calibrationState> state();
-
   Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<Devicemetric_calibrationType> type();
 
-  Optional<Instant> time();
+  Optional<Devicemetric_calibrationState> state();
 
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Instant> time();
 
   static ImmutableDeviceMetric_Calibration.Builder builder() {
     return ImmutableDeviceMetric_Calibration.builder();

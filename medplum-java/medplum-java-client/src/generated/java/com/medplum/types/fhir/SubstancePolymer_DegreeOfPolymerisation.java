@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface SubstancePolymer_DegreeOfPolymerisation {
   Optional<String> id();
 
-  Optional<SubstanceAmount> amount();
+  Optional<CodeableConcept> degree();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> degree();
+  Optional<SubstanceAmount> amount();
 
   Optional<List<Extension>> extension();
 

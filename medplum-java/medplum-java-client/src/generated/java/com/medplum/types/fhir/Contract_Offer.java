@@ -17,31 +17,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Offer {
-  Optional<CodeableConcept> type();
+  Optional<CodeableConcept> decision();
 
-  Optional<List<CodeableConcept>> decisionMode();
+  Optional<List<Contract_Answer>> answer();
 
   Optional<String> text();
 
   Optional<List<UnsignedInt>> securityLabelNumber();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Contract_Party>> party();
-
-  Optional<Reference> topic();
-
-  Optional<CodeableConcept> decision();
-
-  Optional<List<Contract_Answer>> answer();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> type();
 
   Optional<List<Extension>> extension();
 
+  Optional<Reference> topic();
+
+  Optional<List<Contract_Party>> party();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<List<String>> linkId();
+
+  Optional<List<CodeableConcept>> decisionMode();
 
   static ImmutableContract_Offer.Builder builder() {
     return ImmutableContract_Offer.builder();

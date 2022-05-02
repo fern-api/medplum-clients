@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Invoice_Participant {
   Optional<List<Extension>> modifierExtension();
 
-  Reference actor();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> role();
 
-  Optional<List<Extension>> extension();
+  Reference actor();
+
+  Optional<String> id();
 
   static ImmutableInvoice_Participant.ActorBuildStage builder() {
     return ImmutableInvoice_Participant.builder();

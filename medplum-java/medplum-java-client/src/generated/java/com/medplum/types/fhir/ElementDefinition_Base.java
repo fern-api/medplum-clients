@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Base {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
-
   Optional<UnsignedInt> min();
 
-  Optional<String> path();
+  Optional<List<Extension>> extension();
 
   Optional<String> max();
+
+  Optional<String> path();
 
   static ImmutableElementDefinition_Base.Builder builder() {
     return ImmutableElementDefinition_Base.builder();

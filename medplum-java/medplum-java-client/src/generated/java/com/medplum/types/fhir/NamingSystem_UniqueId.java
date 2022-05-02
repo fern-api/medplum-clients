@@ -20,19 +20,19 @@ import org.immutables.value.Value;
 public interface NamingSystem_UniqueId {
   Optional<String> value();
 
-  Optional<String> comment();
+  Optional<Period> period();
 
   Optional<List<Extension>> extension();
 
-  Optional<Namingsystem_uniqueidType> type();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Boolean> preferred();
+  Optional<Namingsystem_uniqueidType> type();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> comment();
 
-  Optional<Period> period();
+  Optional<Boolean> preferred();
 
   static ImmutableNamingSystem_UniqueId.Builder builder() {
     return ImmutableNamingSystem_UniqueId.builder();

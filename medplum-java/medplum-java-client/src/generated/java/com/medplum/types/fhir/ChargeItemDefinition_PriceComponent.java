@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItemDefinition_PriceComponent {
-  Optional<Decimal> factor();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Money> amount();
-
-  Optional<CodeableConcept> code();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<CodeableConcept> code();
+
+  Optional<Money> amount();
+
   Optional<Code> type();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
+
+  Optional<Decimal> factor();
 
   static ImmutableChargeItemDefinition_PriceComponent.Builder builder() {
     return ImmutableChargeItemDefinition_PriceComponent.builder();

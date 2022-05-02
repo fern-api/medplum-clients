@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductAuthorization_JurisdictionalAuthorization {
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> legalStatusOfSupply();
-
-  Optional<Period> validityPeriod();
-
   Optional<List<Identifier>> identifier();
 
+  Optional<CodeableConcept> legalStatusOfSupply();
+
+  Optional<String> id();
+
   Optional<CodeableConcept> country();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Period> validityPeriod();
 
   static ImmutableMedicinalProductAuthorization_JurisdictionalAuthorization.Builder builder() {
     return ImmutableMedicinalProductAuthorization_JurisdictionalAuthorization.builder();

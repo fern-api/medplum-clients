@@ -20,57 +20,57 @@ import org.immutables.value.Value;
 public interface ValueSet {
   Optional<List<Identifier>> identifier();
 
-  Optional<ValueSet_Expansion> expansion();
-
-  Optional<String> name();
-
-  Optional<Boolean> experimental();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> date();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<String> version();
-
-  Optional<String> publisher();
-
-  Optional<Narrative> text();
-
-  Optional<Boolean> immutable();
-
-  Optional<Uri> url();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Code> language();
-
   Optional<List<UsageContext>> useContext();
-
-  Optional<String> title();
-
-  Optional<Markdown> purpose();
-
-  String resourceType();
 
   Optional<Uri> implicitRules();
 
-  Optional<ValueSet_Compose> compose();
+  Optional<DateTime> date();
+
+  Optional<Markdown> copyright();
+
+  Optional<String> name();
 
   Optional<Meta> meta();
 
+  Optional<ValueSet_Expansion> expansion();
+
   Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<ValueSet_Compose> compose();
+
+  Optional<String> publisher();
+
+  Optional<Markdown> purpose();
 
   Optional<ValuesetStatus> status();
 
-  Optional<Id> id();
+  Optional<Boolean> experimental();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> title();
+
+  Optional<String> version();
+
+  Optional<Uri> url();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<Boolean> immutable();
+
+  Optional<Narrative> text();
 
   Optional<Markdown> description();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Code> language();
+
+  Optional<Id> id();
 
   static ImmutableValueSet.ResourceTypeBuildStage builder() {
     return ImmutableValueSet.builder();

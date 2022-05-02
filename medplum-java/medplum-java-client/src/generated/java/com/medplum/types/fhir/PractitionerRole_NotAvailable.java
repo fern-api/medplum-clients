@@ -21,9 +21,9 @@ public interface PractitionerRole_NotAvailable {
 
   Optional<String> description();
 
-  Optional<Period> during();
-
   Optional<List<Extension>> extension();
+
+  Optional<Period> during();
 
   Optional<List<Extension>> modifierExtension();
 

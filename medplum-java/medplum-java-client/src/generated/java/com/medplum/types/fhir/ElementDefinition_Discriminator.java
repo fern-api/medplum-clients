@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Discriminator {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
 
-  Optional<Elementdefinition_discriminatorType> type();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
+
+  Optional<Elementdefinition_discriminatorType> type();
 
   Optional<String> path();
 

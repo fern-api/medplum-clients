@@ -19,35 +19,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface QuestionnaireResponse_Answer {
-  Optional<Coding> valueCoding();
+  Optional<String> valueDate();
 
-  Optional<Quantity> valueQuantity();
+  Optional<String> valueTime();
 
   Optional<Double> valueDecimal();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> valueString();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> valueReference();
-
   Optional<List<QuestionnaireResponse_Item>> item();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<String> valueDate();
-
-  Optional<Double> valueInteger();
 
   Optional<String> valueDateTime();
 
-  Optional<String> valueTime();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<Coding> valueCoding();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<Double> valueInteger();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> valueReference();
+
+  Optional<String> valueString();
 
   Optional<String> valueUri();
 

@@ -18,57 +18,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario {
-  Optional<List<ContactDetail>> contact();
+  Optional<String> version();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<ExampleScenario_Process>> process();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> publisher();
-
-  Optional<Narrative> text();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<DateTime> date();
-
-  Optional<Markdown> copyright();
-
-  Optional<Uri> url();
+  Optional<Id> id();
 
   Optional<String> name();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<ExampleScenario_Instance>> instance();
-
-  Optional<Id> id();
+  String resourceType();
 
   Optional<List<UsageContext>> useContext();
 
   Optional<List<Canonical>> workflow();
 
-  String resourceType();
-
-  Optional<Meta> meta();
+  Optional<List<ResourceList>> contained();
 
   Optional<ExamplescenarioStatus> status();
 
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<List<ExampleScenario_Instance>> instance();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ExampleScenario_Process>> process();
+
+  Optional<Uri> implicitRules();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Uri> url();
+
+  Optional<Meta> meta();
+
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Markdown> copyright();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<ExampleScenario_Actor>> actor();
 
   Optional<Boolean> experimental();
 
-  Optional<String> version();
+  Optional<DateTime> date();
 
   Optional<Markdown> purpose();
-
-  Optional<Code> language();
-
-  Optional<List<ExampleScenario_Actor>> actor();
 
   static ImmutableExampleScenario.ResourceTypeBuildStage builder() {
     return ImmutableExampleScenario.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_GeneralCost {
-  Optional<PositiveInt> groupSize();
+  Optional<List<Extension>> extension();
+
+  Optional<Money> cost();
 
   Optional<CodeableConcept> type();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Money> cost();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<PositiveInt> groupSize();
 
   Optional<String> comment();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableInsurancePlan_GeneralCost.Builder builder() {
     return ImmutableInsurancePlan_GeneralCost.builder();

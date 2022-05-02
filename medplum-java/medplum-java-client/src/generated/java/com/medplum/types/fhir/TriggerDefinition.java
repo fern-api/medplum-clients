@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TriggerDefinition {
-  Optional<String> timingDateTime();
+  Optional<TriggerdefinitionType> type();
 
   Optional<Expression> condition();
 
+  Optional<Timing> timingTiming();
+
   Optional<List<Extension>> extension();
 
-  Optional<String> name();
-
   Optional<List<DataRequirement>> data();
-
-  Optional<TriggerdefinitionType> type();
 
   Optional<String> id();
 
   Optional<String> timingDate();
 
-  Optional<Timing> timingTiming();
+  Optional<String> name();
+
+  Optional<String> timingDateTime();
 
   Optional<Reference> timingReference();
 

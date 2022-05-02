@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Meta {
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> source();
+  Optional<Uri> project();
 
   Optional<Instant> lastUpdated();
 
-  Optional<String> id();
+  Optional<List<Coding>> tag();
 
   Optional<Id> versionId();
 
-  Optional<List<Coding>> tag();
+  Optional<Uri> source();
+
+  Optional<String> id();
 
   Optional<Reference> author();
 
-  Optional<List<Canonical>> profile();
+  Optional<List<Extension>> extension();
 
   Optional<List<Coding>> security();
 
-  Optional<Uri> project();
+  Optional<List<Canonical>> profile();
 
   static ImmutableMeta.Builder builder() {
     return ImmutableMeta.builder();

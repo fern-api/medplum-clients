@@ -23,13 +23,13 @@ public interface Count {
 
   Optional<CountComparator> comparator();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> system();
+  Optional<String> id();
 
   Optional<Code> code();
 
-  Optional<String> id();
+  Optional<Uri> system();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableCount.Builder builder() {
     return ImmutableCount.builder();

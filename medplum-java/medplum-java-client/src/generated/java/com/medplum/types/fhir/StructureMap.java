@@ -19,60 +19,60 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap {
-  Optional<Markdown> description();
-
-  Optional<List<StructureMap_Structure>> structure();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Boolean> experimental();
-
-  String resourceType();
+  List<StructureMap_Group> group();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Meta> meta();
-
   Optional<Narrative> text();
 
-  Optional<Uri> url();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> version();
-
-  Optional<Uri> implicitRules();
+  Optional<Code> language();
 
   Optional<String> name();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<Markdown> description();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<StructureMap_Structure>> structure();
 
   Optional<DateTime> date();
-
-  Optional<String> publisher();
 
   @JsonProperty("import")
   Optional<List<Canonical>> _import();
 
   Optional<Markdown> purpose();
 
+  Optional<Markdown> copyright();
+
+  Optional<Uri> url();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<UsageContext>> useContext();
+
   Optional<String> title();
 
-  List<StructureMap_Group> group();
+  Optional<String> publisher();
 
   Optional<StructuremapStatus> status();
 
-  Optional<Code> language();
+  Optional<Meta> meta();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> version();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  String resourceType();
 
   static ImmutableStructureMap.ResourceTypeBuildStage builder() {
     return ImmutableStructureMap.builder();

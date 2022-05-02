@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_Coverage {
-  Optional<String> id();
-
-  CodeableConcept type();
-
   Optional<List<Extension>> modifierExtension();
-
-  List<InsurancePlan_Benefit> benefit();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Reference>> network();
+
+  Optional<String> id();
+
+  List<InsurancePlan_Benefit> benefit();
+
+  CodeableConcept type();
 
   static ImmutableInsurancePlan_Coverage.TypeBuildStage builder() {
     return ImmutableInsurancePlan_Coverage.builder();

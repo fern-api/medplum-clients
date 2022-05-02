@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_AddItem {
-  Optional<Address> locationAddress();
-
   Optional<Quantity> quantity();
 
-  Optional<List<CodeableConcept>> modifier();
+  Optional<List<ExplanationOfBenefit_Detail1>> detail();
+
+  Optional<Decimal> factor();
+
+  Optional<String> servicedDate();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<PositiveInt>> noteNumber();
+
+  Optional<List<PositiveInt>> detailSequence();
+
+  CodeableConcept productOrService();
+
+  Optional<List<CodeableConcept>> subSite();
+
+  Optional<List<Reference>> provider();
+
+  Optional<Period> servicedPeriod();
+
+  Optional<Money> unitPrice();
+
+  Optional<Money> net();
 
   Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
 
   Optional<CodeableConcept> bodySite();
 
-  Optional<List<CodeableConcept>> programCode();
-
-  Optional<List<ExplanationOfBenefit_Detail1>> detail();
-
-  CodeableConcept productOrService();
-
-  Optional<Money> net();
-
-  Optional<Decimal> factor();
-
-  Optional<List<PositiveInt>> noteNumber();
-
-  Optional<List<PositiveInt>> subDetailSequence();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> provider();
-
-  Optional<Money> unitPrice();
-
-  Optional<Reference> locationReference();
-
-  Optional<List<PositiveInt>> detailSequence();
-
-  Optional<Period> servicedPeriod();
+  Optional<Address> locationAddress();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> locationCodeableConcept();
+  Optional<List<CodeableConcept>> modifier();
 
-  Optional<List<CodeableConcept>> subSite();
+  Optional<Reference> locationReference();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<PositiveInt>> subDetailSequence();
+
+  Optional<List<CodeableConcept>> programCode();
 
   Optional<List<PositiveInt>> itemSequence();
 
-  Optional<String> servicedDate();
+  Optional<CodeableConcept> locationCodeableConcept();
 
   static ImmutableExplanationOfBenefit_AddItem.ProductOrServiceBuildStage builder() {
     return ImmutableExplanationOfBenefit_AddItem.builder();

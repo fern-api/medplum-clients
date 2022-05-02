@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Filter {
-  Optional<List<Extension>> extension();
-
   Optional<Code> property();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> value();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Valueset_filterOp> op();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableValueSet_Filter.Builder builder() {
     return ImmutableValueSet_Filter.builder();

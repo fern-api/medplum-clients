@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface Claim_Procedure {
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<PositiveInt> sequence();
-
   Optional<List<CodeableConcept>> type();
-
-  Optional<String> id();
 
   Optional<Reference> procedureReference();
 
+  Optional<PositiveInt> sequence();
+
   Optional<CodeableConcept> procedureCodeableConcept();
 
-  Optional<List<Reference>> udi();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<DateTime> date();
+
+  Optional<List<Reference>> udi();
 
   static ImmutableClaim_Procedure.Builder builder() {
     return ImmutableClaim_Procedure.builder();

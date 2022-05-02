@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface SubstanceSpecification_Representation {
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Attachment> attachment();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> type();
 
   Optional<String> representation();
 

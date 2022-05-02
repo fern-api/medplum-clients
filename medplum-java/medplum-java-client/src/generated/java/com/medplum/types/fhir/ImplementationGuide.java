@@ -18,63 +18,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide {
-  Optional<Meta> meta();
-
-  Optional<Code> language();
-
-  Optional<Boolean> experimental();
-
-  Optional<Uri> url();
-
-  Optional<Markdown> copyright();
-
-  Optional<Id> packageId();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> name();
 
   Optional<Uri> implicitRules();
 
-  Optional<Markdown> description();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<String> publisher();
-
-  Optional<String> title();
-
-  Optional<String> version();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<ImplementationguideStatus> status();
-
-  Optional<Narrative> text();
-
-  Optional<ImplementationGuide_Manifest> manifest();
-
-  Optional<List<ImplementationGuide_Global>> global();
-
   Optional<ImplementationguideLicense> license();
 
-  Optional<List<ImplementationGuide_DependsOn>> dependsOn();
-
-  Optional<DateTime> date();
-
-  String resourceType();
-
-  Optional<List<ImplementationguideFhirversionItem>> fhirVersion();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> name();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<ImplementationGuide_Definition> definition();
+  Optional<List<ResourceList>> contained();
 
   Optional<Id> id();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Markdown> description();
+
+  String resourceType();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<DateTime> date();
+
+  Optional<List<ImplementationGuide_DependsOn>> dependsOn();
+
+  Optional<Narrative> text();
+
+  Optional<String> version();
+
+  Optional<ImplementationguideStatus> status();
+
+  Optional<Uri> url();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> title();
+
+  Optional<Id> packageId();
+
+  Optional<ImplementationGuide_Manifest> manifest();
+
+  Optional<Meta> meta();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<ImplementationGuide_Global>> global();
+
+  Optional<String> publisher();
+
+  Optional<List<ImplementationguideFhirversionItem>> fhirVersion();
+
+  Optional<Markdown> copyright();
+
+  Optional<Code> language();
+
+  Optional<ImplementationGuide_Definition> definition();
 
   static ImmutableImplementationGuide.ResourceTypeBuildStage builder() {
     return ImmutableImplementationGuide.builder();

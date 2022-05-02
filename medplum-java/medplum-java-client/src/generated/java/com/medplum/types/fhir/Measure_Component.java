@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure_Component {
-  Optional<CodeableConcept> code();
+  Expression criteria();
 
   Optional<String> description();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Expression criteria();
+  Optional<CodeableConcept> code();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 

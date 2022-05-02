@@ -18,53 +18,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GraphDefinition {
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Canonical> profile();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<String> publisher();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> name();
-
-  Optional<GraphdefinitionStatus> status();
-
-  Optional<Markdown> purpose();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> url();
-
   Optional<Meta> meta();
-
-  Optional<String> version();
 
   Optional<DateTime> date();
 
-  Optional<Id> id();
+  Optional<Code> language();
 
-  Optional<List<Extension>> extension();
+  Optional<String> publisher();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  String resourceType();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Uri> url();
+
+  Optional<String> name();
+
+  Optional<String> version();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
+
+  Optional<Code> start();
 
   Optional<List<GraphDefinition_Link>> link();
 
-  Optional<Code> language();
+  Optional<List<ContactDetail>> contact();
 
-  Optional<Boolean> experimental();
+  Optional<GraphdefinitionStatus> status();
+
+  Optional<Id> id();
 
   Optional<Markdown> description();
 
-  Optional<Code> start();
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> experimental();
+
+  Optional<Canonical> profile();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableGraphDefinition.ResourceTypeBuildStage builder() {
     return ImmutableGraphDefinition.builder();

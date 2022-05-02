@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HealthcareService_AvailableTime {
-  Optional<Time> availableEndTime();
+  Optional<List<Extension>> extension();
 
-  Optional<Boolean> allDay();
+  Optional<List<Healthcareservice_availabletimeDaysofweekItem>> daysOfWeek();
+
+  Optional<Time> availableStartTime();
 
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Time> availableStartTime();
+  Optional<Time> availableEndTime();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Healthcareservice_availabletimeDaysofweekItem>> daysOfWeek();
+  Optional<Boolean> allDay();
 
   static ImmutableHealthcareService_AvailableTime.Builder builder() {
     return ImmutableHealthcareService_AvailableTime.builder();

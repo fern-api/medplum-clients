@@ -17,49 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImagingStudy {
-  Optional<List<Reference>> endpoint();
-
   Optional<List<Reference>> interpreter();
 
   Optional<List<Annotation>> note();
 
-  Optional<Uri> implicitRules();
+  Optional<Id> id();
 
   Optional<Narrative> text();
 
-  Optional<DateTime> started();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<CodeableConcept>> procedureCode();
-
-  Optional<List<ImagingStudy_Series>> series();
-
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> referrer();
-
-  Optional<Reference> location();
+  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<String> description();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ResourceList>> contained();
 
-  Optional<ImagingstudyStatus> status();
+  Optional<Meta> meta();
 
-  Optional<Reference> procedureReference();
-
-  Optional<Reference> encounter();
+  Optional<List<CodeableConcept>> procedureCode();
 
   Optional<List<Reference>> basedOn();
 
+  Optional<Reference> location();
+
+  Optional<UnsignedInt> numberOfSeries();
+
+  Optional<ImagingstudyStatus> status();
+
+  Optional<DateTime> started();
+
+  Optional<List<ImagingStudy_Series>> series();
+
+  Optional<List<Reference>> endpoint();
+
+  Optional<List<Reference>> reasonReference();
+
   Optional<Code> language();
 
-  Optional<List<Coding>> modality();
+  Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> reasonCode();
+  Optional<Reference> encounter();
 
   Optional<UnsignedInt> numberOfInstances();
 
@@ -67,13 +63,17 @@ public interface ImagingStudy {
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<Extension>> extension();
+  Optional<Reference> referrer();
 
-  Optional<Id> id();
+  Optional<Uri> implicitRules();
 
   Reference subject();
 
-  Optional<UnsignedInt> numberOfSeries();
+  Optional<List<Coding>> modality();
+
+  Optional<Reference> procedureReference();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImagingStudy.ResourceTypeBuildStage builder() {
     return ImmutableImagingStudy.builder();

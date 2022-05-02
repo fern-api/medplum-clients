@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Signature {
+  Optional<String> id();
+
+  List<Coding> type();
+
   Optional<List<Extension>> extension();
 
   Optional<Code> sigFormat();
 
-  Optional<Base64Binary> data();
-
   Optional<Instant> when();
+
+  Optional<Base64Binary> data();
 
   Optional<Reference> onBehalfOf();
 
-  Optional<String> id();
-
-  Reference who();
-
   Optional<Code> targetFormat();
 
-  List<Coding> type();
+  Reference who();
 
   static ImmutableSignature.WhoBuildStage builder() {
     return ImmutableSignature.builder();

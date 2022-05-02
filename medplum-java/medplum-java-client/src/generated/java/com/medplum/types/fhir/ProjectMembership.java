@@ -19,7 +19,15 @@ import org.immutables.value.Value;
 public interface ProjectMembership {
   Optional<Reference> accessPolicy();
 
-  Optional<String> resourceType();
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
+  Reference project();
+
+  Reference user();
+
+  Reference profile();
 
   Optional<Id> id();
 
@@ -27,17 +35,9 @@ public interface ProjectMembership {
 
   Optional<Boolean> admin();
 
-  Optional<Meta> meta();
+  Optional<String> resourceType();
 
   Optional<Reference> userConfiguration();
-
-  Reference project();
-
-  Reference profile();
-
-  Optional<Code> language();
-
-  Reference user();
 
   static ImmutableProjectMembership.ProjectBuildStage builder() {
     return ImmutableProjectMembership.builder();

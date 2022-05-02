@@ -1,3 +1,4 @@
+import * as model from "../../../../model";
 import { ErrorBody } from "./ErrorBody";
 
 export type Response = SuccessResponse | ErrorResponse;
@@ -5,6 +6,7 @@ export type Response = SuccessResponse | ErrorResponse;
 export interface SuccessResponse {
     ok: true;
     statusCode: number;
+    body: model.Bundle;
 }
 
 export interface ErrorResponse {

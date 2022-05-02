@@ -18,23 +18,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Resource {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Implementationguide_resourceFhirversionItem>> fhirVersion();
-
-  Optional<Boolean> exampleBoolean();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Reference reference();
-
   Optional<String> name();
-
-  Optional<String> description();
 
   Optional<String> id();
 
+  Optional<String> description();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Boolean> exampleBoolean();
+
   Optional<String> exampleCanonical();
+
+  Reference reference();
+
+  Optional<List<Implementationguide_resourceFhirversionItem>> fhirVersion();
+
+  Optional<List<Extension>> extension();
 
   Optional<Id> groupingId();
 

@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityResponse {
-  Optional<CoverageeligibilityresponseOutcome> outcome();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
+  Optional<List<CoverageeligibilityresponsePurposeItem>> purpose();
 
   Optional<String> servicedDate();
 
-  Optional<CodeableConcept> form();
-
-  Optional<Period> servicedPeriod();
-
-  Optional<List<Extension>> extension();
-
-  Optional<DateTime> created();
-
-  Optional<List<CoverageEligibilityResponse_Error>> error();
-
-  Optional<String> disposition();
+  Optional<Narrative> text();
 
   Optional<List<Extension>> modifierExtension();
 
-  Reference request();
-
-  Reference insurer();
-
-  Optional<List<Identifier>> identifier();
-
-  String resourceType();
-
-  Reference patient();
-
-  Optional<List<CoverageEligibilityResponse_Insurance>> insurance();
-
   Optional<Code> status();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Id> id();
-
-  Optional<List<CoverageeligibilityresponsePurposeItem>> purpose();
-
-  Optional<String> preAuthRef();
 
   Optional<Reference> requestor();
 
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  Optional<String> disposition();
+
+  Reference request();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Identifier>> identifier();
+
+  Reference patient();
+
+  String resourceType();
+
+  Reference insurer();
+
   Optional<Meta> meta();
 
-  Optional<Narrative> text();
+  Optional<List<CoverageEligibilityResponse_Insurance>> insurance();
+
+  Optional<CoverageeligibilityresponseOutcome> outcome();
+
+  Optional<DateTime> created();
+
+  Optional<CodeableConcept> form();
+
+  Optional<String> preAuthRef();
+
+  Optional<Code> language();
+
+  Optional<Period> servicedPeriod();
+
+  Optional<List<CoverageEligibilityResponse_Error>> error();
 
   static ImmutableCoverageEligibilityResponse.RequestBuildStage builder() {
     return ImmutableCoverageEligibilityResponse.builder();

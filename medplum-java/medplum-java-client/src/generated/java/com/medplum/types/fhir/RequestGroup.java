@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup {
-  Optional<Code> intent();
-
-  Optional<List<RequestGroup_Action>> action();
-
-  Optional<Code> language();
-
-  Optional<List<Reference>> basedOn();
-
-  String resourceType();
-
-  Optional<Reference> author();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> status();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<Id> id();
-
-  Optional<Code> priority();
-
-  Optional<DateTime> authoredOn();
+  Optional<Identifier> groupIdentifier();
 
   Optional<List<Annotation>> note();
 
-  Optional<Meta> meta();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<Identifier> groupIdentifier();
-
-  Optional<CodeableConcept> code();
-
   Optional<List<Reference>> replaces();
-
-  Optional<Reference> subject();
 
   Optional<List<Uri>> instantiatesUri();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<Code> language();
+
+  Optional<Reference> subject();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> status();
 
   Optional<Uri> implicitRules();
 
-  Optional<Narrative> text();
+  Optional<List<Reference>> reasonReference();
 
-  Optional<List<Identifier>> identifier();
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Meta> meta();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<Code> intent();
 
   Optional<Reference> encounter();
 
+  Optional<Reference> author();
+
+  Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<List<RequestGroup_Action>> action();
+
+  Optional<Code> priority();
+
+  Optional<CodeableConcept> code();
+
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Narrative> text();
 
   static ImmutableRequestGroup.ResourceTypeBuildStage builder() {
     return ImmutableRequestGroup.builder();

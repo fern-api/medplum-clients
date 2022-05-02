@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PaymentReconciliation {
-  Optional<Narrative> text();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<Reference> requestor();
-
-  Optional<List<PaymentReconciliation_ProcessNote>> processNote();
-
-  Optional<Reference> paymentIssuer();
-
-  Optional<Identifier> paymentIdentifier();
+  Optional<Code> status();
 
   Optional<PaymentreconciliationOutcome> outcome();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<PaymentReconciliation_Detail>> detail();
-
-  Optional<Date> paymentDate();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> disposition();
-
-  Optional<CodeableConcept> formCode();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> created();
-
-  String resourceType();
-
   Optional<Period> period();
 
-  Optional<Code> status();
-
-  Optional<Reference> request();
+  Optional<Reference> requestor();
 
   Optional<List<Extension>> extension();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> formCode();
+
+  Optional<Date> paymentDate();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Identifier> paymentIdentifier();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> created();
 
   Money paymentAmount();
 
-  static ImmutablePaymentReconciliation.ResourceTypeBuildStage builder() {
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
+
+  Optional<List<PaymentReconciliation_ProcessNote>> processNote();
+
+  String resourceType();
+
+  Optional<Reference> request();
+
+  Optional<List<PaymentReconciliation_Detail>> detail();
+
+  Optional<Id> id();
+
+  Optional<Reference> paymentIssuer();
+
+  Optional<String> disposition();
+
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  static ImmutablePaymentReconciliation.PaymentAmountBuildStage builder() {
     return ImmutablePaymentReconciliation.builder();
   }
 }

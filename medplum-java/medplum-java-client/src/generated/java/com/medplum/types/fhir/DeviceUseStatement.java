@@ -17,39 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceUseStatement {
-  Optional<List<Reference>> derivedFrom();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> timingDateTime();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DeviceusestatementStatus> status();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<Period> timingPeriod();
-
   Optional<Code> language();
-
-  Optional<CodeableConcept> bodySite();
-
-  Optional<Narrative> text();
 
   Optional<Timing> timingTiming();
 
+  Optional<CodeableConcept> bodySite();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> derivedFrom();
+
   Reference device();
 
-  Optional<List<Annotation>> note();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> source();
-
-  Optional<DateTime> recordedOn();
+  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<Id> id();
 
@@ -57,13 +37,33 @@ public interface DeviceUseStatement {
 
   Reference subject();
 
+  Optional<Period> timingPeriod();
+
+  Optional<Reference> source();
+
+  Optional<String> timingDateTime();
+
+  Optional<DeviceusestatementStatus> status();
+
+  Optional<List<Annotation>> note();
+
   String resourceType();
 
-  Optional<List<ResourceList>> contained();
+  Optional<DateTime> recordedOn();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
 
   Optional<List<Reference>> basedOn();
 
-  Optional<Meta> meta();
+  Optional<List<ResourceList>> contained();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableDeviceUseStatement.DeviceBuildStage builder() {
     return ImmutableDeviceUseStatement.builder();
