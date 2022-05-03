@@ -9,7 +9,7 @@ The Java client lives inside of the [medplum-java](./medplum-java) folder.
 
 Run `./gradlew idea && open *.ipr` inside of [medplum-java](./medplum-java) to open in Intellij.
 
-Build the project to generate [Immutables](https://immutables.github.io/) classes.
+Build the project to generate [Immutables](https://immutables.github.io/) classes. This may take a while (~10s)!
 
 Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code!
 
