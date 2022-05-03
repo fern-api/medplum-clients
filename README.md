@@ -25,6 +25,7 @@ yarn workspace medplum-sample-application run compile && node packages/medplum-s
 The Java client lives inside of the [medplum-java](./medplum-java) folder.
 
 Open in Intellij by running these commands:
+
 ```bash
 cd medplum-java
 ./gradlew idea && open *.ipr
@@ -32,23 +33,23 @@ cd medplum-java
 
 Build the project `(Build > Build Project)` to generate [Immutables](https://immutables.github.io/) classes. This may take a while because the API spec is large (~12k lines).
 
-Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
+Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code!
 
-Before you run the sample app, make sure to add your access key as an environment variable ```MEDPLUM_ACCESS_KEY``` .
+Before you run the sample app, make sure to add your access key as an environment variable `MEDPLUM_ACCESS_KEY` .
 
 1. Find the play button and edit configuration
-![img](./img/editConfiguration.png)
+   ![img](./img/editConfiguration.png)
 
-2. Update the environment variables section 
-![img](./img/configuration.png)
+2. Update the environment variables section
+   ![img](./img/configuration.png)
 
 #### Important Files
 
-[FhirService.java](./medplum-java-client/src/generated/java/com/medplum/services/fhir/FhirService.java) is the generated REST service that has endpoints like `readResource`, `updateResource`, etc.
+[FhirService.java](./medplum-java/medplum-java-client/src/generated/java/com/medplum/services/fhir/FhirService.java) is the generated REST service that has endpoints like `readResource`, `updateResource`, etc.
 
-[ResourceList.java](./medplum-java-client/src/generated/java/com/medplum/types/fhir/ResourceList.java) is a union type. Union types can be visited by calling the `accept` method and passing in a visitor so that a client can be sure they handle all possible states.
+[ResourceList.java](./medplum-java/medplum-java-client/src/generated/java/com/medplum/types/fhir/ResourceList.java) is a union type. Union types can be visited by calling the `accept` method and passing in a visitor so that a client can be sure they handle all possible states.
 
-[SampleApplication Main.java](./medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
+[SampleApplication](./medplum-java/medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
 
 ## Known Limitations
 
