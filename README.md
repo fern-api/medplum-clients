@@ -9,9 +9,9 @@ The Java client lives inside of the [medplum-java](./medplum-java) folder.
 
 Run `./gradlew idea && open *.ipr` inside of [medplum-java](./medplum-java) to open in Intellij.
 
-Build the project to generate [Immutables](https://immutables.github.io/) classes. This may take a while (~10s)!
+Build the project to generate [Immutables](https://immutables.github.io/) classes. This may take a while!
 
-Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code!
+Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! Make sure to add your access key as an environment variable ```MEDPLUM_ACCESS_KEY```.
 
 ## Typescript Client
 
