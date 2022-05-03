@@ -48,7 +48,7 @@ Before you run the sample app, make sure to add your access key as an environmen
 
 [ResourceList.java](./medplum-java-client/src/generated/java/com/medplum/types/fhir/ResourceList.java) is a union type. Union types can be visited by calling the `accept` method and passing in a visitor so that a client can be sure they handle all possible states.
 
-[SampleApplication Main.java](./medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
+[SampleApplication/Main.java](./medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
 
 ## Known Limitations
 
