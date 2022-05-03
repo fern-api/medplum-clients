@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Assert {
-  Optional<Testscript_assertRequestmethod> requestMethod();
-
-  Optional<Code> contentType();
-
-  Optional<Id> validateProfileId();
-
   Optional<Code> resource();
-
-  Optional<String> value();
-
-  Optional<String> compareToSourcePath();
-
-  Optional<Boolean> navigationLinks();
-
-  Optional<Testscript_assertOperator> operator();
-
-  Optional<Id> sourceId();
-
-  Optional<Testscript_assertDirection> direction();
 
   Optional<String> requestURL();
 
   Optional<String> responseCode();
 
-  Optional<String> path();
+  Optional<Id> validateProfileId();
 
-  Optional<String> label();
+  Optional<String> value();
 
-  Optional<String> description();
-
-  Optional<String> compareToSourceExpression();
-
-  Optional<Boolean> warningOnly();
-
-  Optional<String> headerField();
-
-  Optional<String> minimumId();
-
-  Optional<String> id();
-
-  Optional<Testscript_assertResponse> response();
-
-  Optional<String> compareToSourceId();
-
-  Optional<String> expression();
+  Optional<Boolean> navigationLinks();
 
   Optional<List<Extension>> extension();
 
+  Optional<String> path();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Testscript_assertOperator> operator();
+
+  Optional<Code> contentType();
+
+  Optional<String> label();
+
+  Optional<Boolean> warningOnly();
+
+  Optional<String> id();
+
+  Optional<String> compareToSourceExpression();
+
+  Optional<String> headerField();
+
+  Optional<Id> sourceId();
+
+  Optional<Testscript_assertRequestmethod> requestMethod();
+
+  Optional<Testscript_assertResponse> response();
+
+  Optional<String> expression();
+
+  Optional<String> compareToSourcePath();
+
+  Optional<String> compareToSourceId();
+
+  Optional<String> description();
+
+  Optional<Testscript_assertDirection> direction();
+
+  Optional<String> minimumId();
 
   static ImmutableTestScript_Assert.Builder builder() {
     return ImmutableTestScript_Assert.builder();

@@ -21,13 +21,13 @@ public interface Encounter_ClassHistory {
   @JsonProperty("class")
   Coding _class();
 
-  Period period();
-
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
+
+  Period period();
+
+  Optional<String> id();
 
   static ImmutableEncounter_ClassHistory._classBuildStage builder() {
     return ImmutableEncounter_ClassHistory.builder();

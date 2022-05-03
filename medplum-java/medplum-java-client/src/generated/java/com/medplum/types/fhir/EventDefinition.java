@@ -18,81 +18,81 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EventDefinition {
-  Optional<Narrative> text();
+  Optional<String> title();
 
-  Optional<String> subtitle();
+  Optional<Uri> url();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<CodeableConcept>> topic();
+
+  Optional<Date> lastReviewDate();
+
+  List<TriggerDefinition> trigger();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<Code> language();
+
+  Optional<String> publisher();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<UsageContext>> useContext();
+
+  String resourceType();
+
+  Optional<Markdown> copyright();
+
+  Optional<EventdefinitionStatus> status();
+
+  Optional<Reference> subjectReference();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<Date> approvalDate();
+
+  Optional<List<ContactDetail>> reviewer();
 
   Optional<String> version();
 
   Optional<List<ContactDetail>> editor();
 
-  Optional<List<UsageContext>> useContext();
-
-  Optional<DateTime> date();
-
-  Optional<Markdown> purpose();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Date> approvalDate();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<CodeableConcept>> topic();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<Reference> subjectReference();
-
-  Optional<String> publisher();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<List<ContactDetail>> contact();
-
   Optional<String> name();
-
-  List<TriggerDefinition> trigger();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<Markdown> description();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  Optional<Boolean> experimental();
-
-  Optional<Uri> url();
-
-  Optional<EventdefinitionStatus> status();
-
-  Optional<Markdown> copyright();
-
-  String resourceType();
-
-  Optional<List<ContactDetail>> author();
-
-  Optional<String> usage();
-
-  Optional<Code> language();
 
   Optional<Meta> meta();
 
-  Optional<String> title();
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> date();
+
+  Optional<Markdown> description();
+
+  Optional<Boolean> experimental();
 
   Optional<Period> effectivePeriod();
+
+  Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<String> usage();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<String> subtitle();
 
   static ImmutableEventDefinition.ResourceTypeBuildStage builder() {
     return ImmutableEventDefinition.builder();

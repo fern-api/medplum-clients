@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PaymentReconciliation_ProcessNote {
-  Optional<String> id();
-
   Optional<String> text();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Paymentreconciliation_processnoteType> type();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   static ImmutablePaymentReconciliation_ProcessNote.Builder builder() {
     return ImmutablePaymentReconciliation_ProcessNote.builder();

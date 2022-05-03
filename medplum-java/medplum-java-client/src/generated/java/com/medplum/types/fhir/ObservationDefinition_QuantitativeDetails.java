@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ObservationDefinition_QuantitativeDetails {
-  Optional<Integer> decimalPrecision();
-
-  Optional<String> id();
-
-  Optional<Decimal> conversionFactor();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> unit();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> customaryUnit();
+  Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<Decimal> conversionFactor();
+
+  Optional<Integer> decimalPrecision();
+
+  Optional<CodeableConcept> customaryUnit();
 
   static ImmutableObservationDefinition_QuantitativeDetails.Builder builder() {
     return ImmutableObservationDefinition_QuantitativeDetails.builder();

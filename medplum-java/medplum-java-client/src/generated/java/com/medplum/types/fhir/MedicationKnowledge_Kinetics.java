@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Kinetics {
-  Optional<List<Extension>> extension();
+  Optional<List<Quantity>> lethalDose50();
 
-  Optional<List<Quantity>> areaUnderCurve();
+  Optional<Duration> halfLifePeriod();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Quantity>> lethalDose50();
+  Optional<List<Quantity>> areaUnderCurve();
 
-  Optional<Duration> halfLifePeriod();
+  Optional<List<Extension>> extension();
 
   static ImmutableMedicationKnowledge_Kinetics.Builder builder() {
     return ImmutableMedicationKnowledge_Kinetics.builder();

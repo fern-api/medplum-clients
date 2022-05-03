@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent_Data {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<Consent_dataMeaning> meaning();
 
-  Reference reference();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Reference reference();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableConsent_Data.ReferenceBuildStage builder() {
     return ImmutableConsent_Data.builder();

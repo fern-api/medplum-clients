@@ -19,97 +19,97 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Observation {
-  Optional<Id> id();
-
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<Reference>> hasMember();
-
-  Optional<Range> valueRange();
+  Optional<ObservationStatus> status();
 
   Optional<Reference> subject();
 
-  Optional<List<Reference>> performer();
+  Optional<Period> effectivePeriod();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<CodeableConcept>> interpretation();
 
-  Optional<Ratio> valueRatio();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> effectiveInstant();
-
-  Optional<Code> language();
-
-  Optional<Reference> specimen();
-
-  Optional<Timing> effectiveTiming();
-
-  String resourceType();
+  Optional<Id> id();
 
   Optional<List<Observation_Component>> component();
 
-  Optional<CodeableConcept> method();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Reference>> derivedFrom();
-
-  Optional<Instant> issued();
-
-  Optional<List<Reference>> focus();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> dataAbsentReason();
+  Optional<SampledData> valueSampledData();
 
   Optional<Boolean> valueBoolean();
 
-  Optional<Period> effectivePeriod();
+  Optional<List<Reference>> partOf();
 
-  Optional<List<Annotation>> note();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> effectiveDateTime();
-
-  Optional<String> valueString();
-
-  Optional<Reference> device();
-
-  Optional<Period> valuePeriod();
+  Optional<Range> valueRange();
 
   Optional<Reference> encounter();
 
   Optional<CodeableConcept> valueCodeableConcept();
 
+  Optional<List<Reference>> hasMember();
+
   Optional<String> valueDateTime();
 
-  Optional<ObservationStatus> status();
+  Optional<CodeableConcept> dataAbsentReason();
 
-  CodeableConcept code();
+  Optional<Reference> specimen();
 
-  Optional<Double> valueInteger();
+  Optional<List<Reference>> focus();
 
-  Optional<List<CodeableConcept>> interpretation();
-
-  Optional<List<Observation_ReferenceRange>> referenceRange();
-
-  Optional<Narrative> text();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<CodeableConcept> bodySite();
+  Optional<Meta> meta();
 
   Optional<Quantity> valueQuantity();
 
+  Optional<List<Observation_ReferenceRange>> referenceRange();
+
+  Optional<String> valueString();
+
+  Optional<Instant> issued();
+
+  Optional<Ratio> valueRatio();
+
   Optional<List<Reference>> basedOn();
 
+  Optional<List<Annotation>> note();
+
+  Optional<List<Reference>> derivedFrom();
+
+  Optional<Timing> effectiveTiming();
+
+  String resourceType();
+
+  Optional<Narrative> text();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<Uri> implicitRules();
+
+  CodeableConcept code();
+
+  Optional<String> effectiveDateTime();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> method();
+
+  Optional<List<Reference>> performer();
+
+  Optional<List<Extension>> extension();
+
   Optional<String> valueTime();
+
+  Optional<Period> valuePeriod();
+
+  Optional<Reference> device();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> effectiveInstant();
+
+  Optional<Double> valueInteger();
+
+  Optional<CodeableConcept> bodySite();
+
+  Optional<Code> language();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableObservation.ResourceTypeBuildStage builder() {
     return ImmutableObservation.builder();

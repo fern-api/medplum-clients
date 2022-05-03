@@ -17,6 +17,8 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Rule {
+  Optional<List<Extension>> extension();
+
   Optional<Attachment> contentAttachment();
 
   Optional<List<Extension>> modifierExtension();
@@ -24,8 +26,6 @@ public interface Contract_Rule {
   Optional<Reference> contentReference();
 
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableContract_Rule.Builder builder() {
     return ImmutableContract_Rule.builder();

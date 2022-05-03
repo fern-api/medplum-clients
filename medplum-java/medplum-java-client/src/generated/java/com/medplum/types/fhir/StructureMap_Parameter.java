@@ -19,19 +19,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Parameter {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> valueString();
+
+  Optional<Double> valueInteger();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> valueId();
 
   Optional<Double> valueDecimal();
 
-  Optional<String> valueString();
-
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Double> valueInteger();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Boolean> valueBoolean();
 

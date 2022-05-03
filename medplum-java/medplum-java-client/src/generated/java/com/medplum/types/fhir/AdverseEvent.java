@@ -17,65 +17,65 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AdverseEvent {
-  Optional<CodeableConcept> severity();
+  Optional<Meta> meta();
 
   Optional<DateTime> date();
 
-  Optional<Identifier> identifier();
-
-  Optional<Reference> location();
-
-  Optional<Uri> implicitRules();
-
-  Optional<DateTime> detected();
-
-  Optional<Code> language();
-
-  Optional<List<Reference>> referenceDocument();
-
-  Optional<CodeableConcept> event();
-
-  Optional<CodeableConcept> outcome();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Meta> meta();
-
-  Optional<CodeableConcept> seriousness();
-
-  Optional<Id> id();
-
-  Optional<Reference> recorder();
-
-  Optional<DateTime> recordedDate();
-
-  Optional<Narrative> text();
-
-  Reference subject();
-
-  Optional<Reference> encounter();
-
-  Optional<List<AdverseEvent_SuspectEntity>> suspectEntity();
+  Optional<List<Reference>> study();
 
   Optional<List<Reference>> resultingCondition();
 
-  Optional<List<Reference>> subjectMedicalHistory();
-
   String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> study();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<AdverseeventActuality> actuality();
-
-  Optional<List<ResourceList>> contained();
 
   Optional<List<Reference>> contributor();
 
-  static ImmutableAdverseEvent.SubjectBuildStage builder() {
+  Optional<Narrative> text();
+
+  Optional<Identifier> identifier();
+
+  Optional<List<AdverseEvent_SuspectEntity>> suspectEntity();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Id> id();
+
+  Optional<CodeableConcept> seriousness();
+
+  Optional<Reference> encounter();
+
+  Optional<List<Reference>> subjectMedicalHistory();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  Reference subject();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> event();
+
+  Optional<Reference> recorder();
+
+  Optional<List<Reference>> referenceDocument();
+
+  Optional<Reference> location();
+
+  Optional<DateTime> recordedDate();
+
+  Optional<CodeableConcept> outcome();
+
+  Optional<CodeableConcept> severity();
+
+  Optional<DateTime> detected();
+
+  Optional<AdverseeventActuality> actuality();
+
+  static ImmutableAdverseEvent.ResourceTypeBuildStage builder() {
     return ImmutableAdverseEvent.builder();
   }
 }

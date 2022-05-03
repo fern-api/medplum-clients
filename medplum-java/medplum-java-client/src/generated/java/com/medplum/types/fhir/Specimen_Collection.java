@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Specimen_Collection {
-  Optional<CodeableConcept> bodySite();
-
-  Optional<Quantity> quantity();
-
   Optional<String> collectedDateTime();
-
-  Optional<Duration> fastingStatusDuration();
 
   Optional<Period> collectedPeriod();
 
-  Optional<Reference> collector();
+  Optional<Duration> duration();
 
-  Optional<CodeableConcept> method();
+  Optional<Quantity> quantity();
 
   Optional<List<Extension>> extension();
 
-  Optional<Duration> duration();
+  Optional<Reference> collector();
+
+  Optional<CodeableConcept> bodySite();
+
+  Optional<CodeableConcept> fastingStatusCodeableConcept();
+
+  Optional<Duration> fastingStatusDuration();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> fastingStatusCodeableConcept();
+  Optional<CodeableConcept> method();
 
   static ImmutableSpecimen_Collection.Builder builder() {
     return ImmutableSpecimen_Collection.builder();

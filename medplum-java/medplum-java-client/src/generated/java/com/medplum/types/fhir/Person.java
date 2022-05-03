@@ -20,41 +20,41 @@ import org.immutables.value.Value;
 public interface Person {
   String resourceType();
 
-  Optional<Attachment> photo();
-
-  Optional<Code> language();
-
-  Optional<List<Person_Link>> link();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Date> birthDate();
-
-  Optional<Meta> meta();
-
   Optional<Uri> implicitRules();
-
-  Optional<List<HumanName>> name();
-
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<PersonGender> gender();
 
   Optional<List<Address>> address();
 
-  Optional<Id> id();
+  Optional<Meta> meta();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Attachment> photo();
 
-  Optional<Boolean> active();
+  Optional<List<ContactPoint>> telecom();
 
-  Optional<Narrative> text();
+  Optional<Code> language();
 
   Optional<List<ResourceList>> contained();
 
+  Optional<List<Identifier>> identifier();
+
   Optional<Reference> managingOrganization();
+
+  Optional<List<Extension>> extension();
+
+  Optional<PersonGender> gender();
+
+  Optional<Boolean> active();
+
+  Optional<List<Person_Link>> link();
+
+  Optional<Narrative> text();
+
+  Optional<Date> birthDate();
+
+  Optional<List<HumanName>> name();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Id> id();
 
   static ImmutablePerson.ResourceTypeBuildStage builder() {
     return ImmutablePerson.builder();

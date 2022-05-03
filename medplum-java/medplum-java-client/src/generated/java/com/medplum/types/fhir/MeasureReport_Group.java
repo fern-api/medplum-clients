@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Group {
+  Optional<String> id();
+
+  Optional<Quantity> measureScore();
+
   Optional<CodeableConcept> code();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<MeasureReport_Stratifier>> stratifier();
 
   Optional<List<MeasureReport_Population>> population();
 
-  Optional<List<MeasureReport_Stratifier>> stratifier();
-
-  Optional<String> id();
-
-  Optional<Quantity> measureScore();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMeasureReport_Group.Builder builder() {
     return ImmutableMeasureReport_Group.builder();

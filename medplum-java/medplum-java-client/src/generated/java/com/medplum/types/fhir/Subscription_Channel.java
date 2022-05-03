@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Subscription_Channel {
-  Optional<String> id();
-
-  Optional<List<String>> header();
-
   Optional<Code> payload();
+
+  Optional<Url> endpoint();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<Subscription_channelType> type();
 
-  Optional<Url> endpoint();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<String>> header();
 
   static ImmutableSubscription_Channel.Builder builder() {
     return ImmutableSubscription_Channel.builder();

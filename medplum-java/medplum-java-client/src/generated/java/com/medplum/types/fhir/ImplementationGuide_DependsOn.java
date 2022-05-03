@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_DependsOn {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Id> packageId();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Canonical uri();
 
+  Optional<List<Extension>> extension();
+
   Optional<String> version();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImplementationGuide_DependsOn.UriBuildStage builder() {
     return ImmutableImplementationGuide_DependsOn.builder();

@@ -17,9 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_UdiDeviceIdentifier {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> issuer();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
@@ -27,7 +25,9 @@ public interface DeviceDefinition_UdiDeviceIdentifier {
 
   Optional<String> deviceIdentifier();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Uri> issuer();
 
   static ImmutableDeviceDefinition_UdiDeviceIdentifier.Builder builder() {
     return ImmutableDeviceDefinition_UdiDeviceIdentifier.builder();

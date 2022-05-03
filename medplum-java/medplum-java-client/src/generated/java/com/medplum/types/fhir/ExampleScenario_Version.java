@@ -19,9 +19,9 @@ import org.immutables.value.Value;
 public interface ExampleScenario_Version {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<Markdown> description();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 

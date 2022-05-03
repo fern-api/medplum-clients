@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface SubstanceSourceMaterial_PartDescription {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> part();
-
-  Optional<String> id();
+  Optional<CodeableConcept> partLocation();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> partLocation();
+  Optional<CodeableConcept> part();
+
+  Optional<String> id();
 
   static ImmutableSubstanceSourceMaterial_PartDescription.Builder builder() {
     return ImmutableSubstanceSourceMaterial_PartDescription.builder();

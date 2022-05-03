@@ -17,51 +17,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan {
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
+  String resourceType();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<String> name();
-
   Optional<List<Reference>> coverageArea();
+
+  Optional<Meta> meta();
 
   Optional<List<CodeableConcept>> type();
 
-  Optional<List<Reference>> network();
+  Optional<Period> period();
 
-  Optional<Reference> ownedBy();
+  Optional<Narrative> text();
 
   Optional<List<InsurancePlan_Plan>> plan();
 
-  Optional<Code> language();
-
-  Optional<Period> period();
-
-  Optional<Reference> administeredBy();
-
   Optional<List<String>> alias();
 
-  Optional<InsuranceplanStatus> status();
+  Optional<List<InsurancePlan_Coverage>> coverage();
 
   Optional<Id> id();
 
   Optional<Uri> implicitRules();
 
+  Optional<Reference> administeredBy();
+
+  Optional<String> name();
+
+  Optional<List<Reference>> network();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<List<Extension>> extension();
 
-  Optional<Narrative> text();
-
-  Optional<List<InsurancePlan_Contact>> contact();
-
-  String resourceType();
+  Optional<InsuranceplanStatus> status();
 
   Optional<List<Reference>> endpoint();
 
-  Optional<List<InsurancePlan_Coverage>> coverage();
+  Optional<Code> language();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> ownedBy();
+
+  Optional<List<InsurancePlan_Contact>> contact();
 
   static ImmutableInsurancePlan.ResourceTypeBuildStage builder() {
     return ImmutableInsurancePlan.builder();

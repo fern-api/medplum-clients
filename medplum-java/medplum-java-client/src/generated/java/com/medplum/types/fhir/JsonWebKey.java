@@ -18,47 +18,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface JsonWebKey {
-  Optional<String> kid();
-
-  Optional<String> d();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<List<String>> x5c();
+  Optional<List<String>> key_ops();
 
   Optional<String> x5t();
 
-  Optional<String> dq();
+  Optional<String> qi();
 
   Optional<String> resourceType();
 
+  Optional<List<String>> x5c();
+
+  Optional<String> n();
+
+  Optional<Code> language();
+
   Optional<String> kty();
-
-  Optional<String> e();
-
-  Optional<String> alg();
-
-  Optional<Id> id();
-
-  Optional<List<String>> key_ops();
-
-  Optional<String> q();
-
-  Optional<String> qi();
 
   Optional<String> dp();
 
   Optional<Meta> meta();
 
+  Optional<String> use();
+
   Optional<Boolean> active();
 
   Optional<String> p();
 
-  Optional<String> use();
+  Optional<String> q();
 
-  Optional<String> n();
+  Optional<Id> id();
+
+  Optional<String> d();
+
+  Optional<String> alg();
+
+  Optional<String> kid();
+
+  Optional<String> e();
+
+  Optional<String> dq();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableJsonWebKey.Builder builder() {
     return ImmutableJsonWebKey.builder();

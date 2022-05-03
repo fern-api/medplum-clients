@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VisionPrescription_Prism {
-  Optional<List<Extension>> extension();
+  Optional<Decimal> amount();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Visionprescription_prismBase> base();
-
   Optional<String> id();
 
-  Optional<Decimal> amount();
+  Optional<List<Extension>> extension();
+
+  Optional<Visionprescription_prismBase> base();
 
   static ImmutableVisionPrescription_Prism.Builder builder() {
     return ImmutableVisionPrescription_Prism.builder();

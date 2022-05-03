@@ -17,51 +17,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_AddItem {
-  Optional<List<CodeableConcept>> modifier();
+  Optional<Quantity> quantity();
+
+  Optional<List<ExplanationOfBenefit_Detail1>> detail();
+
+  Optional<Decimal> factor();
 
   Optional<String> servicedDate();
 
-  Optional<List<ExplanationOfBenefit_Detail1>> detail();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<PositiveInt>> noteNumber();
+
+  Optional<List<PositiveInt>> detailSequence();
 
   CodeableConcept productOrService();
 
   Optional<List<CodeableConcept>> subSite();
 
-  Optional<List<PositiveInt>> itemSequence();
-
-  Optional<String> id();
-
-  Optional<CodeableConcept> bodySite();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
-
-  Optional<List<PositiveInt>> subDetailSequence();
-
-  Optional<List<CodeableConcept>> programCode();
-
-  Optional<Decimal> factor();
-
-  Optional<Money> net();
-
   Optional<List<Reference>> provider();
-
-  Optional<List<PositiveInt>> noteNumber();
 
   Optional<Period> servicedPeriod();
 
   Optional<Money> unitPrice();
 
-  Optional<Reference> locationReference();
+  Optional<Money> net();
 
-  Optional<Quantity> quantity();
+  Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<PositiveInt>> detailSequence();
+  Optional<CodeableConcept> bodySite();
 
   Optional<Address> locationAddress();
+
+  Optional<String> id();
+
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<Reference> locationReference();
+
+  Optional<List<PositiveInt>> subDetailSequence();
+
+  Optional<List<CodeableConcept>> programCode();
+
+  Optional<List<PositiveInt>> itemSequence();
 
   Optional<CodeableConcept> locationCodeableConcept();
 

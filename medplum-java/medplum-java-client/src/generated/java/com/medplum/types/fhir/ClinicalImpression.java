@@ -19,65 +19,65 @@ import org.immutables.value.Value;
 public interface ClinicalImpression {
   Optional<List<Annotation>> note();
 
-  Optional<List<Reference>> supportingInfo();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> summary();
-
-  Optional<Id> id();
-
-  Optional<Narrative> text();
-
-  Optional<Meta> meta();
-
-  Optional<String> description();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> problem();
-
-  Optional<Reference> encounter();
-
-  Optional<List<ClinicalImpression_Finding>> finding();
-
-  String resourceType();
-
-  Optional<CodeableConcept> code();
-
-  Optional<CodeableConcept> statusReason();
-
-  Optional<String> effectiveDateTime();
-
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> prognosisCodeableConcept();
-
-  Optional<DateTime> date();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ClinicalImpression_Investigation>> investigation();
-
-  Reference subject();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Reference> assessor();
-
-  Optional<List<Uri>> protocol();
+  Optional<Code> status();
 
   Optional<List<Reference>> prognosisReference();
 
   Optional<Reference> previous();
 
-  Optional<Code> status();
+  Optional<List<Uri>> protocol();
 
-  static ImmutableClinicalImpression.ResourceTypeBuildStage builder() {
+  Optional<Period> effectivePeriod();
+
+  Optional<String> summary();
+
+  Optional<CodeableConcept> statusReason();
+
+  Optional<String> description();
+
+  Optional<List<Reference>> supportingInfo();
+
+  Reference subject();
+
+  Optional<Meta> meta();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<ClinicalImpression_Finding>> finding();
+
+  Optional<Reference> encounter();
+
+  Optional<List<Reference>> problem();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Id> id();
+
+  Optional<String> effectiveDateTime();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> assessor();
+
+  Optional<List<CodeableConcept>> prognosisCodeableConcept();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<DateTime> date();
+
+  String resourceType();
+
+  Optional<List<ClinicalImpression_Investigation>> investigation();
+
+  static ImmutableClinicalImpression.SubjectBuildStage builder() {
     return ImmutableClinicalImpression.builder();
   }
 }

@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan_Detail {
-  Optional<CodeableConcept> statusReason();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> reasonCode();
+  Optional<Careplan_detailStatus> status();
 
   Optional<Boolean> doNotPerform();
 
-  Optional<Code> kind();
-
-  Optional<Reference> location();
-
-  Optional<CodeableConcept> productCodeableConcept();
-
-  Optional<Careplan_detailStatus> status();
-
-  Optional<List<Reference>> goal();
-
-  Optional<List<Reference>> performer();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Canonical>> instantiatesCanonical();
+  Optional<CodeableConcept> code();
 
   Optional<Quantity> quantity();
 
-  Optional<CodeableConcept> code();
+  Optional<Reference> location();
 
-  Optional<String> scheduledString();
+  Optional<List<Uri>> instantiatesUri();
 
-  Optional<Reference> productReference();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<CodeableConcept> statusReason();
 
-  Optional<Period> scheduledPeriod();
-
-  Optional<Timing> scheduledTiming();
+  Optional<List<Reference>> goal();
 
   Optional<Quantity> dailyAmount();
 
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<String> scheduledString();
+
+  Optional<List<Reference>> performer();
+
+  Optional<Timing> scheduledTiming();
+
+  Optional<Code> kind();
+
+  Optional<List<Reference>> reasonReference();
+
   Optional<String> description();
 
-  Optional<List<Uri>> instantiatesUri();
+  Optional<Period> scheduledPeriod();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> productReference();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<CodeableConcept> productCodeableConcept();
 
   static ImmutableCarePlan_Detail.Builder builder() {
     return ImmutableCarePlan_Detail.builder();

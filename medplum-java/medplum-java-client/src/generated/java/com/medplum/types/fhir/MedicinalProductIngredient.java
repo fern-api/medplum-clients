@@ -18,35 +18,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductIngredient {
-  Optional<Id> id();
-
   String resourceType();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Narrative> text();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Code> language();
-
-  CodeableConcept role();
-
-  Optional<List<Reference>> manufacturer();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<Boolean> allergenicIndicator();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Meta> meta();
 
   Optional<Identifier> identifier();
 
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  Optional<List<ResourceList>> contained();
+
   Optional<List<MedicinalProductIngredient_SpecifiedSubstance>> specifiedSubstance();
 
+  Optional<Narrative> text();
+
   Optional<MedicinalProductIngredient_Substance> substance();
+
+  Optional<List<Reference>> manufacturer();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  CodeableConcept role();
+
+  Optional<Code> language();
 
   static ImmutableMedicinalProductIngredient.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductIngredient.builder();

@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductAuthorization_Procedure {
-  Optional<Identifier> identifier();
-
   Optional<List<Extension>> extension();
 
-  Optional<Period> datePeriod();
+  Optional<List<MedicinalProductAuthorization_Procedure>> application();
 
   Optional<String> id();
 
-  Optional<String> dateDateTime();
-
-  Optional<List<MedicinalProductAuthorization_Procedure>> application();
+  Optional<Identifier> identifier();
 
   Optional<List<Extension>> modifierExtension();
 
   CodeableConcept type();
+
+  Optional<String> dateDateTime();
+
+  Optional<Period> datePeriod();
 
   static ImmutableMedicinalProductAuthorization_Procedure.TypeBuildStage builder() {
     return ImmutableMedicinalProductAuthorization_Procedure.builder();

@@ -17,21 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageHeader {
-  Optional<Canonical> definition();
+  Optional<Reference> enterer();
 
-  Optional<Coding> eventCoding();
+  Optional<Id> id();
+
+  Optional<Reference> sender();
+
+  Optional<MessageHeader_Response> response();
+
+  MessageHeader_Source source();
+
+  String resourceType();
+
+  Optional<Code> language();
 
   Optional<Meta> meta();
 
   Optional<Uri> implicitRules();
 
-  Optional<Reference> author();
-
-  MessageHeader_Source source();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Reference>> focus();
 
   Optional<List<ResourceList>> contained();
 
@@ -39,25 +43,21 @@ public interface MessageHeader {
 
   Optional<List<MessageHeader_Destination>> destination();
 
-  String resourceType();
+  Optional<Canonical> definition();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> reason();
 
   Optional<Narrative> text();
 
-  Optional<String> eventUri();
-
   Optional<Reference> responsible();
 
-  Optional<Reference> enterer();
+  Optional<Reference> author();
 
-  Optional<MessageHeader_Response> response();
+  Optional<Coding> eventCoding();
 
-  Optional<List<Reference>> focus();
-
-  Optional<Reference> sender();
-
-  Optional<Code> language();
+  Optional<String> eventUri();
 
   static ImmutableMessageHeader.SourceBuildStage builder() {
     return ImmutableMessageHeader.builder();

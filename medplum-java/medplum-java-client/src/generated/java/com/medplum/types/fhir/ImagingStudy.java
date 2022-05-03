@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImagingStudy {
+  Optional<List<Reference>> interpreter();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<String> description();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Meta> meta();
+
+  Optional<List<CodeableConcept>> procedureCode();
+
+  Optional<List<Reference>> basedOn();
+
   Optional<Reference> location();
+
+  Optional<UnsignedInt> numberOfSeries();
+
+  Optional<ImagingstudyStatus> status();
 
   Optional<DateTime> started();
 
   Optional<List<ImagingStudy_Series>> series();
 
-  Optional<Reference> procedureReference();
-
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<Id> id();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> encounter();
-
-  Optional<Narrative> text();
-
-  Optional<List<CodeableConcept>> procedureCode();
-
-  Optional<UnsignedInt> numberOfSeries();
-
-  Optional<UnsignedInt> numberOfInstances();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> interpreter();
-
-  String resourceType();
-
-  Reference subject();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<Coding>> modality();
-
-  Optional<Reference> referrer();
-
   Optional<List<Reference>> endpoint();
-
-  Optional<Code> language();
-
-  Optional<ImagingstudyStatus> status();
-
-  Optional<String> description();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Reference>> reasonReference();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Code> language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> encounter();
+
+  Optional<UnsignedInt> numberOfInstances();
+
+  String resourceType();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> referrer();
+
+  Optional<Uri> implicitRules();
+
+  Reference subject();
+
+  Optional<List<Coding>> modality();
+
+  Optional<Reference> procedureReference();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImagingStudy.ResourceTypeBuildStage builder() {
     return ImmutableImagingStudy.builder();

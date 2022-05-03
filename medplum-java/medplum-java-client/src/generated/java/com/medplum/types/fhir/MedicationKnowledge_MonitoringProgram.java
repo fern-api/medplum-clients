@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_MonitoringProgram {
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> type();
 
-  Optional<String> name();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> type();
+  Optional<String> name();
 
   Optional<String> id();
 

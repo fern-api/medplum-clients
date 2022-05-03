@@ -17,43 +17,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder {
-  Optional<NutritionOrder_OralDiet> oralDiet();
-
-  Optional<List<ResourceList>> contained();
-
-  Reference patient();
-
-  Optional<Reference> orderer();
-
-  Optional<Id> id();
+  Optional<List<NutritionOrder_Supplement>> supplement();
 
   Optional<Reference> encounter();
 
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<List<Uri>> instantiates();
-
-  Optional<DateTime> dateTime();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<List<CodeableConcept>> excludeFoodModifier();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> foodPreferenceModifier();
-
-  Optional<List<Reference>> allergyIntolerance();
-
-  Optional<NutritionOrder_EnteralFormula> enteralFormula();
+  Optional<NutritionOrder_OralDiet> oralDiet();
 
   Optional<List<Identifier>> identifier();
 
+  Optional<Code> status();
+
+  Optional<Id> id();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> allergyIntolerance();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Code> status();
+  Optional<List<Uri>> instantiates();
+
+  Optional<Code> intent();
+
+  Optional<NutritionOrder_EnteralFormula> enteralFormula();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> orderer();
 
   String resourceType();
 
@@ -61,15 +53,23 @@ public interface NutritionOrder {
 
   Optional<Narrative> text();
 
-  Optional<List<NutritionOrder_Supplement>> supplement();
-
-  Optional<Code> intent();
-
-  Optional<Uri> implicitRules();
+  Optional<List<Canonical>> instantiatesCanonical();
 
   Optional<Meta> meta();
 
-  static ImmutableNutritionOrder.PatientBuildStage builder() {
+  Optional<List<CodeableConcept>> excludeFoodModifier();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<List<CodeableConcept>> foodPreferenceModifier();
+
+  Optional<List<Annotation>> note();
+
+  Reference patient();
+
+  Optional<DateTime> dateTime();
+
+  static ImmutableNutritionOrder.ResourceTypeBuildStage builder() {
     return ImmutableNutritionOrder.builder();
   }
 }

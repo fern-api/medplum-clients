@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskAssessment {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> performer();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<List<RiskAssessment_Prediction>> prediction();
-
-  Reference subject();
-
-  Optional<Reference> condition();
-
-  Optional<Reference> parent();
-
-  Optional<List<Reference>> basis();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> basedOn();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<CodeableConcept> method();
+  Optional<CodeableConcept> code();
 
   Optional<Reference> encounter();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<RiskAssessment_Prediction>> prediction();
+
+  Optional<Period> occurrencePeriod();
+
   Optional<String> mitigation();
 
-  Optional<CodeableConcept> code();
-
-  Optional<Code> language();
+  Optional<List<Reference>> reasonReference();
 
   Optional<Code> status();
 
-  String resourceType();
+  Optional<Reference> performer();
+
+  Optional<Reference> condition();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> basis();
+
+  Optional<List<Annotation>> note();
 
   Optional<Uri> implicitRules();
+
+  Optional<Narrative> text();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Code> language();
+
+  String resourceType();
+
+  Reference subject();
 
   Optional<Id> id();
 
   Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<List<Identifier>> identifier();
+  Optional<CodeableConcept> method();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<Reference> parent();
 
-  Optional<List<Annotation>> note();
+  Optional<List<Extension>> modifierExtension();
 
-  static ImmutableRiskAssessment.SubjectBuildStage builder() {
+  Optional<Reference> basedOn();
+
+  static ImmutableRiskAssessment.ResourceTypeBuildStage builder() {
     return ImmutableRiskAssessment.builder();
   }
 }

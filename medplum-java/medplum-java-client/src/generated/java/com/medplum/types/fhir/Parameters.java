@@ -21,9 +21,9 @@ public interface Parameters {
 
   String resourceType();
 
-  Optional<Meta> meta();
-
   Optional<Id> id();
+
+  Optional<Meta> meta();
 
   Optional<Code> language();
 

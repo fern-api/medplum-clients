@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface SubstancePolymer_Repeat {
   Optional<Integer> numberOfUnits();
 
-  Optional<List<SubstancePolymer_RepeatUnit>> repeatUnit();
-
-  Optional<String> id();
-
-  Optional<String> averageMolecularFormula();
-
   Optional<CodeableConcept> repeatUnitAmountType();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> averageMolecularFormula();
+
+  Optional<String> id();
+
+  Optional<List<SubstancePolymer_RepeatUnit>> repeatUnit();
 
   Optional<List<Extension>> extension();
 

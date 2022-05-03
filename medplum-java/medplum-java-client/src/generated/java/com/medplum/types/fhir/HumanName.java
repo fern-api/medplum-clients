@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HumanName {
-  Optional<HumannameUse> use();
-
-  Optional<String> family();
-
-  Optional<String> id();
+  Optional<List<String>> prefix();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<String>> prefix();
-
   Optional<List<String>> suffix();
-
-  Optional<Period> period();
 
   Optional<String> text();
 
+  Optional<HumannameUse> use();
+
   Optional<List<String>> given();
+
+  Optional<Period> period();
+
+  Optional<String> id();
+
+  Optional<String> family();
 
   static ImmutableHumanName.Builder builder() {
     return ImmutableHumanName.builder();

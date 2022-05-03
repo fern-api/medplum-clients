@@ -17,89 +17,89 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Procedure {
-  Optional<CodeableConcept> category();
+  Optional<Code> status();
 
-  Optional<List<Reference>> complicationDetail();
-
-  String resourceType();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Procedure_FocalDevice>> focalDevice();
 
-  Optional<Age> performedAge();
+  Optional<List<Procedure_Performer>> performer();
 
-  Optional<List<Reference>> report();
-
-  Optional<List<Reference>> basedOn();
+  Optional<List<CodeableConcept>> complication();
 
   Optional<String> performedString();
 
+  Optional<List<CodeableConcept>> followUp();
+
   Optional<Uri> implicitRules();
 
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
+  Optional<Code> language();
 
   Optional<Reference> recorder();
 
-  Optional<List<Uri>> instantiatesUri();
+  Optional<List<Reference>> complicationDetail();
 
-  Optional<Reference> location();
+  Optional<List<Reference>> usedReference();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<List<Reference>> basedOn();
 
-  Optional<CodeableConcept> outcome();
+  Optional<List<CodeableConcept>> usedCode();
 
-  Optional<Id> id();
-
-  Optional<Reference> encounter();
+  Optional<List<Reference>> partOf();
 
   Reference subject();
 
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Age> performedAge();
+
+  Optional<CodeableConcept> outcome();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> performedDateTime();
+
   Optional<List<CodeableConcept>> bodySite();
+
+  Optional<CodeableConcept> category();
+
+  String resourceType();
+
+  Optional<Range> performedRange();
+
+  Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Period> performedPeriod();
+
+  Optional<CodeableConcept> statusReason();
+
+  Optional<Reference> encounter();
+
+  Optional<List<Reference>> report();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<CodeableConcept>> followUp();
-
-  Optional<List<Procedure_Performer>> performer();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> usedReference();
-
-  Optional<String> performedDateTime();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<CodeableConcept>> usedCode();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Code> status();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> complication();
-
-  Optional<Code> language();
-
-  Optional<CodeableConcept> statusReason();
-
-  Optional<Period> performedPeriod();
-
-  Optional<Range> performedRange();
-
-  Optional<List<ResourceList>> contained();
+  Optional<Reference> location();
 
   Optional<Reference> asserter();
 
-  static ImmutableProcedure.ResourceTypeBuildStage builder() {
+  Optional<List<Uri>> instantiatesUri();
+
+  static ImmutableProcedure.SubjectBuildStage builder() {
     return ImmutableProcedure.builder();
   }
 }

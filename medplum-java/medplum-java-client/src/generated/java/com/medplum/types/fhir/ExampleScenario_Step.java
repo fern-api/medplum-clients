@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Step {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<ExampleScenario_Operation> operation();
-
   Optional<List<ExampleScenario_Alternative>> alternative();
 
-  Optional<Boolean> pause();
+  Optional<List<Extension>> extension();
 
   Optional<List<ExampleScenario_Process>> process();
 
-  Optional<String> id();
+  Optional<ExampleScenario_Operation> operation();
+
+  Optional<Boolean> pause();
 
   static ImmutableExampleScenario_Step.Builder builder() {
     return ImmutableExampleScenario_Step.builder();

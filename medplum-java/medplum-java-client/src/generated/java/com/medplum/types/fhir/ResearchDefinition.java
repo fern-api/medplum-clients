@@ -18,93 +18,93 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ResearchDefinition {
-  Optional<Reference> exposureAlternative();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<CodeableConcept>> topic();
-
-  String resourceType();
-
-  Optional<Period> effectivePeriod();
-
   Optional<Uri> implicitRules();
+
+  Optional<Markdown> description();
 
   Optional<ResearchdefinitionStatus> status();
 
-  Optional<List<ContactDetail>> editor();
+  Optional<Reference> outcome();
 
-  Optional<Uri> url();
+  Optional<List<String>> comment();
+
+  Optional<Reference> exposureAlternative();
+
+  Optional<String> name();
 
   Optional<Narrative> text();
 
-  Optional<Boolean> experimental();
+  Optional<Uri> url();
 
-  Optional<DateTime> date();
-
-  Optional<Markdown> purpose();
-
-  Optional<String> version();
-
-  Optional<String> shortTitle();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<String> title();
-
-  Optional<List<ContactDetail>> author();
+  Optional<List<ContactDetail>> editor();
 
   Optional<Id> id();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<List<CodeableConcept>> topic();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<ContactDetail>> endorser();
 
   Optional<Markdown> copyright();
 
   Optional<List<RelatedArtifact>> relatedArtifact();
 
-  Optional<Markdown> description();
+  String resourceType();
 
-  Optional<Reference> outcome();
+  Optional<List<ContactDetail>> contact();
+
+  Optional<String> shortTitle();
 
   Optional<String> usage();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Canonical>> library();
-
-  Optional<String> name();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> subjectReference();
+  Optional<Reference> exposure();
 
   Optional<String> subtitle();
 
+  Optional<String> title();
+
   Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<Reference> exposure();
-
-  Optional<Date> approvalDate();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<List<String>> comment();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  Optional<Code> language();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<Meta> meta();
 
   Reference population();
 
+  Optional<Code> language();
+
+  Optional<Reference> subjectReference();
+
+  Optional<List<Canonical>> library();
+
+  Optional<Meta> meta();
+
+  Optional<String> version();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Date> approvalDate();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Boolean> experimental();
+
   Optional<String> publisher();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<DateTime> date();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Identifier>> identifier();
 
   static ImmutableResearchDefinition.ResourceTypeBuildStage builder() {
     return ImmutableResearchDefinition.builder();

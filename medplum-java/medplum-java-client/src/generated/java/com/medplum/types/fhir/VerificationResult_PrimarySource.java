@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VerificationResult_PrimarySource {
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> who();
 
   Optional<CodeableConcept> validationStatus();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> who();
+  Optional<List<CodeableConcept>> type();
 
   Optional<DateTime> validationDate();
 
-  Optional<List<CodeableConcept>> pushTypeAvailable();
-
-  Optional<List<CodeableConcept>> type();
+  Optional<CodeableConcept> canPushUpdates();
 
   Optional<List<CodeableConcept>> communicationMethod();
 
-  Optional<CodeableConcept> canPushUpdates();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> pushTypeAvailable();
 
   static ImmutableVerificationResult_PrimarySource.Builder builder() {
     return ImmutableVerificationResult_PrimarySource.builder();

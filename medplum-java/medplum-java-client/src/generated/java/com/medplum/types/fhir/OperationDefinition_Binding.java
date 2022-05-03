@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition_Binding {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Operationdefinition_bindingStrength> strength();
 
   Canonical valueSet();
 
+  Optional<String> id();
+
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableOperationDefinition_Binding.ValueSetBuildStage builder() {
     return ImmutableOperationDefinition_Binding.builder();

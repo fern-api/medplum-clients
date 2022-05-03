@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeSystem {
-  Optional<Code> language();
-
-  Optional<CodesystemHierarchymeaning> hierarchyMeaning();
-
-  Optional<UnsignedInt> count();
-
-  Optional<List<CodeSystem_Concept>> concept();
-
   String resourceType();
 
-  Optional<Boolean> compositional();
+  Optional<List<ResourceList>> contained();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Identifier>> identifier();
 
   Optional<List<CodeSystem_Filter>> filter();
 
-  Optional<Canonical> valueSet();
-
-  Optional<Id> id();
-
-  Optional<String> name();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> version();
 
-  Optional<CodesystemStatus> status();
+  Optional<Markdown> description();
 
-  Optional<Markdown> purpose();
+  Optional<Meta> meta();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DateTime> date();
+
+  Optional<String> publisher();
+
+  Optional<Boolean> experimental();
+
+  Optional<Boolean> caseSensitive();
+
+  Optional<Boolean> versionNeeded();
+
+  Optional<CodesystemHierarchymeaning> hierarchyMeaning();
 
   Optional<Markdown> copyright();
 
   Optional<List<ContactDetail>> contact();
 
-  Optional<Narrative> text();
+  Optional<List<CodeSystem_Concept>> concept();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Id> id();
 
-  Optional<List<Extension>> extension();
+  Optional<Markdown> purpose();
 
   Optional<CodesystemContent> content();
 
-  Optional<DateTime> date();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<UnsignedInt> count();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Code> language();
 
-  Optional<List<CodeSystem_Property>> property();
+  Optional<Boolean> compositional();
 
-  Optional<Meta> meta();
-
-  Optional<Markdown> description();
-
-  Optional<Boolean> caseSensitive();
-
-  Optional<String> publisher();
-
-  Optional<String> title();
-
-  Optional<Boolean> versionNeeded();
+  Optional<List<UsageContext>> useContext();
 
   Optional<Canonical> supplements();
 
   Optional<Uri> url();
 
-  Optional<Boolean> experimental();
+  Optional<String> name();
+
+  Optional<List<CodeSystem_Property>> property();
+
+  Optional<CodesystemStatus> status();
+
+  Optional<Canonical> valueSet();
 
   static ImmutableCodeSystem.ResourceTypeBuildStage builder() {
     return ImmutableCodeSystem.builder();

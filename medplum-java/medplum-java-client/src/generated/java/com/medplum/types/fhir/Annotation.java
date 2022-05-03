@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Annotation {
-  Optional<String> id();
-
-  Optional<Markdown> text();
-
   Optional<String> authorString();
 
-  Optional<List<Extension>> extension();
+  Optional<DateTime> time();
 
   Optional<Reference> authorReference();
 
-  Optional<DateTime> time();
+  Optional<Markdown> text();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableAnnotation.Builder builder() {
     return ImmutableAnnotation.builder();

@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPharmaceutical {
-  Optional<Code> language();
+  Optional<CodeableConcept> unitOfPresentation();
 
   List<MedicinalProductPharmaceutical_RouteOfAdministration> routeOfAdministration();
 
-  Optional<List<MedicinalProductPharmaceutical_Characteristics>> characteristics();
+  Optional<Id> id();
 
-  Optional<Meta> meta();
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Reference>> device();
 
-  Optional<CodeableConcept> unitOfPresentation();
+  Optional<List<MedicinalProductPharmaceutical_Characteristics>> characteristics();
 
-  Optional<Id> id();
+  Optional<List<Extension>> extension();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  String resourceType();
 
   CodeableConcept administrableDoseForm();
 
-  Optional<List<Extension>> extension();
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<Narrative> text();
 
   Optional<List<Reference>> ingredient();
 
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
-
-  static ImmutableMedicinalProductPharmaceutical.AdministrableDoseFormBuildStage builder() {
+  static ImmutableMedicinalProductPharmaceutical.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductPharmaceutical.builder();
   }
 }

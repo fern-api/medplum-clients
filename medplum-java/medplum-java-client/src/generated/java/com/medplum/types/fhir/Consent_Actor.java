@@ -19,9 +19,9 @@ import org.immutables.value.Value;
 public interface Consent_Actor {
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   CodeableConcept role();
 

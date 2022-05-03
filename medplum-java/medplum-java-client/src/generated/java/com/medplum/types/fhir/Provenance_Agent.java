@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Provenance_Agent {
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> onBehalfOf();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
   Optional<List<CodeableConcept>> role();
 
-  Optional<Reference> onBehalfOf();
+  Optional<String> id();
 
   Reference who();
 

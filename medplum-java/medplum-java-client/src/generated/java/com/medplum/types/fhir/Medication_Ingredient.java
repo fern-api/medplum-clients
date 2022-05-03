@@ -20,17 +20,17 @@ import org.immutables.value.Value;
 public interface Medication_Ingredient {
   Optional<List<Extension>> extension();
 
-  Optional<Boolean> isActive();
-
-  Optional<Ratio> strength();
-
   Optional<String> id();
 
   Optional<CodeableConcept> itemCodeableConcept();
 
+  Optional<Reference> itemReference();
+
+  Optional<Ratio> strength();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> itemReference();
+  Optional<Boolean> isActive();
 
   static ImmutableMedication_Ingredient.Builder builder() {
     return ImmutableMedication_Ingredient.builder();

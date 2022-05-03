@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_Nutrient {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> modifier();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Quantity> amount();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
+
+  Optional<Quantity> amount();
 
   static ImmutableNutritionOrder_Nutrient.Builder builder() {
     return ImmutableNutritionOrder_Nutrient.builder();

@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface ConceptMap_Group {
   Optional<Uri> source();
 
-  Optional<ConceptMap_Unmapped> unmapped();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> target();
-
   List<ConceptMap_Element> element();
 
   Optional<String> sourceVersion();
 
   Optional<String> targetVersion();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<ConceptMap_Unmapped> unmapped();
+
+  Optional<Uri> target();
 
   static ImmutableConceptMap_Group.Builder builder() {
     return ImmutableConceptMap_Group.builder();

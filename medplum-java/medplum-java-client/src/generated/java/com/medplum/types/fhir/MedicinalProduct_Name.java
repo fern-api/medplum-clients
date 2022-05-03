@@ -21,13 +21,13 @@ public interface MedicinalProduct_Name {
 
   Optional<List<Extension>> extension();
 
-  Optional<List<MedicinalProduct_NamePart>> namePart();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<MedicinalProduct_CountryLanguage>> countryLanguage();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<MedicinalProduct_NamePart>> namePart();
 
   static ImmutableMedicinalProduct_Name.Builder builder() {
     return ImmutableMedicinalProduct_Name.builder();

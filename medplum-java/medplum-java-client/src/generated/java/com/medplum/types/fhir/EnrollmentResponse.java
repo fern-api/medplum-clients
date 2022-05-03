@@ -17,13 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EnrollmentResponse {
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> disposition();
-
-  Optional<DateTime> created();
+  Optional<Code> language();
 
   Optional<Reference> request();
 
@@ -31,17 +25,11 @@ public interface EnrollmentResponse {
 
   Optional<List<ResourceList>> contained();
 
-  String resourceType();
+  Optional<String> disposition();
+
+  Optional<DateTime> created();
 
   Optional<Reference> organization();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Code> language();
-
-  Optional<EnrollmentresponseOutcome> outcome();
-
-  Optional<Reference> requestProvider();
 
   Optional<List<Extension>> extension();
 
@@ -49,7 +37,19 @@ public interface EnrollmentResponse {
 
   Optional<Meta> meta();
 
+  String resourceType();
+
   Optional<Code> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<EnrollmentresponseOutcome> outcome();
+
+  Optional<Reference> requestProvider();
 
   static ImmutableEnrollmentResponse.ResourceTypeBuildStage builder() {
     return ImmutableEnrollmentResponse.builder();

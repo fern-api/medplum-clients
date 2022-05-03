@@ -21,11 +21,11 @@ public interface MedicationKnowledge_MaxDispense {
 
   Optional<List<Extension>> extension();
 
+  Optional<List<Extension>> modifierExtension();
+
   Quantity quantity();
 
   Optional<Duration> period();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMedicationKnowledge_MaxDispense.QuantityBuildStage builder() {
     return ImmutableMedicationKnowledge_MaxDispense.builder();

@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface UserConfiguration {
-  Optional<List<UserConfiguration_Option>> option();
-
-  Optional<Meta> meta();
+  Optional<Id> id();
 
   Optional<String> resourceType();
 
   Optional<Uri> implicitRules();
 
-  Optional<Id> id();
-
   Optional<String> name();
+
+  Optional<Meta> meta();
+
+  Optional<Code> language();
 
   Optional<List<UserConfiguration_Menu>> menu();
 
-  Optional<Code> language();
+  Optional<List<UserConfiguration_Option>> option();
 
   Optional<List<UserConfiguration_Search>> search();
 

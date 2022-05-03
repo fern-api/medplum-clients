@@ -19,39 +19,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Dosage {
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<CodeableConcept>> additionalInstruction();
+  Optional<CodeableConcept> site();
+
+  Optional<Quantity> maxDosePerLifetime();
 
   Optional<Boolean> asNeededBoolean();
 
-  Optional<Integer> sequence();
-
-  Optional<String> patientInstruction();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Dosage_DoseAndRate>> doseAndRate();
-
-  Optional<Quantity> maxDosePerAdministration();
-
-  Optional<Timing> timing();
-
-  Optional<CodeableConcept> route();
-
-  Optional<Quantity> maxDosePerLifetime();
+  Optional<List<CodeableConcept>> additionalInstruction();
 
   Optional<CodeableConcept> method();
 
   Optional<Ratio> maxDosePerPeriod();
 
-  Optional<String> text();
+  Optional<Quantity> maxDosePerAdministration();
 
   Optional<CodeableConcept> asNeededCodeableConcept();
 
-  Optional<CodeableConcept> site();
+  Optional<String> patientInstruction();
+
+  Optional<List<Dosage_DoseAndRate>> doseAndRate();
+
+  Optional<Integer> sequence();
+
+  Optional<String> text();
+
+  Optional<CodeableConcept> route();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
+
+  Optional<Timing> timing();
 
   static ImmutableDosage.Builder builder() {
     return ImmutableDosage.builder();

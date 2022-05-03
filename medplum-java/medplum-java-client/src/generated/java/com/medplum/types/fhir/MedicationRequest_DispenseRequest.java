@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationRequest_DispenseRequest {
-  Optional<String> id();
+  Optional<UnsignedInt> numberOfRepeatsAllowed();
 
-  Optional<Duration> expectedSupplyDuration();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<MedicationRequest_InitialFill> initialFill();
+  Optional<Reference> performer();
 
   Optional<Duration> dispenseInterval();
 
   Optional<Period> validityPeriod();
 
-  Optional<UnsignedInt> numberOfRepeatsAllowed();
-
-  Optional<Reference> performer();
-
   Optional<Quantity> quantity();
 
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<MedicationRequest_InitialFill> initialFill();
+
+  Optional<Duration> expectedSupplyDuration();
 
   static ImmutableMedicationRequest_DispenseRequest.Builder builder() {
     return ImmutableMedicationRequest_DispenseRequest.builder();

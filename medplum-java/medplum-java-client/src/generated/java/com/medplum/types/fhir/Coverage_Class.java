@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Coverage_Class {
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> value();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> name();
+  Optional<String> value();
+
+  Optional<String> id();
 
   CodeableConcept type();
+
+  Optional<String> name();
 
   static ImmutableCoverage_Class.TypeBuildStage builder() {
     return ImmutableCoverage_Class.builder();

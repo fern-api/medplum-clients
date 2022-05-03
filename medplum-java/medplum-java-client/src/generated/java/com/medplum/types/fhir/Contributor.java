@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contributor {
-  Optional<ContributorType> type();
-
-  Optional<String> name();
+  Optional<List<ContactDetail>> contact();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<String> name();
 
-  Optional<List<ContactDetail>> contact();
+  Optional<ContributorType> type();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableContributor.Builder builder() {
     return ImmutableContributor.builder();

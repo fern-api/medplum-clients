@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DataRequirement_Sort {
-  Optional<List<Extension>> extension();
+  Optional<String> path();
 
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Datarequirement_sortDirection> direction();
+  Optional<List<Extension>> extension();
 
-  Optional<String> path();
+  Optional<Datarequirement_sortDirection> direction();
 
   static ImmutableDataRequirement_Sort.Builder builder() {
     return ImmutableDataRequirement_Sort.builder();

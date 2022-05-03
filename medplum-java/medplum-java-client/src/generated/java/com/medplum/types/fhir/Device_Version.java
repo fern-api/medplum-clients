@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface Device_Version {
   Optional<Identifier> component();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
-  Optional<CodeableConcept> type();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> value();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
 
   static ImmutableDevice_Version.Builder builder() {
     return ImmutableDevice_Version.builder();

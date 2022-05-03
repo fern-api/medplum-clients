@@ -21,71 +21,71 @@ public interface Condition {
 
   Optional<String> onsetDateTime();
 
-  Optional<Meta> meta();
-
-  Optional<CodeableConcept> code();
-
-  Optional<String> onsetString();
-
-  String resourceType();
-
-  Optional<CodeableConcept> verificationStatus();
-
-  Reference subject();
-
-  Optional<Period> abatementPeriod();
-
-  Optional<CodeableConcept> severity();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Range> abatementRange();
-
-  Optional<List<Condition_Stage>> stage();
-
-  Optional<Age> abatementAge();
-
-  Optional<Reference> encounter();
-
-  Optional<Period> onsetPeriod();
+  Optional<String> abatementString();
 
   Optional<Age> onsetAge();
 
-  Optional<Reference> asserter();
-
   Optional<List<Condition_Evidence>> evidence();
-
-  Optional<Range> onsetRange();
-
-  Optional<CodeableConcept> clinicalStatus();
-
-  Optional<Reference> recorder();
 
   Optional<List<CodeableConcept>> category();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<Identifier>> identifier();
+
+  Optional<Period> onsetPeriod();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Period> abatementPeriod();
 
   Optional<List<CodeableConcept>> bodySite();
 
-  Optional<List<Identifier>> identifier();
+  Optional<CodeableConcept> verificationStatus();
 
-  Optional<String> abatementString();
+  Optional<List<ResourceList>> contained();
 
-  Optional<Code> language();
+  Optional<Reference> asserter();
 
-  Optional<String> abatementDateTime();
+  Optional<List<Condition_Stage>> stage();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> code();
+
+  Optional<CodeableConcept> severity();
+
+  Reference subject();
+
+  Optional<Range> abatementRange();
 
   Optional<DateTime> recordedDate();
 
-  static ImmutableCondition.ResourceTypeBuildStage builder() {
+  String resourceType();
+
+  Optional<Id> id();
+
+  Optional<Meta> meta();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> encounter();
+
+  Optional<String> abatementDateTime();
+
+  Optional<Code> language();
+
+  Optional<Reference> recorder();
+
+  Optional<Range> onsetRange();
+
+  Optional<Age> abatementAge();
+
+  Optional<String> onsetString();
+
+  Optional<CodeableConcept> clinicalStatus();
+
+  static ImmutableCondition.SubjectBuildStage builder() {
     return ImmutableCondition.builder();
   }
 }

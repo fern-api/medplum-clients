@@ -18,73 +18,73 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageDefinition {
-  Optional<String> title();
-
-  Optional<Meta> meta();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Boolean> experimental();
-
-  Optional<List<CodeableConcept>> jurisdiction();
 
   Optional<MessagedefinitionResponserequired> responseRequired();
 
-  String resourceType();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<MessageDefinition_AllowedResponse>> allowedResponse();
-
-  Optional<Markdown> purpose();
-
-  Optional<String> publisher();
-
-  Optional<Markdown> description();
-
-  Optional<List<Canonical>> parent();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<Canonical>> replaces();
-
-  Optional<List<MessageDefinition_Focus>> focus();
-
-  Optional<String> name();
-
-  Optional<MessagedefinitionCategory> category();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> version();
-
-  Optional<MessagedefinitionStatus> status();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Canonical> base();
-
-  Optional<Code> language();
-
-  Optional<Uri> url();
-
-  Optional<DateTime> date();
+  Optional<Uri> implicitRules();
 
   Optional<Coding> eventCoding();
 
-  Optional<List<ContactDetail>> contact();
+  Optional<List<MessageDefinition_Focus>> focus();
 
-  Optional<Narrative> text();
+  Optional<List<Identifier>> identifier();
 
-  Optional<List<Extension>> extension();
+  Optional<Code> language();
+
+  Optional<Markdown> description();
+
+  Optional<String> title();
+
+  Optional<Markdown> purpose();
+
+  Optional<String> version();
+
+  Optional<MessagedefinitionCategory> category();
+
+  Optional<DateTime> date();
 
   Optional<String> eventUri();
 
+  Optional<List<Canonical>> replaces();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> name();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<MessagedefinitionStatus> status();
+
+  Optional<Uri> url();
+
+  Optional<Markdown> copyright();
+
+  Optional<Id> id();
+
+  String resourceType();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
   Optional<List<Canonical>> graph();
+
+  Optional<Canonical> base();
+
+  Optional<List<MessageDefinition_AllowedResponse>> allowedResponse();
+
+  Optional<Meta> meta();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Canonical>> parent();
+
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<UsageContext>> useContext();
 
   static ImmutableMessageDefinition.ResourceTypeBuildStage builder() {
     return ImmutableMessageDefinition.builder();

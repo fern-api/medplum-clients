@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Manifest {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<List<ImplementationGuide_Page1>> page();
 
-  Optional<List<String>> other();
-
-  Optional<List<Extension>> extension();
-
-  List<ImplementationGuide_Resource1> resource();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Url> rendering();
 
+  Optional<List<String>> other();
+
   Optional<String> id();
+
+  List<ImplementationGuide_Resource1> resource();
 
   Optional<List<String>> image();
 

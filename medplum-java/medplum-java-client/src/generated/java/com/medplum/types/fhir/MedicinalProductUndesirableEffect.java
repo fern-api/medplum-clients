@@ -17,33 +17,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductUndesirableEffect {
-  Optional<Id> id();
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> subject();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Population>> population();
+  Optional<Meta> meta();
+
+  String resourceType();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
 
   Optional<CodeableConcept> symptomConditionEffect();
 
   Optional<CodeableConcept> frequencyOfOccurrence();
 
-  Optional<List<Reference>> subject();
-
-  String resourceType();
-
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> language();
+  Optional<List<Population>> population();
 
   Optional<CodeableConcept> classification();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> implicitRules();
 
   static ImmutableMedicinalProductUndesirableEffect.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductUndesirableEffect.builder();

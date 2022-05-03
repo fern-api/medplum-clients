@@ -17,33 +17,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImmunizationRecommendation {
-  List<ImmunizationRecommendation_Recommendation> recommendation();
-
-  String resourceType();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Identifier>> identifier();
 
   Optional<Reference> authority();
 
+  Optional<Narrative> text();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<DateTime> date();
+
   Optional<Id> id();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Code> language();
 
   Reference patient();
+
+  List<ImmunizationRecommendation_Recommendation> recommendation();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Extension>> extension();
 
   Optional<Meta> meta();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> language();
-
-  Optional<DateTime> date();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImmunizationRecommendation.ResourceTypeBuildStage builder() {
     return ImmutableImmunizationRecommendation.builder();

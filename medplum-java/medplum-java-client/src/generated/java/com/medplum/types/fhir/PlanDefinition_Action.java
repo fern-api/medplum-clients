@@ -17,79 +17,79 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_Action {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Range> timingRange();
-
-  Optional<Plandefinition_actionPrecheckbehavior> precheckBehavior();
-
-  Optional<List<PlanDefinition_DynamicValue>> dynamicValue();
-
-  Optional<List<RelatedArtifact>> documentation();
-
-  Optional<String> title();
-
-  Optional<String> prefix();
-
-  Optional<List<Id>> goalId();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> timingDateTime();
-
   Optional<String> definitionUri();
-
-  Optional<String> id();
-
-  Optional<String> description();
-
-  Optional<Age> timingAge();
-
-  Optional<Timing> timingTiming();
-
-  Optional<List<PlanDefinition_Condition>> condition();
-
-  Optional<List<DataRequirement>> output();
-
-  Optional<Plandefinition_actionRequiredbehavior> requiredBehavior();
-
-  Optional<Canonical> transform();
-
-  Optional<Code> priority();
-
-  Optional<Reference> subjectReference();
 
   Optional<List<DataRequirement>> input();
 
-  Optional<String> definitionCanonical();
+  Optional<Plandefinition_actionPrecheckbehavior> precheckBehavior();
 
-  Optional<List<PlanDefinition_Action>> action();
+  Optional<Reference> subjectReference();
 
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<Plandefinition_actionGroupingbehavior> groupingBehavior();
-
-  Optional<Period> timingPeriod();
-
-  Optional<List<TriggerDefinition>> trigger();
+  Optional<List<PlanDefinition_DynamicValue>> dynamicValue();
 
   Optional<List<CodeableConcept>> code();
 
-  Optional<Duration> timingDuration();
+  Optional<Age> timingAge();
 
-  Optional<List<CodeableConcept>> reason();
+  Optional<Code> priority();
+
+  Optional<List<RelatedArtifact>> documentation();
+
+  Optional<List<PlanDefinition_Action>> action();
 
   Optional<Plandefinition_actionSelectionbehavior> selectionBehavior();
 
+  Optional<List<DataRequirement>> output();
+
+  Optional<List<PlanDefinition_Condition>> condition();
+
+  Optional<Range> timingRange();
+
+  Optional<List<Id>> goalId();
+
   Optional<Plandefinition_actionCardinalitybehavior> cardinalityBehavior();
 
-  Optional<String> textEquivalent();
-
-  Optional<List<PlanDefinition_Participant>> participant();
+  Optional<List<CodeableConcept>> reason();
 
   Optional<List<PlanDefinition_RelatedAction>> relatedAction();
 
+  Optional<List<PlanDefinition_Participant>> participant();
+
+  Optional<String> title();
+
+  Optional<Timing> timingTiming();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<Canonical> transform();
+
+  Optional<String> prefix();
+
+  Optional<String> timingDateTime();
+
+  Optional<String> id();
+
+  Optional<String> textEquivalent();
+
+  Optional<Period> timingPeriod();
+
+  Optional<String> description();
+
+  Optional<Plandefinition_actionGroupingbehavior> groupingBehavior();
+
+  Optional<Duration> timingDuration();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> definitionCanonical();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<CodeableConcept> type();
+
+  Optional<Plandefinition_actionRequiredbehavior> requiredBehavior();
+
+  Optional<List<TriggerDefinition>> trigger();
 
   static ImmutablePlanDefinition_Action.Builder builder() {
     return ImmutablePlanDefinition_Action.builder();

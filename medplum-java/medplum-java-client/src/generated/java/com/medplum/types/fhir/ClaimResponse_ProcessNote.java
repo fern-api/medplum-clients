@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_ProcessNote {
-  Optional<String> id();
+  Optional<Claimresponse_processnoteType> type();
 
-  Optional<String> text();
+  Optional<CodeableConcept> language();
 
   Optional<List<Extension>> extension();
 
-  Optional<Claimresponse_processnoteType> type();
-
-  Optional<PositiveInt> number();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> language();
+  Optional<String> text();
+
+  Optional<PositiveInt> number();
 
   static ImmutableClaimResponse_ProcessNote.Builder builder() {
     return ImmutableClaimResponse_ProcessNote.builder();

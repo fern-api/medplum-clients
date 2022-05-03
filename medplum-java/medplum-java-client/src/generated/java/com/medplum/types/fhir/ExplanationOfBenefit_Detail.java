@@ -17,15 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Detail {
-  Optional<List<CodeableConcept>> modifier();
+  CodeableConcept productOrService();
 
-  Optional<PositiveInt> sequence();
+  Optional<List<Extension>> extension();
 
-  Optional<Money> unitPrice();
+  Optional<List<CodeableConcept>> programCode();
 
   Optional<List<PositiveInt>> noteNumber();
 
-  Optional<Quantity> quantity();
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
 
@@ -33,23 +35,21 @@ public interface ExplanationOfBenefit_Detail {
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Quantity> quantity();
 
-  Optional<CodeableConcept> revenue();
-
-  Optional<List<Extension>> extension();
+  Optional<PositiveInt> sequence();
 
   Optional<CodeableConcept> category();
 
-  Optional<List<CodeableConcept>> programCode();
+  Optional<List<Reference>> udi();
 
   Optional<Decimal> factor();
 
   Optional<Money> net();
 
-  Optional<List<Reference>> udi();
+  Optional<Money> unitPrice();
 
-  CodeableConcept productOrService();
+  Optional<CodeableConcept> revenue();
 
   static ImmutableExplanationOfBenefit_Detail.ProductOrServiceBuildStage builder() {
     return ImmutableExplanationOfBenefit_Detail.builder();

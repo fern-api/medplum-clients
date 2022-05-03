@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ResearchStudy_Arm {
-  Optional<String> name();
-
-  Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> extension();
+  Optional<String> description();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<String> name();
 
-  Optional<String> description();
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
+
+  Optional<String> id();
 
   static ImmutableResearchStudy_Arm.Builder builder() {
     return ImmutableResearchStudy_Arm.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Actor {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> actorId();
 
-  Optional<Markdown> description();
+  Optional<String> name();
 
-  Optional<List<Extension>> extension();
+  Optional<Markdown> description();
 
   Optional<Examplescenario_actorType> type();
 
   Optional<String> id();
 
-  Optional<String> name();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableExampleScenario_Actor.Builder builder() {
     return ImmutableExampleScenario_Actor.builder();

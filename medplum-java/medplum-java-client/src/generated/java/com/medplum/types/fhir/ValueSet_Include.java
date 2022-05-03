@@ -25,13 +25,13 @@ public interface ValueSet_Include {
 
   Optional<String> version();
 
-  Optional<List<ValueSet_Concept>> concept();
-
   Optional<String> id();
 
-  Optional<List<ValueSet_Filter>> filter();
+  Optional<List<ValueSet_Concept>> concept();
 
   Optional<List<Canonical>> valueSet();
+
+  Optional<List<ValueSet_Filter>> filter();
 
   static ImmutableValueSet_Include.Builder builder() {
     return ImmutableValueSet_Include.builder();

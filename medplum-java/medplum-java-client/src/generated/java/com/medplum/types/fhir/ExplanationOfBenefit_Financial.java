@@ -18,23 +18,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Financial {
-  Optional<Money> usedMoney();
-
-  Optional<String> allowedString();
-
-  Optional<Double> allowedUnsignedInt();
-
   Optional<String> id();
-
-  Optional<Double> usedUnsignedInt();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
 
   CodeableConcept type();
 
   Optional<Money> allowedMoney();
+
+  Optional<Double> allowedUnsignedInt();
+
+  Optional<String> allowedString();
+
+  Optional<Double> usedUnsignedInt();
+
+  Optional<Money> usedMoney();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableExplanationOfBenefit_Financial.TypeBuildStage builder() {
     return ImmutableExplanationOfBenefit_Financial.builder();

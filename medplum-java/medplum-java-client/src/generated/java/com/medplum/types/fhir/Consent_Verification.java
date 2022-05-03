@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface Consent_Verification {
   Optional<Boolean> verified();
 
-  Optional<String> id();
-
   Optional<DateTime> verificationDate();
 
-  Optional<Reference> verifiedWith();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
+
+  Optional<Reference> verifiedWith();
 
   static ImmutableConsent_Verification.Builder builder() {
     return ImmutableConsent_Verification.builder();

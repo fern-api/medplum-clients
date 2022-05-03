@@ -22,13 +22,13 @@ public interface Group_Member {
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> period();
-
   Optional<String> id();
 
   Reference entity();
+
+  Optional<Period> period();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableGroup_Member.EntityBuildStage builder() {
     return ImmutableGroup_Member.builder();

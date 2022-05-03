@@ -17,51 +17,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent {
+  Optional<List<Extension>> extension();
+
+  List<CodeableConcept> category();
+
+  Optional<Code> language();
+
+  Optional<Meta> meta();
+
   Optional<List<ResourceList>> contained();
 
   Optional<List<Reference>> performer();
 
-  Optional<Id> id();
+  Optional<List<Reference>> organization();
 
-  Optional<Meta> meta();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Consent_Policy>> policy();
-
-  Optional<List<Extension>> extension();
+  Optional<DateTime> dateTime();
 
   Optional<Consent_Provision> provision();
 
-  String resourceType();
-
-  CodeableConcept scope();
-
-  Optional<List<Reference>> organization();
+  Optional<Narrative> text();
 
   Optional<Reference> sourceReference();
 
-  Optional<Attachment> sourceAttachment();
-
-  Optional<Uri> implicitRules();
-
-  List<CodeableConcept> category();
+  String resourceType();
 
   Optional<ConsentStatus> status();
+
+  Optional<Attachment> sourceAttachment();
+
+  Optional<List<Consent_Verification>> verification();
+
+  Optional<Id> id();
+
+  Optional<Uri> implicitRules();
 
   Optional<Reference> patient();
 
   Optional<CodeableConcept> policyRule();
 
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<List<Consent_Verification>> verification();
+  CodeableConcept scope();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<DateTime> dateTime();
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Consent_Policy>> policy();
 
   static ImmutableConsent.ResourceTypeBuildStage builder() {
     return ImmutableConsent.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Dependent {
-  Optional<String> id();
-
   Optional<Id> name();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<String>> variable();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableStructureMap_Dependent.Builder builder() {
     return ImmutableStructureMap_Dependent.builder();

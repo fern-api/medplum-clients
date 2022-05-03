@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup_Condition {
-  Optional<Code> kind();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
+
+  Optional<Expression> expression();
 
   Optional<String> id();
 
-  Optional<Expression> expression();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> kind();
 
   static ImmutableRequestGroup_Condition.Builder builder() {
     return ImmutableRequestGroup_Condition.builder();

@@ -18,7 +18,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItemDefinition {
-  Optional<List<Canonical>> replaces();
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<Canonical>> partOf();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> version();
+
+  Optional<List<Uri>> derivedFromUri();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Code> language();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<DateTime> date();
+
+  Optional<Markdown> copyright();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<Narrative> text();
+
+  Optional<Uri> implicitRules();
 
   Optional<List<ResourceList>> contained();
 
@@ -26,61 +54,33 @@ public interface ChargeItemDefinition {
 
   Optional<Date> approvalDate();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<ChargeitemdefinitionStatus> status();
 
-  Optional<String> title();
-
-  Optional<Code> language();
-
-  Optional<Uri> url();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
-
-  Optional<List<ChargeItemDefinition_PropertyGroup>> propertyGroup();
-
-  Optional<Markdown> copyright();
-
-  Optional<String> version();
-
-  Optional<List<Canonical>> partOf();
-
-  Optional<Date> lastReviewDate();
+  Optional<List<Canonical>> replaces();
 
   Optional<List<ChargeItemDefinition_Applicability>> applicability();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Markdown> description();
+  Optional<Date> lastReviewDate();
 
   String resourceType();
+
+  Optional<Meta> meta();
 
   Optional<Boolean> experimental();
 
   Optional<String> publisher();
 
-  Optional<List<Uri>> derivedFromUri();
+  Optional<Uri> url();
 
-  Optional<Uri> implicitRules();
+  Optional<Markdown> description();
 
-  Optional<DateTime> date();
-
-  Optional<ChargeitemdefinitionStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<UsageContext>> useContext();
+  Optional<List<Reference>> instance();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<Reference>> instance();
+  Optional<String> title();
+
+  Optional<List<ChargeItemDefinition_PropertyGroup>> propertyGroup();
 
   static ImmutableChargeItemDefinition.ResourceTypeBuildStage builder() {
     return ImmutableChargeItemDefinition.builder();

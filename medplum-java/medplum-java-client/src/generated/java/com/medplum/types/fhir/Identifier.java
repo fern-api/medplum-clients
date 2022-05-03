@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Identifier {
-  Optional<String> value();
-
-  Optional<String> id();
-
-  Optional<Uri> system();
+  Optional<Period> period();
 
   Optional<CodeableConcept> type();
 
-  Optional<List<Extension>> extension();
+  Optional<IdentifierUse> use();
 
-  Optional<Period> period();
+  Optional<Uri> system();
 
   Optional<Reference> assigner();
 
-  Optional<IdentifierUse> use();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> value();
 
   static ImmutableIdentifier.Builder builder() {
     return ImmutableIdentifier.builder();

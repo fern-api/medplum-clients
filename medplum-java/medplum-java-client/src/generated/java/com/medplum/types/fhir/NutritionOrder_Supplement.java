@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_Supplement {
-  Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> productName();
-
   Optional<List<Timing>> schedule();
-
-  Optional<String> instruction();
-
-  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
   Optional<Quantity> quantity();
+
+  Optional<String> productName();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
+
+  Optional<String> instruction();
 
   static ImmutableNutritionOrder_Supplement.Builder builder() {
     return ImmutableNutritionOrder_Supplement.builder();

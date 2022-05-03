@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap_DependsOn {
-  Optional<String> display();
+  Optional<Canonical> system();
 
-  Optional<String> id();
+  Optional<String> display();
 
   Optional<List<Extension>> extension();
 
-  Optional<Canonical> system();
+  Optional<Uri> property();
 
   Optional<String> value();
 
-  Optional<Uri> property();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

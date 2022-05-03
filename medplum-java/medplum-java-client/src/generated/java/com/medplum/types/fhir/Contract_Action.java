@@ -18,59 +18,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Action {
-  CodeableConcept intent();
-
-  Optional<Reference> performer();
-
-  Optional<List<Contract_Subject>> subject();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<String>> contextLinkId();
+  Optional<Reference> context();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<String>> performerLinkId();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Reference> context();
-
-  Optional<CodeableConcept> performerRole();
-
-  Optional<List<String>> requesterLinkId();
-
-  Optional<List<String>> linkId();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  CodeableConcept status();
-
-  Optional<List<String>> reasonLinkId();
+  Optional<List<CodeableConcept>> performerType();
 
   Optional<List<Annotation>> note();
 
-  Optional<String> occurrenceDateTime();
-
-  Optional<Timing> occurrenceTiming();
-
-  CodeableConcept type();
-
-  Optional<List<CodeableConcept>> performerType();
-
-  Optional<List<UnsignedInt>> securityLabelNumber();
+  Optional<List<Contract_Subject>> subject();
 
   Optional<String> id();
 
   Optional<Boolean> doNotPerform();
 
-  Optional<List<String>> reason();
+  CodeableConcept status();
+
+  Optional<CodeableConcept> performerRole();
+
+  Optional<List<String>> linkId();
 
   Optional<List<Reference>> requester();
 
-  static ImmutableContract_Action.IntentBuildStage builder() {
+  CodeableConcept intent();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<String>> reason();
+
+  Optional<List<String>> requesterLinkId();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<String>> reasonLinkId();
+
+  Optional<List<String>> contextLinkId();
+
+  Optional<List<UnsignedInt>> securityLabelNumber();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<List<String>> performerLinkId();
+
+  CodeableConcept type();
+
+  Optional<Timing> occurrenceTiming();
+
+  Optional<Reference> performer();
+
+  static ImmutableContract_Action.StatusBuildStage builder() {
     return ImmutableContract_Action.builder();
   }
 }

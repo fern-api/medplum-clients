@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Coverage_CostToBeneficiary {
-  Optional<List<Extension>> extension();
-
   Optional<CodeableConcept> type();
 
   Optional<Money> valueMoney();
+
+  Optional<List<Coverage_Exception>> exception();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
   Optional<Quantity> valueQuantity();
-
-  Optional<List<Coverage_Exception>> exception();
 
   static ImmutableCoverage_CostToBeneficiary.Builder builder() {
     return ImmutableCoverage_CostToBeneficiary.builder();

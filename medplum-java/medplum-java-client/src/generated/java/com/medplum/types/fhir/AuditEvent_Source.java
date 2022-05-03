@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AuditEvent_Source {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Coding>> type();
+  Reference observer();
 
   Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Reference observer();
+  Optional<List<Coding>> type();
 
   Optional<String> site();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableAuditEvent_Source.ObserverBuildStage builder() {
     return ImmutableAuditEvent_Source.builder();

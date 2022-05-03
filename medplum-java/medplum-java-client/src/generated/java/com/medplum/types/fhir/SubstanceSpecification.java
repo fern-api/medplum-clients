@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<SubstanceSpecification_Name>> name();
+  Optional<CodeableConcept> type();
 
   Optional<List<SubstanceSpecification_MolecularWeight>> molecularWeight();
 
-  Optional<String> description();
+  Optional<Reference> sourceMaterial();
 
-  String resourceType();
+  Optional<Reference> polymer();
 
-  Optional<Narrative> text();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<SubstanceSpecification_Moiety>> moiety();
-
-  Optional<CodeableConcept> status();
-
-  Optional<String> comment();
-
-  Optional<Code> language();
-
-  Optional<CodeableConcept> type();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> source();
-
-  Optional<List<SubstanceSpecification_Code>> code();
-
-  Optional<Reference> protein();
+  Optional<Id> id();
 
   Optional<SubstanceSpecification_Structure> structure();
 
   Optional<Uri> implicitRules();
 
-  Optional<Identifier> identifier();
+  Optional<List<SubstanceSpecification_Relationship>> relationship();
 
-  Optional<Reference> sourceMaterial();
+  Optional<Narrative> text();
+
+  Optional<Meta> meta();
+
+  Optional<String> comment();
 
   Optional<CodeableConcept> domain();
 
   Optional<Reference> referenceInformation();
 
+  Optional<List<ResourceList>> contained();
+
+  String resourceType();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
+
   Optional<List<SubstanceSpecification_Property>> property();
+
+  Optional<Reference> protein();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> source();
+
+  Optional<List<SubstanceSpecification_Code>> code();
 
   Optional<Reference> nucleicAcid();
 
-  Optional<Id> id();
+  Optional<Code> language();
 
-  Optional<List<SubstanceSpecification_Relationship>> relationship();
+  Optional<List<SubstanceSpecification_Moiety>> moiety();
 
-  Optional<Reference> polymer();
+  Optional<CodeableConcept> status();
+
+  Optional<List<SubstanceSpecification_Name>> name();
+
+  Optional<Identifier> identifier();
 
   static ImmutableSubstanceSpecification.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceSpecification.builder();

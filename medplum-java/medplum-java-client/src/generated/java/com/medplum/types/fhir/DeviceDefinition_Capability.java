@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_Capability {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
 
   Optional<List<CodeableConcept>> description();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 

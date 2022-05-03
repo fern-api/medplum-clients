@@ -16,49 +16,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface List {
-  Optional<Code> language();
-
-  Optional<CodeableConcept> code();
-
-  Optional<java.util.List<Extension>> modifierExtension();
-
-  Optional<java.util.List<Annotation>> note();
-
-  Optional<ListStatus> status();
-
-  Optional<CodeableConcept> emptyReason();
+  Optional<Meta> meta();
 
   Optional<Uri> implicitRules();
 
-  Optional<Id> id();
-
-  Optional<Meta> meta();
-
-  Optional<CodeableConcept> orderedBy();
-
   Optional<String> title();
-
-  Optional<java.util.List<Extension>> extension();
-
-  String resourceType();
-
-  Optional<Reference> source();
 
   Optional<java.util.List<ResourceList>> contained();
 
-  Optional<java.util.List<List_Entry>> entry();
-
-  Optional<Reference> subject();
-
   Optional<ListMode> mode();
 
-  Optional<DateTime> date();
+  Optional<Reference> encounter();
 
-  Optional<Narrative> text();
+  Optional<ListStatus> status();
+
+  String resourceType();
+
+  Optional<java.util.List<Extension>> extension();
+
+  Optional<java.util.List<Extension>> modifierExtension();
 
   Optional<java.util.List<Identifier>> identifier();
 
-  Optional<Reference> encounter();
+  Optional<Reference> subject();
+
+  Optional<CodeableConcept> orderedBy();
+
+  Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<DateTime> date();
+
+  Optional<CodeableConcept> emptyReason();
+
+  Optional<Reference> source();
+
+  Optional<Code> language();
+
+  Optional<java.util.List<Annotation>> note();
+
+  Optional<java.util.List<List_Entry>> entry();
+
+  Optional<CodeableConcept> code();
 
   static ImmutableList.ResourceTypeBuildStage builder() {
     return ImmutableList.builder();

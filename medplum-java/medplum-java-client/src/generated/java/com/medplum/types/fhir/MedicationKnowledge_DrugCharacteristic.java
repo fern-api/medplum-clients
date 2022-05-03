@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface MedicationKnowledge_DrugCharacteristic {
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> type();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
 
   Optional<CodeableConcept> valueCodeableConcept();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Quantity> valueQuantity();
 
-  Optional<CodeableConcept> type();
-
   Optional<String> valueString();
-
-  Optional<String> valueBase64Binary();
 
   static ImmutableMedicationKnowledge_DrugCharacteristic.Builder builder() {
     return ImmutableMedicationKnowledge_DrugCharacteristic.builder();

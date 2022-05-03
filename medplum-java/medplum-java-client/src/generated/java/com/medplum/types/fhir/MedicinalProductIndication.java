@@ -17,41 +17,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductIndication {
-  Optional<List<Extension>> extension();
-
   Optional<List<Reference>> undesirableEffect();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> subject();
-
-  Optional<Id> id();
-
-  Optional<Code> language();
-
-  Optional<Quantity> duration();
-
-  Optional<Narrative> text();
 
   Optional<List<CodeableConcept>> comorbidity();
 
-  Optional<List<MedicinalProductIndication_OtherTherapy>> otherTherapy();
+  Optional<CodeableConcept> diseaseStatus();
 
-  Optional<List<Population>> population();
+  Optional<Narrative> text();
 
-  String resourceType();
+  Optional<Code> language();
 
   Optional<CodeableConcept> diseaseSymptomProcedure();
 
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> implicitRules();
+
+  String resourceType();
+
   Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<CodeableConcept> diseaseStatus();
 
   Optional<Meta> meta();
 
+  Optional<Quantity> duration();
+
+  Optional<List<Population>> population();
+
   Optional<CodeableConcept> intendedEffect();
+
+  Optional<List<Reference>> subject();
+
+  Optional<List<MedicinalProductIndication_OtherTherapy>> otherTherapy();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Id> id();
 
   static ImmutableMedicinalProductIndication.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductIndication.builder();

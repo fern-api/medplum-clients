@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition {
-  Optional<Reference> subject();
-
-  Optional<CompositionStatus> status();
-
-  Optional<List<Composition_Event>> event();
-
-  List<Reference> author();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<String> title();
-
-  Optional<Code> confidentiality();
-
-  Optional<Meta> meta();
-
-  Optional<Id> id();
-
-  Optional<List<Composition_Section>> section();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Composition_RelatesTo>> relatesTo();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Composition_Attester>> attester();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> encounter();
 
   Optional<Code> language();
 
-  Optional<Uri> implicitRules();
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> confidentiality();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> custodian();
+
+  Optional<CompositionStatus> status();
+
+  Optional<List<Composition_RelatesTo>> relatesTo();
+
+  Optional<Reference> subject();
 
   Optional<Identifier> identifier();
 
-  Optional<DateTime> date();
-
-  CodeableConcept type();
-
-  Optional<Reference> encounter();
+  Optional<Meta> meta();
 
   Optional<Narrative> text();
 
-  Optional<Reference> custodian();
+  Optional<Uri> implicitRules();
+
+  Optional<DateTime> date();
+
+  List<Reference> author();
+
+  Optional<Id> id();
+
+  Optional<List<Composition_Attester>> attester();
+
+  Optional<List<Composition_Event>> event();
+
+  String resourceType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Composition_Section>> section();
+
+  CodeableConcept type();
+
+  Optional<String> title();
 
   static ImmutableComposition.ResourceTypeBuildStage builder() {
     return ImmutableComposition.builder();

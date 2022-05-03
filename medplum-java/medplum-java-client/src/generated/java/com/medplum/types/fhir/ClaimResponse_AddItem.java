@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_AddItem {
-  Optional<List<ClaimResponse_Detail1>> detail();
-
-  Optional<List<PositiveInt>> noteNumber();
-
-  Optional<Money> net();
-
-  Optional<List<Reference>> provider();
-
-  Optional<List<CodeableConcept>> programCode();
-
-  Optional<List<PositiveInt>> detailSequence();
-
-  Optional<List<Extension>> modifierExtension();
-
   List<ClaimResponse_Adjudication> adjudication();
-
-  Optional<Decimal> factor();
-
-  Optional<String> servicedDate();
-
-  Optional<List<CodeableConcept>> subSite();
-
-  Optional<CodeableConcept> locationCodeableConcept();
-
-  Optional<String> id();
-
-  Optional<Quantity> quantity();
-
-  Optional<Period> servicedPeriod();
-
-  Optional<List<Extension>> extension();
 
   Optional<Money> unitPrice();
 
-  Optional<List<CodeableConcept>> modifier();
+  Optional<Period> servicedPeriod();
 
-  Optional<Address> locationAddress();
+  Optional<String> id();
 
-  Optional<Reference> locationReference();
-
-  CodeableConcept productOrService();
+  Optional<List<CodeableConcept>> subSite();
 
   Optional<List<PositiveInt>> itemSequence();
 
   Optional<List<PositiveInt>> subdetailSequence();
 
+  Optional<CodeableConcept> locationCodeableConcept();
+
+  Optional<List<PositiveInt>> noteNumber();
+
+  CodeableConcept productOrService();
+
+  Optional<List<Reference>> provider();
+
+  Optional<String> servicedDate();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<Decimal> factor();
+
+  Optional<List<PositiveInt>> detailSequence();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> programCode();
+
+  Optional<List<ClaimResponse_Detail1>> detail();
+
   Optional<CodeableConcept> bodySite();
+
+  Optional<Quantity> quantity();
+
+  Optional<Reference> locationReference();
+
+  Optional<Money> net();
+
+  Optional<Address> locationAddress();
 
   static ImmutableClaimResponse_AddItem.ProductOrServiceBuildStage builder() {
     return ImmutableClaimResponse_AddItem.builder();

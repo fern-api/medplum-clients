@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Insurance {
-  Optional<List<String>> preAuthRef();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<Boolean> focal();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Reference coverage();
+
+  Optional<List<String>> preAuthRef();
+
+  Optional<Boolean> focal();
 
   static ImmutableExplanationOfBenefit_Insurance.CoverageBuildStage builder() {
     return ImmutableExplanationOfBenefit_Insurance.builder();
