@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface ExampleScenario_Process {
   Optional<Markdown> postConditions();
 
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<Extension>> extension();
 
   Optional<String> title();
 
-  Optional<Markdown> description();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Markdown> preConditions();
-
   Optional<List<ExampleScenario_Step>> step();
 
-  Optional<String> id();
+  Optional<Markdown> description();
+
+  Optional<Markdown> preConditions();
 
   static ImmutableExampleScenario_Process.Builder builder() {
     return ImmutableExampleScenario_Process.builder();

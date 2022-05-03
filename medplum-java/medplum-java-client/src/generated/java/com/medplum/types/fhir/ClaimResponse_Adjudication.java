@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_Adjudication {
-  Optional<Decimal> value();
-
-  Optional<CodeableConcept> reason();
-
-  Optional<List<Extension>> modifierExtension();
-
-  CodeableConcept category();
-
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> reason();
+
+  Optional<Decimal> value();
+
   Optional<Money> amount();
+
+  CodeableConcept category();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableClaimResponse_Adjudication.CategoryBuildStage builder() {
     return ImmutableClaimResponse_Adjudication.builder();

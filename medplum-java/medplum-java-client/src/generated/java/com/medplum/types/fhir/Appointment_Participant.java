@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface Appointment_Participant {
   Optional<String> id();
 
+  Optional<Reference> actor();
+
   Optional<Appointment_participantRequired> required();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> type();
+  Optional<Appointment_participantStatus> status();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Period> period();
 
-  Optional<Reference> actor();
+  Optional<List<Extension>> extension();
 
-  Optional<Appointment_participantStatus> status();
+  Optional<List<CodeableConcept>> type();
 
   static ImmutableAppointment_Participant.Builder builder() {
     return ImmutableAppointment_Participant.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Device_Property {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Quantity>> valueQuantity();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> valueCode();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Quantity>> valueQuantity();
+  Optional<List<CodeableConcept>> valueCode();
 
   CodeableConcept type();
 

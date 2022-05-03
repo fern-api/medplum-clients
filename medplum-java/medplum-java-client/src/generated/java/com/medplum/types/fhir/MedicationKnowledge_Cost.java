@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Cost {
-  Optional<List<Extension>> extension();
+  CodeableConcept type();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> source();
+  Money cost();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  CodeableConcept type();
-
-  Money cost();
+  Optional<String> source();
 
   static ImmutableMedicationKnowledge_Cost.TypeBuildStage builder() {
     return ImmutableMedicationKnowledge_Cost.builder();

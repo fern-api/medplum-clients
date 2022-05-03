@@ -17,7 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationDispense {
+  Optional<Uri> implicitRules();
+
+  Optional<CodeableConcept> category();
+
+  Optional<List<Extension>> modifierExtension();
+
+  String resourceType();
+
+  Optional<Code> status();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<MedicationDispense_Substitution> substitution();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<Quantity> daysSupply();
+
+  Optional<List<Reference>> eventHistory();
+
+  Optional<Reference> subject();
+
+  Optional<List<Reference>> supportingInformation();
+
+  Optional<Reference> location();
+
+  Optional<DateTime> whenPrepared();
+
+  Optional<List<Reference>> receiver();
+
+  Optional<Quantity> quantity();
+
   Optional<List<MedicationDispense_Performer>> performer();
+
+  Optional<CodeableConcept> medicationCodeableConcept();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<CodeableConcept> type();
 
@@ -25,67 +63,29 @@ public interface MedicationDispense {
 
   Optional<Reference> statusReasonReference();
 
-  Optional<List<Reference>> authorizingPrescription();
-
-  Optional<Code> status();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Reference>> receiver();
-
-  Optional<Reference> location();
-
-  String resourceType();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> context();
-
   Optional<Id> id();
-
-  Optional<CodeableConcept> medicationCodeableConcept();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Dosage>> dosageInstruction();
-
-  Optional<Reference> medicationReference();
-
-  Optional<Quantity> daysSupply();
-
-  Optional<Uri> implicitRules();
-
-  Optional<MedicationDispense_Substitution> substitution();
-
-  Optional<List<Reference>> eventHistory();
-
-  Optional<Quantity> quantity();
-
-  Optional<DateTime> whenPrepared();
-
-  Optional<CodeableConcept> category();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Code> language();
-
-  Optional<Reference> destination();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<Reference>> supportingInformation();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> detectedIssue();
 
   Optional<DateTime> whenHandedOver();
 
-  Optional<List<Identifier>> identifier();
+  Optional<List<Dosage>> dosageInstruction();
 
-  Optional<Reference> subject();
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> context();
+
+  Optional<List<Reference>> detectedIssue();
+
+  Optional<Reference> medicationReference();
+
+  Optional<Code> language();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Reference> destination();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> authorizingPrescription();
 
   static ImmutableMedicationDispense.ResourceTypeBuildStage builder() {
     return ImmutableMedicationDispense.builder();

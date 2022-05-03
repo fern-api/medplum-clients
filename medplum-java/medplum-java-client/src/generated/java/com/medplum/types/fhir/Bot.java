@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Bot {
-  Optional<Id> id();
-
-  Optional<String> description();
-
-  Optional<Meta> meta();
-
-  Optional<String> code();
-
-  Optional<Boolean> runAsUser();
+  Optional<Uri> implicitRules();
 
   Optional<String> name();
 
   Optional<String> resourceType();
 
-  Optional<Uri> implicitRules();
+  Optional<Boolean> runAsUser();
 
-  Optional<Code> language();
+  Optional<Meta> meta();
 
   Optional<String> runtimeVersion();
 
+  Optional<String> description();
+
+  Optional<Code> language();
+
   Optional<Attachment> photo();
+
+  Optional<String> code();
+
+  Optional<Id> id();
 
   static ImmutableBot.Builder builder() {
     return ImmutableBot.builder();

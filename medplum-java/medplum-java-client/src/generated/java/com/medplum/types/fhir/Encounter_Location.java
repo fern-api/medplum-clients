@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_Location {
-  Optional<List<Extension>> extension();
+  Reference location();
+
+  Optional<String> id();
 
   Optional<CodeableConcept> physicalType();
 
   Optional<Encounter_locationStatus> status();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
-
-  Reference location();
 
   Optional<Period> period();
 

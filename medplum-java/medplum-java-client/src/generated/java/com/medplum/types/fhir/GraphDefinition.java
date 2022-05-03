@@ -18,53 +18,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GraphDefinition {
-  Optional<Meta> meta();
-
-  Optional<DateTime> date();
-
-  Optional<Code> language();
-
-  Optional<String> publisher();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  String resourceType();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Uri> url();
-
-  Optional<String> name();
-
-  Optional<String> version();
-
-  Optional<Markdown> purpose();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Narrative> text();
-
-  Optional<Code> start();
-
-  Optional<List<GraphDefinition_Link>> link();
-
-  Optional<List<ContactDetail>> contact();
-
   Optional<GraphdefinitionStatus> status();
-
-  Optional<Id> id();
-
-  Optional<Markdown> description();
-
-  Optional<List<Extension>> extension();
 
   Optional<Boolean> experimental();
 
   Optional<Canonical> profile();
 
   Optional<List<ResourceList>> contained();
+
+  Optional<Meta> meta();
+
+  Optional<DateTime> date();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<GraphDefinition_Link>> link();
+
+  Optional<Uri> url();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> version();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Optional<String> publisher();
+
+  Optional<Id> id();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Code> start();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<String> name();
+
+  Optional<Markdown> description();
+
+  String resourceType();
+
+  Optional<Markdown> purpose();
 
   static ImmutableGraphDefinition.ResourceTypeBuildStage builder() {
     return ImmutableGraphDefinition.builder();

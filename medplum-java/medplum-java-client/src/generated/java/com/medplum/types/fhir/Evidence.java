@@ -17,81 +17,81 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Evidence {
-  Optional<List<ResourceList>> contained();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<List<ContactDetail>> author();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Meta> meta();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Markdown> copyright();
-
-  Optional<Code> language();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<ContactDetail>> editor();
-
-  Reference exposureBackground();
-
-  Optional<String> title();
-
-  Optional<Markdown> description();
-
-  Optional<List<Reference>> exposureVariant();
-
-  Optional<String> shortTitle();
-
-  Optional<Id> id();
-
-  Optional<List<Reference>> outcome();
-
-  Optional<String> name();
-
-  Optional<Date> approvalDate();
-
-  Optional<EvidenceStatus> status();
-
-  Optional<String> subtitle();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<DateTime> date();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> topic();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<String> publisher();
+  Optional<Uri> implicitRules();
 
   String resourceType();
 
   Optional<List<ContactDetail>> reviewer();
 
-  Optional<String> version();
+  Optional<List<Annotation>> note();
+
+  Reference exposureBackground();
+
+  Optional<EvidenceStatus> status();
+
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Code> language();
+
+  Optional<Meta> meta();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Date> approvalDate();
+
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> editor();
+
+  Optional<String> subtitle();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<String> shortTitle();
+
+  Optional<Markdown> description();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Identifier>> identifier();
 
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<Id> id();
+
   Optional<Narrative> text();
 
-  Optional<List<Annotation>> note();
-
-  Optional<Date> lastReviewDate();
+  Optional<String> name();
 
   Optional<Uri> url();
 
-  Optional<DateTime> date();
+  Optional<List<CodeableConcept>> topic();
 
-  static ImmutableEvidence.ExposureBackgroundBuildStage builder() {
+  Optional<List<Reference>> exposureVariant();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<List<Reference>> outcome();
+
+  Optional<Markdown> copyright();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> version();
+
+  static ImmutableEvidence.ResourceTypeBuildStage builder() {
     return ImmutableEvidence.builder();
   }
 }

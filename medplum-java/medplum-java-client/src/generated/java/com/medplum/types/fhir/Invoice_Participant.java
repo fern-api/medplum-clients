@@ -19,9 +19,9 @@ import org.immutables.value.Value;
 public interface Invoice_Participant {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<CodeableConcept> role();
+
+  Optional<List<Extension>> extension();
 
   Reference actor();
 

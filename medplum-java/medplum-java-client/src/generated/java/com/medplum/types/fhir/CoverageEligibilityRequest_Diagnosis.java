@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest_Diagnosis {
-  Optional<Reference> diagnosisReference();
-
-  Optional<String> id();
+  Optional<CodeableConcept> diagnosisCodeableConcept();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> diagnosisCodeableConcept();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> diagnosisReference();
 
   static ImmutableCoverageEligibilityRequest_Diagnosis.Builder builder() {
     return ImmutableCoverageEligibilityRequest_Diagnosis.builder();

@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestReport_Action2 {
-  Optional<String> id();
+  TestReport_Operation operation();
 
   Optional<List<Extension>> modifierExtension();
 
-  TestReport_Operation operation();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 

@@ -19,59 +19,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Patient {
-  Optional<CodeableConcept> maritalStatus();
-
-  Optional<Date> birthDate();
-
-  Optional<Code> language();
-
-  Optional<List<Reference>> generalPractitioner();
-
-  Optional<List<HumanName>> name();
-
-  Optional<String> deceasedDateTime();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Attachment>> photo();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<PatientGender> gender();
-
-  Optional<Boolean> deceasedBoolean();
-
-  Optional<Double> multipleBirthInteger();
+  Optional<Narrative> text();
 
   String resourceType();
 
-  Optional<Id> id();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Boolean> active();
+  Optional<Uri> implicitRules();
 
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> managingOrganization();
-
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<List<Address>> address();
-
-  Optional<Boolean> multipleBirthBoolean();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> extension();
+  Optional<Code> language();
 
   Optional<List<Patient_Contact>> contact();
 
+  Optional<Boolean> deceasedBoolean();
+
+  Optional<Meta> meta();
+
+  Optional<Boolean> active();
+
+  Optional<Reference> managingOrganization();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Date> birthDate();
+
   Optional<List<Patient_Communication>> communication();
+
+  Optional<List<HumanName>> name();
+
+  Optional<List<Reference>> generalPractitioner();
+
+  Optional<Id> id();
+
+  Optional<PatientGender> gender();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Address>> address();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Double> multipleBirthInteger();
+
+  Optional<List<Attachment>> photo();
+
+  Optional<CodeableConcept> maritalStatus();
 
   Optional<List<Patient_Link>> link();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Boolean> multipleBirthBoolean();
+
+  Optional<String> deceasedDateTime();
 
   static ImmutablePatient.ResourceTypeBuildStage builder() {
     return ImmutablePatient.builder();

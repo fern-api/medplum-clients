@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Bundle_Link {
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
   Optional<Uri> url();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<String> relation();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   static ImmutableBundle_Link.Builder builder() {
     return ImmutableBundle_Link.builder();

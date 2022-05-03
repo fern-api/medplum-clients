@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface EffectEvidenceSynthesis_SampleSize {
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Integer> numberOfParticipants();
+
+  Optional<List<Extension>> extension();
+
   Optional<String> description();
 
   Optional<Integer> numberOfStudies();
 
   Optional<String> id();
-
-  Optional<Integer> numberOfParticipants();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableEffectEvidenceSynthesis_SampleSize.Builder builder() {
     return ImmutableEffectEvidenceSynthesis_SampleSize.builder();

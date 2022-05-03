@@ -19,45 +19,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Operation {
-  Optional<String> label();
-
-  Optional<String> url();
-
-  Optional<Coding> type();
-
   Optional<String> description();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Testscript_operationMethod> method();
-
-  Optional<Code> resource();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> params();
-
-  Optional<Id> responseId();
-
-  Optional<Code> accept();
-
-  Optional<Integer> origin();
-
-  Optional<List<TestScript_RequestHeader>> requestHeader();
-
-  Optional<String> id();
-
-  Optional<Integer> destination();
-
   Optional<Boolean> encodeRequestUrl();
-
-  Optional<Code> contentType();
 
   Optional<Id> targetId();
 
   Optional<Id> requestId();
 
+  Optional<List<TestScript_RequestHeader>> requestHeader();
+
+  Optional<Id> responseId();
+
+  Optional<String> id();
+
+  Optional<Code> accept();
+
+  Optional<Integer> destination();
+
   Optional<Id> sourceId();
+
+  Optional<Coding> type();
+
+  Optional<String> url();
+
+  Optional<Code> resource();
+
+  Optional<String> label();
+
+  Optional<Code> contentType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> params();
+
+  Optional<Integer> origin();
+
+  Optional<Testscript_operationMethod> method();
 
   static ImmutableTestScript_Operation.Builder builder() {
     return ImmutableTestScript_Operation.builder();

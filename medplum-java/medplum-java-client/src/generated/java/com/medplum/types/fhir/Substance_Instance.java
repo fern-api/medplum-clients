@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Substance_Instance {
-  Optional<String> id();
-
   Optional<DateTime> expiry();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

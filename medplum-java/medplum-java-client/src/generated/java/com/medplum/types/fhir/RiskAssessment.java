@@ -19,57 +19,57 @@ import org.immutables.value.Value;
 public interface RiskAssessment {
   Optional<CodeableConcept> code();
 
-  Optional<Reference> encounter();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<RiskAssessment_Prediction>> prediction();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<String> mitigation();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Code> status();
-
-  Optional<Reference> performer();
+  String resourceType();
 
   Optional<Reference> condition();
 
-  Optional<Meta> meta();
+  Optional<Id> id();
 
-  Optional<List<Reference>> basis();
+  Optional<Code> status();
 
-  Optional<List<Annotation>> note();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Narrative> text();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> extension();
+  Optional<Period> occurrencePeriod();
 
   Optional<Code> language();
 
-  String resourceType();
+  Optional<List<Extension>> extension();
 
-  Reference subject();
-
-  Optional<Id> id();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<CodeableConcept> method();
-
-  Optional<Reference> parent();
+  Optional<String> mitigation();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Reference> encounter();
+
   Optional<Reference> basedOn();
+
+  Optional<List<Reference>> basis();
+
+  Optional<CodeableConcept> method();
+
+  Reference subject();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<RiskAssessment_Prediction>> prediction();
+
+  Optional<Reference> parent();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Reference> performer();
 
   static ImmutableRiskAssessment.ResourceTypeBuildStage builder() {
     return ImmutableRiskAssessment.builder();

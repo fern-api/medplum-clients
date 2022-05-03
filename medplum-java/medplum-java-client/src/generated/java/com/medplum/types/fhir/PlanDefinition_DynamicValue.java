@@ -21,11 +21,11 @@ public interface PlanDefinition_DynamicValue {
 
   Optional<String> id();
 
+  Optional<Expression> expression();
+
   Optional<List<Extension>> extension();
 
   Optional<String> path();
-
-  Optional<Expression> expression();
 
   static ImmutablePlanDefinition_DynamicValue.Builder builder() {
     return ImmutablePlanDefinition_DynamicValue.builder();

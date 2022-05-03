@@ -17,91 +17,91 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EffectEvidenceSynthesis {
-  Reference population();
-
-  Optional<Markdown> description();
-
-  Optional<List<ResourceList>> contained();
-
   Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<Meta> meta();
-
-  Optional<EffectevidencesynthesisStatus> status();
-
-  Optional<String> version();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<ContactDetail>> editor();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<ContactDetail>> author();
-
-  Optional<Uri> url();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Reference outcome();
-
-  Optional<CodeableConcept> synthesisType();
-
-  Optional<Narrative> text();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Id> id();
-
-  Optional<Date> approvalDate();
-
-  Optional<String> publisher();
-
-  Optional<EffectEvidenceSynthesis_SampleSize> sampleSize();
-
-  Optional<CodeableConcept> studyType();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  Reference exposureAlternative();
-
-  Optional<String> title();
-
-  Optional<List<CodeableConcept>> topic();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<DateTime> date();
-
-  Optional<Code> language();
-
-  Optional<String> name();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<EffectEvidenceSynthesis_EffectEstimate>> effectEstimate();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Uri> implicitRules();
 
   Reference exposure();
 
-  String resourceType();
+  Optional<DateTime> date();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<EffectEvidenceSynthesis_SampleSize> sampleSize();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<EffectevidencesynthesisStatus> status();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Markdown> copyright();
+
+  Optional<Uri> url();
+
+  Reference outcome();
+
+  Optional<String> publisher();
+
+  Optional<Id> id();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<Narrative> text();
+
+  Reference population();
+
+  Reference exposureAlternative();
+
+  Optional<Date> approvalDate();
+
+  Optional<String> version();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  Optional<CodeableConcept> studyType();
+
+  Optional<List<EffectEvidenceSynthesis_EffectEstimate>> effectEstimate();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<CodeableConcept> synthesisType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<Markdown> description();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<CodeableConcept>> topic();
 
   Optional<List<EffectEvidenceSynthesis_ResultsByExposure>> resultsByExposure();
 
   Optional<List<EffectEvidenceSynthesis_Certainty>> certainty();
 
-  static ImmutableEffectEvidenceSynthesis.PopulationBuildStage builder() {
+  Optional<List<ContactDetail>> author();
+
+  String resourceType();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<String> name();
+
+  Optional<String> title();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<List<ContactDetail>> editor();
+
+  static ImmutableEffectEvidenceSynthesis.ExposureBuildStage builder() {
     return ImmutableEffectEvidenceSynthesis.builder();
   }
 }

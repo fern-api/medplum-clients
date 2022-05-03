@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_MolecularWeight {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<CodeableConcept> method();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> type();
-
   Optional<Quantity> amount();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> type();
 
   static ImmutableSubstanceSpecification_MolecularWeight.Builder builder() {
     return ImmutableSubstanceSpecification_MolecularWeight.builder();

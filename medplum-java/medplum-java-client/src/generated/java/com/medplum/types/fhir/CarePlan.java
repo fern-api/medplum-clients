@@ -17,69 +17,69 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan {
-  String resourceType();
-
-  Optional<Reference> encounter();
-
-  Reference subject();
-
-  Optional<String> title();
+  Optional<List<Extension>> extension();
 
   Optional<Code> intent();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<DateTime> created();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<Reference>> contributor();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> description();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<List<Reference>> replaces();
-
-  Optional<List<Reference>> goal();
+  Optional<Period> period();
 
   Optional<List<Reference>> addresses();
 
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<Period> period();
-
-  Optional<List<Reference>> careTeam();
+  Optional<List<Reference>> partOf();
 
   Optional<List<Reference>> supportingInfo();
 
+  String resourceType();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<Code> status();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Reference>> contributor();
+
+  Optional<List<Reference>> careTeam();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
   Optional<List<CarePlan_Activity>> activity();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Reference>> goal();
+
+  Optional<Reference> encounter();
+
+  Optional<List<Reference>> replaces();
+
+  Optional<Narrative> text();
+
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<Meta> meta();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<DateTime> created();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Id> id();
+
+  Reference subject();
 
   Optional<Reference> author();
 
-  Optional<Code> status();
+  Optional<String> description();
 
   static ImmutableCarePlan.ResourceTypeBuildStage builder() {
     return ImmutableCarePlan.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyDelivery_SuppliedItem {
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> itemReference();
 
   Optional<Quantity> quantity();
-
-  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> itemCodeableConcept();
 
-  Optional<Reference> itemReference();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   static ImmutableSupplyDelivery_SuppliedItem.Builder builder() {
     return ImmutableSupplyDelivery_SuppliedItem.builder();

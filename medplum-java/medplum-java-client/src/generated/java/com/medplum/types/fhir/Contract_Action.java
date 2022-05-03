@@ -18,57 +18,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Action {
-  Optional<Reference> context();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> performerType();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Contract_Subject>> subject();
-
   Optional<String> id();
-
-  Optional<Boolean> doNotPerform();
-
-  CodeableConcept status();
-
-  Optional<CodeableConcept> performerRole();
-
-  Optional<List<String>> linkId();
-
-  Optional<List<Reference>> requester();
-
-  CodeableConcept intent();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<String>> reason();
-
-  Optional<List<String>> requesterLinkId();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<String>> reasonLinkId();
 
   Optional<List<String>> contextLinkId();
 
-  Optional<List<UnsignedInt>> securityLabelNumber();
+  Optional<Timing> occurrenceTiming();
 
-  Optional<Period> occurrencePeriod();
+  Optional<List<CodeableConcept>> performerType();
 
-  Optional<List<String>> performerLinkId();
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<String>> requesterLinkId();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<String>> reason();
+
+  CodeableConcept status();
 
   CodeableConcept type();
 
-  Optional<Timing> occurrenceTiming();
+  Optional<List<String>> reasonLinkId();
+
+  Optional<List<Contract_Subject>> subject();
 
   Optional<Reference> performer();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> context();
+
+  Optional<List<String>> performerLinkId();
+
+  Optional<List<String>> linkId();
+
+  CodeableConcept intent();
+
+  Optional<List<Reference>> requester();
+
+  Optional<List<UnsignedInt>> securityLabelNumber();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<CodeableConcept> performerRole();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableContract_Action.StatusBuildStage builder() {
     return ImmutableContract_Action.builder();

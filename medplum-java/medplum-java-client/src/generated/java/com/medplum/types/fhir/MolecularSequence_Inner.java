@@ -20,13 +20,13 @@ import org.immutables.value.Value;
 public interface MolecularSequence_Inner {
   Optional<String> id();
 
-  Optional<Integer> start();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Integer> end();
+  Optional<Integer> start();
 
   Optional<List<Extension>> extension();
+
+  Optional<Integer> end();
 
   static ImmutableMolecularSequence_Inner.Builder builder() {
     return ImmutableMolecularSequence_Inner.builder();

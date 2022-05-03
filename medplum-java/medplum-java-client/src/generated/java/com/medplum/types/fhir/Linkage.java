@@ -18,29 +18,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Linkage {
+  Optional<Code> language();
+
+  Optional<List<Extension>> modifierExtension();
+
+  List<Linkage_Item> item();
+
+  Optional<Uri> implicitRules();
+
   Optional<Id> id();
+
+  Optional<Meta> meta();
+
+  Optional<Reference> author();
+
+  Optional<List<Extension>> extension();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Boolean> active();
 
   Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  String resourceType();
-
-  Optional<Reference> author();
-
-  List<Linkage_Item> item();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableLinkage.ResourceTypeBuildStage builder() {
     return ImmutableLinkage.builder();

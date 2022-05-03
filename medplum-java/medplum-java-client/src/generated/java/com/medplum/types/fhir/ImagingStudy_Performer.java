@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImagingStudy_Performer {
-  Optional<String> id();
-
-  Optional<CodeableConcept> function();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Reference actor();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> function();
 
   static ImmutableImagingStudy_Performer.ActorBuildStage builder() {
     return ImmutableImagingStudy_Performer.builder();

@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Instance {
-  Optional<List<ExampleScenario_ContainedInstance>> containedInstance();
+  Optional<Code> resourceType();
 
   Optional<List<ExampleScenario_Version>> version();
 
-  Optional<String> name();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ExampleScenario_ContainedInstance>> containedInstance();
 
   Optional<String> id();
 
-  Optional<Markdown> description();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> resourceId();
 
-  Optional<Code> resourceType();
+  Optional<String> name();
+
+  Optional<Markdown> description();
 
   static ImmutableExampleScenario_Instance.Builder builder() {
     return ImmutableExampleScenario_Instance.builder();

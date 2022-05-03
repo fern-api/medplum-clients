@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Isotope {
-  Optional<Identifier> identifier();
-
-  Optional<CodeableConcept> name();
-
-  Optional<SubstanceSpecification_MolecularWeight> molecularWeight();
+  Optional<CodeableConcept> substitution();
 
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> substitution();
-
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> name();
+
   Optional<Quantity> halfLife();
+
+  Optional<SubstanceSpecification_MolecularWeight> molecularWeight();
+
+  Optional<Identifier> identifier();
 
   static ImmutableSubstanceSpecification_Isotope.Builder builder() {
     return ImmutableSubstanceSpecification_Isotope.builder();

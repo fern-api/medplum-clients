@@ -18,25 +18,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityResponse_Benefit {
-  Optional<Double> usedUnsignedInt();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<String> allowedString();
 
   CodeableConcept type();
-
-  Optional<Money> usedMoney();
 
   Optional<String> usedString();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Double> allowedUnsignedInt();
+  Optional<Double> usedUnsignedInt();
 
   Optional<Money> allowedMoney();
 
-  Optional<String> allowedString();
+  Optional<Double> allowedUnsignedInt();
+
+  Optional<Money> usedMoney();
+
+  Optional<String> id();
 
   static ImmutableCoverageEligibilityResponse_Benefit.TypeBuildStage builder() {
     return ImmutableCoverageEligibilityResponse_Benefit.builder();

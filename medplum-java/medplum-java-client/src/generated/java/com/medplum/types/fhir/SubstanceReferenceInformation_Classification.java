@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceReferenceInformation_Classification {
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> subtype();
-
   Optional<CodeableConcept> domain();
 
   Optional<CodeableConcept> classification();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
   Optional<List<Reference>> source();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> subtype();
 
   static ImmutableSubstanceReferenceInformation_Classification.Builder builder() {
     return ImmutableSubstanceReferenceInformation_Classification.builder();

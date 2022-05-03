@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Item {
+  Optional<List<PositiveInt>> diagnosisSequence();
+
+  Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
+
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> revenue();
+
+  Optional<List<ExplanationOfBenefit_Detail>> detail();
+
+  Optional<List<CodeableConcept>> subSite();
+
+  Optional<List<Reference>> encounter();
+
+  Optional<Reference> locationReference();
+
+  Optional<Address> locationAddress();
+
+  Optional<Money> unitPrice();
+
+  Optional<Money> net();
+
+  Optional<String> id();
+
+  Optional<PositiveInt> sequence();
+
+  Optional<CodeableConcept> bodySite();
+
+  Optional<List<PositiveInt>> informationSequence();
+
+  Optional<List<CodeableConcept>> programCode();
+
+  Optional<Period> servicedPeriod();
+
+  Optional<CodeableConcept> category();
+
   Optional<Decimal> factor();
 
   Optional<CodeableConcept> locationCodeableConcept();
 
-  Optional<List<Reference>> udi();
-
-  Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
-
-  Optional<CodeableConcept> bodySite();
-
-  Optional<List<PositiveInt>> noteNumber();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<PositiveInt>> diagnosisSequence();
-
-  Optional<Money> net();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> revenue();
-
-  Optional<Money> unitPrice();
-
-  Optional<List<PositiveInt>> procedureSequence();
-
-  Optional<List<CodeableConcept>> programCode();
-
-  Optional<Reference> locationReference();
-
-  Optional<List<PositiveInt>> informationSequence();
-
   Optional<Quantity> quantity();
-
-  Optional<CodeableConcept> category();
-
-  Optional<List<Reference>> encounter();
-
-  Optional<PositiveInt> sequence();
-
-  Optional<List<CodeableConcept>> subSite();
-
-  CodeableConcept productOrService();
-
-  Optional<List<PositiveInt>> careTeamSequence();
 
   Optional<String> servicedDate();
 
-  Optional<List<ExplanationOfBenefit_Detail>> detail();
+  Optional<List<PositiveInt>> careTeamSequence();
 
-  Optional<Period> servicedPeriod();
+  Optional<List<PositiveInt>> procedureSequence();
 
-  Optional<List<CodeableConcept>> modifier();
+  Optional<List<PositiveInt>> noteNumber();
 
-  Optional<Address> locationAddress();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> udi();
+
+  CodeableConcept productOrService();
 
   static ImmutableExplanationOfBenefit_Item.ProductOrServiceBuildStage builder() {
     return ImmutableExplanationOfBenefit_Item.builder();

@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Patient_Link {
   Optional<String> id();
 
-  Optional<Patient_linkType> type();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
   Reference other();
+
+  Optional<Patient_linkType> type();
 
   static ImmutablePatient_Link.OtherBuildStage builder() {
     return ImmutablePatient_Link.builder();

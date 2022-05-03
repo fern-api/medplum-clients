@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_SupportingInfo {
-  Optional<Attachment> valueAttachment();
-
-  Optional<Period> timingPeriod();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<Coding> reason();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> valueString();
-
-  Optional<String> timingDate();
-
-  CodeableConcept category();
-
   Optional<String> id();
-
-  Optional<Reference> valueReference();
 
   Optional<PositiveInt> sequence();
 
+  CodeableConcept category();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Quantity> valueQuantity();
 
+  Optional<Reference> valueReference();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<String> timingDate();
+
+  Optional<Coding> reason();
+
+  Optional<List<Extension>> extension();
+
   Optional<CodeableConcept> code();
+
+  Optional<String> valueString();
+
+  Optional<Period> timingPeriod();
 
   static ImmutableExplanationOfBenefit_SupportingInfo.CategoryBuildStage builder() {
     return ImmutableExplanationOfBenefit_SupportingInfo.builder();

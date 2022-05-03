@@ -19,113 +19,113 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task_Output {
-  Optional<DataRequirement> valueDataRequirement();
-
-  Optional<Meta> valueMeta();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<String> valueDate();
-
-  Optional<String> valueDateTime();
-
-  Optional<Double> valueUnsignedInt();
-
-  Optional<String> valueUri();
-
-  Optional<Money> valueMoney();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Age> valueAge();
-
   Optional<UsageContext> valueUsageContext();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<String> valueMarkdown();
-
-  Optional<RelatedArtifact> valueRelatedArtifact();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<Coding> valueCoding();
 
   Optional<String> valueUuid();
 
-  Optional<String> valueId();
+  Optional<ParameterDefinition> valueParameterDefinition();
 
-  Optional<Boolean> valueBoolean();
-
-  Optional<Count> valueCount();
+  Optional<Age> valueAge();
 
   Optional<Period> valuePeriod();
 
-  Optional<String> valueCanonical();
+  Optional<Timing> valueTiming();
 
-  Optional<Range> valueRange();
+  Optional<String> valueString();
 
-  Optional<String> valueUrl();
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<Address> valueAddress();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<String> valueUri();
 
   Optional<Distance> valueDistance();
 
   Optional<Duration> valueDuration();
 
-  Optional<Annotation> valueAnnotation();
+  Optional<Meta> valueMeta();
 
-  Optional<String> valueOid();
+  Optional<Coding> valueCoding();
 
-  Optional<Double> valuePositiveInt();
-
-  Optional<String> valueTime();
-
-  Optional<String> valueCode();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<Expression> valueExpression();
-
-  CodeableConcept type();
-
-  Optional<Reference> valueReference();
-
-  Optional<ContactDetail> valueContactDetail();
-
-  Optional<String> valueString();
-
-  Optional<Timing> valueTiming();
-
-  Optional<Signature> valueSignature();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<ParameterDefinition> valueParameterDefinition();
+  Optional<Quantity> valueQuantity();
 
   Optional<Double> valueInteger();
 
-  Optional<String> valueInstant();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<HumanName> valueHumanName();
 
-  Optional<Double> valueDecimal();
+  Optional<String> valueDateTime();
 
-  Optional<String> valueBase64Binary();
+  Optional<Double> valueUnsignedInt();
 
-  Optional<ContactPoint> valueContactPoint();
+  Optional<TriggerDefinition> valueTriggerDefinition();
 
-  Optional<Ratio> valueRatio();
+  CodeableConcept type();
 
-  Optional<Address> valueAddress();
+  Optional<String> valueInstant();
+
+  Optional<Double> valuePositiveInt();
+
+  Optional<Contributor> valueContributor();
+
+  Optional<Annotation> valueAnnotation();
 
   Optional<String> id();
 
+  Optional<Expression> valueExpression();
+
+  Optional<String> valueDate();
+
+  Optional<DataRequirement> valueDataRequirement();
+
+  Optional<Double> valueDecimal();
+
   Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<Signature> valueSignature();
+
+  Optional<String> valueTime();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<Money> valueMoney();
+
+  Optional<String> valueMarkdown();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<String> valueUrl();
+
+  Optional<String> valueOid();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<String> valueCode();
+
+  Optional<ContactDetail> valueContactDetail();
+
+  Optional<Count> valueCount();
+
+  Optional<String> valueCanonical();
+
+  Optional<String> valueId();
+
+  Optional<Range> valueRange();
+
+  Optional<Reference> valueReference();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableTask_Output.TypeBuildStage builder() {
     return ImmutableTask_Output.builder();

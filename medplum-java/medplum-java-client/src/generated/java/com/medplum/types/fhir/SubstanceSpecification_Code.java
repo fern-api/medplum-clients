@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Code {
-  Optional<List<Reference>> source();
-
-  Optional<DateTime> statusDate();
-
-  Optional<CodeableConcept> status();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> code();
+  Optional<DateTime> statusDate();
 
   Optional<String> comment();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> status();
+
+  Optional<CodeableConcept> code();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> source();
 
   static ImmutableSubstanceSpecification_Code.Builder builder() {
     return ImmutableSubstanceSpecification_Code.builder();

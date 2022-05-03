@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface SubstanceSpecification_Official {
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<CodeableConcept> status();
+
+  Optional<CodeableConcept> authority();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> date();
 
-  Optional<CodeableConcept> authority();
+  Optional<List<Extension>> extension();
 
   static ImmutableSubstanceSpecification_Official.Builder builder() {
     return ImmutableSubstanceSpecification_Official.builder();

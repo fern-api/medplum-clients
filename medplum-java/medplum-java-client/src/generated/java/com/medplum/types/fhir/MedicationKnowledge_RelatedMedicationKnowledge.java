@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_RelatedMedicationKnowledge {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
+  CodeableConcept type();
 
   Optional<List<Extension>> extension();
 
-  CodeableConcept type();
+  Optional<String> id();
 
   List<Reference> reference();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMedicationKnowledge_RelatedMedicationKnowledge.TypeBuildStage builder() {
     return ImmutableMedicationKnowledge_RelatedMedicationKnowledge.builder();

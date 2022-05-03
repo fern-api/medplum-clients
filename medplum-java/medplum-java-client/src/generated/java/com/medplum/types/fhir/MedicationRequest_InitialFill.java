@@ -23,9 +23,9 @@ public interface MedicationRequest_InitialFill {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Duration> duration();
-
   Optional<Quantity> quantity();
+
+  Optional<Duration> duration();
 
   static ImmutableMedicationRequest_InitialFill.Builder builder() {
     return ImmutableMedicationRequest_InitialFill.builder();

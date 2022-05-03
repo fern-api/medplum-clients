@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DiagnosticReport_Media {
-  Reference link();
-
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Reference link();
 
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> comment();
 

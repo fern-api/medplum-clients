@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Accident {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> type();
-
   Optional<Date> date();
 
-  Optional<Reference> locationReference();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Address> locationAddress();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> type();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> locationReference();
 
   static ImmutableExplanationOfBenefit_Accident.Builder builder() {
     return ImmutableExplanationOfBenefit_Accident.builder();

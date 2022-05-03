@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_UdiDeviceIdentifier {
-  Optional<String> id();
+  Optional<Uri> issuer();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Uri> jurisdiction();
 
   Optional<String> deviceIdentifier();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
-  Optional<Uri> issuer();
+  Optional<String> id();
 
   static ImmutableDeviceDefinition_UdiDeviceIdentifier.Builder builder() {
     return ImmutableDeviceDefinition_UdiDeviceIdentifier.builder();

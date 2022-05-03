@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Global {
-  Canonical profile();
-
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Canonical profile();
 
   Optional<Code> type();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   static ImmutableImplementationGuide_Global.ProfileBuildStage builder() {
     return ImmutableImplementationGuide_Global.builder();

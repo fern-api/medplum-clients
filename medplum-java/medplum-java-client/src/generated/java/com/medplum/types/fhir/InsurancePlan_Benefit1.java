@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_Benefit1 {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
-  Optional<List<InsurancePlan_Cost>> cost();
+  Optional<List<Extension>> extension();
 
   CodeableConcept type();
 
-  Optional<String> id();
+  Optional<List<InsurancePlan_Cost>> cost();
 
   Optional<List<Extension>> modifierExtension();
 

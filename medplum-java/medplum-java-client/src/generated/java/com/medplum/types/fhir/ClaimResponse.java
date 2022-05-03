@@ -17,77 +17,77 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse {
-  Optional<Meta> meta();
-
-  Optional<List<ClaimResponse_Total>> total();
-
-  Optional<Code> use();
-
-  Optional<Reference> requestor();
-
-  Optional<String> preAuthRef();
-
-  Optional<Id> id();
-
-  Optional<ClaimResponse_Payment> payment();
-
-  Optional<CodeableConcept> fundsReserve();
-
   Reference insurer();
-
-  Optional<Attachment> form();
-
-  CodeableConcept type();
-
-  Optional<Period> preAuthPeriod();
-
-  Optional<CodeableConcept> subType();
-
-  Optional<Code> language();
-
-  Optional<List<ClaimResponse_Item>> item();
-
-  Optional<String> disposition();
-
-  Reference patient();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> formCode();
-
-  Optional<Code> outcome();
-
-  Optional<List<ClaimResponse_Adjudication>> adjudication();
-
-  Optional<Reference> request();
-
-  String resourceType();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Code> status();
 
   Optional<List<Reference>> communicationRequest();
 
-  Optional<List<ClaimResponse_ProcessNote>> processNote();
+  Optional<List<ClaimResponse_Insurance>> insurance();
+
+  Optional<CodeableConcept> formCode();
+
+  Optional<Id> id();
+
+  CodeableConcept type();
+
+  Optional<Reference> request();
+
+  Optional<Code> status();
+
+  Optional<List<ClaimResponse_Item>> item();
+
+  Optional<ClaimResponse_Payment> payment();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<DateTime> created();
+
+  Optional<CodeableConcept> subType();
+
+  Optional<List<ClaimResponse_Adjudication>> adjudication();
+
+  Optional<List<ClaimResponse_ProcessNote>> processNote();
+
+  Optional<Code> outcome();
+
+  Reference patient();
+
+  Optional<String> disposition();
 
   Optional<CodeableConcept> payeeType();
 
   Optional<List<ClaimResponse_AddItem>> addItem();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<ClaimResponse_Insurance>> insurance();
+  Optional<Reference> requestor();
 
-  Optional<List<ResourceList>> contained();
+  Optional<String> preAuthRef();
+
+  Optional<Narrative> text();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> fundsReserve();
 
   Optional<List<ClaimResponse_Error>> error();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<ClaimResponse_Total>> total();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> use();
+
+  Optional<Attachment> form();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Meta> meta();
+
+  Optional<Period> preAuthPeriod();
 
   static ImmutableClaimResponse.InsurerBuildStage builder() {
     return ImmutableClaimResponse.builder();

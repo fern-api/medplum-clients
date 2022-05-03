@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GraphDefinition_Target {
-  Optional<String> params();
-
-  Optional<Code> type();
-
   Optional<List<GraphDefinition_Compartment>> compartment();
 
   Optional<List<GraphDefinition_Link>> link();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> type();
+
+  Optional<String> params();
+
+  Optional<String> id();
 
   Optional<Canonical> profile();
 

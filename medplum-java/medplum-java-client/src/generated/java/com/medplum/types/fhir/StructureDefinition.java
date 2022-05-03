@@ -19,78 +19,78 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureDefinition {
-  Optional<Boolean> experimental();
-
-  Optional<String> title();
-
-  Optional<Narrative> text();
-
-  String resourceType();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Meta> meta();
-
-  Optional<StructureDefinition_Snapshot> snapshot();
-
-  Optional<List<StructureDefinition_Context>> context();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> url();
-
-  Optional<StructuredefinitionDerivation> derivation();
-
-  Optional<StructureDefinition_Differential> differential();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Uri> type();
-
-  Optional<Markdown> description();
-
-  Optional<List<String>> contextInvariant();
-
-  Optional<Markdown> copyright();
-
-  Optional<StructuredefinitionFhirversion> fhirVersion();
-
-  Optional<Code> language();
-
-  Optional<StructuredefinitionStatus> status();
-
-  Optional<List<Coding>> keyword();
-
-  Optional<List<ContactDetail>> contact();
-
   Optional<String> name();
-
-  Optional<StructuredefinitionKind> kind();
-
-  Optional<Markdown> purpose();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Canonical> baseDefinition();
+  Optional<StructuredefinitionStatus> status();
 
-  Optional<Uri> implicitRules();
+  Optional<StructureDefinition_Snapshot> snapshot();
 
-  Optional<List<StructureDefinition_Mapping>> mapping();
+  Optional<String> title();
+
+  Optional<Id> id();
+
+  Optional<List<ContactDetail>> contact();
 
   @JsonProperty("abstract")
   Optional<Boolean> _abstract();
 
-  Optional<String> version();
+  Optional<List<Coding>> keyword();
 
-  Optional<Id> id();
+  Optional<StructureDefinition_Differential> differential();
 
-  Optional<String> publisher();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<StructuredefinitionKind> kind();
+
+  Optional<Uri> url();
+
+  Optional<Uri> type();
+
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<DateTime> date();
 
-  Optional<List<ResourceList>> contained();
+  Optional<String> publisher();
+
+  Optional<StructuredefinitionFhirversion> fhirVersion();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Canonical> baseDefinition();
+
+  Optional<String> version();
+
+  Optional<List<StructureDefinition_Mapping>> mapping();
+
+  String resourceType();
+
+  Optional<List<StructureDefinition_Context>> context();
+
+  Optional<List<String>> contextInvariant();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
+
+  Optional<Markdown> description();
+
+  Optional<StructuredefinitionDerivation> derivation();
+
+  Optional<Markdown> copyright();
 
   static ImmutableStructureDefinition.ResourceTypeBuildStage builder() {
     return ImmutableStructureDefinition.builder();

@@ -18,39 +18,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VisionPrescription_LensSpecification {
+  Optional<String> color();
+
+  Optional<Decimal> diameter();
+
   Optional<Integer> axis();
 
-  Optional<Decimal> add();
+  Optional<Quantity> duration();
 
-  Optional<Decimal> power();
+  Optional<String> id();
 
-  Optional<Decimal> backCurve();
+  Optional<Visionprescription_lensspecificationEye> eye();
+
+  Optional<String> brand();
+
+  Optional<List<Extension>> modifierExtension();
+
+  CodeableConcept product();
+
+  Optional<List<VisionPrescription_Prism>> prism();
 
   Optional<List<Extension>> extension();
 
   Optional<Decimal> sphere();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
+  Optional<Decimal> backCurve();
 
   Optional<List<Annotation>> note();
 
-  CodeableConcept product();
-
-  Optional<Visionprescription_lensspecificationEye> eye();
-
-  Optional<Quantity> duration();
-
-  Optional<String> color();
+  Optional<Decimal> add();
 
   Optional<Decimal> cylinder();
 
-  Optional<String> brand();
-
-  Optional<Decimal> diameter();
-
-  Optional<List<VisionPrescription_Prism>> prism();
+  Optional<Decimal> power();
 
   static ImmutableVisionPrescription_LensSpecification.ProductBuildStage builder() {
     return ImmutableVisionPrescription_LensSpecification.builder();

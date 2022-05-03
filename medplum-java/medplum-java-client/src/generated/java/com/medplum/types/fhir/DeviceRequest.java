@@ -17,77 +17,77 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceRequest {
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<Id> id();
-
-  Optional<List<Reference>> priorRequest();
-
-  Optional<CodeableConcept> codeCodeableConcept();
-
-  Optional<Reference> encounter();
-
-  Optional<List<Canonical>> instantiatesCanonical();
+  Optional<Code> priority();
 
   String resourceType();
 
-  Optional<Reference> requester();
+  Optional<List<Reference>> insurance();
 
-  Optional<Code> priority();
-
-  Optional<CodeableConcept> performerType();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Reference>> relevantHistory();
 
   Optional<Timing> occurrenceTiming();
 
-  Optional<Code> intent();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<Code> status();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<DeviceRequest_Parameter>> parameter();
+  Optional<List<Canonical>> instantiatesCanonical();
 
   Reference subject();
 
-  Optional<Identifier> groupIdentifier();
+  Optional<List<DeviceRequest_Parameter>> parameter();
 
-  Optional<List<Reference>> insurance();
+  Optional<CodeableConcept> performerType();
 
-  Optional<Meta> meta();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<Reference> requester();
 
   Optional<Reference> codeReference();
 
-  Optional<DateTime> authoredOn();
+  Optional<Meta> meta();
 
   Optional<Reference> performer();
 
   Optional<List<Reference>> supportingInfo();
 
-  Optional<Code> language();
+  Optional<Code> intent();
+
+  Optional<Code> status();
 
   Optional<String> occurrenceDateTime();
 
+  Optional<Code> language();
+
+  Optional<List<Uri>> instantiatesUri();
+
   Optional<List<Annotation>> note();
 
-  Optional<Narrative> text();
+  Optional<List<Reference>> basedOn();
+
+  Optional<Identifier> groupIdentifier();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Reference>> priorRequest();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Reference>> relevantHistory();
+  Optional<Period> occurrencePeriod();
+
+  Optional<CodeableConcept> codeCodeableConcept();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Id> id();
+
+  Optional<Reference> encounter();
 
   static ImmutableDeviceRequest.ResourceTypeBuildStage builder() {
     return ImmutableDeviceRequest.builder();

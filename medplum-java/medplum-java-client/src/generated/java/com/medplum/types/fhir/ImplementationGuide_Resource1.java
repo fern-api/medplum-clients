@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Resource1 {
-  Reference reference();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> exampleCanonical();
-
-  Optional<List<Extension>> extension();
 
   Optional<Boolean> exampleBoolean();
 
   Optional<Url> relativePath();
+
+  Optional<String> exampleCanonical();
+
+  Reference reference();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 

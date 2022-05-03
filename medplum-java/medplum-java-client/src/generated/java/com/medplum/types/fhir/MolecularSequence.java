@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence {
+  Optional<String> observedSeq();
+
   Optional<List<MolecularSequence_StructureVariant>> structureVariant();
-
-  Optional<Narrative> text();
-
-  Optional<MolecularSequence_ReferenceSeq> referenceSeq();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Quantity> quantity();
-
-  Optional<Reference> performer();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> device();
-
-  Optional<MolecularsequenceType> type();
-
-  Optional<List<MolecularSequence_Variant>> variant();
-
-  Optional<Integer> readCoverage();
-
-  Optional<List<Identifier>> identifier();
 
   Optional<Reference> patient();
 
-  Optional<Integer> coordinateSystem();
+  Optional<List<MolecularSequence_Variant>> variant();
 
-  Optional<String> observedSeq();
-
-  Optional<Meta> meta();
+  Optional<Reference> performer();
 
   Optional<List<Reference>> pointer();
 
-  Optional<List<ResourceList>> contained();
-
   Optional<Code> language();
+
+  Optional<Quantity> quantity();
 
   Optional<List<MolecularSequence_Quality>> quality();
 
-  Optional<List<MolecularSequence_Repository>> repository();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Integer> coordinateSystem();
+
+  Optional<Meta> meta();
 
   Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  String resourceType();
+
+  Optional<Reference> device();
+
+  Optional<Integer> readCoverage();
+
+  Optional<List<MolecularSequence_Repository>> repository();
+
+  Optional<MolecularsequenceType> type();
+
+  Optional<MolecularSequence_ReferenceSeq> referenceSeq();
 
   Optional<Reference> specimen();
 
   Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableMolecularSequence.ResourceTypeBuildStage builder() {
     return ImmutableMolecularSequence.builder();

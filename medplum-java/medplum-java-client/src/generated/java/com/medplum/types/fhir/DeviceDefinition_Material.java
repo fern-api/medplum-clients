@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface DeviceDefinition_Material {
   Optional<Boolean> alternate();
 
-  Optional<Boolean> allergenicIndicator();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> allergenicIndicator();
 
   CodeableConcept substance();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableDeviceDefinition_Material.SubstanceBuildStage builder() {
     return ImmutableDeviceDefinition_Material.builder();

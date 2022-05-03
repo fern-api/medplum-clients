@@ -17,33 +17,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceReferenceInformation {
-  Optional<Uri> implicitRules();
-
-  Optional<List<SubstanceReferenceInformation_GeneElement>> geneElement();
+  Optional<List<SubstanceReferenceInformation_Gene>> gene();
 
   Optional<List<SubstanceReferenceInformation_Target>> target();
 
-  Optional<List<Extension>> extension();
+  Optional<Meta> meta();
 
-  Optional<Narrative> text();
+  Optional<Id> id();
 
   Optional<List<SubstanceReferenceInformation_Classification>> classification();
 
+  Optional<List<Extension>> extension();
+
+  Optional<List<SubstanceReferenceInformation_GeneElement>> geneElement();
+
   String resourceType();
+
+  Optional<String> comment();
+
+  Optional<Narrative> text();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Code> language();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<Id> id();
-
-  Optional<String> comment();
-
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<SubstanceReferenceInformation_Gene>> gene();
 
   static ImmutableSubstanceReferenceInformation.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceReferenceInformation.builder();

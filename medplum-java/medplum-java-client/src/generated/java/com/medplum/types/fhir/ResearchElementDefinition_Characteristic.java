@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ResearchElementDefinition_Characteristic {
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> unitOfMeasure();
-
-  Optional<String> id();
-
-  Optional<Duration> studyEffectiveTimeFromStart();
-
-  Optional<Researchelementdefinition_characteristicParticipanteffectivegroupmeasure> participantEffectiveGroupMeasure(
-      );
-
-  Optional<Boolean> exclude();
+  Optional<String> participantEffectiveDescription();
 
   Optional<String> definitionCanonical();
 
-  Optional<List<UsageContext>> usageContext();
+  Optional<Boolean> exclude();
+
+  Optional<String> studyEffectiveDescription();
+
+  Optional<Duration> studyEffectiveDuration();
+
+  Optional<Period> participantEffectivePeriod();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Researchelementdefinition_characteristicParticipanteffectivegroupmeasure> participantEffectiveGroupMeasure(
+      );
 
   Optional<Timing> participantEffectiveTiming();
 
   Optional<String> studyEffectiveDateTime();
 
-  Optional<Researchelementdefinition_characteristicStudyeffectivegroupmeasure> studyEffectiveGroupMeasure(
-      );
-
-  Optional<Timing> studyEffectiveTiming();
-
   Optional<Duration> participantEffectiveDuration();
 
-  Optional<String> studyEffectiveDescription();
-
-  Optional<String> participantEffectiveDescription();
-
-  Optional<Duration> participantEffectiveTimeFromStart();
+  Optional<Duration> studyEffectiveTimeFromStart();
 
   Optional<Expression> definitionExpression();
 
-  Optional<CodeableConcept> definitionCodeableConcept();
-
-  Optional<DataRequirement> definitionDataRequirement();
-
-  Optional<String> participantEffectiveDateTime();
-
-  Optional<Period> participantEffectivePeriod();
+  Optional<Researchelementdefinition_characteristicStudyeffectivegroupmeasure> studyEffectiveGroupMeasure(
+      );
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<CodeableConcept> definitionCodeableConcept();
+
   Optional<Period> studyEffectivePeriod();
 
-  Optional<Duration> studyEffectiveDuration();
+  Optional<Duration> participantEffectiveTimeFromStart();
+
+  Optional<DataRequirement> definitionDataRequirement();
+
+  Optional<String> id();
+
+  Optional<String> participantEffectiveDateTime();
+
+  Optional<List<UsageContext>> usageContext();
+
+  Optional<Timing> studyEffectiveTiming();
+
+  Optional<CodeableConcept> unitOfMeasure();
 
   static ImmutableResearchElementDefinition_Characteristic.Builder builder() {
     return ImmutableResearchElementDefinition_Characteristic.builder();

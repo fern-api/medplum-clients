@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeSystem {
+  Optional<String> title();
+
   String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<CodeSystem_Filter>> filter();
-
-  Optional<String> version();
 
   Optional<Markdown> description();
 
-  Optional<Meta> meta();
+  Optional<Boolean> versionNeeded();
 
-  Optional<Uri> implicitRules();
-
-  Optional<String> title();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<List<ContactDetail>> contact();
 
   Optional<Narrative> text();
 
-  Optional<List<Extension>> extension();
+  Optional<CodesystemStatus> status();
 
-  Optional<DateTime> date();
-
-  Optional<String> publisher();
-
-  Optional<Boolean> experimental();
-
-  Optional<Boolean> caseSensitive();
-
-  Optional<Boolean> versionNeeded();
+  Optional<Boolean> compositional();
 
   Optional<CodesystemHierarchymeaning> hierarchyMeaning();
 
+  Optional<Code> language();
+
   Optional<Markdown> copyright();
 
-  Optional<List<ContactDetail>> contact();
+  Optional<List<CodeSystem_Filter>> filter();
+
+  Optional<CodesystemContent> content();
+
+  Optional<UnsignedInt> count();
+
+  Optional<List<CodeSystem_Property>> property();
+
+  Optional<String> publisher();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
 
   Optional<List<CodeSystem_Concept>> concept();
 
   Optional<Id> id();
 
+  Optional<DateTime> date();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Boolean> experimental();
+
+  Optional<Canonical> valueSet();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> version();
+
+  Optional<List<ResourceList>> contained();
+
   Optional<Markdown> purpose();
 
-  Optional<CodesystemContent> content();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<UnsignedInt> count();
-
-  Optional<Code> language();
-
-  Optional<Boolean> compositional();
+  Optional<Uri> implicitRules();
 
   Optional<List<UsageContext>> useContext();
 
-  Optional<Canonical> supplements();
+  Optional<String> name();
+
+  Optional<Boolean> caseSensitive();
 
   Optional<Uri> url();
 
-  Optional<String> name();
+  Optional<Canonical> supplements();
 
-  Optional<List<CodeSystem_Property>> property();
-
-  Optional<CodesystemStatus> status();
-
-  Optional<Canonical> valueSet();
+  Optional<List<Extension>> extension();
 
   static ImmutableCodeSystem.ResourceTypeBuildStage builder() {
     return ImmutableCodeSystem.builder();

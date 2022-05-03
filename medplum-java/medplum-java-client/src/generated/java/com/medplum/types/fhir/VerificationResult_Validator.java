@@ -21,13 +21,13 @@ public interface VerificationResult_Validator {
 
   Optional<String> identityCertificate();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Signature> attestationSignature();
 
   Optional<List<Extension>> extension();
 
   Reference organization();
 
-  Optional<Signature> attestationSignature();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableVerificationResult_Validator.OrganizationBuildStage builder() {
     return ImmutableVerificationResult_Validator.builder();

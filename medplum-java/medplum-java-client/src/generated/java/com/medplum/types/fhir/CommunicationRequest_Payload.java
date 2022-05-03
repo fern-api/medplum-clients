@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CommunicationRequest_Payload {
-  Optional<List<Extension>> extension();
-
   Optional<String> contentString();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> contentReference();
 
   Optional<Attachment> contentAttachment();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
+
+  Optional<Reference> contentReference();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableCommunicationRequest_Payload.Builder builder() {
     return ImmutableCommunicationRequest_Payload.builder();

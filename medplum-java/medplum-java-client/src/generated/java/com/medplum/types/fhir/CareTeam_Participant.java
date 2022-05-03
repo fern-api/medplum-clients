@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CareTeam_Participant {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<Reference> onBehalfOf();
 
   Optional<Reference> member();
 
   Optional<Period> period();
 
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   Optional<List<CodeableConcept>> role();
 

@@ -17,8 +17,6 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Component {
-  Optional<List<Extension>> extension();
-
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
@@ -26,6 +24,8 @@ public interface MeasureReport_Component {
   CodeableConcept code();
 
   CodeableConcept value();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableMeasureReport_Component.CodeBuildStage builder() {
     return ImmutableMeasureReport_Component.builder();

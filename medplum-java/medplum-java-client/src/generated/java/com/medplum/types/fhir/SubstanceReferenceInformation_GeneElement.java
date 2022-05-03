@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface SubstanceReferenceInformation_GeneElement {
   Optional<String> id();
 
-  Optional<List<Reference>> source();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> type();
-
   Optional<Identifier> element();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> type();
+
+  Optional<List<Reference>> source();
 
   static ImmutableSubstanceReferenceInformation_GeneElement.Builder builder() {
     return ImmutableSubstanceReferenceInformation_GeneElement.builder();

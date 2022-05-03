@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_SupportingInfo {
-  Optional<List<Extension>> extension();
+  Optional<Boolean> valueBoolean();
 
-  Optional<List<Extension>> modifierExtension();
-
-  CodeableConcept category();
+  Optional<Reference> valueReference();
 
   Optional<String> valueString();
 
-  Optional<Quantity> valueQuantity();
+  Optional<PositiveInt> sequence();
 
-  Optional<Attachment> valueAttachment();
+  Optional<List<Extension>> extension();
 
   Optional<Period> timingPeriod();
 
   Optional<CodeableConcept> reason();
 
-  Optional<String> timingDate();
-
-  Optional<Reference> valueReference();
-
-  Optional<PositiveInt> sequence();
-
-  Optional<String> id();
+  Optional<Attachment> valueAttachment();
 
   Optional<CodeableConcept> code();
 
-  Optional<Boolean> valueBoolean();
+  Optional<String> timingDate();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<String> id();
+
+  CodeableConcept category();
 
   static ImmutableClaim_SupportingInfo.CategoryBuildStage builder() {
     return ImmutableClaim_SupportingInfo.builder();

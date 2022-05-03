@@ -18,57 +18,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario {
-  Optional<String> version();
-
-  Optional<Id> id();
-
   Optional<String> name();
-
-  String resourceType();
-
-  Optional<List<UsageContext>> useContext();
 
   Optional<List<Canonical>> workflow();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Boolean> experimental();
 
-  Optional<ExamplescenarioStatus> status();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<List<ExampleScenario_Instance>> instance();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ExampleScenario_Process>> process();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> url();
-
-  Optional<Meta> meta();
-
-  Optional<String> publisher();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<Markdown> purpose();
 
   Optional<List<ExampleScenario_Actor>> actor();
 
-  Optional<Boolean> experimental();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<String> publisher();
+
+  Optional<List<ExampleScenario_Instance>> instance();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<UsageContext>> useContext();
+
+  String resourceType();
+
+  Optional<Code> language();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ExampleScenario_Process>> process();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Narrative> text();
+
+  Optional<Markdown> copyright();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<DateTime> date();
 
-  Optional<Markdown> purpose();
+  Optional<String> version();
+
+  Optional<Uri> url();
+
+  Optional<ExamplescenarioStatus> status();
 
   static ImmutableExampleScenario.ResourceTypeBuildStage builder() {
     return ImmutableExampleScenario.builder();

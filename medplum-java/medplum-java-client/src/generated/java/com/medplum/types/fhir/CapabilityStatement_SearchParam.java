@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_SearchParam {
-  Optional<Capabilitystatement_searchparamType> type();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<Canonical> definition();
-
-  Optional<List<Extension>> extension();
 
   Optional<String> name();
 
   Optional<Markdown> documentation();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
+
+  Optional<Capabilitystatement_searchparamType> type();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableCapabilityStatement_SearchParam.Builder builder() {
     return ImmutableCapabilityStatement_SearchParam.builder();

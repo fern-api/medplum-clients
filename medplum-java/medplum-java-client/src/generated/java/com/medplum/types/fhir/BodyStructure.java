@@ -18,39 +18,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BodyStructure {
+  Optional<Code> language();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> morphology();
+
   Optional<CodeableConcept> location();
 
-  Optional<Code> language();
+  Optional<Boolean> active();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
+
+  Optional<List<CodeableConcept>> locationQualifier();
+
+  String resourceType();
 
   Optional<Narrative> text();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<List<CodeableConcept>> locationQualifier();
-
-  Optional<CodeableConcept> morphology();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Id> id();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Boolean> active();
 
   Optional<String> description();
 
-  Reference patient();
-
   Optional<List<Attachment>> image();
 
-  Optional<Meta> meta();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<ResourceList>> contained();
+
+  Reference patient();
 
   static ImmutableBodyStructure.ResourceTypeBuildStage builder() {
     return ImmutableBodyStructure.builder();

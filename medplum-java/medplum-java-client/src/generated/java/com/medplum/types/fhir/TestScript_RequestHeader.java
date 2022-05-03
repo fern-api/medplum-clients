@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_RequestHeader {
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> field();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<String> value();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableTestScript_RequestHeader.Builder builder() {
     return ImmutableTestScript_RequestHeader.builder();

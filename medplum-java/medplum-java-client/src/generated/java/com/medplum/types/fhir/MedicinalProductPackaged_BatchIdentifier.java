@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPackaged_BatchIdentifier {
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
   Identifier outerPackaging();
 
   Optional<Identifier> immediatePackaging();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMedicinalProductPackaged_BatchIdentifier.OuterPackagingBuildStage builder() {
     return ImmutableMedicinalProductPackaged_BatchIdentifier.builder();

@@ -18,25 +18,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskEvidenceSynthesis_RiskEstimate {
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> unitOfMeasure();
+
+  Optional<Integer> denominatorCount();
+
   Optional<Integer> numeratorCount();
+
+  Optional<Decimal> value();
 
   Optional<List<RiskEvidenceSynthesis_PrecisionEstimate>> precisionEstimate();
 
   Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> description();
-
-  Optional<CodeableConcept> unitOfMeasure();
-
-  Optional<String> id();
-
-  Optional<Integer> denominatorCount();
-
-  Optional<Decimal> value();
 
   static ImmutableRiskEvidenceSynthesis_RiskEstimate.Builder builder() {
     return ImmutableRiskEvidenceSynthesis_RiskEstimate.builder();

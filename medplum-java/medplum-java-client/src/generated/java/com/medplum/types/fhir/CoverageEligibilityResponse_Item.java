@@ -18,39 +18,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityResponse_Item {
-  Optional<List<CoverageEligibilityResponse_Benefit>> benefit();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> provider();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> excluded();
-
   Optional<String> description();
 
   Optional<List<CodeableConcept>> modifier();
 
-  Optional<String> name();
-
-  Optional<String> id();
+  Optional<CodeableConcept> term();
 
   Optional<Uri> authorizationUrl();
 
-  Optional<CodeableConcept> unit();
+  Optional<List<CoverageEligibilityResponse_Benefit>> benefit();
 
-  Optional<Boolean> authorizationRequired();
+  Optional<Boolean> excluded();
 
   Optional<CodeableConcept> network();
 
-  Optional<List<CodeableConcept>> authorizationSupporting();
-
   Optional<CodeableConcept> category();
 
-  Optional<CodeableConcept> term();
+  Optional<String> name();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> provider();
+
+  Optional<CodeableConcept> unit();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> authorizationSupporting();
 
   Optional<CodeableConcept> productOrService();
+
+  Optional<Boolean> authorizationRequired();
 
   static ImmutableCoverageEligibilityResponse_Item.Builder builder() {
     return ImmutableCoverageEligibilityResponse_Item.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Include {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> system();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> version();
-
-  Optional<String> id();
-
   Optional<List<ValueSet_Concept>> concept();
 
   Optional<List<Canonical>> valueSet();
+
+  Optional<String> version();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> system();
+
+  Optional<String> id();
 
   Optional<List<ValueSet_Filter>> filter();
 

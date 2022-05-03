@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer_MonomerSet {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> ratioType();
-
   Optional<List<Extension>> extension();
 
   Optional<List<SubstancePolymer_StartingMaterial>> startingMaterial();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> ratioType();
 
   Optional<String> id();
 

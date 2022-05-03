@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AuditEvent_Entity {
-  Optional<Base64Binary> query();
+  Optional<List<Extension>> extension();
 
   Optional<Reference> what();
 
-  Optional<Coding> role();
+  Optional<List<AuditEvent_Detail>> detail();
 
   Optional<String> name();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Coding> type();
+
+  Optional<Coding> role();
 
   Optional<List<Coding>> securityLabel();
 
-  Optional<List<Extension>> extension();
+  Optional<Coding> lifecycle();
 
   Optional<String> id();
 
-  Optional<List<AuditEvent_Detail>> detail();
-
-  Optional<Coding> type();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> description();
 
-  Optional<Coding> lifecycle();
+  Optional<Base64Binary> query();
 
   static ImmutableAuditEvent_Entity.Builder builder() {
     return ImmutableAuditEvent_Entity.builder();

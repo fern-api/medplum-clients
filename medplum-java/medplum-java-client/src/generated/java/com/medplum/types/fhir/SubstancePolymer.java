@@ -18,36 +18,36 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer {
-  Optional<List<SubstancePolymer_MonomerSet>> monomerSet();
+  Optional<Id> id();
+
+  Optional<List<String>> modification();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> geometry();
 
   Optional<List<SubstancePolymer_Repeat>> repeat();
 
-  String resourceType();
+  Optional<Code> language();
 
   @JsonProperty("class")
   Optional<CodeableConcept> _class();
+
+  String resourceType();
 
   Optional<Narrative> text();
 
   Optional<List<CodeableConcept>> copolymerConnectivity();
 
-  Optional<Code> language();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> geometry();
-
-  Optional<List<String>> modification();
-
   Optional<Uri> implicitRules();
 
-  Optional<Meta> meta();
-
-  Optional<Id> id();
+  Optional<List<SubstancePolymer_MonomerSet>> monomerSet();
 
   Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableSubstancePolymer.ResourceTypeBuildStage builder() {
     return ImmutableSubstancePolymer.builder();

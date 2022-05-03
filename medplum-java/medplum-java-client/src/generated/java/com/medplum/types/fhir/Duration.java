@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Duration {
-  Optional<String> unit();
-
   Optional<Uri> system();
 
-  Optional<String> id();
+  Optional<String> unit();
 
   Optional<Decimal> value();
-
-  Optional<DurationComparator> comparator();
 
   Optional<Code> code();
 
   Optional<List<Extension>> extension();
+
+  Optional<DurationComparator> comparator();
+
+  Optional<String> id();
 
   static ImmutableDuration.Builder builder() {
     return ImmutableDuration.builder();

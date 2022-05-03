@@ -17,47 +17,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentManifest {
-  Optional<List<DocumentManifest_Related>> related();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Meta> meta();
+  Optional<Narrative> text();
 
   Optional<List<Reference>> recipient();
 
-  Optional<List<Reference>> author();
+  Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> type();
+  Optional<Meta> meta();
 
   Optional<Id> id();
 
-  Optional<Identifier> masterIdentifier();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<DocumentmanifestStatus> status();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Identifier>> identifier();
+  Optional<CodeableConcept> type();
 
   Optional<Reference> subject();
 
-  List<Reference> content();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> created();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Reference>> author();
 
   Optional<Code> language();
 
-  String resourceType();
+  Optional<DocumentmanifestStatus> status();
+
+  Optional<Identifier> masterIdentifier();
 
   Optional<Uri> source();
 
-  Optional<Narrative> text();
+  Optional<List<DocumentManifest_Related>> related();
+
+  List<Reference> content();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
+
+  String resourceType();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<String> description();
+
+  Optional<DateTime> created();
 
   static ImmutableDocumentManifest.ResourceTypeBuildStage builder() {
     return ImmutableDocumentManifest.builder();

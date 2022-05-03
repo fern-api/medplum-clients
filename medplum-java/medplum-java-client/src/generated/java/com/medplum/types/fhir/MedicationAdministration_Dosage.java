@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationAdministration_Dosage {
-  Optional<CodeableConcept> method();
-
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> site();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> route();
 
   Optional<Quantity> rateQuantity();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Quantity> dose();
 
-  Optional<String> text();
+  Optional<CodeableConcept> site();
 
   Optional<Ratio> rateRatio();
 
   Optional<String> id();
+
+  Optional<CodeableConcept> route();
+
+  Optional<CodeableConcept> method();
+
+  Optional<String> text();
 
   static ImmutableMedicationAdministration_Dosage.Builder builder() {
     return ImmutableMedicationAdministration_Dosage.builder();

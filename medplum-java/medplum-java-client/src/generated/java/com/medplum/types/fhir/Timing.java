@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Timing {
-  Optional<List<Extension>> extension();
+  Optional<List<DateTime>> event();
 
   Optional<Timing_Repeat> repeat();
 
-  Optional<String> id();
+  Optional<CodeableConcept> code();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> code();
+  Optional<List<Extension>> extension();
 
-  Optional<List<DateTime>> event();
+  Optional<String> id();
 
   static ImmutableTiming.Builder builder() {
     return ImmutableTiming.builder();

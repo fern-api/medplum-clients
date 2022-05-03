@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_Filter {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Code>> op();
-
   Optional<String> id();
 
   Optional<Code> code();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Code>> op();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableTerminologyCapabilities_Filter.Builder builder() {
     return ImmutableTerminologyCapabilities_Filter.builder();

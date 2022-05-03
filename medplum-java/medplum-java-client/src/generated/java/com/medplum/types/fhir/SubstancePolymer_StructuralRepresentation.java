@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer_StructuralRepresentation {
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<String> representation();
+
+  Optional<Attachment> attachment();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Attachment> attachment();
 
   static ImmutableSubstancePolymer_StructuralRepresentation.Builder builder() {
     return ImmutableSubstancePolymer_StructuralRepresentation.builder();

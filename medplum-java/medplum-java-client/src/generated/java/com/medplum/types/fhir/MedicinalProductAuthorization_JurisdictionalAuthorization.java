@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface MedicinalProductAuthorization_JurisdictionalAuthorization {
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
-
   Optional<CodeableConcept> legalStatusOfSupply();
-
-  Optional<String> id();
 
   Optional<CodeableConcept> country();
 
+  Optional<String> id();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Period> validityPeriod();
 

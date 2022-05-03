@@ -21,11 +21,11 @@ public interface MedicationKnowledge_Dosage {
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  List<Dosage> dosage();
 
   Optional<List<Extension>> modifierExtension();
 
-  List<Dosage> dosage();
+  Optional<List<Extension>> extension();
 
   static ImmutableMedicationKnowledge_Dosage.TypeBuildStage builder() {
     return ImmutableMedicationKnowledge_Dosage.builder();

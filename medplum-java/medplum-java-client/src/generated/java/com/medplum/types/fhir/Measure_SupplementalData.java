@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure_SupplementalData {
-  Expression criteria();
+  Optional<List<Extension>> extension();
 
-  Optional<String> description();
+  Optional<List<CodeableConcept>> usage();
 
   Optional<List<Extension>> modifierExtension();
+
+  Expression criteria();
 
   Optional<String> id();
 
   Optional<CodeableConcept> code();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> usage();
+  Optional<String> description();
 
   static ImmutableMeasure_SupplementalData.CriteriaBuildStage builder() {
     return ImmutableMeasure_SupplementalData.builder();

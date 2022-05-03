@@ -18,73 +18,73 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition {
-  Optional<Canonical> base();
+  Optional<DateTime> date();
 
-  Optional<Canonical> outputProfile();
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> purpose();
 
   Optional<List<UsageContext>> useContext();
 
-  Optional<String> title();
-
-  Optional<List<Extension>> extension();
-
   Optional<OperationdefinitionStatus> status();
-
-  Optional<Markdown> description();
-
-  Optional<Markdown> comment();
-
-  Optional<List<Code>> resource();
-
-  Optional<String> name();
-
-  Optional<Boolean> system();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Boolean> type();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Canonical> inputProfile();
-
-  Optional<Boolean> experimental();
 
   Optional<List<OperationDefinition_Overload>> overload();
 
-  Optional<String> publisher();
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ResourceList>> contained();
+
+  String resourceType();
+
+  Optional<Boolean> type();
 
   Optional<String> version();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<OperationdefinitionKind> kind();
+
+  Optional<String> name();
+
+  Optional<List<OperationDefinition_Parameter>> parameter();
+
+  Optional<Canonical> base();
+
+  Optional<Id> id();
+
+  Optional<Boolean> system();
+
+  Optional<List<Code>> resource();
+
+  Optional<Markdown> description();
+
+  Optional<Canonical> inputProfile();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> experimental();
+
+  Optional<String> publisher();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Code> code();
 
-  Optional<Boolean> affectsState();
-
   Optional<Uri> url();
 
-  Optional<DateTime> date();
+  Optional<Meta> meta();
 
-  Optional<List<OperationDefinition_Parameter>> parameter();
-
-  Optional<Code> language();
-
-  Optional<Id> id();
+  Optional<Boolean> affectsState();
 
   Optional<Narrative> text();
 
-  Optional<OperationdefinitionKind> kind();
+  Optional<Canonical> outputProfile();
 
-  Optional<Markdown> purpose();
+  Optional<Uri> implicitRules();
 
-  String resourceType();
+  Optional<Markdown> comment();
 
-  Optional<Meta> meta();
+  Optional<Code> language();
+
+  Optional<String> title();
 
   Optional<Boolean> instance();
 

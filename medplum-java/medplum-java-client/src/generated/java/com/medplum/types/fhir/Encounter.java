@@ -18,70 +18,70 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter {
-  Optional<List<Reference>> episodeOfCare();
+  Optional<Uri> implicitRules();
 
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Meta> meta();
-
-  Optional<Duration> length();
-
-  Optional<CodeableConcept> serviceType();
-
-  Optional<EncounterStatus> status();
-
-  Optional<CodeableConcept> priority();
-
-  Optional<Reference> subject();
-
-  Optional<List<Encounter_Location>> location();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Narrative> text();
 
   Optional<List<CodeableConcept>> type();
 
-  Optional<Uri> implicitRules();
+  Optional<Code> language();
 
-  Optional<List<Reference>> appointment();
-
-  Optional<Encounter_Hospitalization> hospitalization();
+  Optional<Period> period();
 
   Optional<List<Reference>> basedOn();
-
-  Optional<Reference> serviceProvider();
-
-  Optional<Code> language();
 
   Optional<List<ResourceList>> contained();
 
   String resourceType();
 
-  Optional<Id> id();
+  Optional<List<Encounter_Diagnosis>> diagnosis();
 
-  Optional<Period> period();
+  Optional<List<Reference>> appointment();
 
   Optional<List<Encounter_Participant>> participant();
 
   Optional<List<Extension>> extension();
 
+  Optional<Duration> length();
+
+  Optional<List<Encounter_Location>> location();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<Encounter_StatusHistory>> statusHistory();
 
-  Optional<List<Encounter_ClassHistory>> classHistory();
+  Optional<Reference> subject();
 
-  Optional<Narrative> text();
+  Optional<Encounter_Hospitalization> hospitalization();
+
+  Optional<EncounterStatus> status();
 
   Optional<List<Identifier>> identifier();
 
+  @JsonProperty("class")
+  Coding _class();
+
+  Optional<CodeableConcept> priority();
+
+  Optional<List<Reference>> reasonReference();
+
   Optional<Reference> partOf();
+
+  Optional<Meta> meta();
+
+  Optional<List<Encounter_ClassHistory>> classHistory();
+
+  Optional<CodeableConcept> serviceType();
+
+  Optional<List<Reference>> episodeOfCare();
+
+  Optional<Reference> serviceProvider();
 
   Optional<List<CodeableConcept>> reasonCode();
 
   Optional<List<Reference>> account();
 
-  Optional<List<Encounter_Diagnosis>> diagnosis();
-
-  @JsonProperty("class")
-  Coding _class();
+  Optional<Id> id();
 
   static ImmutableEncounter.ResourceTypeBuildStage builder() {
     return ImmutableEncounter.builder();

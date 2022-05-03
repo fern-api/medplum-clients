@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task_Restriction {
-  Optional<PositiveInt> repetitions();
+  Optional<Period> period();
 
   Optional<List<Reference>> recipient();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<PositiveInt> repetitions();
 
-  Optional<Period> period();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 

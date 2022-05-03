@@ -19,41 +19,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Observation_Component {
-  Optional<String> valueDateTime();
-
   Optional<String> id();
-
-  Optional<List<Observation_ReferenceRange>> referenceRange();
 
   Optional<CodeableConcept> valueCodeableConcept();
 
-  Optional<Double> valueInteger();
+  Optional<Boolean> valueBoolean();
 
   CodeableConcept code();
 
   Optional<List<CodeableConcept>> interpretation();
 
+  Optional<List<Observation_ReferenceRange>> referenceRange();
+
+  Optional<String> valueDateTime();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<Range> valueRange();
+
+  Optional<String> valueString();
+
+  Optional<Double> valueInteger();
+
+  Optional<Period> valuePeriod();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<CodeableConcept> dataAbsentReason();
 
   Optional<SampledData> valueSampledData();
 
-  Optional<String> valueTime();
-
-  Optional<String> valueString();
-
-  Optional<Period> valuePeriod();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Range> valueRange();
-
   Optional<Ratio> valueRatio();
 
-  Optional<Boolean> valueBoolean();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> valueTime();
 
   static ImmutableObservation_Component.CodeBuildStage builder() {
     return ImmutableObservation_Component.builder();

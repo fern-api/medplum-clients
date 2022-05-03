@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Constraint {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> requirements();
 
-  Optional<String> xpath();
+  Optional<Elementdefinition_constraintSeverity> severity();
+
+  Optional<String> id();
 
   Optional<Id> key();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> requirements();
-
   Optional<String> expression();
-
-  Optional<String> human();
 
   Optional<Canonical> source();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Elementdefinition_constraintSeverity> severity();
+  Optional<String> human();
+
+  Optional<String> xpath();
 
   static ImmutableElementDefinition_Constraint.Builder builder() {
     return ImmutableElementDefinition_Constraint.builder();

@@ -18,63 +18,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide {
-  Optional<String> name();
-
-  Optional<Uri> implicitRules();
-
-  Optional<ImplementationguideLicense> license();
-
-  Optional<List<ResourceList>> contained();
-
   Optional<Id> id();
-
-  Optional<Markdown> description();
-
-  String resourceType();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<DateTime> date();
-
-  Optional<List<ImplementationGuide_DependsOn>> dependsOn();
 
   Optional<Narrative> text();
 
-  Optional<String> version();
+  Optional<DateTime> date();
 
-  Optional<ImplementationguideStatus> status();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<UsageContext>> useContext();
 
   Optional<Uri> url();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> title();
 
-  Optional<Id> packageId();
+  Optional<ImplementationguideLicense> license();
 
-  Optional<ImplementationGuide_Manifest> manifest();
+  Optional<List<ImplementationGuide_DependsOn>> dependsOn();
+
+  Optional<String> publisher();
+
+  Optional<List<ImplementationGuide_Global>> global();
 
   Optional<Meta> meta();
 
   Optional<Boolean> experimental();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ContactDetail>> contact();
 
-  Optional<List<ImplementationGuide_Global>> global();
+  Optional<ImplementationGuide_Definition> definition();
 
-  Optional<String> publisher();
+  Optional<ImplementationguideStatus> status();
 
-  Optional<List<ImplementationguideFhirversionItem>> fhirVersion();
+  Optional<List<Extension>> extension();
 
   Optional<Markdown> copyright();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> version();
+
+  Optional<String> name();
+
+  Optional<ImplementationGuide_Manifest> manifest();
+
+  String resourceType();
+
+  Optional<Markdown> description();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Id> packageId();
+
+  Optional<List<ImplementationguideFhirversionItem>> fhirVersion();
+
   Optional<Code> language();
 
-  Optional<ImplementationGuide_Definition> definition();
+  Optional<Uri> implicitRules();
 
   static ImmutableImplementationGuide.ResourceTypeBuildStage builder() {
     return ImmutableImplementationGuide.builder();

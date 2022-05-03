@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface ExplanationOfBenefit_Related {
   Optional<String> id();
 
-  Optional<Reference> claim();
-
   Optional<List<Extension>> extension();
 
   Optional<Identifier> reference();
 
+  Optional<CodeableConcept> relationship();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> relationship();
+  Optional<Reference> claim();
 
   static ImmutableExplanationOfBenefit_Related.Builder builder() {
     return ImmutableExplanationOfBenefit_Related.builder();

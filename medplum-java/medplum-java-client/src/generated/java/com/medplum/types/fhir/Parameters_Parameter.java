@@ -19,117 +19,117 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Parameters_Parameter {
-  Optional<Signature> valueSignature();
-
-  Optional<String> valueCode();
-
-  Optional<String> valueDate();
-
-  Optional<String> valueUuid();
+  Optional<List<Extension>> extension();
 
   Optional<Reference> valueReference();
 
-  Optional<Period> valuePeriod();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<String> valueBase64Binary();
-
-  Optional<Meta> valueMeta();
-
-  Optional<String> id();
-
-  Optional<ContactPoint> valueContactPoint();
-
-  Optional<HumanName> valueHumanName();
-
-  Optional<ContactDetail> valueContactDetail();
-
-  Optional<String> valueUri();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<Money> valueMoney();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<Ratio> valueRatio();
-
-  Optional<Double> valueUnsignedInt();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<Range> valueRange();
+  Optional<String> valueDateTime();
 
   Optional<List<Parameters_Parameter>> part();
 
-  Optional<CodeableConcept> valueCodeableConcept();
+  Optional<Attachment> valueAttachment();
 
-  Optional<String> valueDateTime();
+  Optional<HumanName> valueHumanName();
 
   Optional<Double> valuePositiveInt();
 
   Optional<ParameterDefinition> valueParameterDefinition();
 
-  Optional<Timing> valueTiming();
-
-  Optional<Annotation> valueAnnotation();
-
-  Optional<Double> valueDecimal();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<UsageContext> valueUsageContext();
-
-  Optional<Distance> valueDistance();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Double> valueInteger();
-
-  Optional<Expression> valueExpression();
-
-  Optional<String> valueId();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<String> valueOid();
-
-  Optional<String> name();
-
-  Optional<SampledData> valueSampledData();
+  Optional<String> valueCode();
 
   Optional<Count> valueCount();
 
-  Optional<String> valueCanonical();
-
-  Optional<String> valueInstant();
-
   Optional<Duration> valueDuration();
-
-  Optional<ResourceList> resource();
-
-  Optional<Coding> valueCoding();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DataRequirement> valueDataRequirement();
 
   Optional<Address> valueAddress();
 
+  Optional<Timing> valueTiming();
+
+  Optional<String> valueCanonical();
+
+  Optional<String> valueUri();
+
+  Optional<Period> valuePeriod();
+
+  Optional<DataRequirement> valueDataRequirement();
+
   Optional<String> valueMarkdown();
 
-  Optional<Quantity> valueQuantity();
-
-  Optional<RelatedArtifact> valueRelatedArtifact();
-
-  Optional<Age> valueAge();
-
-  Optional<String> valueUrl();
+  Optional<String> valueInstant();
 
   Optional<String> valueString();
 
+  Optional<Expression> valueExpression();
+
+  Optional<Money> valueMoney();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<String> valueDate();
+
+  Optional<Meta> valueMeta();
+
+  Optional<String> id();
+
+  Optional<String> valueUuid();
+
+  Optional<String> valueUrl();
+
+  Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<String> valueId();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<ResourceList> resource();
+
+  Optional<Annotation> valueAnnotation();
+
+  Optional<ContactDetail> valueContactDetail();
+
   Optional<String> valueTime();
+
+  Optional<String> name();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<TriggerDefinition> valueTriggerDefinition();
+
+  Optional<String> valueOid();
+
+  Optional<Age> valueAge();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<Double> valueInteger();
+
+  Optional<Double> valueDecimal();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<Range> valueRange();
+
+  Optional<Distance> valueDistance();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<Signature> valueSignature();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<UsageContext> valueUsageContext();
+
+  Optional<Contributor> valueContributor();
+
+  Optional<Coding> valueCoding();
+
+  Optional<ContactPoint> valueContactPoint();
 
   static ImmutableParameters_Parameter.Builder builder() {
     return ImmutableParameters_Parameter.builder();

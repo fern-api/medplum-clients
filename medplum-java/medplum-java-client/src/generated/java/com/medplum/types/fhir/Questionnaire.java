@@ -18,67 +18,67 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Questionnaire {
-  Optional<Period> effectivePeriod();
-
   Optional<Id> id();
-
-  Optional<List<Coding>> code();
-
-  Optional<Meta> meta();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<String> name();
-
-  Optional<Markdown> copyright();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Narrative> text();
-
-  Optional<DateTime> date();
-
-  Optional<List<Code>> subjectType();
-
-  Optional<String> version();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<List<Questionnaire_Item>> item();
-
-  Optional<Date> approvalDate();
-
-  Optional<Uri> url();
-
-  Optional<QuestionnaireStatus> status();
-
-  Optional<Markdown> description();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Canonical>> derivedFrom();
 
-  Optional<Boolean> experimental();
-
-  Optional<List<UsageContext>> useContext();
+  Optional<Date> lastReviewDate();
 
   String resourceType();
 
-  Optional<String> publisher();
+  Optional<QuestionnaireStatus> status();
 
-  Optional<Code> language();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<List<ContactDetail>> contact();
 
   Optional<List<Identifier>> identifier();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<Uri> url();
+
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Date> approvalDate();
+
+  Optional<List<Questionnaire_Item>> item();
+
+  Optional<Narrative> text();
+
+  Optional<List<Coding>> code();
+
+  Optional<Boolean> experimental();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Markdown> copyright();
+
+  Optional<String> version();
+
+  Optional<Period> effectivePeriod();
+
   Optional<String> title();
 
+  Optional<String> publisher();
+
+  Optional<Markdown> description();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
   Optional<Markdown> purpose();
+
+  Optional<String> name();
+
+  Optional<DateTime> date();
+
+  Optional<List<Code>> subjectType();
 
   static ImmutableQuestionnaire.ResourceTypeBuildStage builder() {
     return ImmutableQuestionnaire.builder();

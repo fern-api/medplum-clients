@@ -18,129 +18,129 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ActivityDefinition {
-  Optional<Narrative> text();
-
-  Optional<Code> priority();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Canonical>> library();
+  Optional<Markdown> description();
 
   Optional<List<Dosage>> dosage();
 
-  Optional<List<ContactDetail>> author();
-
-  Optional<Range> timingRange();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Date> approvalDate();
-
-  Optional<List<ContactDetail>> contact();
-
-  String resourceType();
-
-  Optional<Canonical> transform();
-
-  Optional<Code> language();
-
-  Optional<Reference> subjectReference();
-
-  Optional<Timing> timingTiming();
-
-  Optional<String> version();
-
-  Optional<String> timingDateTime();
-
-  Optional<Id> id();
-
-  Optional<CodeableConcept> productCodeableConcept();
-
-  Optional<String> usage();
-
-  Optional<Period> timingPeriod();
-
-  Optional<Reference> location();
-
   Optional<Uri> url();
 
-  Optional<String> subtitle();
-
-  Optional<List<ContactDetail>> editor();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Code> kind();
-
-  Optional<Markdown> purpose();
-
-  Optional<DateTime> date();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Meta> meta();
+  Optional<List<ContactDetail>> author();
 
   Optional<Duration> timingDuration();
 
-  Optional<Markdown> copyright();
-
-  Optional<Canonical> profile();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Reference>> specimenRequirement();
-
-  Optional<String> title();
-
-  Optional<List<ActivityDefinition_Participant>> participant();
-
-  Optional<ActivitydefinitionStatus> status();
-
-  Optional<Code> intent();
-
-  Optional<Quantity> quantity();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<String> name();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<Reference>> observationRequirement();
+  Optional<Reference> productReference();
 
   Optional<List<ActivityDefinition_DynamicValue>> dynamicValue();
 
-  Optional<List<RelatedArtifact>> relatedArtifact();
+  Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<List<ContactDetail>> reviewer();
+  Optional<Date> lastReviewDate();
 
-  Optional<List<CodeableConcept>> topic();
+  Optional<Quantity> quantity();
+
+  Optional<List<Reference>> observationRequirement();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<List<Reference>> observationResultRequirement();
 
-  Optional<Markdown> description();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> subjectCodeableConcept();
+  Optional<Reference> location();
 
   Optional<String> publisher();
-
-  Optional<Reference> productReference();
-
-  Optional<List<CodeableConcept>> bodySite();
 
   Optional<Boolean> experimental();
 
   Optional<Uri> implicitRules();
 
-  Optional<Boolean> doNotPerform();
+  Optional<Reference> subjectReference();
+
+  Optional<Canonical> profile();
+
+  Optional<Code> priority();
+
+  Optional<Timing> timingTiming();
 
   Optional<Age> timingAge();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> code();
+
+  Optional<String> version();
+
+  Optional<List<CodeableConcept>> bodySite();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<ActivitydefinitionStatus> status();
+
+  Optional<List<ContactDetail>> editor();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<List<ActivityDefinition_Participant>> participant();
+
+  Optional<String> timingDateTime();
+
+  Optional<Id> id();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<Date> approvalDate();
+
+  Optional<String> usage();
+
+  Optional<Code> kind();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> subtitle();
+
+  String resourceType();
+
+  Optional<String> title();
+
+  Optional<Code> intent();
+
+  Optional<Narrative> text();
+
+  Optional<CodeableConcept> productCodeableConcept();
+
+  Optional<Period> timingPeriod();
+
+  Optional<List<Reference>> specimenRequirement();
+
+  Optional<String> name();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<CodeableConcept>> topic();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<Canonical>> library();
+
+  Optional<Range> timingRange();
+
+  Optional<Canonical> transform();
+
+  Optional<Meta> meta();
+
+  Optional<DateTime> date();
+
+  Optional<Markdown> copyright();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableActivityDefinition.ResourceTypeBuildStage builder() {
     return ImmutableActivityDefinition.builder();

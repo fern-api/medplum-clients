@@ -17,8 +17,6 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_SupportedMessage {
-  Canonical definition();
-
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
@@ -26,6 +24,8 @@ public interface CapabilityStatement_SupportedMessage {
   Optional<String> id();
 
   Optional<Capabilitystatement_supportedmessageMode> mode();
+
+  Canonical definition();
 
   static ImmutableCapabilityStatement_SupportedMessage.DefinitionBuildStage builder() {
     return ImmutableCapabilityStatement_SupportedMessage.builder();

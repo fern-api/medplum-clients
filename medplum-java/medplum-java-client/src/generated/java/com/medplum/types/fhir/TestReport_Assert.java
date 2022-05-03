@@ -17,9 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestReport_Assert {
-  Optional<String> id();
-
-  Optional<String> detail();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Testreport_assertResult> result();
 
@@ -27,7 +25,9 @@ public interface TestReport_Assert {
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> detail();
+
+  Optional<String> id();
 
   static ImmutableTestReport_Assert.Builder builder() {
     return ImmutableTestReport_Assert.builder();

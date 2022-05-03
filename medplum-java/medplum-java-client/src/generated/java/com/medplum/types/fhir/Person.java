@@ -18,43 +18,43 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Person {
-  String resourceType();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Address>> address();
-
-  Optional<Meta> meta();
-
-  Optional<Attachment> photo();
-
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<Code> language();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> managingOrganization();
-
-  Optional<List<Extension>> extension();
-
-  Optional<PersonGender> gender();
-
-  Optional<Boolean> active();
-
-  Optional<List<Person_Link>> link();
-
   Optional<Narrative> text();
-
-  Optional<Date> birthDate();
 
   Optional<List<HumanName>> name();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<PersonGender> gender();
+
+  Optional<Attachment> photo();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
 
   Optional<Id> id();
+
+  Optional<Boolean> active();
+
+  Optional<Reference> managingOrganization();
+
+  Optional<Code> language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Address>> address();
+
+  Optional<List<Person_Link>> link();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Date> birthDate();
+
+  String resourceType();
 
   static ImmutablePerson.ResourceTypeBuildStage builder() {
     return ImmutablePerson.builder();

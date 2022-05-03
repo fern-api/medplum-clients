@@ -18,71 +18,71 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript {
-  Optional<Boolean> experimental();
-
-  Optional<Uri> url();
-
-  Optional<String> title();
-
-  Optional<TestScript_Teardown> teardown();
-
-  Optional<DateTime> date();
-
-  Optional<List<TestScript_Destination>> destination();
-
-  Optional<List<TestScript_Test>> test();
-
-  Optional<Markdown> description();
-
-  Optional<TestScript_Setup> setup();
-
-  Optional<String> publisher();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> language();
-
-  Optional<List<UsageContext>> useContext();
+  Optional<List<Reference>> profile();
 
   Optional<TestscriptStatus> status();
 
-  Optional<List<TestScript_Fixture>> fixture();
+  Optional<Uri> implicitRules();
 
-  Optional<String> name();
+  Optional<DateTime> date();
 
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Identifier> identifier();
+  Optional<String> publisher();
 
   Optional<TestScript_Metadata> metadata();
 
+  Optional<Markdown> description();
+
+  Optional<Code> language();
+
   Optional<List<TestScript_Origin>> origin();
 
-  Optional<List<Reference>> profile();
+  Optional<List<TestScript_Test>> test();
 
-  Optional<String> version();
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<TestScript_Fixture>> fixture();
+
+  Optional<Uri> url();
 
   Optional<List<TestScript_Variable>> variable();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Markdown> purpose();
-
-  Optional<Markdown> copyright();
+  Optional<String> version();
 
   Optional<Id> id();
 
-  String resourceType();
+  Optional<List<TestScript_Destination>> destination();
+
+  Optional<Meta> meta();
+
+  Optional<TestScript_Setup> setup();
+
+  Optional<Identifier> identifier();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<String> name();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<TestScript_Teardown> teardown();
 
   Optional<List<ContactDetail>> contact();
+
+  Optional<Markdown> copyright();
+
+  Optional<Boolean> experimental();
+
+  String resourceType();
+
+  Optional<Markdown> purpose();
 
   static ImmutableTestScript.ResourceTypeBuildStage builder() {
     return ImmutableTestScript.builder();

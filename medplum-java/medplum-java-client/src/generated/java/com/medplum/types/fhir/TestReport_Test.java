@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface TestReport_Test {
   Optional<List<Extension>> extension();
 
-  Optional<String> name();
-
-  List<TestReport_Action1> action();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> description();
 
   Optional<String> id();
 
-  Optional<String> description();
+  Optional<String> name();
+
+  Optional<List<Extension>> modifierExtension();
+
+  List<TestReport_Action1> action();
 
   static ImmutableTestReport_Test.Builder builder() {
     return ImmutableTestReport_Test.builder();

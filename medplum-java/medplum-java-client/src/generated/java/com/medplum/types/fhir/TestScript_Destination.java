@@ -20,13 +20,13 @@ import org.immutables.value.Value;
 public interface TestScript_Destination {
   Coding profile();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
 
-  Optional<Integer> index();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
+
+  Optional<Integer> index();
 
   static ImmutableTestScript_Destination.ProfileBuildStage builder() {
     return ImmutableTestScript_Destination.builder();

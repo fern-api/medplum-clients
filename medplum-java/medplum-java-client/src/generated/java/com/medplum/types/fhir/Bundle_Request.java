@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface Bundle_Request {
   Optional<Bundle_requestMethod> method();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> ifNoneExist();
+
+  Optional<String> ifMatch();
+
+  Optional<Instant> ifModifiedSince();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> ifNoneMatch();
 
   Optional<Uri> url();
 
   Optional<List<Extension>> extension();
-
-  Optional<String> ifNoneExist();
-
-  Optional<Instant> ifModifiedSince();
-
-  Optional<String> ifMatch();
-
-  Optional<String> ifNoneMatch();
 
   static ImmutableBundle_Request.Builder builder() {
     return ImmutableBundle_Request.builder();

@@ -21,19 +21,19 @@ import org.immutables.value.Value;
 public interface MolecularSequence_StructureVariant {
   Optional<Boolean> exact();
 
-  Optional<Integer> length();
-
-  Optional<MolecularSequence_Inner> inner();
-
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> variantType();
+  Optional<Integer> length();
 
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<CodeableConcept> variantType();
+
   Optional<MolecularSequence_Outer> outer();
+
+  Optional<MolecularSequence_Inner> inner();
 
   static ImmutableMolecularSequence_StructureVariant.Builder builder() {
     return ImmutableMolecularSequence_StructureVariant.builder();

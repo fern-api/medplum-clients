@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent {
-  Optional<List<Extension>> extension();
-
   List<CodeableConcept> category();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Reference>> performer();
-
-  Optional<List<Reference>> organization();
-
-  Optional<DateTime> dateTime();
-
-  Optional<Consent_Provision> provision();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> sourceReference();
-
-  String resourceType();
-
-  Optional<ConsentStatus> status();
-
-  Optional<Attachment> sourceAttachment();
-
-  Optional<List<Consent_Verification>> verification();
-
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Reference> patient();
-
-  Optional<CodeableConcept> policyRule();
-
-  CodeableConcept scope();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Reference> sourceReference();
+
+  Optional<Id> id();
+
+  Optional<ConsentStatus> status();
+
   Optional<List<Identifier>> identifier();
+
+  Optional<List<Consent_Verification>> verification();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> performer();
+
+  Optional<Narrative> text();
+
+  Optional<CodeableConcept> policyRule();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Consent_Provision> provision();
+
+  Optional<Attachment> sourceAttachment();
+
+  CodeableConcept scope();
+
+  String resourceType();
+
+  Optional<List<Reference>> organization();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Consent_Policy>> policy();
 
-  static ImmutableConsent.ResourceTypeBuildStage builder() {
+  Optional<Reference> patient();
+
+  Optional<DateTime> dateTime();
+
+  Optional<Code> language();
+
+  static ImmutableConsent.ScopeBuildStage builder() {
     return ImmutableConsent.builder();
   }
 }

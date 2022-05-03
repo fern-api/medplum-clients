@@ -18,13 +18,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_Translation {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<Boolean> needsMap();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   static ImmutableTerminologyCapabilities_Translation.Builder builder() {
     return ImmutableTerminologyCapabilities_Translation.builder();

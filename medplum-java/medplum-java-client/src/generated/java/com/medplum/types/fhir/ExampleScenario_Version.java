@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Version {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Markdown> description();
-
-  Optional<List<Extension>> extension();
+  Optional<String> versionId();
 
   Optional<String> id();
 
-  Optional<String> versionId();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Markdown> description();
 
   static ImmutableExampleScenario_Version.Builder builder() {
     return ImmutableExampleScenario_Version.builder();

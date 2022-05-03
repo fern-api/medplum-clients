@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_ContainedInstance {
-  Optional<String> id();
+  Optional<String> resourceId();
 
   Optional<List<Extension>> extension();
-
-  Optional<String> resourceId();
 
   Optional<String> versionId();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   static ImmutableExampleScenario_ContainedInstance.Builder builder() {
     return ImmutableExampleScenario_ContainedInstance.builder();

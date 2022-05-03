@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent_Actor {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
 
   CodeableConcept role();
 
   Reference reference();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableConsent_Actor.RoleBuildStage builder() {
     return ImmutableConsent_Actor.builder();

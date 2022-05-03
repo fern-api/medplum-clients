@@ -18,41 +18,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Practitioner {
-  Optional<Uri> implicitRules();
-
-  Optional<List<HumanName>> name();
-
-  Optional<Date> birthDate();
+  String resourceType();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Narrative> text();
-
-  Optional<Boolean> active();
-
-  Optional<PractitionerGender> gender();
-
-  Optional<List<Attachment>> photo();
-
-  Optional<Code> language();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Address>> address();
+  Optional<Uri> implicitRules();
 
-  Optional<List<CodeableConcept>> communication();
-
-  Optional<List<Practitioner_Qualification>> qualification();
-
-  Optional<Id> id();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Date> birthDate();
 
   Optional<Meta> meta();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<Address>> address();
+
+  Optional<Boolean> active();
+
+  Optional<List<CodeableConcept>> communication();
+
+  Optional<Id> id();
+
+  Optional<PractitionerGender> gender();
+
+  Optional<Code> language();
+
+  Optional<List<Practitioner_Qualification>> qualification();
+
+  Optional<List<HumanName>> name();
+
+  Optional<List<Attachment>> photo();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<ContactPoint>> telecom();
 

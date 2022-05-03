@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder {
+  Optional<List<CodeableConcept>> foodPreferenceModifier();
+
+  Optional<NutritionOrder_OralDiet> oralDiet();
+
+  Optional<Code> language();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<List<Annotation>> note();
+
   Optional<List<NutritionOrder_Supplement>> supplement();
 
   Optional<Reference> encounter();
 
-  Optional<NutritionOrder_OralDiet> oralDiet();
+  Optional<List<Reference>> allergyIntolerance();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Code> status();
-
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> allergyIntolerance();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Uri>> instantiates();
-
   Optional<Code> intent();
-
-  Optional<NutritionOrder_EnteralFormula> enteralFormula();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> orderer();
-
-  String resourceType();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<Meta> meta();
 
   Optional<List<CodeableConcept>> excludeFoodModifier();
 
-  Optional<List<Uri>> instantiatesUri();
+  Optional<List<ResourceList>> contained();
 
-  Optional<List<CodeableConcept>> foodPreferenceModifier();
-
-  Optional<List<Annotation>> note();
-
-  Reference patient();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> dateTime();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> orderer();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Uri>> instantiates();
+
+  Optional<Id> id();
+
+  Optional<NutritionOrder_EnteralFormula> enteralFormula();
+
+  Optional<Meta> meta();
+
+  Optional<Code> status();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<Uri> implicitRules();
+
+  String resourceType();
+
+  Reference patient();
 
   static ImmutableNutritionOrder.ResourceTypeBuildStage builder() {
     return ImmutableNutritionOrder.builder();

@@ -19,111 +19,111 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Extension {
-  Optional<Timing> valueTiming();
-
-  Optional<Double> valueDecimal();
-
-  Optional<ContactPoint> valueContactPoint();
-
-  Optional<String> valueCode();
-
-  Optional<String> id();
-
-  Optional<Address> valueAddress();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<String> valueOid();
-
-  Optional<Uri> url();
-
-  Optional<Expression> valueExpression();
-
-  Optional<String> valueCanonical();
-
-  Optional<String> valueDateTime();
-
-  Optional<String> valueUuid();
-
-  Optional<Signature> valueSignature();
-
-  Optional<Money> valueMoney();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<String> valueString();
-
-  Optional<RelatedArtifact> valueRelatedArtifact();
-
-  Optional<String> valueId();
-
-  Optional<Count> valueCount();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<Range> valueRange();
-
-  Optional<Double> valueInteger();
-
-  Optional<String> valueDate();
-
-  Optional<Period> valuePeriod();
-
-  Optional<UsageContext> valueUsageContext();
-
-  Optional<String> valueInstant();
-
-  Optional<Double> valuePositiveInt();
-
-  Optional<Age> valueAge();
-
-  Optional<Reference> valueReference();
-
-  Optional<ParameterDefinition> valueParameterDefinition();
-
-  Optional<Distance> valueDistance();
+  Optional<String> valueBase64Binary();
 
   Optional<DataRequirement> valueDataRequirement();
 
-  Optional<Double> valueUnsignedInt();
-
   Optional<ContactDetail> valueContactDetail();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Identifier> valueIdentifier();
 
   Optional<String> valueTime();
 
-  Optional<String> valueUri();
+  Optional<Quantity> valueQuantity();
 
-  Optional<String> valueUrl();
+  Optional<Meta> valueMeta();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<Uri> url();
+
+  Optional<UsageContext> valueUsageContext();
+
+  Optional<Money> valueMoney();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<Distance> valueDistance();
+
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<Range> valueRange();
+
+  Optional<String> valueInstant();
+
+  Optional<Signature> valueSignature();
+
+  Optional<Contributor> valueContributor();
 
   Optional<Boolean> valueBoolean();
 
-  Optional<Annotation> valueAnnotation();
+  Optional<String> valueId();
 
-  Optional<Coding> valueCoding();
+  Optional<Double> valueInteger();
 
-  Optional<Duration> valueDuration();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<String> valueBase64Binary();
+  Optional<Reference> valueReference();
 
   Optional<CodeableConcept> valueCodeableConcept();
 
+  Optional<TriggerDefinition> valueTriggerDefinition();
+
+  Optional<String> id();
+
+  Optional<Age> valueAge();
+
+  Optional<Double> valuePositiveInt();
+
   Optional<Ratio> valueRatio();
 
-  Optional<Attachment> valueAttachment();
+  Optional<String> valueCanonical();
 
-  Optional<String> valueMarkdown();
+  Optional<Period> valuePeriod();
+
+  Optional<String> valueOid();
+
+  Optional<String> valueUuid();
+
+  Optional<Coding> valueCoding();
+
+  Optional<String> valueDateTime();
+
+  Optional<String> valueUri();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> valueDate();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<Expression> valueExpression();
+
+  Optional<String> valueCode();
+
+  Optional<Annotation> valueAnnotation();
+
+  Optional<Duration> valueDuration();
+
+  Optional<Count> valueCount();
 
   Optional<HumanName> valueHumanName();
 
-  Optional<Meta> valueMeta();
+  Optional<Identifier> valueIdentifier();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<Timing> valueTiming();
+
+  Optional<String> valueMarkdown();
+
+  Optional<Address> valueAddress();
+
+  Optional<Double> valueDecimal();
+
+  Optional<String> valueString();
+
+  Optional<String> valueUrl();
+
+  Optional<ParameterDefinition> valueParameterDefinition();
 
   static ImmutableExtension.Builder builder() {
     return ImmutableExtension.builder();

@@ -18,15 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Organization {
+  Optional<Narrative> text();
+
+  Optional<Reference> partOf();
+
+  Optional<Id> id();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Address>> address();
+
+  Optional<Code> language();
+
   Optional<List<ContactPoint>> telecom();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Boolean> active();
+
+  Optional<List<Reference>> endpoint();
+
+  String resourceType();
+
+  Optional<List<Extension>> extension();
 
   Optional<Meta> meta();
 
-  Optional<String> name();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<String>> alias();
 
@@ -34,27 +52,9 @@ public interface Organization {
 
   Optional<List<Organization_Contact>> contact();
 
-  Optional<List<Address>> address();
-
-  Optional<List<Reference>> endpoint();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> partOf();
-
-  Optional<Code> language();
-
-  String resourceType();
-
-  Optional<Id> id();
-
   Optional<List<Identifier>> identifier();
 
-  Optional<Boolean> active();
+  Optional<String> name();
 
   static ImmutableOrganization.ResourceTypeBuildStage builder() {
     return ImmutableOrganization.builder();

@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface TestScript_Link {
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Uri> url();
+
   Optional<List<Extension>> extension();
 
   Optional<String> description();
 
   Optional<String> id();
-
-  Optional<Uri> url();
 
   static ImmutableTestScript_Link.Builder builder() {
     return ImmutableTestScript_Link.builder();

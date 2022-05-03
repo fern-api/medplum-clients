@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Dosage_DoseAndRate {
-  Optional<List<Extension>> extension();
+  Optional<Quantity> rateQuantity();
+
+  Optional<Range> doseRange();
 
   Optional<Quantity> doseQuantity();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Ratio> rateRatio();
 
   Optional<Range> rateRange();
 
   Optional<CodeableConcept> type();
-
-  Optional<Range> doseRange();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Quantity> rateQuantity();
 
   static ImmutableDosage_DoseAndRate.Builder builder() {
     return ImmutableDosage_DoseAndRate.builder();

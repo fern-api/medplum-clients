@@ -19,25 +19,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Questionnaire_AnswerOption {
-  Optional<Double> valueInteger();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> valueDate();
 
-  Optional<List<Extension>> extension();
+  Optional<Double> valueInteger();
 
   Optional<Coding> valueCoding();
 
-  Optional<String> valueTime();
-
-  Optional<Reference> valueReference();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Boolean> initialSelected();
 
   Optional<String> valueString();
 
-  Optional<Boolean> initialSelected();
+  Optional<Reference> valueReference();
+
+  Optional<String> valueTime();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableQuestionnaire_AnswerOption.Builder builder() {
     return ImmutableQuestionnaire_AnswerOption.builder();

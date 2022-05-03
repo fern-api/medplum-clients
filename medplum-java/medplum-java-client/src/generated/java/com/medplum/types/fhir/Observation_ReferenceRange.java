@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Observation_ReferenceRange {
-  Optional<List<Extension>> modifierExtension();
+  Optional<Quantity> low();
 
   Optional<Quantity> high();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> type();
 
   Optional<List<CodeableConcept>> appliesTo();
 
   Optional<Range> age();
 
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
 
-  Optional<Quantity> low();
+  Optional<CodeableConcept> type();
 
   Optional<String> text();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableObservation_ReferenceRange.Builder builder() {
     return ImmutableObservation_ReferenceRange.builder();

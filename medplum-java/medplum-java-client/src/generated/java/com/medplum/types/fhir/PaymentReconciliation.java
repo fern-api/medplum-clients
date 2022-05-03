@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PaymentReconciliation {
-  Optional<Code> status();
-
-  Optional<PaymentreconciliationOutcome> outcome();
-
-  Optional<Period> period();
-
-  Optional<Reference> requestor();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> formCode();
-
-  Optional<Date> paymentDate();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Identifier> paymentIdentifier();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<DateTime> created();
-
-  Money paymentAmount();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Meta> meta();
-
-  Optional<List<PaymentReconciliation_ProcessNote>> processNote();
+  Optional<Reference> requestor();
 
   String resourceType();
 
-  Optional<Reference> request();
+  Optional<DateTime> created();
 
-  Optional<List<PaymentReconciliation_Detail>> detail();
+  Optional<Code> status();
 
-  Optional<Id> id();
+  Money paymentAmount();
 
-  Optional<Reference> paymentIssuer();
+  Optional<List<PaymentReconciliation_ProcessNote>> processNote();
+
+  Optional<Identifier> paymentIdentifier();
 
   Optional<String> disposition();
 
+  Optional<PaymentreconciliationOutcome> outcome();
+
+  Optional<Reference> request();
+
+  Optional<Uri> implicitRules();
+
   Optional<Code> language();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> formCode();
 
   Optional<Narrative> text();
 
-  static ImmutablePaymentReconciliation.PaymentAmountBuildStage builder() {
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> paymentIssuer();
+
+  Optional<List<PaymentReconciliation_Detail>> detail();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Period> period();
+
+  Optional<Date> paymentDate();
+
+  Optional<Id> id();
+
+  static ImmutablePaymentReconciliation.ResourceTypeBuildStage builder() {
     return ImmutablePaymentReconciliation.builder();
   }
 }

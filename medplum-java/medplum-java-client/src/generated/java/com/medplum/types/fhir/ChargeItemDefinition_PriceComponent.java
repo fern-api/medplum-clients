@@ -21,15 +21,15 @@ public interface ChargeItemDefinition_PriceComponent {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> code();
-
   Optional<Money> amount();
-
-  Optional<Code> type();
 
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> code();
+
   Optional<Decimal> factor();
+
+  Optional<Code> type();
 
   static ImmutableChargeItemDefinition_PriceComponent.Builder builder() {
     return ImmutableChargeItemDefinition_PriceComponent.builder();

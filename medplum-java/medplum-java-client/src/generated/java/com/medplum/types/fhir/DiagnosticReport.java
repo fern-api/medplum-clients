@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DiagnosticReport {
-  Optional<String> effectiveDateTime();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<Instant> issued();
-
-  String resourceType();
-
-  Optional<DiagnosticreportStatus> status();
-
   Optional<List<Reference>> result();
-
-  Optional<List<Reference>> performer();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<List<Attachment>> presentedForm();
-
-  CodeableConcept code();
-
-  Optional<Id> id();
-
-  Optional<List<Reference>> specimen();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> conclusion();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> subject();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> encounter();
-
-  Optional<List<DiagnosticReport_Media>> media();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Instant> issued();
 
   Optional<List<Reference>> resultsInterpreter();
 
-  Optional<List<Reference>> imagingStudy();
+  CodeableConcept code();
+
+  Optional<Reference> encounter();
+
+  Optional<List<Attachment>> presentedForm();
+
+  Optional<String> conclusion();
 
   Optional<List<CodeableConcept>> conclusionCode();
 
-  static ImmutableDiagnosticReport.ResourceTypeBuildStage builder() {
+  Optional<DiagnosticreportStatus> status();
+
+  Optional<Narrative> text();
+
+  String resourceType();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> effectiveDateTime();
+
+  Optional<Reference> subject();
+
+  Optional<List<Reference>> specimen();
+
+  Optional<Id> id();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<List<Reference>> performer();
+
+  Optional<List<Reference>> imagingStudy();
+
+  Optional<List<DiagnosticReport_Media>> media();
+
+  static ImmutableDiagnosticReport.CodeBuildStage builder() {
     return ImmutableDiagnosticReport.builder();
   }
 }

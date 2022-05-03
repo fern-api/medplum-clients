@@ -21,9 +21,9 @@ public interface Consent_Policy {
 
   Optional<Uri> uri();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 

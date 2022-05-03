@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Medication_Ingredient {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<CodeableConcept> itemCodeableConcept();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> itemReference();
 
   Optional<Ratio> strength();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<Boolean> isActive();
 

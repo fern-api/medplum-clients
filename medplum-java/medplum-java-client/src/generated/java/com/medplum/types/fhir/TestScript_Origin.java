@@ -22,11 +22,11 @@ public interface TestScript_Origin {
 
   Optional<List<Extension>> modifierExtension();
 
-  Coding profile();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Coding profile();
 
   static ImmutableTestScript_Origin.ProfileBuildStage builder() {
     return ImmutableTestScript_Origin.builder();

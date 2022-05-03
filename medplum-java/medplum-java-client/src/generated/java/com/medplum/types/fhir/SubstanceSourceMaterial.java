@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial {
-  Optional<Meta> meta();
+  Optional<CodeableConcept> sourceMaterialClass();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<String>> parentSubstanceName();
 
+  Optional<Meta> meta();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Identifier>> parentSubstanceId();
-
-  Optional<List<SubstanceSourceMaterial_PartDescription>> partDescription();
-
-  Optional<Narrative> text();
+  Optional<Id> id();
 
   Optional<List<SubstanceSourceMaterial_FractionDescription>> fractionDescription();
 
-  Optional<CodeableConcept> sourceMaterialType();
+  Optional<String> organismName();
 
-  Optional<List<CodeableConcept>> countryOfOrigin();
-
-  Optional<List<String>> geographicalLocation();
-
-  Optional<List<Extension>> extension();
+  Optional<SubstanceSourceMaterial_Organism> organism();
 
   Optional<CodeableConcept> developmentStage();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<SubstanceSourceMaterial_Organism> organism();
+  Optional<List<CodeableConcept>> countryOfOrigin();
 
-  Optional<Code> language();
+  Optional<List<String>> geographicalLocation();
 
-  Optional<CodeableConcept> sourceMaterialClass();
-
-  Optional<Identifier> organismId();
-
-  Optional<String> organismName();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
+  Optional<List<Identifier>> parentSubstanceId();
 
   Optional<CodeableConcept> sourceMaterialState();
 
-  Optional<Id> id();
+  Optional<CodeableConcept> sourceMaterialType();
+
+  Optional<Narrative> text();
+
+  Optional<Identifier> organismId();
+
+  Optional<List<SubstanceSourceMaterial_PartDescription>> partDescription();
+
+  Optional<Uri> implicitRules();
+
+  String resourceType();
+
+  Optional<Code> language();
 
   static ImmutableSubstanceSourceMaterial.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceSourceMaterial.builder();

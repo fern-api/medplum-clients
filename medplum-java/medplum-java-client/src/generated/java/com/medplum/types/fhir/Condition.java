@@ -17,75 +17,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Condition {
-  Optional<Narrative> text();
-
-  Optional<String> onsetDateTime();
-
-  Optional<String> abatementString();
-
-  Optional<Age> onsetAge();
-
-  Optional<List<Condition_Evidence>> evidence();
-
   Optional<List<CodeableConcept>> category();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Period> onsetPeriod();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Period> abatementPeriod();
-
-  Optional<List<CodeableConcept>> bodySite();
-
-  Optional<CodeableConcept> verificationStatus();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> asserter();
-
-  Optional<List<Condition_Stage>> stage();
-
-  Optional<CodeableConcept> code();
 
   Optional<CodeableConcept> severity();
 
-  Reference subject();
-
-  Optional<Range> abatementRange();
-
-  Optional<DateTime> recordedDate();
-
-  String resourceType();
+  Optional<Period> onsetPeriod();
 
   Optional<Id> id();
 
-  Optional<Meta> meta();
-
   Optional<Uri> implicitRules();
 
-  Optional<List<Annotation>> note();
+  Optional<List<Condition_Stage>> stage();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> abatementString();
 
-  Optional<Reference> encounter();
+  Optional<Narrative> text();
 
-  Optional<String> abatementDateTime();
+  Optional<Reference> asserter();
 
-  Optional<Code> language();
-
-  Optional<Reference> recorder();
-
-  Optional<Range> onsetRange();
+  Optional<List<ResourceList>> contained();
 
   Optional<Age> abatementAge();
 
-  Optional<String> onsetString();
+  Optional<String> onsetDateTime();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Period> abatementPeriod();
 
   Optional<CodeableConcept> clinicalStatus();
 
-  static ImmutableCondition.SubjectBuildStage builder() {
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> encounter();
+
+  Optional<Reference> recorder();
+
+  Optional<List<Condition_Evidence>> evidence();
+
+  Optional<CodeableConcept> code();
+
+  Optional<String> abatementDateTime();
+
+  Optional<CodeableConcept> verificationStatus();
+
+  Optional<List<CodeableConcept>> bodySite();
+
+  Optional<DateTime> recordedDate();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Range> abatementRange();
+
+  Optional<Range> onsetRange();
+
+  Optional<String> onsetString();
+
+  String resourceType();
+
+  Reference subject();
+
+  Optional<Code> language();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Age> onsetAge();
+
+  static ImmutableCondition.ResourceTypeBuildStage builder() {
     return ImmutableCondition.builder();
   }
 }

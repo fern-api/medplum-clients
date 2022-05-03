@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EpisodeOfCare_StatusHistory {
-  Optional<String> id();
+  Optional<Episodeofcare_statushistoryStatus> status();
 
   Optional<List<Extension>> extension();
 
-  Period period();
-
-  Optional<Episodeofcare_statushistoryStatus> status();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
+
+  Period period();
 
   static ImmutableEpisodeOfCare_StatusHistory.PeriodBuildStage builder() {
     return ImmutableEpisodeOfCare_StatusHistory.builder();

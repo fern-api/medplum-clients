@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_Participant {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<Plandefinition_participantType> type();
 
   Optional<CodeableConcept> role();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutablePlanDefinition_Participant.Builder builder() {
     return ImmutablePlanDefinition_Participant.builder();

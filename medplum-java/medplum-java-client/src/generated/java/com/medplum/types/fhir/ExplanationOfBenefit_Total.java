@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface ExplanationOfBenefit_Total {
   Optional<List<Extension>> extension();
 
+  Optional<String> id();
+
   Money amount();
 
   CodeableConcept category();
-
-  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BiologicallyDerivedProduct_Storage {
-  Optional<List<Extension>> extension();
+  Optional<Decimal> temperature();
 
   Optional<String> description();
 
   Optional<Biologicallyderivedproduct_storageScale> scale();
 
+  Optional<Period> duration();
+
   Optional<String> id();
 
-  Optional<Decimal> temperature();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> duration();
 
   static ImmutableBiologicallyDerivedProduct_Storage.Builder builder() {
     return ImmutableBiologicallyDerivedProduct_Storage.builder();

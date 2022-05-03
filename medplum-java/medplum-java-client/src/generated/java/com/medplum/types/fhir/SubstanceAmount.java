@@ -21,19 +21,19 @@ public interface SubstanceAmount {
 
   Optional<Quantity> amountQuantity();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Range> amountRange();
 
   Optional<String> amountString();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> amountText();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
   Optional<SubstanceAmount_ReferenceRange> referenceRange();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableSubstanceAmount.Builder builder() {
     return ImmutableSubstanceAmount.builder();

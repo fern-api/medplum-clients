@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest {
-  Optional<List<CoverageEligibilityRequest_Insurance>> insurance();
-
-  Optional<Period> servicedPeriod();
-
-  Optional<CodeableConcept> priority();
+  Optional<List<ResourceList>> contained();
 
   String resourceType();
 
-  Optional<String> servicedDate();
-
-  Optional<Code> status();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> facility();
-
-  Optional<List<CoverageeligibilityrequestPurposeItem>> purpose();
-
-  Reference patient();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Id> id();
+  Optional<Period> servicedPeriod();
 
   Optional<Meta> meta();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<DateTime> created();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CoverageEligibilityRequest_Item>> item();
+  Optional<Code> language();
 
   Optional<List<CoverageEligibilityRequest_SupportingInfo>> supportingInfo();
 
-  Optional<Reference> provider();
+  Optional<List<Extension>> extension();
 
-  Optional<Uri> implicitRules();
+  Optional<Id> id();
 
-  Optional<Code> language();
+  Optional<String> servicedDate();
+
+  Optional<List<CoverageEligibilityRequest_Insurance>> insurance();
 
   Reference insurer();
 
+  Optional<Reference> provider();
+
+  Reference patient();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Narrative> text();
+
   Optional<Reference> enterer();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<CoverageeligibilityrequestPurposeItem>> purpose();
+
+  Optional<Code> status();
+
+  Optional<Reference> facility();
+
+  Optional<CodeableConcept> priority();
+
+  Optional<DateTime> created();
+
+  Optional<List<CoverageEligibilityRequest_Item>> item();
 
   static ImmutableCoverageEligibilityRequest.ResourceTypeBuildStage builder() {
     return ImmutableCoverageEligibilityRequest.builder();

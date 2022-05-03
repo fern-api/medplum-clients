@@ -17,65 +17,65 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClinicalImpression {
-  Optional<List<Annotation>> note();
-
-  Optional<Code> status();
-
-  Optional<List<Reference>> prognosisReference();
-
-  Optional<Reference> previous();
-
-  Optional<List<Uri>> protocol();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<String> summary();
-
-  Optional<CodeableConcept> statusReason();
-
-  Optional<String> description();
-
-  Optional<List<Reference>> supportingInfo();
-
-  Reference subject();
-
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<ClinicalImpression_Finding>> finding();
-
-  Optional<Reference> encounter();
-
-  Optional<List<Reference>> problem();
-
-  Optional<Code> language();
-
   Optional<CodeableConcept> code();
 
   Optional<Id> id();
 
-  Optional<String> effectiveDateTime();
+  Optional<List<ClinicalImpression_Finding>> finding();
 
-  Optional<Narrative> text();
+  Optional<DateTime> date();
+
+  Optional<Code> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Optional<String> summary();
+
+  Optional<List<Uri>> protocol();
 
   Optional<Reference> assessor();
 
   Optional<List<CodeableConcept>> prognosisCodeableConcept();
 
+  Reference subject();
+
   Optional<List<Extension>> extension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<DateTime> date();
 
   String resourceType();
 
+  Optional<List<Reference>> supportingInfo();
+
+  Optional<List<Reference>> prognosisReference();
+
   Optional<List<ClinicalImpression_Investigation>> investigation();
+
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Period> effectivePeriod();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> previous();
+
+  Optional<String> effectiveDateTime();
+
+  Optional<CodeableConcept> statusReason();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Reference>> problem();
+
+  Optional<Reference> encounter();
+
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> description();
 
   static ImmutableClinicalImpression.SubjectBuildStage builder() {
     return ImmutableClinicalImpression.builder();

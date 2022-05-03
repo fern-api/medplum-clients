@@ -18,71 +18,71 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities {
-  Optional<Id> id();
-
-  Optional<List<ContactDetail>> contact();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Markdown> copyright();
-
-  Optional<Boolean> lockedDate();
-
   Optional<Boolean> experimental();
-
-  Optional<String> publisher();
-
-  Optional<List<TerminologyCapabilities_CodeSystem>> codeSystem();
-
-  Optional<TerminologyCapabilities_Implementation> implementation();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<String> version();
-
-  Optional<String> title();
-
-  Optional<TerminologycapabilitiesCodesearch> codeSearch();
-
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
 
   Optional<TerminologyCapabilities_ValidateCode> validateCode();
 
-  Optional<List<ResourceList>> contained();
+  Optional<TerminologyCapabilities_Translation> translation();
 
-  Optional<TerminologyCapabilities_Expansion> expansion();
+  Optional<List<ResourceList>> contained();
 
   Optional<Code> language();
 
-  Optional<TerminologycapabilitiesStatus> status();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<Code> kind();
+  Optional<String> title();
 
-  Optional<TerminologyCapabilities_Translation> translation();
-
-  Optional<DateTime> date();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<TerminologyCapabilities_Implementation> implementation();
 
   Optional<Uri> implicitRules();
 
-  Optional<Uri> url();
+  Optional<List<ContactDetail>> contact();
 
-  Optional<TerminologyCapabilities_Software> software();
-
-  Optional<Markdown> description();
-
-  Optional<String> name();
+  Optional<Meta> meta();
 
   Optional<TerminologyCapabilities_Closure> closure();
 
+  Optional<Code> kind();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Markdown> purpose();
+
+  Optional<String> version();
+
+  Optional<List<TerminologyCapabilities_CodeSystem>> codeSystem();
+
+  Optional<TerminologycapabilitiesCodesearch> codeSearch();
+
+  Optional<String> publisher();
+
+  String resourceType();
+
+  Optional<Markdown> copyright();
+
+  Optional<TerminologyCapabilities_Software> software();
+
+  Optional<TerminologyCapabilities_Expansion> expansion();
+
+  Optional<String> name();
+
+  Optional<Markdown> description();
+
+  Optional<Id> id();
+
+  Optional<Uri> url();
+
+  Optional<Boolean> lockedDate();
+
+  Optional<TerminologycapabilitiesStatus> status();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DateTime> date();
 
   static ImmutableTerminologyCapabilities.ResourceTypeBuildStage builder() {
     return ImmutableTerminologyCapabilities.builder();

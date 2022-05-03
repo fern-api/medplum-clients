@@ -17,10 +17,6 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Parameters {
-  Optional<List<Parameters_Parameter>> parameter();
-
-  String resourceType();
-
   Optional<Id> id();
 
   Optional<Meta> meta();
@@ -28,6 +24,10 @@ public interface Parameters {
   Optional<Code> language();
 
   Optional<Uri> implicitRules();
+
+  String resourceType();
+
+  Optional<List<Parameters_Parameter>> parameter();
 
   static ImmutableParameters.ResourceTypeBuildStage builder() {
     return ImmutableParameters.builder();

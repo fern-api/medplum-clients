@@ -17,51 +17,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan {
-  String resourceType();
+  Optional<List<InsurancePlan_Plan>> plan();
+
+  Optional<List<InsurancePlan_Contact>> contact();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Reference>> coverageArea();
-
-  Optional<Meta> meta();
-
-  Optional<List<CodeableConcept>> type();
-
-  Optional<Period> period();
-
   Optional<Narrative> text();
-
-  Optional<List<InsurancePlan_Plan>> plan();
-
-  Optional<List<String>> alias();
-
-  Optional<List<InsurancePlan_Coverage>> coverage();
-
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Reference> administeredBy();
-
-  Optional<String> name();
-
-  Optional<List<Reference>> network();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> extension();
-
-  Optional<InsuranceplanStatus> status();
 
   Optional<List<Reference>> endpoint();
 
-  Optional<Code> language();
+  Optional<List<Identifier>> identifier();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Period> period();
+
+  Optional<List<Reference>> coverageArea();
+
+  Optional<InsuranceplanStatus> status();
+
+  Optional<List<InsurancePlan_Coverage>> coverage();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> name();
+
+  String resourceType();
+
+  Optional<List<Reference>> network();
+
+  Optional<Meta> meta();
 
   Optional<Reference> ownedBy();
 
-  Optional<List<InsurancePlan_Contact>> contact();
+  Optional<Code> language();
+
+  Optional<List<CodeableConcept>> type();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<String>> alias();
+
+  Optional<Reference> administeredBy();
 
   static ImmutableInsurancePlan.ResourceTypeBuildStage builder() {
     return ImmutableInsurancePlan.builder();

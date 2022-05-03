@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyRequest {
-  Optional<Meta> meta();
-
-  Optional<Code> priority();
+  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<Period> occurrencePeriod();
 
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<ResourceList>> contained();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> requester();
 
-  Optional<Code> language();
+  Optional<Reference> deliverFrom();
+
+  Quantity quantity();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<CodeableConcept> category();
+
+  Optional<CodeableConcept> itemCodeableConcept();
+
+  Optional<List<SupplyRequest_Parameter>> parameter();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<SupplyrequestStatus> status();
+
+  Optional<Code> priority();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Timing> occurrenceTiming();
+
+  Optional<Meta> meta();
+
+  String resourceType();
 
   Optional<Reference> deliverTo();
 
   Optional<List<Reference>> supplier();
 
-  Optional<Reference> deliverFrom();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<Narrative> text();
-
-  Optional<List<SupplyRequest_Parameter>> parameter();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> occurrenceDateTime();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
-
   Optional<Reference> itemReference();
-
-  Optional<List<Extension>> extension();
 
   Optional<Id> id();
 
-  Optional<CodeableConcept> itemCodeableConcept();
+  Optional<List<ResourceList>> contained();
 
-  Quantity quantity();
+  Optional<Code> language();
 
-  Optional<Timing> occurrenceTiming();
+  Optional<Narrative> text();
 
-  Optional<SupplyrequestStatus> status();
-
-  Optional<List<Reference>> reasonReference();
-
-  static ImmutableSupplyRequest.ResourceTypeBuildStage builder() {
+  static ImmutableSupplyRequest.QuantityBuildStage builder() {
     return ImmutableSupplyRequest.builder();
   }
 }

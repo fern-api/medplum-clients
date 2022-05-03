@@ -18,107 +18,107 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure {
-  Optional<String> title();
+  Optional<List<CodeableConcept>> type();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Date> approvalDate();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<String> subtitle();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Period> effectivePeriod();
 
   Optional<List<CodeableConcept>> topic();
 
+  Optional<Reference> subjectReference();
+
   Optional<List<ContactDetail>> author();
-
-  String resourceType();
-
-  Optional<List<Measure_Group>> group();
-
-  Optional<Markdown> rationale();
-
-  Optional<Narrative> text();
-
-  Optional<DateTime> date();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
 
   Optional<Meta> meta();
 
-  Optional<CodeableConcept> compositeScoring();
-
-  Optional<MeasureStatus> status();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<List<CodeableConcept>> type();
-
-  Optional<String> name();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<String> subtitle();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<String> rateAggregation();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<Measure_SupplementalData>> supplementalData();
-
-  Optional<String> riskAdjustment();
-
-  Optional<Reference> subjectReference();
-
-  Optional<CodeableConcept> scoring();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<ContactDetail>> editor();
-
   Optional<CodeableConcept> improvementNotation();
 
-  Optional<List<ContactDetail>> contact();
+  Optional<String> title();
 
-  Optional<List<ContactDetail>> reviewer();
+  Optional<CodeableConcept> compositeScoring();
 
-  Optional<String> usage();
-
-  Optional<Id> id();
-
-  Optional<Uri> url();
-
-  Optional<Markdown> purpose();
-
-  Optional<Boolean> experimental();
-
-  Optional<Markdown> clinicalRecommendationStatement();
-
-  Optional<Markdown> description();
-
-  Optional<List<Canonical>> library();
-
-  Optional<String> publisher();
-
-  Optional<List<Markdown>> definition();
+  Optional<Narrative> text();
 
   Optional<Code> language();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Date> approvalDate();
+  Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<Markdown> guidance();
+  Optional<String> riskAdjustment();
+
+  Optional<Markdown> copyright();
+
+  Optional<Markdown> purpose();
+
+  Optional<CodeableConcept> scoring();
+
+  Optional<List<Measure_SupplementalData>> supplementalData();
+
+  Optional<Markdown> rationale();
 
   Optional<Markdown> disclaimer();
 
-  Optional<List<ContactDetail>> endorser();
+  Optional<Markdown> description();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<Canonical>> library();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<Measure_Group>> group();
+
+  Optional<String> publisher();
 
   Optional<String> version();
+
+  Optional<Id> id();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ContactDetail>> editor();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<String> rateAggregation();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<String> usage();
+
+  String resourceType();
+
+  Optional<Markdown> clinicalRecommendationStatement();
+
+  Optional<Uri> url();
+
+  Optional<DateTime> date();
+
+  Optional<MeasureStatus> status();
+
+  Optional<Markdown> guidance();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> name();
+
+  Optional<List<Markdown>> definition();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableMeasure.ResourceTypeBuildStage builder() {
     return ImmutableMeasure.builder();

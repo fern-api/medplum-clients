@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface PlanDefinition_Condition {
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Expression> expression();
-
   Optional<Plandefinition_conditionKind> kind();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Expression> expression();
 
   static ImmutablePlanDefinition_Condition.Builder builder() {
     return ImmutablePlanDefinition_Condition.builder();

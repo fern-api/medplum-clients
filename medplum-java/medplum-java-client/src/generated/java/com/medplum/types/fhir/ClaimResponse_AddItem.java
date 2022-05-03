@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_AddItem {
+  Optional<Reference> locationReference();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<ClaimResponse_Detail1>> detail();
+
+  CodeableConcept productOrService();
+
+  Optional<String> servicedDate();
+
+  Optional<List<PositiveInt>> subdetailSequence();
+
   List<ClaimResponse_Adjudication> adjudication();
+
+  Optional<Address> locationAddress();
+
+  Optional<List<PositiveInt>> noteNumber();
+
+  Optional<Decimal> factor();
+
+  Optional<String> id();
 
   Optional<Money> unitPrice();
 
   Optional<Period> servicedPeriod();
 
-  Optional<String> id();
-
-  Optional<List<CodeableConcept>> subSite();
-
-  Optional<List<PositiveInt>> itemSequence();
-
-  Optional<List<PositiveInt>> subdetailSequence();
-
-  Optional<CodeableConcept> locationCodeableConcept();
-
-  Optional<List<PositiveInt>> noteNumber();
-
-  CodeableConcept productOrService();
-
   Optional<List<Reference>> provider();
-
-  Optional<String> servicedDate();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> modifier();
-
-  Optional<Decimal> factor();
-
-  Optional<List<PositiveInt>> detailSequence();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<CodeableConcept>> programCode();
 
-  Optional<List<ClaimResponse_Detail1>> detail();
-
-  Optional<CodeableConcept> bodySite();
-
   Optional<Quantity> quantity();
 
-  Optional<Reference> locationReference();
+  Optional<List<CodeableConcept>> modifier();
 
   Optional<Money> net();
 
-  Optional<Address> locationAddress();
+  Optional<List<CodeableConcept>> subSite();
+
+  Optional<CodeableConcept> bodySite();
+
+  Optional<CodeableConcept> locationCodeableConcept();
+
+  Optional<List<PositiveInt>> itemSequence();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<PositiveInt>> detailSequence();
 
   static ImmutableClaimResponse_AddItem.ProductOrServiceBuildStage builder() {
     return ImmutableClaimResponse_AddItem.builder();

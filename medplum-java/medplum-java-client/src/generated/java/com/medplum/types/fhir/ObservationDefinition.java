@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ObservationDefinition {
-  Optional<Narrative> text();
+  Optional<Id> id();
 
   Optional<CodeableConcept> method();
 
   Optional<List<Extension>> modifierExtension();
 
+  String resourceType();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<ObservationDefinition_QuantitativeDetails> quantitativeDetails();
+
+  Optional<Reference> abnormalCodedValueSet();
+
+  Optional<List<ObservationDefinition_QualifiedInterval>> qualifiedInterval();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> criticalCodedValueSet();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> validCodedValueSet();
+
+  Optional<Boolean> multipleResultsAllowed();
+
+  Optional<String> preferredReportName();
+
+  CodeableConcept code();
+
+  Optional<Code> language();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<ObservationdefinitionPermitteddatatypeItem>> permittedDataType();
+
   Optional<Meta> meta();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Code> language();
-
-  Optional<Boolean> multipleResultsAllowed();
-
-  Optional<Id> id();
-
-  CodeableConcept code();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> preferredReportName();
-
-  Optional<Reference> criticalCodedValueSet();
-
-  Optional<Reference> validCodedValueSet();
-
-  Optional<Reference> abnormalCodedValueSet();
-
-  Optional<List<CodeableConcept>> category();
-
   Optional<Reference> normalCodedValueSet();
 
-  Optional<List<ObservationdefinitionPermitteddatatypeItem>> permittedDataType();
-
-  Optional<List<ObservationDefinition_QualifiedInterval>> qualifiedInterval();
-
-  Optional<ObservationDefinition_QuantitativeDetails> quantitativeDetails();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  static ImmutableObservationDefinition.CodeBuildStage builder() {
+  static ImmutableObservationDefinition.ResourceTypeBuildStage builder() {
     return ImmutableObservationDefinition.builder();
   }
 }

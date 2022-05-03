@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Age {
-  Optional<Uri> system();
+  Optional<List<Extension>> extension();
 
-  Optional<Code> code();
+  Optional<Decimal> value();
 
   Optional<String> unit();
 
-  Optional<List<Extension>> extension();
+  Optional<Uri> system();
 
   Optional<AgeComparator> comparator();
 
-  Optional<Decimal> value();
+  Optional<Code> code();
 
   Optional<String> id();
 

@@ -18,13 +18,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Security {
-  Optional<Boolean> cors();
-
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
+
+  Optional<Boolean> cors();
 
   Optional<List<CodeableConcept>> service();
 

@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Location_HoursOfOperation {
-  Optional<Boolean> allDay();
-
   Optional<String> id();
-
-  Optional<Time> openingTime();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Code>> daysOfWeek();
 
+  Optional<Boolean> allDay();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Time> closingTime();
+
+  Optional<Time> openingTime();
 
   static ImmutableLocation_HoursOfOperation.Builder builder() {
     return ImmutableLocation_HoursOfOperation.builder();

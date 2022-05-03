@@ -18,15 +18,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Fixture {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
-  Optional<Boolean> autodelete();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> resource();
+  Optional<Boolean> autodelete();
 
-  Optional<String> id();
+  Optional<Reference> resource();
 
   Optional<Boolean> autocreate();
 

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference_RelatesTo {
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<Documentreference_relatestoCode> code();
 
-  Reference target();
-
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
+
+  Reference target();
 
   static ImmutableDocumentReference_RelatesTo.TargetBuildStage builder() {
     return ImmutableDocumentReference_RelatesTo.builder();

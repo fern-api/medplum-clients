@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Name {
-  Optional<CodeableConcept> type();
-
-  Optional<List<Reference>> source();
-
-  Optional<String> id();
+  Optional<List<SubstanceSpecification_Name>> synonym();
 
   Optional<List<CodeableConcept>> language();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> status();
 
   Optional<String> name();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> preferred();
-
-  Optional<List<CodeableConcept>> domain();
-
-  Optional<List<SubstanceSpecification_Name>> synonym();
-
-  Optional<List<SubstanceSpecification_Official>> official();
-
-  Optional<CodeableConcept> status();
+  Optional<List<SubstanceSpecification_Name>> translation();
 
   Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<List<SubstanceSpecification_Name>> translation();
+  Optional<List<CodeableConcept>> domain();
+
+  Optional<List<Reference>> source();
+
+  Optional<CodeableConcept> type();
+
+  Optional<Boolean> preferred();
+
+  Optional<List<SubstanceSpecification_Official>> official();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableSubstanceSpecification_Name.Builder builder() {
     return ImmutableSubstanceSpecification_Name.builder();

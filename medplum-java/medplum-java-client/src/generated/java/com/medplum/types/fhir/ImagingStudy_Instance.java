@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface ImagingStudy_Instance {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> title();
-
-  Optional<List<Extension>> extension();
-
   Optional<Id> uid();
-
-  Optional<String> id();
 
   Optional<UnsignedInt> number();
 
   Coding sopClass();
+
+  Optional<String> title();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   static ImmutableImagingStudy_Instance.SopClassBuildStage builder() {
     return ImmutableImagingStudy_Instance.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Stratifier {
-  Optional<List<CodeableConcept>> code();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<MeasureReport_Stratum>> stratum();
+
+  Optional<List<CodeableConcept>> code();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableMeasureReport_Stratifier.Builder builder() {
     return ImmutableMeasureReport_Stratifier.builder();

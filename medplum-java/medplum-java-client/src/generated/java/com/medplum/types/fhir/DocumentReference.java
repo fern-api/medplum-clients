@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference {
-  Optional<Meta> meta();
-
-  Optional<Reference> custodian();
-
-  Optional<CodeableConcept> type();
-
-  Optional<String> description();
+  Optional<List<Reference>> author();
 
   Optional<Code> language();
 
-  Optional<List<CodeableConcept>> securityLabel();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> subject();
-
-  Optional<List<Reference>> author();
-
-  Optional<Reference> authenticator();
+  Optional<DocumentReference_Context> context();
 
   Optional<List<ResourceList>> contained();
 
-  List<DocumentReference_Content> content();
-
-  Optional<Identifier> masterIdentifier();
-
-  Optional<Narrative> text();
-
-  Optional<List<DocumentReference_RelatesTo>> relatesTo();
-
-  Optional<DocumentreferenceStatus> status();
-
-  Optional<Instant> date();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> docStatus();
-
-  String resourceType();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<DocumentReference_Context> context();
+  Optional<Id> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Meta> meta();
+
+  Optional<Narrative> text();
+
+  Optional<Code> docStatus();
+
+  List<DocumentReference_Content> content();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<CodeableConcept>> securityLabel();
+
+  Optional<Reference> authenticator();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DocumentreferenceStatus> status();
+
+  Optional<Reference> subject();
+
+  Optional<Identifier> masterIdentifier();
+
+  Optional<CodeableConcept> type();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<DocumentReference_RelatesTo>> relatesTo();
+
+  Optional<Instant> date();
+
+  Optional<String> description();
+
+  Optional<Reference> custodian();
 
   static ImmutableDocumentReference.ResourceTypeBuildStage builder() {
     return ImmutableDocumentReference.builder();

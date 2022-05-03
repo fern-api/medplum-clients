@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface InsurancePlan_Benefit {
   Optional<List<Extension>> extension();
 
-  CodeableConcept type();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<InsurancePlan_Limit>> limit();
+  Optional<String> requirement();
 
   Optional<String> id();
 
-  Optional<String> requirement();
+  CodeableConcept type();
+
+  Optional<List<InsurancePlan_Limit>> limit();
 
   static ImmutableInsurancePlan_Benefit.TypeBuildStage builder() {
     return ImmutableInsurancePlan_Benefit.builder();
