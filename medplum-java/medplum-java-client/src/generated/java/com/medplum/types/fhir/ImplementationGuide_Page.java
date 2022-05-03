@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Page {
-  Optional<String> nameUrl();
-
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<Reference> nameReference();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
+
+  Optional<String> title();
+
+  Optional<String> nameUrl();
+
+  Optional<Implementationguide_pageGeneration> generation();
 
   Optional<List<ImplementationGuide_Page>> page();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> title();
-
-  Optional<Implementationguide_pageGeneration> generation();
 
   static ImmutableImplementationGuide_Page.Builder builder() {
     return ImmutableImplementationGuide_Page.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceNucleicAcid_Linkage {
-  Optional<String> name();
+  Optional<String> residueSite();
 
-  Optional<String> connectivity();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> connectivity();
+
+  Optional<String> name();
 
   Optional<Identifier> identifier();
-
-  Optional<String> residueSite();
 
   static ImmutableSubstanceNucleicAcid_Linkage.Builder builder() {
     return ImmutableSubstanceNucleicAcid_Linkage.builder();

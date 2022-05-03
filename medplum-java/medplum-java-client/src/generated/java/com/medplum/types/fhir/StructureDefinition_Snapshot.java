@@ -17,11 +17,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureDefinition_Snapshot {
+  Optional<String> id();
+
   List<ElementDefinition> element();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
 
   Optional<List<Extension>> extension();
 

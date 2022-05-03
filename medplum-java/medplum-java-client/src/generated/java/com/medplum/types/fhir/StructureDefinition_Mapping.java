@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureDefinition_Mapping {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> name();
+
+  Optional<Uri> uri();
 
   Optional<String> id();
 
   Optional<Id> identity();
 
-  Optional<String> comment();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> name();
-
-  Optional<Uri> uri();
+  Optional<String> comment();
 
   static ImmutableStructureDefinition_Mapping.Builder builder() {
     return ImmutableStructureDefinition_Mapping.builder();

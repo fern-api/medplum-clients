@@ -17,13 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Diagnosis {
-  Optional<CodeableConcept> diagnosisCodeableConcept();
-
   Optional<String> id();
 
-  Optional<List<CodeableConcept>> type();
-
-  Optional<CodeableConcept> onAdmission();
+  Optional<CodeableConcept> diagnosisCodeableConcept();
 
   Optional<CodeableConcept> packageCode();
 
@@ -31,9 +27,13 @@ public interface ExplanationOfBenefit_Diagnosis {
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Reference> diagnosisReference();
+
   Optional<PositiveInt> sequence();
 
-  Optional<Reference> diagnosisReference();
+  Optional<List<CodeableConcept>> type();
+
+  Optional<CodeableConcept> onAdmission();
 
   static ImmutableExplanationOfBenefit_Diagnosis.Builder builder() {
     return ImmutableExplanationOfBenefit_Diagnosis.builder();

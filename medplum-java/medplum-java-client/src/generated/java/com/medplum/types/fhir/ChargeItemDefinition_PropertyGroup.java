@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItemDefinition_PropertyGroup {
-  Optional<List<ChargeItemDefinition_PriceComponent>> priceComponent();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<ChargeItemDefinition_Applicability>> applicability();
-
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<ChargeItemDefinition_PriceComponent>> priceComponent();
+
+  Optional<List<ChargeItemDefinition_Applicability>> applicability();
 
   static ImmutableChargeItemDefinition_PropertyGroup.Builder builder() {
     return ImmutableChargeItemDefinition_PropertyGroup.builder();

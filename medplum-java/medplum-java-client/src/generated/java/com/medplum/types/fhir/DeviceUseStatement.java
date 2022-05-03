@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceUseStatement {
-  Optional<Code> language();
+  Reference subject();
 
   Optional<Timing> timingTiming();
 
-  Optional<CodeableConcept> bodySite();
-
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> derivedFrom();
-
-  Reference device();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<Id> id();
-
-  Optional<List<Reference>> reasonReference();
-
-  Reference subject();
-
-  Optional<Period> timingPeriod();
-
-  Optional<Reference> source();
-
-  Optional<String> timingDateTime();
-
-  Optional<DeviceusestatementStatus> status();
-
-  Optional<List<Annotation>> note();
-
-  String resourceType();
-
-  Optional<DateTime> recordedOn();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Narrative> text();
-
   Optional<List<Reference>> basedOn();
-
-  Optional<List<ResourceList>> contained();
 
   Optional<Uri> implicitRules();
 
-  static ImmutableDeviceUseStatement.DeviceBuildStage builder() {
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> bodySite();
+
+  String resourceType();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> source();
+
+  Optional<List<Extension>> extension();
+
+  Reference device();
+
+  Optional<DeviceusestatementStatus> status();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Period> timingPeriod();
+
+  Optional<DateTime> recordedOn();
+
+  Optional<Narrative> text();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Code> language();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Id> id();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Reference>> derivedFrom();
+
+  Optional<String> timingDateTime();
+
+  static ImmutableDeviceUseStatement.SubjectBuildStage builder() {
     return ImmutableDeviceUseStatement.builder();
   }
 }

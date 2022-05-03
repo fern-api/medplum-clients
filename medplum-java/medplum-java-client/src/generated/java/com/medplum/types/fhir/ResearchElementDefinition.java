@@ -18,91 +18,91 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ResearchElementDefinition {
-  Optional<Meta> meta();
-
-  Optional<List<Canonical>> library();
-
-  Optional<ResearchelementdefinitionType> type();
-
-  Optional<List<ContactDetail>> editor();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  Optional<Uri> url();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Markdown> description();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<ResearchelementdefinitionStatus> status();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<ContactDetail>> author();
-
-  Optional<Date> approvalDate();
-
-  Optional<Reference> subjectReference();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<Boolean> experimental();
-
-  Optional<String> name();
-
-  List<ResearchElementDefinition_Characteristic> characteristic();
-
-  Optional<List<String>> comment();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<CodeableConcept>> topic();
-
-  Optional<String> shortTitle();
-
-  Optional<String> title();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Markdown> purpose();
-
-  Optional<DateTime> date();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<String> publisher();
-
-  Optional<Code> language();
-
-  Optional<ResearchelementdefinitionVariabletype> variableType();
 
   Optional<String> subtitle();
 
-  String resourceType();
+  Optional<Date> lastReviewDate();
 
   Optional<Narrative> text();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Period> effectivePeriod();
 
-  Optional<String> version();
+  Optional<List<RelatedArtifact>> relatedArtifact();
 
-  Optional<String> usage();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  String resourceType();
 
   Optional<Id> id();
 
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<Reference> subjectReference();
+
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<DateTime> date();
+
+  Optional<Meta> meta();
+
+  Optional<ResearchelementdefinitionVariabletype> variableType();
+
+  Optional<List<ContactDetail>> editor();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> usage();
+
+  Optional<Markdown> description();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> title();
+
+  Optional<Uri> url();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<Date> approvalDate();
+
+  Optional<ResearchelementdefinitionStatus> status();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<String>> comment();
+
+  Optional<Code> language();
+
   Optional<List<Extension>> extension();
+
+  Optional<String> shortTitle();
+
+  Optional<List<CodeableConcept>> topic();
+
+  Optional<List<Canonical>> library();
+
+  Optional<String> name();
+
+  Optional<Markdown> purpose();
+
+  List<ResearchElementDefinition_Characteristic> characteristic();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<String> version();
+
+  Optional<Markdown> copyright();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Uri> implicitRules();
+
+  Optional<ResearchelementdefinitionType> type();
 
   static ImmutableResearchElementDefinition.ResourceTypeBuildStage builder() {
     return ImmutableResearchElementDefinition.builder();

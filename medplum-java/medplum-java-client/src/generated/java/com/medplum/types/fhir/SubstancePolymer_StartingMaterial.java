@@ -20,7 +20,7 @@ import org.immutables.value.Value;
 public interface SubstancePolymer_StartingMaterial {
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> type();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<SubstanceAmount> amount();
 
@@ -28,7 +28,7 @@ public interface SubstancePolymer_StartingMaterial {
 
   Optional<CodeableConcept> material();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> type();
 
   Optional<Boolean> isDefining();
 

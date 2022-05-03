@@ -17,35 +17,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SpecimenDefinition {
-  Optional<String> timeAspect();
+  Optional<Uri> implicitRules();
 
-  Optional<List<CodeableConcept>> collection();
-
-  Optional<CodeableConcept> typeCollected();
+  Optional<Code> language();
 
   Optional<Id> id();
 
-  Optional<List<CodeableConcept>> patientPreparation();
+  Optional<Identifier> identifier();
 
   String resourceType();
 
-  Optional<Identifier> identifier();
+  Optional<CodeableConcept> typeCollected();
+
+  Optional<List<SpecimenDefinition_TypeTested>> typeTested();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> timeAspect();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> patientPreparation();
 
   Optional<Meta> meta();
 
   Optional<Narrative> text();
 
-  Optional<List<SpecimenDefinition_TypeTested>> typeTested();
-
-  Optional<Code> language();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<ResourceList>> contained();
+
+  Optional<List<CodeableConcept>> collection();
 
   static ImmutableSpecimenDefinition.ResourceTypeBuildStage builder() {
     return ImmutableSpecimenDefinition.builder();

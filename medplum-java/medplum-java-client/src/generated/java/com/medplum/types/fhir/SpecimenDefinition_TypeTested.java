@@ -18,27 +18,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SpecimenDefinition_TypeTested {
-  Optional<List<Extension>> extension();
+  Optional<Boolean> isDerived();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<SpecimenDefinition_Container> container();
 
   Optional<List<CodeableConcept>> rejectionCriterion();
 
   Optional<CodeableConcept> type();
 
-  Optional<SpecimenDefinition_Container> container();
-
-  Optional<String> id();
-
-  Optional<Specimendefinition_typetestedPreference> preference();
-
   Optional<Duration> retentionTime();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> requirement();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Specimendefinition_typetestedPreference> preference();
+
   Optional<List<SpecimenDefinition_Handling>> handling();
 
-  Optional<Boolean> isDerived();
+  Optional<String> id();
 
   static ImmutableSpecimenDefinition_TypeTested.Builder builder() {
     return ImmutableSpecimenDefinition_TypeTested.builder();

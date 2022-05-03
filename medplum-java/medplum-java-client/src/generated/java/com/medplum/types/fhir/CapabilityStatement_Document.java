@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Document {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Markdown> documentation();
+  Optional<Capabilitystatement_documentMode> mode();
 
   Canonical profile();
 
-  Optional<Capabilitystatement_documentMode> mode();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Markdown> documentation();
 
   static ImmutableCapabilityStatement_Document.ProfileBuildStage builder() {
     return ImmutableCapabilityStatement_Document.builder();

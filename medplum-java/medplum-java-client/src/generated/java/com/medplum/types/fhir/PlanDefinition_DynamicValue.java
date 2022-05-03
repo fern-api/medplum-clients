@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_DynamicValue {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
   Optional<String> path();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Expression> expression();
 

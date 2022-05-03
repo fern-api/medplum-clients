@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Official {
+  Optional<CodeableConcept> authority();
+
+  Optional<CodeableConcept> status();
+
+  Optional<DateTime> date();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> status();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> date();
-
-  Optional<CodeableConcept> authority();
 
   static ImmutableSubstanceSpecification_Official.Builder builder() {
     return ImmutableSubstanceSpecification_Official.builder();

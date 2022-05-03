@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProduct_NamePart {
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> part();
 
-  Optional<List<Extension>> extension();
-
   Coding type();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMedicinalProduct_NamePart.TypeBuildStage builder() {
     return ImmutableMedicinalProduct_NamePart.builder();

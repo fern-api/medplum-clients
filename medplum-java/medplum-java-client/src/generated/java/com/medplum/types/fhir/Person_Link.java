@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Person_Link {
   Optional<String> id();
 
-  Optional<Person_linkAssurance> assurance();
+  Optional<List<Extension>> modifierExtension();
 
   Reference target();
 
-  Optional<List<Extension>> extension();
+  Optional<Person_linkAssurance> assurance();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   static ImmutablePerson_Link.TargetBuildStage builder() {
     return ImmutablePerson_Link.builder();

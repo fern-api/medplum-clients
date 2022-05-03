@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SampledData {
-  Optional<String> id();
-
-  Optional<Decimal> upperLimit();
-
-  Optional<String> data();
-
-  Optional<Decimal> lowerLimit();
-
-  Optional<PositiveInt> dimensions();
-
   Optional<List<Extension>> extension();
 
   Quantity origin();
 
-  Optional<Decimal> factor();
+  Optional<Decimal> lowerLimit();
+
+  Optional<String> data();
+
+  Optional<Decimal> upperLimit();
 
   Optional<Decimal> period();
+
+  Optional<String> id();
+
+  Optional<PositiveInt> dimensions();
+
+  Optional<Decimal> factor();
 
   static ImmutableSampledData.OriginBuildStage builder() {
     return ImmutableSampledData.builder();

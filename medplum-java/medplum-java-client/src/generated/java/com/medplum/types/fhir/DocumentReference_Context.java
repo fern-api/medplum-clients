@@ -21,21 +21,21 @@ public interface DocumentReference_Context {
 
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> event();
+  Optional<CodeableConcept> practiceSetting();
 
   Optional<CodeableConcept> facilityType();
+
+  Optional<Reference> sourcePatientInfo();
+
+  Optional<Period> period();
 
   Optional<List<Reference>> related();
 
   Optional<String> id();
 
-  Optional<Period> period();
-
-  Optional<CodeableConcept> practiceSetting();
-
-  Optional<Reference> sourcePatientInfo();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> event();
 
   static ImmutableDocumentReference_Context.Builder builder() {
     return ImmutableDocumentReference_Context.builder();

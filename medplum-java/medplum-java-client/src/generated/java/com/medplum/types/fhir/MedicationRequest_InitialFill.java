@@ -17,6 +17,8 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationRequest_InitialFill {
+  Optional<Quantity> quantity();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
@@ -24,8 +26,6 @@ public interface MedicationRequest_InitialFill {
   Optional<List<Extension>> modifierExtension();
 
   Optional<Duration> duration();
-
-  Optional<Quantity> quantity();
 
   static ImmutableMedicationRequest_InitialFill.Builder builder() {
     return ImmutableMedicationRequest_InitialFill.builder();

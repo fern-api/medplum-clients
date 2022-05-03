@@ -17,37 +17,37 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Substance {
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Narrative> text();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<Uri> implicitRules();
+  Optional<List<Substance_Instance>> instance();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Code> language();
-
-  CodeableConcept code();
-
-  Optional<String> description();
-
-  Optional<List<Substance_Instance>> instance();
-
-  Optional<List<Substance_Ingredient>> ingredient();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Id> id();
+  String resourceType();
 
   Optional<Meta> meta();
 
+  Optional<String> description();
+
+  Optional<Uri> implicitRules();
+
+  CodeableConcept code();
+
+  Optional<Narrative> text();
+
   Optional<SubstanceStatus> status();
+
+  Optional<Id> id();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Substance_Ingredient>> ingredient();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Code> language();
 
   static ImmutableSubstance.ResourceTypeBuildStage builder() {
     return ImmutableSubstance.builder();

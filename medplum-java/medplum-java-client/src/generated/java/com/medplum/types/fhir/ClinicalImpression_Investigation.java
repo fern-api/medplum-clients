@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClinicalImpression_Investigation {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   CodeableConcept code();
 
   Optional<List<Reference>> item();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

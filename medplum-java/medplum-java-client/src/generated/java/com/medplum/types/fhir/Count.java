@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Count {
-  Optional<String> unit();
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> system();
+
+  Optional<Code> code();
 
   Optional<Decimal> value();
 
   Optional<CountComparator> comparator();
 
+  Optional<String> unit();
+
   Optional<String> id();
-
-  Optional<Code> code();
-
-  Optional<Uri> system();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableCount.Builder builder() {
     return ImmutableCount.builder();

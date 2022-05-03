@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition_Attester {
-  Optional<Composition_attesterMode> mode();
-
-  Optional<Reference> party();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<DateTime> time();
 
   Optional<String> id();
+
+  Optional<Reference> party();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Composition_attesterMode> mode();
 
   static ImmutableComposition_Attester.Builder builder() {
     return ImmutableComposition_Attester.builder();

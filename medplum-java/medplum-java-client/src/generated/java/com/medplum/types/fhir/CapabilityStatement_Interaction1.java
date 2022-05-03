@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface CapabilityStatement_Interaction1 {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Capabilitystatement_interaction1Code> code();
-
   Optional<String> id();
 
-  Optional<Markdown> documentation();
-
   Optional<List<Extension>> extension();
+
+  Optional<Capabilitystatement_interaction1Code> code();
+
+  Optional<Markdown> documentation();
 
   static ImmutableCapabilityStatement_Interaction1.Builder builder() {
     return ImmutableCapabilityStatement_Interaction1.builder();

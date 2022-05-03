@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure_Stratifier {
-  Optional<CodeableConcept> code();
-
   Optional<List<Measure_Component>> component();
 
-  Optional<String> id();
+  Optional<Expression> criteria();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> code();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<String> description();
-
-  Optional<Expression> criteria();
 
   static ImmutableMeasure_Stratifier.Builder builder() {
     return ImmutableMeasure_Stratifier.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeSystem_Designation {
-  Optional<String> id();
-
-  Optional<Coding> use();
+  Optional<String> value();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> value();
+  Optional<Coding> use();
+
+  Optional<Code> language();
 
   Optional<List<Extension>> extension();
 
-  Optional<Code> language();
+  Optional<String> id();
 
   static ImmutableCodeSystem_Designation.Builder builder() {
     return ImmutableCodeSystem_Designation.builder();

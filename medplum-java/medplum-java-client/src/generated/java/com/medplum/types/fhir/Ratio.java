@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Ratio {
-  Optional<Quantity> denominator();
-
   Optional<List<Extension>> extension();
+
+  Optional<Quantity> denominator();
 
   Optional<Quantity> numerator();
 

@@ -17,65 +17,65 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AllergyIntolerance {
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> onsetDateTime();
-
-  Optional<DateTime> lastOccurrence();
-
-  Optional<CodeableConcept> verificationStatus();
-
-  Reference patient();
-
-  Optional<Uri> implicitRules();
+  Optional<DateTime> recordedDate();
 
   Optional<Narrative> text();
 
-  Optional<Code> language();
-
-  Optional<Period> onsetPeriod();
-
-  Optional<List<AllergyintoleranceCategoryItem>> category();
-
-  Optional<List<Annotation>> note();
-
   Optional<AllergyintoleranceType> type();
-
-  Optional<Meta> meta();
-
-  Optional<String> onsetString();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> recordedDate();
-
-  Optional<CodeableConcept> clinicalStatus();
-
-  Optional<List<AllergyIntolerance_Reaction>> reaction();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Age> onsetAge();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> asserter();
-
-  String resourceType();
-
-  Optional<Reference> recorder();
-
-  Optional<Range> onsetRange();
-
-  Optional<List<Identifier>> identifier();
 
   Optional<AllergyintoleranceCriticality> criticality();
 
+  Optional<String> onsetDateTime();
+
   Optional<Reference> encounter();
 
-  static ImmutableAllergyIntolerance.PatientBuildStage builder() {
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<CodeableConcept> clinicalStatus();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Code> language();
+
+  Optional<List<AllergyintoleranceCategoryItem>> category();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Age> onsetAge();
+
+  Optional<Reference> recorder();
+
+  Optional<Period> onsetPeriod();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
+
+  Optional<Range> onsetRange();
+
+  Optional<DateTime> lastOccurrence();
+
+  Optional<List<Annotation>> note();
+
+  Optional<String> onsetString();
+
+  Optional<Id> id();
+
+  Optional<Reference> asserter();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<AllergyIntolerance_Reaction>> reaction();
+
+  Reference patient();
+
+  Optional<CodeableConcept> code();
+
+  Optional<CodeableConcept> verificationStatus();
+
+  static ImmutableAllergyIntolerance.ResourceTypeBuildStage builder() {
     return ImmutableAllergyIntolerance.builder();
   }
 }

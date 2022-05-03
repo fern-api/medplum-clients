@@ -19,27 +19,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Parameter {
-  Optional<String> name();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
-  Optional<String> valueString();
-
-  Optional<List<Extension>> extension();
-
   Optional<Double> valueInteger();
-
-  Optional<Double> valueDecimal();
 
   Optional<String> valueUri();
 
-  Optional<String> valueDateTime();
-
-  Optional<String> valueCode();
+  Optional<List<Extension>> extension();
 
   Optional<Boolean> valueBoolean();
+
+  Optional<Double> valueDecimal();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> valueDateTime();
+
+  Optional<String> valueString();
+
+  Optional<String> name();
+
+  Optional<String> valueCode();
 
   static ImmutableValueSet_Parameter.Builder builder() {
     return ImmutableValueSet_Parameter.builder();

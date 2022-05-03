@@ -17,41 +17,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPackaged {
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> manufacturer();
+
+  Optional<CodeableConcept> legalStatusOfSupply();
+
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Reference>> subject();
+  Optional<List<Extension>> extension();
 
   Optional<List<MarketingStatus>> marketingStatus();
 
-  Optional<List<Reference>> manufacturer();
+  Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> marketingAuthorization();
+
+  Optional<String> description();
+
+  Optional<List<Reference>> subject();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Optional<List<Identifier>> identifier();
+
+  String resourceType();
+
+  Optional<List<MedicinalProductPackaged_BatchIdentifier>> batchIdentifier();
 
   List<MedicinalProductPackaged_PackageItem> packageItem();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> marketingAuthorization();
-
-  Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> legalStatusOfSupply();
-
-  String resourceType();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
-  Optional<String> description();
-
-  Optional<List<MedicinalProductPackaged_BatchIdentifier>> batchIdentifier();
 
   static ImmutableMedicinalProductPackaged.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductPackaged.builder();

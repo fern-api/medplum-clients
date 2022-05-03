@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface ElementDefinition_Base {
   Optional<String> id();
 
+  Optional<String> path();
+
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
 
   Optional<UnsignedInt> min();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> max();
-
-  Optional<String> path();
 
   static ImmutableElementDefinition_Base.Builder builder() {
     return ImmutableElementDefinition_Base.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Structure {
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> documentation();
+  Optional<List<Extension>> extension();
 
-  Canonical url();
+  Optional<String> alias();
 
   Optional<String> id();
 
   Optional<Structuremap_structureMode> mode();
 
-  Optional<String> alias();
+  Optional<String> documentation();
+
+  Canonical url();
 
   static ImmutableStructureMap_Structure.UrlBuildStage builder() {
     return ImmutableStructureMap_Structure.builder();

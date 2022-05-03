@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DetectedIssue_Mitigation {
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> date();
 
-  Optional<String> id();
-
   CodeableConcept action();
 
+  Optional<List<Extension>> extension();
+
   Optional<Reference> author();
+
+  Optional<String> id();
 
   static ImmutableDetectedIssue_Mitigation.ActionBuildStage builder() {
     return ImmutableDetectedIssue_Mitigation.builder();

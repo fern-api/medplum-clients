@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SpecimenDefinition_Container {
+  Optional<CodeableConcept> type();
+
+  Optional<List<SpecimenDefinition_Additive>> additive();
+
   Optional<Quantity> capacity();
+
+  Optional<String> id();
+
+  Optional<String> preparation();
+
+  Optional<Quantity> minimumVolumeQuantity();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> material();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> description();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
-  Optional<CodeableConcept> type();
+  Optional<CodeableConcept> cap();
 
   Optional<String> minimumVolumeString();
-
-  Optional<Quantity> minimumVolumeQuantity();
-
-  Optional<CodeableConcept> material();
-
-  Optional<List<SpecimenDefinition_Additive>> additive();
-
-  Optional<String> preparation();
-
-  Optional<CodeableConcept> cap();
 
   static ImmutableSpecimenDefinition_Container.Builder builder() {
     return ImmutableSpecimenDefinition_Container.builder();

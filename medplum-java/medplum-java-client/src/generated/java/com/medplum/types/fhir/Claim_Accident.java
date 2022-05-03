@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Accident {
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> locationReference();
+
   Optional<String> id();
 
   Optional<CodeableConcept> type();
 
   Optional<List<Extension>> extension();
 
-  Optional<Address> locationAddress();
-
-  Optional<Reference> locationReference();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Date> date();
+
+  Optional<Address> locationAddress();
 
   static ImmutableClaim_Accident.Builder builder() {
     return ImmutableClaim_Accident.builder();

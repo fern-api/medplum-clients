@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Software {
-  Optional<String> id();
-
-  Optional<String> name();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> version();
 
+  Optional<String> id();
+
   Optional<DateTime> releaseDate();
+
+  Optional<String> name();
 
   Optional<List<Extension>> extension();
 

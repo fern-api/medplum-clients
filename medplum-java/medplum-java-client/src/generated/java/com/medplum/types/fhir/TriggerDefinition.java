@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TriggerDefinition {
+  Optional<String> timingDate();
+
   Optional<TriggerdefinitionType> type();
-
-  Optional<Expression> condition();
-
-  Optional<Timing> timingTiming();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<DataRequirement>> data();
-
   Optional<String> id();
 
-  Optional<String> timingDate();
+  Optional<Reference> timingReference();
 
   Optional<String> name();
 
+  Optional<Expression> condition();
+
   Optional<String> timingDateTime();
 
-  Optional<Reference> timingReference();
+  Optional<List<DataRequirement>> data();
+
+  Optional<Timing> timingTiming();
 
   static ImmutableTriggerDefinition.Builder builder() {
     return ImmutableTriggerDefinition.builder();

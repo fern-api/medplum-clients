@@ -21,406 +21,406 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition {
-  Optional<Count> fixedCount();
+  Optional<Period> defaultValuePeriod();
 
-  Optional<Distance> defaultValueDistance();
+  Optional<Coding> fixedCoding();
 
-  Optional<Quantity> fixedQuantity();
-
-  Optional<Attachment> patternAttachment();
-
-  Optional<String> defaultValueString();
-
-  Optional<Markdown> comment();
-
-  Optional<Quantity> defaultValueQuantity();
-
-  Optional<Reference> patternReference();
-
-  Optional<Double> defaultValueDecimal();
-
-  Optional<UsageContext> fixedUsageContext();
-
-  Optional<Double> minValueInteger();
-
-  Optional<Double> minValuePositiveInt();
-
-  Optional<Reference> fixedReference();
-
-  Optional<ContactPoint> defaultValueContactPoint();
-
-  Optional<Address> patternAddress();
-
-  Optional<TriggerDefinition> patternTriggerDefinition();
-
-  Optional<String> defaultValueBase64Binary();
-
-  Optional<Boolean> isModifier();
-
-  Optional<Period> fixedPeriod();
-
-  Optional<Attachment> defaultValueAttachment();
-
-  Optional<Ratio> patternRatio();
-
-  Optional<Annotation> defaultValueAnnotation();
-
-  Optional<Identifier> defaultValueIdentifier();
-
-  Optional<String> fixedTime();
-
-  Optional<String> patternOid();
-
-  Optional<String> sliceName();
-
-  Optional<List<ElementDefinition_Type>> type();
-
-  Optional<SampledData> patternSampledData();
-
-  Optional<List<ElementDefinition_Constraint>> constraint();
+  Optional<String> minValueDate();
 
   Optional<Money> fixedMoney();
 
-  Optional<Markdown> definition();
+  Optional<Money> patternMoney();
 
-  Optional<Double> patternDecimal();
+  Optional<CodeableConcept> defaultValueCodeableConcept();
 
-  Optional<Boolean> isSummary();
+  Optional<Expression> patternExpression();
 
-  Optional<String> orderMeaning();
+  Optional<Quantity> maxValueQuantity();
 
-  Optional<String> patternInstant();
+  Optional<Double> maxValueInteger();
+
+  Optional<String> patternUri();
+
+  Optional<Boolean> isModifier();
 
   Optional<Double> defaultValuePositiveInt();
 
-  Optional<Signature> fixedSignature();
+  Optional<Range> patternRange();
 
-  Optional<List<ElementDefinition_Example>> example();
+  Optional<CodeableConcept> fixedCodeableConcept();
 
-  Optional<List<Coding>> code();
-
-  Optional<String> isModifierReason();
+  Optional<Double> minValuePositiveInt();
 
   Optional<Double> fixedUnsignedInt();
 
-  Optional<String> defaultValueInstant();
-
-  Optional<ContactPoint> fixedContactPoint();
+  Optional<Boolean> fixedBoolean();
 
   Optional<String> defaultValueId();
 
-  Optional<Age> defaultValueAge();
+  Optional<String> defaultValueString();
 
-  Optional<Attachment> fixedAttachment();
+  Optional<Ratio> fixedRatio();
 
-  Optional<Age> fixedAge();
+  Optional<UsageContext> patternUsageContext();
 
-  Optional<List<Extension>> extension();
+  Optional<Boolean> sliceIsConstraining();
 
-  Optional<HumanName> fixedHumanName();
+  Optional<Double> maxValueUnsignedInt();
 
-  Optional<String> patternMarkdown();
+  Optional<Double> minValueDecimal();
 
-  Optional<Boolean> defaultValueBoolean();
+  Optional<List<ElementdefinitionRepresentationItem>> representation();
 
-  Optional<Integer> maxLength();
-
-  Optional<String> patternString();
-
-  Optional<ParameterDefinition> defaultValueParameterDefinition();
-
-  Optional<TriggerDefinition> defaultValueTriggerDefinition();
-
-  Optional<String> patternDate();
-
-  Optional<String> defaultValueOid();
-
-  Optional<String> fixedUri();
-
-  Optional<String> defaultValueTime();
-
-  Optional<Dosage> patternDosage();
-
-  Optional<String> fixedUrl();
-
-  Optional<Expression> defaultValueExpression();
-
-  Optional<RelatedArtifact> fixedRelatedArtifact();
-
-  Optional<Timing> patternTiming();
-
-  Optional<String> maxValueTime();
-
-  Optional<Meta> fixedMeta();
-
-  Optional<ContactPoint> patternContactPoint();
-
-  Optional<RelatedArtifact> patternRelatedArtifact();
-
-  Optional<String> defaultValueUrl();
-
-  Optional<String> patternBase64Binary();
-
-  Optional<HumanName> defaultValueHumanName();
-
-  Optional<Boolean> patternBoolean();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Duration> defaultValueDuration();
-
-  Optional<ContactDetail> defaultValueContactDetail();
-
-  Optional<String> path();
-
-  Optional<Timing> fixedTiming();
-
-  Optional<Expression> fixedExpression();
-
-  Optional<String> defaultValueUuid();
-
-  Optional<DataRequirement> patternDataRequirement();
-
-  Optional<Timing> defaultValueTiming();
-
-  Optional<String> fixedInstant();
-
-  Optional<String> fixedDateTime();
+  Optional<UsageContext> fixedUsageContext();
 
   Optional<UsageContext> defaultValueUsageContext();
 
-  Optional<String> fixedBase64Binary();
+  Optional<Contributor> fixedContributor();
+
+  Optional<List<ElementDefinition_Mapping>> mapping();
+
+  Optional<Double> patternDecimal();
+
+  Optional<Range> defaultValueRange();
+
+  Optional<String> patternCode();
+
+  Optional<Integer> maxLength();
+
+  Optional<Identifier> patternIdentifier();
+
+  Optional<Double> defaultValueDecimal();
+
+  Optional<String> fixedUri();
+
+  Optional<String> patternMarkdown();
+
+  Optional<Quantity> fixedQuantity();
+
+  Optional<Double> patternPositiveInt();
+
+  Optional<Address> defaultValueAddress();
+
+  Optional<Reference> fixedReference();
+
+  Optional<Attachment> fixedAttachment();
+
+  Optional<Expression> defaultValueExpression();
+
+  Optional<Duration> fixedDuration();
+
+  Optional<String> defaultValueDateTime();
+
+  Optional<Double> fixedDecimal();
+
+  Optional<Distance> fixedDistance();
+
+  Optional<String> patternCanonical();
 
   @JsonProperty("short")
   Optional<String> _short();
 
-  Optional<Quantity> minValueQuantity();
+  Optional<Markdown> comment();
 
-  Optional<Boolean> fixedBoolean();
+  Optional<Attachment> defaultValueAttachment();
 
-  Optional<HumanName> patternHumanName();
+  Optional<String> patternTime();
 
-  Optional<Double> patternUnsignedInt();
+  Optional<ParameterDefinition> patternParameterDefinition();
 
-  Optional<List<ElementDefinition_Mapping>> mapping();
+  Optional<Contributor> patternContributor();
 
-  Optional<String> defaultValueCode();
+  Optional<Markdown> definition();
 
-  Optional<String> patternDateTime();
+  Optional<List<ElementDefinition_Type>> type();
 
-  Optional<String> fixedId();
+  Optional<List<Id>> condition();
 
-  Optional<Identifier> fixedIdentifier();
+  Optional<String> fixedUrl();
 
-  Optional<Period> defaultValuePeriod();
+  Optional<ContactDetail> defaultValueContactDetail();
 
-  Optional<String> id();
+  Optional<ContactPoint> defaultValueContactPoint();
 
-  Optional<Double> fixedDecimal();
+  Optional<List<String>> alias();
 
-  Optional<Boolean> sliceIsConstraining();
+  Optional<Annotation> defaultValueAnnotation();
 
-  Optional<Duration> fixedDuration();
-
-  Optional<String> defaultValueCanonical();
-
-  Optional<Reference> defaultValueReference();
+  Optional<Markdown> requirements();
 
   Optional<Count> defaultValueCount();
 
-  Optional<Contributor> defaultValueContributor();
-
-  Optional<String> label();
-
-  Optional<ElementDefinition_Slicing> slicing();
-
-  Optional<String> defaultValueMarkdown();
-
-  Optional<Dosage> defaultValueDosage();
-
-  Optional<Count> patternCount();
-
-  Optional<Uri> contentReference();
-
-  Optional<String> maxValueDate();
-
-  Optional<RelatedArtifact> defaultValueRelatedArtifact();
-
-  Optional<ContactDetail> fixedContactDetail();
-
-  Optional<Double> maxValueUnsignedInt();
-
-  Optional<String> fixedCanonical();
-
-  Optional<SampledData> fixedSampledData();
-
-  Optional<String> patternUrl();
-
   Optional<Duration> patternDuration();
 
-  Optional<Double> minValueUnsignedInt();
+  Optional<Dosage> patternDosage();
 
-  Optional<Quantity> maxValueQuantity();
+  Optional<Period> patternPeriod();
 
-  Optional<Annotation> patternAnnotation();
+  Optional<Duration> defaultValueDuration();
 
-  Optional<DataRequirement> fixedDataRequirement();
+  Optional<String> patternUuid();
 
-  Optional<CodeableConcept> defaultValueCodeableConcept();
-
-  Optional<String> patternCanonical();
-
-  Optional<String> fixedUuid();
-
-  Optional<Double> defaultValueInteger();
-
-  Optional<Range> defaultValueRange();
-
-  Optional<ElementDefinition_Binding> binding();
-
-  Optional<CodeableConcept> patternCodeableConcept();
+  Optional<String> defaultValueUrl();
 
   Optional<String> defaultValueUri();
 
-  Optional<Coding> defaultValueCoding();
+  Optional<String> defaultValueTime();
 
-  Optional<Double> maxValueInteger();
+  Optional<String> patternInstant();
 
-  Optional<Signature> defaultValueSignature();
+  Optional<TriggerDefinition> patternTriggerDefinition();
+
+  Optional<Double> defaultValueInteger();
+
+  Optional<Double> minValueUnsignedInt();
+
+  Optional<String> maxValueTime();
+
+  Optional<Double> maxValueDecimal();
+
+  Optional<HumanName> defaultValueHumanName();
+
+  Optional<String> fixedOid();
+
+  Optional<TriggerDefinition> fixedTriggerDefinition();
+
+  Optional<Period> fixedPeriod();
+
+  Optional<Dosage> fixedDosage();
+
+  Optional<Double> defaultValueUnsignedInt();
+
+  Optional<HumanName> fixedHumanName();
+
+  Optional<String> sliceName();
+
+  Optional<DataRequirement> patternDataRequirement();
+
+  Optional<Uri> contentReference();
+
+  Optional<Count> patternCount();
+
+  Optional<String> minValueInstant();
+
+  Optional<String> defaultValueCode();
+
+  Optional<String> maxValueInstant();
+
+  Optional<Boolean> patternBoolean();
+
+  Optional<List<ElementDefinition_Example>> example();
+
+  Optional<String> fixedTime();
+
+  Optional<String> patternDate();
+
+  Optional<Money> defaultValueMoney();
+
+  Optional<Attachment> patternAttachment();
+
+  Optional<Meta> defaultValueMeta();
+
+  Optional<String> fixedInstant();
+
+  Optional<Double> minValueInteger();
+
+  Optional<ElementDefinition_Base> base();
+
+  Optional<RelatedArtifact> fixedRelatedArtifact();
+
+  Optional<Annotation> fixedAnnotation();
+
+  Optional<ElementDefinition_Slicing> slicing();
+
+  Optional<String> patternString();
+
+  Optional<RelatedArtifact> defaultValueRelatedArtifact();
+
+  Optional<CodeableConcept> patternCodeableConcept();
+
+  Optional<String> maxValueDateTime();
+
+  Optional<String> orderMeaning();
+
+  Optional<Double> patternUnsignedInt();
+
+  Optional<Annotation> patternAnnotation();
+
+  Optional<Reference> patternReference();
+
+  Optional<Distance> defaultValueDistance();
+
+  Optional<SampledData> patternSampledData();
+
+  Optional<String> id();
+
+  Optional<ContactPoint> fixedContactPoint();
+
+  Optional<String> fixedDateTime();
+
+  Optional<String> max();
+
+  Optional<Meta> patternMeta();
+
+  Optional<String> defaultValueCanonical();
+
+  Optional<Boolean> mustSupport();
 
   Optional<String> minValueDateTime();
 
+  Optional<Expression> fixedExpression();
+
+  Optional<TriggerDefinition> defaultValueTriggerDefinition();
+
+  Optional<Meta> fixedMeta();
+
+  Optional<Age> fixedAge();
+
+  Optional<Identifier> defaultValueIdentifier();
+
+  Optional<Count> fixedCount();
+
+  Optional<Quantity> patternQuantity();
+
+  Optional<Contributor> defaultValueContributor();
+
+  Optional<String> fixedBase64Binary();
+
+  Optional<String> minValueTime();
+
+  Optional<Range> fixedRange();
+
+  Optional<String> defaultValueMarkdown();
+
+  Optional<Timing> defaultValueTiming();
+
+  Optional<ContactPoint> patternContactPoint();
+
+  Optional<String> patternDateTime();
+
+  Optional<Signature> defaultValueSignature();
+
+  Optional<List<Extension>> extension();
+
+  Optional<RelatedArtifact> patternRelatedArtifact();
+
+  Optional<Quantity> minValueQuantity();
+
+  Optional<Dosage> defaultValueDosage();
+
+  Optional<String> fixedCanonical();
+
+  Optional<ContactDetail> patternContactDetail();
+
+  Optional<ElementDefinition_Binding> binding();
+
+  Optional<String> fixedId();
+
+  Optional<String> defaultValueOid();
+
   Optional<Address> fixedAddress();
 
-  Optional<String> maxValueDateTime();
+  Optional<ParameterDefinition> defaultValueParameterDefinition();
+
+  Optional<HumanName> patternHumanName();
+
+  Optional<String> fixedDate();
+
+  Optional<String> patternUrl();
+
+  Optional<SampledData> defaultValueSampledData();
+
+  Optional<ContactDetail> fixedContactDetail();
+
+  Optional<String> defaultValueInstant();
+
+  Optional<String> isModifierReason();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Timing> patternTiming();
+
+  Optional<DataRequirement> defaultValueDataRequirement();
+
+  Optional<Age> defaultValueAge();
+
+  Optional<ParameterDefinition> fixedParameterDefinition();
+
+  Optional<String> patternId();
+
+  Optional<Timing> fixedTiming();
+
+  Optional<String> fixedMarkdown();
+
+  Optional<Double> fixedInteger();
+
+  Optional<Signature> fixedSignature();
+
+  Optional<DataRequirement> fixedDataRequirement();
+
+  Optional<UnsignedInt> min();
+
+  Optional<Reference> defaultValueReference();
+
+  Optional<Boolean> isSummary();
+
+  Optional<String> path();
+
+  Optional<Double> patternInteger();
+
+  Optional<String> maxValueDate();
+
+  Optional<Coding> patternCoding();
+
+  Optional<Double> maxValuePositiveInt();
+
+  Optional<String> defaultValueBase64Binary();
+
+  Optional<Distance> patternDistance();
 
   Optional<Double> fixedPositiveInt();
 
   Optional<Markdown> meaningWhenMissing();
 
-  Optional<Expression> patternExpression();
+  Optional<Address> patternAddress();
 
-  Optional<Money> patternMoney();
+  Optional<String> label();
 
-  Optional<String> minValueTime();
-
-  Optional<Meta> defaultValueMeta();
-
-  Optional<Distance> patternDistance();
-
-  Optional<String> minValueInstant();
-
-  Optional<String> max();
-
-  Optional<ElementDefinition_Base> base();
-
-  Optional<List<ElementdefinitionRepresentationItem>> representation();
-
-  Optional<String> patternCode();
+  Optional<String> patternBase64Binary();
 
   Optional<Signature> patternSignature();
 
-  Optional<Meta> patternMeta();
+  Optional<List<Coding>> code();
 
-  Optional<Double> patternPositiveInt();
-
-  Optional<List<String>> alias();
-
-  Optional<Double> fixedInteger();
-
-  Optional<Identifier> patternIdentifier();
-
-  Optional<SampledData> defaultValueSampledData();
-
-  Optional<Double> defaultValueUnsignedInt();
-
-  Optional<String> patternUri();
-
-  Optional<Dosage> fixedDosage();
-
-  Optional<String> fixedOid();
-
-  Optional<Double> patternInteger();
-
-  Optional<Ratio> fixedRatio();
-
-  Optional<CodeableConcept> fixedCodeableConcept();
-
-  Optional<Money> defaultValueMoney();
-
-  Optional<ContactDetail> patternContactDetail();
+  Optional<Identifier> fixedIdentifier();
 
   Optional<String> fixedCode();
 
-  Optional<Double> minValueDecimal();
+  Optional<String> defaultValueUuid();
 
-  Optional<String> defaultValueDateTime();
+  Optional<SampledData> fixedSampledData();
 
-  Optional<Age> patternAge();
-
-  Optional<String> fixedString();
-
-  Optional<UsageContext> patternUsageContext();
-
-  Optional<String> patternTime();
-
-  Optional<Range> patternRange();
-
-  Optional<Contributor> fixedContributor();
-
-  Optional<Coding> fixedCoding();
-
-  Optional<Period> patternPeriod();
-
-  Optional<List<Id>> condition();
-
-  Optional<Range> fixedRange();
+  Optional<Coding> defaultValueCoding();
 
   Optional<Ratio> defaultValueRatio();
 
-  Optional<DataRequirement> defaultValueDataRequirement();
+  Optional<String> fixedString();
 
-  Optional<Coding> patternCoding();
+  Optional<String> fixedUuid();
 
-  Optional<String> fixedMarkdown();
+  Optional<Quantity> defaultValueQuantity();
 
-  Optional<TriggerDefinition> fixedTriggerDefinition();
+  Optional<Ratio> patternRatio();
 
-  Optional<Boolean> mustSupport();
+  Optional<Boolean> defaultValueBoolean();
 
-  Optional<ParameterDefinition> fixedParameterDefinition();
+  Optional<String> patternOid();
 
-  Optional<Double> maxValueDecimal();
+  Optional<Age> patternAge();
 
-  Optional<String> patternId();
-
-  Optional<Markdown> requirements();
-
-  Optional<Address> defaultValueAddress();
-
-  Optional<Distance> fixedDistance();
-
-  Optional<Annotation> fixedAnnotation();
-
-  Optional<Double> maxValuePositiveInt();
+  Optional<List<ElementDefinition_Constraint>> constraint();
 
   Optional<String> defaultValueDate();
-
-  Optional<ParameterDefinition> patternParameterDefinition();
-
-  Optional<String> maxValueInstant();
-
-  Optional<UnsignedInt> min();
-
-  Optional<Contributor> patternContributor();
-
-  Optional<String> minValueDate();
-
-  Optional<String> fixedDate();
-
-  Optional<Quantity> patternQuantity();
-
-  Optional<String> patternUuid();
 
   static ImmutableElementDefinition.Builder builder() {
     return ImmutableElementDefinition.builder();

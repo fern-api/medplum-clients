@@ -1,2 +1,5 @@
-# Fern 
-api/generated/**
+# misc
+.DS_Store
+
+# fern
+api/generated

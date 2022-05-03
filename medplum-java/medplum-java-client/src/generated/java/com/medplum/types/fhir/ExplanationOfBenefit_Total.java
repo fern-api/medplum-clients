@@ -21,11 +21,11 @@ public interface ExplanationOfBenefit_Total {
 
   Money amount();
 
+  Optional<List<Extension>> modifierExtension();
+
   CodeableConcept category();
 
   Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableExplanationOfBenefit_Total.AmountBuildStage builder() {
     return ImmutableExplanationOfBenefit_Total.builder();

@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyDelivery {
-  Optional<Narrative> text();
-
-  Optional<List<Identifier>> identifier();
+  Optional<Id> id();
 
   Optional<SupplyDelivery_SuppliedItem> suppliedItem();
 
-  Optional<Reference> destination();
+  Optional<List<Identifier>> identifier();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<Reference>> partOf();
+
+  Optional<Uri> implicitRules();
 
   Optional<Reference> patient();
 
+  Optional<Period> occurrencePeriod();
+
+  Optional<List<Extension>> modifierExtension();
+
   String resourceType();
 
-  Optional<List<Reference>> basedOn();
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Timing> occurrenceTiming();
+
+  Optional<String> occurrenceDateTime();
 
   Optional<List<Reference>> receiver();
 
   Optional<SupplydeliveryStatus> status();
 
-  Optional<String> occurrenceDateTime();
+  Optional<List<Extension>> extension();
 
-  Optional<Timing> occurrenceTiming();
+  Optional<List<Reference>> basedOn();
 
   Optional<Reference> supplier();
 
-  Optional<Code> language();
-
-  Optional<Id> id();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
+  Optional<Reference> destination();
 
   Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<Uri> implicitRules();
 
   static ImmutableSupplyDelivery.ResourceTypeBuildStage builder() {
     return ImmutableSupplyDelivery.builder();

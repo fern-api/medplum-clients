@@ -18,41 +18,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_Quality {
-  Optional<Decimal> recall();
+  Optional<String> id();
 
-  Optional<MolecularSequence_Roc> roc();
+  Optional<Molecularsequence_qualityType> type();
+
+  Optional<Decimal> queryTP();
+
+  Optional<Decimal> queryFP();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Integer> end();
+
+  Optional<CodeableConcept> standardSequence();
 
   Optional<List<Extension>> extension();
 
   Optional<Decimal> precision();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> method();
-
-  Optional<Decimal> queryTP();
-
   Optional<Integer> start();
-
-  Optional<Integer> end();
 
   Optional<Decimal> truthTP();
 
-  Optional<Decimal> gtFP();
-
   Optional<Decimal> fScore();
 
-  Optional<String> id();
-
-  Optional<Molecularsequence_qualityType> type();
-
-  Optional<CodeableConcept> standardSequence();
+  Optional<MolecularSequence_Roc> roc();
 
   Optional<Quantity> score();
 
-  Optional<Decimal> queryFP();
+  Optional<CodeableConcept> method();
 
   Optional<Decimal> truthFN();
+
+  Optional<Decimal> recall();
+
+  Optional<Decimal> gtFP();
 
   static ImmutableMolecularSequence_Quality.Builder builder() {
     return ImmutableMolecularSequence_Quality.builder();

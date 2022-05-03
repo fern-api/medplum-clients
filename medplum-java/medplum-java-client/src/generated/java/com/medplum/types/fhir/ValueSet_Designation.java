@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Designation {
-  Optional<List<Extension>> extension();
-
-  Optional<String> value();
+  Optional<Code> language();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> language();
 
   Optional<Coding> use();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> value();
 
   static ImmutableValueSet_Designation.Builder builder() {
     return ImmutableValueSet_Designation.builder();

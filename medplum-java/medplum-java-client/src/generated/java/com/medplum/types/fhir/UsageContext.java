@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface UsageContext {
-  Coding code();
-
-  Optional<CodeableConcept> valueCodeableConcept();
-
-  Optional<Quantity> valueQuantity();
-
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<Range> valueRange();
+  Optional<CodeableConcept> valueCodeableConcept();
 
   Optional<Reference> valueReference();
+
+  Coding code();
+
+  Optional<Range> valueRange();
+
+  Optional<Quantity> valueQuantity();
 
   static ImmutableUsageContext.CodeBuildStage builder() {
     return ImmutableUsageContext.builder();

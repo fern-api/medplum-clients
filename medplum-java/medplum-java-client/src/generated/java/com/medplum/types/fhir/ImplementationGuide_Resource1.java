@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide_Resource1 {
-  Reference reference();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Reference reference();
 
   Optional<String> exampleCanonical();
 
-  Optional<List<Extension>> extension();
+  Optional<Url> relativePath();
 
   Optional<Boolean> exampleBoolean();
 
-  Optional<Url> relativePath();
-
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImplementationGuide_Resource1.ReferenceBuildStage builder() {
     return ImmutableImplementationGuide_Resource1.builder();

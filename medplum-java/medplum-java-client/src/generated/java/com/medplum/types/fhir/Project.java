@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Project {
-  Optional<Reference> defaultPatientAccessPolicy();
-
-  Optional<Code> language();
-
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Code>> features();
-
-  Optional<Meta> meta();
-
   Reference owner();
 
-  Optional<String> resourceType();
+  Optional<Reference> defaultPatientAccessPolicy();
 
   String name();
 
+  Optional<Uri> implicitRules();
+
+  Optional<String> resourceType();
+
+  Optional<Meta> meta();
+
   Optional<String> description();
+
+  Optional<Id> id();
+
+  Optional<Code> language();
+
+  Optional<List<Code>> features();
 
   static ImmutableProject.OwnerBuildStage builder() {
     return ImmutableProject.builder();

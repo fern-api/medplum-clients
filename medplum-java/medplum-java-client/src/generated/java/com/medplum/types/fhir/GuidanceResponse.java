@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GuidanceResponse {
+  Optional<String> moduleUri();
+
   Optional<List<Reference>> reasonReference();
-
-  Optional<CodeableConcept> moduleCodeableConcept();
-
-  Optional<Reference> outputParameters();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<DateTime> occurrenceDateTime();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Narrative> text();
-
-  Optional<Id> id();
-
-  Optional<Reference> result();
-
-  Optional<Meta> meta();
 
   Optional<Reference> subject();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> moduleCanonical();
-
-  String resourceType();
-
-  Optional<String> moduleUri();
-
-  Optional<GuidanceresponseStatus> status();
+  Optional<Reference> encounter();
 
   Optional<Identifier> requestIdentifier();
 
-  Optional<Reference> performer();
+  Optional<CodeableConcept> moduleCodeableConcept();
 
-  Optional<Reference> encounter();
+  Optional<List<Reference>> evaluationMessage();
+
+  Optional<Reference> outputParameters();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Meta> meta();
 
   Optional<Code> language();
 
   Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<List<Annotation>> note();
-
-  Optional<List<Reference>> evaluationMessage();
+  Optional<Reference> result();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Narrative> text();
+
+  Optional<Reference> performer();
+
   Optional<List<DataRequirement>> dataRequirement();
 
+  Optional<Id> id();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Extension>> extension();
+
   Optional<Uri> implicitRules();
+
+  Optional<String> moduleCanonical();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<DateTime> occurrenceDateTime();
+
+  Optional<GuidanceresponseStatus> status();
 
   static ImmutableGuidanceResponse.ResourceTypeBuildStage builder() {
     return ImmutableGuidanceResponse.builder();

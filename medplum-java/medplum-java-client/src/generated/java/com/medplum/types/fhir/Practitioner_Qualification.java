@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Practitioner_Qualification {
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> id();
-
-  CodeableConcept code();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> issuer();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Identifier>> identifier();
+
+  CodeableConcept code();
 
   Optional<Period> period();
+
+  Optional<String> id();
 
   static ImmutablePractitioner_Qualification.CodeBuildStage builder() {
     return ImmutablePractitioner_Qualification.builder();

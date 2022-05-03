@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DetectedIssue {
-  Optional<List<Identifier>> identifier();
+  Optional<DetectedissueSeverity> severity();
 
   Optional<Uri> reference();
 
-  Optional<Narrative> text();
+  Optional<List<DetectedIssue_Mitigation>> mitigation();
+
+  Optional<Reference> patient();
+
+  Optional<Uri> implicitRules();
 
   Optional<Code> status();
 
   Optional<CodeableConcept> code();
 
-  Optional<String> detail();
-
-  Optional<Reference> author();
-
-  Optional<DetectedissueSeverity> severity();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> implicated();
-
-  Optional<String> identifiedDateTime();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<DetectedIssue_Mitigation>> mitigation();
+  Optional<List<DetectedIssue_Evidence>> evidence();
 
   Optional<Id> id();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Code> language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
 
   String resourceType();
 
-  Optional<Meta> meta();
+  Optional<List<ResourceList>> contained();
 
   Optional<Period> identifiedPeriod();
 
-  Optional<Uri> implicitRules();
+  Optional<Reference> author();
 
-  Optional<Code> language();
+  Optional<Meta> meta();
 
-  Optional<Reference> patient();
+  Optional<List<Identifier>> identifier();
 
-  Optional<List<DetectedIssue_Evidence>> evidence();
+  Optional<List<Reference>> implicated();
+
+  Optional<String> detail();
+
+  Optional<String> identifiedDateTime();
 
   static ImmutableDetectedIssue.ResourceTypeBuildStage builder() {
     return ImmutableDetectedIssue.builder();

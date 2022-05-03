@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductManufactured {
-  String resourceType();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<CodeableConcept>> otherCharacteristics();
 
-  Optional<List<Reference>> manufacturer();
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> unitOfPresentation();
+
+  Optional<Narrative> text();
+
+  CodeableConcept manufacturedDoseForm();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  Optional<ProdCharacteristic> physicalCharacteristics();
 
   Optional<List<Reference>> ingredient();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<Meta> meta();
+  String resourceType();
 
   Quantity quantity();
 
   Optional<Id> id();
 
-  Optional<Narrative> text();
-
-  Optional<Code> language();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  CodeableConcept manufacturedDoseForm();
+  Optional<List<Reference>> manufacturer();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> unitOfPresentation();
-
-  Optional<ProdCharacteristic> physicalCharacteristics();
-
-  static ImmutableMedicinalProductManufactured.ResourceTypeBuildStage builder() {
+  static ImmutableMedicinalProductManufactured.ManufacturedDoseFormBuildStage builder() {
     return ImmutableMedicinalProductManufactured.builder();
   }
 }

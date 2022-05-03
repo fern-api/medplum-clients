@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Element {
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   static ImmutableElement.Builder builder() {
     return ImmutableElement.builder();

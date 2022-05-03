@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference_Content {
-  Optional<List<Extension>> modifierExtension();
-
   Attachment attachment();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 

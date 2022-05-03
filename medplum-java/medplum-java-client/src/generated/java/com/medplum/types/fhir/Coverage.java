@@ -21,56 +21,56 @@ import org.immutables.value.Value;
 public interface Coverage {
   Optional<Boolean> subrogation();
 
-  Optional<String> subscriberId();
-
-  Optional<Reference> subscriber();
-
   Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> relationship();
-
-  Optional<PositiveInt> order();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> type();
-
-  Optional<String> dependent();
-
-  Optional<Id> id();
-
-  List<Reference> payor();
-
-  String resourceType();
-
-  Optional<Reference> policyHolder();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Period> period();
-
-  Reference beneficiary();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Narrative> text();
-
-  Optional<Code> language();
-
-  Optional<String> network();
 
   @JsonProperty("class")
   Optional<List<Coverage_Class>> _class();
 
-  Optional<List<Coverage_CostToBeneficiary>> costToBeneficiary();
+  Optional<String> network();
+
+  Optional<String> subscriberId();
+
+  List<Reference> payor();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<List<ResourceList>> contained();
 
+  Optional<Period> period();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> type();
+
   Optional<Code> status();
 
+  Optional<Reference> policyHolder();
+
+  Optional<String> dependent();
+
+  String resourceType();
+
+  Optional<PositiveInt> order();
+
+  Optional<CodeableConcept> relationship();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Coverage_CostToBeneficiary>> costToBeneficiary();
+
+  Optional<Narrative> text();
+
+  Reference beneficiary();
+
   Optional<List<Reference>> contract();
+
+  Optional<Code> language();
+
+  Optional<Reference> subscriber();
 
   static ImmutableCoverage.ResourceTypeBuildStage builder() {
     return ImmutableCoverage.builder();

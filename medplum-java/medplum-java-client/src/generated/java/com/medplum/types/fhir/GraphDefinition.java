@@ -18,53 +18,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GraphDefinition {
-  Optional<Meta> meta();
+  Optional<Id> id();
 
-  Optional<DateTime> date();
-
-  Optional<Code> language();
+  Optional<List<ResourceList>> contained();
 
   Optional<String> publisher();
 
-  Optional<Uri> implicitRules();
+  Optional<String> name();
 
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  String resourceType();
+  Optional<Boolean> experimental();
 
   Optional<List<UsageContext>> useContext();
 
-  Optional<Uri> url();
+  Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<String> name();
-
-  Optional<String> version();
-
-  Optional<Markdown> purpose();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Narrative> text();
 
-  Optional<Code> start();
+  Optional<Uri> url();
+
+  Optional<Meta> meta();
+
+  Optional<Markdown> purpose();
 
   Optional<List<GraphDefinition_Link>> link();
 
-  Optional<List<ContactDetail>> contact();
+  String resourceType();
 
   Optional<GraphdefinitionStatus> status();
 
-  Optional<Id> id();
+  Optional<DateTime> date();
 
-  Optional<Markdown> description();
+  Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> experimental();
+  Optional<List<ContactDetail>> contact();
 
   Optional<Canonical> profile();
 
-  Optional<List<ResourceList>> contained();
+  Optional<String> version();
+
+  Optional<Markdown> description();
+
+  Optional<Code> language();
+
+  Optional<Code> start();
 
   static ImmutableGraphDefinition.ResourceTypeBuildStage builder() {
     return ImmutableGraphDefinition.builder();

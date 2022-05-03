@@ -17,77 +17,77 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EvidenceVariable {
-  Optional<String> shortTitle();
+  Optional<List<CodeableConcept>> topic();
 
-  Optional<List<Annotation>> note();
+  Optional<Uri> implicitRules();
 
-  Optional<Uri> url();
+  Optional<Markdown> description();
 
-  Optional<List<ResourceList>> contained();
+  List<EvidenceVariable_Characteristic> characteristic();
 
-  Optional<String> publisher();
+  String resourceType();
+
+  Optional<EvidencevariableStatus> status();
 
   Optional<List<ContactDetail>> editor();
 
   Optional<List<ContactDetail>> reviewer();
 
-  List<EvidenceVariable_Characteristic> characteristic();
-
-  Optional<DateTime> date();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<EvidencevariableStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> name();
 
   Optional<Markdown> copyright();
 
-  Optional<Meta> meta();
-
-  Optional<String> title();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<String> name();
-
-  Optional<List<ContactDetail>> endorser();
+  Optional<List<UsageContext>> useContext();
 
   Optional<List<ContactDetail>> author();
 
+  Optional<List<ResourceList>> contained();
+
   Optional<String> version();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<EvidencevariableType> type();
 
   Optional<List<RelatedArtifact>> relatedArtifact();
 
-  Optional<List<CodeableConcept>> topic();
+  Optional<Code> language();
 
-  Optional<Date> approvalDate();
+  Optional<String> publisher();
 
-  Optional<Narrative> text();
-
-  Optional<Markdown> description();
+  Optional<List<Extension>> extension();
 
   Optional<String> subtitle();
 
-  Optional<Code> language();
+  Optional<List<Annotation>> note();
 
-  String resourceType();
+  Optional<EvidencevariableType> type();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Id> id();
+
+  Optional<Uri> url();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<DateTime> date();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<Narrative> text();
+
+  Optional<Date> approvalDate();
+
+  Optional<String> shortTitle();
+
+  Optional<String> title();
+
+  Optional<Period> effectivePeriod();
 
   static ImmutableEvidenceVariable.ResourceTypeBuildStage builder() {
     return ImmutableEvidenceVariable.builder();

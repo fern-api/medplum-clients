@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AccessPolicy {
+  Optional<Reference> compartment();
+
   Optional<String> resourceType();
 
   Optional<List<AccessPolicy_Resource>> resource();
-
-  Optional<Uri> implicitRules();
 
   Optional<Id> id();
 
   Optional<Code> language();
 
-  Optional<Meta> meta();
+  Optional<Uri> implicitRules();
 
   Optional<String> name();
 
-  Optional<Reference> compartment();
+  Optional<Meta> meta();
 
   static ImmutableAccessPolicy.Builder builder() {
     return ImmutableAccessPolicy.builder();

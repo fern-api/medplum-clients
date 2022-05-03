@@ -22,11 +22,11 @@ public interface MedicationKnowledge_Substitution {
 
   CodeableConcept type();
 
-  Optional<List<Extension>> extension();
-
   Optional<Boolean> allowed();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableMedicationKnowledge_Substitution.TypeBuildStage builder() {
     return ImmutableMedicationKnowledge_Substitution.builder();

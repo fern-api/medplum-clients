@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Type {
-  Optional<List<Extension>> extension();
-
-  Optional<Elementdefinition_typeVersioning> versioning();
-
-  Optional<List<Canonical>> profile();
-
-  Optional<List<Elementdefinition_typeAggregationItem>> aggregation();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Uri> code();
 
   Optional<List<Canonical>> targetProfile();
+
+  Optional<List<Elementdefinition_typeAggregationItem>> aggregation();
+
+  Optional<Elementdefinition_typeVersioning> versioning();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Canonical>> profile();
 
   static ImmutableElementDefinition_Type.Builder builder() {
     return ImmutableElementDefinition_Type.builder();

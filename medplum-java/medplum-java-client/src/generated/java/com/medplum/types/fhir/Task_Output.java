@@ -19,113 +19,113 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task_Output {
-  Optional<DataRequirement> valueDataRequirement();
-
-  Optional<Meta> valueMeta();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<String> valueDate();
-
-  Optional<String> valueDateTime();
-
-  Optional<Double> valueUnsignedInt();
-
-  Optional<String> valueUri();
-
   Optional<Money> valueMoney();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Age> valueAge();
-
-  Optional<UsageContext> valueUsageContext();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<String> valueMarkdown();
-
-  Optional<RelatedArtifact> valueRelatedArtifact();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<Coding> valueCoding();
-
-  Optional<String> valueUuid();
-
-  Optional<String> valueId();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<Count> valueCount();
 
   Optional<Period> valuePeriod();
 
-  Optional<String> valueCanonical();
+  Optional<String> valueUuid();
 
-  Optional<Range> valueRange();
-
-  Optional<String> valueUrl();
-
-  Optional<Distance> valueDistance();
-
-  Optional<Duration> valueDuration();
+  Optional<List<Extension>> extension();
 
   Optional<Annotation> valueAnnotation();
 
-  Optional<String> valueOid();
+  Optional<Distance> valueDistance();
 
-  Optional<Double> valuePositiveInt();
+  Optional<ParameterDefinition> valueParameterDefinition();
 
-  Optional<String> valueTime();
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<String> valueUri();
 
   Optional<String> valueCode();
 
-  Optional<SampledData> valueSampledData();
-
-  Optional<Expression> valueExpression();
-
   CodeableConcept type();
 
-  Optional<Reference> valueReference();
+  Optional<Boolean> valueBoolean();
 
-  Optional<ContactDetail> valueContactDetail();
+  Optional<String> valueUrl();
 
-  Optional<String> valueString();
+  Optional<Address> valueAddress();
+
+  Optional<Count> valueCount();
+
+  Optional<Contributor> valueContributor();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<Age> valueAge();
 
   Optional<Timing> valueTiming();
 
   Optional<Signature> valueSignature();
 
-  Optional<Attachment> valueAttachment();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<ParameterDefinition> valueParameterDefinition();
-
-  Optional<Double> valueInteger();
-
-  Optional<String> valueInstant();
-
-  Optional<HumanName> valueHumanName();
-
-  Optional<Double> valueDecimal();
-
-  Optional<String> valueBase64Binary();
-
-  Optional<ContactPoint> valueContactPoint();
+  Optional<String> valueDate();
 
   Optional<Ratio> valueRatio();
 
-  Optional<Address> valueAddress();
+  Optional<Reference> valueReference();
+
+  Optional<Expression> valueExpression();
+
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<String> valueString();
+
+  Optional<Double> valuePositiveInt();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<String> valueTime();
+
+  Optional<String> valueInstant();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<UsageContext> valueUsageContext();
+
+  Optional<String> valueMarkdown();
+
+  Optional<TriggerDefinition> valueTriggerDefinition();
+
+  Optional<String> valueId();
+
+  Optional<String> valueDateTime();
+
+  Optional<Meta> valueMeta();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<Double> valueDecimal();
+
+  Optional<String> valueOid();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<DataRequirement> valueDataRequirement();
+
+  Optional<String> valueCanonical();
+
+  Optional<Coding> valueCoding();
+
+  Optional<Duration> valueDuration();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<Double> valueInteger();
+
+  Optional<ContactDetail> valueContactDetail();
+
+  Optional<Range> valueRange();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> valueCodeableConcept();
+  Optional<HumanName> valueHumanName();
 
   static ImmutableTask_Output.TypeBuildStage builder() {
     return ImmutableTask_Output.builder();

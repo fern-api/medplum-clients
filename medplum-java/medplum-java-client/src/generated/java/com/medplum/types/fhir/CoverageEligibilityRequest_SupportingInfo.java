@@ -22,13 +22,13 @@ public interface CoverageEligibilityRequest_SupportingInfo {
 
   Optional<Boolean> appliesToAll();
 
-  Reference information();
+  Optional<PositiveInt> sequence();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Reference information();
 
-  Optional<PositiveInt> sequence();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableCoverageEligibilityRequest_SupportingInfo.InformationBuildStage builder() {
     return ImmutableCoverageEligibilityRequest_SupportingInfo.builder();

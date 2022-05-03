@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup_Action {
-  Optional<List<RequestGroup_Condition>> condition();
-
-  Optional<Period> timingPeriod();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Code> selectionBehavior();
-
-  Optional<Duration> timingDuration();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> precheckBehavior();
-
-  Optional<CodeableConcept> type();
-
-  Optional<String> id();
-
-  Optional<Reference> resource();
+  Optional<List<CodeableConcept>> code();
 
   Optional<Code> requiredBehavior();
-
-  Optional<List<RelatedArtifact>> documentation();
-
-  Optional<Code> cardinalityBehavior();
 
   Optional<String> description();
 
   Optional<Range> timingRange();
 
-  Optional<Timing> timingTiming();
+  Optional<List<RelatedArtifact>> documentation();
 
-  Optional<List<RequestGroup_RelatedAction>> relatedAction();
+  Optional<CodeableConcept> type();
 
-  Optional<String> prefix();
+  Optional<Code> selectionBehavior();
+
+  Optional<Code> cardinalityBehavior();
+
+  Optional<List<RequestGroup_Condition>> condition();
+
+  Optional<Period> timingPeriod();
 
   Optional<Code> priority();
 
-  Optional<Code> groupingBehavior();
+  Optional<Code> precheckBehavior();
 
-  Optional<String> textEquivalent();
-
-  Optional<String> timingDateTime();
-
-  Optional<String> title();
+  Optional<Reference> resource();
 
   Optional<List<Reference>> participant();
 
-  Optional<List<RequestGroup_Action>> action();
+  Optional<List<RequestGroup_RelatedAction>> relatedAction();
 
   Optional<Age> timingAge();
 
-  Optional<List<CodeableConcept>> code();
+  Optional<List<RequestGroup_Action>> action();
+
+  Optional<String> id();
+
+  Optional<Code> groupingBehavior();
+
+  Optional<String> timingDateTime();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> prefix();
+
+  Optional<String> textEquivalent();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Timing> timingTiming();
+
+  Optional<Duration> timingDuration();
+
+  Optional<String> title();
 
   static ImmutableRequestGroup_Action.Builder builder() {
     return ImmutableRequestGroup_Action.builder();

@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Action2 {
-  TestScript_Operation operation();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  TestScript_Operation operation();
 
   static ImmutableTestScript_Action2.OperationBuildStage builder() {
     return ImmutableTestScript_Action2.builder();

@@ -18,63 +18,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImplementationGuide {
-  Optional<String> name();
-
-  Optional<Uri> implicitRules();
-
-  Optional<ImplementationguideLicense> license();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Id> id();
-
-  Optional<Markdown> description();
-
-  String resourceType();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<DateTime> date();
-
-  Optional<List<ImplementationGuide_DependsOn>> dependsOn();
-
-  Optional<Narrative> text();
-
-  Optional<String> version();
-
-  Optional<ImplementationguideStatus> status();
-
-  Optional<Uri> url();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> title();
+  Optional<Boolean> experimental();
 
   Optional<Id> packageId();
 
+  Optional<Uri> implicitRules();
+
+  Optional<Narrative> text();
+
   Optional<ImplementationGuide_Manifest> manifest();
 
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<ResourceList>> contained();
+
+  String resourceType();
+
+  Optional<String> version();
+
+  Optional<Markdown> copyright();
+
+  Optional<Markdown> description();
+
   Optional<Meta> meta();
-
-  Optional<Boolean> experimental();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<List<ImplementationGuide_Global>> global();
 
   Optional<String> publisher();
 
+  Optional<ImplementationGuide_Definition> definition();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ContactDetail>> contact();
+
   Optional<List<ImplementationguideFhirversionItem>> fhirVersion();
 
-  Optional<Markdown> copyright();
+  Optional<ImplementationguideLicense> license();
+
+  Optional<String> title();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<ImplementationguideStatus> status();
+
+  Optional<DateTime> date();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Code> language();
 
-  Optional<ImplementationGuide_Definition> definition();
+  Optional<Id> id();
+
+  Optional<String> name();
+
+  Optional<List<ImplementationGuide_DependsOn>> dependsOn();
+
+  Optional<Uri> url();
 
   static ImmutableImplementationGuide.ResourceTypeBuildStage builder() {
     return ImmutableImplementationGuide.builder();

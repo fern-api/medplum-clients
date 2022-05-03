@@ -16,23 +16,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClientApplication {
+  Optional<Code> language();
+
   String resourceType();
-
-  Optional<String> description();
-
-  Optional<Uri> implicitRules();
-
-  String secret();
-
-  Optional<Meta> meta();
 
   Optional<String> name();
 
   Optional<Id> id();
 
-  Optional<Code> language();
-
   Optional<String> redirectUri();
+
+  String secret();
+
+  Optional<Meta> meta();
+
+  Optional<String> description();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableClientApplication.ResourceTypeBuildStage builder() {
     return ImmutableClientApplication.builder();

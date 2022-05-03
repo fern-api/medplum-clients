@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Population {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> physiologicalCondition();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> gender();
 
   Optional<CodeableConcept> ageCodeableConcept();
 
-  Optional<Range> ageRange();
+  Optional<String> id();
 
   Optional<CodeableConcept> race();
 
-  Optional<String> id();
+  Optional<Range> ageRange();
 
-  Optional<CodeableConcept> gender();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutablePopulation.Builder builder() {
     return ImmutablePopulation.builder();

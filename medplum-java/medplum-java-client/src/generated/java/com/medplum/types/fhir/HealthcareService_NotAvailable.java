@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HealthcareService_NotAvailable {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Period> during();
 
   Optional<String> description();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableHealthcareService_NotAvailable.Builder builder() {
     return ImmutableHealthcareService_NotAvailable.builder();

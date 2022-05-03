@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ContactDetail {
-  Optional<String> name();
-
-  Optional<List<ContactPoint>> telecom();
-
   Optional<List<Extension>> extension();
 
+  Optional<String> name();
+
   Optional<String> id();
+
+  Optional<List<ContactPoint>> telecom();
 
   static ImmutableContactDetail.Builder builder() {
     return ImmutableContactDetail.builder();

@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SearchParameter {
-  Optional<List<Code>> target();
-
-  Optional<List<SearchparameterComparatorItem>> comparator();
-
-  Optional<Boolean> multipleOr();
-
-  Optional<Id> id();
-
-  Optional<String> version();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Markdown> purpose();
-
-  Optional<Code> language();
-
-  Optional<Uri> url();
-
-  Optional<DateTime> date();
-
-  Optional<Boolean> experimental();
-
-  Optional<List<SearchparameterModifierItem>> modifier();
-
-  Optional<Boolean> multipleAnd();
-
-  Optional<Markdown> description();
-
-  Optional<List<String>> chain();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Narrative> text();
-
-  Optional<SearchparameterStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Canonical> derivedFrom();
-
-  Optional<String> xpath();
-
   String resourceType();
 
-  Optional<List<SearchParameter_Component>> component();
+  Optional<SearchparameterStatus> status();
 
   Optional<String> name();
 
   Optional<SearchparameterType> type();
 
-  Optional<String> expression();
+  Optional<Markdown> description();
 
-  Optional<Code> code();
+  Optional<List<Code>> target();
 
-  Optional<SearchparameterXpathusage> xpathUsage();
+  Optional<List<String>> chain();
 
-  Optional<List<Code>> base();
+  Optional<Narrative> text();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<Boolean> multipleOr();
 
-  Optional<Meta> meta();
+  Optional<Id> id();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Extension>> extension();
 
   Optional<String> publisher();
 
+  Optional<Boolean> multipleAnd();
+
+  Optional<List<SearchparameterModifierItem>> modifier();
+
+  Optional<List<Code>> base();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> date();
+
+  Optional<SearchparameterXpathusage> xpathUsage();
+
+  Optional<Code> language();
+
+  Optional<Canonical> derivedFrom();
+
+  Optional<List<SearchparameterComparatorItem>> comparator();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<SearchParameter_Component>> component();
+
   Optional<List<ContactDetail>> contact();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> expression();
+
+  Optional<Boolean> experimental();
+
+  Optional<Uri> url();
+
+  Optional<Code> code();
+
+  Optional<String> xpath();
+
+  Optional<String> version();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableSearchParameter.ResourceTypeBuildStage builder() {
     return ImmutableSearchParameter.builder();

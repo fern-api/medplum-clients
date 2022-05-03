@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface MedicinalProductPharmaceutical_WithdrawalPeriod {
   CodeableConcept tissue();
 
-  Quantity value();
+  Optional<List<Extension>> extension();
 
   Optional<String> supportingInformation();
 
-  Optional<String> id();
+  Quantity value();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

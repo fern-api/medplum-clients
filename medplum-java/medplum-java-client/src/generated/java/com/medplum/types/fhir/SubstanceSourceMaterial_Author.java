@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial_Author {
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<CodeableConcept> authorType();
 
   Optional<String> authorDescription();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableSubstanceSourceMaterial_Author.Builder builder() {
     return ImmutableSubstanceSourceMaterial_Author.builder();

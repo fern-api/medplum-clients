@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PractitionerRole_NotAvailable {
-  Optional<String> id();
-
-  Optional<String> description();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Period> during();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
+
+  Optional<String> id();
 
   static ImmutablePractitionerRole_NotAvailable.Builder builder() {
     return ImmutablePractitionerRole_NotAvailable.builder();

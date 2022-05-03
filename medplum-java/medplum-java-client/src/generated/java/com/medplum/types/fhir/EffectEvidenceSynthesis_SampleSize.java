@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EffectEvidenceSynthesis_SampleSize {
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> description();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Integer> numberOfStudies();
 
-  Optional<String> id();
-
   Optional<Integer> numberOfParticipants();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableEffectEvidenceSynthesis_SampleSize.Builder builder() {
     return ImmutableEffectEvidenceSynthesis_SampleSize.builder();

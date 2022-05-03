@@ -18,21 +18,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceRequest_Parameter {
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<Range> valueRange();
 
-  Optional<CodeableConcept> code();
-
   Optional<Boolean> valueBoolean();
 
-  Optional<CodeableConcept> valueCodeableConcept();
+  Optional<CodeableConcept> code();
 
   Optional<Quantity> valueQuantity();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<CodeableConcept> valueCodeableConcept();
 
   static ImmutableDeviceRequest_Parameter.Builder builder() {
     return ImmutableDeviceRequest_Parameter.builder();

@@ -18,83 +18,83 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Immunization {
-  Optional<DateTime> recorded();
-
-  Optional<Reference> location();
-
-  Optional<Boolean> primarySource();
-
-  Optional<List<Immunization_ProtocolApplied>> protocolApplied();
-
-  Optional<List<Immunization_Reaction>> reaction();
-
-  Optional<CodeableConcept> fundingSource();
-
-  Optional<List<CodeableConcept>> subpotentReason();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Immunization_Performer>> performer();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<Immunization_Education>> education();
-
-  Optional<Boolean> isSubpotent();
+  Optional<Code> status();
 
   Optional<List<ResourceList>> contained();
 
-  CodeableConcept vaccineCode();
+  Optional<Boolean> primarySource();
 
-  Optional<Reference> encounter();
+  Optional<CodeableConcept> reportOrigin();
 
-  Optional<CodeableConcept> statusReason();
+  String resourceType();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Date> expirationDate();
-
-  Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> site();
-
-  Optional<String> occurrenceString();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<Code> status();
+  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<Meta> meta();
 
+  CodeableConcept vaccineCode();
+
+  Optional<Boolean> isSubpotent();
+
+  Optional<List<Immunization_Reaction>> reaction();
+
+  Optional<String> occurrenceString();
+
+  Optional<List<CodeableConcept>> subpotentReason();
+
+  Optional<List<Immunization_Performer>> performer();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> occurrenceDateTime();
+
   Optional<Code> language();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Reference patient();
+
+  Optional<List<Immunization_ProtocolApplied>> protocolApplied();
+
   Optional<Narrative> text();
+
+  Optional<String> lotNumber();
+
+  Optional<List<Immunization_Education>> education();
+
+  Optional<Id> id();
+
+  Optional<CodeableConcept> site();
 
   Optional<Quantity> doseQuantity();
 
   Optional<Reference> manufacturer();
 
+  Optional<List<CodeableConcept>> programEligibility();
+
+  Optional<CodeableConcept> fundingSource();
+
+  Optional<List<Reference>> reasonReference();
+
   Optional<List<Annotation>> note();
 
   Optional<List<Identifier>> identifier();
 
-  String resourceType();
+  Optional<Reference> location();
 
   Optional<CodeableConcept> route();
 
-  Optional<String> lotNumber();
+  Optional<Reference> encounter();
 
-  Reference patient();
+  Optional<CodeableConcept> statusReason();
 
-  Optional<CodeableConcept> reportOrigin();
+  Optional<DateTime> recorded();
 
-  Optional<List<CodeableConcept>> programEligibility();
+  Optional<Date> expirationDate();
 
-  Optional<Id> id();
+  Optional<List<Extension>> extension();
 
-  Optional<List<Reference>> reasonReference();
-
-  static ImmutableImmunization.VaccineCodeBuildStage builder() {
+  static ImmutableImmunization.ResourceTypeBuildStage builder() {
     return ImmutableImmunization.builder();
   }
 }

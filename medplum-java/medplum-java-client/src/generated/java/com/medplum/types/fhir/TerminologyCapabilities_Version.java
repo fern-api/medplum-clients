@@ -18,23 +18,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_Version {
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> isDefault();
-
-  Optional<List<TerminologyCapabilities_Filter>> filter();
-
-  Optional<String> code();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
+
+  Optional<Boolean> compositional();
 
   Optional<List<Code>> language();
 
   Optional<List<Code>> property();
 
-  Optional<Boolean> compositional();
+  Optional<List<TerminologyCapabilities_Filter>> filter();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Boolean> isDefault();
+
+  Optional<String> code();
 
   static ImmutableTerminologyCapabilities_Version.Builder builder() {
     return ImmutableTerminologyCapabilities_Version.builder();

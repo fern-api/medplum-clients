@@ -18,49 +18,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CatalogEntry {
-  Optional<Boolean> orderable();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> classification();
-
-  Optional<List<CodeableConcept>> additionalCharacteristic();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Identifier>> additionalIdentifier();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Narrative> text();
+  Optional<Code> language();
 
   Optional<Uri> implicitRules();
 
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> additionalClassification();
-
-  Optional<CodeableConcept> type();
-
-  Optional<DateTime> lastUpdated();
-
-  Optional<Period> validityPeriod();
-
-  Optional<CatalogentryStatus> status();
+  Optional<List<Identifier>> identifier();
 
   Reference referencedItem();
 
-  Optional<DateTime> validTo();
-
-  Optional<Meta> meta();
+  Optional<DateTime> lastUpdated();
 
   Optional<List<CatalogEntry_RelatedEntry>> relatedEntry();
 
+  Optional<Id> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Period> validityPeriod();
+
+  Optional<List<CodeableConcept>> additionalClassification();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Narrative> text();
+
+  Optional<Boolean> orderable();
+
   String resourceType();
 
-  Optional<Id> id();
+  Optional<DateTime> validTo();
+
+  Optional<List<Identifier>> additionalIdentifier();
+
+  Optional<CodeableConcept> type();
+
+  Optional<CatalogentryStatus> status();
+
+  Optional<List<CodeableConcept>> additionalCharacteristic();
+
+  Optional<List<CodeableConcept>> classification();
 
   static ImmutableCatalogEntry.ReferencedItemBuildStage builder() {
     return ImmutableCatalogEntry.builder();

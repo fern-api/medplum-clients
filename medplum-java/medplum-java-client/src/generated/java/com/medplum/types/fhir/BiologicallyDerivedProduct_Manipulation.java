@@ -21,13 +21,13 @@ public interface BiologicallyDerivedProduct_Manipulation {
 
   Optional<List<Extension>> extension();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> description();
 
   Optional<String> id();
 
   Optional<Period> timePeriod();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableBiologicallyDerivedProduct_Manipulation.Builder builder() {
     return ImmutableBiologicallyDerivedProduct_Manipulation.builder();

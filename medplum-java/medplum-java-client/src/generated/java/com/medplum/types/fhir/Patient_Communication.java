@@ -18,15 +18,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Patient_Communication {
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   CodeableConcept language();
 
-  Optional<List<Extension>> extension();
-
   Optional<Boolean> preferred();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutablePatient_Communication.LanguageBuildStage builder() {
     return ImmutablePatient_Communication.builder();

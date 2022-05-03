@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Procedure_FocalDevice {
   Reference manipulated();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> action();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   static ImmutableProcedure_FocalDevice.ManipulatedBuildStage builder() {
     return ImmutableProcedure_FocalDevice.builder();

@@ -17,89 +17,89 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Procedure {
-  Optional<Code> status();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Procedure_FocalDevice>> focalDevice();
-
-  Optional<List<Procedure_Performer>> performer();
-
-  Optional<List<CodeableConcept>> complication();
-
-  Optional<String> performedString();
-
-  Optional<List<CodeableConcept>> followUp();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<Reference> recorder();
+  Optional<CodeableConcept> category();
 
   Optional<List<Reference>> complicationDetail();
 
-  Optional<List<Reference>> usedReference();
+  String resourceType();
 
-  Optional<List<Reference>> basedOn();
-
-  Optional<List<CodeableConcept>> usedCode();
-
-  Optional<List<Reference>> partOf();
-
-  Reference subject();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<Reference>> reasonReference();
+  Optional<List<Procedure_FocalDevice>> focalDevice();
 
   Optional<Age> performedAge();
 
-  Optional<CodeableConcept> outcome();
+  Optional<List<Reference>> report();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Reference>> basedOn();
 
-  Optional<CodeableConcept> code();
+  Optional<String> performedString();
+
+  Optional<Uri> implicitRules();
 
   Optional<Meta> meta();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Narrative> text();
 
-  Optional<String> performedDateTime();
+  Optional<Reference> recorder();
 
-  Optional<List<CodeableConcept>> bodySite();
+  Optional<List<Uri>> instantiatesUri();
 
-  Optional<CodeableConcept> category();
+  Optional<Reference> location();
 
-  String resourceType();
+  Optional<List<Reference>> reasonReference();
 
-  Optional<Range> performedRange();
+  Optional<CodeableConcept> outcome();
 
   Optional<Id> id();
 
-  Optional<Narrative> text();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Period> performedPeriod();
-
-  Optional<CodeableConcept> statusReason();
-
   Optional<Reference> encounter();
 
-  Optional<List<Reference>> report();
+  Reference subject();
+
+  Optional<List<CodeableConcept>> bodySite();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<Reference> location();
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<CodeableConcept>> followUp();
+
+  Optional<List<Procedure_Performer>> performer();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> usedReference();
+
+  Optional<String> performedDateTime();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<List<CodeableConcept>> usedCode();
+
+  Optional<CodeableConcept> code();
+
+  Optional<Code> status();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<CodeableConcept>> complication();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> statusReason();
+
+  Optional<Period> performedPeriod();
+
+  Optional<Range> performedRange();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Reference> asserter();
 
-  Optional<List<Uri>> instantiatesUri();
-
-  static ImmutableProcedure.SubjectBuildStage builder() {
+  static ImmutableProcedure.ResourceTypeBuildStage builder() {
     return ImmutableProcedure.builder();
   }
 }

@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CatalogEntry_RelatedEntry {
-  Optional<Catalogentry_relatedentryRelationtype> relationtype();
-
-  Optional<List<Extension>> extension();
+  Reference item();
 
   Optional<List<Extension>> modifierExtension();
 
-  Reference item();
+  Optional<Catalogentry_relatedentryRelationtype> relationtype();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 

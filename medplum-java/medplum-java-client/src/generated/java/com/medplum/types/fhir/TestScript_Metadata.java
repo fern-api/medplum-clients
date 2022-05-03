@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Metadata {
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
-  List<TestScript_Capability> capability();
+  Optional<List<Extension>> extension();
 
   Optional<List<TestScript_Link>> link();
 
-  Optional<String> id();
+  List<TestScript_Capability> capability();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   static ImmutableTestScript_Metadata.Builder builder() {
     return ImmutableTestScript_Metadata.builder();

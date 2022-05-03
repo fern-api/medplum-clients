@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface Composition_Event {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<CodeableConcept>> code();
-
-  Optional<Period> period();
-
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
+  Optional<List<CodeableConcept>> code();
+
   Optional<List<Reference>> detail();
+
+  Optional<Period> period();
 
   static ImmutableComposition_Event.Builder builder() {
     return ImmutableComposition_Event.builder();
