@@ -14,7 +14,7 @@ yarn # install dependencies
 yarn compile # compile TypeScript into JavaScript
 ```
 
-Checkout the [sample app](./medplum-typescript/packages/medplum-sample-application/src/index.ts) and write your own code! You can run it with:
+Check out the [sample app](./medplum-typescript/packages/medplum-sample-application/src/index.ts) and write your own code! You can run it with:
 
 ```bash
 yarn workspace medplum-sample-application run compile && node packages/medplum-sample-application/lib/index.js
@@ -33,7 +33,11 @@ cd medplum-java
 
 Build the project `(Build > Build Project)` to generate [Immutables](https://immutables.github.io/) classes. This may take a while because the API spec is large (~12k lines).
 
+<<<<<<< HEAD
 Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code!
+=======
+Check out the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
+>>>>>>> ecf273ebf66b52ecd400da26025b0db1df311ce5
 
 Before you run the sample app, make sure to add your access key as an environment variable `MEDPLUM_ACCESS_KEY` .
 
@@ -49,7 +53,7 @@ Before you run the sample app, make sure to add your access key as an environmen
 
 [ResourceList.java](./medplum-java/medplum-java-client/src/generated/java/com/medplum/types/fhir/ResourceList.java) is a union type. Union types can be visited by calling the `accept` method and passing in a visitor so that a client can be sure they handle all possible states.
 
-[SampleApplication](./medplum-java/medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
+[SampleApplication/Main.java](./medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
 
 ## Known Limitations
 
