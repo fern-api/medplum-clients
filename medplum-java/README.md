@@ -6,6 +6,14 @@ Run `./gradlew idea && open *.ipr` to open in Intellij.
 
 The generated source code lives inside [here](./medplum-java-client/src/generated/java/com/medplum/). The generated source code uses [java immutables](https://immutables.github.io/) so it is necessary to build in Intellij so that the immutables annotation processor can run. **This can take a minute - because of how extensive FHIR is, this is generating a million lines of code!**
 
+Make sure to add your access key as an environment variable ```MEDPLUM_ACCESS_KEY```. You can do this by navigating to [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java). 
+
+Find the play button and edit configuration
+![img](./img/editConfiguration.png)
+
+Update the environment variables section 
+![img](./img/configuration.png)
+
 ## Important Files
 
 [FhirService.java](./medplum-java-client/src/generated/java/com/medplum/services/fhir/FhirService.java) is the generated REST service that has endpoints like `readResource`, `updateResource`, etc.
