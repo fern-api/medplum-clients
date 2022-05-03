@@ -32,7 +32,7 @@ cd medplum-java
 
 Build the project `(Build > Build Project)` to generate [Immutables](https://immutables.github.io/) classes. This may take a while because the API spec is large (~12k lines).
 
-Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
+Check out the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
 
 Before you run the sample app, make sure to add your access key as an environment variable ```MEDPLUM_ACCESS_KEY``` .
 
