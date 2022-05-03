@@ -1,0 +1,1 @@
+{"version":3,"file":"CapabilitystatementFhirversion.js","sourceRoot":"","sources":["../../../src/model/fhir/CapabilitystatementFhirversion.ts"],"names":[],"mappings":";;;AAEa,QAAA,8BAA8B,GAAG;IAC1C,MAAM,EAAE,CACJ,MAAsC,EACtC,OAAwD,EAClD,EAAE;QACR,OAAO,OAAO,CAAC,QAAQ,EAAE,CAAC;IAC9B,CAAC;CACJ,CAAC"}
