@@ -23,3 +23,6 @@ lerna-debug.log*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# fern
+api/generated
