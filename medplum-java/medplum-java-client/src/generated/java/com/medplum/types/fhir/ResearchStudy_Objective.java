@@ -21,11 +21,11 @@ public interface ResearchStudy_Objective {
 
   Optional<CodeableConcept> type();
 
-  Optional<String> name();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
+  Optional<String> name();
 
   static ImmutableResearchStudy_Objective.Builder builder() {
     return ImmutableResearchStudy_Objective.builder();

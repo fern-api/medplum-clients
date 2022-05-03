@@ -17,45 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AuditEvent {
-  AuditEvent_Source source();
+  Optional<Narrative> text();
 
   Optional<List<CodeableConcept>> purposeOfEvent();
 
-  String resourceType();
-
-  Optional<Period> period();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Coding type();
-
-  List<AuditEvent_Agent> agent();
-
-  Optional<Code> language();
-
   Optional<String> outcomeDesc();
-
-  Optional<List<AuditEvent_Entity>> entity();
-
-  Optional<Meta> meta();
-
-  Optional<Instant> recorded();
-
-  Optional<AuditeventOutcome> outcome();
-
-  Optional<List<Coding>> subtype();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<AuditEvent_Entity>> entity();
+
+  AuditEvent_Source source();
+
+  Optional<List<Coding>> subtype();
+
+  Optional<Period> period();
+
+  List<AuditEvent_Agent> agent();
+
+  Optional<Instant> recorded();
+
+  String resourceType();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> extension();
+
+  Optional<AuditeventOutcome> outcome();
+
+  Optional<Id> id();
+
+  Optional<Code> language();
+
+  Coding type();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<AuditeventAction> action();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableAuditEvent.SourceBuildStage builder() {
     return ImmutableAuditEvent.builder();

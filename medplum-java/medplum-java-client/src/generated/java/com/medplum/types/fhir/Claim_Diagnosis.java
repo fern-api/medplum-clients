@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Diagnosis {
-  Optional<Reference> diagnosisReference();
-
-  Optional<CodeableConcept> onAdmission();
-
-  Optional<List<CodeableConcept>> type();
+  Optional<String> id();
 
   Optional<CodeableConcept> diagnosisCodeableConcept();
 
-  Optional<CodeableConcept> packageCode();
-
-  Optional<String> id();
+  Optional<List<CodeableConcept>> type();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> diagnosisReference();
 
   Optional<PositiveInt> sequence();
+
+  Optional<CodeableConcept> packageCode();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> onAdmission();
 
   static ImmutableClaim_Diagnosis.Builder builder() {
     return ImmutableClaim_Diagnosis.builder();

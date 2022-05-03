@@ -21,11 +21,11 @@ public interface Invoice_Participant {
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
   Optional<CodeableConcept> role();
 
   Reference actor();
+
+  Optional<String> id();
 
   static ImmutableInvoice_Participant.ActorBuildStage builder() {
     return ImmutableInvoice_Participant.builder();

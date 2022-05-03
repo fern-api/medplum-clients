@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationStatement {
-  Optional<List<Identifier>> identifier();
+  String resourceType();
 
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> category();
-
-  Optional<Reference> context();
-
-  Reference subject();
-
-  Optional<DateTime> dateAsserted();
-
-  Optional<List<Reference>> derivedFrom();
-
-  Optional<CodeableConcept> medicationCodeableConcept();
-
-  Optional<List<Reference>> partOf();
+  Optional<Uri> implicitRules();
 
   Optional<List<CodeableConcept>> reasonCode();
 
   Optional<List<Dosage>> dosage();
 
-  Optional<List<Annotation>> note();
+  Optional<Meta> meta();
 
-  Optional<Narrative> text();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<ResourceList>> contained();
 
+  Reference subject();
+
+  Optional<CodeableConcept> medicationCodeableConcept();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> context();
+
   Optional<Code> status();
 
-  Optional<String> effectiveDateTime();
-
-  Optional<Period> effectivePeriod();
+  Optional<CodeableConcept> category();
 
   Optional<Id> id();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Annotation>> note();
 
-  Optional<List<Reference>> basedOn();
+  Optional<List<Extension>> extension();
 
-  Optional<Reference> medicationReference();
+  Optional<List<Reference>> derivedFrom();
 
-  Optional<Meta> meta();
+  Optional<String> effectiveDateTime();
 
   Optional<List<Reference>> reasonReference();
 
   Optional<Code> language();
 
-  Optional<List<CodeableConcept>> statusReason();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Reference> informationSource();
 
-  String resourceType();
+  Optional<List<Reference>> partOf();
 
-  static ImmutableMedicationStatement.SubjectBuildStage builder() {
+  Optional<Period> effectivePeriod();
+
+  Optional<DateTime> dateAsserted();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<CodeableConcept>> statusReason();
+
+  Optional<Reference> medicationReference();
+
+  static ImmutableMedicationStatement.ResourceTypeBuildStage builder() {
     return ImmutableMedicationStatement.builder();
   }
 }

@@ -21,13 +21,13 @@ public interface Invoice_PriceComponent {
 
   Optional<String> id();
 
-  Optional<Money> amount();
-
   Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> code();
 
   Optional<Decimal> factor();
 
-  Optional<CodeableConcept> code();
+  Optional<Money> amount();
 
   Optional<Invoice_pricecomponentType> type();
 

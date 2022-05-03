@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup {
-  Optional<Reference> encounter();
+  Optional<Identifier> groupIdentifier();
 
-  Optional<Reference> author();
+  Optional<List<Annotation>> note();
+
+  Optional<List<Reference>> replaces();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<Code> language();
+
+  Optional<Reference> subject();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<CodeableConcept>> reasonCode();
 
   Optional<Meta> meta();
 
   Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<Code> status();
+  Optional<Code> intent();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Reference> encounter();
 
-  Optional<List<Reference>> basedOn();
-
-  Optional<Reference> subject();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<RequestGroup_Action>> action();
-
-  Optional<CodeableConcept> code();
-
-  Optional<List<Reference>> replaces();
-
-  Optional<List<Annotation>> note();
-
-  String resourceType();
-
-  Optional<Code> priority();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Identifier>> identifier();
+  Optional<Reference> author();
 
   Optional<Id> id();
 
-  Optional<List<Uri>> instantiatesUri();
+  Optional<List<Identifier>> identifier();
 
-  Optional<Code> intent();
+  String resourceType();
 
-  Optional<Code> language();
+  Optional<List<ResourceList>> contained();
 
-  Optional<Identifier> groupIdentifier();
+  Optional<DateTime> authoredOn();
+
+  Optional<List<RequestGroup_Action>> action();
+
+  Optional<Code> priority();
+
+  Optional<CodeableConcept> code();
+
+  Optional<List<Extension>> extension();
 
   Optional<Narrative> text();
-
-  Optional<List<CodeableConcept>> reasonCode();
 
   static ImmutableRequestGroup.ResourceTypeBuildStage builder() {
     return ImmutableRequestGroup.builder();

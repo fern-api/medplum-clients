@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EffectEvidenceSynthesis_CertaintySubcomponent {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<CodeableConcept> type();
 
   Optional<List<CodeableConcept>> rating();
 
   Optional<List<Annotation>> note();
 
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   static ImmutableEffectEvidenceSynthesis_CertaintySubcomponent.Builder builder() {
     return ImmutableEffectEvidenceSynthesis_CertaintySubcomponent.builder();

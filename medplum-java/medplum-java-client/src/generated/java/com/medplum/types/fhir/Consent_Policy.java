@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent_Policy {
-  Optional<List<Extension>> extension();
+  Optional<Uri> authority();
+
+  Optional<Uri> uri();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Uri> authority();
-
   Optional<String> id();
 
-  Optional<Uri> uri();
+  Optional<List<Extension>> extension();
 
   static ImmutableConsent_Policy.Builder builder() {
     return ImmutableConsent_Policy.builder();

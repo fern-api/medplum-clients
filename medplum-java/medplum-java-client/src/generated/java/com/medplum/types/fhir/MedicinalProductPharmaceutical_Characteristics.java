@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPharmaceutical_Characteristics {
-  Optional<String> id();
-
-  Optional<CodeableConcept> status();
-
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
   CodeableConcept code();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> status();
 
   static ImmutableMedicinalProductPharmaceutical_Characteristics.CodeBuildStage builder() {
     return ImmutableMedicinalProductPharmaceutical_Characteristics.builder();

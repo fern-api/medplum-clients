@@ -18,69 +18,69 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CommunicationRequest {
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<Id> id();
-
-  Optional<Reference> sender();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<Reference> subject();
-
-  Optional<Narrative> text();
-
-  Optional<Boolean> doNotPerform();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Reference> encounter();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Reference>> recipient();
-
-  String resourceType();
-
-  Optional<List<Reference>> replaces();
-
-  Optional<Code> status();
-
-  Optional<List<CommunicationRequest_Payload>> payload();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Meta> meta();
-
   Optional<Code> priority();
-
-  Optional<List<ResourceList>> contained();
 
   Optional<Identifier> groupIdentifier();
 
-  Optional<List<CodeableConcept>> medium();
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Reference>> replaces();
+
+  Optional<Reference> encounter();
+
+  Optional<Reference> sender();
+
+  Optional<List<CommunicationRequest_Payload>> payload();
+
+  Optional<CodeableConcept> statusReason();
+
+  Optional<Code> status();
+
+  Optional<List<Reference>> recipient();
 
   Optional<Period> occurrencePeriod();
 
   Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<CodeableConcept> statusReason();
+  Optional<String> occurrenceDateTime();
 
-  Optional<List<Reference>> about();
+  Optional<Reference> subject();
+
+  Optional<Reference> requester();
+
+  Optional<Id> id();
+
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  String resourceType();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> requester();
+  Optional<DateTime> authoredOn();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<List<Reference>> about();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<CodeableConcept>> medium();
+
+  Optional<List<Annotation>> note();
 
   static ImmutableCommunicationRequest.ResourceTypeBuildStage builder() {
     return ImmutableCommunicationRequest.builder();

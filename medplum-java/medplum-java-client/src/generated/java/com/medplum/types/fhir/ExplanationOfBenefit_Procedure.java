@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Procedure {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
 
-  Optional<DateTime> date();
-
-  Optional<List<CodeableConcept>> type();
-
-  Optional<CodeableConcept> procedureCodeableConcept();
+  Optional<PositiveInt> sequence();
 
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> procedureCodeableConcept();
+
   Optional<List<Reference>> udi();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<CodeableConcept>> type();
+
+  Optional<DateTime> date();
 
   Optional<Reference> procedureReference();
-
-  Optional<PositiveInt> sequence();
 
   static ImmutableExplanationOfBenefit_Procedure.Builder builder() {
     return ImmutableExplanationOfBenefit_Procedure.builder();

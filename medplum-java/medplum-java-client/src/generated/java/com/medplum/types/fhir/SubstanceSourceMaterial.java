@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<String>> geographicalLocation();
-
-  Optional<SubstanceSourceMaterial_Organism> organism();
-
-  Optional<Identifier> organismId();
-
-  Optional<List<Identifier>> parentSubstanceId();
-
-  Optional<CodeableConcept> sourceMaterialState();
-
-  String resourceType();
-
-  Optional<CodeableConcept> sourceMaterialType();
-
-  Optional<CodeableConcept> developmentStage();
-
-  Optional<List<CodeableConcept>> countryOfOrigin();
-
   Optional<Meta> meta();
-
-  Optional<Id> id();
-
-  Optional<List<SubstanceSourceMaterial_FractionDescription>> fractionDescription();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Narrative> text();
-
-  Optional<CodeableConcept> sourceMaterialClass();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<SubstanceSourceMaterial_PartDescription>> partDescription();
 
   Optional<List<String>> parentSubstanceName();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Identifier>> parentSubstanceId();
+
+  Optional<List<SubstanceSourceMaterial_PartDescription>> partDescription();
+
+  Optional<Narrative> text();
+
+  Optional<List<SubstanceSourceMaterial_FractionDescription>> fractionDescription();
+
+  Optional<CodeableConcept> sourceMaterialType();
+
+  Optional<List<CodeableConcept>> countryOfOrigin();
+
+  Optional<List<String>> geographicalLocation();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> developmentStage();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<SubstanceSourceMaterial_Organism> organism();
+
   Optional<Code> language();
 
+  Optional<CodeableConcept> sourceMaterialClass();
+
+  Optional<Identifier> organismId();
+
   Optional<String> organismName();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<CodeableConcept> sourceMaterialState();
+
+  Optional<Id> id();
 
   static ImmutableSubstanceSourceMaterial.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceSourceMaterial.builder();

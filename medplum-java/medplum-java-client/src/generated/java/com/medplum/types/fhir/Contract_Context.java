@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Context {
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<Reference> reference();
+  Optional<String> id();
+
+  Optional<String> text();
 
   Optional<List<CodeableConcept>> code();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> text();
+  Optional<Reference> reference();
 
   static ImmutableContract_Context.Builder builder() {
     return ImmutableContract_Context.builder();

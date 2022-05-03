@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence {
-  Optional<Reference> patient();
-
-  Optional<String> observedSeq();
-
-  Optional<Quantity> quantity();
-
-  Optional<List<Reference>> pointer();
-
-  Optional<Meta> meta();
-
-  Optional<MolecularSequence_ReferenceSeq> referenceSeq();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<Reference> performer();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<MolecularSequence_Repository>> repository();
-
-  Optional<Integer> coordinateSystem();
-
-  Optional<List<MolecularSequence_Variant>> variant();
-
-  Optional<Reference> device();
-
-  Optional<Integer> readCoverage();
-
-  Optional<List<MolecularSequence_Quality>> quality();
-
   Optional<List<MolecularSequence_StructureVariant>> structureVariant();
-
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
 
   Optional<Narrative> text();
 
-  Optional<Reference> specimen();
+  Optional<MolecularSequence_ReferenceSeq> referenceSeq();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Quantity> quantity();
+
+  Optional<Reference> performer();
+
+  String resourceType();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Reference> device();
+
   Optional<MolecularsequenceType> type();
 
+  Optional<List<MolecularSequence_Variant>> variant();
+
+  Optional<Integer> readCoverage();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> patient();
+
+  Optional<Integer> coordinateSystem();
+
+  Optional<String> observedSeq();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> pointer();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  Optional<List<MolecularSequence_Quality>> quality();
+
+  Optional<List<MolecularSequence_Repository>> repository();
+
   Optional<Id> id();
+
+  Optional<Reference> specimen();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableMolecularSequence.ResourceTypeBuildStage builder() {
     return ImmutableMolecularSequence.builder();

@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceReferenceInformation_Target {
-  Optional<CodeableConcept> type();
-
   Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> amountType();
 
   Optional<Identifier> target();
 
-  Optional<CodeableConcept> organism();
+  Optional<String> id();
 
   Optional<Range> amountRange();
 
-  Optional<String> amountString();
-
-  Optional<Quantity> amountQuantity();
+  Optional<CodeableConcept> type();
 
   Optional<CodeableConcept> interaction();
 
-  Optional<String> id();
+  Optional<Quantity> amountQuantity();
 
-  Optional<CodeableConcept> amountType();
+  Optional<String> amountString();
+
+  Optional<CodeableConcept> organism();
 
   Optional<List<Extension>> modifierExtension();
 

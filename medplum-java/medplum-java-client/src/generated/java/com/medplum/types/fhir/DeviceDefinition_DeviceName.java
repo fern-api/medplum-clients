@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_DeviceName {
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
+
+  Optional<String> name();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Devicedefinition_devicenameType> type();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> name();
 
   static ImmutableDeviceDefinition_DeviceName.Builder builder() {
     return ImmutableDeviceDefinition_DeviceName.builder();

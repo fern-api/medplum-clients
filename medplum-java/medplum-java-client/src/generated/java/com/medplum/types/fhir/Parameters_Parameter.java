@@ -19,117 +19,117 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Parameters_Parameter {
-  Optional<Dosage> valueDosage();
-
-  Optional<String> id();
-
-  Optional<Coding> valueCoding();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<Double> valueDecimal();
-
-  Optional<Reference> valueReference();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<Distance> valueDistance();
-
-  Optional<UsageContext> valueUsageContext();
-
   Optional<Signature> valueSignature();
-
-  Optional<String> valueOid();
-
-  Optional<HumanName> valueHumanName();
-
-  Optional<String> valueUrl();
-
-  Optional<Address> valueAddress();
-
-  Optional<String> valueDate();
-
-  Optional<Expression> valueExpression();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<Double> valuePositiveInt();
-
-  Optional<String> valueUuid();
-
-  Optional<Annotation> valueAnnotation();
-
-  Optional<CodeableConcept> valueCodeableConcept();
-
-  Optional<RelatedArtifact> valueRelatedArtifact();
-
-  Optional<Double> valueInteger();
-
-  Optional<Range> valueRange();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<ResourceList> resource();
-
-  Optional<Money> valueMoney();
-
-  Optional<Age> valueAge();
-
-  Optional<String> valueDateTime();
-
-  Optional<String> valueString();
 
   Optional<String> valueCode();
 
-  Optional<List<Parameters_Parameter>> part();
+  Optional<String> valueDate();
 
-  Optional<String> valueUri();
+  Optional<String> valueUuid();
 
-  Optional<String> valueId();
-
-  Optional<String> valueInstant();
-
-  Optional<ContactPoint> valueContactPoint();
-
-  Optional<String> valueCanonical();
-
-  Optional<Double> valueUnsignedInt();
-
-  Optional<Count> valueCount();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Meta> valueMeta();
-
-  Optional<Quantity> valueQuantity();
+  Optional<Reference> valueReference();
 
   Optional<Period> valuePeriod();
 
-  Optional<String> valueTime();
-
-  Optional<Ratio> valueRatio();
+  Optional<TriggerDefinition> valueTriggerDefinition();
 
   Optional<String> valueBase64Binary();
 
+  Optional<Meta> valueMeta();
+
+  Optional<String> id();
+
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<HumanName> valueHumanName();
+
   Optional<ContactDetail> valueContactDetail();
 
-  Optional<String> name();
+  Optional<String> valueUri();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<Money> valueMoney();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<Range> valueRange();
+
+  Optional<List<Parameters_Parameter>> part();
+
+  Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<String> valueDateTime();
+
+  Optional<Double> valuePositiveInt();
 
   Optional<ParameterDefinition> valueParameterDefinition();
 
+  Optional<Timing> valueTiming();
+
+  Optional<Annotation> valueAnnotation();
+
+  Optional<Double> valueDecimal();
+
   Optional<Contributor> valueContributor();
+
+  Optional<UsageContext> valueUsageContext();
+
+  Optional<Distance> valueDistance();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Double> valueInteger();
+
+  Optional<Expression> valueExpression();
+
+  Optional<String> valueId();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<String> valueOid();
+
+  Optional<String> name();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<Count> valueCount();
+
+  Optional<String> valueCanonical();
+
+  Optional<String> valueInstant();
+
+  Optional<Duration> valueDuration();
+
+  Optional<ResourceList> resource();
+
+  Optional<Coding> valueCoding();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<DataRequirement> valueDataRequirement();
 
+  Optional<Address> valueAddress();
+
   Optional<String> valueMarkdown();
 
-  Optional<Duration> valueDuration();
+  Optional<Quantity> valueQuantity();
 
-  Optional<Timing> valueTiming();
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<Age> valueAge();
+
+  Optional<String> valueUrl();
+
+  Optional<String> valueString();
+
+  Optional<String> valueTime();
 
   static ImmutableParameters_Parameter.Builder builder() {
     return ImmutableParameters_Parameter.builder();

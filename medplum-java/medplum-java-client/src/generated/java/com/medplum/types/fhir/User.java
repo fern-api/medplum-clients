@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface User {
   Optional<String> resourceType();
 
-  Optional<Uri> implicitRules();
-
-  Optional<Meta> meta();
-
-  String passwordHash();
-
   Optional<Boolean> admin();
 
   Optional<Id> id();
 
-  Optional<Code> language();
+  Optional<Uri> implicitRules();
+
+  Optional<Meta> meta();
 
   String email();
 
-  static ImmutableUser.PasswordHashBuildStage builder() {
+  String passwordHash();
+
+  Optional<Code> language();
+
+  static ImmutableUser.EmailBuildStage builder() {
     return ImmutableUser.builder();
   }
 }

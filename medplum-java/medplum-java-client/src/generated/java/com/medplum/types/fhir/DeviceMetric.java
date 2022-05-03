@@ -17,43 +17,43 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceMetric {
-  Optional<List<Extension>> extension();
+  Optional<DevicemetricColor> color();
 
-  Optional<DevicemetricOperationalstatus> operationalStatus();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<DevicemetricCategory> category();
-
-  Optional<CodeableConcept> unit();
-
-  Optional<Id> id();
-
-  Optional<Reference> parent();
-
-  Optional<Timing> measurementPeriod();
+  Optional<Uri> implicitRules();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Meta> meta();
+
   CodeableConcept type();
 
-  Optional<Meta> meta();
+  Optional<DevicemetricCategory> category();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Reference> source();
 
   Optional<Code> language();
 
-  Optional<Narrative> text();
+  Optional<List<Identifier>> identifier();
 
-  Optional<DevicemetricColor> color();
+  Optional<Id> id();
 
-  String resourceType();
+  Optional<Timing> measurementPeriod();
 
   Optional<List<DeviceMetric_Calibration>> calibration();
 
-  Optional<Uri> implicitRules();
+  Optional<Narrative> text();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Reference> parent();
+
+  Optional<CodeableConcept> unit();
+
+  String resourceType();
+
+  Optional<DevicemetricOperationalstatus> operationalStatus();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableDeviceMetric.TypeBuildStage builder() {
     return ImmutableDeviceMetric.builder();

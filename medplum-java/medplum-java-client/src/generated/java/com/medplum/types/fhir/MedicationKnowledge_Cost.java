@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface MedicationKnowledge_Cost {
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
-  CodeableConcept type();
-
   Optional<String> source();
+
+  Optional<String> id();
+
+  CodeableConcept type();
 
   Money cost();
 

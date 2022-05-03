@@ -18,101 +18,101 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ServiceRequest {
-  Optional<Timing> occurrenceTiming();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<List<Reference>> locationReference();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<Reference> requester();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<CodeableConcept>> locationCode();
-
-  Optional<List<Reference>> specimen();
-
-  Optional<Range> quantityRange();
-
   Optional<List<CodeableConcept>> orderDetail();
 
-  Optional<List<Reference>> performer();
+  Optional<CodeableConcept> asNeededCodeableConcept();
 
-  Optional<Narrative> text();
+  Optional<Uri> implicitRules();
 
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Ratio> quantityRatio();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> performerType();
-
-  Optional<List<Reference>> relevantHistory();
-
-  Optional<Boolean> doNotPerform();
+  Optional<Timing> occurrenceTiming();
 
   Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<Boolean> asNeededBoolean();
+  Optional<Period> occurrencePeriod();
 
-  String resourceType();
+  Optional<List<ResourceList>> contained();
 
-  Optional<Id> id();
+  Optional<List<Reference>> replaces();
+
+  Optional<Reference> requester();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<CodeableConcept> performerType();
+
+  Optional<List<Reference>> performer();
 
   Optional<String> patientInstruction();
 
-  Optional<Meta> meta();
+  Optional<List<Reference>> locationReference();
 
-  Optional<Period> occurrencePeriod();
+  Optional<Quantity> quantityQuantity();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Narrative> text();
+
+  Optional<CodeableConcept> code();
 
   Reference subject();
 
   Optional<Reference> encounter();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Reference>> replaces();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<List<Reference>> supportingInfo();
-
-  Optional<Code> intent();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Quantity> quantityQuantity();
-
-  Optional<Code> priority();
+  Optional<Meta> meta();
 
   Optional<Code> status();
 
-  Optional<CodeableConcept> asNeededCodeableConcept();
+  Optional<Code> intent();
+
+  Optional<List<CodeableConcept>> locationCode();
+
+  Optional<Ratio> quantityRatio();
 
   Optional<Code> language();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Reference>> supportingInfo();
 
   Optional<List<Reference>> insurance();
 
-  Optional<List<CodeableConcept>> bodySite();
+  Optional<List<Reference>> relevantHistory();
 
-  Optional<List<Uri>> instantiatesUri();
+  Optional<Id> id();
+
+  Optional<List<Annotation>> note();
+
+  String resourceType();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<List<Reference>> specimen();
+
   Optional<Identifier> requisition();
 
-  static ImmutableServiceRequest.ResourceTypeBuildStage builder() {
+  Optional<List<Identifier>> identifier();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<Boolean> asNeededBoolean();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Range> quantityRange();
+
+  Optional<Code> priority();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<List<CodeableConcept>> bodySite();
+
+  Optional<List<Extension>> extension();
+
+  static ImmutableServiceRequest.SubjectBuildStage builder() {
     return ImmutableServiceRequest.builder();
   }
 }

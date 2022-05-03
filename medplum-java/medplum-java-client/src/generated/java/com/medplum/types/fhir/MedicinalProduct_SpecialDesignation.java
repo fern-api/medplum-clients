@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProduct_SpecialDesignation {
-  Optional<Reference> indicationReference();
-
-  Optional<CodeableConcept> species();
-
-  Optional<CodeableConcept> status();
-
-  Optional<List<Identifier>> identifier();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> type();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<DateTime> date();
+  Optional<CodeableConcept> indicationCodeableConcept();
+
+  Optional<Reference> indicationReference();
+
+  Optional<List<Identifier>> identifier();
 
   Optional<CodeableConcept> intendedUse();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> species();
 
-  Optional<CodeableConcept> indicationCodeableConcept();
+  Optional<String> id();
+
+  Optional<CodeableConcept> status();
+
+  Optional<DateTime> date();
 
   static ImmutableMedicinalProduct_SpecialDesignation.Builder builder() {
     return ImmutableMedicinalProduct_SpecialDesignation.builder();

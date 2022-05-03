@@ -19,8 +19,6 @@ import org.immutables.value.Value;
 public interface ElementDefinition_Binding {
   Optional<String> description();
 
-  Optional<List<Extension>> extension();
-
   Optional<Canonical> valueSet();
 
   Optional<String> id();
@@ -28,6 +26,8 @@ public interface ElementDefinition_Binding {
   Optional<List<Extension>> modifierExtension();
 
   Optional<Elementdefinition_bindingStrength> strength();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableElementDefinition_Binding.Builder builder() {
     return ImmutableElementDefinition_Binding.builder();

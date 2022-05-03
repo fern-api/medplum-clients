@@ -18,57 +18,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario {
-  Optional<List<UsageContext>> useContext();
+  Optional<String> version();
 
-  Optional<List<ExampleScenario_Instance>> instance();
-
-  Optional<List<Canonical>> workflow();
+  Optional<Id> id();
 
   Optional<String> name();
 
-  Optional<Markdown> copyright();
+  String resourceType();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<Meta> meta();
+  Optional<List<Canonical>> workflow();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<ExamplescenarioStatus> status();
+
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<List<ExampleScenario_Instance>> instance();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ExampleScenario_Process>> process();
 
   Optional<Uri> implicitRules();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<DateTime> date();
+  Optional<Uri> url();
 
-  Optional<Markdown> purpose();
-
-  Optional<ExamplescenarioStatus> status();
-
-  Optional<Narrative> text();
+  Optional<Meta> meta();
 
   Optional<String> publisher();
 
-  Optional<Uri> url();
-
-  Optional<List<ExampleScenario_Actor>> actor();
-
-  Optional<String> version();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Boolean> experimental();
+  Optional<List<ContactDetail>> contact();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<ExampleScenario_Process>> process();
+  Optional<Markdown> copyright();
 
-  Optional<Code> language();
+  Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<ExampleScenario_Actor>> actor();
 
-  Optional<List<ContactDetail>> contact();
+  Optional<Boolean> experimental();
 
-  String resourceType();
+  Optional<DateTime> date();
 
-  Optional<Id> id();
+  Optional<Markdown> purpose();
 
   static ImmutableExampleScenario.ResourceTypeBuildStage builder() {
     return ImmutableExampleScenario.builder();

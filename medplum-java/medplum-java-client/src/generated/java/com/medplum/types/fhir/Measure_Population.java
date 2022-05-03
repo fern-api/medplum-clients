@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure_Population {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
 
   Expression criteria();
 
+  Optional<String> id();
+
   Optional<String> description();
 
-  Optional<CodeableConcept> code();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<CodeableConcept> code();
 
   static ImmutableMeasure_Population.CriteriaBuildStage builder() {
     return ImmutableMeasure_Population.builder();

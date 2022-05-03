@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface MeasureReport_Stratifier {
   Optional<List<CodeableConcept>> code();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<MeasureReport_Stratum>> stratum();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<MeasureReport_Stratum>> stratum();
 
   static ImmutableMeasureReport_Stratifier.Builder builder() {
     return ImmutableMeasureReport_Stratifier.builder();

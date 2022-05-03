@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPharmaceutical_TargetSpecies {
-  Optional<List<MedicinalProductPharmaceutical_WithdrawalPeriod>> withdrawalPeriod();
-
   CodeableConcept code();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<MedicinalProductPharmaceutical_WithdrawalPeriod>> withdrawalPeriod();
+
+  Optional<String> id();
 
   static ImmutableMedicinalProductPharmaceutical_TargetSpecies.CodeBuildStage builder() {
     return ImmutableMedicinalProductPharmaceutical_TargetSpecies.builder();

@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface ExplanationOfBenefit_Payment {
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> adjustmentReason();
-
-  Optional<String> id();
-
-  Optional<Identifier> identifier();
-
-  Optional<CodeableConcept> type();
+  Optional<Money> amount();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Identifier> identifier();
+
+  Optional<CodeableConcept> adjustmentReason();
+
   Optional<Date> date();
 
-  Optional<Money> adjustment();
+  Optional<String> id();
 
-  Optional<Money> amount();
+  Optional<CodeableConcept> type();
+
+  Optional<Money> adjustment();
 
   static ImmutableExplanationOfBenefit_Payment.Builder builder() {
     return ImmutableExplanationOfBenefit_Payment.builder();

@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface CodeSystem_Property {
   Optional<Uri> uri();
 
-  Optional<Code> code();
-
   Optional<String> description();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Codesystem_propertyType> type();
 
-  Optional<List<Extension>> extension();
+  Optional<Code> code();
 
   Optional<String> id();
 
-  Optional<Codesystem_propertyType> type();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableCodeSystem_Property.Builder builder() {
     return ImmutableCodeSystem_Property.builder();

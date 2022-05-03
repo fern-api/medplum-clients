@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeableConcept {
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
+  Optional<String> text();
 
   Optional<List<Coding>> coding();
 
-  Optional<String> text();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableCodeableConcept.Builder builder() {
     return ImmutableCodeableConcept.builder();

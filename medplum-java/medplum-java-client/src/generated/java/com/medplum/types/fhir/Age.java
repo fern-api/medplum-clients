@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Age {
-  Optional<Decimal> value();
-
-  Optional<Code> code();
-
   Optional<Uri> system();
 
-  Optional<AgeComparator> comparator();
-
-  Optional<String> id();
+  Optional<Code> code();
 
   Optional<String> unit();
 
   Optional<List<Extension>> extension();
+
+  Optional<AgeComparator> comparator();
+
+  Optional<Decimal> value();
+
+  Optional<String> id();
 
   static ImmutableAge.Builder builder() {
     return ImmutableAge.builder();

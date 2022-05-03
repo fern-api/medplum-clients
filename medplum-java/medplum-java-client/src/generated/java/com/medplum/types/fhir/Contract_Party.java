@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Party {
-  List<Reference> reference();
-
   Optional<List<Extension>> modifierExtension();
 
-  CodeableConcept role();
+  List<Reference> reference();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  CodeableConcept role();
 
   static ImmutableContract_Party.RoleBuildStage builder() {
     return ImmutableContract_Party.builder();

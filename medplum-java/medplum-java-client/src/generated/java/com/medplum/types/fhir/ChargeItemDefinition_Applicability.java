@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItemDefinition_Applicability {
-  Optional<String> id();
+  Optional<String> language();
 
-  Optional<String> description();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
@@ -27,7 +27,7 @@ public interface ChargeItemDefinition_Applicability {
 
   Optional<List<Extension>> extension();
 
-  Optional<String> language();
+  Optional<String> description();
 
   static ImmutableChargeItemDefinition_Applicability.Builder builder() {
     return ImmutableChargeItemDefinition_Applicability.builder();

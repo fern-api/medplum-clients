@@ -18,45 +18,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BiologicallyDerivedProduct {
-  Optional<List<Reference>> request();
-
-  Optional<Meta> meta();
-
-  Optional<BiologicallyDerivedProduct_Manipulation> manipulation();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Integer> quantity();
-
-  String resourceType();
-
   Optional<List<Identifier>> identifier();
-
-  Optional<List<Reference>> parent();
-
-  Optional<List<BiologicallyDerivedProduct_Processing>> processing();
-
-  Optional<BiologicallyderivedproductStatus> status();
-
-  Optional<CodeableConcept> productCode();
-
-  Optional<Code> language();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
 
   Optional<List<Extension>> extension();
 
-  Optional<BiologicallyDerivedProduct_Collection> collection();
+  Optional<CodeableConcept> productCode();
+
+  String resourceType();
+
+  Optional<BiologicallyDerivedProduct_Manipulation> manipulation();
 
   Optional<List<BiologicallyDerivedProduct_Storage>> storage();
 
+  Optional<BiologicallyderivedproductProductcategory> productCategory();
+
+  Optional<List<BiologicallyDerivedProduct_Processing>> processing();
+
+  Optional<Meta> meta();
+
+  Optional<BiologicallyDerivedProduct_Collection> collection();
+
+  Optional<Id> id();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<BiologicallyderivedproductProductcategory> productCategory();
+  Optional<Integer> quantity();
+
+  Optional<Code> language();
+
+  Optional<List<Reference>> parent();
+
+  Optional<List<Reference>> request();
+
+  Optional<Narrative> text();
+
+  Optional<BiologicallyderivedproductStatus> status();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableBiologicallyDerivedProduct.ResourceTypeBuildStage builder() {
     return ImmutableBiologicallyDerivedProduct.builder();

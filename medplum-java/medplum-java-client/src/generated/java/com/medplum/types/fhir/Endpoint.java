@@ -17,45 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Endpoint {
-  Optional<String> name();
-
-  Optional<Meta> meta();
-
-  Optional<EndpointStatus> status();
-
-  Coding connectionType();
-
-  Optional<Period> period();
-
-  Optional<Reference> managingOrganization();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Code>> payloadMimeType();
-
-  Optional<Url> address();
+  Optional<List<String>> header();
 
   Optional<Code> language();
 
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Code>> payloadMimeType();
+
+  Optional<Meta> meta();
+
+  Optional<String> name();
+
   Optional<List<Extension>> extension();
-
-  Optional<List<String>> header();
-
-  Optional<Narrative> text();
 
   Optional<List<ContactPoint>> contact();
 
-  List<CodeableConcept> payloadType();
+  Optional<Reference> managingOrganization();
 
   Optional<List<Identifier>> identifier();
 
+  Coding connectionType();
+
+  List<CodeableConcept> payloadType();
+
+  Optional<Narrative> text();
+
+  Optional<Id> id();
+
   String resourceType();
 
-  Optional<Uri> implicitRules();
+  Optional<EndpointStatus> status();
+
+  Optional<Url> address();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Period> period();
 
   static ImmutableEndpoint.ConnectionTypeBuildStage builder() {
     return ImmutableEndpoint.builder();

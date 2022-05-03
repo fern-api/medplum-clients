@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Adjudication {
-  Optional<Decimal> value();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   CodeableConcept category();
 
   Optional<CodeableConcept> reason();
 
-  Optional<List<Extension>> extension();
-
   Optional<Money> amount();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Decimal> value();
 
   static ImmutableExplanationOfBenefit_Adjudication.CategoryBuildStage builder() {
     return ImmutableExplanationOfBenefit_Adjudication.builder();

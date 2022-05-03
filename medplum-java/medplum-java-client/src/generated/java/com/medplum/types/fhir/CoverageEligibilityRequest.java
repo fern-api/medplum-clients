@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest {
-  Optional<Reference> enterer();
-
-  Optional<Code> language();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> facility();
-
   Optional<List<CoverageEligibilityRequest_Insurance>> insurance();
 
-  Optional<Code> status();
-
-  Reference insurer();
-
-  Optional<List<CoverageeligibilityrequestPurposeItem>> purpose();
-
-  Optional<Narrative> text();
+  Optional<Period> servicedPeriod();
 
   Optional<CodeableConcept> priority();
 
-  Optional<Reference> provider();
-
-  Optional<List<CoverageEligibilityRequest_SupportingInfo>> supportingInfo();
-
-  Optional<List<CoverageEligibilityRequest_Item>> item();
-
-  Optional<Meta> meta();
-
-  Optional<Uri> implicitRules();
+  String resourceType();
 
   Optional<String> servicedDate();
 
+  Optional<Code> status();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> facility();
+
+  Optional<List<CoverageeligibilityrequestPurposeItem>> purpose();
+
   Reference patient();
-
-  Optional<List<Extension>> extension();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Period> servicedPeriod();
 
   Optional<List<ResourceList>> contained();
 
   Optional<Id> id();
 
+  Optional<Meta> meta();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<DateTime> created();
 
-  static ImmutableCoverageEligibilityRequest.InsurerBuildStage builder() {
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CoverageEligibilityRequest_Item>> item();
+
+  Optional<List<CoverageEligibilityRequest_SupportingInfo>> supportingInfo();
+
+  Optional<Reference> provider();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Reference insurer();
+
+  Optional<Reference> enterer();
+
+  static ImmutableCoverageEligibilityRequest.ResourceTypeBuildStage builder() {
     return ImmutableCoverageEligibilityRequest.builder();
   }
 }

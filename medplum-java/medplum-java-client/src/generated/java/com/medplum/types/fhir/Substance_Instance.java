@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Substance_Instance {
-  Optional<Identifier> identifier();
-
-  Optional<Quantity> quantity();
+  Optional<String> id();
 
   Optional<DateTime> expiry();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Identifier> identifier();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Quantity> quantity();
 
   static ImmutableSubstance_Instance.Builder builder() {
     return ImmutableSubstance_Instance.builder();

@@ -19,43 +19,43 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Operation {
-  Optional<Id> requestId();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> description();
-
-  Optional<Testscript_operationMethod> method();
+  Optional<String> label();
 
   Optional<String> url();
 
-  Optional<String> id();
-
   Optional<Coding> type();
 
-  Optional<List<Extension>> extension();
+  Optional<String> description();
 
-  Optional<String> label();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Id> responseId();
-
-  Optional<List<TestScript_RequestHeader>> requestHeader();
-
-  Optional<Integer> origin();
-
-  Optional<String> params();
-
-  Optional<Id> targetId();
+  Optional<Testscript_operationMethod> method();
 
   Optional<Code> resource();
 
-  Optional<Boolean> encodeRequestUrl();
+  Optional<List<Extension>> extension();
+
+  Optional<String> params();
+
+  Optional<Id> responseId();
+
+  Optional<Code> accept();
+
+  Optional<Integer> origin();
+
+  Optional<List<TestScript_RequestHeader>> requestHeader();
+
+  Optional<String> id();
 
   Optional<Integer> destination();
 
+  Optional<Boolean> encodeRequestUrl();
+
   Optional<Code> contentType();
 
-  Optional<Code> accept();
+  Optional<Id> targetId();
+
+  Optional<Id> requestId();
 
   Optional<Id> sourceId();
 

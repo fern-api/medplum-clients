@@ -18,59 +18,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet {
-  Optional<Markdown> purpose();
+  Optional<List<Identifier>> identifier();
 
-  Optional<Code> language();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<List<Extension>> extension();
+  Optional<Uri> implicitRules();
 
-  Optional<ValueSet_Expansion> expansion();
+  Optional<DateTime> date();
+
+  Optional<Markdown> copyright();
+
+  Optional<String> name();
 
   Optional<Meta> meta();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<ValueSet_Expansion> expansion();
 
-  Optional<String> title();
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<ValueSet_Compose> compose();
+
+  Optional<String> publisher();
+
+  Optional<Markdown> purpose();
+
+  Optional<ValuesetStatus> status();
+
+  Optional<Boolean> experimental();
 
   String resourceType();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<Markdown> copyright();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Narrative> text();
-
-  Optional<DateTime> date();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<ValueSet_Compose> compose();
-
-  Optional<Boolean> immutable();
-
-  Optional<ValuesetStatus> status();
-
-  Optional<Markdown> description();
-
-  Optional<Id> id();
-
-  Optional<Uri> url();
-
-  Optional<String> name();
-
-  Optional<String> publisher();
-
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<String> title();
 
   Optional<String> version();
 
-  Optional<Uri> implicitRules();
+  Optional<Uri> url();
 
-  Optional<Boolean> experimental();
+  Optional<List<ContactDetail>> contact();
 
-  Optional<List<UsageContext>> useContext();
+  Optional<Boolean> immutable();
+
+  Optional<Narrative> text();
+
+  Optional<Markdown> description();
+
+  Optional<Code> language();
+
+  Optional<Id> id();
 
   static ImmutableValueSet.ResourceTypeBuildStage builder() {
     return ImmutableValueSet.builder();

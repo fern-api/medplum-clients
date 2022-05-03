@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Quantity {
-  Optional<String> id();
-
-  Optional<Decimal> value();
-
   Optional<QuantityComparator> comparator();
 
-  Optional<Uri> system();
-
-  Optional<Code> code();
+  Optional<String> unit();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> unit();
+  Optional<Uri> system();
+
+  Optional<Decimal> value();
+
+  Optional<String> id();
+
+  Optional<Code> code();
 
   static ImmutableQuantity.Builder builder() {
     return ImmutableQuantity.builder();

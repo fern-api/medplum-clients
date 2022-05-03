@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceNucleicAcid {
-  Optional<Code> language();
+  Optional<Uri> implicitRules();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<SubstanceNucleicAcid_Subunit>> subunit();
+  Optional<CodeableConcept> oligoNucleotideType();
 
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<CodeableConcept> sequenceType();
-
-  Optional<Integer> numberOfSubunits();
-
-  String resourceType();
+  Optional<Code> language();
 
   Optional<Meta> meta();
 
-  Optional<Narrative> text();
+  Optional<List<SubstanceNucleicAcid_Subunit>> subunit();
 
-  Optional<List<ResourceList>> contained();
+  Optional<CodeableConcept> sequenceType();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  String resourceType();
 
   Optional<String> areaOfHybridisation();
 
-  Optional<CodeableConcept> oligoNucleotideType();
+  Optional<List<ResourceList>> contained();
 
-  Optional<List<Extension>> extension();
+  Optional<Integer> numberOfSubunits();
+
+  Optional<Narrative> text();
 
   static ImmutableSubstanceNucleicAcid.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceNucleicAcid.builder();

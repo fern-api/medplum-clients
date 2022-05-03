@@ -18,107 +18,107 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure {
-  Optional<Id> id();
-
   Optional<String> title();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> improvementNotation();
-
-  Optional<CodeableConcept> scoring();
-
-  Optional<String> riskAdjustment();
-
-  Optional<List<Measure_SupplementalData>> supplementalData();
-
-  Optional<List<ContactDetail>> editor();
-
-  Optional<String> name();
-
-  Optional<MeasureStatus> status();
-
-  Optional<Markdown> guidance();
-
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<Markdown> description();
-
-  Optional<Date> approvalDate();
-
-  Optional<String> subtitle();
-
-  Optional<List<CodeableConcept>> topic();
-
-  Optional<Markdown> clinicalRecommendationStatement();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<String> usage();
-
-  Optional<Boolean> experimental();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<CodeableConcept> compositeScoring();
-
-  Optional<Narrative> text();
-
-  Optional<List<Markdown>> definition();
-
-  Optional<Date> lastReviewDate();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  String resourceType();
-
-  Optional<Reference> subjectReference();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<CodeableConcept>> type();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Canonical>> library();
+  Optional<Period> effectivePeriod();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<DateTime> date();
-
-  Optional<Markdown> rationale();
+  Optional<List<CodeableConcept>> topic();
 
   Optional<List<ContactDetail>> author();
 
-  Optional<String> rateAggregation();
-
-  Optional<Markdown> purpose();
-
-  Optional<Markdown> disclaimer();
-
-  Optional<Uri> url();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<String> publisher();
-
-  Optional<String> version();
+  String resourceType();
 
   Optional<List<Measure_Group>> group();
 
+  Optional<Markdown> rationale();
+
+  Optional<Narrative> text();
+
+  Optional<DateTime> date();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> compositeScoring();
+
+  Optional<MeasureStatus> status();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<List<CodeableConcept>> type();
+
+  Optional<String> name();
+
+  Optional<Date> lastReviewDate();
+
+  Optional<String> subtitle();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<String> rateAggregation();
+
   Optional<Markdown> copyright();
+
+  Optional<List<Measure_SupplementalData>> supplementalData();
+
+  Optional<String> riskAdjustment();
+
+  Optional<Reference> subjectReference();
+
+  Optional<CodeableConcept> scoring();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ContactDetail>> editor();
+
+  Optional<CodeableConcept> improvementNotation();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<String> usage();
+
+  Optional<Id> id();
+
+  Optional<Uri> url();
+
+  Optional<Markdown> purpose();
+
+  Optional<Boolean> experimental();
+
+  Optional<Markdown> clinicalRecommendationStatement();
+
+  Optional<Markdown> description();
+
+  Optional<List<Canonical>> library();
+
+  Optional<String> publisher();
+
+  Optional<List<Markdown>> definition();
+
+  Optional<Code> language();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Date> approvalDate();
+
+  Optional<Markdown> guidance();
+
+  Optional<Markdown> disclaimer();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<String> version();
 
   static ImmutableMeasure.ResourceTypeBuildStage builder() {
     return ImmutableMeasure.builder();

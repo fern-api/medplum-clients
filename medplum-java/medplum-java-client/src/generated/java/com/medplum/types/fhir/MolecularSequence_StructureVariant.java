@@ -19,21 +19,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_StructureVariant {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Boolean> exact();
-
-  Optional<String> id();
-
-  Optional<MolecularSequence_Outer> outer();
-
-  Optional<CodeableConcept> variantType();
 
   Optional<Integer> length();
 
   Optional<MolecularSequence_Inner> inner();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> variantType();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<MolecularSequence_Outer> outer();
 
   static ImmutableMolecularSequence_StructureVariant.Builder builder() {
     return ImmutableMolecularSequence_StructureVariant.builder();

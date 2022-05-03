@@ -18,21 +18,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NamingSystem_UniqueId {
-  Optional<Boolean> preferred();
-
   Optional<String> value();
-
-  Optional<String> comment();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Namingsystem_uniqueidType> type();
 
   Optional<Period> period();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Namingsystem_uniqueidType> type();
+
+  Optional<String> id();
+
+  Optional<String> comment();
+
+  Optional<Boolean> preferred();
 
   static ImmutableNamingSystem_UniqueId.Builder builder() {
     return ImmutableNamingSystem_UniqueId.builder();

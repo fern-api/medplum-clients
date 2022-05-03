@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImmunizationEvaluation {
-  Optional<Code> language();
+  Optional<Uri> implicitRules();
 
-  Optional<Meta> meta();
+  Optional<String> series();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> authority();
+
+  Optional<String> description();
+
+  Reference immunizationEvent();
+
+  Optional<String> seriesDosesString();
+
+  Optional<Double> doseNumberPositiveInt();
+
+  Optional<List<Extension>> extension();
 
   Optional<Id> id();
 
   Optional<Code> status();
 
-  Optional<String> description();
-
-  Optional<String> doseNumberString();
+  Optional<Double> seriesDosesPositiveInt();
 
   Optional<DateTime> date();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> seriesDosesString();
-
-  Optional<Reference> authority();
-
-  CodeableConcept targetDisease();
 
   CodeableConcept doseStatus();
 
   Optional<List<CodeableConcept>> doseStatusReason();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Double> seriesDosesPositiveInt();
-
-  Optional<Narrative> text();
-
-  String resourceType();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Double> doseNumberPositiveInt();
+  Optional<String> doseNumberString();
 
   Reference patient();
 
-  Reference immunizationEvent();
+  CodeableConcept targetDisease();
 
-  Optional<List<ResourceList>> contained();
+  Optional<Meta> meta();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<String> series();
+  String resourceType();
 
-  static ImmutableImmunizationEvaluation.TargetDiseaseBuildStage builder() {
+  Optional<Narrative> text();
+
+  Optional<Code> language();
+
+  static ImmutableImmunizationEvaluation.ImmunizationEventBuildStage builder() {
     return ImmutableImmunizationEvaluation.builder();
   }
 }

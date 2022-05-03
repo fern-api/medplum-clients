@@ -19,113 +19,113 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task_Output {
-  Optional<Money> valueMoney();
+  Optional<DataRequirement> valueDataRequirement();
 
-  Optional<Period> valuePeriod();
-
-  Optional<String> valueUuid();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Annotation> valueAnnotation();
-
-  Optional<Distance> valueDistance();
-
-  Optional<ParameterDefinition> valueParameterDefinition();
-
-  Optional<ContactPoint> valueContactPoint();
-
-  Optional<String> valueUri();
-
-  Optional<String> valueCode();
-
-  CodeableConcept type();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<String> valueUrl();
-
-  Optional<Address> valueAddress();
-
-  Optional<Count> valueCount();
+  Optional<Meta> valueMeta();
 
   Optional<Contributor> valueContributor();
 
+  Optional<String> valueDate();
+
+  Optional<String> valueDateTime();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<String> valueUri();
+
+  Optional<Money> valueMoney();
+
   Optional<Quantity> valueQuantity();
+
+  Optional<List<Extension>> extension();
 
   Optional<Age> valueAge();
 
-  Optional<Timing> valueTiming();
+  Optional<UsageContext> valueUsageContext();
 
-  Optional<Signature> valueSignature();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> valueDate();
+  Optional<TriggerDefinition> valueTriggerDefinition();
 
-  Optional<Ratio> valueRatio();
-
-  Optional<Reference> valueReference();
-
-  Optional<Expression> valueExpression();
+  Optional<String> valueMarkdown();
 
   Optional<RelatedArtifact> valueRelatedArtifact();
 
   Optional<Dosage> valueDosage();
 
-  Optional<String> valueString();
+  Optional<Coding> valueCoding();
 
-  Optional<Double> valuePositiveInt();
-
-  Optional<Double> valueUnsignedInt();
-
-  Optional<String> valueTime();
-
-  Optional<String> valueInstant();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<UsageContext> valueUsageContext();
-
-  Optional<String> valueMarkdown();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
+  Optional<String> valueUuid();
 
   Optional<String> valueId();
 
-  Optional<String> valueDateTime();
+  Optional<Boolean> valueBoolean();
 
-  Optional<Meta> valueMeta();
+  Optional<Count> valueCount();
 
-  Optional<Attachment> valueAttachment();
-
-  Optional<Double> valueDecimal();
-
-  Optional<String> valueOid();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> valueCodeableConcept();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<DataRequirement> valueDataRequirement();
+  Optional<Period> valuePeriod();
 
   Optional<String> valueCanonical();
 
-  Optional<Coding> valueCoding();
+  Optional<Range> valueRange();
+
+  Optional<String> valueUrl();
+
+  Optional<Distance> valueDistance();
 
   Optional<Duration> valueDuration();
 
-  Optional<String> valueBase64Binary();
+  Optional<Annotation> valueAnnotation();
 
-  Optional<Double> valueInteger();
+  Optional<String> valueOid();
+
+  Optional<Double> valuePositiveInt();
+
+  Optional<String> valueTime();
+
+  Optional<String> valueCode();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<Expression> valueExpression();
+
+  CodeableConcept type();
+
+  Optional<Reference> valueReference();
 
   Optional<ContactDetail> valueContactDetail();
 
-  Optional<Range> valueRange();
+  Optional<String> valueString();
+
+  Optional<Timing> valueTiming();
+
+  Optional<Signature> valueSignature();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<ParameterDefinition> valueParameterDefinition();
+
+  Optional<Double> valueInteger();
+
+  Optional<String> valueInstant();
+
+  Optional<HumanName> valueHumanName();
+
+  Optional<Double> valueDecimal();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<Address> valueAddress();
 
   Optional<String> id();
 
-  Optional<HumanName> valueHumanName();
+  Optional<CodeableConcept> valueCodeableConcept();
 
   static ImmutableTask_Output.TypeBuildStage builder() {
     return ImmutableTask_Output.builder();

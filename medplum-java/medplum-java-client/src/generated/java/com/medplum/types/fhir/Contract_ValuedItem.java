@@ -17,41 +17,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_ValuedItem {
-  Optional<Money> unitPrice();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> payment();
-
-  Optional<Money> net();
-
-  Optional<List<Extension>> extension();
-
-  Optional<DateTime> effectiveTime();
-
-  Optional<Identifier> identifier();
-
-  Optional<DateTime> paymentDate();
-
-  Optional<List<UnsignedInt>> securityLabelNumber();
+  Optional<CodeableConcept> entityCodeableConcept();
 
   Optional<Decimal> points();
 
-  Optional<List<String>> linkId();
+  Optional<List<UnsignedInt>> securityLabelNumber();
 
   Optional<Reference> responsible();
 
-  Optional<Reference> entityReference();
+  Optional<String> payment();
+
+  Optional<Identifier> identifier();
+
+  Optional<Money> net();
 
   Optional<Reference> recipient();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Quantity> quantity();
+  Optional<List<String>> linkId();
 
   Optional<String> id();
 
+  Optional<Money> unitPrice();
+
+  Optional<DateTime> paymentDate();
+
   Optional<Decimal> factor();
 
-  Optional<CodeableConcept> entityCodeableConcept();
+  Optional<Reference> entityReference();
+
+  Optional<Quantity> quantity();
+
+  Optional<DateTime> effectiveTime();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableContract_ValuedItem.Builder builder() {
     return ImmutableContract_ValuedItem.builder();

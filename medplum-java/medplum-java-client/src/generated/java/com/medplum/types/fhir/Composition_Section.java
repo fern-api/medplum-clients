@@ -17,31 +17,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition_Section {
-  Optional<List<Composition_Section>> section();
-
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> emptyReason();
+  Optional<List<Reference>> author();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> focus();
-
-  Optional<Code> mode();
+  Optional<CodeableConcept> code();
 
   Optional<String> title();
-
-  Optional<CodeableConcept> orderedBy();
-
-  Optional<List<Reference>> author();
 
   Optional<List<Reference>> entry();
 
   Optional<Narrative> text();
 
-  Optional<CodeableConcept> code();
+  Optional<CodeableConcept> emptyReason();
+
+  Optional<Reference> focus();
+
+  Optional<List<Composition_Section>> section();
+
+  Optional<Code> mode();
+
+  Optional<CodeableConcept> orderedBy();
 
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableComposition_Section.Builder builder() {
     return ImmutableComposition_Section.builder();

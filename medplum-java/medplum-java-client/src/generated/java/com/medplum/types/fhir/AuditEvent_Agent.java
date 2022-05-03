@@ -18,33 +18,33 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AuditEvent_Agent {
-  Optional<String> altId();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Uri>> policy();
+  Optional<Reference> location();
 
   Optional<AuditEvent_Network> network();
 
-  Optional<String> id();
-
-  Optional<List<CodeableConcept>> purposeOfUse();
-
-  Optional<Reference> who();
-
-  Optional<Coding> media();
-
-  Optional<List<CodeableConcept>> role();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> altId();
 
   Optional<String> name();
 
-  Optional<List<Extension>> extension();
-
   Optional<CodeableConcept> type();
+
+  Optional<Reference> who();
 
   Optional<Boolean> requestor();
 
-  Optional<Reference> location();
+  Optional<List<CodeableConcept>> purposeOfUse();
+
+  Optional<String> id();
+
+  Optional<List<CodeableConcept>> role();
+
+  Optional<Coding> media();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Uri>> policy();
 
   static ImmutableAuditEvent_Agent.Builder builder() {
     return ImmutableAuditEvent_Agent.builder();

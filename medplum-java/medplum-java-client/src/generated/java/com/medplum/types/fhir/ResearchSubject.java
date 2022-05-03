@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ResearchSubject {
-  Optional<Id> id();
-
-  String resourceType();
-
-  Optional<ResearchsubjectStatus> status();
-
-  Optional<String> actualArm();
-
-  Reference study();
-
-  Optional<Code> language();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> consent();
 
   Optional<Uri> implicitRules();
 
-  Optional<Narrative> text();
+  Optional<String> actualArm();
 
-  Reference individual();
+  Optional<List<Identifier>> identifier();
 
-  Optional<String> assignedArm();
+  String resourceType();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Meta> meta();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Period> period();
 
-  Optional<Reference> consent();
+  Optional<ResearchsubjectStatus> status();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> extension();
+
+  Reference study();
+
+  Optional<String> assignedArm();
+
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
+  Reference individual();
 
   static ImmutableResearchSubject.ResourceTypeBuildStage builder() {
     return ImmutableResearchSubject.builder();

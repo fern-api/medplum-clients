@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Payee {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> party();
-
   Optional<CodeableConcept> type();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> party();
 
   static ImmutableExplanationOfBenefit_Payee.Builder builder() {
     return ImmutableExplanationOfBenefit_Payee.builder();

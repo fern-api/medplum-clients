@@ -17,23 +17,37 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Account {
-  Optional<Period> servicePeriod();
+  Optional<CodeableConcept> type();
 
   Optional<Id> id();
 
-  Optional<Uri> implicitRules();
-
-  Optional<List<Account_Guarantor>> guarantor();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Meta> meta();
-
-  Optional<String> description();
+  Optional<List<Account_Coverage>> coverage();
 
   Optional<AccountStatus> status();
 
-  Optional<CodeableConcept> type();
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> name();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> partOf();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
+
+  Optional<Meta> meta();
+
+  Optional<List<Account_Guarantor>> guarantor();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Period> servicePeriod();
+
+  String resourceType();
+
+  Optional<List<Reference>> subject();
 
   Optional<Reference> owner();
 
@@ -41,21 +55,7 @@ public interface Account {
 
   Optional<Narrative> text();
 
-  Optional<Reference> partOf();
-
-  String resourceType();
-
   Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> name();
-
-  Optional<List<Reference>> subject();
-
-  Optional<List<Account_Coverage>> coverage();
 
   static ImmutableAccount.ResourceTypeBuildStage builder() {
     return ImmutableAccount.builder();

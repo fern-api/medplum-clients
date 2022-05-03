@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Invoice_LineItem {
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Invoice_PriceComponent>> priceComponent();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<PositiveInt> sequence();
 
   Optional<Reference> chargeItemReference();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> chargeItemCodeableConcept();
 

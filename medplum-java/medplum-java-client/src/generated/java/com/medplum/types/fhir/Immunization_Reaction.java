@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Immunization_Reaction {
+  Optional<String> id();
+
+  Optional<DateTime> date();
+
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> detail();
 
-  Optional<DateTime> date();
-
   Optional<Boolean> reported();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
 
   static ImmutableImmunization_Reaction.Builder builder() {
     return ImmutableImmunization_Reaction.builder();

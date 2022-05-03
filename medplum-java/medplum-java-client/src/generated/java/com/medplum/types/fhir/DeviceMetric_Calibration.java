@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface DeviceMetric_Calibration {
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Instant> time();
-
   Optional<Devicemetric_calibrationType> type();
+
+  Optional<Devicemetric_calibrationState> state();
 
   Optional<List<Extension>> extension();
 
-  Optional<Devicemetric_calibrationState> state();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Instant> time();
 
   static ImmutableDeviceMetric_Calibration.Builder builder() {
     return ImmutableDeviceMetric_Calibration.builder();

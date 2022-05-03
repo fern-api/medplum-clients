@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference {
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> subject();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> docStatus();
-
-  Optional<Code> language();
-
-  Optional<CodeableConcept> type();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<CodeableConcept>> securityLabel();
-
-  Optional<Id> id();
-
-  Optional<Identifier> masterIdentifier();
+  Optional<Meta> meta();
 
   Optional<Reference> custodian();
 
-  Optional<DocumentReference_Context> context();
-
-  Optional<Reference> authenticator();
-
-  Optional<DocumentreferenceStatus> status();
-
-  Optional<Meta> meta();
-
-  Optional<Instant> date();
+  Optional<CodeableConcept> type();
 
   Optional<String> description();
 
-  List<DocumentReference_Content> content();
+  Optional<Code> language();
 
-  String resourceType();
+  Optional<List<CodeableConcept>> securityLabel();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<Id> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<Narrative> text();
+  Optional<Reference> subject();
 
   Optional<List<Reference>> author();
 
+  Optional<Reference> authenticator();
+
+  Optional<List<ResourceList>> contained();
+
+  List<DocumentReference_Content> content();
+
+  Optional<Identifier> masterIdentifier();
+
+  Optional<Narrative> text();
+
   Optional<List<DocumentReference_RelatesTo>> relatesTo();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<DocumentreferenceStatus> status();
+
+  Optional<Instant> date();
 
   Optional<Uri> implicitRules();
+
+  Optional<Code> docStatus();
+
+  String resourceType();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<DocumentReference_Context> context();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableDocumentReference.ResourceTypeBuildStage builder() {
     return ImmutableDocumentReference.builder();

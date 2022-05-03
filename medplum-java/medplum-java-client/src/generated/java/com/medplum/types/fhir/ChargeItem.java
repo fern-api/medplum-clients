@@ -17,81 +17,81 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItem {
-  Optional<List<Reference>> service();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Canonical>> definitionCanonical();
 
-  Optional<CodeableConcept> productCodeableConcept();
+  Optional<Id> id();
 
-  Optional<List<ChargeItem_Performer>> performer();
-
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
-
-  Optional<ChargeitemStatus> status();
-
-  Optional<Quantity> quantity();
-
-  Optional<Decimal> factorOverride();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Annotation>> note();
+  Optional<List<Identifier>> identifier();
 
   Optional<String> occurrenceDateTime();
 
-  Optional<Money> priceOverride();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> enteredDate();
-
-  Optional<List<Reference>> partOf();
+  Optional<List<CodeableConcept>> bodysite();
 
   Optional<Reference> requestingOrganization();
-
-  Optional<List<Uri>> definitionUri();
-
-  Optional<Reference> performingOrganization();
 
   Optional<Reference> context();
 
   Optional<Reference> costCenter();
 
-  Reference subject();
-
-  Optional<Timing> occurrenceTiming();
-
   Optional<List<CodeableConcept>> reason();
 
-  Optional<Code> language();
+  Optional<Reference> performingOrganization();
 
-  String resourceType();
+  Reference subject();
+
+  Optional<Reference> productReference();
+
+  Optional<Money> priceOverride();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<String> overrideReason();
+  Optional<List<Reference>> supportingInformation();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
 
   CodeableConcept code();
 
-  Optional<List<Reference>> supportingInformation();
+  Optional<List<ChargeItem_Performer>> performer();
 
-  Optional<List<CodeableConcept>> bodysite();
+  Optional<CodeableConcept> productCodeableConcept();
+
+  Optional<List<Annotation>> note();
 
   Optional<Reference> enterer();
 
-  Optional<Reference> productReference();
+  String resourceType();
+
+  Optional<ChargeitemStatus> status();
+
+  Optional<Meta> meta();
+
+  Optional<String> overrideReason();
+
+  Optional<List<Reference>> service();
+
+  Optional<Timing> occurrenceTiming();
 
   Optional<List<Reference>> account();
 
   Optional<Period> occurrencePeriod();
 
-  Optional<Id> id();
-
   Optional<List<Extension>> extension();
 
-  Optional<List<Identifier>> identifier();
+  Optional<DateTime> enteredDate();
+
+  Optional<Decimal> factorOverride();
+
+  Optional<List<Uri>> definitionUri();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<Narrative> text();
+
+  Optional<Quantity> quantity();
 
   static ImmutableChargeItem.SubjectBuildStage builder() {
     return ImmutableChargeItem.builder();

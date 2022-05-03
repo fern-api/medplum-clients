@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductIngredient_Substance {
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   CodeableConcept code();
 
   Optional<List<MedicinalProductIngredient_Strength>> strength();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMedicinalProductIngredient_Substance.CodeBuildStage builder() {
     return ImmutableMedicinalProductIngredient_Substance.builder();

@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceAmount {
-  Optional<String> amountString();
-
   Optional<CodeableConcept> amountType();
 
-  Optional<String> amountText();
-
-  Optional<Range> amountRange();
-
-  Optional<List<Extension>> extension();
+  Optional<Quantity> amountQuantity();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<SubstanceAmount_ReferenceRange> referenceRange();
+  Optional<Range> amountRange();
+
+  Optional<String> amountString();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> amountText();
 
   Optional<String> id();
 
-  Optional<Quantity> amountQuantity();
+  Optional<SubstanceAmount_ReferenceRange> referenceRange();
 
   static ImmutableSubstanceAmount.Builder builder() {
     return ImmutableSubstanceAmount.builder();

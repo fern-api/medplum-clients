@@ -19,23 +19,23 @@ import org.immutables.value.Value;
 public interface CapabilityStatement_Rest {
   Optional<Capabilitystatement_restMode> mode();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<CapabilityStatement_Security> security();
 
   Optional<List<Canonical>> compartment();
 
+  Optional<String> id();
+
   Optional<List<Extension>> extension();
-
-  Optional<List<CapabilityStatement_SearchParam>> searchParam();
-
-  Optional<List<CapabilityStatement_Operation>> operation();
-
-  Optional<List<CapabilityStatement_Interaction1>> interaction();
 
   Optional<Markdown> documentation();
 
-  Optional<CapabilityStatement_Security> security();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CapabilityStatement_Interaction1>> interaction();
+
+  Optional<List<CapabilityStatement_Operation>> operation();
+
+  Optional<List<CapabilityStatement_SearchParam>> searchParam();
 
   Optional<List<CapabilityStatement_Resource>> resource();
 

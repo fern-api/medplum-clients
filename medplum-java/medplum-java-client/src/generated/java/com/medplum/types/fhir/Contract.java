@@ -17,93 +17,93 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract {
-  Optional<Reference> author();
+  Optional<Code> status();
 
-  Optional<CodeableConcept> topicCodeableConcept();
+  Optional<String> title();
 
-  Optional<Contract_ContentDefinition> contentDefinition();
+  Optional<CodeableConcept> scope();
 
-  Optional<List<Contract_Term>> term();
+  Optional<List<Contract_Rule>> rule();
+
+  Optional<List<Reference>> subject();
 
   Optional<CodeableConcept> contentDerivative();
 
   Optional<Reference> topicReference();
 
-  Optional<CodeableConcept> legalState();
-
-  Optional<List<Contract_Friendly>> friendly();
-
-  Optional<Attachment> legallyBindingAttachment();
-
-  Optional<CodeableConcept> scope();
-
-  Optional<String> version();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> supportingInfo();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<CodeableConcept>> subType();
-
-  Optional<String> name();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> title();
-
-  Optional<Code> language();
-
-  Optional<List<Reference>> authority();
-
-  Optional<List<Reference>> site();
-
-  Optional<String> subtitle();
-
-  Optional<List<Contract_Signer>> signer();
+  Optional<CodeableConcept> type();
 
   String resourceType();
 
-  Optional<DateTime> issued();
-
-  Optional<Uri> instantiatesUri();
-
-  Optional<CodeableConcept> type();
-
-  Optional<Uri> url();
-
-  Optional<Meta> meta();
-
-  Optional<List<Contract_Rule>> rule();
-
-  Optional<List<Reference>> domain();
-
-  Optional<Reference> legallyBindingReference();
-
-  Optional<Code> status();
-
-  Optional<List<Contract_Legal>> legal();
-
-  Optional<Narrative> text();
-
-  Optional<List<Reference>> subject();
-
-  Optional<Id> id();
-
-  Optional<CodeableConcept> expirationType();
-
-  Optional<Period> applies();
-
-  Optional<List<String>> alias();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Reference>> relevantHistory();
 
-  Optional<Reference> instantiatesCanonical();
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Uri> url();
+
+  Optional<Id> id();
+
+  Optional<String> name();
+
+  Optional<List<CodeableConcept>> subType();
+
+  Optional<List<Reference>> supportingInfo();
+
+  Optional<Reference> legallyBindingReference();
+
+  Optional<List<Contract_Term>> term();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> topicCodeableConcept();
+
+  Optional<Contract_ContentDefinition> contentDefinition();
+
+  Optional<List<Contract_Legal>> legal();
+
+  Optional<List<Reference>> domain();
+
+  Optional<CodeableConcept> expirationType();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Contract_Signer>> signer();
+
+  Optional<Uri> instantiatesUri();
+
+  Optional<String> subtitle();
+
+  Optional<Reference> instantiatesCanonical();
+
+  Optional<List<Reference>> authority();
+
+  Optional<List<String>> alias();
+
+  Optional<String> version();
+
+  Optional<Reference> author();
+
+  Optional<Attachment> legallyBindingAttachment();
+
+  Optional<Narrative> text();
+
+  Optional<DateTime> issued();
+
+  Optional<List<Contract_Friendly>> friendly();
+
+  Optional<List<Reference>> site();
+
+  Optional<CodeableConcept> legalState();
+
+  Optional<Period> applies();
 
   static ImmutableContract.ResourceTypeBuildStage builder() {
     return ImmutableContract.builder();

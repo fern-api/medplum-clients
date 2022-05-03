@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeSystem_Filter {
-  Optional<Code> code();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Code>> operator();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
-
   Optional<String> value();
 
   Optional<String> description();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> code();
+
+  Optional<String> id();
+
+  Optional<List<Code>> operator();
 
   static ImmutableCodeSystem_Filter.Builder builder() {
     return ImmutableCodeSystem_Filter.builder();

@@ -21,13 +21,13 @@ public interface Measure_Component {
 
   Optional<String> description();
 
+  Optional<CodeableConcept> code();
+
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> code();
 
   static ImmutableMeasure_Component.CriteriaBuildStage builder() {
     return ImmutableMeasure_Component.builder();

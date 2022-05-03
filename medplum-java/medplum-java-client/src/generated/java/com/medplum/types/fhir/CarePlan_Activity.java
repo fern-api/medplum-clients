@@ -17,9 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan_Activity {
-  Optional<Reference> reference();
-
-  Optional<List<CodeableConcept>> outcomeCodeableConcept();
+  Optional<List<Extension>> extension();
 
   Optional<List<Reference>> outcomeReference();
 
@@ -27,7 +25,9 @@ public interface CarePlan_Activity {
 
   Optional<List<Annotation>> progress();
 
-  Optional<List<Extension>> extension();
+  Optional<List<CodeableConcept>> outcomeCodeableConcept();
+
+  Optional<Reference> reference();
 
   Optional<String> id();
 

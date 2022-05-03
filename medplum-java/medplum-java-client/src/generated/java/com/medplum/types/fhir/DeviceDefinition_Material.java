@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_Material {
+  Optional<Boolean> alternate();
+
   Optional<Boolean> allergenicIndicator();
-
-  Optional<List<Extension>> extension();
-
-  CodeableConcept substance();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Boolean> alternate();
-
   Optional<String> id();
+
+  CodeableConcept substance();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableDeviceDefinition_Material.SubstanceBuildStage builder() {
     return ImmutableDeviceDefinition_Material.builder();

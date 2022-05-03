@@ -18,13 +18,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_ValidateCode {
-  Optional<Boolean> translations();
-
   Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Boolean> translations();
 
   static ImmutableTerminologyCapabilities_ValidateCode.Builder builder() {
     return ImmutableTerminologyCapabilities_ValidateCode.builder();

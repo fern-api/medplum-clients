@@ -17,35 +17,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Detail {
-  Optional<List<CodeableConcept>> programCode();
-
-  Optional<List<Extension>> extension();
-
-  Optional<PositiveInt> sequence();
-
-  Optional<CodeableConcept> category();
-
-  Optional<Decimal> factor();
-
-  Optional<Money> unitPrice();
-
-  Optional<Money> net();
-
   Optional<List<Reference>> udi();
 
   Optional<List<Claim_SubDetail>> subDetail();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Quantity> quantity();
 
-  CodeableConcept productOrService();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> revenue();
 
-  Optional<Quantity> quantity();
+  Optional<CodeableConcept> category();
+
+  Optional<Money> net();
+
+  Optional<Money> unitPrice();
+
+  Optional<PositiveInt> sequence();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> modifier();
 
   Optional<String> id();
 
-  Optional<List<CodeableConcept>> modifier();
+  Optional<Decimal> factor();
+
+  Optional<List<CodeableConcept>> programCode();
+
+  CodeableConcept productOrService();
 
   static ImmutableClaim_Detail.ProductOrServiceBuildStage builder() {
     return ImmutableClaim_Detail.builder();

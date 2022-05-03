@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Representation {
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
-  Optional<String> representation();
-
   Optional<Attachment> attachment();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> type();
+
+  Optional<String> representation();
 
   static ImmutableSubstanceSpecification_Representation.Builder builder() {
     return ImmutableSubstanceSpecification_Representation.builder();

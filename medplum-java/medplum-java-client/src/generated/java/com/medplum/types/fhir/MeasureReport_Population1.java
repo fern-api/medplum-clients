@@ -18,13 +18,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MeasureReport_Population1 {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> code();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<CodeableConcept> code();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> subjectResults();
 

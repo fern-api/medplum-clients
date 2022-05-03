@@ -18,27 +18,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface FamilyMemberHistory_Condition {
+  Optional<List<Extension>> modifierExtension();
+
+  CodeableConcept code();
+
+  Optional<List<Annotation>> note();
+
+  Optional<CodeableConcept> outcome();
+
   Optional<String> id();
 
+  Optional<Range> onsetRange();
+
   Optional<Age> onsetAge();
+
+  Optional<String> onsetString();
 
   Optional<Boolean> contributedToDeath();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> onsetString();
-
-  Optional<List<Extension>> modifierExtension();
-
-  CodeableConcept code();
-
-  Optional<Range> onsetRange();
-
-  Optional<List<Annotation>> note();
-
   Optional<Period> onsetPeriod();
-
-  Optional<CodeableConcept> outcome();
 
   static ImmutableFamilyMemberHistory_Condition.CodeBuildStage builder() {
     return ImmutableFamilyMemberHistory_Condition.builder();

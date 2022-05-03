@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_SupportedMessage {
-  Optional<List<Extension>> extension();
-
   Canonical definition();
 
-  Optional<Capabilitystatement_supportedmessageMode> mode();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Capabilitystatement_supportedmessageMode> mode();
 
   static ImmutableCapabilityStatement_SupportedMessage.DefinitionBuildStage builder() {
     return ImmutableCapabilityStatement_SupportedMessage.builder();

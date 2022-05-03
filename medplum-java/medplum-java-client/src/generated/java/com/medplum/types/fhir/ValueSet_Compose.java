@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Compose {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   List<ValueSet_Include> include();
 
-  Optional<String> id();
+  Optional<List<ValueSet_Include>> exclude();
 
   Optional<Boolean> inactive();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Date> lockedDate();
+  Optional<List<Extension>> extension();
 
-  Optional<List<ValueSet_Include>> exclude();
+  Optional<Date> lockedDate();
 
   static ImmutableValueSet_Compose.Builder builder() {
     return ImmutableValueSet_Compose.builder();

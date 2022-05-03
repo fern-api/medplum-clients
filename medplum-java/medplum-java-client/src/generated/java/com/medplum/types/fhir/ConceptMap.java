@@ -18,63 +18,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap {
-  Optional<Meta> meta();
-
-  Optional<Markdown> description();
-
-  Optional<String> sourceCanonical();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<String> sourceUri();
-
-  Optional<Markdown> copyright();
-
-  Optional<String> name();
-
-  Optional<String> publisher();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Boolean> experimental();
-
-  Optional<DateTime> date();
-
-  Optional<List<ConceptMap_Group>> group();
-
-  Optional<Markdown> purpose();
-
-  Optional<String> version();
-
   Optional<Narrative> text();
-
-  Optional<Identifier> identifier();
-
-  Optional<String> targetCanonical();
 
   Optional<ConceptmapStatus> status();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<String> sourceCanonical();
 
-  Optional<String> title();
+  String resourceType();
 
-  Optional<String> targetUri();
+  Optional<DateTime> date();
+
+  Optional<Id> id();
 
   Optional<List<ContactDetail>> contact();
 
-  Optional<Uri> url();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> language();
+  Optional<Markdown> purpose();
 
   Optional<List<Extension>> extension();
 
-  String resourceType();
+  Optional<String> title();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> description();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Identifier> identifier();
+
+  Optional<String> sourceUri();
+
+  Optional<String> version();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Markdown> copyright();
+
+  Optional<String> targetUri();
+
+  Optional<String> name();
+
+  Optional<Code> language();
+
+  Optional<String> targetCanonical();
+
+  Optional<Meta> meta();
+
+  Optional<List<ConceptMap_Group>> group();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Boolean> experimental();
+
+  Optional<String> publisher();
+
+  Optional<Uri> url();
 
   static ImmutableConceptMap.ResourceTypeBuildStage builder() {
     return ImmutableConceptMap.builder();

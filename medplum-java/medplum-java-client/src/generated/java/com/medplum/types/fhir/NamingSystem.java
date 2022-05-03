@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NamingSystem {
-  Optional<Code> language();
-
   Optional<List<UsageContext>> useContext();
-
-  Optional<CodeableConcept> type();
-
-  Optional<Markdown> description();
-
-  Optional<String> responsible();
 
   Optional<List<ContactDetail>> contact();
 
+  Optional<Code> language();
+
   Optional<String> usage();
 
+  Optional<Uri> implicitRules();
+
+  Optional<Markdown> description();
+
+  Optional<Narrative> text();
+
+  Optional<NamingsystemKind> kind();
+
+  Optional<Id> id();
+
+  Optional<Meta> meta();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<String> publisher();
+
+  Optional<String> responsible();
+
+  Optional<List<Extension>> extension();
 
   Optional<NamingsystemStatus> status();
 
   Optional<String> name();
 
-  String resourceType();
-
-  Optional<Meta> meta();
-
-  Optional<NamingsystemKind> kind();
-
-  Optional<DateTime> date();
-
-  Optional<Id> id();
-
-  Optional<Narrative> text();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> publisher();
-
-  Optional<Uri> implicitRules();
-
   List<NamingSystem_UniqueId> uniqueId();
+
+  Optional<CodeableConcept> type();
+
+  String resourceType();
+
+  Optional<DateTime> date();
 
   static ImmutableNamingSystem.ResourceTypeBuildStage builder() {
     return ImmutableNamingSystem.builder();

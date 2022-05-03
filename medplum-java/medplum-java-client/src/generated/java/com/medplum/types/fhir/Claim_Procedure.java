@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Procedure {
-  Optional<String> id();
-
-  Optional<List<Reference>> udi();
-
   Optional<List<Extension>> extension();
-
-  Optional<PositiveInt> sequence();
-
-  Optional<CodeableConcept> procedureCodeableConcept();
 
   Optional<List<CodeableConcept>> type();
 
   Optional<Reference> procedureReference();
 
+  Optional<PositiveInt> sequence();
+
+  Optional<CodeableConcept> procedureCodeableConcept();
+
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
   Optional<DateTime> date();
+
+  Optional<List<Reference>> udi();
 
   static ImmutableClaim_Procedure.Builder builder() {
     return ImmutableClaim_Procedure.builder();

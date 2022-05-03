@@ -17,9 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationAdministration_Performer {
-  Optional<CodeableConcept> function();
-
   Reference actor();
+
+  Optional<CodeableConcept> function();
 
   Optional<String> id();
 

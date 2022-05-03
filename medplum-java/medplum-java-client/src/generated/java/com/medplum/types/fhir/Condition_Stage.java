@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Condition_Stage {
-  Optional<List<Reference>> assessment();
-
   Optional<String> id();
+
+  Optional<CodeableConcept> summary();
 
   Optional<CodeableConcept> type();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Reference>> assessment();
 
-  Optional<CodeableConcept> summary();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Signer {
+  Optional<String> id();
+
+  List<Signature> signature();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<Extension>> extension();
 
   Coding type();
 
   Reference party();
-
-  Optional<List<Extension>> modifierExtension();
-
-  List<Signature> signature();
-
-  Optional<String> id();
 
   static ImmutableContract_Signer.TypeBuildStage builder() {
     return ImmutableContract_Signer.builder();

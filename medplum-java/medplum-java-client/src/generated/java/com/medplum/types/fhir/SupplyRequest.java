@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyRequest {
-  Optional<Reference> requester();
+  Optional<Meta> meta();
 
-  Optional<Reference> itemReference();
-
-  Optional<Timing> occurrenceTiming();
-
-  String resourceType();
-
-  Optional<Reference> deliverFrom();
-
-  Optional<List<Reference>> reasonReference();
-
-  Quantity quantity();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<CodeableConcept> category();
-
-  Optional<List<Reference>> supplier();
-
-  Optional<List<Identifier>> identifier();
+  Optional<Code> priority();
 
   Optional<Period> occurrencePeriod();
 
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> requester();
+
   Optional<Code> language();
+
+  Optional<CodeableConcept> category();
+
+  Optional<Reference> deliverTo();
+
+  Optional<List<Reference>> supplier();
+
+  Optional<Reference> deliverFrom();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<Narrative> text();
+
+  Optional<List<SupplyRequest_Parameter>> parameter();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> occurrenceDateTime();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> itemReference();
 
   Optional<List<Extension>> extension();
 
   Optional<Id> id();
 
-  Optional<Uri> implicitRules();
+  Optional<CodeableConcept> itemCodeableConcept();
+
+  Quantity quantity();
+
+  Optional<Timing> occurrenceTiming();
 
   Optional<SupplyrequestStatus> status();
 
-  Optional<Narrative> text();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> deliverTo();
-
-  Optional<List<SupplyRequest_Parameter>> parameter();
-
-  Optional<CodeableConcept> itemCodeableConcept();
-
-  Optional<Code> priority();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> authoredOn();
+  Optional<List<Reference>> reasonReference();
 
   static ImmutableSupplyRequest.ResourceTypeBuildStage builder() {
     return ImmutableSupplyRequest.builder();

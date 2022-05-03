@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ActivityDefinition_DynamicValue {
-  Expression expression();
+  Optional<String> path();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> path();
+  Optional<List<Extension>> extension();
+
+  Expression expression();
 
   static ImmutableActivityDefinition_DynamicValue.ExpressionBuildStage builder() {
     return ImmutableActivityDefinition_DynamicValue.builder();

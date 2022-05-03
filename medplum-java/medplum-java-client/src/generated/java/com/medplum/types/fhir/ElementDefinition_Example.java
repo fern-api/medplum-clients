@@ -19,113 +19,113 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Example {
-  Optional<String> valueCode();
-
-  Optional<String> label();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<String> id();
-
-  Optional<Timing> valueTiming();
-
-  Optional<String> valueBase64Binary();
-
-  Optional<Reference> valueReference();
-
-  Optional<String> valueDateTime();
-
-  Optional<Double> valueDecimal();
-
-  Optional<HumanName> valueHumanName();
-
-  Optional<ContactDetail> valueContactDetail();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Address> valueAddress();
-
-  Optional<CodeableConcept> valueCodeableConcept();
-
-  Optional<Range> valueRange();
-
-  Optional<String> valueDate();
-
-  Optional<Expression> valueExpression();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<String> valueCanonical();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<String> valueMarkdown();
-
-  Optional<ContactPoint> valueContactPoint();
-
-  Optional<String> valueId();
-
-  Optional<Annotation> valueAnnotation();
+  Optional<Age> valueAge();
 
   Optional<String> valueString();
 
-  Optional<Signature> valueSignature();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<Ratio> valueRatio();
-
-  Optional<Coding> valueCoding();
-
-  Optional<Double> valueInteger();
-
   Optional<String> valueUri();
-
-  Optional<String> valueTime();
-
-  Optional<String> valueUuid();
-
-  Optional<Distance> valueDistance();
-
-  Optional<Period> valuePeriod();
-
-  Optional<String> valueOid();
-
-  Optional<String> valueInstant();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<Money> valueMoney();
-
-  Optional<String> valueUrl();
-
-  Optional<Double> valuePositiveInt();
 
   Optional<ParameterDefinition> valueParameterDefinition();
 
-  Optional<Double> valueUnsignedInt();
+  Optional<Boolean> valueBoolean();
 
-  Optional<SampledData> valueSampledData();
+  Optional<String> valueMarkdown();
+
+  Optional<String> valueCanonical();
+
+  Optional<Ratio> valueRatio();
 
   Optional<UsageContext> valueUsageContext();
 
-  Optional<RelatedArtifact> valueRelatedArtifact();
+  Optional<Double> valueDecimal();
 
-  Optional<Age> valueAge();
+  Optional<Range> valueRange();
 
-  Optional<Count> valueCount();
+  Optional<Double> valuePositiveInt();
+
+  Optional<String> valueUuid();
+
+  Optional<Contributor> valueContributor();
+
+  Optional<String> id();
 
   Optional<Meta> valueMeta();
 
+  Optional<String> valueInstant();
+
+  Optional<String> valueDate();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<String> label();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> valueOid();
+
+  Optional<Timing> valueTiming();
+
+  Optional<Period> valuePeriod();
+
   Optional<Duration> valueDuration();
 
+  Optional<String> valueDateTime();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<Signature> valueSignature();
+
   Optional<DataRequirement> valueDataRequirement();
+
+  Optional<String> valueId();
+
+  Optional<String> valueCode();
+
+  Optional<ContactDetail> valueContactDetail();
+
+  Optional<Annotation> valueAnnotation();
+
+  Optional<String> valueUrl();
+
+  Optional<Distance> valueDistance();
+
+  Optional<Expression> valueExpression();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<SampledData> valueSampledData();
+
+  Optional<Money> valueMoney();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<Address> valueAddress();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<TriggerDefinition> valueTriggerDefinition();
+
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<String> valueTime();
+
+  Optional<Double> valueInteger();
+
+  Optional<Reference> valueReference();
+
+  Optional<HumanName> valueHumanName();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<Count> valueCount();
+
+  Optional<Coding> valueCoding();
 
   static ImmutableElementDefinition_Example.Builder builder() {
     return ImmutableElementDefinition_Example.builder();

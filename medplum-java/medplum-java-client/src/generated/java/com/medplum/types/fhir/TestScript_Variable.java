@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Variable {
-  Optional<Id> sourceId();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> description();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> expression();
-
-  Optional<String> id();
-
   Optional<String> name();
-
-  Optional<String> headerField();
-
-  Optional<String> hint();
 
   Optional<String> defaultValue();
 
+  Optional<String> id();
+
+  Optional<Id> sourceId();
+
+  Optional<String> description();
+
   Optional<String> path();
+
+  Optional<String> hint();
+
+  Optional<String> expression();
+
+  Optional<String> headerField();
 
   static ImmutableTestScript_Variable.Builder builder() {
     return ImmutableTestScript_Variable.builder();

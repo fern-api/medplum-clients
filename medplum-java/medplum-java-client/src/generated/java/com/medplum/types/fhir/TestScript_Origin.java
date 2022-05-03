@@ -18,15 +18,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Origin {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
+  Optional<Integer> index();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Integer> index();
-
   Coding profile();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   static ImmutableTestScript_Origin.ProfileBuildStage builder() {
     return ImmutableTestScript_Origin.builder();
