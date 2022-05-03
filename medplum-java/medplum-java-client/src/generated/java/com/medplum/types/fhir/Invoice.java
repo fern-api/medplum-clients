@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Invoice {
-  String resourceType();
+  Optional<List<ResourceList>> contained();
 
-  Optional<String> cancelledReason();
+  Optional<List<Identifier>> identifier();
+
+  Optional<DateTime> date();
+
+  Optional<Code> language();
+
+  Optional<List<Invoice_Participant>> participant();
+
+  Optional<List<Annotation>> note();
+
+  Optional<InvoiceStatus> status();
+
+  Optional<Markdown> paymentTerms();
+
+  Optional<Reference> issuer();
 
   Optional<Money> totalNet();
 
   Optional<Reference> subject();
 
-  Optional<List<ResourceList>> contained();
-
   Optional<Reference> recipient();
 
-  Optional<List<Invoice_PriceComponent>> totalPriceComponent();
+  Optional<CodeableConcept> type();
 
-  Optional<InvoiceStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Invoice_Participant>> participant();
+  Optional<Reference> account();
 
   Optional<Narrative> text();
 
   Optional<Money> totalGross();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> cancelledReason();
+
+  Optional<List<Extension>> extension();
+
   Optional<List<Invoice_LineItem>> lineItem();
-
-  Optional<Id> id();
-
-  Optional<Reference> issuer();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<List<Annotation>> note();
 
   Optional<Meta> meta();
 
-  Optional<CodeableConcept> type();
+  Optional<List<Invoice_PriceComponent>> totalPriceComponent();
 
-  Optional<DateTime> date();
+  Optional<Uri> implicitRules();
 
-  Optional<List<Identifier>> identifier();
+  String resourceType();
 
-  Optional<Markdown> paymentTerms();
-
-  Optional<Reference> account();
-
-  Optional<List<Extension>> extension();
+  Optional<Id> id();
 
   static ImmutableInvoice.ResourceTypeBuildStage builder() {
     return ImmutableInvoice.builder();

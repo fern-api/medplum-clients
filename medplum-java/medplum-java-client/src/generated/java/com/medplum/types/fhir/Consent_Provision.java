@@ -18,34 +18,34 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent_Provision {
-  @JsonProperty("class")
-  Optional<List<Coding>> _class();
+  Optional<List<Consent_Provision>> provision();
 
-  Optional<List<Coding>> purpose();
+  Optional<List<Consent_Actor>> actor();
 
   Optional<Period> dataPeriod();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
   Optional<Consent_provisionType> type();
 
-  Optional<List<Consent_Data>> data();
-
-  Optional<List<CodeableConcept>> code();
-
-  Optional<List<Coding>> securityLabel();
-
-  Optional<String> id();
-
-  Optional<List<Consent_Provision>> provision();
-
-  Optional<List<CodeableConcept>> action();
+  @JsonProperty("class")
+  Optional<List<Coding>> _class();
 
   Optional<Period> period();
 
-  Optional<List<Consent_Actor>> actor();
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> action();
+
+  Optional<List<Coding>> purpose();
+
+  Optional<List<Consent_Data>> data();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Coding>> securityLabel();
+
+  Optional<List<CodeableConcept>> code();
 
   static ImmutableConsent_Provision.Builder builder() {
     return ImmutableConsent_Provision.builder();

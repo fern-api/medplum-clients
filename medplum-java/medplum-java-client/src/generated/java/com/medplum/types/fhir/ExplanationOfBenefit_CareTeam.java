@@ -18,21 +18,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_CareTeam {
-  Reference provider();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<PositiveInt> sequence();
 
   Optional<CodeableConcept> qualification();
 
-  Optional<List<Extension>> extension();
+  Reference provider();
 
   Optional<Boolean> responsible();
-
-  Optional<PositiveInt> sequence();
 
   Optional<CodeableConcept> role();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   static ImmutableExplanationOfBenefit_CareTeam.ProviderBuildStage builder() {
     return ImmutableExplanationOfBenefit_CareTeam.builder();

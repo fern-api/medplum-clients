@@ -18,29 +18,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationOutcome {
-  List<OperationOutcome_Issue> issue();
-
-  Optional<Integer> status();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
+  Optional<ResourceList> resource();
 
   String resourceType();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<Narrative> text();
+
   Optional<Id> id();
 
-  Optional<Meta> meta();
+  Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> extension();
+  Optional<Integer> status();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<ResourceList> resource();
+  Optional<List<Extension>> extension();
 
-  Optional<Narrative> text();
+  List<OperationOutcome_Issue> issue();
+
+  Optional<Meta> meta();
+
+  Optional<Code> language();
 
   static ImmutableOperationOutcome.ResourceTypeBuildStage builder() {
     return ImmutableOperationOutcome.builder();

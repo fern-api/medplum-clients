@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageHeader_Source {
-  Optional<ContactPoint> contact();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<String> name();
 
-  Optional<List<Extension>> extension();
+  Optional<String> version();
+
+  Optional<String> id();
+
+  Optional<Url> endpoint();
+
+  Optional<ContactPoint> contact();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> software();
-
-  Optional<String> version();
-
-  Optional<Url> endpoint();
 
   static ImmutableMessageHeader_Source.Builder builder() {
     return ImmutableMessageHeader_Source.builder();

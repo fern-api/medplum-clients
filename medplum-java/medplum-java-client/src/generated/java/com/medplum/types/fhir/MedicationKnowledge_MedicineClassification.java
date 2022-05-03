@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_MedicineClassification {
-  CodeableConcept type();
+  Optional<String> id();
 
-  Optional<List<CodeableConcept>> classification();
+  CodeableConcept type();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> classification();
 
   static ImmutableMedicationKnowledge_MedicineClassification.TypeBuildStage builder() {
     return ImmutableMedicationKnowledge_MedicineClassification.builder();

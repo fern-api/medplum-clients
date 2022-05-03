@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_CareTeam {
-  Optional<PositiveInt> sequence();
+  Optional<CodeableConcept> role();
 
-  Optional<CodeableConcept> qualification();
+  Optional<String> id();
+
+  Optional<PositiveInt> sequence();
 
   Optional<List<Extension>> modifierExtension();
 
   Reference provider();
 
-  Optional<CodeableConcept> role();
-
   Optional<Boolean> responsible();
 
-  Optional<String> id();
+  Optional<CodeableConcept> qualification();
 
   Optional<List<Extension>> extension();
 

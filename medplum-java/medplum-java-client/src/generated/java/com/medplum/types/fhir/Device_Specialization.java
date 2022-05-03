@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Device_Specialization {
+  CodeableConcept systemType();
+
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  CodeableConcept systemType();
+  Optional<String> id();
 
   Optional<String> version();
-
-  Optional<String> id();
 
   static ImmutableDevice_Specialization.SystemTypeBuildStage builder() {
     return ImmutableDevice_Specialization.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition_RelatesTo {
-  Optional<Reference> targetReference();
+  Optional<Identifier> targetIdentifier();
 
-  Optional<String> id();
+  Optional<Code> code();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Code> code();
+  Optional<String> id();
 
-  Optional<Identifier> targetIdentifier();
+  Optional<Reference> targetReference();
 
   static ImmutableComposition_RelatesTo.Builder builder() {
     return ImmutableComposition_RelatesTo.builder();

@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface CoverageEligibilityRequest_Diagnosis {
   Optional<Reference> diagnosisReference();
 
+  Optional<CodeableConcept> diagnosisCodeableConcept();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> diagnosisCodeableConcept();
 
   Optional<List<Extension>> modifierExtension();
 

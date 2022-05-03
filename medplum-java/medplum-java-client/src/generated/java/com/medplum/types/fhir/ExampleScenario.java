@@ -18,57 +18,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario {
-  Optional<String> version();
-
-  Optional<Id> id();
-
-  Optional<String> name();
-
-  String resourceType();
-
   Optional<List<UsageContext>> useContext();
-
-  Optional<List<Canonical>> workflow();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<ExamplescenarioStatus> status();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
 
   Optional<List<ExampleScenario_Instance>> instance();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Canonical>> workflow();
 
-  Optional<List<ExampleScenario_Process>> process();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> url();
-
-  Optional<Meta> meta();
-
-  Optional<String> publisher();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<Identifier>> identifier();
+  Optional<String> name();
 
   Optional<Markdown> copyright();
 
   Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<List<ExampleScenario_Actor>> actor();
+  Optional<Meta> meta();
 
-  Optional<Boolean> experimental();
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<DateTime> date();
 
   Optional<Markdown> purpose();
+
+  Optional<ExamplescenarioStatus> status();
+
+  Optional<Narrative> text();
+
+  Optional<String> publisher();
+
+  Optional<Uri> url();
+
+  Optional<List<ExampleScenario_Actor>> actor();
+
+  Optional<String> version();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<ExampleScenario_Process>> process();
+
+  Optional<Code> language();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<ContactDetail>> contact();
+
+  String resourceType();
+
+  Optional<Id> id();
 
   static ImmutableExampleScenario.ResourceTypeBuildStage builder() {
     return ImmutableExampleScenario.builder();

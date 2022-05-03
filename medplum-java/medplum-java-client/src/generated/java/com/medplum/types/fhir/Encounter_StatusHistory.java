@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_StatusHistory {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<Encounter_statushistoryStatus> status();
-
   Period period();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Encounter_statushistoryStatus> status();
 
   static ImmutableEncounter_StatusHistory.PeriodBuildStage builder() {
     return ImmutableEncounter_StatusHistory.builder();

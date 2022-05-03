@@ -21,11 +21,11 @@ public interface InsurancePlan_Limit {
 
   Optional<CodeableConcept> code();
 
+  Optional<String> id();
+
   Optional<List<Extension>> modifierExtension();
 
   Optional<Quantity> value();
-
-  Optional<String> id();
 
   static ImmutableInsurancePlan_Limit.Builder builder() {
     return ImmutableInsurancePlan_Limit.builder();

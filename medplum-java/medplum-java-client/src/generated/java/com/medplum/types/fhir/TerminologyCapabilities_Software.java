@@ -17,6 +17,8 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TerminologyCapabilities_Software {
+  Optional<String> version();
+
   Optional<String> name();
 
   Optional<String> id();
@@ -24,8 +26,6 @@ public interface TerminologyCapabilities_Software {
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> version();
 
   static ImmutableTerminologyCapabilities_Software.Builder builder() {
     return ImmutableTerminologyCapabilities_Software.builder();

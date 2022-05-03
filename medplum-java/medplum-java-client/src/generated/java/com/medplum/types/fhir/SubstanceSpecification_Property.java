@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Property {
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<Extension>> extension();
 
-  Optional<String> amountString();
-
-  Optional<String> parameters();
-
   Optional<CodeableConcept> category();
-
-  Optional<Reference> definingSubstanceReference();
 
   Optional<CodeableConcept> definingSubstanceCodeableConcept();
 
   Optional<Quantity> amountQuantity();
 
+  Optional<String> parameters();
+
+  Optional<String> amountString();
+
   Optional<CodeableConcept> code();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
+  Optional<Reference> definingSubstanceReference();
 
   static ImmutableSubstanceSpecification_Property.Builder builder() {
     return ImmutableSubstanceSpecification_Property.builder();

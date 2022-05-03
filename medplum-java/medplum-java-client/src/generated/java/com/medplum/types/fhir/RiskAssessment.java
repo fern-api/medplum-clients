@@ -17,61 +17,61 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskAssessment {
-  Optional<CodeableConcept> code();
-
-  Optional<Reference> encounter();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<RiskAssessment_Prediction>> prediction();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<String> mitigation();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Code> status();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> performer();
 
-  Optional<Reference> condition();
-
   Optional<Meta> meta();
-
-  Optional<List<Reference>> basis();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Narrative> text();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<List<Identifier>> identifier();
 
   Optional<List<Extension>> extension();
 
+  Optional<List<ResourceList>> contained();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<List<RiskAssessment_Prediction>> prediction();
+
+  Reference subject();
+
+  Optional<Reference> condition();
+
+  Optional<Reference> parent();
+
+  Optional<List<Reference>> basis();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> basedOn();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<CodeableConcept> method();
+
+  Optional<Reference> encounter();
+
+  Optional<String> mitigation();
+
+  Optional<CodeableConcept> code();
+
   Optional<Code> language();
+
+  Optional<Code> status();
 
   String resourceType();
 
-  Reference subject();
+  Optional<Uri> implicitRules();
 
   Optional<Id> id();
 
   Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<CodeableConcept> method();
+  Optional<List<Identifier>> identifier();
 
-  Optional<Reference> parent();
+  Optional<List<Reference>> reasonReference();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Annotation>> note();
 
-  Optional<Reference> basedOn();
-
-  static ImmutableRiskAssessment.ResourceTypeBuildStage builder() {
+  static ImmutableRiskAssessment.SubjectBuildStage builder() {
     return ImmutableRiskAssessment.builder();
   }
 }

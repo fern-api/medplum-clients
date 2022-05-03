@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_Diagnosis {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Reference condition();
 
-  Optional<PositiveInt> rank();
-
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<CodeableConcept> use();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<PositiveInt> rank();
 
   static ImmutableEncounter_Diagnosis.ConditionBuildStage builder() {
     return ImmutableEncounter_Diagnosis.builder();

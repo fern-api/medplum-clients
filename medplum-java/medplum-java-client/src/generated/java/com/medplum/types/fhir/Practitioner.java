@@ -18,43 +18,43 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Practitioner {
+  Optional<Id> id();
+
+  Optional<List<ContactPoint>> telecom();
+
   Optional<Uri> implicitRules();
 
+  Optional<List<Attachment>> photo();
+
+  Optional<List<CodeableConcept>> communication();
+
+  Optional<Boolean> active();
+
+  Optional<Code> language();
+
+  Optional<PractitionerGender> gender();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Narrative> text();
+
   Optional<List<HumanName>> name();
+
+  Optional<List<Address>> address();
+
+  Optional<List<Practitioner_Qualification>> qualification();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Date> birthDate();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Narrative> text();
-
-  Optional<Boolean> active();
-
-  Optional<PractitionerGender> gender();
-
-  Optional<List<Attachment>> photo();
-
-  Optional<Code> language();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Address>> address();
-
-  Optional<List<CodeableConcept>> communication();
-
-  Optional<List<Practitioner_Qualification>> qualification();
-
-  Optional<Id> id();
-
-  String resourceType();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Meta> meta();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<ContactPoint>> telecom();
+  String resourceType();
 
   static ImmutablePractitioner.ResourceTypeBuildStage builder() {
     return ImmutablePractitioner.builder();

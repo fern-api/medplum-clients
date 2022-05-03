@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Mapping {
-  Optional<String> id();
-
   Optional<String> map();
-
-  Optional<String> comment();
 
   Optional<List<Extension>> extension();
 
-  Optional<Code> language();
+  Optional<String> comment();
+
+  Optional<String> id();
+
+  Optional<Id> identity();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Id> identity();
+  Optional<Code> language();
 
   static ImmutableElementDefinition_Mapping.Builder builder() {
     return ImmutableElementDefinition_Mapping.builder();

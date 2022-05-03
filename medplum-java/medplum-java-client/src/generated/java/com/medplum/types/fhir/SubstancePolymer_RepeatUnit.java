@@ -19,19 +19,19 @@ import org.immutables.value.Value;
 public interface SubstancePolymer_RepeatUnit {
   Optional<CodeableConcept> orientationOfPolymerisation();
 
+  Optional<List<SubstancePolymer_DegreeOfPolymerisation>> degreeOfPolymerisation();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> repeatUnit();
+
+  Optional<SubstanceAmount> amount();
+
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> repeatUnit();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<SubstancePolymer_DegreeOfPolymerisation>> degreeOfPolymerisation();
-
   Optional<List<SubstancePolymer_StructuralRepresentation>> structuralRepresentation();
-
-  Optional<SubstanceAmount> amount();
 
   static ImmutableSubstancePolymer_RepeatUnit.Builder builder() {
     return ImmutableSubstancePolymer_RepeatUnit.builder();

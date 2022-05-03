@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SpecimenDefinition_Additive {
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<CodeableConcept> additiveCodeableConcept();
 
   Optional<Reference> additiveReference();
 
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> additiveCodeableConcept();
+  Optional<String> id();
 
   static ImmutableSpecimenDefinition_Additive.Builder builder() {
     return ImmutableSpecimenDefinition_Additive.builder();

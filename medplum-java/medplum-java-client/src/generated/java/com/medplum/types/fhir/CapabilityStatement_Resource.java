@@ -18,45 +18,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Resource {
-  Optional<Boolean> conditionalCreate();
+  Optional<String> id();
 
-  Optional<List<Canonical>> supportedProfile();
+  Optional<Boolean> updateCreate();
+
+  Optional<List<String>> searchRevInclude();
+
+  Optional<Capabilitystatement_resourceConditionalread> conditionalRead();
 
   Optional<List<String>> searchInclude();
 
   Optional<List<Extension>> extension();
 
-  Optional<Markdown> documentation();
-
-  Optional<Capabilitystatement_resourceConditionalread> conditionalRead();
+  Optional<Canonical> profile();
 
   Optional<Boolean> readHistory();
 
-  Optional<Boolean> conditionalUpdate();
-
-  Optional<List<CapabilityStatement_SearchParam>> searchParam();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Canonical> profile();
-
-  Optional<Capabilitystatement_resourceConditionaldelete> conditionalDelete();
-
-  Optional<String> id();
-
-  Optional<Code> type();
-
-  Optional<Boolean> updateCreate();
-
-  Optional<Capabilitystatement_resourceVersioning> versioning();
+  Optional<List<Capabilitystatement_resourceReferencepolicyItem>> referencePolicy();
 
   Optional<List<CapabilityStatement_Operation>> operation();
 
+  Optional<List<CapabilityStatement_SearchParam>> searchParam();
+
+  Optional<List<Canonical>> supportedProfile();
+
+  Optional<Capabilitystatement_resourceVersioning> versioning();
+
+  Optional<Boolean> conditionalCreate();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Markdown> documentation();
+
+  Optional<Capabilitystatement_resourceConditionaldelete> conditionalDelete();
+
+  Optional<Code> type();
+
   Optional<List<CapabilityStatement_Interaction>> interaction();
 
-  Optional<List<String>> searchRevInclude();
-
-  Optional<List<Capabilitystatement_resourceReferencepolicyItem>> referencePolicy();
+  Optional<Boolean> conditionalUpdate();
 
   static ImmutableCapabilityStatement_Resource.Builder builder() {
     return ImmutableCapabilityStatement_Resource.builder();

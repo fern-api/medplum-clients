@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AuditEvent_Detail {
-  Optional<String> valueString();
-
   Optional<String> id();
 
-  Optional<String> type();
-
-  Optional<String> valueBase64Binary();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> valueString();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<String> type();
 
   static ImmutableAuditEvent_Detail.Builder builder() {
     return ImmutableAuditEvent_Detail.builder();

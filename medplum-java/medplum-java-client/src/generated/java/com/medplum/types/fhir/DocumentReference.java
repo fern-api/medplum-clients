@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference {
-  Optional<Meta> meta();
-
-  Optional<Reference> custodian();
-
-  Optional<CodeableConcept> type();
-
-  Optional<String> description();
-
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> securityLabel();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Identifier>> identifier();
 
   Optional<Reference> subject();
 
-  Optional<List<Reference>> author();
-
-  Optional<Reference> authenticator();
-
   Optional<List<ResourceList>> contained();
-
-  List<DocumentReference_Content> content();
-
-  Optional<Identifier> masterIdentifier();
-
-  Optional<Narrative> text();
-
-  Optional<List<DocumentReference_RelatesTo>> relatesTo();
-
-  Optional<DocumentreferenceStatus> status();
-
-  Optional<Instant> date();
-
-  Optional<Uri> implicitRules();
 
   Optional<Code> docStatus();
 
-  String resourceType();
+  Optional<Code> language();
 
-  Optional<List<Identifier>> identifier();
+  Optional<CodeableConcept> type();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<CodeableConcept>> securityLabel();
+
+  Optional<Id> id();
+
+  Optional<Identifier> masterIdentifier();
+
+  Optional<Reference> custodian();
 
   Optional<DocumentReference_Context> context();
 
+  Optional<Reference> authenticator();
+
+  Optional<DocumentreferenceStatus> status();
+
+  Optional<Meta> meta();
+
+  Optional<Instant> date();
+
+  Optional<String> description();
+
+  List<DocumentReference_Content> content();
+
+  String resourceType();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> author();
+
+  Optional<List<DocumentReference_RelatesTo>> relatesTo();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableDocumentReference.ResourceTypeBuildStage builder() {
     return ImmutableDocumentReference.builder();

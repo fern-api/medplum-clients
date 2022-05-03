@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImmunizationEvaluation {
-  Optional<Uri> implicitRules();
+  Optional<Code> language();
 
-  Optional<String> series();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> authority();
-
-  Optional<String> description();
-
-  Reference immunizationEvent();
-
-  Optional<String> seriesDosesString();
-
-  Optional<Double> doseNumberPositiveInt();
-
-  Optional<List<Extension>> extension();
+  Optional<Meta> meta();
 
   Optional<Id> id();
 
   Optional<Code> status();
 
-  Optional<Double> seriesDosesPositiveInt();
+  Optional<String> description();
+
+  Optional<String> doseNumberString();
 
   Optional<DateTime> date();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> seriesDosesString();
+
+  Optional<Reference> authority();
+
+  CodeableConcept targetDisease();
 
   CodeableConcept doseStatus();
 
   Optional<List<CodeableConcept>> doseStatusReason();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Uri> implicitRules();
 
-  Optional<String> doseNumberString();
-
-  Reference patient();
-
-  CodeableConcept targetDisease();
-
-  Optional<Meta> meta();
-
-  Optional<List<Identifier>> identifier();
-
-  String resourceType();
+  Optional<Double> seriesDosesPositiveInt();
 
   Optional<Narrative> text();
 
-  Optional<Code> language();
+  String resourceType();
 
-  static ImmutableImmunizationEvaluation.ImmunizationEventBuildStage builder() {
+  Optional<List<Extension>> extension();
+
+  Optional<Double> doseNumberPositiveInt();
+
+  Reference patient();
+
+  Reference immunizationEvent();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<String> series();
+
+  static ImmutableImmunizationEvaluation.TargetDiseaseBuildStage builder() {
     return ImmutableImmunizationEvaluation.builder();
   }
 }

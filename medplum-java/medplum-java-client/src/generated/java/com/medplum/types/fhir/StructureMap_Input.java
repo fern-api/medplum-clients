@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface StructureMap_Input {
   Optional<List<Extension>> extension();
 
-  Optional<String> type();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Id> name();
 
   Optional<String> documentation();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Structuremap_inputMode> mode();
+
+  Optional<String> type();
 
   Optional<String> id();
-
-  Optional<Structuremap_inputMode> mode();
 
   static ImmutableStructureMap_Input.Builder builder() {
     return ImmutableStructureMap_Input.builder();

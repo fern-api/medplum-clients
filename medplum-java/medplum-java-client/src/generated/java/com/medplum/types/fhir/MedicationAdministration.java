@@ -17,67 +17,67 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationAdministration {
-  Optional<Id> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<CodeableConcept> category();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<Uri>> instantiates();
-
-  Optional<List<Reference>> supportingInformation();
-
-  Optional<List<CodeableConcept>> statusReason();
-
-  Optional<List<Reference>> eventHistory();
-
-  Optional<CodeableConcept> medicationCodeableConcept();
-
   Optional<List<ResourceList>> contained();
-
-  Optional<MedicationAdministration_Dosage> dosage();
-
-  Optional<Narrative> text();
-
-  Optional<Meta> meta();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<Reference> medicationReference();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Code> status();
-
-  String resourceType();
-
-  Optional<List<MedicationAdministration_Performer>> performer();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> effectiveDateTime();
-
-  Optional<Code> language();
 
   Optional<Reference> request();
 
+  Optional<CodeableConcept> category();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<Reference>> eventHistory();
+
   Reference subject();
 
-  Optional<List<Reference>> partOf();
+  Optional<Period> effectivePeriod();
 
-  Optional<List<Reference>> device();
+  Optional<List<Extension>> extension();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Uri>> instantiates();
 
   Optional<Reference> context();
 
-  static ImmutableMedicationAdministration.ResourceTypeBuildStage builder() {
+  String resourceType();
+
+  Optional<MedicationAdministration_Dosage> dosage();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<String> effectiveDateTime();
+
+  Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> medicationReference();
+
+  Optional<Code> status();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> language();
+
+  Optional<List<MedicationAdministration_Performer>> performer();
+
+  Optional<List<Reference>> supportingInformation();
+
+  Optional<CodeableConcept> medicationCodeableConcept();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<CodeableConcept>> statusReason();
+
+  Optional<List<Reference>> device();
+
+  static ImmutableMedicationAdministration.SubjectBuildStage builder() {
     return ImmutableMedicationAdministration.builder();
   }
 }

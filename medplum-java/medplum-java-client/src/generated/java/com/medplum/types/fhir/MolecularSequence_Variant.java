@@ -18,23 +18,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_Variant {
+  Optional<String> cigar();
+
   Optional<String> id();
 
-  Optional<String> cigar();
+  Optional<List<Extension>> extension();
+
+  Optional<String> referenceAllele();
 
   Optional<Integer> end();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<Integer> start();
 
-  Optional<String> referenceAllele();
+  Optional<String> observedAllele();
 
   Optional<Reference> variantPointer();
-
-  Optional<String> observedAllele();
 
   static ImmutableMolecularSequence_Variant.Builder builder() {
     return ImmutableMolecularSequence_Variant.builder();

@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface Provenance_Entity {
   Optional<Provenance_entityRole> role();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
   Reference what();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Provenance_Agent>> agent();
+
+  Optional<String> id();
 
   static ImmutableProvenance_Entity.WhatBuildStage builder() {
     return ImmutableProvenance_Entity.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AdverseEvent_SuspectEntity {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<AdverseEvent_Causality>> causality();
 
   Reference instance();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableAdverseEvent_SuspectEntity.InstanceBuildStage builder() {
     return ImmutableAdverseEvent_SuspectEntity.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceAmount_ReferenceRange {
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Quantity> highLimit();
+  Optional<Quantity> lowLimit();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Quantity> lowLimit();
+  Optional<String> id();
+
+  Optional<Quantity> highLimit();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableSubstanceAmount_ReferenceRange.Builder builder() {
     return ImmutableSubstanceAmount_ReferenceRange.builder();

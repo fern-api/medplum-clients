@@ -20,15 +20,15 @@ import org.immutables.value.Value;
 public interface CoverageEligibilityRequest_Insurance {
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
   Reference coverage();
 
-  Optional<List<Extension>> extension();
+  Optional<String> businessArrangement();
 
   Optional<Boolean> focal();
 
-  Optional<String> id();
-
-  Optional<String> businessArrangement();
+  Optional<List<Extension>> extension();
 
   static ImmutableCoverageEligibilityRequest_Insurance.CoverageBuildStage builder() {
     return ImmutableCoverageEligibilityRequest_Insurance.builder();

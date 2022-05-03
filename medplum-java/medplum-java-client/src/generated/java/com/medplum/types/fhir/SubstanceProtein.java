@@ -18,31 +18,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceProtein {
-  Optional<List<Extension>> modifierExtension();
+  Optional<Integer> numberOfSubunits();
+
+  Optional<Id> id();
+
+  String resourceType();
+
+  Optional<Meta> meta();
 
   Optional<Code> language();
 
   Optional<List<SubstanceProtein_Subunit>> subunit();
 
-  String resourceType();
+  Optional<Uri> implicitRules();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<Id> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Narrative> text();
 
   Optional<List<String>> disulfideLinkage();
 
-  Optional<Integer> numberOfSubunits();
-
-  Optional<Uri> implicitRules();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> sequenceType();
-
-  Optional<Meta> meta();
 
   static ImmutableSubstanceProtein.ResourceTypeBuildStage builder() {
     return ImmutableSubstanceProtein.builder();

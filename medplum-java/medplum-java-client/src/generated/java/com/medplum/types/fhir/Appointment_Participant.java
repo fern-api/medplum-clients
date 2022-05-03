@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Appointment_Participant {
+  Optional<Appointment_participantStatus> status();
+
+  Optional<List<CodeableConcept>> type();
+
   Optional<String> id();
 
   Optional<Appointment_participantRequired> required();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> type();
+  Optional<Period> period();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Period> period();
-
   Optional<Reference> actor();
 
-  Optional<Appointment_participantStatus> status();
+  Optional<List<Extension>> extension();
 
   static ImmutableAppointment_Participant.Builder builder() {
     return ImmutableAppointment_Participant.builder();

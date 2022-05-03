@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Regulatory {
-  Reference regulatoryAuthority();
-
   Optional<List<MedicationKnowledge_Substitution>> substitution();
-
-  Optional<MedicationKnowledge_MaxDispense> maxDispense();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<MedicationKnowledge_MaxDispense> maxDispense();
+
   Optional<List<MedicationKnowledge_Schedule>> schedule();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Reference regulatoryAuthority();
 
   static ImmutableMedicationKnowledge_Regulatory.RegulatoryAuthorityBuildStage builder() {
     return ImmutableMedicationKnowledge_Regulatory.builder();

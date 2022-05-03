@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationOutcome_Issue {
+  Optional<CodeableConcept> details();
+
   Optional<Operationoutcome_issueSeverity> severity();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Operationoutcome_issueCode> code();
-
-  Optional<CodeableConcept> details();
-
-  Optional<String> id();
+  Optional<List<String>> expression();
 
   Optional<String> diagnostics();
 
-  Optional<List<String>> expression();
+  Optional<List<Extension>> extension();
 
   Optional<List<String>> location();
 
-  Optional<List<Extension>> extension();
+  Optional<Operationoutcome_issueCode> code();
+
+  Optional<String> id();
 
   static ImmutableOperationOutcome_Issue.Builder builder() {
     return ImmutableOperationOutcome_Issue.builder();

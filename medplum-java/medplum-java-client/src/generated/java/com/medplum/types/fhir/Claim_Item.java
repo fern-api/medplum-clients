@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Item {
-  Optional<CodeableConcept> bodySite();
-
-  Optional<List<PositiveInt>> procedureSequence();
-
-  Optional<Period> servicedPeriod();
-
-  Optional<List<PositiveInt>> diagnosisSequence();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> modifier();
-
-  Optional<Reference> locationReference();
-
-  Optional<CodeableConcept> category();
+  Optional<CodeableConcept> locationCodeableConcept();
 
   Optional<List<CodeableConcept>> programCode();
 
-  Optional<Quantity> quantity();
-
-  Optional<CodeableConcept> revenue();
-
-  Optional<Money> net();
-
-  Optional<Money> unitPrice();
-
-  Optional<List<PositiveInt>> careTeamSequence();
-
-  Optional<List<Reference>> udi();
-
-  Optional<List<Extension>> extension();
-
-  CodeableConcept productOrService();
-
-  Optional<String> id();
+  Optional<List<PositiveInt>> procedureSequence();
 
   Optional<List<PositiveInt>> informationSequence();
 
-  Optional<List<Reference>> encounter();
+  Optional<Money> net();
 
-  Optional<String> servicedDate();
+  Optional<Reference> locationReference();
 
-  Optional<CodeableConcept> locationCodeableConcept();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Claim_Detail>> detail();
+  Optional<CodeableConcept> category();
 
-  Optional<Address> locationAddress();
+  Optional<Decimal> factor();
 
   Optional<PositiveInt> sequence();
 
+  Optional<Money> unitPrice();
+
+  Optional<CodeableConcept> bodySite();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
+
+  Optional<CodeableConcept> revenue();
+
+  Optional<List<Reference>> encounter();
+
+  CodeableConcept productOrService();
+
+  Optional<Quantity> quantity();
+
+  Optional<List<PositiveInt>> careTeamSequence();
+
+  Optional<List<Claim_Detail>> detail();
+
+  Optional<Period> servicedPeriod();
+
+  Optional<Address> locationAddress();
+
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<List<Reference>> udi();
+
   Optional<List<CodeableConcept>> subSite();
 
-  Optional<Decimal> factor();
+  Optional<List<PositiveInt>> diagnosisSequence();
+
+  Optional<String> servicedDate();
 
   static ImmutableClaim_Item.ProductOrServiceBuildStage builder() {
     return ImmutableClaim_Item.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DetectedIssue_Evidence {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> code();
-
   Optional<String> id();
 
   Optional<List<Reference>> detail();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> code();
 
   static ImmutableDetectedIssue_Evidence.Builder builder() {
     return ImmutableDetectedIssue_Evidence.builder();

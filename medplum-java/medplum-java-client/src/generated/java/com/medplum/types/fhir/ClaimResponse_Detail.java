@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_Detail {
+  Optional<List<PositiveInt>> noteNumber();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ClaimResponse_SubDetail>> subDetail();
+
   Optional<String> id();
 
   Optional<PositiveInt> detailSequence();
 
-  Optional<List<PositiveInt>> noteNumber();
-
   List<ClaimResponse_Adjudication> adjudication();
-
-  Optional<List<ClaimResponse_SubDetail>> subDetail();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 

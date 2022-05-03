@@ -17,45 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Timing_Repeat {
-  Optional<Decimal> durationMax();
-
-  Optional<Timing_repeatPeriodunit> periodUnit();
-
   Optional<UnsignedInt> offset();
-
-  Optional<PositiveInt> frequency();
-
-  Optional<Decimal> periodMax();
-
-  Optional<String> id();
-
-  Optional<Duration> boundsDuration();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Code>> dayOfWeek();
-
-  Optional<PositiveInt> countMax();
-
-  Optional<Period> boundsPeriod();
-
-  Optional<Decimal> duration();
 
   Optional<List<Timing_repeatWhenItem>> when();
 
-  Optional<Range> boundsRange();
+  Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<Decimal> durationMax();
 
-  Optional<PositiveInt> count();
-
-  Optional<PositiveInt> frequencyMax();
+  Optional<Decimal> periodMax();
 
   Optional<List<Time>> timeOfDay();
 
+  Optional<Decimal> duration();
+
+  Optional<Range> boundsRange();
+
+  Optional<Duration> boundsDuration();
+
+  Optional<PositiveInt> frequencyMax();
+
   Optional<Decimal> period();
 
+  Optional<PositiveInt> countMax();
+
+  Optional<Timing_repeatPeriodunit> periodUnit();
+
+  Optional<List<Code>> dayOfWeek();
+
   Optional<Timing_repeatDurationunit> durationUnit();
+
+  Optional<PositiveInt> frequency();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Period> boundsPeriod();
+
+  Optional<PositiveInt> count();
 
   static ImmutableTiming_Repeat.Builder builder() {
     return ImmutableTiming_Repeat.builder();

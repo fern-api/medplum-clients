@@ -20,19 +20,19 @@ import org.immutables.value.Value;
 public interface TerminologyCapabilities_Expansion {
   Optional<Boolean> incomplete();
 
-  Optional<List<TerminologyCapabilities_Parameter>> parameter();
+  Optional<Markdown> textFilter();
 
-  Optional<String> id();
-
-  Optional<Boolean> paging();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Boolean> hierarchical();
 
-  Optional<Markdown> textFilter();
+  Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<TerminologyCapabilities_Parameter>> parameter();
+
+  Optional<Boolean> paging();
 
   static ImmutableTerminologyCapabilities_Expansion.Builder builder() {
     return ImmutableTerminologyCapabilities_Expansion.builder();

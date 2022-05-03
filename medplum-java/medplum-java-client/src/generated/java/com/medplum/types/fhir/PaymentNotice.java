@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PaymentNotice {
-  Money amount();
-
-  Optional<Reference> response();
-
-  Optional<List<Extension>> modifierExtension();
-
-  String resourceType();
-
-  Optional<CodeableConcept> paymentStatus();
+  Optional<Reference> request();
 
   Optional<Meta> meta();
 
-  Optional<Code> status();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> provider();
-
   Optional<Code> language();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> request();
-
-  Optional<DateTime> created();
-
-  Optional<Id> id();
-
-  Optional<Reference> payee();
-
-  Optional<List<Identifier>> identifier();
-
-  Reference recipient();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<Uri> implicitRules();
+  Optional<Reference> provider();
+
+  Optional<Reference> payee();
 
   Optional<Date> paymentDate();
 
+  Optional<CodeableConcept> paymentStatus();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Code> status();
+
+  Optional<Reference> response();
+
+  String resourceType();
+
+  Money amount();
+
+  Optional<DateTime> created();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Reference recipient();
+
   Reference payment();
 
-  static ImmutablePaymentNotice.AmountBuildStage builder() {
+  Optional<Id> id();
+
+  static ImmutablePaymentNotice.ResourceTypeBuildStage builder() {
     return ImmutablePaymentNotice.builder();
   }
 }

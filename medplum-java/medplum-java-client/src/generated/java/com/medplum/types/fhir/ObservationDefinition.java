@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ObservationDefinition {
-  Optional<Narrative> text();
+  Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> method();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Meta> meta();
-
-  Optional<List<Identifier>> identifier();
+  String resourceType();
 
   Optional<Code> language();
 
   Optional<Boolean> multipleResultsAllowed();
 
-  Optional<Id> id();
-
-  CodeableConcept code();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<String> preferredReportName();
-
-  Optional<Reference> criticalCodedValueSet();
-
-  Optional<Reference> validCodedValueSet();
-
-  Optional<Reference> abnormalCodedValueSet();
-
-  Optional<List<CodeableConcept>> category();
+  Optional<List<ObservationDefinition_QualifiedInterval>> qualifiedInterval();
 
   Optional<Reference> normalCodedValueSet();
 
+  Optional<Reference> criticalCodedValueSet();
+
+  Optional<Reference> abnormalCodedValueSet();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> validCodedValueSet();
+
   Optional<List<ObservationdefinitionPermitteddatatypeItem>> permittedDataType();
 
-  Optional<List<ObservationDefinition_QualifiedInterval>> qualifiedInterval();
+  Optional<List<CodeableConcept>> category();
 
-  Optional<ObservationDefinition_QuantitativeDetails> quantitativeDetails();
+  Optional<Id> id();
 
-  String resourceType();
+  Optional<String> preferredReportName();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> method();
 
-  static ImmutableObservationDefinition.CodeBuildStage builder() {
+  CodeableConcept code();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
+
+  Optional<ObservationDefinition_QuantitativeDetails> quantitativeDetails();
+
+  static ImmutableObservationDefinition.ResourceTypeBuildStage builder() {
     return ImmutableObservationDefinition.builder();
   }
 }

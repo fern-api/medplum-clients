@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface QuestionnaireResponse_Item {
-  Optional<List<QuestionnaireResponse_Answer>> answer();
+  Optional<List<Extension>> extension();
 
-  Optional<String> linkId();
-
-  Optional<String> text();
+  Optional<List<QuestionnaireResponse_Item>> item();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<Uri> definition();
+
+  Optional<String> linkId();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Uri> definition();
+  Optional<String> text();
 
-  Optional<List<QuestionnaireResponse_Item>> item();
+  Optional<List<QuestionnaireResponse_Answer>> answer();
 
   static ImmutableQuestionnaireResponse_Item.Builder builder() {
     return ImmutableQuestionnaireResponse_Item.builder();

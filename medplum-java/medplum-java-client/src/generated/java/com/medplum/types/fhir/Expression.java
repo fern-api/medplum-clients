@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Expression {
-  Optional<Id> name();
+  Optional<List<Extension>> extension();
 
   Optional<Uri> reference();
 
-  Optional<String> expression();
-
-  Optional<List<Extension>> extension();
+  Optional<ExpressionLanguage> language();
 
   Optional<String> id();
 
   Optional<String> description();
 
-  Optional<ExpressionLanguage> language();
+  Optional<Id> name();
+
+  Optional<String> expression();
 
   static ImmutableExpression.Builder builder() {
     return ImmutableExpression.builder();

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_SpecificCost {
-  Optional<List<InsurancePlan_Benefit1>> benefit();
+  CodeableConcept category();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
-  CodeableConcept category();
-
   Optional<List<Extension>> extension();
+
+  Optional<List<InsurancePlan_Benefit1>> benefit();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableInsurancePlan_SpecificCost.CategoryBuildStage builder() {
     return ImmutableInsurancePlan_SpecificCost.builder();

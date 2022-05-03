@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CompartmentDefinition_Resource {
-  Optional<String> documentation();
-
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<String>> param();
 
-  Optional<List<Extension>> extension();
-
   Optional<Code> code();
+
+  Optional<String> documentation();
 
   static ImmutableCompartmentDefinition_Resource.Builder builder() {
     return ImmutableCompartmentDefinition_Resource.builder();

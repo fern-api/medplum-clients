@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageDefinition_Focus {
-  Optional<String> max();
-
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
   Optional<Canonical> profile();
 
-  Optional<Code> code();
+  Optional<String> max();
 
   Optional<UnsignedInt> min();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> code();
 
   static ImmutableMessageDefinition_Focus.Builder builder() {
     return ImmutableMessageDefinition_Focus.builder();

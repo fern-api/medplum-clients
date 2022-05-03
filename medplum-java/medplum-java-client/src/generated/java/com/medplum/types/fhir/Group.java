@@ -18,41 +18,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Group {
-  Optional<Code> language();
-
-  Optional<List<Extension>> extension();
-
   Optional<Boolean> active();
 
-  Optional<Reference> managingEntity();
+  String resourceType();
+
+  Optional<String> name();
 
   Optional<List<Group_Characteristic>> characteristic();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<UnsignedInt> quantity();
-
-  Optional<Uri> implicitRules();
-
-  String resourceType();
 
   Optional<Meta> meta();
 
   Optional<List<ResourceList>> contained();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<GroupType> type();
 
-  Optional<Id> id();
-
-  Optional<List<Identifier>> identifier();
+  Optional<Narrative> text();
 
   Optional<Boolean> actual();
 
   Optional<CodeableConcept> code();
 
-  Optional<String> name();
+  Optional<Reference> managingEntity();
 
-  Optional<Narrative> text();
+  Optional<Code> language();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<UnsignedInt> quantity();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  Optional<Uri> implicitRules();
 
   Optional<List<Group_Member>> member();
 

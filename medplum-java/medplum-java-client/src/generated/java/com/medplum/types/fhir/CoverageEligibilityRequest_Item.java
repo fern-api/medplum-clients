@@ -17,31 +17,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest_Item {
-  Optional<Quantity> quantity();
-
   Optional<Money> unitPrice();
-
-  Optional<List<PositiveInt>> supportingInfoSequence();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> category();
-
-  Optional<List<CodeableConcept>> modifier();
-
-  Optional<Reference> facility();
 
   Optional<List<Reference>> detail();
 
-  Optional<List<CoverageEligibilityRequest_Diagnosis>> diagnosis();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> productOrService();
+  Optional<List<CodeableConcept>> modifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<PositiveInt>> supportingInfoSequence();
+
+  Optional<CodeableConcept> category();
+
+  Optional<List<CoverageEligibilityRequest_Diagnosis>> diagnosis();
 
   Optional<Reference> provider();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> facility();
+
+  Optional<String> id();
+
+  Optional<CodeableConcept> productOrService();
+
+  Optional<Quantity> quantity();
 
   static ImmutableCoverageEligibilityRequest_Item.Builder builder() {
     return ImmutableCoverageEligibilityRequest_Item.builder();

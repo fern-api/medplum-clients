@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_Goal {
+  Optional<String> id();
+
   Optional<CodeableConcept> category();
 
-  Optional<String> id();
+  Optional<List<RelatedArtifact>> documentation();
 
   Optional<List<Extension>> extension();
 
-  CodeableConcept description();
+  Optional<CodeableConcept> start();
+
+  Optional<List<CodeableConcept>> addresses();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> priority();
 
   Optional<List<PlanDefinition_Target>> target();
 
-  Optional<CodeableConcept> start();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> addresses();
-
-  Optional<List<RelatedArtifact>> documentation();
+  CodeableConcept description();
 
   static ImmutablePlanDefinition_Goal.DescriptionBuildStage builder() {
     return ImmutablePlanDefinition_Goal.builder();

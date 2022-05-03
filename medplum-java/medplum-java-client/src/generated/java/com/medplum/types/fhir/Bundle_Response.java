@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Bundle_Response {
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> etag();
+
+  Optional<String> id();
 
   Optional<Uri> location();
 
-  Optional<String> id();
+  Optional<String> status();
+
+  Optional<List<Extension>> extension();
 
   Optional<Instant> lastModified();
 
   Optional<ResourceList> outcome();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> status();
-
-  Optional<String> etag();
 
   static ImmutableBundle_Response.Builder builder() {
     return ImmutableBundle_Response.builder();

@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationStatement {
-  String resourceType();
+  Optional<List<Identifier>> identifier();
 
-  Optional<Uri> implicitRules();
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> category();
+
+  Optional<Reference> context();
+
+  Reference subject();
+
+  Optional<DateTime> dateAsserted();
+
+  Optional<List<Reference>> derivedFrom();
+
+  Optional<CodeableConcept> medicationCodeableConcept();
+
+  Optional<List<Reference>> partOf();
 
   Optional<List<CodeableConcept>> reasonCode();
 
   Optional<List<Dosage>> dosage();
 
-  Optional<Meta> meta();
+  Optional<List<Annotation>> note();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Narrative> text();
 
   Optional<List<ResourceList>> contained();
 
-  Reference subject();
-
-  Optional<CodeableConcept> medicationCodeableConcept();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> context();
-
   Optional<Code> status();
 
-  Optional<CodeableConcept> category();
+  Optional<String> effectiveDateTime();
+
+  Optional<Period> effectivePeriod();
 
   Optional<Id> id();
 
-  Optional<List<Annotation>> note();
+  Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Reference>> basedOn();
 
-  Optional<List<Reference>> derivedFrom();
+  Optional<Reference> medicationReference();
 
-  Optional<String> effectiveDateTime();
+  Optional<Meta> meta();
 
   Optional<List<Reference>> reasonReference();
 
   Optional<Code> language();
 
-  Optional<Reference> informationSource();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<Period> effectivePeriod();
-
-  Optional<DateTime> dateAsserted();
-
-  Optional<Narrative> text();
-
-  Optional<List<Reference>> basedOn();
-
   Optional<List<CodeableConcept>> statusReason();
 
-  Optional<Reference> medicationReference();
+  Optional<List<Extension>> modifierExtension();
 
-  static ImmutableMedicationStatement.ResourceTypeBuildStage builder() {
+  Optional<Reference> informationSource();
+
+  String resourceType();
+
+  static ImmutableMedicationStatement.SubjectBuildStage builder() {
     return ImmutableMedicationStatement.builder();
   }
 }

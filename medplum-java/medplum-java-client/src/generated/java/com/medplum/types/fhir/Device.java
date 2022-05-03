@@ -17,75 +17,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Device {
-  Optional<List<ContactPoint>> contact();
+  Optional<String> partNumber();
 
-  Optional<Meta> meta();
+  Optional<List<Annotation>> note();
 
-  String resourceType();
+  Optional<String> modelNumber();
 
-  Optional<List<Device_DeviceName>> deviceName();
+  Optional<List<Device_UdiCarrier>> udiCarrier();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Device_Property>> property();
 
   Optional<DateTime> expirationDate();
 
-  Optional<Reference> patient();
+  Optional<Uri> url();
 
-  Optional<List<ResourceList>> contained();
+  Optional<List<CodeableConcept>> safety();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> type();
 
   Optional<Code> language();
 
-  Optional<List<Device_Specialization>> specialization();
+  Optional<Reference> owner();
 
-  Optional<String> lotNumber();
+  Optional<List<CodeableConcept>> statusReason();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> location();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Narrative> text();
 
   Optional<Reference> definition();
 
-  Optional<String> manufacturer();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Device_UdiCarrier>> udiCarrier();
+  Optional<Meta> meta();
 
-  Optional<List<CodeableConcept>> statusReason();
-
-  Optional<DateTime> manufactureDate();
-
-  Optional<Reference> owner();
-
-  Optional<DeviceStatus> status();
-
-  Optional<Id> id();
-
-  Optional<String> modelNumber();
-
-  Optional<String> serialNumber();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Annotation>> note();
-
-  Optional<String> partNumber();
-
-  Optional<CodeableConcept> type();
-
-  Optional<List<Device_Property>> property();
-
-  Optional<Reference> parent();
-
-  Optional<Reference> location();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<CodeableConcept>> safety();
-
-  Optional<Uri> url();
+  Optional<List<Device_DeviceName>> deviceName();
 
   Optional<String> distinctIdentifier();
 
+  Optional<Id> id();
+
+  Optional<String> lotNumber();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> patient();
+
   Optional<List<Device_Version>> version();
+
+  Optional<DateTime> manufactureDate();
+
+  Optional<List<Device_Specialization>> specialization();
+
+  Optional<Reference> parent();
+
+  Optional<String> serialNumber();
+
+  Optional<String> manufacturer();
+
+  Optional<List<ContactPoint>> contact();
+
+  Optional<DeviceStatus> status();
 
   static ImmutableDevice.ResourceTypeBuildStage builder() {
     return ImmutableDevice.builder();

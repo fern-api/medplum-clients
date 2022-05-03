@@ -21,9 +21,9 @@ public interface Claim_Related {
 
   Optional<Reference> claim();
 
-  Optional<Identifier> reference();
-
   Optional<String> id();
+
+  Optional<Identifier> reference();
 
   Optional<List<Extension>> modifierExtension();
 

@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Goal {
-  Optional<Id> id();
-
-  Optional<CodeableConcept> startCodeableConcept();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Meta> meta();
-
-  Optional<List<CodeableConcept>> outcomeCode();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<CodeableConcept> priority();
-
-  Optional<GoalLifecyclestatus> lifecycleStatus();
-
-  Reference subject();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Date> statusDate();
-
-  Optional<Code> language();
-
-  Optional<String> startDate();
+  Optional<List<Goal_Target>> target();
 
   Optional<CodeableConcept> achievementStatus();
 
-  String resourceType();
+  Optional<Date> statusDate();
 
-  Optional<Reference> expressedBy();
-
-  Optional<List<Goal_Target>> target();
-
-  Optional<String> statusReason();
-
-  Optional<List<Reference>> outcomeReference();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> addresses();
-
-  CodeableConcept description();
-
-  Optional<List<Extension>> extension();
+  Optional<Narrative> text();
 
   Optional<List<Identifier>> identifier();
 
-  static ImmutableGoal.SubjectBuildStage builder() {
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  CodeableConcept description();
+
+  Optional<GoalLifecyclestatus> lifecycleStatus();
+
+  Optional<String> statusReason();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<CodeableConcept> startCodeableConcept();
+
+  Optional<List<Reference>> outcomeReference();
+
+  String resourceType();
+
+  Optional<CodeableConcept> priority();
+
+  Optional<Reference> expressedBy();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<CodeableConcept>> outcomeCode();
+
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> addresses();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Uri> implicitRules();
+
+  Reference subject();
+
+  Optional<String> startDate();
+
+  static ImmutableGoal.DescriptionBuildStage builder() {
     return ImmutableGoal.builder();
   }
 }

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition_ReferencedFrom {
-  Optional<String> source();
-
-  Optional<String> id();
-
-  Optional<String> sourceId();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> source();
+
+  Optional<String> sourceId();
+
+  Optional<String> id();
 
   static ImmutableOperationDefinition_ReferencedFrom.Builder builder() {
     return ImmutableOperationDefinition_ReferencedFrom.builder();

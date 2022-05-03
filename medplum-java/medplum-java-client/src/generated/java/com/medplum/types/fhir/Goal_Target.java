@@ -19,31 +19,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Goal_Target {
-  Optional<List<Extension>> extension();
+  Optional<String> detailString();
+
+  Optional<Duration> dueDuration();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Range> detailRange();
+
+  Optional<String> dueDate();
+
+  Optional<Boolean> detailBoolean();
 
   Optional<CodeableConcept> detailCodeableConcept();
+
+  Optional<CodeableConcept> measure();
+
+  Optional<Quantity> detailQuantity();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<Double> detailInteger();
 
   Optional<Ratio> detailRatio();
-
-  Optional<Quantity> detailQuantity();
-
-  Optional<Boolean> detailBoolean();
-
-  Optional<String> dueDate();
-
-  Optional<Duration> dueDuration();
-
-  Optional<Range> detailRange();
-
-  Optional<String> id();
-
-  Optional<CodeableConcept> measure();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> detailString();
 
   static ImmutableGoal_Target.Builder builder() {
     return ImmutableGoal_Target.builder();

@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface AuditEvent_Network {
   Optional<Auditevent_networkType> type();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> address();
 

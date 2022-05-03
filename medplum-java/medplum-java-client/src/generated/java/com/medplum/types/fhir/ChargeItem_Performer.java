@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItem_Performer {
-  Reference actor();
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> function();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
+  Reference actor();
 
   static ImmutableChargeItem_Performer.ActorBuildStage builder() {
     return ImmutableChargeItem_Performer.builder();

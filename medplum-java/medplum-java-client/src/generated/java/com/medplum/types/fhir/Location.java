@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Location {
-  Optional<Narrative> text();
+  Optional<Address> address();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Meta> meta();
 
   Optional<Reference> managingOrganization();
 
-  Optional<List<Extension>> extension();
-
-  Optional<LocationStatus> status();
-
-  Optional<Location_Position> position();
-
-  Optional<List<Reference>> endpoint();
-
   Optional<Uri> implicitRules();
 
-  Optional<Id> id();
+  Optional<String> availabilityExceptions();
 
-  Optional<LocationMode> mode();
+  Optional<List<String>> alias();
 
   Optional<List<CodeableConcept>> type();
 
-  Optional<Address> address();
+  Optional<LocationStatus> status();
 
-  Optional<List<Location_HoursOfOperation>> hoursOfOperation();
+  String resourceType();
+
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<String> description();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> partOf();
+
+  Optional<LocationMode> mode();
+
+  Optional<Location_Position> position();
 
   Optional<Code> language();
 
   Optional<CodeableConcept> physicalType();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Coding> operationalStatus();
 
-  Optional<List<String>> alias();
+  Optional<List<Reference>> endpoint();
 
-  Optional<String> availabilityExceptions();
-
-  String resourceType();
-
-  Optional<Reference> partOf();
-
-  Optional<Meta> meta();
-
-  Optional<String> description();
-
-  Optional<List<ContactPoint>> telecom();
-
-  Optional<List<ResourceList>> contained();
+  Optional<Id> id();
 
   Optional<String> name();
 
-  Optional<Coding> operationalStatus();
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Location_HoursOfOperation>> hoursOfOperation();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<ContactPoint>> telecom();
 
   static ImmutableLocation.ResourceTypeBuildStage builder() {
     return ImmutableLocation.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Distance {
-  Optional<Decimal> value();
-
   Optional<DistanceComparator> comparator();
 
-  Optional<Code> code();
+  Optional<Uri> system();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> unit();
 
-  Optional<Uri> system();
+  Optional<List<Extension>> extension();
+
+  Optional<Decimal> value();
+
+  Optional<Code> code();
 
   static ImmutableDistance.Builder builder() {
     return ImmutableDistance.builder();

@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_Target {
-  Optional<CodeableConcept> detailCodeableConcept();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> measure();
 
-  Optional<List<Extension>> extension();
+  Optional<Range> detailRange();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<Quantity> detailQuantity();
 
-  Optional<Range> detailRange();
-
   Optional<Duration> due();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> detailCodeableConcept();
 
   static ImmutablePlanDefinition_Target.Builder builder() {
     return ImmutablePlanDefinition_Target.builder();

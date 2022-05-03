@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityResponse_Error {
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
 
   CodeableConcept code();
 
   Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableCoverageEligibilityResponse_Error.CodeBuildStage builder() {
     return ImmutableCoverageEligibilityResponse_Error.builder();

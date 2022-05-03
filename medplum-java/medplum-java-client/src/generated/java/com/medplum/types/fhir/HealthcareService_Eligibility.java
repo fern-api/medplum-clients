@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HealthcareService_Eligibility {
-  Optional<List<Extension>> extension();
-
-  Optional<Markdown> comment();
+  Optional<CodeableConcept> code();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> code();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
+
+  Optional<Markdown> comment();
 
   static ImmutableHealthcareService_Eligibility.Builder builder() {
     return ImmutableHealthcareService_Eligibility.builder();

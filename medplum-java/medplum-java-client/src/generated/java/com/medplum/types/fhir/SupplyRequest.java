@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyRequest {
-  Optional<Meta> meta();
-
-  Optional<Code> priority();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<ResourceList>> contained();
-
   Optional<Reference> requester();
 
-  Optional<Code> language();
+  Optional<Reference> itemReference();
 
-  Optional<CodeableConcept> category();
-
-  Optional<Reference> deliverTo();
-
-  Optional<List<Reference>> supplier();
-
-  Optional<Reference> deliverFrom();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<Narrative> text();
-
-  Optional<List<SupplyRequest_Parameter>> parameter();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> occurrenceDateTime();
+  Optional<Timing> occurrenceTiming();
 
   String resourceType();
 
-  Optional<Uri> implicitRules();
+  Optional<Reference> deliverFrom();
 
-  Optional<Reference> itemReference();
+  Optional<List<Reference>> reasonReference();
+
+  Quantity quantity();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<CodeableConcept> category();
+
+  Optional<List<Reference>> supplier();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<Code> language();
 
   Optional<List<Extension>> extension();
 
   Optional<Id> id();
 
-  Optional<CodeableConcept> itemCodeableConcept();
-
-  Quantity quantity();
-
-  Optional<Timing> occurrenceTiming();
+  Optional<Uri> implicitRules();
 
   Optional<SupplyrequestStatus> status();
 
-  Optional<List<Reference>> reasonReference();
+  Optional<Narrative> text();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Meta> meta();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> deliverTo();
+
+  Optional<List<SupplyRequest_Parameter>> parameter();
+
+  Optional<CodeableConcept> itemCodeableConcept();
+
+  Optional<Code> priority();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<DateTime> authoredOn();
 
   static ImmutableSupplyRequest.ResourceTypeBuildStage builder() {
     return ImmutableSupplyRequest.builder();

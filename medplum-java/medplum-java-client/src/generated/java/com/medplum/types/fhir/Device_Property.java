@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Device_Property {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
   Optional<List<CodeableConcept>> valueCode();
 
   Optional<List<Quantity>> valueQuantity();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   CodeableConcept type();
 

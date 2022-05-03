@@ -19,27 +19,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CodeSystem_Property1 {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Code> code();
 
-  Optional<String> valueCode();
+  Optional<Boolean> valueBoolean();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> valueString();
 
-  Optional<Coding> valueCoding();
+  Optional<String> valueDateTime();
 
-  Optional<List<Extension>> extension();
+  Optional<Coding> valueCoding();
 
   Optional<Double> valueInteger();
 
   Optional<Double> valueDecimal();
 
-  Optional<String> valueDateTime();
-
   Optional<String> id();
 
-  Optional<Boolean> valueBoolean();
+  Optional<String> valueCode();
 
   static ImmutableCodeSystem_Property1.Builder builder() {
     return ImmutableCodeSystem_Property1.builder();

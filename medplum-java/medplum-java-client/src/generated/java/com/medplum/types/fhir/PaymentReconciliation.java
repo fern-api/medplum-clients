@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PaymentReconciliation {
-  Optional<Code> status();
-
-  Optional<PaymentreconciliationOutcome> outcome();
-
-  Optional<Period> period();
-
-  Optional<Reference> requestor();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
   Optional<CodeableConcept> formCode();
-
-  Optional<Date> paymentDate();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Identifier> paymentIdentifier();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<DateTime> created();
-
-  Money paymentAmount();
 
   Optional<Uri> implicitRules();
 
-  Optional<Meta> meta();
+  Optional<DateTime> created();
 
   Optional<List<PaymentReconciliation_ProcessNote>> processNote();
 
-  String resourceType();
+  Optional<List<ResourceList>> contained();
+
+  Optional<PaymentreconciliationOutcome> outcome();
 
   Optional<Reference> request();
 
-  Optional<List<PaymentReconciliation_Detail>> detail();
+  Money paymentAmount();
+
+  Optional<List<Extension>> modifierExtension();
+
+  String resourceType();
 
   Optional<Id> id();
 
-  Optional<Reference> paymentIssuer();
+  Optional<Code> language();
+
+  Optional<Period> period();
+
+  Optional<Code> status();
 
   Optional<String> disposition();
 
-  Optional<Code> language();
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Identifier> paymentIdentifier();
+
+  Optional<Meta> meta();
 
   Optional<Narrative> text();
+
+  Optional<Reference> paymentIssuer();
+
+  Optional<Reference> requestor();
+
+  Optional<Date> paymentDate();
+
+  Optional<List<PaymentReconciliation_Detail>> detail();
 
   static ImmutablePaymentReconciliation.PaymentAmountBuildStage builder() {
     return ImmutablePaymentReconciliation.builder();

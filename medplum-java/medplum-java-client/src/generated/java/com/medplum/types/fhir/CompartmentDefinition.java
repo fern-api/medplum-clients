@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CompartmentDefinition {
-  Optional<Uri> implicitRules();
-
-  String resourceType();
-
   Optional<Id> id();
-
-  Optional<Boolean> experimental();
 
   Optional<Boolean> search();
 
-  Optional<List<ResourceList>> contained();
+  Optional<DateTime> date();
 
-  Optional<String> publisher();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<Uri> url();
+  Optional<CompartmentdefinitionCode> code();
+
+  Optional<Boolean> experimental();
 
   Optional<Markdown> purpose();
 
   Optional<List<ContactDetail>> contact();
 
+  Optional<String> name();
+
   Optional<List<Extension>> extension();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Narrative> text();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<CompartmentdefinitionStatus> status();
-
-  Optional<DateTime> date();
 
   Optional<Markdown> description();
 
-  Optional<Code> language();
-
-  Optional<String> name();
-
-  Optional<CompartmentdefinitionCode> code();
-
   Optional<List<CompartmentDefinition_Resource>> resource();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> language();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Uri> url();
+
+  Optional<CompartmentdefinitionStatus> status();
+
+  Optional<Narrative> text();
+
+  Optional<Meta> meta();
+
   Optional<String> version();
+
+  Optional<String> publisher();
 
   static ImmutableCompartmentDefinition.ResourceTypeBuildStage builder() {
     return ImmutableCompartmentDefinition.builder();

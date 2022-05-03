@@ -19,113 +19,113 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task_Input {
-  Optional<Distance> valueDistance();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<Address> valueAddress();
-
-  Optional<HumanName> valueHumanName();
-
-  Optional<Double> valueDecimal();
-
-  Optional<String> valueCanonical();
-
-  Optional<ContactDetail> valueContactDetail();
-
-  Optional<Money> valueMoney();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> valueReference();
-
-  CodeableConcept type();
-
-  Optional<DataRequirement> valueDataRequirement();
-
-  Optional<Double> valuePositiveInt();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<Ratio> valueRatio();
-
-  Optional<Timing> valueTiming();
-
   Optional<Coding> valueCoding();
 
   Optional<Signature> valueSignature();
 
-  Optional<String> valueCode();
+  Optional<Count> valueCount();
 
-  Optional<Boolean> valueBoolean();
+  Optional<String> valueMarkdown();
 
-  Optional<String> valueDate();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<Expression> valueExpression();
-
-  Optional<String> valueUrl();
-
-  Optional<String> valueId();
-
-  Optional<String> valueUuid();
-
-  Optional<Range> valueRange();
+  Optional<Double> valueDecimal();
 
   Optional<TriggerDefinition> valueTriggerDefinition();
 
-  Optional<Duration> valueDuration();
+  Optional<Meta> valueMeta();
 
-  Optional<String> valueTime();
+  Optional<Dosage> valueDosage();
 
-  Optional<ParameterDefinition> valueParameterDefinition();
+  Optional<UsageContext> valueUsageContext();
+
+  Optional<RelatedArtifact> valueRelatedArtifact();
+
+  Optional<Attachment> valueAttachment();
+
+  CodeableConcept type();
+
+  Optional<String> valueUri();
+
+  Optional<ContactPoint> valueContactPoint();
 
   Optional<String> valueOid();
 
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
+
+  Optional<Contributor> valueContributor();
+
+  Optional<HumanName> valueHumanName();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<String> valueTime();
+
+  Optional<String> valueCanonical();
+
+  Optional<Annotation> valueAnnotation();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<Double> valuePositiveInt();
+
+  Optional<DataRequirement> valueDataRequirement();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<Duration> valueDuration();
+
+  Optional<Money> valueMoney();
+
+  Optional<Expression> valueExpression();
+
+  Optional<Timing> valueTiming();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<ContactDetail> valueContactDetail();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<String> valueId();
+
   Optional<String> valueString();
 
-  Optional<Age> valueAge();
+  Optional<Distance> valueDistance();
 
-  Optional<String> valueMarkdown();
+  Optional<Address> valueAddress();
+
+  Optional<String> valueUrl();
+
+  Optional<Double> valueInteger();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<Range> valueRange();
+
+  Optional<String> valueUuid();
+
+  Optional<Age> valueAge();
 
   Optional<CodeableConcept> valueCodeableConcept();
 
   Optional<Period> valuePeriod();
 
-  Optional<UsageContext> valueUsageContext();
+  Optional<ParameterDefinition> valueParameterDefinition();
 
-  Optional<Double> valueInteger();
+  Optional<Reference> valueReference();
 
-  Optional<List<Extension>> extension();
+  Optional<SampledData> valueSampledData();
+
+  Optional<String> valueDate();
 
   Optional<String> valueInstant();
 
-  Optional<ContactPoint> valueContactPoint();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<String> valueCode();
 
   Optional<String> valueDateTime();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<String> valueBase64Binary();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<Meta> valueMeta();
-
-  Optional<Annotation> valueAnnotation();
-
-  Optional<RelatedArtifact> valueRelatedArtifact();
-
-  Optional<String> valueUri();
-
-  Optional<Count> valueCount();
-
-  Optional<Double> valueUnsignedInt();
 
   static ImmutableTask_Input.TypeBuildStage builder() {
     return ImmutableTask_Input.builder();

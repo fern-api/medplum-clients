@@ -17,45 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface QuestionnaireResponse {
-  Optional<Reference> author();
-
-  Optional<List<Reference>> partOf();
-
-  Optional<List<QuestionnaireResponse_Item>> item();
-
-  Optional<Id> id();
-
-  Optional<DateTime> authored();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Narrative> text();
-
-  Optional<QuestionnaireresponseStatus> status();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Meta> meta();
-
-  Optional<Code> language();
-
   Optional<Identifier> identifier();
 
   String resourceType();
 
+  Optional<Reference> author();
+
+  Optional<Narrative> text();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> language();
+
+  Optional<List<Reference>> partOf();
+
   Optional<List<Reference>> basedOn();
 
+  Optional<QuestionnaireresponseStatus> status();
+
+  Optional<Id> id();
+
   Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Meta> meta();
+
+  Optional<Reference> encounter();
 
   Optional<Reference> source();
 
   Optional<Canonical> questionnaire();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<DateTime> authored();
+
+  Optional<List<QuestionnaireResponse_Item>> item();
+
+  Optional<List<Extension>> extension();
 
   Optional<Reference> subject();
-
-  Optional<Reference> encounter();
 
   static ImmutableQuestionnaireResponse.ResourceTypeBuildStage builder() {
     return ImmutableQuestionnaireResponse.builder();

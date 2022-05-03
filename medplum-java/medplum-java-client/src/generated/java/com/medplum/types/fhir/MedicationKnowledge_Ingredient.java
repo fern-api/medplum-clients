@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Ingredient {
+  Optional<List<Extension>> extension();
+
   Optional<Ratio> strength();
+
+  Optional<Boolean> isActive();
 
   Optional<Reference> itemReference();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Boolean> isActive();
+  Optional<CodeableConcept> itemCodeableConcept();
 
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> itemCodeableConcept();
 
   static ImmutableMedicationKnowledge_Ingredient.Builder builder() {
     return ImmutableMedicationKnowledge_Ingredient.builder();

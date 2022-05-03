@@ -18,15 +18,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AccessPolicy_Resource {
-  Optional<List<String>> hiddenproperties();
-
-  Optional<String> resourceType();
+  Optional<List<String>> readonlyproperties();
 
   Optional<Reference> compartment();
 
   Optional<Boolean> readonly();
 
-  Optional<List<String>> readonlyproperties();
+  Optional<String> resourceType();
+
+  Optional<List<String>> hiddenproperties();
 
   static ImmutableAccessPolicy_Resource.Builder builder() {
     return ImmutableAccessPolicy_Resource.builder();

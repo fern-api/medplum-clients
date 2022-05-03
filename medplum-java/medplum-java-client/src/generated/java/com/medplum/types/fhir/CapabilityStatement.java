@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement {
-  Optional<List<CapabilityStatement_Messaging>> messaging();
-
-  Optional<CapabilityStatement_Implementation> implementation();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<CapabilityStatement_Rest>> rest();
-
-  Optional<Meta> meta();
-
-  Optional<Code> language();
-
-  Optional<CapabilitystatementKind> kind();
-
-  Optional<List<CapabilityStatement_Document>> document();
-
-  Optional<CapabilitystatementStatus> status();
-
-  Optional<Id> id();
-
-  Optional<Narrative> text();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<Canonical>> implementationGuide();
-
   Optional<CapabilityStatement_Software> software();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<DateTime> date();
-
-  Optional<List<Code>> patchFormat();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<CapabilitystatementFhirversion> fhirVersion();
 
   Optional<String> title();
 
-  Optional<Markdown> copyright();
-
-  Optional<List<Canonical>> instantiates();
-
-  Optional<Markdown> description();
-
-  Optional<String> publisher();
-
-  Optional<List<Code>> format();
-
-  String resourceType();
-
-  Optional<Boolean> experimental();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> name();
+  Optional<List<CapabilityStatement_Document>> document();
 
   Optional<Uri> url();
 
-  Optional<Markdown> purpose();
+  Optional<CapabilitystatementStatus> status();
+
+  Optional<List<CapabilityStatement_Messaging>> messaging();
 
   Optional<String> version();
 
+  Optional<Markdown> copyright();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> publisher();
+
+  Optional<List<Canonical>> implementationGuide();
+
+  Optional<Id> id();
+
   Optional<List<Canonical>> imports();
+
+  Optional<CapabilitystatementFhirversion> fhirVersion();
+
+  Optional<DateTime> date();
+
+  Optional<Markdown> description();
+
+  Optional<Code> language();
+
+  Optional<Markdown> purpose();
+
+  Optional<List<CapabilityStatement_Rest>> rest();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<Canonical>> instantiates();
+
+  String resourceType();
+
+  Optional<Meta> meta();
+
+  Optional<List<Code>> format();
+
+  Optional<Boolean> experimental();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<CapabilitystatementKind> kind();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<CapabilityStatement_Implementation> implementation();
+
+  Optional<List<Code>> patchFormat();
+
+  Optional<String> name();
 
   static ImmutableCapabilityStatement.ResourceTypeBuildStage builder() {
     return ImmutableCapabilityStatement.builder();

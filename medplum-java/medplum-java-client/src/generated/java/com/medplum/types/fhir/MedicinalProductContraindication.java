@@ -17,37 +17,37 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductContraindication {
-  Optional<Meta> meta();
+  Optional<List<Reference>> therapeuticIndication();
 
-  Optional<List<Reference>> subject();
+  Optional<Narrative> text();
 
-  Optional<List<CodeableConcept>> comorbidity();
-
-  String resourceType();
-
-  Optional<List<MedicinalProductContraindication_OtherTherapy>> otherTherapy();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> disease();
 
-  Optional<Id> id();
-
-  Optional<List<Reference>> therapeuticIndication();
-
-  Optional<List<ResourceList>> contained();
+  String resourceType();
 
   Optional<Uri> implicitRules();
 
+  Optional<List<CodeableConcept>> comorbidity();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<CodeableConcept> diseaseStatus();
+
+  Optional<List<MedicinalProductContraindication_OtherTherapy>> otherTherapy();
+
+  Optional<List<Reference>> subject();
+
+  Optional<Id> id();
 
   Optional<List<Population>> population();
 
   Optional<Code> language();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Narrative> text();
+  Optional<List<ResourceList>> contained();
 
   static ImmutableMedicinalProductContraindication.ResourceTypeBuildStage builder() {
     return ImmutableMedicinalProductContraindication.builder();

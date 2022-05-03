@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Schedule {
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   CodeableConcept schedule();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableMedicationKnowledge_Schedule.ScheduleBuildStage builder() {
     return ImmutableMedicationKnowledge_Schedule.builder();

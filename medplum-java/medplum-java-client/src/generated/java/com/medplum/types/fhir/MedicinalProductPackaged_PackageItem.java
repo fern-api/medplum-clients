@@ -17,37 +17,37 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPackaged_PackageItem {
-  Optional<List<ProductShelfLife>> shelfLifeStorage();
-
-  Optional<ProdCharacteristic> physicalCharacteristics();
-
-  Quantity quantity();
-
-  Optional<List<Reference>> manufacturedItem();
-
-  Optional<List<CodeableConcept>> alternateMaterial();
-
-  Optional<List<CodeableConcept>> material();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Reference>> device();
-
-  Optional<List<Extension>> extension();
+  CodeableConcept type();
 
   Optional<List<Reference>> manufacturer();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ProductShelfLife>> shelfLifeStorage();
 
-  Optional<List<CodeableConcept>> otherCharacteristics();
+  Quantity quantity();
 
   Optional<List<MedicinalProductPackaged_PackageItem>> packageItem();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> device();
+
+  Optional<ProdCharacteristic> physicalCharacteristics();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<CodeableConcept>> otherCharacteristics();
+
   Optional<String> id();
 
-  CodeableConcept type();
+  Optional<List<CodeableConcept>> material();
 
-  static ImmutableMedicinalProductPackaged_PackageItem.QuantityBuildStage builder() {
+  Optional<List<CodeableConcept>> alternateMaterial();
+
+  Optional<List<Reference>> manufacturedItem();
+
+  static ImmutableMedicinalProductPackaged_PackageItem.TypeBuildStage builder() {
     return ImmutableMedicinalProductPackaged_PackageItem.builder();
   }
 }

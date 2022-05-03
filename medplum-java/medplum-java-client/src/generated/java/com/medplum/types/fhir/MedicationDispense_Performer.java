@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationDispense_Performer {
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> function();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> function();
 
   Reference actor();
 

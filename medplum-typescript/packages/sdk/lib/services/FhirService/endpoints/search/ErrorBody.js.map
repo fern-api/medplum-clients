@@ -1,1 +1,0 @@
-{"version":3,"file":"ErrorBody.js","sourceRoot":"","sources":["../../../../../src/services/FhirService/endpoints/search/ErrorBody.ts"],"names":[],"mappings":";;;AAQa,QAAA,SAAS,GAAG;IACrB,MAAM,EAAE,CACJ,MAAiB,EACjB,OAAmC,EAC7B,EAAE;QACR,OAAO,OAAO,CAAC,QAAQ,EAAE,CAAC;IAC9B,CAAC;CACJ,CAAC"}

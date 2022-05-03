@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface ConceptMap_Unmapped {
   Optional<List<Extension>> extension();
 
+  Optional<String> display();
+
   Optional<Canonical> url();
 
   Optional<String> id();
 
   Optional<Conceptmap_unmappedMode> mode();
-
-  Optional<String> display();
 
   Optional<List<Extension>> modifierExtension();
 

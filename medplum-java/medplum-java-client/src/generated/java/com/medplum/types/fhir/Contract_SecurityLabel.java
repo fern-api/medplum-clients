@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_SecurityLabel {
-  Optional<List<Coding>> control();
-
-  Optional<List<Extension>> extension();
-
-  Coding classification();
-
-  Optional<List<UnsignedInt>> number();
-
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Coding>> category();
+
+  Optional<List<UnsignedInt>> number();
+
+  Coding classification();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Coding>> control();
+
+  Optional<String> id();
 
   static ImmutableContract_SecurityLabel.ClassificationBuildStage builder() {
     return ImmutableContract_SecurityLabel.builder();

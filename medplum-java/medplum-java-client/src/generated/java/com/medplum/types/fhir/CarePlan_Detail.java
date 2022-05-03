@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CarePlan_Detail {
-  Optional<Careplan_detailStatus> status();
-
-  Optional<Boolean> doNotPerform();
-
-  Optional<CodeableConcept> code();
-
-  Optional<Quantity> quantity();
-
-  Optional<Reference> location();
-
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<List<Extension>> extension();
-
   Optional<CodeableConcept> statusReason();
-
-  Optional<List<Reference>> goal();
-
-  Optional<Quantity> dailyAmount();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<String> scheduledString();
-
-  Optional<List<Reference>> performer();
-
-  Optional<Timing> scheduledTiming();
-
-  Optional<Code> kind();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<String> description();
-
-  Optional<Period> scheduledPeriod();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
-  Optional<Reference> productReference();
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<Code> kind();
+
+  Optional<Reference> location();
+
+  Optional<CodeableConcept> productCodeableConcept();
+
+  Optional<Careplan_detailStatus> status();
+
+  Optional<List<Reference>> goal();
+
+  Optional<List<Reference>> performer();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<CodeableConcept> productCodeableConcept();
+  Optional<Quantity> quantity();
+
+  Optional<CodeableConcept> code();
+
+  Optional<String> scheduledString();
+
+  Optional<Reference> productReference();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Period> scheduledPeriod();
+
+  Optional<Timing> scheduledTiming();
+
+  Optional<Quantity> dailyAmount();
+
+  Optional<String> description();
+
+  Optional<List<Uri>> instantiatesUri();
 
   static ImmutableCarePlan_Detail.Builder builder() {
     return ImmutableCarePlan_Detail.builder();

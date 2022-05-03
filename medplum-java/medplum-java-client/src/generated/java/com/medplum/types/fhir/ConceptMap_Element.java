@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap_Element {
-  Optional<Code> code();
-
-  Optional<List<ConceptMap_Target>> target();
-
   Optional<List<Extension>> extension();
 
   Optional<String> display();
 
+  Optional<String> id();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<ConceptMap_Target>> target();
+
+  Optional<Code> code();
 
   static ImmutableConceptMap_Element.Builder builder() {
     return ImmutableConceptMap_Element.builder();

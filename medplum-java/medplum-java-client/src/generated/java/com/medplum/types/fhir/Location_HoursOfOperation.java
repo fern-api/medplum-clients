@@ -22,15 +22,15 @@ public interface Location_HoursOfOperation {
 
   Optional<String> id();
 
+  Optional<List<Extension>> extension();
+
   Optional<Time> openingTime();
+
+  Optional<Time> closingTime();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Code>> daysOfWeek();
-
-  Optional<Time> closingTime();
 
   static ImmutableLocation_HoursOfOperation.Builder builder() {
     return ImmutableLocation_HoursOfOperation.builder();

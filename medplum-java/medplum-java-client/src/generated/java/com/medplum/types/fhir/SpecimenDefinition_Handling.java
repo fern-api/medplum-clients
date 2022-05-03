@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SpecimenDefinition_Handling {
-  Optional<String> id();
-
-  Optional<String> instruction();
-
-  Optional<Range> temperatureRange();
-
-  Optional<List<Extension>> extension();
+  Optional<Duration> maxDuration();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Duration> maxDuration();
+  Optional<Range> temperatureRange();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> temperatureQualifier();
+
+  Optional<String> instruction();
 
   static ImmutableSpecimenDefinition_Handling.Builder builder() {
     return ImmutableSpecimenDefinition_Handling.builder();

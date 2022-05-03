@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Patient_Link {
-  Optional<String> id();
+  Reference other();
 
-  Optional<Patient_linkType> type();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Reference other();
+  Optional<Patient_linkType> type();
 
   static ImmutablePatient_Link.OtherBuildStage builder() {
     return ImmutablePatient_Link.builder();

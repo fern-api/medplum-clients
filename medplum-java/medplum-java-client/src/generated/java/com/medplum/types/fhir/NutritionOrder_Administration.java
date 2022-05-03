@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_Administration {
-  Optional<Quantity> rateQuantity();
-
-  Optional<Quantity> quantity();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
+  Optional<Quantity> quantity();
+
+  Optional<Ratio> rateRatio();
 
   Optional<Timing> schedule();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
-  Optional<Ratio> rateRatio();
+  Optional<Quantity> rateQuantity();
 
   static ImmutableNutritionOrder_Administration.Builder builder() {
     return ImmutableNutritionOrder_Administration.builder();

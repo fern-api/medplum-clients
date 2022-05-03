@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageDefinition_AllowedResponse {
+  Optional<List<Extension>> extension();
+
   Optional<Markdown> situation();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Canonical message();
-
-  Optional<String> id();
 
   static ImmutableMessageDefinition_AllowedResponse.MessageBuildStage builder() {
     return ImmutableMessageDefinition_AllowedResponse.builder();

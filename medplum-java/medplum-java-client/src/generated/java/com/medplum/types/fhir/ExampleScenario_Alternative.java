@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExampleScenario_Alternative {
+  Optional<Markdown> description();
+
   Optional<List<Extension>> extension();
+
+  Optional<String> title();
 
   Optional<List<ExampleScenario_Step>> step();
 
   Optional<String> id();
-
-  Optional<Markdown> description();
-
-  Optional<String> title();
 
   Optional<List<Extension>> modifierExtension();
 

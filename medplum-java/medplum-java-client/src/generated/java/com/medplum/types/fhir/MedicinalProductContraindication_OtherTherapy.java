@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductContraindication_OtherTherapy {
-  Optional<List<Extension>> extension();
-
-  CodeableConcept therapyRelationshipType();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> medicationCodeableConcept();
 
   Optional<String> id();
 
-  Optional<Reference> medicationReference();
+  CodeableConcept therapyRelationshipType();
 
-  Optional<CodeableConcept> medicationCodeableConcept();
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> medicationReference();
 
   static ImmutableMedicinalProductContraindication_OtherTherapy.TherapyRelationshipTypeBuildStage builder(
       ) {

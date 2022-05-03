@@ -17,79 +17,79 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim {
-  Optional<List<Claim_Diagnosis>> diagnosis();
+  CodeableConcept type();
+
+  Optional<List<Claim_CareTeam>> careTeam();
+
+  Optional<List<Claim_Procedure>> procedure();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> fundsReserve();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<Claim_SupportingInfo>> supportingInfo();
 
   Optional<Money> total();
 
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Claim_Accident> accident();
-
-  Optional<List<Claim_Item>> item();
-
-  Optional<Period> billablePeriod();
-
-  Optional<Claim_Payee> payee();
-
-  Optional<Reference> prescription();
-
-  List<Claim_Insurance> insurance();
-
-  Reference provider();
-
-  CodeableConcept priority();
-
-  Optional<List<Claim_CareTeam>> careTeam();
-
-  Optional<List<Identifier>> identifier();
-
-  CodeableConcept type();
-
-  Optional<ClaimUse> use();
-
-  Optional<Meta> meta();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Reference> originalPrescription();
-
-  Reference patient();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> facility();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> referral();
-
-  Optional<List<Claim_Procedure>> procedure();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> insurer();
-
-  Optional<Code> status();
-
   Optional<Id> id();
 
   Optional<DateTime> created();
 
-  Optional<List<Claim_Related>> related();
+  Optional<Period> billablePeriod();
 
-  Optional<Reference> enterer();
+  Optional<List<Claim_Diagnosis>> diagnosis();
 
-  Optional<CodeableConcept> fundsReserve();
+  String resourceType();
+
+  CodeableConcept priority();
+
+  Optional<Claim_Payee> payee();
+
+  Optional<Claim_Accident> accident();
+
+  Optional<Reference> referral();
+
+  Optional<Narrative> text();
+
+  Optional<ClaimUse> use();
+
+  Reference patient();
+
+  List<Claim_Insurance> insurance();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> insurer();
+
+  Optional<Reference> originalPrescription();
+
+  Optional<Code> language();
 
   Optional<CodeableConcept> subType();
 
-  static ImmutableClaim.ResourceTypeBuildStage builder() {
+  Optional<List<Claim_Related>> related();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> facility();
+
+  Optional<Reference> prescription();
+
+  Optional<Meta> meta();
+
+  Optional<Reference> enterer();
+
+  Optional<Code> status();
+
+  Reference provider();
+
+  Optional<List<Claim_Item>> item();
+
+  static ImmutableClaim.TypeBuildStage builder() {
     return ImmutableClaim.builder();
   }
 }

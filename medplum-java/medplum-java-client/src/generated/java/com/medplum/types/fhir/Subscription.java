@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Subscription {
-  Optional<List<Extension>> modifierExtension();
-
-  Subscription_Channel channel();
-
   Optional<Narrative> text();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Instant> end();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<List<ContactPoint>> contact();
-
-  Optional<String> criteria();
-
-  Optional<Uri> implicitRules();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> error();
-
-  String resourceType();
-
-  Optional<SubscriptionStatus> status();
+  Optional<Instant> end();
 
   Optional<String> reason();
 
-  static ImmutableSubscription.ChannelBuildStage builder() {
+  Optional<List<ResourceList>> contained();
+
+  Optional<SubscriptionStatus> status();
+
+  Optional<List<ContactPoint>> contact();
+
+  String resourceType();
+
+  Subscription_Channel channel();
+
+  Optional<Id> id();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> error();
+
+  Optional<Code> language();
+
+  Optional<String> criteria();
+
+  Optional<Meta> meta();
+
+  static ImmutableSubscription.ResourceTypeBuildStage builder() {
     return ImmutableSubscription.builder();
   }
 }
