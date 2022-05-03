@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial_Hybrid {
-  Optional<String> paternalOrganismId();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> maternalOrganismId();
+  Optional<String> id();
 
   Optional<String> maternalOrganismName();
 
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> paternalOrganismId();
 
   Optional<String> paternalOrganismName();
 
-  Optional<String> id();
+  Optional<String> maternalOrganismId();
 
   Optional<CodeableConcept> hybridType();
 

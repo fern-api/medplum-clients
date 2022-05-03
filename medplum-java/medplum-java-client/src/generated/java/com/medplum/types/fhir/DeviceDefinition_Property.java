@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface DeviceDefinition_Property {
   CodeableConcept type();
 
+  Optional<String> id();
+
   Optional<List<Extension>> extension();
-
-  Optional<List<Quantity>> valueQuantity();
-
-  Optional<List<CodeableConcept>> valueCode();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<CodeableConcept>> valueCode();
+
+  Optional<List<Quantity>> valueQuantity();
 
   static ImmutableDeviceDefinition_Property.TypeBuildStage builder() {
     return ImmutableDeviceDefinition_Property.builder();

@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Reference {
+  Optional<String> reference();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> display();
+
   Optional<Identifier> identifier();
 
   Optional<ResourceList> resource();
 
-  Optional<String> id();
-
-  Optional<String> reference();
-
-  Optional<List<Extension>> extension();
-
   Optional<Uri> type();
-
-  Optional<String> display();
 
   static ImmutableReference.Builder builder() {
     return ImmutableReference.builder();

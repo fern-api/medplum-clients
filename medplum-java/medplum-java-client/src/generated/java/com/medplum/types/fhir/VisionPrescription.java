@@ -17,41 +17,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VisionPrescription {
-  Optional<Code> language();
-
-  String resourceType();
-
   Optional<List<Identifier>> identifier();
 
-  Optional<Meta> meta();
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DateTime> dateWritten();
+
+  Optional<DateTime> created();
+
+  Reference patient();
 
   Optional<Uri> implicitRules();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Id> id();
-
-  Reference patient();
-
-  Optional<DateTime> created();
+  Optional<Code> status();
 
   Optional<Reference> encounter();
+
+  Optional<Id> id();
 
   Optional<Narrative> text();
 
   Reference prescriber();
 
+  Optional<Meta> meta();
+
+  Optional<Code> language();
+
   List<VisionPrescription_LensSpecification> lensSpecification();
 
-  Optional<DateTime> dateWritten();
+  String resourceType();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> status();
-
-  static ImmutableVisionPrescription.ResourceTypeBuildStage builder() {
+  static ImmutableVisionPrescription.PatientBuildStage builder() {
     return ImmutableVisionPrescription.builder();
   }
 }

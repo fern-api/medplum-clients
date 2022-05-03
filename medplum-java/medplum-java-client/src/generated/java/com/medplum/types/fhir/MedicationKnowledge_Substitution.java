@@ -18,13 +18,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_Substitution {
+  Optional<Boolean> allowed();
+
   Optional<String> id();
 
   CodeableConcept type();
 
   Optional<List<Extension>> extension();
-
-  Optional<Boolean> allowed();
 
   Optional<List<Extension>> modifierExtension();
 

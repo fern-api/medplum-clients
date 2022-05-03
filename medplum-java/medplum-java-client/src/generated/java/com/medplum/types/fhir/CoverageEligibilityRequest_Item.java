@@ -19,27 +19,27 @@ import org.immutables.value.Value;
 public interface CoverageEligibilityRequest_Item {
   Optional<Quantity> quantity();
 
-  Optional<Money> unitPrice();
-
-  Optional<List<PositiveInt>> supportingInfoSequence();
-
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> category();
-
-  Optional<List<CodeableConcept>> modifier();
 
   Optional<Reference> facility();
 
-  Optional<List<Reference>> detail();
+  Optional<List<PositiveInt>> supportingInfoSequence();
 
   Optional<List<CoverageEligibilityRequest_Diagnosis>> diagnosis();
 
   Optional<CodeableConcept> productOrService();
 
+  Optional<List<Reference>> detail();
+
+  Optional<List<CodeableConcept>> modifier();
+
   Optional<Reference> provider();
+
+  Optional<Money> unitPrice();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> category();
 
   Optional<List<Extension>> modifierExtension();
 

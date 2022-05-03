@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RelatedArtifact {
-  Optional<Markdown> citation();
+  Optional<Url> url();
+
+  Optional<String> display();
+
+  Optional<RelatedartifactType> type();
 
   Optional<List<Extension>> extension();
 
-  Optional<RelatedartifactType> type();
+  Optional<Attachment> document();
+
+  Optional<String> id();
 
   Optional<String> label();
 
   Optional<Canonical> resource();
 
-  Optional<String> id();
-
-  Optional<String> display();
-
-  Optional<Url> url();
-
-  Optional<Attachment> document();
+  Optional<Markdown> citation();
 
   static ImmutableRelatedArtifact.Builder builder() {
     return ImmutableRelatedArtifact.builder();

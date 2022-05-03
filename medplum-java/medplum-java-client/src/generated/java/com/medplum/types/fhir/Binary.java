@@ -16,21 +16,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Binary {
-  Optional<Reference> securityContext();
-
   Optional<Code> contentType();
 
+  Optional<Base64Binary> data();
+
   Optional<Meta> meta();
+
+  Optional<Id> id();
 
   String resourceType();
 
   Optional<Code> language();
 
+  Optional<Reference> securityContext();
+
   Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Optional<Base64Binary> data();
 
   static ImmutableBinary.ResourceTypeBuildStage builder() {
     return ImmutableBinary.builder();

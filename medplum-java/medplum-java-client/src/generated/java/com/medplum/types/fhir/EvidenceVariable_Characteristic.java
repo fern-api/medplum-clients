@@ -18,41 +18,41 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EvidenceVariable_Characteristic {
-  Optional<TriggerDefinition> definitionTriggerDefinition();
-
-  Optional<Duration> timeFromStart();
-
-  Optional<List<Extension>> extension();
+  Optional<String> participantEffectiveDateTime();
 
   Optional<String> definitionCanonical();
 
-  Optional<String> participantEffectiveDateTime();
+  Optional<CodeableConcept> definitionCodeableConcept();
 
-  Optional<String> id();
-
-  Optional<Evidencevariable_characteristicGroupmeasure> groupMeasure();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<DataRequirement> definitionDataRequirement();
 
   Optional<Duration> participantEffectiveDuration();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> definitionReference();
-
-  Optional<Expression> definitionExpression();
-
-  Optional<String> description();
-
   Optional<Boolean> exclude();
 
   Optional<Timing> participantEffectiveTiming();
 
+  Optional<TriggerDefinition> definitionTriggerDefinition();
+
+  Optional<Evidencevariable_characteristicGroupmeasure> groupMeasure();
+
+  Optional<String> description();
+
+  Optional<Expression> definitionExpression();
+
+  Optional<Duration> timeFromStart();
+
+  Optional<Reference> definitionReference();
+
   Optional<List<UsageContext>> usageContext();
 
-  Optional<Period> participantEffectivePeriod();
+  Optional<String> id();
 
-  Optional<CodeableConcept> definitionCodeableConcept();
+  Optional<List<Extension>> extension();
+
+  Optional<Period> participantEffectivePeriod();
 
   static ImmutableEvidenceVariable_Characteristic.Builder builder() {
     return ImmutableEvidenceVariable_Characteristic.builder();

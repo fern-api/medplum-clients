@@ -17,45 +17,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Provenance {
-  Optional<List<CodeableConcept>> reason();
-
-  String resourceType();
-
   Optional<Period> occurredPeriod();
+
+  List<Provenance_Agent> agent();
+
+  Optional<Meta> meta();
+
+  Optional<Id> id();
+
+  Optional<String> occurredDateTime();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<Uri> implicitRules();
 
-  List<Reference> target();
+  Optional<Narrative> text();
 
-  List<Provenance_Agent> agent();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> language();
 
   Optional<Instant> recorded();
 
   Optional<List<Uri>> policy();
 
-  Optional<Id> id();
+  List<Reference> target();
 
-  Optional<Meta> meta();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Signature>> signature();
-
-  Optional<Code> language();
-
-  Optional<String> occurredDateTime();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> location();
-
-  Optional<Narrative> text();
+  Optional<List<CodeableConcept>> reason();
 
   Optional<CodeableConcept> activity();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Provenance_Entity>> entity();
+
+  Optional<List<Signature>> signature();
+
+  String resourceType();
+
+  Optional<Reference> location();
 
   static ImmutableProvenance.ResourceTypeBuildStage builder() {
     return ImmutableProvenance.builder();

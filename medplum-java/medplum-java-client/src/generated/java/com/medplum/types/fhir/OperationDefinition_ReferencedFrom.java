@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition_ReferencedFrom {
+  Optional<List<Extension>> extension();
+
   Optional<String> source();
 
   Optional<String> id();
 
   Optional<String> sourceId();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 

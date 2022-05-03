@@ -21,9 +21,9 @@ public interface Period {
 
   Optional<DateTime> start();
 
-  Optional<List<Extension>> extension();
-
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
 
   static ImmutablePeriod.Builder builder() {
     return ImmutablePeriod.builder();

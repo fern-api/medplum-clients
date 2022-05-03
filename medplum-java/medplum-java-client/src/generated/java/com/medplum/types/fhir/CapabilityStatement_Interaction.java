@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Interaction {
-  Optional<List<Extension>> extension();
-
   Optional<String> id();
 
-  Optional<Markdown> documentation();
+  Optional<Capabilitystatement_interactionCode> code();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Capabilitystatement_interactionCode> code();
+  Optional<Markdown> documentation();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableCapabilityStatement_Interaction.Builder builder() {
     return ImmutableCapabilityStatement_Interaction.builder();

@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface MedicationKnowledge_MonitoringProgram {
   Optional<CodeableConcept> type();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
 
-  Optional<String> name();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
+
+  Optional<String> name();
 
   static ImmutableMedicationKnowledge_MonitoringProgram.Builder builder() {
     return ImmutableMedicationKnowledge_MonitoringProgram.builder();

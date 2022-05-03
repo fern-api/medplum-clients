@@ -12152,6 +12152,24 @@ types:
       valueDecimal: optional<double>
       valueInteger: optional<double>
       valueString: optional<string>
+  GetTokenResponse:
+    properties:
+      token_type: string
+      access_token: string
+      expires_in: integer
+      project: ProjectReference
+      profile: ProfileReference
+  ProjectReference:
+    properties:
+      reference: string
+      display: string
+  ProfileReference:
+    properties:
+      reference: string
+      display: string
+  GrantType:
+    enum:
+      - client_credential
 services:
   http:
     FhirService:
@@ -12212,3 +12230,12 @@ services:
             versionId: string
           docs: Read Version
           response: ResourceList
+    Oauth2Service:
+      endpoints:
+        getToken:
+          method: POST
+          path: /oauth2/token
+          queryParameters:
+            grant_type: string
+            client_id: string
+          response: GetTokenResponse

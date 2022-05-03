@@ -18,16 +18,16 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestReport_Action {
+  Optional<List<Extension>> extension();
+
+  Optional<TestReport_Operation> operation();
+
   @JsonProperty("assert")
   Optional<TestReport_Assert> _assert();
 
   Optional<String> id();
 
-  Optional<TestReport_Operation> operation();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableTestReport_Action.Builder builder() {
     return ImmutableTestReport_Action.builder();

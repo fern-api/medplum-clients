@@ -17,87 +17,87 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskEvidenceSynthesis {
-  Optional<List<ContactDetail>> reviewer();
+  Optional<Period> effectivePeriod();
 
-  Optional<String> name();
+  Optional<Markdown> description();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> url();
-
-  Optional<Date> approvalDate();
-
-  Optional<List<Annotation>> note();
+  Optional<String> version();
 
   Optional<Date> lastReviewDate();
 
-  Optional<List<RiskEvidenceSynthesis_Certainty>> certainty();
+  Optional<List<ContactDetail>> endorser();
 
-  Optional<Period> effectivePeriod();
+  Optional<RiskEvidenceSynthesis_RiskEstimate> riskEstimate();
 
-  Optional<List<CodeableConcept>> topic();
+  Optional<Uri> url();
 
-  Optional<String> publisher();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<ContactDetail>> author();
+  Optional<List<ContactDetail>> contact();
 
   Optional<List<Identifier>> identifier();
 
   Optional<Uri> implicitRules();
 
-  Optional<String> version();
+  Optional<Markdown> copyright();
 
-  Optional<CodeableConcept> studyType();
-
-  Optional<Reference> exposure();
+  Optional<List<ContactDetail>> author();
 
   Optional<CodeableConcept> synthesisType();
 
-  Optional<RiskEvidenceSynthesis_RiskEstimate> riskEstimate();
+  Optional<List<RiskEvidenceSynthesis_Certainty>> certainty();
 
-  Optional<RiskevidencesynthesisStatus> status();
+  Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<Id> id();
-
-  String resourceType();
-
-  Optional<Markdown> description();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<Meta> meta();
-
-  Optional<String> title();
-
-  Optional<RiskEvidenceSynthesis_SampleSize> sampleSize();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Reference population();
-
-  Optional<Narrative> text();
-
-  Optional<Markdown> copyright();
-
-  Optional<Code> language();
+  Optional<List<CodeableConcept>> topic();
 
   Optional<List<ContactDetail>> editor();
 
-  Optional<List<ResourceList>> contained();
+  Optional<CodeableConcept> studyType();
 
-  Optional<DateTime> date();
+  Reference population();
 
-  Optional<List<ContactDetail>> contact();
+  Optional<RiskEvidenceSynthesis_SampleSize> sampleSize();
 
   Reference outcome();
 
-  static ImmutableRiskEvidenceSynthesis.ResourceTypeBuildStage builder() {
+  Optional<Code> language();
+
+  Optional<Narrative> text();
+
+  Optional<String> title();
+
+  Optional<RiskevidencesynthesisStatus> status();
+
+  String resourceType();
+
+  Optional<Date> approvalDate();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<Id> id();
+
+  Optional<String> publisher();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<DateTime> date();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> exposure();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Annotation>> note();
+
+  Optional<String> name();
+
+  static ImmutableRiskEvidenceSynthesis.PopulationBuildStage builder() {
     return ImmutableRiskEvidenceSynthesis.builder();
   }
 }

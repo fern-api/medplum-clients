@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface Linkage_Item {
   Optional<String> id();
 
-  Optional<Linkage_itemType> type();
-
-  Optional<List<Extension>> modifierExtension();
+  Reference resource();
 
   Optional<List<Extension>> extension();
 
-  Reference resource();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Linkage_itemType> type();
 
   static ImmutableLinkage_Item.ResourceBuildStage builder() {
     return ImmutableLinkage_Item.builder();

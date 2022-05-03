@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestReport {
-  Optional<Meta> meta();
+  Optional<Narrative> text();
 
-  Optional<String> name();
+  Optional<Id> id();
 
-  String resourceType();
+  Optional<List<ResourceList>> contained();
+
+  Optional<TestReport_Teardown> teardown();
 
   Reference testScript();
 
   Optional<Decimal> score();
 
-  Optional<List<TestReport_Test>> test();
+  Optional<Code> language();
+
+  Optional<String> tester();
+
+  Optional<List<Extension>> extension();
 
   Optional<TestreportStatus> status();
 
   Optional<List<TestReport_Participant>> participant();
 
-  Optional<TestReport_Setup> setup();
+  Optional<Uri> implicitRules();
 
-  Optional<List<ResourceList>> contained();
+  Optional<TestReport_Setup> setup();
 
   Optional<Identifier> identifier();
 
-  Optional<Code> language();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
   Optional<TestreportResult> result();
+
+  String resourceType();
+
+  Optional<String> name();
 
   Optional<DateTime> issued();
 
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  Optional<TestReport_Teardown> teardown();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> tester();
+  Optional<List<TestReport_Test>> test();
 
-  static ImmutableTestReport.ResourceTypeBuildStage builder() {
+  Optional<Meta> meta();
+
+  static ImmutableTestReport.TestScriptBuildStage builder() {
     return ImmutableTestReport.builder();
   }
 }

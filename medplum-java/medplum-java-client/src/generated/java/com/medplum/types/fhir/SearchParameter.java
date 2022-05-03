@@ -18,75 +18,75 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SearchParameter {
-  Optional<List<Code>> target();
-
-  Optional<List<SearchparameterComparatorItem>> comparator();
-
-  Optional<Boolean> multipleOr();
-
-  Optional<Id> id();
-
-  Optional<String> version();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Markdown> purpose();
-
-  Optional<Code> language();
-
-  Optional<Uri> url();
-
-  Optional<DateTime> date();
-
-  Optional<Boolean> experimental();
-
-  Optional<List<SearchparameterModifierItem>> modifier();
-
-  Optional<Boolean> multipleAnd();
-
-  Optional<Markdown> description();
-
-  Optional<List<String>> chain();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Narrative> text();
-
-  Optional<SearchparameterStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<SearchparameterXpathusage> xpathUsage();
 
   Optional<Canonical> derivedFrom();
 
-  Optional<String> xpath();
-
   String resourceType();
 
-  Optional<List<SearchParameter_Component>> component();
+  Optional<Narrative> text();
 
-  Optional<String> name();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<List<SearchparameterModifierItem>> modifier();
+
+  Optional<Boolean> experimental();
+
+  Optional<String> version();
+
+  Optional<Code> language();
+
+  Optional<List<Code>> target();
 
   Optional<SearchparameterType> type();
 
+  Optional<Uri> implicitRules();
+
+  Optional<String> name();
+
   Optional<String> expression();
+
+  Optional<Boolean> multipleAnd();
 
   Optional<Code> code();
 
-  Optional<SearchparameterXpathusage> xpathUsage();
+  Optional<Meta> meta();
 
   Optional<List<Code>> base();
 
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<Meta> meta();
-
-  Optional<Uri> implicitRules();
-
   Optional<String> publisher();
 
+  Optional<List<SearchparameterComparatorItem>> comparator();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> description();
+
+  Optional<String> xpath();
+
+  Optional<Boolean> multipleOr();
+
+  Optional<SearchparameterStatus> status();
+
+  Optional<List<SearchParameter_Component>> component();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> date();
+
+  Optional<Uri> url();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<String>> chain();
+
+  Optional<Id> id();
+
   Optional<List<ContactDetail>> contact();
+
+  Optional<Markdown> purpose();
 
   static ImmutableSearchParameter.ResourceTypeBuildStage builder() {
     return ImmutableSearchParameter.builder();

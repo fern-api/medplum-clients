@@ -17,7 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition_RelatesTo {
-  Optional<Reference> targetReference();
+  Optional<Code> code();
 
   Optional<String> id();
 
@@ -25,7 +25,7 @@ public interface Composition_RelatesTo {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Code> code();
+  Optional<Reference> targetReference();
 
   Optional<Identifier> targetIdentifier();
 

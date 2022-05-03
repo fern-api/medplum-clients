@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface ImplementationGuide_DependsOn {
   Optional<Id> packageId();
 
-  Optional<String> id();
-
   Canonical uri();
-
-  Optional<List<Extension>> extension();
 
   Optional<String> version();
 
+  Optional<List<Extension>> extension();
+
   Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   static ImmutableImplementationGuide_DependsOn.UriBuildStage builder() {
     return ImmutableImplementationGuide_DependsOn.builder();

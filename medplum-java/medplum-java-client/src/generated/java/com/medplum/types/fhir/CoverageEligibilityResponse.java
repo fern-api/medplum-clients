@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityResponse {
-  Optional<List<CoverageeligibilityresponsePurposeItem>> purpose();
-
-  Optional<String> servicedDate();
-
-  Optional<Narrative> text();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> status();
-
-  Optional<Reference> requestor();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
-  Optional<String> disposition();
-
-  Reference request();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Identifier>> identifier();
-
-  Reference patient();
-
-  String resourceType();
+  Optional<CoverageeligibilityresponseOutcome> outcome();
 
   Reference insurer();
 
-  Optional<Meta> meta();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<CoverageEligibilityResponse_Insurance>> insurance();
+  Optional<List<ResourceList>> contained();
 
-  Optional<CoverageeligibilityresponseOutcome> outcome();
+  Optional<Reference> requestor();
 
-  Optional<DateTime> created();
-
-  Optional<CodeableConcept> form();
-
-  Optional<String> preAuthRef();
+  Optional<Code> status();
 
   Optional<Code> language();
 
+  Optional<String> servicedDate();
+
+  Optional<List<CoverageeligibilityresponsePurposeItem>> purpose();
+
   Optional<Period> servicedPeriod();
+
+  Optional<Narrative> text();
+
+  Optional<Meta> meta();
+
+  Optional<CodeableConcept> form();
+
+  String resourceType();
+
+  Reference patient();
 
   Optional<List<CoverageEligibilityResponse_Error>> error();
 
-  static ImmutableCoverageEligibilityResponse.RequestBuildStage builder() {
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<CoverageEligibilityResponse_Insurance>> insurance();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
+
+  Reference request();
+
+  Optional<String> preAuthRef();
+
+  Optional<DateTime> created();
+
+  Optional<String> disposition();
+
+  Optional<Id> id();
+
+  static ImmutableCoverageEligibilityResponse.InsurerBuildStage builder() {
     return ImmutableCoverageEligibilityResponse.builder();
   }
 }

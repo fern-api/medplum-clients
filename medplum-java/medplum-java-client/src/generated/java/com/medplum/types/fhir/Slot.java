@@ -18,47 +18,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Slot {
-  Optional<Id> id();
-
-  Optional<Meta> meta();
-
-  Optional<Code> language();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<SlotStatus> status();
-
-  Optional<String> comment();
-
-  Optional<Instant> end();
-
-  Optional<List<CodeableConcept>> serviceType();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Instant> start();
+  Reference schedule();
 
   Optional<List<Identifier>> identifier();
 
-  Reference schedule();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<CodeableConcept>> specialty();
+  Optional<Code> language();
 
-  Optional<List<CodeableConcept>> serviceCategory();
+  Optional<Id> id();
+
+  Optional<List<CodeableConcept>> serviceType();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> overbooked();
 
   Optional<Narrative> text();
 
   Optional<CodeableConcept> appointmentType();
 
-  Optional<Boolean> overbooked();
+  Optional<Meta> meta();
 
-  static ImmutableSlot.ResourceTypeBuildStage builder() {
+  Optional<List<CodeableConcept>> specialty();
+
+  Optional<String> comment();
+
+  String resourceType();
+
+  Optional<Instant> end();
+
+  Optional<List<CodeableConcept>> serviceCategory();
+
+  Optional<SlotStatus> status();
+
+  Optional<Instant> start();
+
+  Optional<Uri> implicitRules();
+
+  static ImmutableSlot.ScheduleBuildStage builder() {
     return ImmutableSlot.builder();
   }
 }

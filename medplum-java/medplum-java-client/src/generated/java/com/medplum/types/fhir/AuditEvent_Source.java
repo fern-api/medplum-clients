@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface AuditEvent_Source {
   Reference observer();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> id();
+  Optional<String> site();
 
   Optional<List<Coding>> type();
 
-  Optional<String> site();
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

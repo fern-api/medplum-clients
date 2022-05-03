@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer_RepeatUnit {
-  Optional<CodeableConcept> orientationOfPolymerisation();
-
   Optional<String> id();
+
+  Optional<CodeableConcept> orientationOfPolymerisation();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> repeatUnit();
+  Optional<SubstanceAmount> amount();
 
   Optional<List<Extension>> modifierExtension();
 
@@ -31,7 +31,7 @@ public interface SubstancePolymer_RepeatUnit {
 
   Optional<List<SubstancePolymer_StructuralRepresentation>> structuralRepresentation();
 
-  Optional<SubstanceAmount> amount();
+  Optional<String> repeatUnit();
 
   static ImmutableSubstancePolymer_RepeatUnit.Builder builder() {
     return ImmutableSubstancePolymer_RepeatUnit.builder();

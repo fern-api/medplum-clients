@@ -17,53 +17,53 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Composition {
-  Optional<Reference> encounter();
-
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> confidentiality();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> custodian();
-
-  Optional<CompositionStatus> status();
-
-  Optional<List<Composition_RelatesTo>> relatesTo();
-
-  Optional<Reference> subject();
-
-  Optional<Identifier> identifier();
-
-  Optional<Meta> meta();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  Optional<DateTime> date();
-
-  List<Reference> author();
+  String resourceType();
 
   Optional<Id> id();
 
-  Optional<List<Composition_Attester>> attester();
+  Optional<Identifier> identifier();
+
+  Optional<List<Extension>> extension();
 
   Optional<List<Composition_Event>> event();
 
-  String resourceType();
+  Optional<Narrative> text();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> custodian();
+
+  Optional<List<Composition_RelatesTo>> relatesTo();
 
   Optional<List<Composition_Section>> section();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Composition_Attester>> attester();
+
   CodeableConcept type();
 
+  Optional<Reference> subject();
+
   Optional<String> title();
+
+  Optional<Code> language();
+
+  Optional<CompositionStatus> status();
+
+  Optional<DateTime> date();
+
+  Optional<List<CodeableConcept>> category();
+
+  List<Reference> author();
+
+  Optional<Meta> meta();
+
+  Optional<Reference> encounter();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Code> confidentiality();
+
+  Optional<List<ResourceList>> contained();
 
   static ImmutableComposition.ResourceTypeBuildStage builder() {
     return ImmutableComposition.builder();

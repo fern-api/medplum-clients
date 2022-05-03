@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AllergyIntolerance_Reaction {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> substance();
 
-  Optional<Allergyintolerance_reactionSeverity> severity();
+  Optional<CodeableConcept> exposureRoute();
 
   Optional<List<Annotation>> note();
 
-  Optional<List<Extension>> extension();
+  Optional<Allergyintolerance_reactionSeverity> severity();
 
-  Optional<CodeableConcept> exposureRoute();
+  Optional<String> description();
 
   List<CodeableConcept> manifestation();
 
   Optional<DateTime> onset();
 
-  Optional<String> description();
-
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableAllergyIntolerance_Reaction.Builder builder() {
     return ImmutableAllergyIntolerance_Reaction.builder();

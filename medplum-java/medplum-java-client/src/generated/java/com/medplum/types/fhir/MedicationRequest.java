@@ -18,91 +18,91 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationRequest {
-  Optional<List<Reference>> basedOn();
-
-  Optional<Boolean> doNotPerform();
-
-  Optional<Boolean> reportedBoolean();
-
-  Optional<Reference> medicationReference();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<CodeableConcept> medicationCodeableConcept();
-
-  Optional<Reference> encounter();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> priorPrescription();
-
-  Optional<List<Reference>> eventHistory();
-
-  Reference subject();
-
-  Optional<List<Dosage>> dosageInstruction();
-
-  Optional<Identifier> groupIdentifier();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> performer();
-
-  Optional<Reference> reportedReference();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<Annotation>> note();
-
-  Optional<List<Reference>> insurance();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<MedicationRequest_DispenseRequest> dispenseRequest();
-
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> intent();
-
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Reference>> detectedIssue();
-
-  Optional<List<Reference>> supportingInformation();
-
-  Optional<MedicationRequest_Substitution> substitution();
-
-  Optional<Code> status();
-
-  Optional<CodeableConcept> performerType();
 
   Optional<Meta> meta();
 
-  Optional<Reference> requester();
+  Optional<Identifier> groupIdentifier();
 
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> statusReason();
-
-  Optional<CodeableConcept> courseOfTherapyType();
-
-  Optional<Code> priority();
-
-  Optional<Reference> recorder();
+  Optional<List<CodeableConcept>> category();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<ResourceList>> contained();
+  Optional<MedicationRequest_Substitution> substitution();
+
+  Optional<List<Reference>> detectedIssue();
+
+  Optional<CodeableConcept> performerType();
+
+  Optional<Reference> performer();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> reportedReference();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<Code> language();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<Reference> encounter();
+
+  Optional<Boolean> reportedBoolean();
+
+  Optional<MedicationRequest_DispenseRequest> dispenseRequest();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Reference> priorPrescription();
+
+  Optional<Code> status();
+
+  Optional<Code> priority();
+
+  Optional<CodeableConcept> courseOfTherapyType();
+
+  Optional<List<Annotation>> note();
+
+  Reference subject();
+
+  Optional<Reference> requester();
 
   String resourceType();
+
+  Optional<List<Reference>> eventHistory();
+
+  Optional<CodeableConcept> medicationCodeableConcept();
+
+  Optional<Reference> medicationReference();
+
+  Optional<Id> id();
+
+  Optional<List<Uri>> instantiatesUri();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<Dosage>> dosageInstruction();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<Reference> recorder();
+
+  Optional<Code> intent();
+
+  Optional<List<Reference>> supportingInformation();
+
+  Optional<List<Canonical>> instantiatesCanonical();
+
+  Optional<List<Reference>> insurance();
+
+  Optional<CodeableConcept> statusReason();
 
   static ImmutableMedicationRequest.SubjectBuildStage builder() {
     return ImmutableMedicationRequest.builder();

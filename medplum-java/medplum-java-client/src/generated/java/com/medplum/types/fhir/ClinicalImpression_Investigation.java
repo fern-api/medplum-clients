@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface ClinicalImpression_Investigation {
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   CodeableConcept code();
 
   Optional<List<Reference>> item();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   static ImmutableClinicalImpression_Investigation.CodeBuildStage builder() {
     return ImmutableClinicalImpression_Investigation.builder();

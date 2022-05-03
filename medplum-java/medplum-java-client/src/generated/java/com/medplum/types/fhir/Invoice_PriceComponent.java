@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Invoice_PriceComponent {
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
+
+  Optional<Invoice_pricecomponentType> type();
+
+  Optional<CodeableConcept> code();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> code();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Decimal> factor();
 
   Optional<Money> amount();
-
-  Optional<Invoice_pricecomponentType> type();
 
   static ImmutableInvoice_PriceComponent.Builder builder() {
     return ImmutableInvoice_PriceComponent.builder();

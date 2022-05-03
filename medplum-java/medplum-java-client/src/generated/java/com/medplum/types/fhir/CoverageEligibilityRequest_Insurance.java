@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest_Insurance {
+  Optional<String> businessArrangement();
+
   Optional<List<Extension>> modifierExtension();
-
-  Reference coverage();
-
-  Optional<List<Extension>> extension();
 
   Optional<Boolean> focal();
 
   Optional<String> id();
 
-  Optional<String> businessArrangement();
+  Optional<List<Extension>> extension();
+
+  Reference coverage();
 
   static ImmutableCoverageEligibilityRequest_Insurance.CoverageBuildStage builder() {
     return ImmutableCoverageEligibilityRequest_Insurance.builder();

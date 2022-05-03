@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CareTeam {
-  Optional<Id> id();
-
-  Optional<Period> period();
-
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<CareteamStatus> status();
-
-  Optional<Reference> encounter();
-
-  Optional<List<CareTeam_Participant>> participant();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Annotation>> note();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<List<CodeableConcept>> reasonCode();
+  Optional<CareteamStatus> status();
 
-  Optional<List<ContactPoint>> telecom();
+  Optional<Period> period();
 
-  Optional<Uri> implicitRules();
+  Optional<List<CareTeam_Participant>> participant();
+
+  Optional<Id> id();
+
+  Optional<Code> language();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Reference> encounter();
 
   Optional<Reference> subject();
 
-  Optional<List<Annotation>> note();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<String> name();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Reference>> reasonReference();
 
   Optional<List<Reference>> managingOrganization();
 
-  Optional<List<Reference>> reasonReference();
+  String resourceType();
+
+  Optional<Meta> meta();
+
+  Optional<List<ContactPoint>> telecom();
+
+  Optional<Narrative> text();
+
+  Optional<String> name();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> implicitRules();
 
   static ImmutableCareTeam.ResourceTypeBuildStage builder() {
     return ImmutableCareTeam.builder();

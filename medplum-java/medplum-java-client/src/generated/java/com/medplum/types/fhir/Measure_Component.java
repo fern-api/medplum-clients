@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Measure_Component {
-  Expression criteria();
-
-  Optional<String> description();
+  Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> code();
+
+  Optional<String> description();
 
   Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
+  Expression criteria();
 
   static ImmutableMeasure_Component.CriteriaBuildStage builder() {
     return ImmutableMeasure_Component.builder();

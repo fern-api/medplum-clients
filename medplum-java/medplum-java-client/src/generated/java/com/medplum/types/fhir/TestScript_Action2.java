@@ -19,9 +19,9 @@ import org.immutables.value.Value;
 public interface TestScript_Action2 {
   TestScript_Operation operation();
 
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 

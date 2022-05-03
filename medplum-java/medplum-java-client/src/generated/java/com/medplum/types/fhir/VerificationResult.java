@@ -17,51 +17,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface VerificationResult {
-  String resourceType();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<String>> targetLocation();
-
-  Optional<List<VerificationResult_PrimarySource>> primarySource();
-
-  Optional<Timing> frequency();
-
-  Optional<DateTime> statusDate();
-
-  Optional<Id> id();
-
-  Optional<DateTime> lastPerformed();
-
-  Optional<List<VerificationResult_Validator>> validator();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<CodeableConcept>> validationProcess();
-
-  Optional<Code> language();
-
-  Optional<CodeableConcept> failureAction();
-
-  Optional<Narrative> text();
+  Optional<CodeableConcept> need();
 
   Optional<Meta> meta();
 
-  Optional<List<Reference>> target();
+  Optional<DateTime> lastPerformed();
 
-  Optional<Date> nextScheduled();
+  String resourceType();
 
-  Optional<CodeableConcept> validationType();
+  Optional<List<VerificationResult_Validator>> validator();
 
-  Optional<List<Extension>> extension();
+  Optional<CodeableConcept> failureAction();
 
   Optional<Code> status();
 
-  Optional<CodeableConcept> need();
+  Optional<Date> nextScheduled();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> validationType();
+
+  Optional<List<VerificationResult_PrimarySource>> primarySource();
 
   Optional<VerificationResult_Attestation> attestation();
+
+  Optional<DateTime> statusDate();
+
+  Optional<List<CodeableConcept>> validationProcess();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Id> id();
+
+  Optional<List<String>> targetLocation();
+
+  Optional<List<Reference>> target();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  Optional<Timing> frequency();
 
   static ImmutableVerificationResult.ResourceTypeBuildStage builder() {
     return ImmutableVerificationResult.builder();

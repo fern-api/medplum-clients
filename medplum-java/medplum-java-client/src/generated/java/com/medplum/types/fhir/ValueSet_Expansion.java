@@ -18,21 +18,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Expansion {
-  Optional<List<ValueSet_Parameter>> parameter();
+  Optional<String> id();
 
   Optional<Uri> identifier();
 
-  Optional<List<ValueSet_Contains>> contains();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<ValueSet_Contains>> contains();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Integer> total();
 
   Optional<Integer> offset();
 
-  Optional<Integer> total();
+  Optional<List<ValueSet_Parameter>> parameter();
 
   Optional<DateTime> timestamp();
 

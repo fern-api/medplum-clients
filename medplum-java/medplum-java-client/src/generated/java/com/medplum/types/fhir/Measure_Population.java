@@ -21,13 +21,13 @@ public interface Measure_Population {
 
   Expression criteria();
 
-  Optional<String> id();
-
-  Optional<String> description();
+  Optional<CodeableConcept> code();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> code();
+  Optional<String> id();
+
+  Optional<String> description();
 
   static ImmutableMeasure_Population.CriteriaBuildStage builder() {
     return ImmutableMeasure_Population.builder();

@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Location {
+  Optional<Code> language();
+
   Optional<Narrative> text();
 
   Optional<List<Identifier>> identifier();
 
-  Optional<Reference> managingOrganization();
-
-  Optional<List<Extension>> extension();
-
-  Optional<LocationStatus> status();
-
-  Optional<Location_Position> position();
-
-  Optional<List<Reference>> endpoint();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Optional<LocationMode> mode();
-
-  Optional<List<CodeableConcept>> type();
-
-  Optional<Address> address();
-
-  Optional<List<Location_HoursOfOperation>> hoursOfOperation();
-
-  Optional<Code> language();
-
-  Optional<CodeableConcept> physicalType();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<List<String>> alias();
-
-  Optional<String> availabilityExceptions();
 
   String resourceType();
 
-  Optional<Reference> partOf();
-
-  Optional<Meta> meta();
-
-  Optional<String> description();
-
-  Optional<List<ContactPoint>> telecom();
+  Optional<CodeableConcept> physicalType();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<String> name();
+  Optional<Uri> implicitRules();
+
+  Optional<LocationStatus> status();
+
+  Optional<String> description();
+
+  Optional<Reference> partOf();
+
+  Optional<String> availabilityExceptions();
+
+  Optional<LocationMode> mode();
+
+  Optional<List<ContactPoint>> telecom();
 
   Optional<Coding> operationalStatus();
+
+  Optional<Location_Position> position();
+
+  Optional<Meta> meta();
+
+  Optional<String> name();
+
+  Optional<List<String>> alias();
+
+  Optional<Address> address();
+
+  Optional<List<CodeableConcept>> type();
+
+  Optional<Reference> managingOrganization();
+
+  Optional<Id> id();
+
+  Optional<List<Reference>> endpoint();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Location_HoursOfOperation>> hoursOfOperation();
 
   static ImmutableLocation.ResourceTypeBuildStage builder() {
     return ImmutableLocation.builder();

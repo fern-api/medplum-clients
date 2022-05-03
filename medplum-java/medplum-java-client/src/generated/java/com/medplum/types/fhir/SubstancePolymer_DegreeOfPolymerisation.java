@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer_DegreeOfPolymerisation {
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> degree();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<SubstanceAmount> amount();
 
   Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   static ImmutableSubstancePolymer_DegreeOfPolymerisation.Builder builder() {
     return ImmutableSubstancePolymer_DegreeOfPolymerisation.builder();

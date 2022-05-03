@@ -19,35 +19,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Questionnaire_EnableWhen {
-  Optional<String> id();
-
-  Optional<Double> answerDecimal();
-
-  Optional<String> answerDate();
-
-  Optional<Quantity> answerQuantity();
-
-  Optional<Coding> answerCoding();
-
-  Optional<Boolean> answerBoolean();
+  Optional<Questionnaire_enablewhenOperator> operator();
 
   Optional<Reference> answerReference();
 
+  Optional<Double> answerDecimal();
+
+  Optional<Quantity> answerQuantity();
+
+  Optional<Boolean> answerBoolean();
+
   Optional<String> answerDateTime();
-
-  Optional<Double> answerInteger();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> answerString();
-
-  Optional<String> question();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
+  Optional<Coding> answerCoding();
+
+  Optional<String> question();
+
   Optional<String> answerTime();
 
-  Optional<Questionnaire_enablewhenOperator> operator();
+  Optional<String> answerDate();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Double> answerInteger();
+
+  Optional<String> answerString();
 
   static ImmutableQuestionnaire_EnableWhen.Builder builder() {
     return ImmutableQuestionnaire_EnableWhen.builder();

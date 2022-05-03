@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Range {
-  Optional<List<Extension>> extension();
-
   Optional<Quantity> low();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<Quantity> high();
+
+  Optional<String> id();
 
   static ImmutableRange.Builder builder() {
     return ImmutableRange.builder();

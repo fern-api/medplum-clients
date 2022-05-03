@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageHeader_Destination {
-  Optional<Reference> receiver();
-
-  Optional<String> name();
-
-  Optional<Url> endpoint();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Extension>> extension();
+  Optional<Reference> receiver();
 
   Optional<Reference> target();
+
+  Optional<Url> endpoint();
+
+  Optional<String> name();
+
+  Optional<String> id();
 
   static ImmutableMessageHeader_Destination.Builder builder() {
     return ImmutableMessageHeader_Destination.builder();

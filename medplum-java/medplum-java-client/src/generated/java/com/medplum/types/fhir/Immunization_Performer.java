@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Immunization_Performer {
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
 
   Reference actor();
 
   Optional<CodeableConcept> function();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableImmunization_Performer.ActorBuildStage builder() {
     return ImmutableImmunization_Performer.builder();

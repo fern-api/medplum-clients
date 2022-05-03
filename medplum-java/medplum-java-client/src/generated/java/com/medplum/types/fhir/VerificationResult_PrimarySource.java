@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface VerificationResult_PrimarySource {
   Optional<Reference> who();
 
-  Optional<CodeableConcept> validationStatus();
+  Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> type();
+  Optional<CodeableConcept> validationStatus();
 
   Optional<DateTime> validationDate();
 
-  Optional<CodeableConcept> canPushUpdates();
-
-  Optional<List<CodeableConcept>> communicationMethod();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<List<CodeableConcept>> type();
 
-  Optional<List<Extension>> extension();
+  Optional<List<CodeableConcept>> communicationMethod();
+
+  Optional<CodeableConcept> canPushUpdates();
 
   Optional<List<CodeableConcept>> pushTypeAvailable();
 

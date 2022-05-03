@@ -17,83 +17,83 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ChargeItem {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Canonical>> definitionCanonical();
-
-  Optional<Id> id();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<List<CodeableConcept>> bodysite();
-
-  Optional<Reference> requestingOrganization();
-
-  Optional<Reference> context();
-
-  Optional<Reference> costCenter();
-
-  Optional<List<CodeableConcept>> reason();
-
-  Optional<Reference> performingOrganization();
-
-  Reference subject();
-
-  Optional<Reference> productReference();
-
-  Optional<Money> priceOverride();
+  Optional<List<Reference>> supportingInformation();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Reference>> supportingInformation();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  CodeableConcept code();
-
-  Optional<List<ChargeItem_Performer>> performer();
-
-  Optional<CodeableConcept> productCodeableConcept();
+  Optional<Reference> context();
 
   Optional<List<Annotation>> note();
 
-  Optional<Reference> enterer();
+  Optional<Uri> implicitRules();
 
-  String resourceType();
+  Optional<List<Identifier>> identifier();
 
-  Optional<ChargeitemStatus> status();
-
-  Optional<Meta> meta();
-
-  Optional<String> overrideReason();
-
-  Optional<List<Reference>> service();
-
-  Optional<Timing> occurrenceTiming();
-
-  Optional<List<Reference>> account();
-
-  Optional<Period> occurrencePeriod();
-
-  Optional<List<Extension>> extension();
+  Optional<List<Canonical>> definitionCanonical();
 
   Optional<DateTime> enteredDate();
 
-  Optional<Decimal> factorOverride();
+  Optional<List<CodeableConcept>> bodysite();
 
-  Optional<List<Uri>> definitionUri();
+  Optional<Reference> enterer();
 
-  Optional<List<Reference>> partOf();
+  Optional<Reference> productReference();
 
-  Optional<Narrative> text();
+  Optional<Reference> requestingOrganization();
+
+  Optional<Reference> costCenter();
+
+  Optional<List<Reference>> service();
 
   Optional<Quantity> quantity();
 
-  static ImmutableChargeItem.SubjectBuildStage builder() {
+  Optional<Id> id();
+
+  Optional<List<ChargeItem_Performer>> performer();
+
+  Optional<String> overrideReason();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<CodeableConcept> productCodeableConcept();
+
+  Optional<Money> priceOverride();
+
+  Optional<Timing> occurrenceTiming();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<ChargeitemStatus> status();
+
+  CodeableConcept code();
+
+  String resourceType();
+
+  Optional<List<Reference>> account();
+
+  Optional<List<CodeableConcept>> reason();
+
+  Reference subject();
+
+  Optional<Narrative> text();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<Code> language();
+
+  Optional<List<Uri>> definitionUri();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<Meta> meta();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> performingOrganization();
+
+  Optional<Decimal> factorOverride();
+
+  static ImmutableChargeItem.CodeBuildStage builder() {
     return ImmutableChargeItem.builder();
   }
 }

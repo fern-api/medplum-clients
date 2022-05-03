@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial_FractionDescription {
+  Optional<String> fraction();
+
   Optional<CodeableConcept> materialType();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> fraction();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
-
-  Optional<String> id();
 
   static ImmutableSubstanceSourceMaterial_FractionDescription.Builder builder() {
     return ImmutableSubstanceSourceMaterial_FractionDescription.builder();

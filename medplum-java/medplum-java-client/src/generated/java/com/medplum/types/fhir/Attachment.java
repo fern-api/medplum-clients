@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Attachment {
-  Optional<String> id();
-
-  Optional<Code> language();
-
-  Optional<Base64Binary> data();
-
-  Optional<Code> contentType();
-
-  Optional<Url> url();
+  Optional<Base64Binary> hash();
 
   Optional<UnsignedInt> size();
 
-  Optional<List<Extension>> extension();
+  Optional<String> title();
 
   Optional<DateTime> creation();
 
-  Optional<String> title();
+  Optional<Base64Binary> data();
 
-  Optional<Base64Binary> hash();
+  Optional<Code> language();
+
+  Optional<Code> contentType();
+
+  Optional<String> id();
+
+  Optional<Url> url();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableAttachment.Builder builder() {
     return ImmutableAttachment.builder();

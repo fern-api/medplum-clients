@@ -22,23 +22,23 @@ public interface ExplanationOfBenefit_BenefitBalance {
 
   Optional<List<Extension>> extension();
 
-  Optional<Boolean> excluded();
-
-  Optional<String> description();
-
-  Optional<CodeableConcept> unit();
+  Optional<String> id();
 
   Optional<CodeableConcept> term();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> name();
-
   Optional<List<ExplanationOfBenefit_Financial>> financial();
+
+  Optional<String> name();
 
   CodeableConcept category();
 
-  Optional<String> id();
+  Optional<String> description();
+
+  Optional<Boolean> excluded();
+
+  Optional<CodeableConcept> unit();
 
   static ImmutableExplanationOfBenefit_BenefitBalance.CategoryBuildStage builder() {
     return ImmutableExplanationOfBenefit_BenefitBalance.builder();

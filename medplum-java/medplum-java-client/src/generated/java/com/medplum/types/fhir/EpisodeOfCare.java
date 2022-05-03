@@ -17,47 +17,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EpisodeOfCare {
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> team();
-
-  Optional<Code> language();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> managingOrganization();
-
-  Optional<List<Reference>> referralRequest();
-
-  Optional<List<EpisodeOfCare_StatusHistory>> statusHistory();
+  Optional<List<CodeableConcept>> type();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<Reference> careManager();
-
-  Optional<Period> period();
-
-  Reference patient();
-
-  Optional<Uri> implicitRules();
+  Optional<List<EpisodeOfCare_StatusHistory>> statusHistory();
 
   Optional<List<Extension>> extension();
 
-  Optional<EpisodeofcareStatus> status();
+  Optional<Meta> meta();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Narrative> text();
 
-  Optional<List<Reference>> account();
+  Optional<Period> period();
 
-  String resourceType();
-
-  Optional<Id> id();
+  Optional<List<Reference>> referralRequest();
 
   Optional<List<EpisodeOfCare_Diagnosis>> diagnosis();
 
-  Optional<List<CodeableConcept>> type();
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> careManager();
+
+  Optional<List<Reference>> account();
+
+  Optional<EpisodeofcareStatus> status();
+
+  Optional<List<Reference>> team();
+
+  Optional<List<Identifier>> identifier();
+
+  Reference patient();
+
+  String resourceType();
+
+  Optional<Reference> managingOrganization();
+
+  Optional<Code> language();
+
+  Optional<Id> id();
 
   static ImmutableEpisodeOfCare.PatientBuildStage builder() {
     return ImmutableEpisodeOfCare.builder();

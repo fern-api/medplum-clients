@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Money {
-  Optional<String> id();
-
   Optional<Decimal> value();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<Code> currency();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableMoney.Builder builder() {
     return ImmutableMoney.builder();

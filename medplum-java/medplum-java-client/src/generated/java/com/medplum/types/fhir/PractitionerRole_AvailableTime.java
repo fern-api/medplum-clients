@@ -20,17 +20,17 @@ import org.immutables.value.Value;
 public interface PractitionerRole_AvailableTime {
   Optional<List<Code>> daysOfWeek();
 
-  Optional<Time> availableEndTime();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
   Optional<Time> availableStartTime();
 
   Optional<Boolean> allDay();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<Time> availableEndTime();
 
   static ImmutablePractitionerRole_AvailableTime.Builder builder() {
     return ImmutablePractitionerRole_AvailableTime.builder();

@@ -18,89 +18,89 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Library {
-  CodeableConcept type();
-
-  Optional<String> name();
-
-  Optional<DateTime> date();
-
-  Optional<Reference> subjectReference();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Markdown> description();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<List<DataRequirement>> dataRequirement();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<List<CodeableConcept>> topic();
-
-  Optional<String> version();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<LibraryStatus> status();
-
-  Optional<String> title();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  Optional<Meta> meta();
-
   Optional<Period> effectivePeriod();
-
-  Optional<List<RelatedArtifact>> relatedArtifact();
-
-  Optional<Id> id();
-
-  Optional<String> subtitle();
-
-  Optional<CodeableConcept> subjectCodeableConcept();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<Markdown> copyright();
-
-  Optional<List<Attachment>> content();
-
-  Optional<String> publisher();
-
-  Optional<Markdown> purpose();
 
   String resourceType();
 
-  Optional<Code> language();
+  Optional<List<CodeableConcept>> jurisdiction();
 
-  Optional<List<ParameterDefinition>> parameter();
+  Optional<Boolean> experimental();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<DataRequirement>> dataRequirement();
 
   Optional<List<ResourceList>> contained();
 
   Optional<Date> approvalDate();
 
-  Optional<List<ContactDetail>> author();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<List<ContactDetail>> editor();
+  Optional<List<Attachment>> content();
 
-  Optional<Uri> url();
-
-  Optional<Boolean> experimental();
-
-  Optional<Uri> implicitRules();
-
-  Optional<String> usage();
+  Optional<DateTime> date();
 
   Optional<Date> lastReviewDate();
 
+  Optional<Markdown> purpose();
+
+  Optional<List<ContactDetail>> endorser();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> subjectCodeableConcept();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> subtitle();
+
+  Optional<Uri> url();
+
+  Optional<List<ContactDetail>> editor();
+
   Optional<Narrative> text();
 
-  static ImmutableLibrary.TypeBuildStage builder() {
+  Optional<LibraryStatus> status();
+
+  Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> title();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<Meta> meta();
+
+  Optional<String> version();
+
+  Optional<Reference> subjectReference();
+
+  Optional<String> publisher();
+
+  Optional<String> usage();
+
+  Optional<String> name();
+
+  CodeableConcept type();
+
+  Optional<List<RelatedArtifact>> relatedArtifact();
+
+  Optional<Markdown> description();
+
+  Optional<Markdown> copyright();
+
+  Optional<List<CodeableConcept>> topic();
+
+  Optional<List<ParameterDefinition>> parameter();
+
+  static ImmutableLibrary.ResourceTypeBuildStage builder() {
     return ImmutableLibrary.builder();
   }
 }

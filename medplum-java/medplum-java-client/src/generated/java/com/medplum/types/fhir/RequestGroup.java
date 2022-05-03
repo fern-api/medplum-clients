@@ -17,59 +17,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup {
-  Optional<Identifier> groupIdentifier();
+  Optional<CodeableConcept> code();
 
   Optional<List<Annotation>> note();
 
-  Optional<List<Reference>> replaces();
-
-  Optional<List<Uri>> instantiatesUri();
-
-  Optional<Code> language();
-
-  Optional<Reference> subject();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> status();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<Meta> meta();
-
-  Optional<List<Canonical>> instantiatesCanonical();
-
-  Optional<Code> intent();
-
-  Optional<Reference> encounter();
-
-  Optional<Reference> author();
+  String resourceType();
 
   Optional<Id> id();
 
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> replaces();
+
   Optional<List<Identifier>> identifier();
 
-  String resourceType();
+  Optional<Identifier> groupIdentifier();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<Reference>> basedOn();
+
+  Optional<Code> intent();
+
+  Optional<Code> priority();
+
+  Optional<Reference> author();
 
   Optional<List<ResourceList>> contained();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Uri>> instantiatesUri();
 
   Optional<DateTime> authoredOn();
 
   Optional<List<RequestGroup_Action>> action();
 
-  Optional<Code> priority();
+  Optional<Code> language();
 
-  Optional<CodeableConcept> code();
+  Optional<List<Canonical>> instantiatesCanonical();
 
-  Optional<List<Extension>> extension();
+  Optional<Reference> subject();
 
-  Optional<Narrative> text();
+  Optional<Meta> meta();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<Reference> encounter();
+
+  Optional<Code> status();
 
   static ImmutableRequestGroup.ResourceTypeBuildStage builder() {
     return ImmutableRequestGroup.builder();

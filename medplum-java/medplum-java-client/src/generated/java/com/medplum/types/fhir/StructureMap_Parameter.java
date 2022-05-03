@@ -21,19 +21,19 @@ import org.immutables.value.Value;
 public interface StructureMap_Parameter {
   Optional<String> valueString();
 
-  Optional<Double> valueInteger();
-
   Optional<List<Extension>> extension();
-
-  Optional<String> valueId();
 
   Optional<Double> valueDecimal();
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> valueId();
+
+  Optional<Double> valueInteger();
 
   Optional<Boolean> valueBoolean();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableStructureMap_Parameter.Builder builder() {
     return ImmutableStructureMap_Parameter.builder();

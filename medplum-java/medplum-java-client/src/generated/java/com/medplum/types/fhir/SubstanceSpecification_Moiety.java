@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSpecification_Moiety {
+  Optional<List<Extension>> extension();
+
   Optional<String> amountString();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Identifier> identifier();
-
-  Optional<String> molecularFormula();
 
   Optional<CodeableConcept> opticalActivity();
 
+  Optional<Quantity> amountQuantity();
+
+  Optional<Identifier> identifier();
+
   Optional<CodeableConcept> stereochemistry();
 
-  Optional<List<Extension>> extension();
+  Optional<String> name();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> role();
 
-  Optional<Quantity> amountQuantity();
+  Optional<String> molecularFormula();
 
   Optional<String> id();
-
-  Optional<String> name();
 
   static ImmutableSubstanceSpecification_Moiety.Builder builder() {
     return ImmutableSubstanceSpecification_Moiety.builder();

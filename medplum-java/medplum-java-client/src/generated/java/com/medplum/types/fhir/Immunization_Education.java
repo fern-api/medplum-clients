@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Immunization_Education {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
   Optional<DateTime> publicationDate();
 
-  Optional<String> documentType();
+  Optional<List<Extension>> extension();
 
   Optional<Uri> reference();
 
-  Optional<DateTime> presentationDate();
+  Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> documentType();
+
+  Optional<DateTime> presentationDate();
 
   static ImmutableImmunization_Education.Builder builder() {
     return ImmutableImmunization_Education.builder();

@@ -17,111 +17,111 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit {
-  CodeableConcept type();
+  Optional<Id> id();
 
-  Optional<PositiveInt> precedence();
+  Optional<List<ExplanationOfBenefit_ProcessNote>> processNote();
 
   Optional<Reference> facility();
 
-  Optional<List<ExplanationOfBenefit_Diagnosis>> diagnosis();
-
-  Optional<List<ExplanationOfBenefit_SupportingInfo>> supportingInfo();
-
-  Reference insurer();
-
-  Optional<Reference> prescription();
-
-  Optional<Id> id();
-
-  Optional<List<Period>> preAuthRefPeriod();
-
-  Optional<List<Extension>> modifierExtension();
-
   String resourceType();
-
-  Reference patient();
-
-  Optional<Attachment> form();
-
-  Optional<DateTime> created();
-
-  List<ExplanationOfBenefit_Insurance> insurance();
-
-  Optional<List<ExplanationOfBenefit_AddItem>> addItem();
-
-  Optional<Meta> meta();
-
-  Optional<CodeableConcept> fundsReserveRequested();
-
-  Optional<Narrative> text();
-
-  Optional<List<ExplanationOfBenefit_Related>> related();
-
-  Optional<List<ExplanationOfBenefit_Procedure>> procedure();
 
   Optional<List<ExplanationOfBenefit_CareTeam>> careTeam();
 
-  Optional<List<Extension>> extension();
+  Reference patient();
 
-  Optional<String> disposition();
+  Optional<List<String>> preAuthRef();
 
-  Optional<List<ExplanationOfBenefit_BenefitBalance>> benefitBalance();
+  Optional<List<ExplanationOfBenefit_Procedure>> procedure();
 
   Optional<CodeableConcept> formCode();
 
-  Reference provider();
-
-  Optional<Code> use();
-
-  Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<ExplanationOfBenefit_Payee> payee();
-
-  Optional<List<ExplanationOfBenefit_Total>> total();
-
-  Optional<Period> billablePeriod();
-
-  Optional<CodeableConcept> subType();
-
-  Optional<Reference> claimResponse();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<CodeableConcept> fundsReserve();
-
-  Optional<Reference> referral();
+  Optional<Reference> prescription();
 
   Optional<ExplanationOfBenefit_Payment> payment();
 
+  Optional<String> disposition();
+
+  Optional<List<Period>> preAuthRefPeriod();
+
+  Optional<Meta> meta();
+
+  Optional<List<ExplanationOfBenefit_Diagnosis>> diagnosis();
+
   Optional<Reference> originalPrescription();
+
+  Optional<Period> benefitPeriod();
+
+  Optional<Reference> claimResponse();
+
+  Optional<List<ExplanationOfBenefit_Adjudication>> adjudication();
+
+  List<ExplanationOfBenefit_Insurance> insurance();
+
+  Optional<CodeableConcept> subType();
+
+  Optional<Period> billablePeriod();
+
+  Optional<List<ExplanationOfBenefit_SupportingInfo>> supportingInfo();
+
+  Optional<List<ExplanationOfBenefit_BenefitBalance>> benefitBalance();
+
+  Optional<ExplanationOfBenefit_Payee> payee();
+
+  Optional<Attachment> form();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> fundsReserveRequested();
+
+  Optional<Reference> enterer();
+
+  Optional<Reference> referral();
+
+  Optional<CodeableConcept> fundsReserve();
+
+  Optional<Narrative> text();
 
   Optional<Reference> claim();
 
   Optional<Uri> implicitRules();
 
-  Optional<Period> benefitPeriod();
-
-  Optional<List<String>> preAuthRef();
-
-  Optional<List<ExplanationOfBenefit_Item>> item();
-
-  Optional<ExplanationofbenefitStatus> status();
-
-  Optional<CodeableConcept> priority();
+  Optional<List<Identifier>> identifier();
 
   Optional<ExplanationOfBenefit_Accident> accident();
 
-  Optional<List<ExplanationOfBenefit_ProcessNote>> processNote();
+  CodeableConcept type();
 
-  Optional<Code> language();
-
-  Optional<Reference> enterer();
+  Optional<Code> use();
 
   Optional<Code> outcome();
 
-  static ImmutableExplanationOfBenefit.TypeBuildStage builder() {
+  Optional<DateTime> created();
+
+  Reference insurer();
+
+  Optional<List<ExplanationOfBenefit_Total>> total();
+
+  Optional<List<ExplanationOfBenefit_Related>> related();
+
+  Optional<CodeableConcept> priority();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<ExplanationOfBenefit_AddItem>> addItem();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<List<ExplanationOfBenefit_Item>> item();
+
+  Reference provider();
+
+  Optional<ExplanationofbenefitStatus> status();
+
+  Optional<Code> language();
+
+  Optional<PositiveInt> precedence();
+
+  static ImmutableExplanationOfBenefit.ResourceTypeBuildStage builder() {
     return ImmutableExplanationOfBenefit.builder();
   }
 }

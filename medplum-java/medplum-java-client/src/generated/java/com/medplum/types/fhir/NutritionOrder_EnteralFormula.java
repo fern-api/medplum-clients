@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_EnteralFormula {
-  Optional<Quantity> maxVolumeToDeliver();
+  Optional<List<NutritionOrder_Administration>> administration();
 
   Optional<CodeableConcept> baseFormulaType();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Quantity> caloricDensity();
-
-  Optional<List<NutritionOrder_Administration>> administration();
-
-  Optional<CodeableConcept> additiveType();
+  Optional<String> additiveProductName();
 
   Optional<String> baseFormulaProductName();
 
   Optional<String> administrationInstruction();
 
-  Optional<CodeableConcept> routeofAdministration();
-
-  Optional<String> additiveProductName();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
+
+  Optional<Quantity> maxVolumeToDeliver();
+
+  Optional<CodeableConcept> additiveType();
+
+  Optional<CodeableConcept> routeofAdministration();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Quantity> caloricDensity();
 
   static ImmutableNutritionOrder_EnteralFormula.Builder builder() {
     return ImmutableNutritionOrder_EnteralFormula.builder();

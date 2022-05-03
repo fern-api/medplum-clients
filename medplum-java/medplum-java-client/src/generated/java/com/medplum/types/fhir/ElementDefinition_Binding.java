@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ElementDefinition_Binding {
-  Optional<String> description();
-
-  Optional<Canonical> valueSet();
-
-  Optional<String> id();
+  Optional<Elementdefinition_bindingStrength> strength();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Elementdefinition_bindingStrength> strength();
+  Optional<String> id();
+
+  Optional<Canonical> valueSet();
 
   Optional<List<Extension>> extension();
+
+  Optional<String> description();
 
   static ImmutableElementDefinition_Binding.Builder builder() {
     return ImmutableElementDefinition_Binding.builder();

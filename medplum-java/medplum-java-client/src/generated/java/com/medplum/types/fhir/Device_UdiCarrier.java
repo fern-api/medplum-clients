@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Device_UdiCarrier {
-  Optional<String> carrierHRF();
-
   Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Base64Binary> carrierAIDC();
-
-  Optional<Uri> jurisdiction();
-
-  Optional<String> id();
-
-  Optional<String> deviceIdentifier();
 
   Optional<Device_udicarrierEntrytype> entryType();
 
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> deviceIdentifier();
+
+  Optional<Uri> jurisdiction();
+
   Optional<Uri> issuer();
+
+  Optional<Base64Binary> carrierAIDC();
+
+  Optional<String> carrierHRF();
+
+  Optional<String> id();
 
   static ImmutableDevice_UdiCarrier.Builder builder() {
     return ImmutableDevice_UdiCarrier.builder();

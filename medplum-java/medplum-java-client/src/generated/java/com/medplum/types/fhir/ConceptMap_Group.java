@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap_Group {
-  Optional<Uri> source();
-
-  List<ConceptMap_Element> element();
-
-  Optional<String> sourceVersion();
-
-  Optional<String> targetVersion();
-
   Optional<List<Extension>> extension();
 
   Optional<String> id();
 
+  Optional<String> sourceVersion();
+
+  Optional<Uri> source();
+
+  List<ConceptMap_Element> element();
+
+  Optional<String> targetVersion();
+
+  Optional<Uri> target();
+
   Optional<List<Extension>> modifierExtension();
 
   Optional<ConceptMap_Unmapped> unmapped();
-
-  Optional<Uri> target();
 
   static ImmutableConceptMap_Group.Builder builder() {
     return ImmutableConceptMap_Group.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Implementation {
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
 
   Optional<Reference> custodian();
 
-  Optional<Url> url();
+  Optional<List<Extension>> extension();
+
+  Optional<String> id();
 
   Optional<String> description();
+
+  Optional<Url> url();
 
   static ImmutableCapabilityStatement_Implementation.Builder builder() {
     return ImmutableCapabilityStatement_Implementation.builder();

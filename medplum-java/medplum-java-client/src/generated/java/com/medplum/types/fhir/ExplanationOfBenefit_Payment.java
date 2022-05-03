@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_Payment {
-  Optional<List<Extension>> extension();
-
-  Optional<Money> amount();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Identifier> identifier();
-
   Optional<CodeableConcept> adjustmentReason();
-
-  Optional<Date> date();
 
   Optional<String> id();
 
-  Optional<CodeableConcept> type();
+  Optional<Identifier> identifier();
 
   Optional<Money> adjustment();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Date> date();
+
+  Optional<Money> amount();
 
   static ImmutableExplanationOfBenefit_Payment.Builder builder() {
     return ImmutableExplanationOfBenefit_Payment.builder();

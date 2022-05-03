@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Medication_Batch {
-  Optional<String> lotNumber();
-
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> lotNumber();
 
   Optional<DateTime> expirationDate();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   static ImmutableMedication_Batch.Builder builder() {
     return ImmutableMedication_Batch.builder();

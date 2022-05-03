@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Ratio {
-  Optional<Quantity> denominator();
+  Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<Quantity> denominator();
 
   Optional<Quantity> numerator();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   static ImmutableRatio.Builder builder() {
     return ImmutableRatio.builder();

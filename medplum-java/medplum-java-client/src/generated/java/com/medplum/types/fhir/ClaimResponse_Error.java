@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClaimResponse_Error {
-  CodeableConcept code();
-
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
+
+  CodeableConcept code();
+
+  Optional<PositiveInt> itemSequence();
+
+  Optional<List<Extension>> extension();
 
   Optional<PositiveInt> detailSequence();
 
   Optional<PositiveInt> subDetailSequence();
-
-  Optional<String> id();
-
-  Optional<PositiveInt> itemSequence();
 
   static ImmutableClaimResponse_Error.CodeBuildStage builder() {
     return ImmutableClaimResponse_Error.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Software {
-  Optional<String> id();
-
   Optional<String> name();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
   Optional<String> version();
 
   Optional<DateTime> releaseDate();
-
-  Optional<List<Extension>> extension();
 
   static ImmutableCapabilityStatement_Software.Builder builder() {
     return ImmutableCapabilityStatement_Software.builder();

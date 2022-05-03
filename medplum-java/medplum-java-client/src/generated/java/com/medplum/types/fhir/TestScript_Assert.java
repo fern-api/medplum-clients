@@ -18,55 +18,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Assert {
-  Optional<Code> resource();
-
-  Optional<String> requestURL();
-
-  Optional<String> responseCode();
-
-  Optional<Id> validateProfileId();
-
-  Optional<String> value();
+  Optional<String> expression();
 
   Optional<Boolean> navigationLinks();
 
-  Optional<List<Extension>> extension();
-
-  Optional<String> path();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Testscript_assertOperator> operator();
-
-  Optional<Code> contentType();
-
-  Optional<String> label();
-
-  Optional<Boolean> warningOnly();
+  Optional<String> minimumId();
 
   Optional<String> id();
 
-  Optional<String> compareToSourceExpression();
+  Optional<Code> contentType();
 
-  Optional<String> headerField();
+  Optional<Id> validateProfileId();
+
+  Optional<String> requestURL();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> label();
+
+  Optional<String> compareToSourceId();
+
+  Optional<Testscript_assertResponse> response();
+
+  Optional<String> value();
+
+  Optional<Testscript_assertDirection> direction();
+
+  Optional<String> description();
+
+  Optional<String> responseCode();
+
+  Optional<String> compareToSourcePath();
+
+  Optional<Boolean> warningOnly();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Testscript_assertOperator> operator();
+
+  Optional<String> path();
 
   Optional<Id> sourceId();
 
   Optional<Testscript_assertRequestmethod> requestMethod();
 
-  Optional<Testscript_assertResponse> response();
+  Optional<String> compareToSourceExpression();
 
-  Optional<String> expression();
+  Optional<String> headerField();
 
-  Optional<String> compareToSourcePath();
-
-  Optional<String> compareToSourceId();
-
-  Optional<String> description();
-
-  Optional<Testscript_assertDirection> direction();
-
-  Optional<String> minimumId();
+  Optional<Code> resource();
 
   static ImmutableTestScript_Assert.Builder builder() {
     return ImmutableTestScript_Assert.builder();

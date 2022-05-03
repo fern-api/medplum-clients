@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BiologicallyDerivedProduct_Collection {
-  Optional<Period> collectedPeriod();
-
-  Optional<Reference> collector();
-
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<String> collectedDateTime();
 
   Optional<Reference> source();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> collector();
+
+  Optional<Period> collectedPeriod();
+
+  Optional<String> id();
 
   static ImmutableBiologicallyDerivedProduct_Collection.Builder builder() {
     return ImmutableBiologicallyDerivedProduct_Collection.builder();

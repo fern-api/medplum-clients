@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Location_Position {
-  Optional<String> id();
+  Optional<Decimal> altitude();
 
   Optional<Decimal> longitude();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Decimal> latitude();
 
+  Optional<String> id();
+
   Optional<List<Extension>> extension();
-
-  Optional<Decimal> altitude();
-
-  Optional<List<Extension>> modifierExtension();
 
   static ImmutableLocation_Position.Builder builder() {
     return ImmutableLocation_Position.builder();

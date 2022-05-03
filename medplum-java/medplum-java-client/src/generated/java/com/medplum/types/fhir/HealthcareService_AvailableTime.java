@@ -18,9 +18,11 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface HealthcareService_AvailableTime {
+  Optional<Boolean> allDay();
+
   Optional<List<Extension>> extension();
 
-  Optional<List<Healthcareservice_availabletimeDaysofweekItem>> daysOfWeek();
+  Optional<Time> availableEndTime();
 
   Optional<Time> availableStartTime();
 
@@ -28,9 +30,7 @@ public interface HealthcareService_AvailableTime {
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Time> availableEndTime();
-
-  Optional<Boolean> allDay();
+  Optional<List<Healthcareservice_availabletimeDaysofweekItem>> daysOfWeek();
 
   static ImmutableHealthcareService_AvailableTime.Builder builder() {
     return ImmutableHealthcareService_AvailableTime.builder();

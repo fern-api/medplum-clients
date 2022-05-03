@@ -17,63 +17,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AdverseEvent {
-  Optional<Meta> meta();
+  Optional<Uri> implicitRules();
 
   Optional<DateTime> date();
 
-  Optional<List<Reference>> study();
+  String resourceType();
 
   Optional<List<Reference>> resultingCondition();
 
-  String resourceType();
-
-  Optional<List<Reference>> contributor();
-
-  Optional<Narrative> text();
-
   Optional<Identifier> identifier();
-
-  Optional<List<AdverseEvent_SuspectEntity>> suspectEntity();
-
-  Optional<List<ResourceList>> contained();
 
   Optional<Id> id();
 
-  Optional<CodeableConcept> seriousness();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Reference> encounter();
+  Optional<List<Reference>> study();
 
-  Optional<List<Reference>> subjectMedicalHistory();
+  Optional<List<AdverseEvent_SuspectEntity>> suspectEntity();
 
   Optional<List<CodeableConcept>> category();
 
-  Optional<Code> language();
+  Optional<List<ResourceList>> contained();
 
-  Optional<Uri> implicitRules();
+  Optional<Meta> meta();
 
-  Reference subject();
+  Optional<List<Reference>> subjectMedicalHistory();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> event();
-
-  Optional<Reference> recorder();
-
-  Optional<List<Reference>> referenceDocument();
-
-  Optional<Reference> location();
+  Optional<Reference> encounter();
 
   Optional<DateTime> recordedDate();
 
-  Optional<CodeableConcept> outcome();
+  Optional<CodeableConcept> seriousness();
+
+  Optional<Reference> recorder();
 
   Optional<CodeableConcept> severity();
 
+  Optional<AdverseeventActuality> actuality();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> location();
+
+  Optional<CodeableConcept> event();
+
+  Reference subject();
+
+  Optional<CodeableConcept> outcome();
+
+  Optional<List<Reference>> referenceDocument();
+
+  Optional<Narrative> text();
+
+  Optional<List<Reference>> contributor();
+
   Optional<DateTime> detected();
 
-  Optional<AdverseeventActuality> actuality();
+  Optional<Code> language();
 
   static ImmutableAdverseEvent.ResourceTypeBuildStage builder() {
     return ImmutableAdverseEvent.builder();

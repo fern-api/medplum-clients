@@ -20,67 +20,67 @@ import org.immutables.value.Value;
 public interface ChargeItemDefinition {
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<Code> language();
 
-  Optional<List<Canonical>> partOf();
+  Optional<Date> approvalDate();
+
+  Optional<Narrative> text();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> version();
+  Optional<Boolean> experimental();
 
-  Optional<List<Uri>> derivedFromUri();
+  Optional<Meta> meta();
 
-  Optional<List<UsageContext>> useContext();
+  Optional<List<Canonical>> replaces();
 
-  Optional<Code> language();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<DateTime> date();
+  Optional<List<CodeableConcept>> jurisdiction();
 
   Optional<Markdown> copyright();
 
-  Optional<CodeableConcept> code();
+  Optional<List<UsageContext>> useContext();
 
-  Optional<Period> effectivePeriod();
-
-  Optional<Narrative> text();
+  String resourceType();
 
   Optional<Uri> implicitRules();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<Id> id();
-
-  Optional<Date> approvalDate();
-
-  Optional<ChargeitemdefinitionStatus> status();
-
-  Optional<List<Canonical>> replaces();
-
-  Optional<List<ChargeItemDefinition_Applicability>> applicability();
-
-  Optional<Date> lastReviewDate();
-
-  String resourceType();
-
-  Optional<Meta> meta();
-
-  Optional<Boolean> experimental();
-
-  Optional<String> publisher();
-
   Optional<Uri> url();
 
   Optional<Markdown> description();
 
-  Optional<List<Reference>> instance();
+  Optional<List<Uri>> derivedFromUri();
 
-  Optional<List<Identifier>> identifier();
+  Optional<String> publisher();
+
+  Optional<Date> lastReviewDate();
 
   Optional<String> title();
 
+  Optional<DateTime> date();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<List<ChargeItemDefinition_Applicability>> applicability();
+
+  Optional<Id> id();
+
+  Optional<List<Canonical>> partOf();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<CodeableConcept> code();
+
+  Optional<List<Reference>> instance();
+
+  Optional<String> version();
+
   Optional<List<ChargeItemDefinition_PropertyGroup>> propertyGroup();
+
+  Optional<ChargeitemdefinitionStatus> status();
+
+  Optional<Period> effectivePeriod();
 
   static ImmutableChargeItemDefinition.ResourceTypeBuildStage builder() {
     return ImmutableChargeItemDefinition.builder();

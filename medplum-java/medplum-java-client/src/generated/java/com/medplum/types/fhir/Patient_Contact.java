@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Patient_Contact {
+  Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Address> address();
+
+  Optional<List<ContactPoint>> telecom();
 
   Optional<Period> period();
 
   Optional<List<CodeableConcept>> relationship();
 
-  Optional<Patient_contactGender> gender();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<ContactPoint>> telecom();
-
   Optional<Reference> organization();
+
+  Optional<Patient_contactGender> gender();
 
   Optional<HumanName> name();
 

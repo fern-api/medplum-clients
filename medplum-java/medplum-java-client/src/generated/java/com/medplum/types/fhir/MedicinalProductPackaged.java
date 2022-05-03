@@ -17,39 +17,39 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductPackaged {
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Reference>> subject();
+  Optional<CodeableConcept> legalStatusOfSupply();
 
   Optional<List<MarketingStatus>> marketingStatus();
 
-  Optional<List<Reference>> manufacturer();
+  Optional<Id> id();
 
-  List<MedicinalProductPackaged_PackageItem> packageItem();
+  Optional<List<Reference>> subject();
+
+  Optional<Narrative> text();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> description();
+
+  String resourceType();
+
+  Optional<Meta> meta();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Reference> marketingAuthorization();
 
-  Optional<Uri> implicitRules();
+  List<MedicinalProductPackaged_PackageItem> packageItem();
 
-  Optional<CodeableConcept> legalStatusOfSupply();
-
-  String resourceType();
+  Optional<List<ResourceList>> contained();
 
   Optional<Code> language();
 
-  Optional<Narrative> text();
-
   Optional<List<Identifier>> identifier();
 
-  Optional<Meta> meta();
+  Optional<List<Reference>> manufacturer();
 
   Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
-  Optional<String> description();
 
   Optional<List<MedicinalProductPackaged_BatchIdentifier>> batchIdentifier();
 

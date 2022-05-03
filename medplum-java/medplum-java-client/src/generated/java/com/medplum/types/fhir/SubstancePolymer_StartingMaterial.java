@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstancePolymer_StartingMaterial {
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> type();
-
-  Optional<SubstanceAmount> amount();
-
   Optional<String> id();
-
-  Optional<CodeableConcept> material();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<Boolean> isDefining();
+
+  Optional<CodeableConcept> material();
+
+  Optional<SubstanceAmount> amount();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> type();
 
   static ImmutableSubstancePolymer_StartingMaterial.Builder builder() {
     return ImmutableSubstancePolymer_StartingMaterial.builder();

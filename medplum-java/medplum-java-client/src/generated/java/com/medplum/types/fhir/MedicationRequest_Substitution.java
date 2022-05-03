@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationRequest_Substitution {
-  Optional<Boolean> allowedBoolean();
-
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> reason();
 
   Optional<List<Extension>> modifierExtension();
 
+  Optional<CodeableConcept> reason();
+
   Optional<CodeableConcept> allowedCodeableConcept();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Boolean> allowedBoolean();
 
   static ImmutableMedicationRequest_Substitution.Builder builder() {
     return ImmutableMedicationRequest_Substitution.builder();

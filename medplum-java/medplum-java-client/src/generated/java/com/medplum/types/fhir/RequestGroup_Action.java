@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RequestGroup_Action {
-  Optional<List<RequestGroup_Condition>> condition();
+  Optional<String> title();
+
+  Optional<Code> precheckBehavior();
 
   Optional<Period> timingPeriod();
 
   Optional<List<Extension>> extension();
 
-  Optional<Code> selectionBehavior();
-
-  Optional<Duration> timingDuration();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> precheckBehavior();
-
   Optional<CodeableConcept> type();
 
   Optional<String> id();
 
-  Optional<Reference> resource();
-
-  Optional<Code> requiredBehavior();
-
-  Optional<List<RelatedArtifact>> documentation();
+  Optional<Age> timingAge();
 
   Optional<Code> cardinalityBehavior();
 
+  Optional<Duration> timingDuration();
+
   Optional<String> description();
 
-  Optional<Range> timingRange();
+  Optional<List<RequestGroup_Condition>> condition();
 
-  Optional<Timing> timingTiming();
-
-  Optional<List<RequestGroup_RelatedAction>> relatedAction();
-
-  Optional<String> prefix();
-
-  Optional<Code> priority();
-
-  Optional<Code> groupingBehavior();
-
-  Optional<String> textEquivalent();
-
-  Optional<String> timingDateTime();
-
-  Optional<String> title();
+  Optional<List<RelatedArtifact>> documentation();
 
   Optional<List<Reference>> participant();
 
+  Optional<String> prefix();
+
+  Optional<Timing> timingTiming();
+
+  Optional<Code> groupingBehavior();
+
+  Optional<Code> selectionBehavior();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> requiredBehavior();
+
   Optional<List<RequestGroup_Action>> action();
 
-  Optional<Age> timingAge();
+  Optional<String> timingDateTime();
+
+  Optional<Code> priority();
+
+  Optional<String> textEquivalent();
+
+  Optional<Range> timingRange();
+
+  Optional<Reference> resource();
+
+  Optional<List<RequestGroup_RelatedAction>> relatedAction();
 
   Optional<List<CodeableConcept>> code();
 

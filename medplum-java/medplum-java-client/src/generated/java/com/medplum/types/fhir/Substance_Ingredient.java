@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Substance_Ingredient {
-  Optional<String> id();
-
   Optional<Reference> substanceReference();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<Ratio> quantity();
 
   Optional<CodeableConcept> substanceCodeableConcept();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   static ImmutableSubstance_Ingredient.Builder builder() {
     return ImmutableSubstance_Ingredient.builder();

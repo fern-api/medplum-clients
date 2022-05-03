@@ -18,86 +18,86 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task {
-  Optional<CodeableConcept> code();
-
-  Optional<Canonical> instantiatesCanonical();
-
-  Optional<String> description();
-
-  Optional<Reference> focus();
-
-  Optional<List<Reference>> insurance();
-
-  Optional<List<Task_Output>> output();
-
-  Optional<Reference> reasonReference();
-
-  Optional<List<CodeableConcept>> performerType();
-
-  Optional<Narrative> text();
-
-  Optional<Reference> requester();
+  Optional<CodeableConcept> businessStatus();
 
   Optional<List<Reference>> relevantHistory();
 
-  Optional<TaskIntent> intent();
+  Optional<CodeableConcept> code();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Reference> focus();
 
-  Optional<CodeableConcept> statusReason();
+  Optional<CodeableConcept> reasonCode();
 
-  Optional<Reference> location();
-
-  Optional<TaskStatus> status();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> encounter();
-
-  String resourceType();
+  Optional<List<CodeableConcept>> performerType();
 
   Optional<List<Task_Input>> input();
 
-  Optional<Uri> implicitRules();
+  Optional<TaskStatus> status();
 
-  Optional<Code> language();
+  Optional<TaskIntent> intent();
 
-  Optional<Uri> instantiatesUri();
+  Optional<Period> executionPeriod();
 
-  Optional<DateTime> lastModified();
+  Optional<List<Identifier>> identifier();
 
-  Optional<List<Annotation>> note();
+  Optional<Code> priority();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<List<Reference>> partOf();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<DateTime> authoredOn();
+  Optional<Uri> instantiatesUri();
 
-  Optional<Reference> owner();
+  Optional<List<Task_Output>> output();
 
-  Optional<Code> priority();
+  Optional<Identifier> groupIdentifier();
+
+  Optional<List<Reference>> basedOn();
 
   @JsonProperty("for")
   Optional<Reference> _for();
 
-  Optional<Period> executionPeriod();
+  Optional<List<Reference>> insurance();
 
-  Optional<CodeableConcept> businessStatus();
+  Optional<Reference> encounter();
 
   Optional<Meta> meta();
 
-  Optional<Id> id();
-
   Optional<List<Extension>> extension();
 
-  Optional<List<Reference>> basedOn();
+  Optional<CodeableConcept> statusReason();
 
-  Optional<Identifier> groupIdentifier();
+  Optional<Reference> requester();
 
-  Optional<CodeableConcept> reasonCode();
+  Optional<Reference> owner();
+
+  Optional<Reference> reasonReference();
 
   Optional<Task_Restriction> restriction();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Reference> location();
+
+  Optional<List<Reference>> partOf();
+
+  Optional<Uri> implicitRules();
+
+  Optional<DateTime> lastModified();
+
+  Optional<Id> id();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<Canonical> instantiatesCanonical();
+
+  String resourceType();
+
+  Optional<Narrative> text();
+
+  Optional<Code> language();
+
+  Optional<String> description();
 
   static ImmutableTask.ResourceTypeBuildStage builder() {
     return ImmutableTask.builder();

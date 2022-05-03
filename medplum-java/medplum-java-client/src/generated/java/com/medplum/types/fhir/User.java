@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface User {
-  Optional<String> resourceType();
+  Optional<Uri> implicitRules();
 
   Optional<Boolean> admin();
 
-  Optional<Id> id();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Meta> meta();
-
   String email();
+
+  Optional<String> resourceType();
 
   String passwordHash();
 
+  Optional<Id> id();
+
   Optional<Code> language();
+
+  Optional<Meta> meta();
 
   static ImmutableUser.EmailBuildStage builder() {
     return ImmutableUser.builder();

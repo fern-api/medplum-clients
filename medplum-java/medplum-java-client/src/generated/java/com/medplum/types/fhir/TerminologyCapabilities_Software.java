@@ -21,9 +21,9 @@ public interface TerminologyCapabilities_Software {
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   Optional<String> version();
 

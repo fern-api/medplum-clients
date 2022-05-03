@@ -19,17 +19,17 @@ import org.immutables.value.Value;
 public interface Invoice_LineItem {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Invoice_PriceComponent>> priceComponent();
+  Optional<CodeableConcept> chargeItemCodeableConcept();
 
   Optional<PositiveInt> sequence();
 
-  Optional<Reference> chargeItemReference();
+  Optional<List<Invoice_PriceComponent>> priceComponent();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> chargeItemCodeableConcept();
+  Optional<Reference> chargeItemReference();
 
   static ImmutableInvoice_LineItem.Builder builder() {
     return ImmutableInvoice_LineItem.builder();

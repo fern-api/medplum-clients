@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureDefinition_Context {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Structuredefinition_contextType> type();
-
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
   Optional<String> expression();
+
+  Optional<Structuredefinition_contextType> type();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
 
   static ImmutableStructureDefinition_Context.Builder builder() {
     return ImmutableStructureDefinition_Context.builder();

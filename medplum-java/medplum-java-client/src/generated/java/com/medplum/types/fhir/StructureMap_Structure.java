@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface StructureMap_Structure {
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> documentation();
+
+  Optional<Structuremap_structureMode> mode();
+
+  Optional<List<Extension>> modifierExtension();
 
   Canonical url();
 
   Optional<String> id();
-
-  Optional<Structuremap_structureMode> mode();
 
   Optional<String> alias();
 

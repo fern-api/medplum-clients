@@ -17,17 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DocumentReference_Context {
-  Optional<List<Reference>> encounter();
-
-  Optional<List<Extension>> extension();
-
   Optional<List<CodeableConcept>> event();
 
-  Optional<CodeableConcept> facilityType();
-
-  Optional<List<Reference>> related();
-
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
 
   Optional<Period> period();
 
@@ -35,7 +31,11 @@ public interface DocumentReference_Context {
 
   Optional<Reference> sourcePatientInfo();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<CodeableConcept> facilityType();
+
+  Optional<List<Reference>> related();
+
+  Optional<List<Reference>> encounter();
 
   static ImmutableDocumentReference_Context.Builder builder() {
     return ImmutableDocumentReference_Context.builder();

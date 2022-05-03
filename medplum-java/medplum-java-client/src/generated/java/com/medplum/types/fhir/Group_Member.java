@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Group_Member {
-  Optional<Boolean> inactive();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<Boolean> inactive();
 
   Reference entity();
 
   Optional<Period> period();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   static ImmutableGroup_Member.EntityBuildStage builder() {
     return ImmutableGroup_Member.builder();

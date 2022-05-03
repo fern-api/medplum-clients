@@ -17,23 +17,23 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface NutritionOrder_OralDiet {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> instruction();
-
   Optional<List<Timing>> schedule();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<CodeableConcept>> type();
 
-  Optional<List<NutritionOrder_Texture>> texture();
-
   Optional<List<CodeableConcept>> fluidConsistencyType();
-
-  Optional<List<NutritionOrder_Nutrient>> nutrient();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<NutritionOrder_Nutrient>> nutrient();
+
+  Optional<List<NutritionOrder_Texture>> texture();
+
+  Optional<String> instruction();
 
   static ImmutableNutritionOrder_OralDiet.Builder builder() {
     return ImmutableNutritionOrder_OralDiet.builder();

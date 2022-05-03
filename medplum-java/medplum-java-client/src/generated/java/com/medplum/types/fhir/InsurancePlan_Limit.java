@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface InsurancePlan_Limit {
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<Extension>> extension();
 
   Optional<CodeableConcept> code();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<Quantity> value();
-
-  Optional<String> id();
 
   static ImmutableInsurancePlan_Limit.Builder builder() {
     return ImmutableInsurancePlan_Limit.builder();

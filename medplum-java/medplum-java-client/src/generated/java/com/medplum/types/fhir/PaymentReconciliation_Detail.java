@@ -17,31 +17,31 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PaymentReconciliation_Detail {
-  Optional<Reference> request();
-
-  CodeableConcept type();
-
-  Optional<Reference> submitter();
-
-  Optional<Reference> payee();
+  Optional<Reference> response();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Date> date();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> response();
+  Optional<String> id();
 
   Optional<Identifier> identifier();
 
+  Optional<Reference> request();
+
+  Optional<Date> date();
+
   Optional<Money> amount();
+
+  Optional<List<Extension>> extension();
 
   Optional<Identifier> predecessor();
 
+  Optional<Reference> payee();
+
+  Optional<Reference> submitter();
+
   Optional<Reference> responsible();
 
-  Optional<String> id();
+  CodeableConcept type();
 
   static ImmutablePaymentReconciliation_Detail.TypeBuildStage builder() {
     return ImmutablePaymentReconciliation_Detail.builder();

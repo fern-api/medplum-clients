@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface QuestionnaireResponse_Item {
-  Optional<List<QuestionnaireResponse_Answer>> answer();
-
-  Optional<String> linkId();
-
-  Optional<String> text();
+  Optional<Uri> definition();
 
   Optional<String> id();
 
   Optional<List<Extension>> extension();
 
+  Optional<String> text();
+
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Uri> definition();
+  Optional<String> linkId();
+
+  Optional<List<QuestionnaireResponse_Answer>> answer();
 
   Optional<List<QuestionnaireResponse_Item>> item();
 

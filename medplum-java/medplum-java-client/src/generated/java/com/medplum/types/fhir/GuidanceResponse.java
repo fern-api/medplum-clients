@@ -17,57 +17,57 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GuidanceResponse {
-  Optional<List<Reference>> reasonReference();
-
-  Optional<CodeableConcept> moduleCodeableConcept();
-
-  Optional<Reference> outputParameters();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<DateTime> occurrenceDateTime();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Narrative> text();
-
-  Optional<Id> id();
-
-  Optional<Reference> result();
-
-  Optional<Meta> meta();
-
-  Optional<Reference> subject();
-
-  Optional<List<Extension>> extension();
-
   Optional<String> moduleCanonical();
-
-  String resourceType();
-
-  Optional<String> moduleUri();
-
-  Optional<GuidanceresponseStatus> status();
-
-  Optional<Identifier> requestIdentifier();
-
-  Optional<Reference> performer();
-
-  Optional<Reference> encounter();
 
   Optional<Code> language();
 
+  Optional<List<Reference>> reasonReference();
+
+  Optional<String> moduleUri();
+
   Optional<List<CodeableConcept>> reasonCode();
 
-  Optional<List<Annotation>> note();
+  Optional<Reference> result();
+
+  Optional<Reference> encounter();
+
+  Optional<DateTime> occurrenceDateTime();
 
   Optional<List<Reference>> evaluationMessage();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<DataRequirement>> dataRequirement();
 
+  Optional<Id> id();
+
+  String resourceType();
+
+  Optional<List<Extension>> modifierExtension();
+
   Optional<Uri> implicitRules();
+
+  Optional<Identifier> requestIdentifier();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> outputParameters();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
+
+  Optional<GuidanceresponseStatus> status();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<CodeableConcept> moduleCodeableConcept();
+
+  Optional<Reference> subject();
+
+  Optional<Reference> performer();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Meta> meta();
 
   static ImmutableGuidanceResponse.ResourceTypeBuildStage builder() {
     return ImmutableGuidanceResponse.builder();

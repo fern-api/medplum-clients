@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Specimen_Processing {
-  Optional<String> timeDateTime();
+  Optional<Period> timePeriod();
 
-  Optional<List<Reference>> additive();
-
-  Optional<String> description();
-
-  Optional<CodeableConcept> procedure();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<CodeableConcept> procedure();
 
-  Optional<Period> timePeriod();
+  Optional<List<Reference>> additive();
+
+  Optional<String> timeDateTime();
+
+  Optional<String> description();
 
   static ImmutableSpecimen_Processing.Builder builder() {
     return ImmutableSpecimen_Processing.builder();

@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ActivityDefinition_Participant {
-  Optional<List<Extension>> extension();
-
   Optional<Code> type();
+
+  Optional<String> id();
 
   Optional<CodeableConcept> role();
 
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DeviceDefinition_Specialization {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
-  Optional<String> systemType();
-
   Optional<List<Extension>> extension();
 
   Optional<String> version();
+
+  Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> systemType();
 
   static ImmutableDeviceDefinition_Specialization.Builder builder() {
     return ImmutableDeviceDefinition_Specialization.builder();

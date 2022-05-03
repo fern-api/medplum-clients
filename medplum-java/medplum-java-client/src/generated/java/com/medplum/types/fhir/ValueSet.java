@@ -18,59 +18,59 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet {
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Uri> implicitRules();
-
-  Optional<DateTime> date();
-
-  Optional<Markdown> copyright();
-
-  Optional<String> name();
-
-  Optional<Meta> meta();
-
   Optional<ValueSet_Expansion> expansion();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> jurisdiction();
-
-  Optional<ValueSet_Compose> compose();
-
-  Optional<String> publisher();
-
-  Optional<Markdown> purpose();
-
-  Optional<ValuesetStatus> status();
-
-  Optional<Boolean> experimental();
 
   String resourceType();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> title();
-
-  Optional<String> version();
-
-  Optional<Uri> url();
+  Optional<Uri> implicitRules();
 
   Optional<List<ContactDetail>> contact();
 
+  Optional<ValueSet_Compose> compose();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Markdown> copyright();
+
+  Optional<Meta> meta();
+
+  Optional<Uri> url();
+
   Optional<Boolean> immutable();
 
-  Optional<Narrative> text();
+  Optional<List<ResourceList>> contained();
 
-  Optional<Markdown> description();
+  Optional<Markdown> purpose();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> name();
+
+  Optional<String> title();
+
+  Optional<String> publisher();
 
   Optional<Code> language();
 
+  Optional<String> version();
+
+  Optional<List<UsageContext>> useContext();
+
+  Optional<DateTime> date();
+
   Optional<Id> id();
+
+  Optional<Narrative> text();
+
+  Optional<Boolean> experimental();
+
+  Optional<List<Extension>> extension();
+
+  Optional<ValuesetStatus> status();
+
+  Optional<Markdown> description();
 
   static ImmutableValueSet.ResourceTypeBuildStage builder() {
     return ImmutableValueSet.builder();

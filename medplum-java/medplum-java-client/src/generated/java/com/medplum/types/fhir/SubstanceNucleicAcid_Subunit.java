@@ -18,27 +18,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceNucleicAcid_Subunit {
-  Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<SubstanceNucleicAcid_Sugar>> sugar();
+  Optional<Integer> length();
 
   Optional<CodeableConcept> fivePrime();
 
-  Optional<List<SubstanceNucleicAcid_Linkage>> linkage();
+  Optional<Attachment> sequenceAttachment();
 
-  Optional<CodeableConcept> threePrime();
-
-  Optional<Integer> subunit();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<SubstanceNucleicAcid_Sugar>> sugar();
 
   Optional<String> sequence();
 
-  Optional<Attachment> sequenceAttachment();
+  Optional<List<Extension>> extension();
 
-  Optional<Integer> length();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> id();
+
+  Optional<List<SubstanceNucleicAcid_Linkage>> linkage();
+
+  Optional<Integer> subunit();
+
+  Optional<CodeableConcept> threePrime();
 
   static ImmutableSubstanceNucleicAcid_Subunit.Builder builder() {
     return ImmutableSubstanceNucleicAcid_Subunit.builder();

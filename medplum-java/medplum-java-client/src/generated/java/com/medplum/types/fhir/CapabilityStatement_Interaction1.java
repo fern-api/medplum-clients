@@ -17,7 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Interaction1 {
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<Capabilitystatement_interaction1Code> code();
 
@@ -25,7 +25,7 @@ public interface CapabilityStatement_Interaction1 {
 
   Optional<Markdown> documentation();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableCapabilityStatement_Interaction1.Builder builder() {
     return ImmutableCapabilityStatement_Interaction1.builder();

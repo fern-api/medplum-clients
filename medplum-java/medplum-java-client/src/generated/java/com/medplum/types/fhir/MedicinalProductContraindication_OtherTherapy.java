@@ -19,13 +19,13 @@ import org.immutables.value.Value;
 public interface MedicinalProductContraindication_OtherTherapy {
   Optional<List<Extension>> extension();
 
-  CodeableConcept therapyRelationshipType();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
 
   Optional<Reference> medicationReference();
+
+  Optional<List<Extension>> modifierExtension();
+
+  CodeableConcept therapyRelationshipType();
 
   Optional<CodeableConcept> medicationCodeableConcept();
 

@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface AuditEvent_Network {
+  Optional<String> address();
+
+  Optional<List<Extension>> extension();
+
   Optional<Auditevent_networkType> type();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> address();
 
   static ImmutableAuditEvent_Network.Builder builder() {
     return ImmutableAuditEvent_Network.builder();

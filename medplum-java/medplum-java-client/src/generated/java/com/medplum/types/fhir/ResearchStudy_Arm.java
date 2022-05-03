@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface ResearchStudy_Arm {
   Optional<String> description();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> name();
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
-  Optional<CodeableConcept> type();
+  Optional<String> name();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<CodeableConcept> type();
 
   static ImmutableResearchStudy_Arm.Builder builder() {
     return ImmutableResearchStudy_Arm.builder();

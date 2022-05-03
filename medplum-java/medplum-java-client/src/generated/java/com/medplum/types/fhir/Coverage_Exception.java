@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Coverage_Exception {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
-
-  CodeableConcept type();
+  Optional<String> id();
 
   Optional<Period> period();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  CodeableConcept type();
 
   static ImmutableCoverage_Exception.TypeBuildStage builder() {
     return ImmutableCoverage_Exception.builder();

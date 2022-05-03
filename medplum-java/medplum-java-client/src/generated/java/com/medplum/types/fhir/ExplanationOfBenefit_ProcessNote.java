@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ExplanationOfBenefit_ProcessNote {
-  Optional<String> text();
-
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  Optional<PositiveInt> number();
-
-  Optional<Explanationofbenefit_processnoteType> type();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<CodeableConcept> language();
+
+  Optional<PositiveInt> number();
+
+  Optional<String> text();
+
+  Optional<Explanationofbenefit_processnoteType> type();
 
   static ImmutableExplanationOfBenefit_ProcessNote.Builder builder() {
     return ImmutableExplanationOfBenefit_ProcessNote.builder();

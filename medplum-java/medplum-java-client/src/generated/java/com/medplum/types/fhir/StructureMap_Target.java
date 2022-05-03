@@ -17,25 +17,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap_Target {
-  Optional<Id> listRuleId();
+  Optional<Id> context();
 
   Optional<List<Structuremap_targetListmodeItem>> listMode();
 
-  Optional<List<StructureMap_Parameter>> parameter();
+  Optional<Structuremap_targetContexttype> contextType();
+
+  Optional<Id> variable();
 
   Optional<String> id();
 
-  Optional<Structuremap_targetContexttype> contextType();
+  Optional<List<StructureMap_Parameter>> parameter();
 
   Optional<String> element();
-
-  Optional<Id> variable();
 
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Id> context();
+  Optional<Id> listRuleId();
 
   Optional<Structuremap_targetTransform> transform();
 

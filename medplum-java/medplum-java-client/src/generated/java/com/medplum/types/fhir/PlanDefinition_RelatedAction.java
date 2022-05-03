@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface PlanDefinition_RelatedAction {
+  Optional<String> id();
+
+  Optional<Duration> offsetDuration();
+
   Optional<Range> offsetRange();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
+  Optional<Id> actionId();
 
   Optional<Plandefinition_relatedactionRelationship> relationship();
 
-  Optional<Id> actionId();
-
-  Optional<Duration> offsetDuration();
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutablePlanDefinition_RelatedAction.Builder builder() {
     return ImmutablePlanDefinition_RelatedAction.builder();

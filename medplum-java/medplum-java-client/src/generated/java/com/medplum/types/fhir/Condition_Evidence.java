@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Condition_Evidence {
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
-  Optional<List<CodeableConcept>> code();
+  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Reference>> detail();
+  Optional<List<CodeableConcept>> code();
 
-  Optional<String> id();
+  Optional<List<Reference>> detail();
 
   static ImmutableCondition_Evidence.Builder builder() {
     return ImmutableCondition_Evidence.builder();

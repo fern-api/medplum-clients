@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SearchParameter_Component {
+  Optional<String> id();
+
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Canonical definition();
-
   Optional<String> expression();
 
-  Optional<String> id();
+  Canonical definition();
 
   static ImmutableSearchParameter_Component.DefinitionBuildStage builder() {
     return ImmutableSearchParameter_Component.builder();

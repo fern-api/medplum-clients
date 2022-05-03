@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ContactPoint {
-  Optional<ContactpointSystem> system();
-
   Optional<ContactpointUse> use();
 
-  Optional<String> id();
+  Optional<String> value();
 
   Optional<Period> period();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> value();
+  Optional<ContactpointSystem> system();
+
+  Optional<String> id();
 
   Optional<PositiveInt> rank();
 

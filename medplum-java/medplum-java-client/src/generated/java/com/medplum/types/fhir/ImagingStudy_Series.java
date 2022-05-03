@@ -17,35 +17,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImagingStudy_Series {
-  Optional<Id> uid();
-
-  Optional<String> description();
+  Optional<String> id();
 
   Optional<Coding> laterality();
 
   Optional<DateTime> started();
 
-  Optional<UnsignedInt> numberOfInstances();
-
-  Optional<Coding> bodySite();
-
-  Coding modality();
-
-  Optional<UnsignedInt> number();
-
   Optional<List<Extension>> extension();
-
-  Optional<List<ImagingStudy_Performer>> performer();
 
   Optional<List<Reference>> endpoint();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<UnsignedInt> number();
 
-  Optional<String> id();
+  Coding modality();
 
-  Optional<List<Reference>> specimen();
+  Optional<String> description();
+
+  Optional<Coding> bodySite();
+
+  Optional<List<ImagingStudy_Performer>> performer();
+
+  Optional<Id> uid();
+
+  Optional<UnsignedInt> numberOfInstances();
 
   Optional<List<ImagingStudy_Instance>> instance();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Reference>> specimen();
 
   static ImmutableImagingStudy_Series.ModalityBuildStage builder() {
     return ImmutableImagingStudy_Series.builder();

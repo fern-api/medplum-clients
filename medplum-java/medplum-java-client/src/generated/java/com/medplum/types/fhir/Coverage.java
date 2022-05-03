@@ -19,60 +19,60 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Coverage {
-  Optional<Boolean> subrogation();
-
-  Optional<String> subscriberId();
-
-  Optional<Reference> subscriber();
-
-  Optional<Uri> implicitRules();
-
   Optional<CodeableConcept> relationship();
-
-  Optional<PositiveInt> order();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> type();
 
   Optional<String> dependent();
 
+  Optional<String> subscriberId();
+
   Optional<Id> id();
-
-  List<Reference> payor();
-
-  String resourceType();
-
-  Optional<Reference> policyHolder();
-
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Period> period();
 
   Reference beneficiary();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Code> status();
+
+  Optional<PositiveInt> order();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Reference>> contract();
 
   Optional<Narrative> text();
-
-  Optional<Code> language();
-
-  Optional<String> network();
 
   @JsonProperty("class")
   Optional<List<Coverage_Class>> _class();
 
+  List<Reference> payor();
+
+  Optional<String> network();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> subscriber();
+
+  Optional<List<Identifier>> identifier();
+
   Optional<List<Coverage_CostToBeneficiary>> costToBeneficiary();
+
+  Optional<Boolean> subrogation();
+
+  String resourceType();
+
+  Optional<CodeableConcept> type();
+
+  Optional<Period> period();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> policyHolder();
+
+  Optional<Code> language();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<Code> status();
+  Optional<Meta> meta();
 
-  Optional<List<Reference>> contract();
-
-  static ImmutableCoverage.ResourceTypeBuildStage builder() {
+  static ImmutableCoverage.BeneficiaryBuildStage builder() {
     return ImmutableCoverage.builder();
   }
 }

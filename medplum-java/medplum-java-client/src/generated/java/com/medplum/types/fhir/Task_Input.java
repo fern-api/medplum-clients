@@ -19,113 +19,113 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Task_Input {
-  Optional<Distance> valueDistance();
-
-  Optional<Quantity> valueQuantity();
-
-  Optional<Address> valueAddress();
-
-  Optional<HumanName> valueHumanName();
-
-  Optional<Double> valueDecimal();
-
-  Optional<String> valueCanonical();
-
-  Optional<ContactDetail> valueContactDetail();
-
-  Optional<Money> valueMoney();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> valueReference();
-
-  CodeableConcept type();
-
-  Optional<DataRequirement> valueDataRequirement();
-
-  Optional<Double> valuePositiveInt();
-
-  Optional<SampledData> valueSampledData();
-
-  Optional<Ratio> valueRatio();
-
-  Optional<Timing> valueTiming();
-
-  Optional<Coding> valueCoding();
-
-  Optional<Signature> valueSignature();
-
-  Optional<String> valueCode();
-
-  Optional<Boolean> valueBoolean();
-
-  Optional<String> valueDate();
-
-  Optional<Identifier> valueIdentifier();
-
-  Optional<Expression> valueExpression();
+  Optional<String> valueTime();
 
   Optional<String> valueUrl();
 
-  Optional<String> valueId();
-
   Optional<String> valueUuid();
 
-  Optional<Range> valueRange();
-
-  Optional<TriggerDefinition> valueTriggerDefinition();
-
-  Optional<Duration> valueDuration();
-
-  Optional<String> valueTime();
-
-  Optional<ParameterDefinition> valueParameterDefinition();
-
-  Optional<String> valueOid();
-
-  Optional<String> valueString();
-
-  Optional<Age> valueAge();
-
-  Optional<String> valueMarkdown();
-
-  Optional<CodeableConcept> valueCodeableConcept();
-
-  Optional<Period> valuePeriod();
-
-  Optional<UsageContext> valueUsageContext();
-
-  Optional<Double> valueInteger();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> valueInstant();
-
-  Optional<ContactPoint> valueContactPoint();
+  Optional<SampledData> valueSampledData();
 
   Optional<String> id();
 
-  Optional<String> valueDateTime();
-
-  Optional<Attachment> valueAttachment();
-
-  Optional<Dosage> valueDosage();
-
-  Optional<String> valueBase64Binary();
-
-  Optional<Contributor> valueContributor();
-
-  Optional<Meta> valueMeta();
-
-  Optional<Annotation> valueAnnotation();
+  Optional<String> valueDate();
 
   Optional<RelatedArtifact> valueRelatedArtifact();
 
+  Optional<TriggerDefinition> valueTriggerDefinition();
+
+  Optional<ContactDetail> valueContactDetail();
+
+  Optional<Double> valueUnsignedInt();
+
+  Optional<Attachment> valueAttachment();
+
+  Optional<Expression> valueExpression();
+
+  Optional<Ratio> valueRatio();
+
+  Optional<Double> valueInteger();
+
+  Optional<String> valueMarkdown();
+
+  Optional<Money> valueMoney();
+
+  Optional<Contributor> valueContributor();
+
+  Optional<String> valueBase64Binary();
+
+  Optional<Double> valueDecimal();
+
+  Optional<Duration> valueDuration();
+
+  Optional<Boolean> valueBoolean();
+
+  Optional<Annotation> valueAnnotation();
+
+  Optional<DataRequirement> valueDataRequirement();
+
+  Optional<String> valueId();
+
+  CodeableConcept type();
+
+  Optional<Coding> valueCoding();
+
+  Optional<ContactPoint> valueContactPoint();
+
+  Optional<String> valueCanonical();
+
+  Optional<Reference> valueReference();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Double> valuePositiveInt();
+
+  Optional<CodeableConcept> valueCodeableConcept();
+
+  Optional<String> valueDateTime();
+
   Optional<String> valueUri();
+
+  Optional<String> valueOid();
+
+  Optional<HumanName> valueHumanName();
 
   Optional<Count> valueCount();
 
-  Optional<Double> valueUnsignedInt();
+  Optional<Address> valueAddress();
+
+  Optional<Identifier> valueIdentifier();
+
+  Optional<UsageContext> valueUsageContext();
+
+  Optional<Range> valueRange();
+
+  Optional<String> valueCode();
+
+  Optional<String> valueInstant();
+
+  Optional<String> valueString();
+
+  Optional<Quantity> valueQuantity();
+
+  Optional<Dosage> valueDosage();
+
+  Optional<Age> valueAge();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Meta> valueMeta();
+
+  Optional<Period> valuePeriod();
+
+  Optional<Signature> valueSignature();
+
+  Optional<Timing> valueTiming();
+
+  Optional<Distance> valueDistance();
+
+  Optional<ParameterDefinition> valueParameterDefinition();
 
   static ImmutableTask_Input.TypeBuildStage builder() {
     return ImmutableTask_Input.builder();

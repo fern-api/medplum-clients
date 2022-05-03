@@ -17,15 +17,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Contract_Signer {
-  Optional<String> id();
-
-  List<Signature> signature();
-
   Optional<List<Extension>> modifierExtension();
+
+  Coding type();
 
   Optional<List<Extension>> extension();
 
-  Coding type();
+  List<Signature> signature();
+
+  Optional<String> id();
 
   Reference party();
 

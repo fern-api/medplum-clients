@@ -21,13 +21,13 @@ public interface SubstanceSpecification_Representation {
 
   Optional<Attachment> attachment();
 
-  Optional<String> id();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> type();
 
   Optional<String> representation();
+
+  Optional<String> id();
 
   static ImmutableSubstanceSpecification_Representation.Builder builder() {
     return ImmutableSubstanceSpecification_Representation.builder();

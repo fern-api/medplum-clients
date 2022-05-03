@@ -18,20 +18,20 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SubstanceSourceMaterial_OrganismGeneral {
-  Optional<String> id();
-
   Optional<CodeableConcept> phylum();
-
-  Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<CodeableConcept> kingdom();
+  @JsonProperty("class")
+  Optional<CodeableConcept> _class();
 
   Optional<CodeableConcept> order();
 
-  @JsonProperty("class")
-  Optional<CodeableConcept> _class();
+  Optional<String> id();
+
+  Optional<CodeableConcept> kingdom();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableSubstanceSourceMaterial_OrganismGeneral.Builder builder() {
     return ImmutableSubstanceSourceMaterial_OrganismGeneral.builder();

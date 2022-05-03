@@ -17,15 +17,9 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface SupplyDelivery {
-  Optional<Narrative> text();
+  Optional<CodeableConcept> type();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<SupplyDelivery_SuppliedItem> suppliedItem();
-
-  Optional<Reference> destination();
-
-  Optional<List<ResourceList>> contained();
+  Optional<Timing> occurrenceTiming();
 
   Optional<Reference> patient();
 
@@ -33,33 +27,39 @@ public interface SupplyDelivery {
 
   Optional<List<Reference>> basedOn();
 
-  Optional<List<Reference>> receiver();
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> destination();
 
   Optional<SupplydeliveryStatus> status();
 
-  Optional<String> occurrenceDateTime();
-
-  Optional<Timing> occurrenceTiming();
-
-  Optional<Reference> supplier();
-
   Optional<Code> language();
+
+  Optional<List<Reference>> receiver();
 
   Optional<Id> id();
 
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<CodeableConcept> type();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ResourceList>> contained();
 
   Optional<List<Reference>> partOf();
 
-  Optional<Period> occurrencePeriod();
+  Optional<SupplyDelivery_SuppliedItem> suppliedItem();
 
   Optional<Uri> implicitRules();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Meta> meta();
+
+  Optional<String> occurrenceDateTime();
+
+  Optional<Period> occurrencePeriod();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> supplier();
 
   static ImmutableSupplyDelivery.ResourceTypeBuildStage builder() {
     return ImmutableSupplyDelivery.builder();

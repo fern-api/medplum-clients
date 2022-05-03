@@ -17,77 +17,77 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EvidenceVariable {
-  Optional<String> shortTitle();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Uri> url();
+  Optional<List<UsageContext>> useContext();
 
   Optional<List<ResourceList>> contained();
 
-  Optional<String> publisher();
-
-  Optional<List<ContactDetail>> editor();
-
-  Optional<List<ContactDetail>> reviewer();
-
-  List<EvidenceVariable_Characteristic> characteristic();
-
-  Optional<DateTime> date();
+  Optional<String> title();
 
   Optional<Period> effectivePeriod();
 
-  Optional<List<Extension>> extension();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<EvidencevariableStatus> status();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<ContactDetail>> endorser();
 
   Optional<Markdown> copyright();
 
-  Optional<Meta> meta();
+  Optional<Markdown> description();
 
-  Optional<String> title();
+  Optional<List<Identifier>> identifier();
+
+  Optional<DateTime> date();
+
+  Optional<List<Annotation>> note();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Uri> url();
+
+  Optional<String> shortTitle();
 
   Optional<Date> lastReviewDate();
 
-  Optional<String> name();
-
-  Optional<List<ContactDetail>> endorser();
-
-  Optional<List<ContactDetail>> author();
+  Optional<Id> id();
 
   Optional<String> version();
 
-  Optional<List<CodeableConcept>> jurisdiction();
+  Optional<List<CodeableConcept>> topic();
 
-  Optional<List<UsageContext>> useContext();
+  List<EvidenceVariable_Characteristic> characteristic();
+
+  Optional<String> subtitle();
 
   Optional<EvidencevariableType> type();
 
   Optional<List<RelatedArtifact>> relatedArtifact();
 
-  Optional<List<CodeableConcept>> topic();
+  Optional<List<ContactDetail>> contact();
 
-  Optional<Date> approvalDate();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<Narrative> text();
-
-  Optional<Markdown> description();
-
-  Optional<String> subtitle();
-
-  Optional<Code> language();
+  Optional<String> name();
 
   String resourceType();
 
-  Optional<Id> id();
+  Optional<List<ContactDetail>> editor();
+
+  Optional<List<CodeableConcept>> jurisdiction();
+
+  Optional<Code> language();
+
+  Optional<Meta> meta();
+
+  Optional<List<ContactDetail>> reviewer();
+
+  Optional<Uri> implicitRules();
+
+  Optional<String> publisher();
+
+  Optional<Narrative> text();
+
+  Optional<List<ContactDetail>> author();
+
+  Optional<EvidencevariableStatus> status();
+
+  Optional<Date> approvalDate();
 
   static ImmutableEvidenceVariable.ResourceTypeBuildStage builder() {
     return ImmutableEvidenceVariable.builder();

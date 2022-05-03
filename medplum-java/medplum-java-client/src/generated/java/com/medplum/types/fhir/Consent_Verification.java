@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Consent_Verification {
-  Optional<Boolean> verified();
-
-  Optional<DateTime> verificationDate();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<List<Extension>> extension();
+
+  Optional<Boolean> verified();
 
   Optional<String> id();
 
   Optional<Reference> verifiedWith();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<DateTime> verificationDate();
 
   static ImmutableConsent_Verification.Builder builder() {
     return ImmutableConsent_Verification.builder();

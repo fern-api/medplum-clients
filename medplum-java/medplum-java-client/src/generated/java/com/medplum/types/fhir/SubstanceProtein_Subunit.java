@@ -20,23 +20,23 @@ import org.immutables.value.Value;
 public interface SubstanceProtein_Subunit {
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> id();
+  Optional<String> nTerminalModification();
 
   Optional<Attachment> sequenceAttachment();
 
-  Optional<String> nTerminalModification();
-
   Optional<Identifier> cTerminalModificationId();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Identifier> nTerminalModificationId();
+
+  Optional<Integer> length();
 
   Optional<Integer> subunit();
 
   Optional<String> sequence();
 
-  Optional<Identifier> nTerminalModificationId();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Integer> length();
+  Optional<String> id();
 
   Optional<String> cTerminalModification();
 

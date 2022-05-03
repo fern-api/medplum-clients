@@ -17,29 +17,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Address {
-  Optional<List<Extension>> extension();
-
-  Optional<AddressType> type();
-
   Optional<String> district();
-
-  Optional<String> text();
-
-  Optional<String> city();
 
   Optional<String> id();
 
+  Optional<List<String>> line();
+
   Optional<String> country();
-
-  Optional<Period> period();
-
-  Optional<AddressUse> use();
 
   Optional<String> postalCode();
 
-  Optional<List<String>> line();
-
   Optional<String> state();
+
+  Optional<Period> period();
+
+  Optional<AddressType> type();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> text();
+
+  Optional<AddressUse> use();
+
+  Optional<String> city();
 
   static ImmutableAddress.Builder builder() {
     return ImmutableAddress.builder();

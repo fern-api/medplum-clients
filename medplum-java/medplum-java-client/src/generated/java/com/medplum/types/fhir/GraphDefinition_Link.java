@@ -18,19 +18,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface GraphDefinition_Link {
+  Optional<List<Extension>> extension();
+
   Optional<String> id();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Integer> min();
+
+  Optional<String> description();
 
   Optional<String> path();
 
   Optional<String> max();
-
-  Optional<Integer> min();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Extension>> extension();
-
-  Optional<String> description();
 
   Optional<String> sliceName();
 

@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Claim_Payee {
-  Optional<Reference> party();
-
-  Optional<String> id();
+  Optional<List<Extension>> extension();
 
   CodeableConcept type();
 
-  Optional<List<Extension>> extension();
+  Optional<String> id();
+
+  Optional<Reference> party();
 
   Optional<List<Extension>> modifierExtension();
 

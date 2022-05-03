@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Device_Version {
-  Optional<Identifier> component();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> id();
 
   Optional<String> value();
 
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<CodeableConcept> type();
+
+  Optional<Identifier> component();
 
   static ImmutableDevice_Version.Builder builder() {
     return ImmutableDevice_Version.builder();

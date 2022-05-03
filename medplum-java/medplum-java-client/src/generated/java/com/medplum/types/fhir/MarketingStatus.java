@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MarketingStatus {
-  CodeableConcept country();
-
-  Optional<DateTime> restoreDate();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
-  CodeableConcept status();
+  CodeableConcept country();
 
   Optional<CodeableConcept> jurisdiction();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<DateTime> restoreDate();
 
   Optional<String> id();
+
+  CodeableConcept status();
 
   Period dateRange();
 

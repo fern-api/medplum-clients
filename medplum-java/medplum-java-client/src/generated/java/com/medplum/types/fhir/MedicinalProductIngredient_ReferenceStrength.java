@@ -17,21 +17,21 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicinalProductIngredient_ReferenceStrength {
-  Optional<Ratio> strengthLowLimit();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<String> measurementPoint();
 
   Optional<String> id();
 
-  Optional<List<CodeableConcept>> country();
-
   Optional<CodeableConcept> substance();
 
-  Optional<String> measurementPoint();
+  Optional<Ratio> strengthLowLimit();
+
+  Ratio strength();
 
   Optional<List<Extension>> extension();
 
-  Ratio strength();
+  Optional<List<CodeableConcept>> country();
+
+  Optional<List<Extension>> modifierExtension();
 
   static ImmutableMedicinalProductIngredient_ReferenceStrength.StrengthBuildStage builder() {
     return ImmutableMedicinalProductIngredient_ReferenceStrength.builder();

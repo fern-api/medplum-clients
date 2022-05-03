@@ -20,23 +20,23 @@ import org.immutables.value.Value;
 public interface ImplementationGuide_Resource {
   Optional<String> name();
 
+  Optional<List<Implementationguide_resourceFhirversionItem>> fhirVersion();
+
   Optional<String> id();
-
-  Optional<String> description();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Boolean> exampleBoolean();
 
   Optional<String> exampleCanonical();
 
   Reference reference();
 
-  Optional<List<Implementationguide_resourceFhirversionItem>> fhirVersion();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Boolean> exampleBoolean();
+
+  Optional<Id> groupingId();
 
   Optional<List<Extension>> extension();
 
-  Optional<Id> groupingId();
+  Optional<String> description();
 
   static ImmutableImplementationGuide_Resource.ReferenceBuildStage builder() {
     return ImmutableImplementationGuide_Resource.builder();

@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface DetectedIssue {
-  Optional<List<Identifier>> identifier();
-
-  Optional<Uri> reference();
-
-  Optional<Narrative> text();
-
-  Optional<Code> status();
-
-  Optional<CodeableConcept> code();
-
-  Optional<String> detail();
-
-  Optional<Reference> author();
-
-  Optional<DetectedissueSeverity> severity();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> implicated();
-
-  Optional<String> identifiedDateTime();
-
-  Optional<List<Extension>> extension();
-
   Optional<List<DetectedIssue_Mitigation>> mitigation();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
-
-  Optional<Meta> meta();
-
-  Optional<Period> identifiedPeriod();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
 
   Optional<Reference> patient();
 
+  Optional<Reference> author();
+
+  Optional<Meta> meta();
+
+  Optional<Narrative> text();
+
   Optional<List<DetectedIssue_Evidence>> evidence();
+
+  Optional<String> detail();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Code> language();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Period> identifiedPeriod();
+
+  Optional<String> identifiedDateTime();
+
+  Optional<List<Reference>> implicated();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> extension();
+
+  Optional<CodeableConcept> code();
+
+  String resourceType();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Uri> reference();
+
+  Optional<DetectedissueSeverity> severity();
+
+  Optional<Code> status();
 
   static ImmutableDetectedIssue.ResourceTypeBuildStage builder() {
     return ImmutableDetectedIssue.builder();

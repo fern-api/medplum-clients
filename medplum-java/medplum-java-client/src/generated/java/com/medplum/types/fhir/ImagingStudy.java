@@ -17,65 +17,65 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ImagingStudy {
-  Optional<List<Reference>> interpreter();
-
-  Optional<List<Annotation>> note();
+  Optional<Reference> location();
 
   Optional<Id> id();
 
-  Optional<Narrative> text();
-
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<String> description();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Meta> meta();
-
-  Optional<List<CodeableConcept>> procedureCode();
-
-  Optional<List<Reference>> basedOn();
-
-  Optional<Reference> location();
-
-  Optional<UnsignedInt> numberOfSeries();
-
-  Optional<ImagingstudyStatus> status();
-
-  Optional<DateTime> started();
-
-  Optional<List<ImagingStudy_Series>> series();
+  Optional<List<Coding>> modality();
 
   Optional<List<Reference>> endpoint();
 
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Code> language();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Reference> encounter();
-
-  Optional<UnsignedInt> numberOfInstances();
-
-  String resourceType();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Reference> referrer();
-
-  Optional<Uri> implicitRules();
-
-  Reference subject();
-
-  Optional<List<Coding>> modality();
-
-  Optional<Reference> procedureReference();
+  Optional<List<Reference>> basedOn();
 
   Optional<List<Extension>> modifierExtension();
 
-  static ImmutableImagingStudy.ResourceTypeBuildStage builder() {
+  Optional<UnsignedInt> numberOfInstances();
+
+  Reference subject();
+
+  Optional<List<Reference>> reasonReference();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<DateTime> started();
+
+  Optional<List<Annotation>> note();
+
+  Optional<Code> language();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Meta> meta();
+
+  Optional<ImagingstudyStatus> status();
+
+  String resourceType();
+
+  Optional<List<CodeableConcept>> procedureCode();
+
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
+
+  Optional<List<ImagingStudy_Series>> series();
+
+  Optional<List<Reference>> interpreter();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> encounter();
+
+  Optional<Reference> referrer();
+
+  Optional<UnsignedInt> numberOfSeries();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> procedureReference();
+
+  static ImmutableImagingStudy.SubjectBuildStage builder() {
     return ImmutableImagingStudy.builder();
   }
 }

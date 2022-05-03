@@ -20,17 +20,17 @@ import org.immutables.value.Value;
 public interface ObservationDefinition_QuantitativeDetails {
   Optional<List<Extension>> extension();
 
+  Optional<CodeableConcept> customaryUnit();
+
   Optional<CodeableConcept> unit();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
-  Optional<Decimal> conversionFactor();
 
   Optional<Integer> decimalPrecision();
 
-  Optional<CodeableConcept> customaryUnit();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Decimal> conversionFactor();
+
+  Optional<String> id();
 
   static ImmutableObservationDefinition_QuantitativeDetails.Builder builder() {
     return ImmutableObservationDefinition_QuantitativeDetails.builder();

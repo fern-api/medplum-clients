@@ -18,15 +18,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RelatedPerson_Communication {
-  Optional<Boolean> preferred();
-
-  CodeableConcept language();
-
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
   Optional<String> id();
+
+  Optional<List<Extension>> extension();
+
+  CodeableConcept language();
+
+  Optional<Boolean> preferred();
 
   static ImmutableRelatedPerson_Communication.LanguageBuildStage builder() {
     return ImmutableRelatedPerson_Communication.builder();

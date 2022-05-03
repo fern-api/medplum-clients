@@ -17,55 +17,55 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Invoice {
-  String resourceType();
+  Optional<Markdown> paymentTerms();
 
-  Optional<String> cancelledReason();
+  Optional<Id> id();
 
-  Optional<Money> totalNet();
-
-  Optional<Reference> subject();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<Reference> recipient();
-
-  Optional<List<Invoice_PriceComponent>> totalPriceComponent();
+  Optional<List<Annotation>> note();
 
   Optional<InvoiceStatus> status();
 
+  Optional<Reference> recipient();
+
+  Optional<Reference> account();
+
+  Optional<Money> totalNet();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Invoice_PriceComponent>> totalPriceComponent();
+
   Optional<List<Extension>> modifierExtension();
 
+  Optional<Meta> meta();
+
+  Optional<List<ResourceList>> contained();
+
   Optional<List<Invoice_Participant>> participant();
+
+  Optional<List<Invoice_LineItem>> lineItem();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Reference> subject();
+
+  Optional<Code> language();
+
+  Optional<CodeableConcept> type();
+
+  Optional<String> cancelledReason();
+
+  Optional<Reference> issuer();
 
   Optional<Narrative> text();
 
   Optional<Money> totalGross();
 
-  Optional<List<Invoice_LineItem>> lineItem();
-
-  Optional<Id> id();
-
-  Optional<Reference> issuer();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<List<Annotation>> note();
-
-  Optional<Meta> meta();
-
-  Optional<CodeableConcept> type();
-
   Optional<DateTime> date();
 
-  Optional<List<Identifier>> identifier();
-
-  Optional<Markdown> paymentTerms();
-
-  Optional<Reference> account();
-
-  Optional<List<Extension>> extension();
+  String resourceType();
 
   static ImmutableInvoice.ResourceTypeBuildStage builder() {
     return ImmutableInvoice.builder();

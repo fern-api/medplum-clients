@@ -19,15 +19,15 @@ import org.immutables.value.Value;
 public interface RiskEvidenceSynthesis_Certainty {
   Optional<List<Annotation>> note();
 
-  Optional<List<CodeableConcept>> rating();
-
-  Optional<List<Extension>> extension();
+  Optional<String> id();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<List<RiskEvidenceSynthesis_CertaintySubcomponent>> certaintySubcomponent();
+  Optional<List<Extension>> extension();
 
-  Optional<String> id();
+  Optional<List<CodeableConcept>> rating();
+
+  Optional<List<RiskEvidenceSynthesis_CertaintySubcomponent>> certaintySubcomponent();
 
   static ImmutableRiskEvidenceSynthesis_Certainty.Builder builder() {
     return ImmutableRiskEvidenceSynthesis_Certainty.builder();

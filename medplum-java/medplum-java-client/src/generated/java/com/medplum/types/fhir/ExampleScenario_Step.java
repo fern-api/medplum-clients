@@ -20,17 +20,17 @@ import org.immutables.value.Value;
 public interface ExampleScenario_Step {
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Boolean> pause();
 
   Optional<List<ExampleScenario_Alternative>> alternative();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 
   Optional<List<ExampleScenario_Process>> process();
 
   Optional<ExampleScenario_Operation> operation();
-
-  Optional<Boolean> pause();
 
   static ImmutableExampleScenario_Step.Builder builder() {
     return ImmutableExampleScenario_Step.builder();

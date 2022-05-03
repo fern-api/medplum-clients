@@ -17,27 +17,27 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Rest {
-  Optional<Capabilitystatement_restMode> mode();
-
-  Optional<CapabilityStatement_Security> security();
-
-  Optional<List<Canonical>> compartment();
-
   Optional<String> id();
-
-  Optional<List<Extension>> extension();
 
   Optional<Markdown> documentation();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CapabilityStatement_Interaction1>> interaction();
+  Optional<List<CapabilityStatement_Resource>> resource();
 
   Optional<List<CapabilityStatement_Operation>> operation();
 
-  Optional<List<CapabilityStatement_SearchParam>> searchParam();
+  Optional<List<Extension>> extension();
 
-  Optional<List<CapabilityStatement_Resource>> resource();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Canonical>> compartment();
+
+  Optional<CapabilityStatement_Security> security();
+
+  Optional<Capabilitystatement_restMode> mode();
+
+  Optional<List<CapabilityStatement_Interaction1>> interaction();
+
+  Optional<List<CapabilityStatement_SearchParam>> searchParam();
 
   static ImmutableCapabilityStatement_Rest.Builder builder() {
     return ImmutableCapabilityStatement_Rest.builder();

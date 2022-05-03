@@ -19,60 +19,60 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface StructureMap {
-  List<StructureMap_Group> group();
+  Optional<Uri> implicitRules();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<Uri> url();
 
-  Optional<Narrative> text();
-
-  Optional<Code> language();
-
-  Optional<String> name();
-
-  Optional<Markdown> description();
-
-  Optional<List<ContactDetail>> contact();
-
-  Optional<List<StructureMap_Structure>> structure();
-
-  Optional<DateTime> date();
-
-  @JsonProperty("import")
-  Optional<List<Canonical>> _import();
+  Optional<String> publisher();
 
   Optional<Markdown> purpose();
 
-  Optional<Markdown> copyright();
+  Optional<List<StructureMap_Structure>> structure();
 
-  Optional<Uri> url();
+  Optional<StructuremapStatus> status();
 
   Optional<Boolean> experimental();
 
   Optional<List<UsageContext>> useContext();
 
-  Optional<String> title();
-
-  Optional<String> publisher();
-
-  Optional<StructuremapStatus> status();
-
   Optional<Meta> meta();
 
-  Optional<Uri> implicitRules();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Id> id();
-
-  Optional<List<ResourceList>> contained();
+  Optional<Code> language();
 
   Optional<String> version();
 
-  Optional<List<Identifier>> identifier();
+  Optional<List<ResourceList>> contained();
+
+  Optional<Id> id();
+
+  Optional<List<ContactDetail>> contact();
+
+  Optional<DateTime> date();
+
+  Optional<Markdown> description();
 
   Optional<List<CodeableConcept>> jurisdiction();
 
+  Optional<Markdown> copyright();
+
   String resourceType();
+
+  Optional<String> name();
+
+  Optional<List<Identifier>> identifier();
+
+  List<StructureMap_Group> group();
+
+  Optional<String> title();
+
+  @JsonProperty("import")
+  Optional<List<Canonical>> _import();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Narrative> text();
+
+  Optional<List<Extension>> extension();
 
   static ImmutableStructureMap.ResourceTypeBuildStage builder() {
     return ImmutableStructureMap.builder();

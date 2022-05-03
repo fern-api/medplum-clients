@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface BiologicallyDerivedProduct_Processing {
+  Optional<List<Extension>> extension();
+
+  Optional<String> description();
+
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   Optional<CodeableConcept> procedure();
 
   Optional<Reference> additive();
 
   Optional<String> timeDateTime();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> description();
 
   Optional<Period> timePeriod();
 

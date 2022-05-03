@@ -21,13 +21,13 @@ public interface CapabilityStatement_Operation {
 
   Optional<String> id();
 
-  Canonical definition();
-
   Optional<String> name();
+
+  Optional<Markdown> documentation();
 
   Optional<List<Extension>> extension();
 
-  Optional<Markdown> documentation();
+  Canonical definition();
 
   static ImmutableCapabilityStatement_Operation.DefinitionBuildStage builder() {
     return ImmutableCapabilityStatement_Operation.builder();

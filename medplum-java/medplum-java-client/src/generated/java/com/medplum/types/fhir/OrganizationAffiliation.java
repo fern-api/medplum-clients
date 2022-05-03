@@ -18,47 +18,47 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OrganizationAffiliation {
-  Optional<List<Reference>> healthcareService();
-
-  Optional<Reference> participatingOrganization();
-
-  Optional<Reference> organization();
-
-  Optional<Meta> meta();
-
-  Optional<List<Reference>> network();
-
   Optional<Id> id();
+
+  Optional<List<ResourceList>> contained();
 
   Optional<List<CodeableConcept>> specialty();
 
   Optional<List<Extension>> extension();
 
-  Optional<List<CodeableConcept>> code();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<Reference>> location();
-
-  Optional<List<Reference>> endpoint();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<Boolean> active();
-
-  Optional<Period> period();
-
-  Optional<Narrative> text();
-
-  Optional<List<ResourceList>> contained();
-
-  String resourceType();
+  Optional<Reference> organization();
 
   Optional<List<ContactPoint>> telecom();
 
+  Optional<List<Reference>> location();
+
+  Optional<List<Reference>> healthcareService();
+
+  Optional<Boolean> active();
+
+  Optional<Code> language();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Reference>> network();
+
+  Optional<List<Reference>> endpoint();
+
+  Optional<Period> period();
+
+  Optional<Meta> meta();
+
+  Optional<Narrative> text();
+
+  Optional<Reference> participatingOrganization();
+
   Optional<List<Identifier>> identifier();
+
+  Optional<List<Extension>> modifierExtension();
+
+  String resourceType();
+
+  Optional<List<CodeableConcept>> code();
 
   static ImmutableOrganizationAffiliation.ResourceTypeBuildStage builder() {
     return ImmutableOrganizationAffiliation.builder();

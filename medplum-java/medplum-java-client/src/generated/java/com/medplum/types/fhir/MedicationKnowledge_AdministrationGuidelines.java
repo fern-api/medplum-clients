@@ -17,19 +17,19 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MedicationKnowledge_AdministrationGuidelines {
-  Optional<List<MedicationKnowledge_PatientCharacteristics>> patientCharacteristics();
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Reference> indicationReference();
+
+  Optional<CodeableConcept> indicationCodeableConcept();
 
   Optional<List<Extension>> extension();
+
+  Optional<List<MedicationKnowledge_PatientCharacteristics>> patientCharacteristics();
 
   Optional<String> id();
 
   Optional<List<MedicationKnowledge_Dosage>> dosage();
-
-  Optional<CodeableConcept> indicationCodeableConcept();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> indicationReference();
 
   static ImmutableMedicationKnowledge_AdministrationGuidelines.Builder builder() {
     return ImmutableMedicationKnowledge_AdministrationGuidelines.builder();

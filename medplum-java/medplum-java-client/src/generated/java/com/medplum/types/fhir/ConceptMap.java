@@ -18,63 +18,63 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ConceptMap {
-  Optional<Narrative> text();
+  Optional<Uri> url();
 
-  Optional<ConceptmapStatus> status();
+  Optional<Markdown> copyright();
 
-  Optional<String> sourceCanonical();
-
-  String resourceType();
+  Optional<List<UsageContext>> useContext();
 
   Optional<DateTime> date();
 
-  Optional<Id> id();
+  Optional<List<ConceptMap_Group>> group();
+
+  Optional<String> name();
+
+  Optional<String> sourceCanonical();
+
+  Optional<String> version();
+
+  Optional<Narrative> text();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  Optional<String> title();
+
+  Optional<Boolean> experimental();
 
   Optional<List<ContactDetail>> contact();
+
+  Optional<String> targetUri();
+
+  Optional<ConceptmapStatus> status();
+
+  Optional<Uri> implicitRules();
 
   Optional<Markdown> purpose();
 
   Optional<List<Extension>> extension();
 
-  Optional<String> title();
+  Optional<String> targetCanonical();
+
+  Optional<String> publisher();
+
+  Optional<String> sourceUri();
+
+  Optional<Id> id();
+
+  Optional<List<Extension>> modifierExtension();
 
   Optional<List<CodeableConcept>> jurisdiction();
 
   Optional<Markdown> description();
 
-  Optional<List<UsageContext>> useContext();
-
-  Optional<Identifier> identifier();
-
-  Optional<String> sourceUri();
-
-  Optional<String> version();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Markdown> copyright();
-
-  Optional<String> targetUri();
-
-  Optional<String> name();
-
-  Optional<Code> language();
-
-  Optional<String> targetCanonical();
-
   Optional<Meta> meta();
 
-  Optional<List<ConceptMap_Group>> group();
+  String resourceType();
 
-  Optional<List<ResourceList>> contained();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Boolean> experimental();
-
-  Optional<String> publisher();
-
-  Optional<Uri> url();
+  Optional<Identifier> identifier();
 
   static ImmutableConceptMap.ResourceTypeBuildStage builder() {
     return ImmutableConceptMap.builder();

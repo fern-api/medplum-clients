@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface OperationDefinition_Binding {
-  Optional<Operationdefinition_bindingStrength> strength();
+  Optional<String> id();
 
   Canonical valueSet();
 
-  Optional<String> id();
-
   Optional<List<Extension>> extension();
+
+  Optional<Operationdefinition_bindingStrength> strength();
 
   Optional<List<Extension>> modifierExtension();
 

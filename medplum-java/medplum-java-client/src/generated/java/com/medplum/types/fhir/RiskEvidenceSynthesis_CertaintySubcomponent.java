@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskEvidenceSynthesis_CertaintySubcomponent {
+  Optional<List<Extension>> modifierExtension();
+
   Optional<List<CodeableConcept>> rating();
 
   Optional<List<Annotation>> note();
 
   Optional<String> id();
-
-  Optional<List<Extension>> modifierExtension();
 
   Optional<List<Extension>> extension();
 

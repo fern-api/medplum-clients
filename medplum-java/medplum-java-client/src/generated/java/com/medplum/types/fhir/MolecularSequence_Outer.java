@@ -18,15 +18,15 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_Outer {
-  Optional<List<Extension>> extension();
-
-  Optional<List<Extension>> modifierExtension();
+  Optional<Integer> start();
 
   Optional<Integer> end();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<String> id();
 
-  Optional<Integer> start();
+  Optional<List<Extension>> extension();
 
   static ImmutableMolecularSequence_Outer.Builder builder() {
     return ImmutableMolecularSequence_Outer.builder();

@@ -17,17 +17,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ClinicalImpression_Finding {
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> basis();
+
+  Optional<CodeableConcept> itemCodeableConcept();
+
   Optional<List<Extension>> extension();
 
   Optional<Reference> itemReference();
 
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> id();
-
-  Optional<CodeableConcept> itemCodeableConcept();
-
-  Optional<String> basis();
 
   static ImmutableClinicalImpression_Finding.Builder builder() {
     return ImmutableClinicalImpression_Finding.builder();

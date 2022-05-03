@@ -17,35 +17,35 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Basic {
-  Optional<Uri> implicitRules();
+  Optional<List<Identifier>> identifier();
 
-  Optional<Narrative> text();
-
-  Optional<Reference> subject();
-
-  CodeableConcept code();
+  String resourceType();
 
   Optional<List<Extension>> modifierExtension();
 
-  Optional<Meta> meta();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Code> language();
+  Optional<Uri> implicitRules();
 
   Optional<Id> id();
 
   Optional<Reference> author();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Code> language();
 
-  String resourceType();
+  Optional<Narrative> text();
 
-  Optional<Date> created();
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> subject();
+
+  CodeableConcept code();
 
   Optional<List<ResourceList>> contained();
 
-  static ImmutableBasic.CodeBuildStage builder() {
+  Optional<Meta> meta();
+
+  Optional<Date> created();
+
+  static ImmutableBasic.ResourceTypeBuildStage builder() {
     return ImmutableBasic.builder();
   }
 }

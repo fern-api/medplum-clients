@@ -17,37 +17,37 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface EnrollmentRequest {
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Code> status();
-
-  Optional<Narrative> text();
-
-  Optional<Meta> meta();
-
-  Optional<Reference> insurer();
-
-  String resourceType();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Reference> provider();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Id> id();
-
-  Optional<Code> language();
-
-  Optional<DateTime> created();
-
   Optional<Reference> coverage();
 
   Optional<Reference> candidate();
+
+  Optional<List<ResourceList>> contained();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<Narrative> text();
+
+  Optional<Code> status();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<DateTime> created();
+
+  Optional<Code> language();
+
+  Optional<Reference> provider();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Reference> insurer();
+
+  Optional<Meta> meta();
+
+  Optional<Id> id();
 
   static ImmutableEnrollmentRequest.ResourceTypeBuildStage builder() {
     return ImmutableEnrollmentRequest.builder();

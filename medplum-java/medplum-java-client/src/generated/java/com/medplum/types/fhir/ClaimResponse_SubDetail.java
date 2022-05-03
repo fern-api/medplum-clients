@@ -19,11 +19,11 @@ import org.immutables.value.Value;
 public interface ClaimResponse_SubDetail {
   Optional<PositiveInt> subDetailSequence();
 
+  Optional<List<ClaimResponse_Adjudication>> adjudication();
+
   Optional<List<Extension>> extension();
 
   Optional<String> id();
-
-  Optional<List<ClaimResponse_Adjudication>> adjudication();
 
   Optional<List<Extension>> modifierExtension();
 

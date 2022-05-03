@@ -18,45 +18,45 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CapabilityStatement_Resource {
-  Optional<Boolean> conditionalCreate();
+  Optional<List<Extension>> modifierExtension();
 
-  Optional<List<Canonical>> supportedProfile();
+  Optional<List<CapabilityStatement_Interaction>> interaction();
+
+  Optional<Boolean> conditionalCreate();
 
   Optional<List<String>> searchInclude();
 
-  Optional<List<Extension>> extension();
+  Optional<List<String>> searchRevInclude();
+
+  Optional<Capabilitystatement_resourceVersioning> versioning();
+
+  Optional<Code> type();
+
+  Optional<List<Canonical>> supportedProfile();
+
+  Optional<Canonical> profile();
 
   Optional<Markdown> documentation();
 
-  Optional<Capabilitystatement_resourceConditionalread> conditionalRead();
+  Optional<List<Extension>> extension();
 
   Optional<Boolean> readHistory();
-
-  Optional<Boolean> conditionalUpdate();
-
-  Optional<List<CapabilityStatement_SearchParam>> searchParam();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Canonical> profile();
 
   Optional<Capabilitystatement_resourceConditionaldelete> conditionalDelete();
 
   Optional<String> id();
 
-  Optional<Code> type();
-
-  Optional<Boolean> updateCreate();
-
-  Optional<Capabilitystatement_resourceVersioning> versioning();
+  Optional<Capabilitystatement_resourceConditionalread> conditionalRead();
 
   Optional<List<CapabilityStatement_Operation>> operation();
 
-  Optional<List<CapabilityStatement_Interaction>> interaction();
+  Optional<Boolean> updateCreate();
 
-  Optional<List<String>> searchRevInclude();
+  Optional<Boolean> conditionalUpdate();
 
   Optional<List<Capabilitystatement_resourceReferencepolicyItem>> referencePolicy();
+
+  Optional<List<CapabilityStatement_SearchParam>> searchParam();
 
   static ImmutableCapabilityStatement_Resource.Builder builder() {
     return ImmutableCapabilityStatement_Resource.builder();

@@ -19,23 +19,23 @@ import org.immutables.value.Value;
 public interface SubstanceSpecification_Property {
   Optional<List<Extension>> extension();
 
-  Optional<String> amountString();
-
-  Optional<String> parameters();
-
-  Optional<CodeableConcept> category();
-
   Optional<Reference> definingSubstanceReference();
-
-  Optional<CodeableConcept> definingSubstanceCodeableConcept();
 
   Optional<Quantity> amountQuantity();
 
   Optional<CodeableConcept> code();
 
+  Optional<String> amountString();
+
   Optional<List<Extension>> modifierExtension();
 
+  Optional<CodeableConcept> definingSubstanceCodeableConcept();
+
+  Optional<String> parameters();
+
   Optional<String> id();
+
+  Optional<CodeableConcept> category();
 
   static ImmutableSubstanceSpecification_Property.Builder builder() {
     return ImmutableSubstanceSpecification_Property.builder();

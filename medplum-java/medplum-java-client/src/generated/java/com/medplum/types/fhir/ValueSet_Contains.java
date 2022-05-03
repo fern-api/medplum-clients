@@ -19,28 +19,28 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface ValueSet_Contains {
+  Optional<Code> code();
+
   Optional<List<Extension>> extension();
 
-  Optional<String> version();
+  Optional<Boolean> inactive();
+
+  Optional<String> display();
+
+  Optional<Uri> system();
 
   Optional<List<ValueSet_Designation>> designation();
 
-  Optional<String> id();
+  Optional<List<Extension>> modifierExtension();
 
   @JsonProperty("abstract")
   Optional<Boolean> _abstract();
 
   Optional<List<ValueSet_Contains>> contains();
 
-  Optional<Uri> system();
+  Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Code> code();
-
-  Optional<String> display();
-
-  Optional<Boolean> inactive();
+  Optional<String> version();
 
   static ImmutableValueSet_Contains.Builder builder() {
     return ImmutableValueSet_Contains.builder();

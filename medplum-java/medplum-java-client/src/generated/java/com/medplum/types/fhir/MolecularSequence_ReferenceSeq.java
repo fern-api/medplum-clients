@@ -18,29 +18,29 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MolecularSequence_ReferenceSeq {
-  Optional<Molecularsequence_referenceseqOrientation> orientation();
-
-  Optional<List<Extension>> extension();
-
-  Optional<Integer> windowEnd();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> chromosome();
+  Optional<CodeableConcept> referenceSeqId();
 
   Optional<String> id();
 
-  Optional<Reference> referenceSeqPointer();
+  Optional<Molecularsequence_referenceseqStrand> strand();
 
-  Optional<String> genomeBuild();
+  Optional<Molecularsequence_referenceseqOrientation> orientation();
+
+  Optional<CodeableConcept> chromosome();
+
+  Optional<Integer> windowEnd();
 
   Optional<String> referenceSeqString();
 
-  Optional<Molecularsequence_referenceseqStrand> strand();
-
-  Optional<CodeableConcept> referenceSeqId();
+  Optional<Reference> referenceSeqPointer();
 
   Optional<Integer> windowStart();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<String> genomeBuild();
 
   static ImmutableMolecularSequence_ReferenceSeq.Builder builder() {
     return ImmutableMolecularSequence_ReferenceSeq.builder();

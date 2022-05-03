@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface UserConfiguration_Option {
-  Optional<Id> id();
+  Optional<String> valueString();
 
-  Optional<String> valueCode();
+  Optional<Double> valueDecimal();
 
   Optional<Double> valueInteger();
 
-  Optional<String> valueString();
+  Optional<Id> id();
 
   Optional<Boolean> valueBoolean();
 
-  Optional<Double> valueDecimal();
+  Optional<String> valueCode();
 
   static ImmutableUserConfiguration_Option.Builder builder() {
     return ImmutableUserConfiguration_Option.builder();

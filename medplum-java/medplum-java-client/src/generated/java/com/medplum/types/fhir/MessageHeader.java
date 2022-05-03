@@ -17,49 +17,49 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface MessageHeader {
-  Optional<Reference> enterer();
-
-  Optional<Id> id();
-
-  Optional<Reference> sender();
-
-  Optional<MessageHeader_Response> response();
-
-  MessageHeader_Source source();
-
-  String resourceType();
-
-  Optional<Code> language();
-
-  Optional<Meta> meta();
-
-  Optional<Uri> implicitRules();
-
-  Optional<List<Reference>> focus();
-
-  Optional<List<ResourceList>> contained();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<MessageHeader_Destination>> destination();
-
-  Optional<Canonical> definition();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<CodeableConcept> reason();
-
   Optional<Narrative> text();
-
-  Optional<Reference> responsible();
-
-  Optional<Reference> author();
-
-  Optional<Coding> eventCoding();
 
   Optional<String> eventUri();
 
-  static ImmutableMessageHeader.SourceBuildStage builder() {
+  Optional<Reference> enterer();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Coding> eventCoding();
+
+  Optional<List<MessageHeader_Destination>> destination();
+
+  String resourceType();
+
+  Optional<Reference> responsible();
+
+  Optional<MessageHeader_Response> response();
+
+  Optional<Reference> author();
+
+  Optional<CodeableConcept> reason();
+
+  Optional<List<Reference>> focus();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> sender();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<Code> language();
+
+  Optional<List<Extension>> extension();
+
+  Optional<Id> id();
+
+  MessageHeader_Source source();
+
+  Optional<Canonical> definition();
+
+  Optional<Meta> meta();
+
+  static ImmutableMessageHeader.ResourceTypeBuildStage builder() {
     return ImmutableMessageHeader.builder();
   }
 }

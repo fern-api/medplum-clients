@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CatalogEntry {
-  Optional<Boolean> orderable();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<List<CodeableConcept>> classification();
-
-  Optional<List<CodeableConcept>> additionalCharacteristic();
-
-  Optional<List<ResourceList>> contained();
-
   Optional<List<Identifier>> additionalIdentifier();
-
-  Optional<List<Extension>> extension();
-
-  Optional<List<Identifier>> identifier();
-
-  Optional<Narrative> text();
-
-  Optional<Uri> implicitRules();
-
-  Optional<Code> language();
-
-  Optional<List<CodeableConcept>> additionalClassification();
-
-  Optional<CodeableConcept> type();
-
-  Optional<DateTime> lastUpdated();
-
-  Optional<Period> validityPeriod();
-
-  Optional<CatalogentryStatus> status();
-
-  Reference referencedItem();
-
-  Optional<DateTime> validTo();
-
-  Optional<Meta> meta();
-
-  Optional<List<CatalogEntry_RelatedEntry>> relatedEntry();
 
   String resourceType();
 
+  Optional<Narrative> text();
+
+  Optional<DateTime> lastUpdated();
+
+  Optional<List<CodeableConcept>> classification();
+
   Optional<Id> id();
 
-  static ImmutableCatalogEntry.ReferencedItemBuildStage builder() {
+  Optional<List<Identifier>> identifier();
+
+  Optional<Period> validityPeriod();
+
+  Optional<List<Extension>> extension();
+
+  Optional<DateTime> validTo();
+
+  Optional<List<CatalogEntry_RelatedEntry>> relatedEntry();
+
+  Optional<Boolean> orderable();
+
+  Optional<Meta> meta();
+
+  Optional<Uri> implicitRules();
+
+  Optional<List<ResourceList>> contained();
+
+  Optional<CodeableConcept> type();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Reference referencedItem();
+
+  Optional<List<CodeableConcept>> additionalClassification();
+
+  Optional<Code> language();
+
+  Optional<CatalogentryStatus> status();
+
+  Optional<List<CodeableConcept>> additionalCharacteristic();
+
+  static ImmutableCatalogEntry.ResourceTypeBuildStage builder() {
     return ImmutableCatalogEntry.builder();
   }
 }

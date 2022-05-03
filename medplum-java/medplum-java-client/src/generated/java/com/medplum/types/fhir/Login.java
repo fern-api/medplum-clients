@@ -18,51 +18,51 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Login {
-  Optional<Uri> implicitRules();
-
-  Optional<String> authMethod();
-
-  Optional<Instant> authTime();
-
-  Optional<Reference> client();
-
-  Optional<String> refreshSecret();
-
-  Optional<Reference> membership();
+  Optional<Code> language();
 
   Optional<Boolean> revoked();
+
+  Optional<String> codeChallengeMethod();
 
   Optional<String> resourceType();
 
   Optional<String> nonce();
 
+  Optional<Meta> meta();
+
+  Optional<String> scope();
+
+  Optional<Id> id();
+
+  Optional<Instant> authTime();
+
   Optional<Boolean> granted();
 
   Optional<Boolean> admin();
 
-  Optional<Id> id();
+  Optional<String> cookie();
 
-  Optional<Code> language();
+  Optional<String> remoteAddress();
 
-  Optional<Meta> meta();
+  Optional<Reference> client();
 
-  Optional<Reference> user();
+  Optional<Reference> membership();
 
-  Optional<String> scope();
-
-  Optional<String> codeChallenge();
+  Optional<String> authMethod();
 
   Optional<String> userAgent();
 
-  Optional<String> code();
+  Optional<Uri> implicitRules();
+
+  Optional<String> refreshSecret();
+
+  Optional<Reference> user();
 
   Optional<List<Reference>> compartments();
 
-  Optional<String> cookie();
+  Optional<String> code();
 
-  Optional<String> codeChallengeMethod();
-
-  Optional<String> remoteAddress();
+  Optional<String> codeChallenge();
 
   static ImmutableLogin.Builder builder() {
     return ImmutableLogin.builder();

@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CoverageEligibilityRequest_SupportingInfo {
-  Optional<String> id();
-
-  Optional<Boolean> appliesToAll();
-
-  Reference information();
-
   Optional<List<Extension>> extension();
 
   Optional<List<Extension>> modifierExtension();
 
   Optional<PositiveInt> sequence();
+
+  Reference information();
+
+  Optional<String> id();
+
+  Optional<Boolean> appliesToAll();
 
   static ImmutableCoverageEligibilityRequest_SupportingInfo.InformationBuildStage builder() {
     return ImmutableCoverageEligibilityRequest_SupportingInfo.builder();

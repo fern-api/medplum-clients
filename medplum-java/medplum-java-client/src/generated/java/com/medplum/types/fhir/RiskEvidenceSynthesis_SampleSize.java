@@ -18,17 +18,17 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface RiskEvidenceSynthesis_SampleSize {
-  Optional<Integer> numberOfParticipants();
+  Optional<String> description();
+
+  Optional<List<Extension>> extension();
 
   Optional<Integer> numberOfStudies();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
   Optional<List<Extension>> modifierExtension();
 
-  Optional<String> description();
+  Optional<Integer> numberOfParticipants();
 
   static ImmutableRiskEvidenceSynthesis_SampleSize.Builder builder() {
     return ImmutableRiskEvidenceSynthesis_SampleSize.builder();

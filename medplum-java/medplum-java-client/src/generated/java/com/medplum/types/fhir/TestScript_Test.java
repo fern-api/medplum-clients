@@ -17,7 +17,7 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface TestScript_Test {
-  Optional<List<Extension>> extension();
+  Optional<List<Extension>> modifierExtension();
 
   List<TestScript_Action1> action();
 
@@ -25,7 +25,7 @@ public interface TestScript_Test {
 
   Optional<String> id();
 
-  Optional<List<Extension>> modifierExtension();
+  Optional<List<Extension>> extension();
 
   Optional<String> description();
 

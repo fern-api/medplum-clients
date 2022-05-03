@@ -19,21 +19,21 @@ import org.immutables.value.Value;
 public interface Signature {
   Optional<String> id();
 
-  List<Coding> type();
+  Optional<Reference> onBehalfOf();
 
   Optional<List<Extension>> extension();
+
+  Reference who();
 
   Optional<Code> sigFormat();
 
   Optional<Instant> when();
 
-  Optional<Base64Binary> data();
-
-  Optional<Reference> onBehalfOf();
-
   Optional<Code> targetFormat();
 
-  Reference who();
+  Optional<Base64Binary> data();
+
+  List<Coding> type();
 
   static ImmutableSignature.WhoBuildStage builder() {
     return ImmutableSignature.builder();

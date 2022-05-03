@@ -18,69 +18,69 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface CommunicationRequest {
-  Optional<Code> priority();
-
-  Optional<Identifier> groupIdentifier();
-
-  Optional<List<CodeableConcept>> category();
-
-  Optional<List<Reference>> reasonReference();
-
-  Optional<Uri> implicitRules();
-
   Optional<List<Reference>> replaces();
-
-  Optional<Reference> encounter();
-
-  Optional<Reference> sender();
-
-  Optional<List<CommunicationRequest_Payload>> payload();
-
-  Optional<CodeableConcept> statusReason();
-
-  Optional<Code> status();
-
-  Optional<List<Reference>> recipient();
 
   Optional<Period> occurrencePeriod();
 
-  Optional<List<CodeableConcept>> reasonCode();
-
-  Optional<String> occurrenceDateTime();
-
-  Optional<Reference> subject();
-
-  Optional<Reference> requester();
-
-  Optional<Id> id();
-
-  Optional<Code> language();
+  Optional<List<Reference>> recipient();
 
   Optional<Narrative> text();
 
-  Optional<List<Extension>> extension();
-
-  String resourceType();
-
-  Optional<Meta> meta();
-
   Optional<List<Reference>> basedOn();
 
-  Optional<List<Identifier>> identifier();
+  Optional<Code> status();
 
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<DateTime> authoredOn();
-
-  Optional<Boolean> doNotPerform();
+  Optional<Code> language();
 
   Optional<List<Reference>> about();
 
+  Optional<String> occurrenceDateTime();
+
   Optional<List<ResourceList>> contained();
+
+  Optional<List<Annotation>> note();
+
+  String resourceType();
+
+  Optional<Uri> implicitRules();
+
+  Optional<Reference> requester();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Extension>> extension();
+
+  Optional<List<CommunicationRequest_Payload>> payload();
+
+  Optional<DateTime> authoredOn();
+
+  Optional<Reference> subject();
+
+  Optional<List<Reference>> reasonReference();
 
   Optional<List<CodeableConcept>> medium();
 
-  Optional<List<Annotation>> note();
+  Optional<CodeableConcept> statusReason();
+
+  Optional<Id> id();
+
+  Optional<List<Identifier>> identifier();
+
+  Optional<List<CodeableConcept>> category();
+
+  Optional<Meta> meta();
+
+  Optional<Reference> sender();
+
+  Optional<Reference> encounter();
+
+  Optional<Code> priority();
+
+  Optional<List<CodeableConcept>> reasonCode();
+
+  Optional<Boolean> doNotPerform();
+
+  Optional<Identifier> groupIdentifier();
 
   static ImmutableCommunicationRequest.ResourceTypeBuildStage builder() {
     return ImmutableCommunicationRequest.builder();

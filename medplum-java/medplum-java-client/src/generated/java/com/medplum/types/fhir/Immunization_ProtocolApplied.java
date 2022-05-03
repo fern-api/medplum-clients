@@ -18,25 +18,25 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Immunization_ProtocolApplied {
-  Optional<String> series();
-
-  Optional<Double> seriesDosesPositiveInt();
-
-  Optional<String> doseNumberString();
+  Optional<List<Extension>> extension();
 
   Optional<String> id();
 
-  Optional<List<Extension>> extension();
-
-  Optional<List<CodeableConcept>> targetDisease();
-
-  Optional<List<Extension>> modifierExtension();
-
   Optional<String> seriesDosesString();
+
+  Optional<String> series();
 
   Optional<Reference> authority();
 
   Optional<Double> doseNumberPositiveInt();
+
+  Optional<List<CodeableConcept>> targetDisease();
+
+  Optional<String> doseNumberString();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<Double> seriesDosesPositiveInt();
 
   static ImmutableImmunization_ProtocolApplied.Builder builder() {
     return ImmutableImmunization_ProtocolApplied.builder();

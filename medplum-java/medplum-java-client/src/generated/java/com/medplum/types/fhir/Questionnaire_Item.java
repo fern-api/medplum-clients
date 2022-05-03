@@ -19,43 +19,43 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Questionnaire_Item {
-  Optional<String> prefix();
+  Optional<String> linkId();
 
-  Optional<List<Coding>> code();
-
-  Optional<Questionnaire_itemEnablebehavior> enableBehavior();
-
-  Optional<List<Questionnaire_EnableWhen>> enableWhen();
-
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<Boolean> readOnly();
-
-  Optional<List<Questionnaire_AnswerOption>> answerOption();
-
-  Optional<Canonical> answerValueSet();
-
-  Optional<Questionnaire_itemType> type();
-
-  Optional<Boolean> required();
+  Optional<Uri> definition();
 
   Optional<String> text();
 
-  Optional<List<Questionnaire_Item>> item();
+  Optional<Questionnaire_itemEnablebehavior> enableBehavior();
 
   Optional<List<Extension>> extension();
+
+  Optional<Integer> maxLength();
+
+  Optional<List<Extension>> modifierExtension();
+
+  Optional<List<Questionnaire_Initial>> initial();
 
   Optional<Boolean> repeats();
 
   Optional<String> id();
 
-  Optional<String> linkId();
+  Optional<Boolean> readOnly();
 
-  Optional<Integer> maxLength();
+  Optional<List<Coding>> code();
 
-  Optional<Uri> definition();
+  Optional<Boolean> required();
 
-  Optional<List<Questionnaire_Initial>> initial();
+  Optional<String> prefix();
+
+  Optional<List<Questionnaire_AnswerOption>> answerOption();
+
+  Optional<List<Questionnaire_Item>> item();
+
+  Optional<Canonical> answerValueSet();
+
+  Optional<Questionnaire_itemType> type();
+
+  Optional<List<Questionnaire_EnableWhen>> enableWhen();
 
   static ImmutableQuestionnaire_Item.Builder builder() {
     return ImmutableQuestionnaire_Item.builder();

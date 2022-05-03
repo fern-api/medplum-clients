@@ -17,13 +17,13 @@ import org.immutables.value.Value;
     ignoreUnknown = true
 )
 public interface Encounter_Diagnosis {
-  Optional<List<Extension>> modifierExtension();
-
-  Optional<String> id();
-
   Reference condition();
 
+  Optional<List<Extension>> modifierExtension();
+
   Optional<PositiveInt> rank();
+
+  Optional<String> id();
 
   Optional<List<Extension>> extension();
 
