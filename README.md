@@ -24,11 +24,31 @@ yarn workspace medplum-sample-application run compile && node packages/medplum-s
 
 The Java client lives inside of the [medplum-java](./medplum-java) folder.
 
-Run `./gradlew idea && open *.ipr` inside of [medplum-java](./medplum-java) to open in Intellij.
+Open in Intellij by running these commands:
+```bash
+cd medplum-java
+./gradlew idea && open *.ipr
+```
 
-Build the project to generate [Immutables](https://immutables.github.io/) classes. This may take a while!
+Build the project `(Build > Build Project)` to generate [Immutables](https://immutables.github.io/) classes. This may take a while because the API spec is large (~12k lines).
 
-Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! Make sure to add your access key as an environment variable `MEDPLUM_ACCESS_KEY`.
+Checkout the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
+
+Before you run the sample app, make sure to add your access key as an environment variable ```MEDPLUM_ACCESS_KEY``` . You can do this by navigating to [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java). 
+
+Find the play button and edit configuration
+![img](./img/editConfiguration.png)
+
+Update the environment variables section 
+![img](./img/configuration.png)
+
+#### Important Files
+
+[FhirService.java](./medplum-java-client/src/generated/java/com/medplum/services/fhir/FhirService.java) is the generated REST service that has endpoints like `readResource`, `updateResource`, etc.
+
+[ResourceList.java](./medplum-java-client/src/generated/java/com/medplum/types/fhir/ResourceList.java) is a union type. Union types can be visited by calling the `accept` method and passing in a visitor so that a client can be sure they handle all possible states.
+
+[SampleApplication Main.java](./medplum-sample-application//src/main/java/com/sample/Main.java) is an example of how to consume the java client.
 
 ## Known Limitations
 
