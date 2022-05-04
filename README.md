@@ -35,13 +35,8 @@ Build the project `(Build > Build Project)` to generate [Immutables](https://imm
 
 Check out the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
 
-Before you run the sample app, make sure to add your access key as an environment variable `MEDPLUM_ACCESS_KEY` .
+Before you run the sample app, make sure to add your `CLIENT_ID` and `CLIENT_SECRET` to [.env file](./medplum-java/medplum-sample-application/src/.env).
 
-1. Find the play button and edit configuration
-   ![img](./img/editConfiguration.png)
-
-2. Update the environment variables section
-   ![img](./img/configuration.png)
 
 #### Important Files
 
