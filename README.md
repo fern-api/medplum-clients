@@ -35,7 +35,7 @@ Build the project `(Build > Build Project)` to generate [Immutables](https://imm
 
 Check out the [sample app](./medplum-java/medplum-sample-application/src/main/java/com/sample/Main.java) and write your own code! 
 
-Before you run the sample app, make sure to add your `CLIENT_ID` and `CLIENT_SECRET` to [.env file](./medplum-java/medplum-sample-application/src/.env).
+Before you run the sample app, make sure to add your `CLIENT_ID` and `CLIENT_SECRET` to the [.env file](./medplum-java/medplum-sample-application/.env).
 
 
 #### Important Files
